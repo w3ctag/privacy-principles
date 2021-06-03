@@ -34,7 +34,7 @@ Constiuencies we want representation from:
 
 Potential specific people:
 * Nick Doty
-* Alex Cone (for adtech)
+* Don Marti, Alex Cone (for adtech)
 * for theorist, ideas: Woodrow Hartzog, Lindsey Barrett, Helen Nissenbaum
 * Amy Guy (from TAG)
 
