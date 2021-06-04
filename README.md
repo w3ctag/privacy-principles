@@ -14,7 +14,7 @@ This effort will avoid being judgemental and try to remain dispassionate.  Howev
 
 We will be staying away from legal and regulatory material. 
 
-This effort will operate under the W3C's CEPC and as such we will maintain a respectful discourse. This effort will operate under strict anti-trust guidance from W3C.
+This effort will operate under the W3C's CEPC and as such we will maintain a respectful discourse. This effort will operate under anti-trust guidance from W3C.
 
 Possible names : Architectural Principles for Web Privacy; Architectural Considerations for Web Privacy.
 
