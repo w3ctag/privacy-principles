@@ -12,6 +12,8 @@ This effort will operate as a TAG-sponsored task force together with the Privacy
 
 This effort will avoid being judgemental and try to remain dispassionate.  However we will be building on the work of the Ethical Web Principles which lays down an ethical framework for the web.  The goal of a privacy model for the web should be aligned with the goal of that document: to ensure that the web provides **a net positive social benefit to humanity**.
 
+Periodically, and before working drafts are published, the task force will check in with an oversight group consistiung of the TAG and PInG chairs and and team contacts for approval and comment.
+
 This effort will happen in a public repo and with public comment.
 
 We will be staying away from legal and regulatory material. 
