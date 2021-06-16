@@ -36,6 +36,7 @@ Constiuencies we want representation and input from:
 * Web developers
 * People who use the web
 * People representing marginalised communities on the web
+* WhatWG steering board
 
 Input documents:
 
