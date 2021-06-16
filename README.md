@@ -25,20 +25,17 @@ We will strike a balance between working in the web as it is and also not being 
 e.g.
 > As a target threat model, it describes not the current state of the Web including all current maybe-unwise APIs, but rather an end state that we hope to migrate to, and that new APIs should be held to. This is meant to be a plausible threat model: it doesn’t expect to remove any APIs or browser behavior that is deemed essential to the viability of the Web.
 
-Constiuencies we want representation from:
+Constiuencies we want representation and input from:
 
 * Browsers
 * Publishers / Web Sites
 * Civil society/privacy advocates
 * Adtech intermediaries
-* Privacy theorist or legalish
+* Privacy theorists or legalish
 * ? Emerging Web tech? (VR/AR/LM/Vehicles) ???
-
-Potential specific people:
-* Nick Doty
-* Don Marti, Alex Cone (for adtech)
-* for theorist, ideas: Woodrow Hartzog, Lindsey Barrett, Helen Nissenbaum
-* Amy Guy (from TAG)
+* Web developers
+* People who use the web
+* People representing marginalised communities on the web
 
 Input documents:
 
