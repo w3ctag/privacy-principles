@@ -4,8 +4,6 @@
 
 The purpose of the Privacy Model Task Force is to bring together a small group of people to write a first draft of a set of privacy principles for the web.  This document would include definitions of key privacy concepts in the web, enabling us to use common language as we work together on new web technologies that have an impact on user privacy.  It would also consolidate some of the work already done to define a privacy threat model. 
 
-[under question: Privacy is a very complex social construct so we will not seek to fully define privacy in this document.]
-
 This effort will look at privacy from a **web architecture** point of view, fitting together with the TAG's Ethical Principles, Design Principles, and the Privacy & Security Questionnaire jointly worked on between TAG and PiNG.
 
 This effort will operate as a TAG-sponsored task force together with the Privacy Interest Group with participants invited by the TAG chairs and the PiNG chairs (which can include current for former members of each group).  There will a maximum of 10 participants in the task force. The task force will run for 6 months and the final product will be a report which can be published as a TAG Finding (which can be subsequently elevated to a W3C statement) with some additional acknolwedgement that the document has been produced jointly between PiNG and TAG.
