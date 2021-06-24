@@ -4,13 +4,13 @@
 
 The purpose of the Privacy Model Task Force is to bring together a small group of people to write a first draft of a set of privacy principles for the web.  This document would include definitions of key privacy concepts in the web, enabling us to use common language as we work together on new web technologies that have an impact on user privacy.  It would also consolidate some of the work already done to define a privacy threat model. 
 
-This effort will look at privacy from a **web architecture** point of view, fitting together with the TAG's Ethical Principles, Design Principles, and the Privacy & Security Questionnaire jointly worked on between TAG and PiNG.
+This effort will look at privacy from a **web architecture** point of view, fitting together with the TAG's Ethical Principles, Design Principles, and the Privacy & Security Questionnaire jointly worked on between TAG and PING.
 
-This effort will operate as a TAG-sponsored task force together with the Privacy Interest Group with participants invited by the TAG chairs and the PInG chairs (which can include current for former members of each group).  There will a maximum of 10 participants in the task force. The task force will run for 6 months and the final product will be a report which can be published as a TAG Finding (which can be subsequently elevated to a W3C statement) with some additional acknolwedgement that the document has been produced jointly between PiNG and TAG.
+This effort will operate as a TAG-sponsored task force together with the Privacy Interest Group with participants invited by the TAG chairs and the PING chairs (which can include current for former members of each group).  There will a maximum of 10 participants in the task force. The task force will run for 6 months and the final product will be a report which can be published as a TAG Finding (which can be subsequently elevated to a W3C statement) with some additional acknolwedgement that the document has been produced jointly between PING and TAG.
 
 We will be building on the work of the Ethical Web Principles which lays down an ethical framework for the web.  The goal of a privacy model for the web should be aligned with the goal of that document: to ensure that the web provides **a net positive social benefit to humanity**.
 
-Periodically, and before working drafts are published, the task force will check in with an oversight group consistiung of the TAG and PInG chairs and and team contacts for approval and comment.
+Periodically, and before working drafts are published, the task force will check in with an oversight group consistiung of the TAG and PING chairs and and team contacts for approval and comment.
 
 This effort will happen in a public repo and with public comment.
 
@@ -36,7 +36,7 @@ Constiuencies we want to ensure input and review from:
 * Web developers
 * People who use the web
 * People representing marginalised communities on the web
-* TAG and PInG chairs and team contacts
+* TAG and PING chairs and team contacts
 * WhatWG steering board
 
 Input documents:
