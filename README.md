@@ -6,7 +6,7 @@ The purpose of the Privacy Model Task Force is to bring together a small group o
 
 This effort will look at privacy from a **web architecture** point of view, fitting together with the TAG's Ethical Principles, Design Principles, and the Privacy & Security Questionnaire jointly worked on between TAG and PiNG.
 
-This effort will operate as a TAG-sponsored task force together with the Privacy Interest Group with participants invited by the TAG chairs and the PiNG chairs (which can include current for former members of each group).  There will a maximum of 10 participants in the task force. The task force will run for 6 months and the final product will be a report which can be published as a TAG Finding (which can be subsequently elevated to a W3C statement) with some additional acknolwedgement that the document has been produced jointly between PiNG and TAG.
+This effort will operate as a TAG-sponsored task force together with the Privacy Interest Group with participants invited by the TAG chairs and the PInG chairs (which can include current for former members of each group).  There will a maximum of 10 participants in the task force. The task force will run for 6 months and the final product will be a report which can be published as a TAG Finding (which can be subsequently elevated to a W3C statement) with some additional acknolwedgement that the document has been produced jointly between PiNG and TAG.
 
 We will be building on the work of the Ethical Web Principles which lays down an ethical framework for the web.  The goal of a privacy model for the web should be aligned with the goal of that document: to ensure that the web provides **a net positive social benefit to humanity**.
 
@@ -32,7 +32,7 @@ Constiuencies we want to ensure input and review from:
 * Civil society/privacy advocates
 * Adtech intermediaries
 * Privacy theorists or legalish
-* ? Emerging Web tech? (VR/AR/LM/Vehicles) ???
+* Those working on emerging Web tech such as WebXR and new device APIs.
 * Web developers
 * People who use the web
 * People representing marginalised communities on the web
