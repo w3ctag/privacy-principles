@@ -37,7 +37,7 @@ Constiuencies we want to ensure input and review from:
 * Web developers
 * People who use the web
 * People representing marginalised communities on the web
-* TAG and PInG chairs and team contacts
+* TAG and PING chairs and team contacts
 * WhatWG steering board
 
 Input documents:
