@@ -33,9 +33,10 @@ Privacy Task Force Members:
 * Don Marti (CafeMedia, PING)
 * Theresa O'Connor (Apple, TAG)
 * Christine Runnegar (W3C Invited Expert, PING)
-* Wendy Seltzer (W3C Team, PING)
 * Pete Snyder (Brave, PING)
 * Jeffrey Yaskin (Google, PING)
+
+…with support from W3C Team.
 
 Constiuencies we want to ensure input and review from:
 
