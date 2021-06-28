@@ -10,7 +10,7 @@ This effort will operate as a TAG-sponsored task force together with the Privacy
 
 We will be building on the work of the Ethical Web Principles which lays down an ethical framework for the web.  The goal of a privacy model for the web should be aligned with the goal of that document: to ensure that the web provides **a net positive social benefit to humanity**.
 
-Periodically, and before working drafts are published, the task force will check in with an oversight group consisting of the TAG and PInG chairs and and team contacts for approval and comment.
+Periodically, and before working drafts are published, the task force will check in with an oversight group consisting of the TAG and PInG chairs and team contacts for approval and comment.
 
 This effort will happen in a public repo and with public comments.
 
@@ -24,6 +24,18 @@ We will strike a balance between working on the web as it is and also not being 
 
 e.g.
 > As a target threat model, it describes not the current state of the Web including all current maybe-unwise APIs, but rather an end state that we hope to migrate to, and that new APIs should be held to. This is meant to be a plausible threat model: it doesn’t expect to remove any APIs or browser behavior that is deemed essential to the viability of the Web.
+
+Privacy Task Force Members:
+
+* Daniel Appelquist (Samsung, TAG)
+* Robin Berjon (NY Times, TAG alum)
+* Amy Guy (Digital Bazaar, TAG)
+* Don Marti (CafeMedia, PING)
+* Theresa O'Connor (Apple, TAG)
+* Christine Runnegar (W3C Invited Expert, PING)
+* Wendy Seltzer (W3C Team, PING)
+* Pete Snyder (Brave, PING)
+* Jeffrey Yaskin (Google, PING)
 
 Constiuencies we want to ensure input and review from:
 
