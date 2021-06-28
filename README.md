@@ -6,7 +6,7 @@ The purpose of the Privacy Model Task Force is to bring together a small group o
 
 This effort will look at privacy from a **web architecture** point of view, fitting together with the TAG's Ethical Principles, Design Principles, and the Privacy & Security Questionnaire jointly worked on between TAG and PING.
 
-This effort will operate as a TAG-sponsored task force together with the Privacy Interest Group with participants invited by the TAG chairs and the PING chairs (which can include current for former members of each group).  There will a maximum of 10 participants in the task force. The task force will run for 6 months and the final product will be a report which can be published as a TAG Finding (which can be subsequently elevated to a W3C statement) with some additional acknolwedgement that the document has been produced jointly between PING and TAG.
+This effort will operate as a TAG-sponsored task force together with the Privacy Interest Group with participants invited by the TAG chairs and the PING chairs (which can include current for former members of each group).  There will a maximum of 10 participants in the task force. The task force will run for 6 months and the final product will be a report which can be published as a TAG Finding (which can be subsequently elevated to a W3C statement) with some additional acknowledgement that the document has been produced jointly between PING and TAG.
 
 We will be building on the work of the Ethical Web Principles which lays down an ethical framework for the web.  The goal of a privacy model for the web should be aligned with the goal of that document: to ensure that the web provides **a net positive social benefit to humanity**.
 
@@ -35,9 +35,9 @@ Privacy Task Force Members:
 * Christine Runnegar (W3C Invited Expert, PING)
 * Wendy Seltzer (W3C Team, PING)
 * Pete Snyder (Brave, PING)
-* Jeffrey Yaskin (Google, PING)
+* Jeffrey Yasskin (Google, PING)
 
-Constiuencies we want to ensure input and review from:
+Constituencies we want to ensure input and review from:
 
 * Browsers
 * Publishers / Web Sites
