@@ -28,7 +28,7 @@ e.g.
 Privacy Task Force Members:
 
 * Daniel Appelquist (Samsung, TAG)
-* Robin Berjon (NY Times, TAG alum)
+* Robin Berjon (The New York Times, TAG alum)
 * Amy Guy (Digital Bazaar, TAG)
 * Don Marti (CafeMedia, PING)
 * Theresa O'Connor (Apple, TAG)
