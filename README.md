@@ -47,11 +47,13 @@ Constituencies we want to ensure input and review from:
 * Adtech intermediaries
 * Advertising buyers
 * Privacy theorists and legal scholars
+* Behavioral economists
 * Those working on emerging Web tech such as WebXR and new device APIs
 * Web developers
 * People who use the web
 * People representing marginalised communities on the web
 * TAG and PING chairs and team contacts
+* User researchers
 * WhatWG steering board
 
 Input documents:
