@@ -31,6 +31,7 @@ Privacy Task Force Members:
 * Robin Berjon (The New York Times, TAG alum)
 * Amy Guy (Digital Bazaar, TAG)
 * Don Marti (CafeMedia, PING)
+* Jonathan Kingston (DuckDuckGo)
 * Theresa O'Connor (Apple, TAG, PrivacyCG)
 * Christine Runnegar (W3C Invited Expert, PING)
 * Pete Snyder (Brave, PING)
