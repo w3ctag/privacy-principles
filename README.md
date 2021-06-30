@@ -39,21 +39,24 @@ Privacy Task Force Members:
 
 …with support from W3C Team.
 
-Constituencies we want to ensure input and review from:
+Constituencies we want to represent
 
 * Browsers
 * Publishers / Web Sites
-* Civil society / privacy advocates
+* Civil society
 * Adtech intermediaries
 * Advertising buyers
+* Web developers
+* Members of marginalized communities who use the web
+* Other people who use the web
+
+Experts we need input and review from:
+* Privacy advocates
 * Privacy theorists and legal scholars
 * Behavioral economists
 * Those working on emerging Web tech such as WebXR and new device APIs
-* Web developers
-* People who use the web
-* People representing marginalised communities on the web
-* TAG and PING chairs and team contacts
 * User researchers
+* TAG and PING chairs and team contacts
 * WhatWG steering board
 
 Input documents:
