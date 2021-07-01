@@ -56,12 +56,12 @@ Constituencies we want to ensure input and review from:
 * User researchers
 * WhatWG steering board
 
-Input documents:
+## Input documents
 
 * https://w3cping.github.io/privacy-threat-model/
 * https://darobin.github.io/pup/
 
-Related documents:
+## Related documents
 
 * https://w3ctag.github.io/ethical-web-principles/
 * https://w3ctag.github.io/design-principles/
