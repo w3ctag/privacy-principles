@@ -177,6 +177,11 @@
           authors: ['Jeffrey Yasskin', 'Tom Lowenthal'],
           publisher: 'W3C PING',
         },
+        'PSL-PROBLEMS': {
+          authors: ['Ryan Sleevi'],
+          href: 'https://github.com/sleevi/psl-problems',
+          title: 'Public Suffix List Problems'
+        },
         'RELATIONAL-TURN': {
           title: 'A Relational Turn for Data Protection?',
           href: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3745973&s=09',
@@ -209,11 +214,16 @@
           href: 'https://www.w3.org/Consortium/Process/',
           publisher: 'W3C',
         },
+        'WHAT-DOES-PRIVATE-BROWSING-DO': {
+          authors: ['Martin Shelton'],
+          href: 'https://medium.com/@mshelton/what-does-private-browsing-mode-do-adfe5a70a8b1',
+          title: 'What Does Private Browsing Mode Do?'
+        },
       },
     };
   </script>
 </head>
-<body>
+<body data-cite="html indexedDB service-workers fingerprinting-guidance">
 
 <section id="abstract">
 
@@ -781,115 +791,80 @@ companies paying for access with strong checks and balances, and privacy guarant
 the funds would be used to support enhanced security for all.
 -->
 
-# From the Privacy Threat Model
-
-[[HTML]] defines an [=origin=] as the tuple of a scheme, hostname, and port that
-provides the main security boundary on the web.
-
-A <dfn>site</dfn> is a set of [=origins=] that are all [=same site=] with each
-other. Note that there are problems ([[PSL-PROBLEMS]]) with using [=registrable
-domains=] as a logical boundary.
-
-A <dfn>party</dfn> is defined by [[tracking-dnt]] as "a natural person, a legal
-entity, or a set of legal entities that share common owner(s), common
-controller(s), and a group identity that is easily discoverable by a user."
-
-The <dfn>first party</dfn> for a user action is the [=party=] that controls the
-[=origin=] of the [=top-level browsing context=] under which the action
-happened. Intuitively, this is the owner of the domain in the browser's URL bar.
-This differs from <a
-href="https://wiki.mozilla.org/Security/Anti_tracking_policy#Tracking_Definition">Mozilla's
-definition</a> in that Mozilla defines other parties as first parties if the
-user can easily discover which party it is and intends to interact with that
-party, for example to allow sign-in widgets to be first-party.
-
-A <dfn>third party</dfn> for a user action is any party that isn't the [=first
-party=] or the user (the second party).
-
-A <dfn>user</dfn> is a human or program that controls a user agent.
-
-A <dfn>user ID</dfn> is a pair of a [=site=] and a (potentially-large) integer
-allocated by that site that is used to identify a [=user=] on that site. A
-single user will generally have many user IDs that refer to them, and a single
-site may or may not know that multiple user IDs refer to the same user.
-
-A <dfn>global identifier</dfn> is a string that identifies a particular [=user=]
-independent of which site they're visiting. Users generally have relatively few
-global identifiers and can usually list and recognize them. A goal of
-anti-tracking policy is to prevent [=user IDs=] from becoming [=global
-identifiers=].
-
-An <dfn>attacker</dfn> is any entity trying to get information that a [=user=]
-might not want them to get. Attackers are often entities that a user intends to
-interact with in other ways, as both [=first party|first=] and [=third parties=], and some users may
-not mind their collection of this information.
-
-This document uses the terms <dfn>publisher</dfn> and <dfn>tracker</dfn>
-colloquially to refer to particular kinds of [=sites=] and the [=parties=] that
-operate them. They are not rigorously defined.
-
-# High-level threats # {#high-level-threats}
+# Privacy principles by category {#principles}
 
 User agents should attempt to defend their users from a variety of high-level
-threats or attacker goals, described in this section. [[#goals]] then describes
-the low-level steps an attacker would use to achieve these high-level goals.
+threats or attacker goals, described in this section.
 
 [[RFC6973]] describes the following high-level privacy threats, which the TAG
-has adopted into [[security-privacy-questionnaire#threats]]:
+has adopted into the <a data-cite="security-privacy-questionnaire#threats">
+Security and Privacy Self-Review Questionnaire</a>:
 
-: <dfn>Surveillance</dfn>
+<dl>
+<dt><dfn>Surveillance</dfn>
 
-:: Surveillance is the observation or monitoring of an individual’s
-    communications or activities. See [[RFC6973#section-5.1.1]].
+<dd> Surveillance is the observation or monitoring of an individual’s
+communications or activities. See <a
+data-cite="RFC6973#section-5.1.1">RFC6973§5.1.1</a>.
 
-: <dfn noexport>Stored Data Compromise</dfn>
+<dt><dfn noexport>Stored Data Compromise</dfn>
 
-:: End systems that do not take adequate measures to secure stored data from
-    unauthorized or inappropriate access. See [[RFC6973#section-5.1.2]].
+<dd> End systems that do not take adequate measures to secure stored data from
+    unauthorized or inappropriate access. See <a
+    data-cite="RFC6973#section-5.1.2">RFC6973§5.1.2</a>.
 
-: <dfn>Intrusion</dfn>
+<dt><dfn>Intrusion</dfn>
 
-:: Intrusion consists of invasive acts that disturb or interrupt one’s life or
-    activities. See [[RFC6973#section-5.1.3]].
+<dd> Intrusion consists of invasive acts that disturb or interrupt one’s life or
+    activities. See <a
+    data-cite="RFC6973#section-5.1.3">RFC6973§5.1.3</a>.
 
-: <dfn>Misattribution</dfn>
+<dt><dfn>Misattribution</dfn>
 
-:: Misattribution occurs when data or communications related to one individual
-    are attributed to another. See [[RFC6973#section-5.1.4]].
+<dd> Misattribution occurs when data or communications related to one individual
+    are attributed to another. See <a
+data-cite="RFC6973#section-5.1.4">RFC6973§5.1.4</a>.
 
-: <dfn>Correlation</dfn>
+<dt><dfn>Correlation</dfn>
 
-:: Correlation is the combination of various pieces of information related to an
+<dd> Correlation is the combination of various pieces of information related to an
     individual or that obtain that characteristic when combined. See
-    [[RFC6973#section-5.2.1]].
+    <a
+data-cite="RFC6973#section-5.2.1">RFC6973§5.2.1</a>.
 
-: <dfn>Identification</dfn>
+<dt><dfn>Identification</dfn>
 
-:: Identification is the linking of information to a particular individual to
+<dd> Identification is the linking of information to a particular individual to
     infer an individual’s identity or to allow the inference of an individual’s
-    identity. See [[RFC6973#section-5.2.2]].
+    identity. See <a
+data-cite="RFC6973#section-5.2.2">RFC6973§5.2.2</a>.
 
-: <dfn>Secondary Use</dfn>
+<dt><dfn>Secondary Use</dfn>
 
-:: Secondary use is the use of collected information about an individual without
+<dd> Secondary use is the use of collected information about an individual without
     the individual’s consent for a purpose different from that for which the
-    information was collected. See [[RFC6973#section-5.2.3]].
+    information was collected. See <a
+data-cite="RFC6973#section-5.2.3">RFC6973§5.2.3</a>.
 
-: <dfn>Disclosure</dfn>
+<dt><dfn>Disclosure</dfn>
 
-:: Disclosure is the revelation of information about an individual that affects
-    the way others judge the individual. See [[RFC6973#section-5.2.4]].
+<dd>Disclosure is the revelation of information about an individual that affects
+    the way others judge the individual. See <a
+data-cite="RFC6973#section-5.2.4">RFC6973§5.2.4</a>.
 
-: <dfn noexport>Exclusion</dfn>
+<dt><dfn noexport>Exclusion</dfn>
 
-:: Exclusion is the failure to allow individuals to know about the data that
+<dd>Exclusion is the failure to allow individuals to know about the data that
     others have about them and to participate in its handling and use. See
-    [[RFC6973#section-5.2.5]].
+    <a
+data-cite="RFC6973#section-5.2.5">RFC6973§5.2.5</a>.
+
+</dl>
 
 These threats combine into the particular concrete threats we want web
 specifications to defend against, described in subsections here:
 
-## Unwanted same-site recognition ## {#hl-recognition-same-site}
+## Unwanted same-site recognition {#hl-recognition-same-site}
 
 Contributes to [=surveillance=], [=correlation=], and [=identification=].
 
@@ -913,20 +888,22 @@ A user might expect that their two visits won't be associated if they:
 * Use two different browser profiles between the two visits.
 * Explicitly clear the site's cookies or storage.
 
-This recognition is generally accomplished by either "supercookies" or [=browser
-fingerprinting=].
+This recognition is generally accomplished by either "supercookies" or <a
+data-cite="fingerprinting-guidance#dfn-browser-fingerprinting">browser
+fingerprinting</a>.
 
 Supercookies occur when a browser stores data for a site but makes that data
 more difficult to clear than other cookies or storage.
-[[fingerprinting-guidance#clearing-all-local-state]] discusses how
-specifications can help browsers avoid this mistake.
+<a data-cite="fingerprinting-guidance#clearing-all-local-state">Fingerprinting
+Guidance § Clearing all local state</a> discusses how specifications can help
+browsers avoid this mistake.
 
 Fingerprinting consists of using attributes of the user's browser and platform
 that are consistent between the two visits and probabilistically unique to the
 user.
 
 The attributes can be exposed as information about the user's device that is
-otherwise benign (as opposed to [[#hl-sensitive-information]]). For example:
+otherwise benign (as opposed to [[[#hl-sensitive-information]]]). For example:
 
 * What are the user's language and time zone?
 * What size is the user's window?
@@ -935,16 +912,15 @@ otherwise benign (as opposed to [[#hl-sensitive-information]]). For example:
 
 See [[fingerprinting-guidance]] for how to mitigate this threat.
 
-## Unwanted cross-site recognition ## {#hl-recognition-cross-site}
+## Unwanted cross-site recognition {#hl-recognition-cross-site}
 
 Contributes to [=surveillance=], [=correlation=], and [=identification=],
-usually more significantly than [[#hl-recognition-same-site]].
+usually more significantly than [[[#hl-recognition-same-site]]].
 
 This occurs if a site can determine with high probability that a visit to that
-site comes from the same user as another visit to a *different* site.  This
-threat is discussed in [[#model-cross-site-recognition]].
+site comes from the same user as another visit to a *different* site.
 
-## Sensitive information disclosure ## {#hl-sensitive-information}
+## Sensitive information disclosure {#hl-sensitive-information}
 
 Contributes to [=correlation=], [=identification=], [=secondary use=], and
 [=disclosure=].
@@ -984,7 +960,7 @@ users, consider at least these factors:
 Issue(16): This description of what makes information sensitive still needs to
 be refined.
 
-## Intrusive behavior ## {#hl-intrusion}
+## Intrusive behavior {#hl-intrusion}
 
 See [=intrusion=].
 
@@ -998,7 +974,7 @@ intrusive for a site to
 
 if the user doesn't intend for it to do so.
 
-## Powerful capabilities ## {#hl-capabilities}
+## Powerful capabilities {#hl-capabilities}
 
 Contributes to [=misattribution=].
 
