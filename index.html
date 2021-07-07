@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://www.w3.org/Tools/respec/respec-w3c" defer class="remove"></script>
+  <title>Privacy Principles</title>
+  <script class="remove">
+    // All config options at https://respec.org/docs/
+    var respecConfig = {
+      specStatus: 'draft-finding',
+      isPreview: true,
+      format: 'markdown',
+      editors: [{
+        name: 'Robin Berjon',
+        company: 'The New York Times',
+        companyURL: 'https://nytimes.com/',
+        url: 'https://berjon.com/',
+      }, {
+        name: 'Jeffrey Yasskin',
+        company: 'Google',
+        companyURL: 'https://google.com/',
+      }],
+      github: 'w3ctag/privacy-principles',
+      shortName: 'privacy-principles',
+      localBiblio: {
+        'ANTI-TRACKING-POLICY': {
+          title: 'Anti-Tracking Policy',
+          href: 'https://wiki.mozilla.org/Security/Anti_tracking_policy#Tracking_Definition',
+          publisher: 'Mozilla',
+        },
+        'BIG-DATA-COMPETITION': {
+          title: 'Big Data and Competition Policy',
+          href: 'https://global.oup.com/academic/product/big-data-and-competition-policy-9780198788140?lang=en&cc=us',
+          authors: ['Maurice E. Stucke', 'Allen P. Grunes'],
+          publisher: 'Oxford University Press',
+        },
+        'BIT-BY-BIT': {
+          title: 'Bit By Bit: Social Research in the Digital Age',
+          href: 'https://www.bitbybitbook.com/',
+          authors: ['Matt Salganik'],
+          publisher: 'Princeton University Press',
+          status: 'You can read this book free of charge, but Matt is an outstanding author and I encourage you to support him by buying his book!',
+        },
+        'CAT': {
+          title: 'Content Aggregation Technology (CAT)',
+          authors: ['Robin Berjon', 'Justin Heideman'],
+          href: 'https://nytimes.github.io/std-cat/',
+        },
+        'CONFIDING': {
+          title: 'Confiding in Con Men: U.S. Privacy Law, the GDPR, and Information Fiduciaries',
+          authors: ['Lindsey Barrett'],
+          href: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3354129',
+        },
+        'CONSENT-LACKEYS': {
+          title: 'Publishers tell Google: We\'re not your consent lackeys',
+          authors: ['Rebecca Hill'],
+          href: 'https://www.theregister.com/2018/05/01/publishers_slam_google_ad_policy_gdpr_consent/',
+          publisher: 'The Register',
+        },
+        'DARK-PATTERNS': {
+          title: 'Dark patterns: past, present, and future',
+          authors: ['Arvind Narayanan', 'Arunesh Mathur', 'Marshini Chetty', 'Mihir Kshirsagar'],
+          href: 'https://dl.acm.org/doi/10.1145/3397884',
+          publisher: 'ACM',
+        },
+        'DARK-PATTERN-DARK': {
+          title: 'What Makes a Dark Pattern… Dark? Design Attributes, Normative Considerations, and Measurement Methods',
+          authors: ['Arunesh Mathur', 'Jonathan Mayer', 'Mihir Kshirsagar'],
+          href: 'https://arxiv.org/abs/2101.04843v1',
+        },
+        'DATA-FUTURES-GLOSSARY': {
+          title: 'Data Futures Lab Glossary',
+          authors: ['Mozilla Insights'],
+          href: 'https://foundation.mozilla.org/en/data-futures-lab/data-for-empowerment/data-futures-lab-glossary/',
+          publisher: 'Mozilla Foundation',
+        },
+        'DEMOCRATIC-DATA': {
+          title: 'Democratic Data: A Relational Theory For Data Governance',
+          authors: ['Salomé Viljoen'],
+          href: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3727562',
+          publisher: 'Yale Law Journal',
+        },
+        'DIGITAL-MARKET-MANIPULATION': {
+          title: 'Digital Market Manipulation',
+          authors: ['Ryan Calo'],
+          href: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2309703',
+          publisher: 'George Washington Law Review',
+        },
+        'EUROBAROMETER-443': {
+          title: 'Eurobarometer 443: e-Privacy',
+          authors: ['European Commission'],
+          href: 'https://ec.europa.eu/COMMFrontOffice/publicopinion/index.cfm/Survey/getSurveyDetail/instruments/FLASH/surveyKy/2124',
+        },
+        'FIDUCIARY-UA': {
+          title: 'The Fiduciary Duties of User Agents',
+          href: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3827421',
+          authors: ['Robin Berjon'],
+        },
+        'FIP': {
+          title: 'Fair Information Practices: A Basic History',
+          href: 'http://bobgellman.com/rg-docs/rg-FIPShistory.pdf',
+          authors: ['Bob Gellman'],
+          status: '(PDF)',
+        },
+        'GDPR': {
+          title: 'General Data Protection Regulations (GDPR) / Regulation (EU) 2016/679',
+          href: 'https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679&from=EN',
+          authors: ['European Parliament and Council of European Union'],
+        },
+        'GPC': {
+          title: 'Global Privacy Control (GPC)',
+          authors: ['Robin Berjon', 'Sebastian Zimmeck', 'Ashkan Soltani', 'David Harbage', 'Peter Snyder'],
+          href: 'https://globalprivacycontrol.github.io/gpc-spec/',
+          publisher: 'W3C',
+        },
+        'NYT-PRIVACY': {
+          title: 'How The New York Times Thinks About Your Privacy',
+          author: ['Robin Berjon'],
+          href: 'https://open.nytimes.com/how-the-new-york-times-thinks-about-your-privacy-bc07d2171531',
+          publisher: 'NYT Open',
+        },
+        'PBD': {
+          title: 'Privacy by Design',
+          href: 'https://conversationalist.org/2019/09/13/feminism-explains-our-toxic-relationships-with-our-smartphones/',
+          publisher: 'Office of the Information and Privacy Commissioner, Ontario',
+        },
+        'PHONE-ON-FEMINISM': {
+          title: 'This is your phone on feminism',
+          href: 'https://conversationalist.org/2019/09/13/feminism-explains-our-toxic-relationships-with-our-smartphones/',
+          authors: ['Maria Farrell'],
+          publisher: 'The Conversationalist',
+          rawDate: '2019-09-13',
+        },
+        'PRIVACY-BEHAVIOR': {
+          title: 'Privacy and Human Behavior in the Age of Information',
+          authors: ['Alessandro Acquisti', 'Laura Brandimarte', 'George Loewenstein'],
+          href: 'https://www.heinz.cmu.edu/~acquisti/papers/AcquistiBrandimarteLoewenstein-S-2015.pdf',
+          publisher: 'Science',
+        },
+        'PRIVACY-CONTESTED': {
+          title: 'Privacy is an essentially contested concept: a multi-dimensional analytic for mapping privacy',
+          authors: ['Deirdre K. Mulligan', 'Colin Koopman', 'Nick Doty'],
+          href: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5124066/',
+          publisher: 'Philosophical Transacions A',
+        },
+        'PRIVACY-HARMS': {
+          title: 'Privacy Harms',
+          authors: ['Danielle Keats Citron', 'Daniel J. Solove'],
+          href: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3782222',
+        },
+        'PRIVACY-AS-CI': {
+          title: 'Privacy As Contextual Integrity',
+          authors: ['Helen Nissenbaum'],
+          href: 'https://digitalcommons.law.uw.edu/wlr/vol79/iss1/10/',
+          publisher: 'Washington Law Review',
+        },
+        'PRIVACY-IN-CONTEXT': {
+          title: 'Privacy in Context',
+          authors: ['Helen Nissenbaum'],
+          href: 'https://www.sup.org/books/title/?id=8862',
+          publisher: 'SUP',
+        },
+        'PRIVACY-IS-POWER': {
+          title: 'Privacy Is Power',
+          authors: ['Carissa Véliz'],
+          href: 'https://www.penguin.com.au/books/privacy-is-power-9781787634046',
+          publisher: 'Bantam Press',
+        },
+        'PRIVACY-PROJECT': {
+          title: 'The Privacy Project',
+          href: 'https://www.nytimes.com/interactive/2019/opinion/internet-privacy-project.html',
+          publisher: 'The New York Times',
+        },
+        'PRIVACY-THREAT': {
+          title: 'Target Privacy Threat Model',
+          href: 'https://w3cping.github.io/privacy-threat-model/',
+          authors: ['Jeffrey Yasskin', 'Tom Lowenthal'],
+          publisher: 'W3C PING',
+        },
+        'PSL-PROBLEMS': {
+          authors: ['Ryan Sleevi'],
+          href: 'https://github.com/sleevi/psl-problems',
+          title: 'Public Suffix List Problems'
+        },
+        'RELATIONAL-TURN': {
+          title: 'A Relational Turn for Data Protection?',
+          href: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3745973&s=09',
+          authors: ['Neil Richards', 'Woodrow Hartzog'],
+        },
+        'SEEING-LIKE-A-STATE': {
+          title: 'Seeing Like a State: How Certain Schemes to Improve the Human Condition Have Failed',
+          href: 'https://bookshop.org/books/seeing-like-a-state-how-certain-schemes-to-improve-the-human-condition-have-failed/9780300246759',
+          authors: ['James C. Scott'],
+        },
+        'SURVEILLANCE-CAPITALISM': {
+          title: 'The Age of Surveillance Capitalism: The Fight for a Human Future at the New Frontier of Power',
+          authors: ['Shoshana Zuboff'],
+          href: 'https://www.publicaffairsbooks.com/titles/shoshana-zuboff/the-age-of-surveillance-capitalism/9781610395694/',
+          publisher: 'Hachette Public Affairs',
+        },
+        'TAKING-TRUST-SERIOUSLY': {
+          title: 'Taking Trust Seriously in Privacy Law',
+          href: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2655719',
+          authors: ['Neil Richards', 'Woodrow Hartzog'],
+        },
+        'TRACKING-PREVENTION-POLICY': {
+          title: 'Tracking Prevention Policy',
+          href: 'https://webkit.org/tracking-prevention-policy/',
+          publisher: 'Apple',
+        },
+        'W3C-PROCESS': {
+          title: 'W3C Process Document',
+          authors: ['Elika J. Etemad / fantasai', 'Florian Rivoal'],
+          href: 'https://www.w3.org/Consortium/Process/',
+          publisher: 'W3C',
+        },
+        'WHAT-DOES-PRIVATE-BROWSING-DO': {
+          authors: ['Martin Shelton'],
+          href: 'https://medium.com/@mshelton/what-does-private-browsing-mode-do-adfe5a70a8b1',
+          title: 'What Does Private Browsing Mode Do?'
+        },
+      },
+    };
+  </script>
+</head>
+<body data-cite="html indexedDB service-workers fingerprinting-guidance">
+
+<section id="abstract">
+
+Privacy has been an essentially contested concept [[?PRIVACY-CONTESTED]]. Its debated meaning
+render its support problematic in the context of a standards-setting process grounded in
+consensus [[?W3C-PROCESS]], in seeking out technical solutions grounded on shared
+requirements, and in addressing the needs of a worldwide constituency. This document
+provides definitions for privacy and related concepts that are suitable for a global
+audience, that can provide building blocks for privacy threat modelling, and can guide the
+development of the Web as a trustworthy platform. In the spirit of building a much-needed
+bridge between technology and policy, this document is written under the expectation that
+it can apply to both.
+
+</section>
+
+<section id="sotd">
+
+This document is a draft Finding by a Task Force jointly convened by the
+Technical Architecture Group (TAG) and the Privacy Interest Group (PING). It
+does not contain any normative content.
+
+This document <strong>DOES NOT YET</strong> reflect the consensus of the Task Force. It will
+continue to evolve and the Task Force will issue updates as often as needed. At
+the conclusion of the Task Force, it is intended to be adopted by the TAG.
+
+</section>
+
+# Introduction {#intro}
+
+Privacy is essential to trust, and trust is a cornerstone value of the Web [[?RFC8890]].
+In much of everyday life, people have little difficulty assessing whether a given flow of
+information constitutes a violation of privacy or not [[?NYT-PRIVACY]]. However, in the digital
+space, users struggle to understand how their data may flow between contexts and how such
+flows may affect them, not just immediately but at a much later time and in completely
+different situations. Some actors then seize upon this confusion in order to extract and
+exploit [=personal data=] at unprecedented scale.
+
+The goal of this document is to define all the terms that may prove useful in developing
+technology and policy that relate to privacy and [=personal data=]. It additionally provides
+a toolbox to support the common need that is privacy threat modelling, the frequent debate
+over consent, and the under-developed set of issues in privacy that are of a
+collective, relational nature.
+
+[=Personal data=] is a regulated object, and this document naturally recognises the
+jurisdictional primacy of existing data protection regimes. However, the global nature of
+the Web means that, as we develop technology, we benefit from shared concepts that guide the
+evolution of the Web as a system built for its users [[?RFC8890]]. A clear and well-defined
+view of privacy on the Web, grounded in an up-to-date understanding of the state of the art,
+can hopefully help the Web's constituencies thrive across jurisdictional disparity, with the
+shared understanding that the law is a floor, not a ceiling.
+
+# Definitions {#definitions}
+
+This section provides a number of elementary building blocks from which to establish a
+shared understanding of privacy. Some of the definitions below build atop the work in
+<em>Tracking Preference Expression (DNT)</em> [[tracking-dnt]].
+
+## People &amp; Data {#people-data}
+
+A <dfn>user</dfn> (also <dfn data-lt="individual">person</dfn> or <dfn>data subject</dfn>) is any natural
+person.
+
+We define <dfn data-lt="data">personal data</dfn> as any information relating to a [=person=] such
+that:
+
+* this [=person=] is identified, directly or indirectly, by reference to an
+  identifier such as a name, email address, an arbitrary identifier or
+  identification number, an online identifier such as an IP address or any
+  identifier attached to a device this [=person=] may be using, phone number,
+  location data, or factors specific to the physical, physiological, genetic,
+  mental, economic, cultural, or social identity of that [=person=], as well as
+  identifiers derived from such data, for instance through hashing; or
+* this [=person=] could reasonably be reidentified from a conjunction of this
+  data with other data; or
+* the data pertains to a group of people such that a [=person=] may find
+  themselves to be the subject of a treatment related to this group, even if the
+  entity carrying out the treatment has no way to identify that [=person=].
+
+Data is <dfn>permanently de-identified</dfn> when there exists a high level of confidence
+that no human subject of the data can be identified, directly or indirectly (e.g., via
+association with an identifier, user agent, or device), by that data alone or in
+combination with other retained or available information, including as being part of a
+group. Note that further considerations relating to groups are covered in the
+<a href="#collective">Collective Issues in Privacy</a> section.
+
+Data is <dfn data-lt="pseudonymous data|pseudonymity">pseudonymous</dfn> when:
+
+* the identifiers used in the data are under the direct and exclusive control of
+  the [=first party=]; and
+
+* when these identifiers are shared with a [=third party=], they are made unique
+  to that [=third party=] such that if they are shared with more than one
+  [=third party=] these cannot then match them up with one another; and
+
+* there is a strong level of confidence that no [=third party=] can match them
+  to any data other than that obtained through interactions with the [=first
+  party=]; and
+
+* any [=third party=] receiving such identifiers is barred (eg. based on legal
+  terms) from sharing them or the related data further; and
+
+* technical measures exist to prevent re-identification or the joining of
+  different data sets involving these identifiers, notably against timing or
+  k-anonymity attacks; and
+
+* there exist contractual terms between the [=first party=] and [=third party=]
+  describing the limited [=purpose=] for which the data is being shared.
+
+This can ensure that [=pseudonymous data=] is used in a manner that provides a minimum
+degree of governance such that technical and procedural means to guarantee the
+maintenance of pseudonymity are preserved. Note that [=pseudonymity=], on its own, is not
+sufficient to render [=data processing=] [=appropriate=].
+
+A <dfn data-lt="vulnerable">vulnerable person</dfn> is a [=person=] who, at least in the [=context=] of
+the [=processing=] being discussed, are unable to exercise sufficient
+self-determination for any consent they may provide to be receivable. This includes for
+example children, employees with respect to their employers, people in some situations of
+intellectual or psychological impairment, or refugees.
+
+## The Parties {#parties}
+
+A <dfn>party</dfn> is a [=person=], a legal entity, or a set of legal entities that
+share common owners, common controllers, and a group identity that is readily evident to
+the [=user=] without them needing to consult additional material, typically through
+common branding.
+
+The <dfn data-lt="first parties">first party</dfn> is a [=party=] with which the [=user=] intends to
+interact. Merely hovering over, muting, pausing, or closing a given piece of content does
+not constitute a [=user=]'s intent to interact with another party, nor does the simple
+fact of loading a [=party=] embedded in the one with which the user intends to
+interact. In cases of clear and conspicuous joint branding, there can be multiple [=first
+parties=]. The [=first party=] is necessarily a [=data controller=] of the data processing
+that takes places as a consequence of a [=user=] interacting with it.
+
+A <dfn data-lt="third parties">third party</dfn> is any [=party=] other than the [=user=],
+the [=first party=], or a [=service provider=] acting on behalf of either the [=user=] or
+the [=first party=].
+
+A <dfn>service provider</dfn> or <dfn>data processor</dfn> is considered to be the same
+[=party=] as the entity contracting it to perform the relevant [=processing=] if it:
+
+* is processing the data on behalf of that [=party=];
+* ensures that the data is only retained, accessed, and used as directed by that
+  [=party=] and solely for the list of explicitly-specified [=purposes=]
+  detailed by the directing [=party=] or [=data controller=];
+* may determine implementation details of the data processing in question but
+  does not determine the [=purpose=] for which the data is being [=processed=]
+  nor the overarching [=means=] through which the [=purpose=] is carried out;
+* has no independent right to use the data other than in a [=permanently
+  de-identified=] form (e.g., for monitoring service integrity, load balancing,
+  capacity planning, or billing); and,
+* has a contract in place with the [=party=] which is consistent with the above limitations.
+
+A <dfn>data controller</dfn> is a [=party=] that determines the [=means=] and [=purposes=]
+of data processing. Any [=party=] that is not a [=service provider=] is a [=data controller=].
+
+The <dfn>Vegas Rule</dfn> is a simple implementation of privacy in which "<em>what happens
+with the [=first party=] stays with the [=first party=]</em>." Put differently, it
+describes a situation in which the [=first party=] is the only [=data controller=]. Note
+that, while enforcing the [=Vegas Rule=] provides a rule of thumb describing a necessary
+baseline for [=appropriate=] [=data processing=], it is not always sufficient to guarantee
+[=appropriate=] [=processing=] since the [=first party=] can [=process=] data
+[=inappropriately=].
+
+## Acting on Data {#acting-on-data}
+
+A [=party=] <dfn data-lt="process|processing|processed|data processing">processes</dfn> data if it
+carries out operations on [=personal data=], whether or not by automated means, such as
+collection, recording, organisation, structuring, storage, adaptation or alteration,
+retrieval, consultation, use, disclosure by transmission, [=sharing=], dissemination or
+otherwise making available, [=selling=], alignment or combination, restriction, erasure or
+destruction.
+
+A [=party=] <dfn data-lt="share|sharing">shares</dfn> data if it provides it to any other
+[=party=]. Note that, under this definition, a [=party=] that provides data to its own
+[=service providers=] is not [=sharing=] it.
+
+A [=party=] <dfn data-lt="sell|selling">sells</dfn> data when it [=shares=] it in exchange
+for consideration, monetary or otherwise.
+
+## Contexts and Privacy
+
+The <dfn>purpose</dfn> of a given [=processing=] of data is an anticipated, intended, or
+planned outcome of this [=processing=] which is achieved or aimed for within a given
+[=context=]. A [=purpose=], when described, should be specific enough to be actionable by
+someone familiar with the relevant [=context=] (ie. they could independently determine
+[=means=] that reasonably correspond to an implementation of the [=purpose=]).
+
+<!--
+XXX given that contexts are defined from *user* purpose we might wish to have purpose in
+general and processing purpose for the above.
+-->
+
+The <dfn>means</dfn> are the general method of [=data processing=] through which a given
+[=purpose=] is implemented, in a given [=context=], considered at a relatively abstract
+level and not necessarily all the way down to implementation details. Example:
+<em>the user will have their preferences restored (purpose) by looking up their identifier
+in a preferences store (means)</em>.
+
+A <dfn>context</dfn> is a physical or digital environment that a [=person=] interacts with
+for a purpose of their own (that they typically share with other [=person=] who interact
+with the same environment).
+
+A [=context=] can be further described through:
+
+* Its <dfn>actors</dfn>, which comprise the <dfn>subject</dfn> (a [=person=]) as well as
+  the <dfn>sender</dfn> and <dfn>recipient</dfn> of the data (which are [=parties=]).
+* Its <dfn>attributes</dfn>, which are the types of [=personal data=] being [=processed=]
+  in the [=context=].
+* Its <dfn>transmission principles</dfn>, which are the constraints (typically technical
+  or legal) being placed upon the [=data processing=].
+
+A [=context=] carries <dfn data-lt="norm">context-relative informational norms</dfn> that determine
+whether a given [=data processing=] is <dfn data-lt="appropriately">appropriate</dfn>
+(if the norms are adhered to) or <dfn data-lt="inappropriately">inappropriate</dfn>
+(when the norms are violated). A norm violation can be for instance the exfiltration of
+[=personal data=] from a context or the lack of respect for [=transmission principles=].
+When [=norms=] are respected in a given [=context=], we can say that <dfn>contextual
+integrity</dfn> is maintained; otherwise that it is violated ([[?PRIVACY-IN-CONTEXT]],
+[[?PRIVACY-AS-CI]]).
+
+We define <dfn>privacy</dfn> as a right to [=appropriate=] [=data processing=]. A
+<dfn>privacy violation</dfn> is, correspondingly, [=inappropriate=] [=data processing=]
+[[?PRIVACY-IN-CONTEXT]].
+
+Note that a [=first party=] can be comprised of multiple [=contexts=] if it is large
+enough that [=people=] would interact with it for more than one [=purpose=]. [=Sharing=]
+[=personal data=] across [=contexts=] is, in the overwhelming majority of cases,
+[=inappropriate=].
+
+<div class="example">
+
+Your cute little pup uses <em>Poodle Naps</em> to find comfortable places to snooze,
+and <em>Poodle Fetch</em> to locate the best sticks. Napping and fetching are different
+[=contexts=] with different norms, and sharing data between these contexts is a
+[=privacy violation=] despite the shared ownership of <em>Naps</em> and <em>Fetch</em>
+by the <em>Poodle</em> conglomerate.
+
+</div>
+
+Colloquially, <dfn>tracking</dfn> is understood to be any kind of [=inappropriate=] data
+collection.
+
+Additionally, <dfn data-lt="privacy-labor">privacy labour</dfn> is the practice of having
+a [=person=] carry out the work of ensuring [=data processing=] of which they are the
+subject is [=appropriate=], instead of having the [=parties=] be responsible for that
+work as is more respectable.
+
+## User Agents {#user-agents}
+
+The <dfn>user agent</dfn> acts as an intermediary between a [=user=] and the web. The
+[=user agent=] is <em>not</em> a [=context=] in that it is expected to coincide with the
+[=subject=] and operate exclusively in the [=subject=]'s interest. It is <em>not</em> the
+[=first party=]. The [=user agent=] serves the [=user=] in a
+<dfn data-lt="fiduciary relationship">relationship of fiduciary agency</dfn>: it always puts
+the [=user=]'s interest first, up to and including, on occasion, protecting the [=user=]
+from themselves by preventing them from carrying out a harmful decision, or at the very
+least by speed-bumping it [[?FIDUCIARY-UA]]. For example, the [=user agent=] will make it
+difficult for the [=user=] to connect to a site the authenticity of which is hard to
+ascertain, will double-check that the user really intends to expose a sensitive device
+capability, or will prevent the [=user=] from consenting to permanent monitoring of their
+behaviour. Its <dfn>fiduciary duties</dfn> include [[?TAKING-TRUST-SERIOUSLY]]:
+
+<dl>
+  <dt><dfn>Duty of Protection</dfn></dt>
+  <dd>
+    Protection requires [=user agents=] to affirmatively protect a [=user=]'s data, beyond
+    simple security measures. It is insufficient simply to encrypt at rest and in transit,
+    but one must further limit retention, ensure that the strictly necessary data is
+    collected, or require guarantees from those it is shared to.
+  </dd>
+  <dt><dfn>Duty of Discretion</dfn></dt>
+  <dd>
+    Discretion requires the [=user agent=] to make best efforts to enforce
+    [=context-relative informational norms=] by placing contextual limits on the flow and
+    [=processing=] of [=personal data=]. Discretion is not confidentiality and may place
+    limits on nondisclosure: trust can be preserved even when the [=user agent=] shares the
+    [=personal data=], so long as it is done in an [=appropriately=] discreet manner.
+  </dd>
+  <dt><dfn>Duty of Honesty</dfn></dt>
+  <dd>
+    Honesty requires that the [=user agent=] make sure that the [=user=] is proactively
+    provided with information that is relevant to them and that will enhance the [=user=]'s
+    autonomy, to the extent possible in a manner that they will comprehend and at the right
+    moment, which is almost never when the [=user=] is trying to do something else such as
+    read a page or activate a feature. The duty of honesty goes well beyond that of
+    transparency that dominates legacy privacy regimes. Unlike with transparency, honesty
+    cannot get away with hiding relevant information in complex out-of-band legal notices
+    no more than it can rely on overly cursory information provided in a consent dialog.
+  </dd>
+  <dt><dfn>Duty of Loyalty</dfn></dt>
+  <dd>
+    Because of the special [=fiduciary relationship=] that obtains between [=user=] and
+    [=user agent=], the latter is held to be loyal to the former in all situations, up to and
+    including in preference to the [=user agent=]'s implementer. When a [=user agent=] carries
+    out [=processing=] that is not directly in the [=user=]'s interest but rather benefits
+    another entity such as its implementer, including by piggybacking on [=processing=] that
+    may be in the user's interest, that behaviour is known as <dfn>self-dealing</dfn>.
+    [=Self-dealing=] is always [=inappropriate=]. Loyalty is the avoidance of [=self-dealing=].
+  </dd>
+</dl>
+
+These duties ensure the [=user agent=] will <em>care</em> for the user. It is important to
+note that there is a subtle difference between care and <dfn>data paternalism</dfn> which
+is that the latter purports to help in part by removing agency ("<em>don't worry about it,
+so long as your data is with us it's safe, you don't need to know what we do with it, it's
+all good because we're good people</em>") whereas care aims to support people by enhancing
+their agency and sovereignty.
+
+
+## Identity on the Web {#identity}
+
+A [=person=]'s <dfn>identity</dfn> is the set of characteristics that define them. In
+computer systems, [=identity=] is typically attached to a means of denotation that makes
+it easier for an automated system to recognise the user, an <dfn>identifier</dfn> of
+some type.
+
+A [=person=]'s characteristics, and therefore [=identity=], is entirely
+[=context=]-dependent. Recognising a [=person=] in distinct [=contexts=] can at times be
+[=appropriate=] but this relies on an understanding of applicable [=norms=] and will
+likely require compartmentalisation. (For example, if you meet your therapist at a
+cocktail party, you expect them to have rather different discussion topics with you than
+they usually would, and possibly even to pretend they do not know you.) As a result,
+automating the recognition of a [=person=]'s identity across different [=contexts=] is
+[=inappropriate=]. This is particularly true for [=vulnerable=] people as recognising them
+in different [=contexts=] may force their vulnerability into the open.
+
+[=Identity=] being by nature fragmented, [=user agents=] must work in support of [=users=]
+having different identities in different [=context=] with respect to <em>all</em> [=parties=]
+(including the user agent vendor) and to prevent their recognition through other means,
+where possible.
+
+A keystone principle of the Web is trust [[RFC8890]]. An important part of trust is to
+ensure that [=data=] collected for a [=purpose=] that matches a clearly delineated [=user=]
+feature should not then be used for additional secondary [=purposes=]. Email is often used
+for login and communication [=purposes=], including essential transactional interactions.
+Using emails for cross-context recognition [=purposes=] is therefore not only
+[=inappropriate=] but also threatens key messaging infrastructure. Future iterations of
+the Web platform should ensure that users can log into sites and receive communication
+without relying on email at all.
+
+## User Control and Autonomy {#autonomy}
+
+A [=person=]'s <dfn data-lt="autonomous">autonomy</dfn> is their ability to make decisions of their own volition,
+without undue influence from other parties. People have limited intellectual resources and
+time with which to weigh decisions, and by necessity rely on shortcuts when making
+decisions. This makes their privacy preferences malleable [[?PRIVACY-BEHAVIOR]] and susceptible to
+manipulation [[?DIGITAL-MARKET-MANIPULATION]]. A [=person=]'s [=autonomy=] is enhanced by a
+system or device when that system offers a shortcut that aligns more with what that [=person=] would
+have decided given arbitrary amounts of time and relatively unfettered intellectual ability;
+and [=autonomy=] is decreased when a similar shortcut goes against decisions made under
+ideal conditions.
+
+Affordances and interactions that decrease [=autonomy=] are known as <dfn>dark patterns</dfn>.
+A [=dark pattern=] does not have to be intentional, the deceptive effect is sufficient to
+define them [[?DARK-PATTERNS]], [[?DARK-PATTERN-DARK]].
+
+Because we are all subject to motivated reasoning, the design of defaults and affordances
+that may impact [=user=] [=autonomy=] should be the subject of independent scrutiny.
+Implementers are enjoined to be particularly cautious to avoid slipping into
+[=data paternalism=].
+
+Given the sheer volume of potential [=data=]-related decisions in today's data economy,
+complete informational self-determination is impossible. This fact, however, should not be
+confused with the contention that privacy is dead. Careful design of our technological
+infrastructure can ensure that [=users=]' [=autonomy=] as pertaining to their own [=data=]
+is enhanced through [=appropriate=] defaults and choice architectures.
+
+In the 1970s, the <dfn>Fair Information Practices</dfn> or <dfn>FIPs</dfn> were elaborated
+in support of individual [=autonomy=] in the face of growing concerns with databases. The
+[=FIPs=] assume that there is sufficiently little [=data processing=] taking place that any
+[=person=] will be able to carry out sufficient diligence to enable [=autonomy=] in their
+decision-making. Since they entirely offload the [=privacy labour=]
+to [=users=] and assume perfect, unfettered [=autonomy=], the [=FIPs=] do not forbid specific
+types of [=data processing=] but only place them under different procedural requirements.
+Such an approach is [=appropriate=] for [=parties=] that are processing data in the 1970s.
+
+One notable issue with procedural approaches to privacy is that they tend to have the same
+requirements in situations where the [=user=] finds themselves in a significant asymmetry of
+power with a [=party=] — for instance the [=user=] of an essential service provided by a
+monopolistic platform — and those where [=user=] and [=parties=] are very much on equal
+footing, or even where the [=user=] may have greater power, as is the case with small
+businesses operating in a competitive environment. It further does not consider cases in
+which one [=party=] may coerce other [=parties=] into facilitating its [=inappropriate=]
+practices, as is often the case with dominant players in advertising [[?CONSENT-LACKEYS]] or
+in content aggregation [[?CAT]].
+
+Reference to the [=FIPs=] survives to this day. They are often referenced as <em>transparency
+and choice</em>, which, in today's digital environment, is often a strong indication that
+[=inappropriate=] [=processing=] is being described.
+
+<figure>
+<img src="agnes-tc.jpg" alt="Agnes from Wandavision winking 'Transparency and choice'">
+<figcaption>
+  A method of privacy regulation which promises honesty and autonomy but delivers neither.
+  [[?CONFIDING]].
+</figcaption>
+</figure>
+
+## Opt-in, Consent, Opt-out, Global Controls {#opt-in-out}
+
+Different procedural mechanisms exist to enable [=people=] to control the [=processing=]
+done to their [=data=]. Mechanisms that increase the number of [=purposes=] for which
+their [=data=] is being [=processed=] are referred to as <dfn data-lt="opt in">opt-in</dfn> or
+<dfn>consent</dfn>; mechanisms that decrease this number of [=purposes=] are known as
+<dfn data-lt="opt out">opt-out</dfn>.
+
+When deployed thoughtfully, these mechanisms can enhance [=people=]'s [=autonomy=]. Often,
+however, they are used as a way to avoid putting in the difficult work of deciding which
+types of [=processing=] are [=appropriate=] and which are not, offloading [=privacy labour=]
+to the [=user=].
+
+Privacy regulatory regimes are often anchored at extremes: either they default to allowing
+only very few strictly essential [=purposes=] such that many [=parties=] will have to
+resort to [=consent=], habituating [=people=] to ignore legal prompts and incentivising
+[=dark patterns=], or, conversely, they default to forbidding only very few, particularly
+egregious [=purposes=], such that [=people=] will have to perform the [=privacy labour=] to
+[=opt out=] in every [=context=] in order to produce [=appropriate=] [=processing=].
+
+An approach that is more aligned with the expectation that the Web should provide a
+trustworthy, [=person=]-centric environment is to establish a regime consisting of
+three privacy tiers:
+
+<dl>
+  <dt><dfn>Default Privacy Tier</dfn></dt>
+  <dd>
+    This is the set of [=purposes=] that are deemed [=appropriate=] in a given [=context=]
+    and the [=processing=] that a [=person=] can expect without having triggered any
+    mechanisms to change their preferences. The exact details for this tier require clear
+    definition, including aspects such as data retention, but [=data=] would have to be
+    systematically siloed by [=context=] (<em>not</em> by [=party=], making it stricter than
+    the [=Vegas Rule=] and more in line with respecting [=privacy=]). This default tier
+    should also be defined differently for certain kinds of [=contexts=]. The legitimate
+    [=processing=] that can take place in this tier derives its legitimacy from matching the
+    expectations and interests of both the [=user=] and the [=first party=] in their
+    relationship, as guided by the applicable [=norms=]. This tier is more [=appropriate=] the more the
+    [=first party=] acts in accordance with [=fiduciary duties=].
+  </dd>
+  <dt><dfn>Opt-out Privacy Tier</dfn></dt>
+  <dd>
+    [=People=] who, either from personal preference or because they are [=vulnerable=],
+    require greater obscurity in some or even most [=contexts=], would be able to transition
+    to this tier through an [=opt-out=] mechanism. This tier would only permit strictly
+    necessary [=purposes=]. This tier should be [=appropriate=] for [=vulnerable=]
+    [=people=].
+  </dd>
+  <dt><dfn>Opt-in Privacy Tier</dfn></dt>
+  <dd>
+    In rare and highly specific cases, [=people=] should be able to [=consent=] to more
+    sensitive [=purposes=], such as having their [=identity=] recognised across contexts or
+    their reading history shared with a company. The burden of proof on ensuring that informed [=consent=] has
+    been obtained needs in this case to be very high (much higher than what prevails for
+    instance in [[?GDPR]] jurisdictions as currently practices). [=Consent=] is comparable to the general problem
+    of permissions on the Web platform. In the same way that it should be clear when a given
+    device capability is in use (eg. you are providing geolocation or camera access), sharing
+    data under this tier should be set up in such a way that it requires deliberate, specific
+    action from the [=user=] (eg. triggering a form control) and if that [=consent=] is
+    persistent, there should be an indicator that data is being transmitted shown at all
+    times, in such a way that the user can easily switch it off. In general, providing
+    [=consent=] should be rare, difficult, highly intentional, and temporary.
+  </dd>
+</dl>
+
+When an [=opt-out=] mechanism exists, it should preferably be complemented by a
+<dfn>global opt-out</dfn> mechanism. The function of a [=global opt-out=] mechanism is to
+rectify the <dfn>automation asymmetry</dfn> whereby service providers can automate
+[=data processing=] but [=people=] have to take manual action. A good example of a
+[=global opt-out=] mechanism is the <em>Global Privacy Control</em> [[?GPC]].
+
+Conceptually, a [=global opt-out=] mechanism is an automaton operating as part of the
+[=user agent=], which is to say that it is equivalent to a robot that would carry out the
+[=user=]'s bidding by pressing an [=opt-out=] button with every interaction that the
+[=user=] has with a site, or more generally conveys an expression of the [=user=]'s
+rights in a relevant jurisdiction. (For instance, under [[?GDPR]], the [=user=] may be
+conveying objections to [=processing=] based on legitimate interest or the withdrawal of
+[=consent=] to specific [=purposes=].) It should be noted that, since a [=global opt-out=]
+signal is reaffirmed automatically with every [=user=] interaction, it will take precedence
+in terms of specificity over any manner of blanket [=consent=] that a site may obtain,
+unless that [=consent=] is directly attached to an interaction (eg. terms specified on a
+form upon submission).
+
+## Collective Issues in Privacy {#collective}
+
+When designing Web technology, we naturally pay attention to potential impacts on the [=person=]
+using the Web through their [=user agent=]. In addition to potential individual harms we also
+pay heed to collective effects that emerge from the accumulation of individual actions as
+influenced by entities and the structure of technology.
+
+Note that in evaluating impact, we deliberately ignore what implementers or specifiers may
+have <em>intended</em> and only focus on outcomes. This framing is known as <dfn>POSIWID</dfn>, or
+"<em>the Purpose Of a System Is What It Does</em>".
+
+The collective problem of privacy is known as <dfn>legibility</dfn>. [=Legibility=] concerns
+population-level [=data processing=] that may impact populations or individuals, including in
+ways that [=people=] could not control even under the optimistic assumptions of the [=FIPs=].
+For example, based on population-level analysis, a company may know that <var>site.example</var>
+is predominantly visited by [=people=] of a given race or gender, and decide not to run its
+job ads there. Visitors to that page are implicitly having their [=data=] processed in
+[=inappropriate=] ways, with no way to discover the discrimination or seek relief
+[[?DEMOCRATIC-DATA]].
+
+What we consider is therefore not just the relation between the people who expose themselves
+and the entities that invite that disclosure [[?RELATIONAL-TURN]], but also between the people
+who expose themselves and those who do not but may find themselves recognised as such indirectly
+anyway. One key understanding here is that such relations may persists even when data is
+[=permanently de-identified=].
+
+[=Legibility=] practices can be <dfn data-lt="legitimacy">legitimate</dfn> or
+<dfn data-lt="illegitimacy">illegitimate</dfn> depending
+on the [=context=] and on the [=norms=] that apply in that [=context=]. Typically, a
+[=legibility=] practice may be [=legitimate=] if it is managed through an acceptable process
+of collective [=governance=]. For example, it is often considered [=legitimate=] for a
+government, under the control of its citizens, to maintain a database of license plates for
+the [=purpose=] of enforcing the rules of the road. It would be [=illegitimate=] to observe
+the same license plates near places of worship to build a database of religious identity.
+
+[=Legibility=] is often used to order information about the world. This can notably create
+problems of [=reflexivity=] and of [=autonomy=].
+
+Problems of <dfn>reflexivity</dfn> occur when the ordering of information about the world
+used to produce [=legibility=] finds itself changing the way in which the world operates.
+This can produce self-reinforcing loops that can have deleterious effects both individual and
+collective [[?SEEING-LIKE-A-STATE]].
+
+Issues of [=autonomy=] occur depending on the manner in which [=legibility=] is implemented.
+When [=legibility=] is used to order the world following rules set by the [=user=] or
+following methods subject to public scrutiny and [=governance=] models with strong checks and
+balances (such as a newspaper's editorial decisions), then it will enhance [=user=] [=autonomy=]
+and tend to be [=legitimate=]. When it is done in the [=user=]'s stead and without [=governance=],
+it decreases [=user=] [=autonomy=] and tends to be [=illegitimate=].
+
+<!--
+<p>
+From an economics standpoint, it is important to note that the broad sharing of data can lead
+to anticompetitive outcomes, notably due to network effects stemming from processing data across
+multiple [=contexts=] [[?BIG-DATA-COMPETITION]]. Restricting flows of [=data=] between
+different [=contexts=] (and not just [=parties=]) is therefore likely to improve competition.
+</p>
+-->
+
+<dfn data-lt="governance">Data governance</dfn> refers to the rules and processes for how [=data=] is
+[=processed=] in any given [=context=]. How data is <em>governed</em> describes who has
+power to make decisions over [=data=] and how [[?DATA-FUTURES-GLOSSARY]].
+
+In general, collective issues in [=data=] require collective solutions. The proper goal of
+[=data governance=] at the standards-setting level is the development of structural controls
+in [=user agents=] and the provision of institutions that can handle population-level problems
+in [=data=]. [=Governance=] will often struggle to achieve its goals if it works primarily by
+increasing <em>individual</em> control over [=data=]. A collective approach reduces the cost of
+control.
+
+Collecting data at large scales can have significant pro-social outcomes. Problems tend to
+emerge when entities take part in dual-use collection in which [=data=] is [=processed=]
+for collective benefit but also for [=self-dealing=] [=purposes=] that may degrade welfare.
+The [=self-dealing=] [=purposes=] will be justified as bankrolling the pro-social outcomes,
+which, absent collective oversight, cannot be considered to support claims to [=legitimacy=]
+for such [=legibility=]. It is vital for standards-setting organisations to establish not
+just purely technical devices but techno-social systems that can govern data at scale.
+
+<!--
+Imagine a case in which collecting browser data can be leveraged to improve both search
+services (which have a business model) and user security (which generally doesn't). This
+data could be collected through a data trust under stakeholder governance, search
+companies paying for access with strong checks and balances, and privacy guarantees, and
+the funds would be used to support enhanced security for all.
+-->
+
+# Privacy principles by category {#principles}
+
+User agents should attempt to defend their users from a variety of high-level
+threats or attacker goals, described in this section.
+
+[[RFC6973]] describes the following high-level privacy threats, which the TAG
+has adopted into the <a data-cite="security-privacy-questionnaire#threats">
+Security and Privacy Self-Review Questionnaire</a>:
+
+<dl>
+<dt><dfn>Surveillance</dfn>
+
+<dd> Surveillance is the observation or monitoring of an individual’s
+communications or activities. See <a
+data-cite="RFC6973#section-5.1.1">RFC6973§5.1.1</a>.
+
+<dt><dfn noexport>Stored Data Compromise</dfn>
+
+<dd> End systems that do not take adequate measures to secure stored data from
+    unauthorized or inappropriate access. See <a
+    data-cite="RFC6973#section-5.1.2">RFC6973§5.1.2</a>.
+
+<dt><dfn>Intrusion</dfn>
+
+<dd> Intrusion consists of invasive acts that disturb or interrupt one’s life or
+    activities. See <a
+    data-cite="RFC6973#section-5.1.3">RFC6973§5.1.3</a>.
+
+<dt><dfn>Misattribution</dfn>
+
+<dd> Misattribution occurs when data or communications related to one individual
+    are attributed to another. See <a
+data-cite="RFC6973#section-5.1.4">RFC6973§5.1.4</a>.
+
+<dt><dfn>Correlation</dfn>
+
+<dd> Correlation is the combination of various pieces of information related to an
+    individual or that obtain that characteristic when combined. See
+    <a
+data-cite="RFC6973#section-5.2.1">RFC6973§5.2.1</a>.
+
+<dt><dfn>Identification</dfn>
+
+<dd> Identification is the linking of information to a particular individual to
+    infer an individual’s identity or to allow the inference of an individual’s
+    identity. See <a
+data-cite="RFC6973#section-5.2.2">RFC6973§5.2.2</a>.
+
+<dt><dfn>Secondary Use</dfn>
+
+<dd> Secondary use is the use of collected information about an individual without
+    the individual’s consent for a purpose different from that for which the
+    information was collected. See <a
+data-cite="RFC6973#section-5.2.3">RFC6973§5.2.3</a>.
+
+<dt><dfn>Disclosure</dfn>
+
+<dd>Disclosure is the revelation of information about an individual that affects
+    the way others judge the individual. See <a
+data-cite="RFC6973#section-5.2.4">RFC6973§5.2.4</a>.
+
+<dt><dfn noexport>Exclusion</dfn>
+
+<dd>Exclusion is the failure to allow individuals to know about the data that
+    others have about them and to participate in its handling and use. See
+    <a
+data-cite="RFC6973#section-5.2.5">RFC6973§5.2.5</a>.
+
+</dl>
+
+These threats combine into the particular concrete threats we want web
+specifications to defend against, described in subsections here:
+
+## Unwanted same-site recognition {#hl-recognition-same-site}
+
+Contributes to [=surveillance=], [=correlation=], and [=identification=].
+
+Users of most instantiations of the web platform expect that if they visit a
+site on one day, and then visit again the next day, the site will be able to
+recognize that they're the same user. This allows sites to save the user's
+preferences, shopping carts, etc. The web platform offers many mechanisms that
+are either intended to accomplish this recognition or that can be trivially used
+for it, including [[RFC6265|cookies]], {{WindowLocalStorage/localStorage}},
+{{WindowOrWorkerGlobalScope/indexedDB}}, {{CacheStorage}}, and other forms of
+storage.
+
+A privacy harm only occurs if the user wants to break the association between
+two visits, but the site can still determine with high probability that the two
+visits came from the same user.
+
+A user might expect that their two visits won't be associated if they:
+
+* Use a browser that promises to avoid such correlation.
+* Use their browser's private browsing mode. ([[WHAT-DOES-PRIVATE-BROWSING-DO]])
+* Use two different browser profiles between the two visits.
+* Explicitly clear the site's cookies or storage.
+
+This recognition is generally accomplished by either "supercookies" or <a
+data-cite="fingerprinting-guidance#dfn-browser-fingerprinting">browser
+fingerprinting</a>.
+
+Supercookies occur when a browser stores data for a site but makes that data
+more difficult to clear than other cookies or storage.
+<a data-cite="fingerprinting-guidance#clearing-all-local-state">Fingerprinting
+Guidance § Clearing all local state</a> discusses how specifications can help
+browsers avoid this mistake.
+
+Fingerprinting consists of using attributes of the user's browser and platform
+that are consistent between the two visits and probabilistically unique to the
+user.
+
+The attributes can be exposed as information about the user's device that is
+otherwise benign (as opposed to [[[#hl-sensitive-information]]]). For example:
+
+* What are the user's language and time zone?
+* What size is the user's window?
+* What system preferences has the user set? Dark mode, serif font, etc...
+* ...
+
+See [[fingerprinting-guidance]] for how to mitigate this threat.
+
+## Unwanted cross-site recognition {#hl-recognition-cross-site}
+
+Contributes to [=surveillance=], [=correlation=], and [=identification=],
+usually more significantly than [[[#hl-recognition-same-site]]].
+
+This occurs if a site can determine with high probability that a visit to that
+site comes from the same user as another visit to a *different* site.
+
+## Sensitive information disclosure {#hl-sensitive-information}
+
+Contributes to [=correlation=], [=identification=], [=secondary use=], and
+[=disclosure=].
+
+Many pieces of information about a user could cause privacy harms if disclosed.
+For example:
+
+* The user's location.
+* Video or audio from the user's camera or microphone.
+* The content of certain files on the user's filesystem.
+* Financial data.
+* Contacts.
+* Calendar entries.
+* [Whether the user is using assistive technology.](https://w3ctag.github.io/design-principles/#do-not-expose-use-of-assistive-tech)
+* ...
+
+A particular piece of information may have different sensitivity for different
+users. Language preferences, for example, might typically seem innocent, but
+also can be an indicator of belonging to an ethnic minority. Precise location
+information can be extremely sensitive (because it's identifying, because it
+allows for in-person intrusions, because it can reveal detailed information
+about a person's life) but it might also be public and not sensitive at all, or
+it might be low-enough granularity that it is much less sensitive for many
+users.
+
+When considering whether a class of information is likely to be sensitive to
+users, consider at least these factors:
+
+* whether it serves as a persistent identifier (see severity in Mitigating
+    browser fingerprinting);
+* whether it discloses substantial (including intimate details or inferences)
+    information about the user or other users;
+* whether it can be revoked (as in determining whether a permission is
+    necessary);
+* whether it enables other threats, like intrusion.
+
+Issue(16): This description of what makes information sensitive still needs to
+be refined.
+
+## Intrusive behavior {#hl-intrusion}
+
+See [=intrusion=].
+
+Privacy harms don't always come from a site learning things. For example it is
+intrusive for a site to
+
+* Display messages or notifications,
+* Play sounds,
+* Occupy the full screen,
+* etc.
+
+if the user doesn't intend for it to do so.
+
+## Powerful capabilities {#hl-capabilities}
+
+Contributes to [=misattribution=].
+
+For example, a site that sends SMS without the user's intent could cause them to
+be blamed for things they didn't intend.
+
+
+</body>
+</html>
