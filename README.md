@@ -1,5 +1,7 @@
 # Web Privacy Principles Task Force
 
+![A frazzled-looking, orange- and black-haird cat has its tongue sticking out. One of the cat's eyes is much bigger than the other one. The cat is saying "WPPTF."](wpptf.png)
+
 ## Table of Contents
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
