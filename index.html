@@ -289,56 +289,63 @@ is any natural person.
 We define <dfn data-lt="data">personal data</dfn> as any information relating to a
 [=person=] such that:
 
-* The [=data=] can identify this [=person=] directly, for instance through their name,
+* The [=data=] references this [=person=] directly, for instance through their name,
   email address, phone number, or other such traditional identifiers.
-* The [=data=] can identify this [=person=] through
-
-an arbitrary string or identification number, an online identifier such as an IP address or any
-identifier attached to a device this [=person=] may be using
-
-location data, or factors specific to the physical, physiological, genetic,
-mental, economic, cultural, or social identity of that [=person=]
-
-identifiers derived from such data, for instance through hashing
-
-
-* this [=person=] is identified, directly or indirectly, using an identifier (name, email
-  address, an arbitrary string or identification number, an online identifier such as an IP address or any
-  identifier attached to a device this [=person=] may be using, phone number,
-  location data, or factors specific to the physical, physiological, genetic,
-  mental, economic, cultural, or social identity of that [=person=], as well as
-  identifiers derived from such data, for instance through hashing; or
-* this [=person=] could reasonably be reidentified from a conjunction of this
-  data with other data; or
-* the data pertains to a group of people such that a [=person=] may find
-  themselves to be the subject of a treatment related to this group, even if the
-  entity carrying out the treatment has no way to identify that [=person=].
+* The [=data=] can identify this [=person=] through an arbitrary string or identification
+  number, an online identifier such as an IP address or any identifier attached to a
+  device which this [=person=] may be using.
+* The [=data=] is about a [=person=]'s location (or of a device that a [=person=] would use).
+* The [=data=] contains factors specific to the physical, physiological, genetic, mental,
+  economic, cultural, or social identity of a [=person=].
+* The [=data=] is comprised of identifiers derived from other types of data in this list,
+  for instance through hashing.
+* The [=person=] could reasonably be reidentified from a conjunction of this
+  [=data=] with other data.
+* The [=data=] relates to a group of people such that a [=person=] may be treated in a
+  specific way for being part of the group, even if the entity treating them in this
+  manner has no way to identify that [=person=].
 
 Data is <dfn>permanently de-identified</dfn> when there exists a high level of confidence
-that no human subject of the data can be identified, directly or indirectly (e.g., via
-association with an identifier, user agent, or device), by that data alone or in
-combination with other retained or available information, including as being part of a
-group. Note that further considerations relating to groups are covered in the
+that no [=person=] described by the data can be identified, directly or indirectly
+(e.g. via association with an identifier, user agent, or device), by that data alone or in
+combination with other available information, including as being part of a group. Note
+that further considerations relating to groups are covered in the
 <a href="#collective">Collective Issues in Privacy</a> section.
 
-Data is <dfn data-lt="pseudonymous data|pseudonymity">pseudonymous</dfn> when:
+Data is <dfn data-lt="pseudonymous data|pseudonymity">pseudonymous</dfn> when there are
+strict controls that prevent the reidentification of [=people=] described by the data
+except for a well-defined set of [=purposes=]. There are two cases in which [=data=]
+can be considered [=pseudonymous=], and they have different constraints.
 
-* the identifiers used in the data are under the direct and exclusive control of
+If the [=pseudonymous data=] is <em>only</em> being processed by one [=party=]:
+
+* the identifiers used in the data must be unique to that dataset; and
+
+* any person (e.g. an employee of the [=party=]) with access to the [=data=] is
+  barred (e.g. based on legal terms) from sharing the [=data=] further; and
+
+* technical measures exist to prevent re-identification or the joining of
+  different data sets involving this [=data=], notably against timing or
+  k-anonymity attacks.
+
+If the [=pseudonymous data=] is shared between several [=parties=]:
+
+* the identifiers used in the [=data=] are under the direct and exclusive control of
   the [=first party=]; and
 
 * when these identifiers are shared with a [=third party=], they are made unique
   to that [=third party=] such that if they are shared with more than one
   [=third party=] these cannot then match them up with one another; and
 
-* there is a strong level of confidence that no [=third party=] can match them
-  to any data other than that obtained through interactions with the [=first
+* there is a strong level of confidence that no [=third party=] can match the [=data=]
+  with any data other than that obtained through interactions with the [=first
   party=]; and
 
-* any [=third party=] receiving such identifiers is barred (eg. based on legal
-  terms) from sharing them or the related data further; and
+* any [=third party=] receiving such [=data=] is barred (eg. based on legal terms)
+  from sharing it further; and
 
 * technical measures exist to prevent re-identification or the joining of
-  different data sets involving these identifiers, notably against timing or
+  different data sets involving this [=data=], notably against timing or
   k-anonymity attacks; and
 
 * there exist contractual terms between the [=first party=] and [=third party=]
