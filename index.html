@@ -223,7 +223,7 @@
     };
   </script>
 </head>
-<body data-cite="html indexedDB service-workers fingerprinting-guidance">
+<body data-cite="html indexedDB service-workers fingerprinting-guidance url">
 
 <section id="abstract">
 
@@ -532,34 +532,54 @@ their agency and sovereignty.
 
 ## Identity on the Web {#identity}
 
-A [=person=]'s <dfn>identity</dfn> is the set of characteristics that define them. In
-computer systems, [=identity=] is typically attached to a means of denotation that makes
-it easier for an automated system to recognise the user, an <dfn>identifier</dfn> of
-some type.
+A [=person=]'s <dfn>identity</dfn> is the set of characteristics that define them. Their identity
+*in a [=context=]* is the set of characteristics they choose to present to that context. People
+frequently present different identities to different contexts, and also frequently share an identity
+between several contexts.
 
-A [=person=]'s characteristics, and therefore [=identity=], is entirely
-[=context=]-dependent. Recognising a [=person=] in distinct [=contexts=] can at times be
-[=appropriate=] but this relies on an understanding of applicable [=norms=] and will
-likely require compartmentalisation. (For example, if you meet your therapist at a
-cocktail party, you expect them to have rather different discussion topics with you than
-they usually would, and possibly even to pretend they do not know you.) As a result,
-automating the recognition of a [=person=]'s identity across different [=contexts=] is
-[=inappropriate=]. This is particularly true for [=vulnerable=] people as recognising them
-in different [=contexts=] may force their vulnerability into the open.
+<dfn>Cross-context recognition</dfn> is the act of recognising that an [=identity=] in one
+[=context=] is the same [=person=] as an [=identity=] in another [=context=]. [=Cross-context
+recognition=] can at times be [=appropriate=] but anyone who does it needs to be careful not to
+apply the [=norms=] of one [=context=] in ways that violate the [=norms=] around use of information
+acquired in a different [=context=]. (For example, if you meet your therapist at a cocktail party,
+you expect them to have rather different discussion topics with you than they usually would, and
+possibly even to pretend they do not know you.) This is particularly true for [=vulnerable=] people
+as recognising them in different [=contexts=] may force their vulnerability into the open.
 
-[=Identity=] being by nature fragmented, [=user agents=] must work in support of [=users=]
-having different identities in different [=context=] with respect to <em>all</em> [=parties=]
-(including the user agent vendor) and to prevent their recognition through other means,
-where possible.
+In computer systems and on the Web, an [=identity=] seen by a particular website is typically
+assigned an <dfn>identifier</dfn> of some type, which makes it easier for an automated system to
+store data about that user.
 
-A keystone principle of the Web is trust [[RFC8890]]. An important part of trust is to
-ensure that [=data=] collected for a [=purpose=] that matches a clearly delineated [=user=]
-feature should not then be used for additional secondary [=purposes=]. Email is often used
-for login and communication [=purposes=], including essential transactional interactions.
-Using emails for cross-context recognition [=purposes=] is therefore not only
-[=inappropriate=] but also threatens key messaging infrastructure. Future iterations of
-the Web platform should ensure that users can log into sites and receive communication
-without relying on email at all.
+[=User agents=] support their [=users=]' [=autonomy=] by helping them present their intended
+[=identity=] to each [=context=] that they visit. To do this, [=user agents=] have to make some
+assumptions about the borders between [=contexts=]. By default, [=user agents=] define a
+<dfn>machine-enforceable context</dfn> or <dfn>partition</dfn> as:
+
+* A set of [=environments=] (roughly top-level pages, iframes, and workers)
+* whose [=environment/top-level origins=] are in the [=same site=] (roughly, their [=origin/hosts=]
+  have the same [=host/registrable domain=], but see [[PSL-PROBLEMS]])
+* being visited within the same user agent installation (and profile for user agents that support
+  multiple profiles)
+* between points in time that the user clears that [=site=]'s cookies and other storage
+  (which some user agents do automatically at the end of each session).
+
+Even though this is the default, [=user agents=] are free to both widen and restrict this context as
+their users need. For example, some user agents may help their users present different
+[=identities=] to subdivisions of a single [=site=], while others may help their users present a
+single [=identity=] to a [=site=] across multiple installations or to multiple [=sites=] that the
+user understands represent a single [=party=].
+
+[=User agents=] should prevent their user from being [=cross-context recognition|recognized=] across
+[=machine-enforceable contexts=] unless the user intends to be recognized. This is a "should" rather
+than a "must" because there are many cases where the user agent isn't powerful enough to prevent
+recognition. For example if two services that a user needs to use insist that the user share a
+difficult-to-forge piece of their identity in order to use the services, it's the services behaving
+[=inappropriately=] rather than the [=user agent=].
+
+If a [=site=] includes multiple [=contexts=] whose [=norms=] indicate that it's [=inappropriate=] to
+share data between the contexts, the fact that those distinct [=contexts=] fall inside a single
+[=machine-enforceable context=] doesn't make sharing data or [=cross-context
+recognition|recognizing=] [=identities=] any less [=inappropriate=].
 
 ## User Control and Autonomy {#autonomy}
 
