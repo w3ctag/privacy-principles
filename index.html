@@ -533,7 +533,7 @@ their agency and sovereignty.
 ## Identity on the Web {#identity}
 
 A [=person=]'s <dfn>identity</dfn> is the set of characteristics that define them. Their identity
-*in a [=context=]* is the set of characteristics they choose to present to that context. People
+*in a [=context=]* is the set of characteristics they present to that context. People
 frequently present different identities to different contexts, and also frequently share an identity
 between several contexts.
 
@@ -550,18 +550,25 @@ In computer systems and on the Web, an [=identity=] seen by a particular website
 assigned an <dfn>identifier</dfn> of some type, which makes it easier for an automated system to
 store data about that user.
 
-[=User agents=] support their [=users=]' [=autonomy=] by helping them present their intended
-[=identity=] to each [=context=] that they visit. To do this, [=user agents=] have to make some
-assumptions about the borders between [=contexts=]. By default, [=user agents=] define a
-<dfn>machine-enforceable context</dfn> or <dfn>partition</dfn> as:
+<div class="practice">
 
-* A set of [=environments=] (roughly top-level pages, iframes, and workers)
+<p><span class="practicelab" id="principle-identity-per-context">[=User agents=] should support
+their [=users=]' [=autonomy=] by helping them present their intended [=identity=] to each
+[=context=] that they visit.</span></p>
+
+</div>
+
+To do this, [=user agents=] have to make some assumptions about the borders between [=contexts=]. By
+default, [=user agents=] define a <dfn>machine-enforceable context</dfn> or <dfn>partition</dfn> as:
+
+* A set of [=environments=] (roughly iframes (including cross-site iframes), workers, and top-level
+  pages)
 * whose [=environment/top-level origins=] are in the [=same site=] (roughly, their [=origin/hosts=]
   have the same [=host/registrable domain=], but see [[PSL-PROBLEMS]])
 * being visited within the same user agent installation (and profile for user agents that support
   multiple profiles)
-* between points in time that the user clears that [=site=]'s cookies and other storage
-  (which some user agents do automatically at the end of each session).
+* between points in time that the user or their agent clears that [=site=]'s cookies and other
+  storage (which is sometimes automatic at the end of each session).
 
 Even though this is the default, [=user agents=] are free to both widen and restrict this context as
 their users need. For example, some user agents may help their users present different
