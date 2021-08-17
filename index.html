@@ -570,11 +570,18 @@ default, [=user agents=] define a <dfn>machine-enforceable context</dfn> or <dfn
 * between points in time that the user or their agent clears that [=site=]'s cookies and other
   storage (which is sometimes automatic at the end of each session).
 
-Even though this is the default, [=user agents=] are free to both widen and restrict this context as
+Even though this is the default, [=user agents=] are free to restrict this context as
 their users need. For example, some user agents may help their users present different
-[=identities=] to subdivisions of a single [=site=], while others may help their users present a
-single [=identity=] to a [=site=] across multiple installations or to multiple [=sites=] that the
-user understands represent a single [=party=].
+[=identities=] to subdivisions of a single [=site=].
+
+<div class="issue" data-number="1">
+
+There is disagreement about whether [=user agents=] may also widen their [=machine-enforceable
+contexts=]. For example, some user agents might want to help their users present a single
+[=identity=] to multiple [=sites=] that the user understands represent a single [=party=], or to a
+[=site=] across multiple installations.
+
+</div>
 
 [=User agents=] should prevent their user from being [=cross-context recognition|recognized=] across
 [=machine-enforceable contexts=] unless the user intends to be recognized. This is a "should" rather
