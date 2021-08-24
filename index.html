@@ -1042,6 +1042,65 @@ users, consider at least these factors:
 Issue(16): This description of what makes information sensitive still needs to
 be refined.
 
+## Unwanted profiling {#hl-unwanted-profiling}
+
+Contributes to [=surveillance=], [=correlation=], [=identification=], and
+singling-out / discrimination.
+
+Unwanted profiling occurs when a site is able to learn attributes or
+characteristics about a person, that a) the site visitor did not intend the site
+to learn, and b) the site visitor reasonably could not anticipate a
+site would be able to learn.
+
+Profiling contributes to, but is distinct from, other privacy risks discussed
+in this document.
+For example, unwanted profiling may contribute to
+[[[#hl-recognition-same-site]]], by adding stable and semi-identifying
+information that can contribute to <a
+data-cite="fingerprinting-guidance#dfn-browser-fingerprinting">browser
+fingerprinting</a>. Unwanted profiling is distinct from unwanted
+recognition though, in that a person may wish to not share some kinds
+of information about themselves <em>even in the presence of guarantees
+that such information will not lead to them being re-identified</em>.
+
+Similarly, unwanted profiling is related to [[[#hl-sensitive-information]]],
+but the former is a superset of the latter;
+all cases of unwanted sensitive information disclosure are examples of
+unwanted profiling, but Web users may have attributes or characteristics
+about themselves that are not universally thought of as "sensitive", but which
+they never the less do not wish to share with the sites they visit. People
+may wish to not share these "non-sensitive" characteristics
+for a variety of reasons (e.g., a person may worry that their ideas of what
+counts as "sensitive" is different from others, a person might might be ashamed
+or uncomfortable about a character trait).
+
+Profiling occurs for many reasons. It can be used to facilitate price
+discrimination or offer manipulation, to make inferences about what products or
+services users might be more likely to purchase, or more generally, for a site
+to learn attributes about the Web user the Web user does not intend to share.
+Unwanted profiling can also contribute to feelings of powerlessness and
+loss of agency.
+
+Other examples of possible attributes or characteristics that would lead
+unwanted profiling, were a site able to learn them, include:
+
+* Whether a person is using a VPN to hide their location
+* Whether a person is using a clean browser profile, container, partition or
+  other mode to isolate web site visits
+* Demographic information, even in the presence of other privacy protections
+  (e.g., k-anonymity, differential privacy)
+
+<div class="example">
+
+Peter is a <a href="https://en.wikipedia.org/wiki/Furry_fandom">furry</a>.
+Despite knowing that there are thousands of
+other furries on the internet, and despite using a browser with
+robust browser fingerprinting protections, and despite the growing cultural
+acceptance of furries, Peter does not want (most) sites to learn
+or personalize content around his furry-interest.
+
+</div>
+
 ## Intrusive behavior {#hl-intrusion}
 
 See [=intrusion=].
