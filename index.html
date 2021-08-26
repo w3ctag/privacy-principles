@@ -569,8 +569,8 @@ default, [=user agents=] define a <dfn>machine-enforceable context</dfn> or <dfn
 * A set of [=environments=] (roughly iframes (including cross-site iframes), workers, and top-level
   pages)
 * whose [=environment/top-level origins=] are in the [=same site=] (but see [[PSL-PROBLEMS]])
-* being visited within the same user agent installation (and browser profile for user agents that
-  support multiple browser profiles)
+* being visited within the same user agent installation (and browser profile, container, or
+  container tab for user agents that support those features)
 * between points in time that the user or their agent clears that [=site=]'s cookies and other
   storage (which is sometimes automatic at the end of each session).
 
@@ -590,9 +590,9 @@ contexts=]. For example, some user agents might want to help their users present
 [=User agents=] should prevent their user from being [=cross-context recognition|recognized=] across
 [=machine-enforceable contexts=] unless the user intends to be recognized. This is a "should" rather
 than a "must" because there are many cases where the user agent isn't powerful enough to prevent
-recognition. For example if two services that a user needs to use insist that the user share a
-difficult-to-forge piece of their identity in order to use the services, it's the services behaving
-[=inappropriately=] rather than the [=user agent=].
+recognition. For example if two or more services that a user needs to use insist that the user share
+a difficult-to-forge piece of their identity in order to use the services, it's the services
+behaving [=inappropriately=] rather than the [=user agent=].
 
 If a [=site=] includes multiple [=contexts=] whose [=norms=] indicate that it's [=inappropriate=] to
 share data between the contexts, the fact that those distinct [=contexts=] fall inside a single
@@ -902,32 +902,28 @@ data-cite="RFC6973#section-5.2.5">RFC6973§5.2.5</a>.
 These threats combine into the particular concrete threats we want web
 specifications to defend against, described in subsections here:
 
-## Unwanted same-site recognition {#hl-recognition-same-site}
+## Unwanted cross-context recognition {#hl-recognition-cross-context}
 
 Contributes to [=surveillance=], [=correlation=], and [=identification=].
 
-Users of most instantiations of the web platform expect that if they visit a
-site on one day, and then visit again the next day, the site will be able to
-recognize that they're the same user. This allows sites to save the user's
-preferences, shopping carts, etc. The web platform offers many mechanisms that
-are either intended to accomplish this recognition or that can be trivially used
-for it, including [[RFC6265|cookies]], {{WindowLocalStorage/localStorage}},
-{{WindowOrWorkerGlobalScope/indexedDB}}, {{CacheStorage}}, and other forms of
-storage.
+As described in [[[#identity]]], [=cross-context recognition=] can sometimes be [=appropriate=], but
+web specifications should ensure users have as much control as possible over when websites do it
+between different [=partitions=]. There are two broad classes of recognition that specifications
+address in different ways.
 
-A privacy harm only occurs if the user wants to break the association between
-two visits, but the site can still determine with high probability that the two
-visits came from the same user.
+### Same-site recognition {#hl-recognition-same-site}
 
-A user might expect that their two visits won't be associated if they:
+The web platform offers many ways for a website to recognize that a user is using the same identity
+over time, including [[RFC6265|cookies]], {{WindowLocalStorage/localStorage}},
+{{WindowOrWorkerGlobalScope/indexedDB}}, {{CacheStorage}}, and other forms of storage. This allows
+sites to save the user's preferences, shopping carts, etc., and users have come to expect this
+behavior.
 
-* Use a browser that promises to avoid such correlation.
-* Use their browser's private browsing mode. ([[WHAT-DOES-PRIVATE-BROWSING-DO]])
-* Use two different browser profiles between the two visits.
-* Explicitly clear the site's cookies or storage.
+A privacy harm occurs if the user changes [=partitions=], for example by clearing cookies or
+switching browser profiles, but the site can still determine with high probability that the two or
+more visits came from the same user.
 
-This recognition is generally accomplished by either "supercookies" or <a
-data-cite="fingerprinting-guidance#dfn-browser-fingerprinting">browser
+This recognition is generally accomplished by either "supercookies" or <a>browser
 fingerprinting</a>.
 
 Supercookies occur when a browser stores data for a site but makes that data
@@ -937,7 +933,7 @@ Guidance § Clearing all local state</a> discusses how specifications can help
 browsers avoid this mistake.
 
 Fingerprinting consists of using attributes of the user's browser and platform
-that are consistent between the two visits and probabilistically unique to the
+that are consistent between two or more visits and probabilistically unique to the
 user.
 
 The attributes can be exposed as information about the user's device that is
@@ -948,15 +944,21 @@ otherwise benign (as opposed to [[[#hl-sensitive-information]]]). For example:
 * What system preferences has the user set? Dark mode, serif font, etc...
 * ...
 
-See [[fingerprinting-guidance]] for how to mitigate this threat.
+See [[[fingerprinting-guidance]]] for how to mitigate this threat.
 
-## Unwanted cross-site recognition {#hl-recognition-cross-site}
+### Unwanted cross-site recognition {#hl-recognition-cross-site}
 
 Contributes to [=surveillance=], [=correlation=], and [=identification=],
 usually more significantly than [[[#hl-recognition-same-site]]].
 
-This occurs if a site can determine with high probability that a visit to that
-site comes from the same user as another visit to a *different* site.
+This occurs if a site can determine with high probability that a visit to that site comes from the
+same user as another visit to a *different* site. Traditionally, sites have accomplished this using
+<a href="https://tess.oconnor.cx/2020/10/parties#environment-cross-site">cross-site</a> cookies, but
+it can also be done by having a user navigate to a link that has been decorated with a user ID,
+collecting the same piece of personally-identifying information on both sites, or by correlating the
+timestamps of an event that occurs nearly-simultaneously on both sites. <a
+data-cite="PRIVACY-THREAT#model-cross-site-recognition">The Target Privacy Threat Model</a>
+discusses what kinds of cross-site recognition need to be blocked by specification choices.
 
 ## Sensitive information disclosure {#hl-sensitive-information}
 
