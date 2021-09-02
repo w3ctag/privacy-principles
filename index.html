@@ -913,17 +913,32 @@ address in different ways.
 
 ### Same-site recognition {#hl-recognition-same-site}
 
-The web platform offers many ways for a website to recognize that a user is using the same identity
-over time, including [[RFC6265|cookies]], {{WindowLocalStorage/localStorage}},
+The web platform offers many ways for a website to recognize that a user is using the same
+[=identity=] over time, including [[RFC6265|cookies]], {{WindowLocalStorage/localStorage}},
 {{WindowOrWorkerGlobalScope/indexedDB}}, {{CacheStorage}}, and other forms of storage. This allows
 sites to save the user's preferences, shopping carts, etc., and users have come to expect this
 behavior.
 
-A privacy harm occurs if the user changes [=partitions=], for example by clearing cookies or
-switching browser profiles, but the site can still determine with high probability that the two or
-more visits came from the same user.
+A privacy harm occurs if the user expresses that they intend to use a different [=identity=] on a
+site, but the site discovers and uses the fact that the two or more visits came from the same user
+anyway.
 
-This recognition is generally accomplished by either "supercookies" or <a>browser
+<div class="practice">
+
+<p><span class="practicelab" id="principle-prevent-same-site-cross-partition-recognition">[=User
+agents=] should ensure that, if a user visits a site two or more times from different
+[=partitions=], that the site cannot determine both quickly and with high probability that the
+visits came from the same user.</span></p>
+
+[=User agents=] can't, in general, determine exactly where intra-site [=context=] boundaries are, or
+how a site allows a user to express that they intend to change [=identities=], so they're not
+responsible to enforce that sites actually separate user [=identities=] at those boundaries, but
+[=user agents=] can identify [=partition=] boundaries, so those are the boundaries they're
+responsible for.
+
+</div>
+
+Cross-[=partition=] recognition is generally accomplished by either "supercookies" or <a>browser
 fingerprinting</a>.
 
 Supercookies occur when a browser stores data for a site but makes that data
