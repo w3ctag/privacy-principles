@@ -907,9 +907,37 @@ specifications to defend against, described in subsections here:
 Contributes to [=surveillance=], [=correlation=], and [=identification=].
 
 As described in [[[#identity]]], [=cross-context recognition=] can sometimes be [=appropriate=], but
-web specifications should ensure users have as much control as possible over when websites do it
-between different [=partitions=]. There are two broad classes of recognition that specifications
-address in different ways.
+users need to be able to control when websites do it as much as possible.
+
+<div class="practice">
+
+<p><span class="practicelab" id="principle-prevent-cross-partition-recognition">[=User agents=]
+should ensure that, if a [=person=] visits two or more web pages from different [=partitions=], that
+the pages cannot quickly determine that the visits probably came from the same person, for any
+significant or involuntary fraction of the people who use the web, unless the person explicitly
+expresses the same [=identity=] to the visits, or preventing this correlation would break a feature
+that is fundamental to the Web.</span></p>
+
+</div>
+
+* This principle uses "probably" because websites can do harm even if they can't be completely
+  certain that visits come from the same person.
+* This principle uses "quickly" because it appears impossible to prevent some forms of
+  fingerprinting that take a long time or many visits within each [=partition=].
+* This principle allows violations that only affect a small fraction of people who use the web
+  because people need to be allowed to configure their systems in unique ways, for example by using
+  a browser with a very small number of users. As long as a tracker can't track a significant number
+  of people, it's likely to be unviable to maintain the tracker. However, this doesn't excuse making
+  small groups of people trackable when those people didn't choose to be in the group.
+* This principle also allows violations when preventing those violations would break fundamental
+  aspects of the web. This document delegates to other documents, for example the
+  [[[PRIVACY-THREAT]]], to discuss which tradeoffs to make on this point.
+
+[=Partitions=] are separated in two ways that lead to distinct kinds of user-visible recognition.
+When their divisions between different sites are violated, that leads to <a
+href="#hl-recognition-cross-site"></a>. When a violation occurs at their divisions between different
+browser profiles or at the point a user clears their cookies and site storage, that leads to <a
+href="#hl-recognition-same-site"></a>.
 
 ### Same-site recognition {#hl-recognition-same-site}
 
@@ -923,20 +951,11 @@ A privacy harm occurs if the user expresses that they intend to use a different 
 site, but the site discovers and uses the fact that the two or more visits came from the same user
 anyway.
 
-<div class="practice">
-
-<p><span class="practicelab" id="principle-prevent-same-site-cross-partition-recognition">[=User
-agents=] should ensure that, if a user visits a site two or more times from different
-[=partitions=], that the site cannot determine both quickly and with high probability that the
-visits came from the same user.</span></p>
-
 [=User agents=] can't, in general, determine exactly where intra-site [=context=] boundaries are, or
 how a site allows a user to express that they intend to change [=identities=], so they're not
-responsible to enforce that sites actually separate user [=identities=] at those boundaries, but
-[=user agents=] can identify [=partition=] boundaries, so those are the boundaries they're
-responsible for.
-
-</div>
+responsible to enforce that sites actually separate user [=identities=] at those boundaries. The <a
+href="#principle-prevent-cross-partition-recognition">principle</a> here instead requires separation
+at [=partition=] boundaries.
 
 Cross-[=partition=] recognition is generally accomplished by either "supercookies" or <a>browser
 fingerprinting</a>.
@@ -969,19 +988,6 @@ same user as another visit to a *different* site. Traditionally, sites have acco
 it can also be done by having a user navigate to a link that has been decorated with a user ID,
 collecting the same piece of personally-identifying information on both sites, or by correlating the
 timestamps of an event that occurs nearly-simultaneously on both sites.
-
-<div class="practice">
-
-<p><span class="practicelab" id="principle-prevent-cross-site-recognition">[=User agents=] should
-make it as difficult as practical to determine that a user visiting different sites is a single user
-unless the user explicitly expresses the same [=identity=] to both sites.</span></p>
-
-<div class="issue">
-
-We'd like a better formulation of "as difficult as practical". For now, see [[[PRIVACY-THREAT]]] for
-some details.
-
-</div></div>
 
 ## Sensitive information disclosure {#hl-sensitive-information}
 
