@@ -968,9 +968,20 @@ same user as another visit to a *different* site. Traditionally, sites have acco
 <a href="https://tess.oconnor.cx/2020/10/parties#environment-cross-site">cross-site</a> cookies, but
 it can also be done by having a user navigate to a link that has been decorated with a user ID,
 collecting the same piece of personally-identifying information on both sites, or by correlating the
-timestamps of an event that occurs nearly-simultaneously on both sites. <a
-data-cite="PRIVACY-THREAT#model-cross-site-recognition">The Target Privacy Threat Model</a>
-discusses what kinds of cross-site recognition need to be blocked by specification choices.
+timestamps of an event that occurs nearly-simultaneously on both sites.
+
+<div class="practice">
+
+<p><span class="practicelab" id="principle-prevent-cross-site-recognition">[=User agents=] should
+make it as difficult as practical to determine that a user visiting different sites is a single user
+unless the user explicitly expresses the same [=identity=] to both sites.</span></p>
+
+<div class="issue">
+
+We'd like a better formulation of "as difficult as practical". For now, see [[[PRIVACY-THREAT]]] for
+some details.
+
+</div></div>
 
 ## Sensitive information disclosure {#hl-sensitive-information}
 
