@@ -286,18 +286,38 @@ shared understanding of privacy. Some of the definitions below build atop the wo
 A <dfn>user</dfn> (also <dfn data-lt="individual">person</dfn> or <dfn>data subject</dfn>)
 is any natural person.
 
+We define <dfn data-lt="identifier">identifying data</dfn> as any information relating to a
+[=person=] such that any of the following applies:
+
+1. It references this [=person=] directly, for instance through their name,
+  email address, phone number, or other such traditional denotation.
+* It can identify this [=person=] through an arbitrary string or identification
+  number, an online identifier such as an IP address or any identifier attached to a
+  device which this [=person=] may be using.
+* It is about a [=person=]'s location (or of a device that a [=person=] would use) with greater
+  granularity than the city level or a comparably coarse geographic grouping.
+* It contains factors specific to the physical, physiological, genetic, mental,
+  economic, cultural, or social identity of a [=person=].
+* It is derived from other types of data in this list, for instance through hashing.
+* The [=person=] could reasonably be reidentified from a conjunction of this
+  [=data=] with other data.
+* It relates to a group of people such that a [=person=] may be treated in a
+  specific way for being part of the group, even if the entity treating them in this
+  manner has no way to identify that [=person=]. Put differently, an aggregate of [=people=]
+  is identifying if the aggregate is actionable with respect to its members.
+
 We define <dfn data-lt="data">personal data</dfn> as any information relating to a
 [=person=] such that any of:
 
 1. The [=data=] references this [=person=] directly, for instance through their name,
-  email address, phone number, or other such traditional identifiers.
+  email address, phone number, or other such traditional [=identifiers=].
 * The [=data=] can identify this [=person=] through an arbitrary string or identification
-  number, an online identifier such as an IP address or any identifier attached to a
+  number, an online [=identifier=] such as an IP address or any [=identifier=] attached to a
   device which this [=person=] may be using.
 * The [=data=] is about a [=person=]'s location (or of a device that a [=person=] would use).
 * The [=data=] contains factors specific to the physical, physiological, genetic, mental,
   economic, cultural, or social identity of a [=person=].
-* The [=data=] is comprised of identifiers derived from other types of data in this list,
+* The [=data=] is comprised of [=identifiers=] derived from other types of data in this list,
   for instance through hashing.
 * The [=person=] could reasonably be reidentified from a conjunction of this
   [=data=] with other data.
@@ -305,9 +325,10 @@ We define <dfn data-lt="data">personal data</dfn> as any information relating to
   specific way for being part of the group, even if the entity treating them in this
   manner has no way to identify that [=person=].
 
+
 Data is <dfn>permanently de-identified</dfn> when there exists a high level of confidence
 that no [=person=] described by the data can be identified, directly or indirectly
-(e.g. via association with an identifier, user agent, or device), by that data alone or in
+(e.g. via association with an [=identifier=], user agent, or device), by that data alone or in
 combination with other available information, including as being part of a group. Note
 that further considerations relating to groups are covered in the
 <a href="#collective">Collective Issues in Privacy</a> section.
@@ -319,7 +340,7 @@ can be considered [=pseudonymous=], and they have different constraints.
 
 If the [=pseudonymous data=] is <em>only</em> being processed by one [=party=]:
 
-* the identifiers used in the data must be unique to that dataset; and
+* the [=identifiers=] used in the data must be unique to that dataset; and
 
 * any person (e.g. an employee of the [=party=]) with access to the [=data=] is
   barred (e.g. based on legal terms) from sharing the [=data=] further; and
@@ -330,10 +351,10 @@ If the [=pseudonymous data=] is <em>only</em> being processed by one [=party=]:
 
 If the [=pseudonymous data=] is shared between several [=parties=]:
 
-* the identifiers used in the [=data=] are under the direct and exclusive control of
+* the [=identifiers=] used in the [=data=] are under the direct and exclusive control of
   the [=first party=]; and
 
-* when these identifiers are shared with a [=third party=], they are made unique
+* when these [=identifiers=] are shared with a [=third party=], they are made unique
   to that [=third party=] such that if they are shared with more than one
   [=third party=] these cannot then match them up with one another; and
 
@@ -442,7 +463,7 @@ general and processing purpose for the above.
 The <dfn>means</dfn> are the general method of [=data processing=] through which a given
 [=purpose=] is implemented, in a given [=context=], considered at a relatively abstract
 level and not necessarily all the way down to implementation details. Example:
-<em>the user will have their preferences restored (purpose) by looking up their identifier
+<em>the user will have their preferences restored (purpose) by looking up their [=identifier=]
 in a preferences store (means)</em>.
 
 A <dfn>context</dfn> is a physical or digital environment that a [=person=] interacts with
@@ -560,7 +581,7 @@ their agency and sovereignty.
 
 A [=person=]'s <dfn>identity</dfn> is the set of characteristics that define them. In
 computer systems, [=identity=] is typically attached to a means of denotation that makes
-it easier for an automated system to recognise the user, an <dfn>identifier</dfn> of
+it easier for an automated system to recognise the user, an [=identifier=] of
 some type.
 
 A [=person=]'s characteristics, and therefore [=identity=], is entirely
@@ -971,7 +992,7 @@ users.
 When considering whether a class of information is likely to be sensitive to
 users, consider at least these factors:
 
-* whether it serves as a persistent identifier (see severity in Mitigating
+* whether it serves as a persistent [=identifier=] (see severity in Mitigating
     browser fingerprinting);
 * whether it discloses substantial (including intimate details or inferences)
     information about the user or other users;
