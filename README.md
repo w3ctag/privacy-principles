@@ -6,7 +6,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 
-- [Proposed Charter](#proposed-charter)
+- [Charter](#charter)
 - [Input documents](#input-documents)
 - [Related documents](#related-documents)
 
