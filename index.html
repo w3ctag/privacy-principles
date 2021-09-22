@@ -930,8 +930,10 @@ technical feature that is fundamental to the Web.</span></p>
   of people, it's likely to be unviable to maintain the tracker. However, this doesn't excuse making
   small groups of people trackable when those people didn't choose to be in the group.
 * This principle also allows violations when preventing those violations would break fundamental
-  aspects of the web. This document delegates to other documents, for example the
-  [[[PRIVACY-THREAT]]], to discuss which tradeoffs to make on this point.
+  aspects of the web. In many cases it's possible to change the design in a way that avoids the
+  violation without breaking valid use cases, but for cases where that's not possible this document
+  delegates to other documents, for example the [[[PRIVACY-THREAT]]], to discuss what detailed
+  tradeoffs to make.
 
 [=Partitions=] are separated in two ways that lead to distinct kinds of user-visible recognition.
 When their divisions between different sites are violated, that leads to <a
@@ -945,11 +947,11 @@ The web platform offers many ways for a website to recognize that a user is usin
 [=identity=] over time, including [[RFC6265|cookies]], {{WindowLocalStorage/localStorage}},
 {{WindowOrWorkerGlobalScope/indexedDB}}, {{CacheStorage}}, and other forms of storage. This allows
 sites to save the user's preferences, shopping carts, etc., and users have come to expect this
-behavior.
+behavior in some contexts.
 
-A privacy harm occurs if the user expresses that they intend to use a different [=identity=] on a
-site, but the site discovers and uses the fact that the two or more visits came from the same user
-anyway.
+A privacy harm occurs if the user reasonably expects that they'll be using a different [=identity=]
+on a site, but the site discovers and uses the fact that the two or more visits came from the same
+user anyway.
 
 [=User agents=] can't, in general, determine exactly where intra-site [=context=] boundaries are, or
 how a site allows a user to express that they intend to change [=identities=], so they're not
