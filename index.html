@@ -1062,7 +1062,7 @@ For example, unexpected profiling may contribute to
 [[[#hl-recognition-same-site]]], by adding stable and semi-identifying
 information that can contribute to <a
 data-cite="fingerprinting-guidance#dfn-browser-fingerprinting">browser
-fingerprinting</a>. Unexpected profiling is distinct from unexpected
+fingerprinting</a>. Unexpected profiling is distinct from same-site
 recognition though, in that a person may wish to not share some kinds
 of information about themselves <em>even in the presence of guarantees
 that such information will not lead to them being re-identified</em>.
@@ -1076,7 +1076,7 @@ they never the less do not wish to share with the sites they visit. People
 may wish to not share these "non-sensitive" characteristics
 for a variety of reasons (e.g., a person may worry that their ideas of what
 counts as "sensitive" is different from others, a person might might be ashamed
-or uncomfortable about a character trait).
+or uncomfortable about a character trait or they might simply not wish to be profiled).
 
 Profiling occurs for many reasons. It can be used to facilitate price
 discrimination or offer manipulation, to make inferences about what products or
@@ -1084,9 +1084,23 @@ services users might be more likely to purchase, or more generally, for a site
 to learn attributes about the Web user the Web user does not intend to share.
 Unexpected profiling can also contribute to feelings of powerlessness and
 loss of agency.
+  
+A privacy hardm occurs if the user reasonably expects that they will not be profiled or singled-out when they visit a site, but the site does it anyway.
+  
+See the W3C TAG Finding on [Unsanctioned Web Tracking](https://www.w3.org/2001/tag/doc/unsanctioned-tracking/) for more information on why Unsanctioned Web Tracking is harmful for the Web.
 
-Other examples of possible attributes or characteristics that would lead
-unexpected profiling, were a site able to learn them, include:
+A user might expect that their visit will not cause them to be profiled or singled-out if they:
+* Use a browser that offers tracking protection
+* Use extensions or add-ons to block tracking
+*	Choose no, deny or disallow when offered a choice about tracking cookies (or tracking in general)
+*	Use their browser's private or incognito browsing mode
+*	Use a clean browser profile, container, partition or other mode to isolate web site visits
+*	Explicitly clear the site's cookies or storage
+* Use a VPN to hide their location
+* Where they believe privacy or data protection laws would not permit profiling
+
+Ironically, some of those strategies could reveal attributes or characteristics that would lead
+unexpected profiling, were a site able to learn them such as:
 
 * Whether a person is using a VPN to hide their location
 * Whether a person is using a clean browser profile, container, partition or
