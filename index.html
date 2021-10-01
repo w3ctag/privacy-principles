@@ -924,12 +924,12 @@ technical feature that is fundamental to the Web.</span></p>
   certain that visits come from the same person.
 * This principle uses "quickly" because it currently appears impossible to prevent some forms of
   fingerprinting that take a long time or many visits within each [=partition=].
-* This principle allows violations that only affect a small fraction of people who use the web
+* This principle is limited in cases that only affect a small fraction of people who use the web
   because people need to be allowed to configure their systems in unique ways, for example by using
   a browser with a very small number of users. As long as a tracker can't track a significant number
   of people, it's likely to be unviable to maintain the tracker. However, this doesn't excuse making
   small groups of people trackable when those people didn't choose to be in the group.
-* This principle also allows violations when preventing those violations would break fundamental
+* This principle is also limited in cases where preventing recognition would break fundamental
   aspects of the web. In many cases it's possible to change the design in a way that avoids the
   violation without breaking valid use cases, but for cases where that's not possible this document
   delegates to other documents, for example the [[[PRIVACY-THREAT]]], to discuss what detailed
@@ -950,8 +950,8 @@ sites to save the user's preferences, shopping carts, etc., and users have come 
 behavior in some contexts.
 
 A privacy harm occurs if the user reasonably expects that they'll be using a different [=identity=]
-on a site, but the site discovers and uses the fact that the two or more visits came from the same
-user anyway.
+on a site, but the site discovers and uses the fact that the two or more visits probably came from
+the same user anyway.
 
 [=User agents=] can't, in general, determine exactly where intra-site [=context=] boundaries are, or
 how a site allows a user to express that they intend to change [=identities=], so they're not
@@ -984,12 +984,13 @@ See [[[fingerprinting-guidance]]] for how to mitigate this threat.
 
 ### Unwanted cross-site recognition {#hl-recognition-cross-site}
 
-This occurs if a site can determine with high probability that a visit to that site comes from the
-same user as another visit to a *different* site. Traditionally, sites have accomplished this using
-<a href="https://tess.oconnor.cx/2020/10/parties#environment-cross-site">cross-site</a> cookies, but
-it can also be done by having a user navigate to a link that has been decorated with a user ID,
-collecting the same piece of personally-identifying information on both sites, or by correlating the
-timestamps of an event that occurs nearly-simultaneously on both sites.
+A privacy harm occurs if a site determines with high probability and uses the fact that a visit to
+that site comes from the same person as another visit to a *different* site, unless the person could
+reasonably expect the sites to discover this. Traditionally, sites have accomplished this using <a
+href="https://tess.oconnor.cx/2020/10/parties#environment-cross-site">cross-site</a> cookies, but it
+can also be done by having a user navigate to a link that has been decorated with a user ID,
+collecting the same piece of identifying information on both sites, or by correlating the timestamps
+of an event that occurs nearly-simultaneously on both sites.
 
 ## Sensitive information disclosure {#hl-sensitive-information}
 
