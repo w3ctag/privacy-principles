@@ -209,7 +209,7 @@
         },
         'TWITTER-DEVELOPER-POLICY': {
           title: 'Developer Policy - Twitter Developers',
-		  href: 'https://developer.twitter.com/en/developer-terms/policy',
+          href: 'https://developer.twitter.com/en/developer-terms/policy',
           publisher: 'Twitter'
         },
         'TRACKING-PREVENTION-POLICY': {
@@ -519,7 +519,7 @@ behaviour. Its <dfn>fiduciary duties</dfn> include [[?TAKING-TRUST-SERIOUSLY]]:
     cannot get away with hiding relevant information in complex out-of-band legal notices
     no more than it can rely on overly cursory information provided in a consent dialog.
     If the user has provided [=consent=] to [=processing=] of their [=personal data=],
-    the [=user agent=] is required to inform the user of ongoing [=processing=], with a 
+    the [=user agent=] should inform the user of ongoing [=processing=], with a 
     level of obviousness that is proportional to the reasonably foreseeable impact of the processing.
   </dd>
   <dt><dfn>Duty of Loyalty</dfn></dt>
@@ -700,8 +700,9 @@ three privacy tiers:
     should also be defined differently for certain kinds of [=contexts=]. The legitimate
     [=processing=] that can take place in this tier derives its legitimacy from matching the
     expectations and interests of both the [=user=] and the [=first party=] in their
-    relationship, as guided by the applicable [=norms=].  If the [=first party=] is using a particular [=identity=] for a [=person=], it should show the person which identity it is using, along with its own branding
-	as the [=data controller].  [[?TWITTER-DEVELOPER-POLICY]]
+    relationship, as guided by the applicable [=norms=].  If the [=first party=] has knowledge
+    of the person's [=identity=], it should make the [=identity=] it is using for the person, along with its own branding
+	as the [=data controller], obvious to the person.  [[?TWITTER-DEVELOPER-POLICY]]
     This tier is more [=appropriate=] the more the
     [=first party=] acts in accordance with [=fiduciary duties=]. 
   </dd>
