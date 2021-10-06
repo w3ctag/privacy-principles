@@ -207,6 +207,11 @@
           href: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2655719',
           authors: ['Neil Richards', 'Woodrow Hartzog'],
         },
+        'TWITTER-DEVELOPER-POLICY': {
+          title: 'Developer Policy - Twitter Developers',
+          href: 'https://developer.twitter.com/en/developer-terms/policy',
+          publisher: 'Twitter'
+        },
         'TRACKING-PREVENTION-POLICY': {
           title: 'Tracking Prevention Policy',
           href: 'https://webkit.org/tracking-prevention-policy/',
@@ -513,6 +518,9 @@ behaviour. Its <dfn>fiduciary duties</dfn> include [[?TAKING-TRUST-SERIOUSLY]]:
     transparency that dominates legacy privacy regimes. Unlike with transparency, honesty
     cannot get away with hiding relevant information in complex out-of-band legal notices
     no more than it can rely on overly cursory information provided in a consent dialog.
+    If the user has provided [=consent=] to [=processing=] of their [=personal data=],
+    the [=user agent=] should inform the user of ongoing [=processing=], with a 
+    level of obviousness that is proportional to the reasonably foreseeable impact of the processing.
   </dd>
   <dt><dfn>Duty of Loyalty</dfn></dt>
   <dd>
@@ -692,8 +700,11 @@ three privacy tiers:
     should also be defined differently for certain kinds of [=contexts=]. The legitimate
     [=processing=] that can take place in this tier derives its legitimacy from matching the
     expectations and interests of both the [=user=] and the [=first party=] in their
-    relationship, as guided by the applicable [=norms=]. This tier is more [=appropriate=] the more the
-    [=first party=] acts in accordance with [=fiduciary duties=].
+    relationship, as guided by the applicable [=norms=].  If the [=first party=] has knowledge
+    of the person's [=identity=], it should make the [=identity=] it is using for the person, along with its own branding
+	  as the [=data controller], obvious to the person.  [[?TWITTER-DEVELOPER-POLICY]]
+    This tier is more [=appropriate=] the more the
+    [=first party=] acts in accordance with [=fiduciary duties=]. 
   </dd>
   <dt><dfn>Opt-out Privacy Tier</dfn></dt>
   <dd>
