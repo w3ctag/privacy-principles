@@ -519,7 +519,7 @@ behaviour. Its <dfn>fiduciary duties</dfn> include [[?TAKING-TRUST-SERIOUSLY]]:
     cannot get away with hiding relevant information in complex out-of-band legal notices
     no more than it can rely on overly cursory information provided in a consent dialog.
     If the user has provided [=consent=] to [=processing=] of their [=personal data=],
-    the [=user agent=] should inform the user of ongoing [=processing=], with a 
+    the [=user agent=] should inform the user of ongoing [=processing=], with a
     level of obviousness that is proportional to the reasonably foreseeable impact of the processing.
   </dd>
   <dt><dfn>Duty of Loyalty</dfn></dt>
@@ -704,7 +704,7 @@ three privacy tiers:
     of the person's [=identity=], it should make the [=identity=] it is using for the person, along with its own branding
 	  as the [=data controller], obvious to the person.  [[?TWITTER-DEVELOPER-POLICY]]
     This tier is more [=appropriate=] the more the
-    [=first party=] acts in accordance with [=fiduciary duties=]. 
+    [=first party=] acts in accordance with [=fiduciary duties=].
   </dd>
   <dt><dfn>Opt-out Privacy Tier</dfn></dt>
   <dd>
@@ -990,7 +990,7 @@ otherwise benign (as opposed to [[[#hl-sensitive-information]]]). For example:
 * What system preferences has the user set? Dark mode, serif font, etc...
 * ...
 
-See [[[fingerprinting-guidance]]] for how to mitigate this threat.
+See [[fingerprinting-guidance]] for how to mitigate this threat.
 
 ### Unwanted cross-site recognition {#hl-recognition-cross-site}
 
@@ -1041,6 +1041,61 @@ users, consider at least these factors:
 
 Issue(16): This description of what makes information sensitive still needs to
 be refined.
+
+## Unexpected profiling {#hl-unexpected-profiling}
+
+Contributes to [=surveillance=], [=correlation=], [=identification=], and
+singling-out / discrimination.
+
+Unexpected profiling occurs when a site is able to learn attributes or
+characteristics about a person, that a) the site visitor did not intend the site
+to learn, and b) the site visitor reasonably could not anticipate a
+site would be able to learn.
+
+Profiling contributes to, but is distinct from, other privacy risks discussed
+in this document.
+For example, unexpected profiling may contribute to
+[[[#hl-recognition-same-site]]], by adding stable and semi-identifying
+information that can contribute to <a
+data-cite="fingerprinting-guidance#dfn-browser-fingerprinting">browser
+fingerprinting</a>. Unexpected profiling is distinct from same-site
+recognition though, in that a person may wish to not share some kinds
+of information about themselves <em>even in the presence of guarantees
+that such information will not lead to them being re-identified</em>.
+
+Similarly, unexpected profiling is related to [[[#hl-sensitive-information]]],
+but the former is a superset of the latter;
+all cases of unexpected sensitive information disclosure are examples of
+unexpected profiling, but Web users may have attributes or characteristics
+about themselves that are not universally thought of as "sensitive", but which
+they never the less do not wish to share with the sites they visit. People
+may wish to not share these "non-sensitive" characteristics
+for a variety of reasons (e.g., a person may worry that their ideas of what
+counts as "sensitive" is different from others, a person might might be ashamed
+or uncomfortable about a character trait or they might simply not wish to be profiled).
+
+Profiling occurs for many reasons. It can be used to facilitate price
+discrimination or offer manipulation, to make inferences about what products or
+services users might be more likely to purchase, or more generally, for a site
+to learn attributes about the Web user the Web user does not intend to share.
+Unexpected profiling can also contribute to feelings of powerlessness and
+loss of agency.
+
+A privacy harm occurs if a site learns information about the user that the
+user reasonably expected the site would not be able to learn, regardless of
+whether that information aids (re)identification or is from a sensitive category
+of information (however defined).
+
+<div class="example">
+
+Peter is a <a href="https://en.wikipedia.org/wiki/Furry_fandom">furry</a>.
+Despite knowing that there are thousands of
+other furries on the internet, and despite using a browser with
+robust browser fingerprinting protections, and despite the growing cultural
+acceptance of furries, Peter does not want (most) sites to learn
+or personalize content around his furry-interest.
+
+</div>
 
 ## Intrusive behavior {#hl-intrusion}
 
