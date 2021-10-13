@@ -912,11 +912,7 @@ data-cite="RFC6973#section-5.2.5">RFC6973§5.2.5</a>.
 These threats combine into the particular concrete threats we want web
 specifications to defend against, described in subsections here:
 
-<<<<<<< HEAD
 ## Unwanted cross-context recognition {#hl-recognition-cross-context}
-=======
-## Unexpected same-site recognition {#hl-recognition-same-site}
->>>>>>> abaf822 (rename from unwanted to unexpected)
 
 Contributes to [=surveillance=], [=correlation=], and [=identification=].
 
@@ -1084,29 +1080,11 @@ services users might be more likely to purchase, or more generally, for a site
 to learn attributes about the Web user the Web user does not intend to share.
 Unexpected profiling can also contribute to feelings of powerlessness and
 loss of agency.
-  
-A privacy hardm occurs if the user reasonably expects that they will not be profiled or singled-out when they visit a site, but the site does it anyway.
-  
-See the W3C TAG Finding on [Unsanctioned Web Tracking](https://www.w3.org/2001/tag/doc/unsanctioned-tracking/) for more information on why Unsanctioned Web Tracking is harmful for the Web.
 
-A user might expect that their visit will not cause them to be profiled or singled-out if they:
-* Use a browser that offers tracking protection
-* Use extensions or add-ons to block tracking
-*	Choose no, deny or disallow when offered a choice about tracking cookies (or tracking in general)
-*	Use their browser's private or incognito browsing mode
-*	Use a clean browser profile, container, partition or other mode to isolate web site visits
-*	Explicitly clear the site's cookies or storage
-* Use a VPN to hide their location
-* Where they believe privacy or data protection laws would not permit profiling
-
-Ironically, some of those strategies could reveal attributes or characteristics that would lead
-unexpected profiling, were a site able to learn them such as:
-
-* Whether a person is using a VPN to hide their location
-* Whether a person is using a clean browser profile, container, partition or
-  other mode to isolate web site visits
-* Demographic information, even in the presence of other privacy protections
-  (e.g., k-anonymity, differential privacy)
+A privacy harm occurs if a site learns information about the user that the
+user reasonably expected the site would not be able to learn, regardless of
+whether that information aids (re)identification or is from a sensitive category
+of information (however defined).
 
 <div class="example">
 
