@@ -498,20 +498,20 @@ monitoring of their behaviour. Its <dfn>user agent duties</dfn> include
     Protection requires [=user agents=] to actively protect a [=user=]'s data, beyond
     simple security measures. It is insufficient to just encrypt at rest and in transit,
     but the [=user agent=] must also limit retention, help ensure that only strictly
-    necessary data is collected, and require guarantees from those it is shared to.
+    necessary data is collected, and require guarantees from any [=party=] that the user agent can reasonably be aware that it is shared to.
   </dd>
   <dt><dfn>Duty of Discretion</dfn></dt>
   <dd>
     Discretion requires the [=user agent=] to make best efforts to enforce
     [=context-relative informational norms=] by placing limits on the flow and
-    [=processing=] of [=personal data=]. Discretion is not confidentiality or secrecy: trust
+    [=processing=] of [=personal data=] that it can reasonably detect. Discretion is not confidentiality or secrecy: trust
     can be preserved even when the [=user agent=] shares some [=personal data=], so long as
     it is done in an [=appropriately=] discreet manner.
   </dd>
   <dt><dfn>Duty of Honesty</dfn></dt>
   <dd>
     Honesty requires that the [=user agent=] try to give the [=user=]
-    information that is relevant to them and that will increase the [=user=]'s
+    information of which the [=user agent=] can reasonably be aware, that is relevant to the [=user=] and that will increase the [=user=]'s
     autonomy, as long as they can understand it and there's an appropriate
     time. This is almost never when the [=user=] is trying to do something else such as
     read a page or activate a feature. The duty of honesty goes well beyond that of
@@ -946,7 +946,9 @@ technical feature that is fundamental to the Web.</span></p>
   aspects of the web. In many cases it's possible to change the design in a way that avoids the
   violation without breaking valid use cases, but for cases where that's not possible this document
   delegates to other documents, for example the [[[PRIVACY-THREAT]]], to discuss what detailed
-  tradeoffs to make.
+  tradeoffs to make. 
+* This principle may not be able to be applied in situations where a [=person=] has shared [=identity=]
+  information in a medium that is not accessible to the [=user agent=].
 
 [=Partitions=] are separated in two ways that lead to distinct kinds of user-visible recognition.
 When their divisions between different sites are violated, that leads to <a
