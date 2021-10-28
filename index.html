@@ -280,13 +280,7 @@ benefit from having shared concepts to guide its evolution as a system built for
 can hopefully help all the Web's participants in different legal regimes. Our shared
 understanding is that the law is a floor, not a ceiling.
 
-# Definitions {#definitions}
-
-This section provides a number of building blocks to create a shared understanding of
-privacy. Some of the definitions below build on top of the work in
-<em>Tracking Preference Expression (DNT)</em> [[tracking-dnt]].
-
-## People &amp; Data {#people-data}
+# People &amp; Data {#people-data}
 
 A <dfn>user</dfn> (also <dfn data-lt="individual">person</dfn> or <dfn>data subject</dfn>) is any natural
 person.
@@ -348,7 +342,7 @@ self-determination for any consent they may provide to be receivable. This inclu
 example children, employees with respect to their employers, people in some situations of
 intellectual or psychological impairment, or refugees.
 
-## The Parties {#parties}
+# The Parties {#parties}
 
 A <dfn>party</dfn> is an entity that a [=person=] can reasonably understand as a single "thing"
 they're interacting with. Uses of this document in a particular domain are expected to describe how
@@ -393,7 +387,7 @@ baseline for [=appropriate=] [=data processing=], it is not always sufficient to
 [=appropriate=] [=processing=] since the [=first party=] can [=process=] data
 [=inappropriately=].
 
-## Acting on Data {#acting-on-data}
+# Acting on Data {#acting-on-data}
 
 A [=party=] <dfn data-lt="process|processing|processed|data processing">processes</dfn> data if it
 carries out operations on [=personal data=], whether or not by automated means, such as
@@ -409,7 +403,7 @@ A [=party=] <dfn data-lt="share|sharing">shares</dfn> data if it provides it to 
 A [=party=] <dfn data-lt="sell|selling">sells</dfn> data when it [=shares=] it in exchange
 for consideration, monetary or otherwise.
 
-## Contexts and Privacy
+# Contexts and Privacy
 
 The <dfn>purpose</dfn> of a given [=processing=] of data is an anticipated, intended, or
 planned outcome of this [=processing=] which is achieved or aimed for within a given
@@ -477,7 +471,7 @@ a [=person=] carry out the work of ensuring [=data processing=] of which they ar
 subject is [=appropriate=], instead of having the [=parties=] be responsible for that
 work as is more respectable.
 
-## User Agents {#user-agents}
+# User Agents {#user-agents}
 
 The <dfn>user agent</dfn> acts as an intermediary between a [=user=] and the web. The
 [=user agent=] is <em>not</em> a [=context=] because it is expected to align fully with its
@@ -545,7 +539,7 @@ In academic research, this relationship with a [=trustworthy agent=] is often de
 "fiduciary" [[?FIDUCIARY-UA]].
 
 
-## Identity on the Web {#identity}
+# Identity on the Web {#identity}
 
 A [=person=]'s <dfn>identity</dfn> is the set of characteristics that define them. Their identity
 *in a [=context=]* is the set of characteristics they present to that context. People
@@ -609,7 +603,7 @@ share data between the contexts, the fact that those distinct [=contexts=] fall 
 [=machine-enforceable context=] doesn't make sharing data or [=cross-context
 recognition|recognizing=] [=identities=] any less [=inappropriate=].
 
-## User Control and Autonomy {#autonomy}
+# User Control and Autonomy {#autonomy}
 
 A [=person=]'s <dfn data-lt="autonomous">autonomy</dfn> is their ability to make decisions of their own volition,
 without undue influence from other parties. People have limited intellectual resources and
@@ -667,7 +661,7 @@ and choice</em>, which, in today's digital environment, is often a strong indica
 </figcaption>
 </figure>
 
-## Opt-in, Consent, Opt-out, Global Controls {#opt-in-out}
+# Opt-in, Consent, Opt-out, Global Controls {#opt-in-out}
 
 Different procedural mechanisms exist to enable [=people=] to control the [=processing=]
 done to their [=data=]. Mechanisms that increase the number of [=purposes=] for which
@@ -704,9 +698,9 @@ three privacy tiers:
     [=processing=] that can take place in this tier derives its legitimacy from matching the
     expectations and interests of both the [=user=] and the [=first party=] in their
     relationship, as guided by the applicable [=norms=]. If the [=first party=] has knowledge
-    of the person's [=identity=], it should make the [=identity=] it is using for the person, 
-    along with its own branding as the [=data controller], obvious to the person. 
-    [[?TWITTER-DEVELOPER-POLICY]] This tier is more [=appropriate=] the more the [=first party=] 
+    of the person's [=identity=], it should make the [=identity=] it is using for the person,
+    along with its own branding as the [=data controller], obvious to the person.
+    [[?TWITTER-DEVELOPER-POLICY]] This tier is more [=appropriate=] the more the [=first party=]
     acts in accordance with [=user agent duties=].
   </dd>
   <dt><dfn>Opt-out Privacy Tier</dfn></dt>
@@ -752,7 +746,7 @@ in terms of specificity over any manner of blanket [=consent=] that a site may o
 unless that [=consent=] is directly attached to an interaction (eg. terms specified on a
 form upon submission).
 
-## Collective Issues in Privacy {#collective}
+# Collective Issues in Privacy {#collective}
 
 When designing Web technology, we naturally pay attention to potential impacts on the [=person=]
 using the Web through their [=user agent=]. In addition to potential individual harms we also
@@ -838,7 +832,7 @@ companies paying for access with strong checks and balances, and privacy guarant
 the funds would be used to support enhanced security for all.
 -->
 
-# Privacy principles by category {#principles}
+# High-Level Threats {#threats}
 
 User agents should attempt to defend their users from a variety of high-level
 threats or attacker goals, described in this section.
@@ -913,9 +907,9 @@ data-cite="RFC6973#section-5.2.5">RFC6973§5.2.5</a>.
 </dl>
 
 These threats combine into the particular concrete threats we want web
-specifications to defend against, described in subsections here:
+specifications to defend against, described in the sections that follow.
 
-## Unwanted cross-context recognition {#hl-recognition-cross-context}
+# Unwanted cross-context recognition {#hl-recognition-cross-context}
 
 Contributes to [=surveillance=], [=correlation=], and [=identification=].
 
@@ -946,7 +940,7 @@ technical feature that is fundamental to the Web.</span></p>
   aspects of the web. In many cases it's possible to change the design in a way that avoids the
   violation without breaking valid use cases, but for cases where that's not possible this document
   delegates to other documents, for example the [[[PRIVACY-THREAT]]], to discuss what detailed
-  tradeoffs to make. 
+  tradeoffs to make.
 * This principle may not be able to be applied in situations where a [=person=] has shared [=identity=]
   information in a medium that is not accessible to the [=user agent=].
 
@@ -956,7 +950,7 @@ href="#hl-recognition-cross-site"></a>. When a violation occurs at their other d
 example between different browser profiles or at the point a user clears their cookies and site
 storage, that leads to <a href="#hl-recognition-same-site"></a>.
 
-### Same-site recognition {#hl-recognition-same-site}
+## Same-site recognition {#hl-recognition-same-site}
 
 The web platform offers many ways for a website to recognize that a user is using the same
 [=identity=] over time, including [[RFC6265|cookies]], {{WindowLocalStorage/localStorage}},
@@ -997,7 +991,7 @@ otherwise benign (as opposed to [[[#hl-sensitive-information]]]). For example:
 
 See [[fingerprinting-guidance]] for how to mitigate this threat.
 
-### Unwanted cross-site recognition {#hl-recognition-cross-site}
+## Unwanted cross-site recognition {#hl-recognition-cross-site}
 
 A privacy harm occurs if a site determines with high probability and uses the fact that a visit to
 that site comes from the same person as another visit to a *different* site, unless the person could
@@ -1007,7 +1001,7 @@ can also be done by having a user navigate to a link that has been decorated wit
 collecting the same piece of identifying information on both sites, or by correlating the timestamps
 of an event that occurs nearly-simultaneously on both sites.
 
-## Sensitive information disclosure {#hl-sensitive-information}
+# Sensitive information disclosure {#hl-sensitive-information}
 
 Contributes to [=correlation=], [=identification=], [=secondary use=], and
 [=disclosure=].
@@ -1047,7 +1041,7 @@ users, consider at least these factors:
 Issue(16): This description of what makes information sensitive still needs to
 be refined.
 
-## Unexpected profiling {#hl-unexpected-profiling}
+# Unexpected profiling {#hl-unexpected-profiling}
 
 Contributes to [=surveillance=], [=correlation=], [=identification=], and
 singling-out / discrimination.
@@ -1102,7 +1096,7 @@ or personalize content around his furry-interest.
 
 </div>
 
-## Intrusive behavior {#hl-intrusion}
+# Intrusive behavior {#hl-intrusion}
 
 See [=intrusion=].
 
@@ -1116,13 +1110,33 @@ intrusive for a site to
 
 if the user doesn't intend for it to do so.
 
-## Powerful capabilities {#hl-capabilities}
+# Powerful capabilities {#hl-capabilities}
 
 Contributes to [=misattribution=].
 
 For example, a site that sends SMS without the user's intent could cause them to
 be blamed for things they didn't intend.
 
+<section class="appendix">
+  <h1>Acknowledgements</h1>
+  <p>
+    Some of the definitions in this document build on top of the work in
+    <em>Tracking Preference Expression (DNT)</em> [[tracking-dnt]].
+  </p>
+  <p>
+    The following people, in alphabetical order of their first name, were instrumental
+    in producing this document:
+    Amy Guy,
+    Christine Runnegar,
+    Dan Appelquist,
+    Don Marti,
+    Jonathan Kingston,
+    Peter Snyder,
+    Sam Weiler,
+    Tess O'Connor, and
+    Wendy Seltzer.
+  </p>
+</section>
 
 </body>
 </html>
