@@ -293,30 +293,11 @@ person. Throughout this document, we primarily use [=person=] or [=people=] to r
 reminder of their humanity. When we use the term [=user=], it is to talk about the specific [=person=]
 who happens to be using a given system at that time.
 
-
-in particular by reference to an identifier such as a name, an identification number, location data, an online identifier or to one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity of that natural person;
-
 We define <dfn data-lt="data">personal data</dfn> as any information relating to a [=person=],
 identified or identifiable, directly or indirectly, in particular by reference to an [=identifier=].
 
-
-
-
- such
-that:
-
-* this [=person=] is identified, directly or indirectly, by reference to an
-  identifier such as a name, email address, an arbitrary identifier or
-  identification number, an online identifier such as an IP address or any
-  identifier attached to a device this [=person=] may be using, phone number,
-  location data, or factors specific to the physical, physiological, genetic,
-  mental, economic, cultural, or social identity of that [=person=], as well as
-  identifiers derived from such data, for instance through hashing; or
-* this [=person=] could reasonably be reidentified from a conjunction of this
-  data with other data; or
-* the data pertains to a group of people such that a [=person=] may find
-  themselves to be the subject of a treatment related to this group, even if the
-  entity carrying out the treatment has no way to identify that [=person=].
+[=Data=] is personal if this [=person=] could reasonably be reidentified from a conjunction of this
+data with other data.
 
 Data is <dfn>permanently de-identified</dfn> when there exists a high level of confidence
 that no [=person=] described by the data can be identified, directly or indirectly
@@ -326,36 +307,37 @@ that further considerations relating to groups are covered in the
 <a href="#collective">Collective Issues in Privacy</a> section.
 
 Data is <dfn data-lt="pseudonymous data|pseudonymity">pseudonymous</dfn> when there are
-strict controls that prevent the reidentification of [=people=] described by the data
-except for a well-defined set of [=purposes=]. There are two cases in which [=data=]
-can be considered [=pseudonymous=], and they have different constraints.
+strict controls that prevent the re-identification of [=people=] described by the data
+except for a well-defined set of [=purposes=].
 
-If the [=pseudonymous data=] is <em>only</em> being processed by one [=party=]:
+Different situations involving [=pseudonymous data=] will require different controls. For instance,
+if the [=pseudonymous data=] is <em>only</em> being processed by one [=party=], typical controls
+include making sure that the [=identifiers=] used in the data are unique to that dataset, that
+any person (e.g. an employee of the [=party=]) with access to the [=data=] is barred (e.g. based on
+legal terms) from sharing the [=data=] further, and that technical measures exist to prevent
+re-identification or the joining of different data sets involving this [=data=], notably against
+timing or k-anonymity attacks.
 
-* the [=identifiers=] used in the data must be unique to that dataset; and
+In general, the goal is to ensure that [=pseudonymous data=] is used in a manner that provides a
+viable degree of oversight and accountability such that technical and procedural means to guarantee
+the maintenance of pseudonymity are preserved.
 
-* any person (e.g. an employee of the [=party=]) with access to the [=data=] is
-  barred (e.g. based on legal terms) from sharing the [=data=] further; and
-
-* technical measures exist to prevent re-identification or the joining of
-  different data sets involving this [=data=], notably against timing or
-  k-anonymity attacks.
-
-If the [=pseudonymous data=] is shared between several [=parties=]:
+This is more difficult when the [=pseudonymous data=] is shared between several [=parties=]. In such
+cases, typical controls would include making sure that
 
 * the [=identifiers=] used in the [=data=] are under the direct and exclusive control of
-  the [=first party=]; and
+  the [=first party=];
 
 * when these [=identifiers=] are shared with a [=third party=], they are made unique
   to that [=third party=] such that if they are shared with more than one
-  [=third party=] these cannot then match them up with one another; and
+  [=third party=] these cannot then match them up with one another;
 
 * there is a strong level of confidence that no [=third party=] can match the [=data=]
   with any data other than that obtained through interactions with the [=first
-  party=]; and
+  party=];
 
 * any [=third party=] receiving such [=data=] is barred (eg. based on legal terms)
-  from sharing it further; and
+  from sharing it further;
 
 * technical measures exist to prevent re-identification or the joining of
   different data sets involving this [=data=], notably against timing or
@@ -364,15 +346,13 @@ If the [=pseudonymous data=] is shared between several [=parties=]:
 * there exist contractual terms between the [=first party=] and [=third party=]
   describing the limited [=purpose=] for which the data is being shared.
 
-This can ensure that [=pseudonymous data=] is used in a manner that provides a minimum
-degree of governance such that technical and procedural means to guarantee the
-maintenance of pseudonymity are preserved. Note that [=pseudonymity=], on its own, is not
-sufficient to render [=data processing=] [=appropriate=].
+Note that [=pseudonymity=], on its own, is not sufficient to render [=data processing=]
+[=appropriate=].
 
 A <dfn data-lt="vulnerable">vulnerable person</dfn> is a [=person=] who may be unable
 to exercise sufficient self-determination in the [=context=] of a specific kind of
 [=processing=]. Amongst other things, they should be treated with greater default
-privacy protections and should be considered unable to [=consent=] to the [=processing=].
+privacy protections and may be considered unable to [=consent=] to the [=processing=].
 People can be vulnerable for different reasons, for example because they are children,
 are employees with respect to their employers, are facing a steep asymmetry of power,
 are people in some situations of intellectual or psychological impairment, are
@@ -594,9 +574,12 @@ as recognising them in different [=contexts=] may force their vulnerability into
 
 In computer systems and on the Web, an [=identity=] seen by a particular website is typically
 assigned an <dfn>identifier</dfn> of some type, which makes it easier for an automated system to
-store data about that [=person=]. Examples of [=identifiers=] for a [=person=] include their name,
-an identification number, location data, an online identifier or to one or more factors specific to
-their physical, physiological, genetic, mental, economic, cultural, or social [=identity=].
+store data about that [=person=]. Examples of [=identifiers=] for a [=person=] can be their name,
+an identification number including those mapping to a device that this [=person=] may be using, their
+phone number, their location data, an online identifier such as email or IP addresses, or
+factors specific to their physical, physiological, genetic, mental, economic, cultural, or social
+[=identity=]. Strings derived from [=identifiers=], for instance through hashing, are still
+[=identifiers=] so long as they may identify a [=person=].
 
 <div class="practice">
 
@@ -834,6 +817,16 @@ following methods subject to public scrutiny and [=governance=] models with stro
 balances (such as a newspaper's editorial decisions), then it will enhance personal [=autonomy=]
 and tend to be [=legitimate=]. When it is done in the [=person=]'s stead and without [=governance=],
 it decreases personal [=autonomy=] and tends to be [=illegitimate=].
+
+<!--
+XXX this needs a better formulation
+* the data pertains to a group of people such that a [=person=] may find
+  themselves to be the subject of a treatment related to this group, even if the
+  entity carrying out the treatment has no way to identify that [=person=].
+
+We also need to surface surveillance vs capture -> industrialisation of society -> origin sovereignty
+as the primary line of defence against collective privacy harms from capture/enclosure/control
+-->
 
 <!--
 <p>
