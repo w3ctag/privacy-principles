@@ -238,7 +238,7 @@
 
 Privacy is an essential part of the Web [[?ETHICAL-WEB]]. This document provides definitions
 for privacy and related concepts that are applicable worldwide. It also provides a set of privacy
-principles that should guide the development of the Web as a trustworthy platform. Users of
+principles that should guide the development of the Web as a trustworthy platform. People using
 the Web would benefit from a stronger relationship between technology and policy, and this
 document is written to work with both.
 
@@ -265,7 +265,7 @@ conclusion of the task force, the TAG intends to adopt this document as a Findin
 Privacy is an essential value of the Web ([[?ETHICAL-WEB]], [[?design-principles]]).
 In everyday life, people typically find it easy to assess whether a given flow of
 information is a violation of privacy or not [[?NYT-PRIVACY]]. However, in the digital
-space, users struggle to understand how their data may be moved between contexts and how that
+space, people struggle to understand how their data may be moved between contexts and how that
 may affect them. This is particularly true if they may be affected at a much later time and
 in completely different situations. Some actors are using this confusion to extract and
 exploit [=personal data=] at scale.
@@ -275,15 +275,17 @@ technology and policy that relate to privacy and [=personal data=].
 
 [=Personal data=] is covered by legal frameworks and this document recognises that existing data
 protection laws take precedence for legal matters. However, because the Web is global, we
-benefit from having shared concepts to guide its evolution as a system built for its users
+benefit from having shared concepts to guide its evolution as a system built for the people using it
 [[?RFC8890]]. A clear and well-defined view of privacy on the Web, informed by research,
 can hopefully help all the Web's participants in different legal regimes. Our shared
 understanding is that the law is a floor, not a ceiling.
 
 # People &amp; Data {#people-data}
 
-A <dfn>user</dfn> (also <dfn data-lt="individual">person</dfn> or <dfn>data subject</dfn>) is any natural
-person.
+A <dfn data-lt="individual">person</dfn> (also <dfn>user</dfn> or <dfn>data subject</dfn>) is any natural
+person. Throughout this document, we primarily use [=person=] or [=people=] to refer to human beings, as a
+reminder of their humanity. When we use the term [=user=], it is to talk about the specific [=person=]
+who happens to be using a given system at that time.
 
 We define <dfn data-lt="data">personal data</dfn> as any information relating to a [=person=] such
 that:
@@ -349,16 +351,16 @@ they're interacting with. Uses of this document in a particular domain are expec
 the core concepts of that domain combine into a [=user=]-comprehensible [=party=], and those refined
 definitions are likely to differ between domains.
 
-The <dfn data-lt="first parties">first party</dfn> is a [=party=] with which the [=user=] intends to
+The <dfn data-lt="first parties">first party</dfn> is a [=party=] with which a [=person=] intends to
 interact. Merely hovering over, muting, pausing, or closing a given piece of content does
-not constitute a [=user=]'s intent to interact with another party, nor does the simple
-fact of loading a [=party=] embedded in the one with which the user intends to
+not mean a [=person=] intends to interact with another party, nor does the simple
+fact of loading a [=party=] embedded in the one with which the person intends to
 interact. In cases of clear and conspicuous joint branding, there can be multiple [=first
 parties=]. The [=first party=] is necessarily a [=data controller=] of the data processing
-that takes places as a consequence of a [=user=] interacting with it.
+that takes places as a consequence of a [=person=] interacting with it.
 
-A <dfn data-lt="third parties">third party</dfn> is any [=party=] other than the [=user=],
-the [=first party=], or a [=service provider=] acting on behalf of either the [=user=] or
+A <dfn data-lt="third parties">third party</dfn> is any [=party=] other than the [=person=] visiting the website,
+the [=first party=], or a [=service provider=] acting on behalf of either the [=person=] or
 the [=first party=].
 
 A <dfn>service provider</dfn> or <dfn>data processor</dfn> is considered to be the same
@@ -419,7 +421,7 @@ general and processing purpose for the above.
 The <dfn>means</dfn> are the general method of [=data processing=] through which a given
 [=purpose=] is implemented, in a given [=context=], considered at a relatively abstract
 level and not necessarily all the way down to implementation details. Example:
-<em>the user will have their preferences restored (purpose) by looking up their identifier
+<em>a person will have their preferences restored (purpose) by looking up their identifier
 in a preferences store (means)</em>.
 
 A <dfn>context</dfn> is a physical or digital environment that a [=person=] interacts with
@@ -473,23 +475,23 @@ work as is more respectable.
 
 # User Agents {#user-agents}
 
-The <dfn>user agent</dfn> acts as an intermediary between a [=user=] and the web. The
-[=user agent=] is <em>not</em> a [=context=] because it is expected to align fully with its
-[=user=] and operate exclusively in that [=person=]'s interest. It is <em>not</em> the
-[=first party=]. The [=user agent=] serves the [=user=] as a <dfn>trustworthy agent</dfn>:
-it always puts the [=user=]'s interest first. In some occasions, this can mean protecting
-the [=user=] from themselves by preventing them from carrying out a dangerous decision,
-or by slowing down the user in their decision. For example, the
-[=user agent=] will make it difficult for the [=user=] to connect to a site if it can't verify
-that the site is authentic. It will check that the [=user=] really intends to expose a
-sensitive device to a page. It will prevent the [=user=] from consenting to the permanent
+The <dfn>user agent</dfn> acts as an intermediary between a [=person=] (its [=user=]) and the web. The
+[=user agent=] is <em>not</em> a [=context=] because it is expected to align fully with the
+[=person=] using it and operate exclusively in that [=person=]'s interest. It is <em>not</em> the
+[=first party=]. The [=user agent=] serves the [=person=] as a <dfn>trustworthy agent</dfn>:
+it always puts that [=person=]'s interest first. In some occasions, this can mean protecting
+that [=person=] from themselves by preventing them from carrying out a dangerous decision,
+or by slowing down the person in their decision. For example, the
+[=user agent=] will make it difficult for that [=person=] to connect to a site if it can't verify
+that the site is authentic. It will check that that [=person=] really intends to expose a
+sensitive device to a page. It will prevent that [=person=] from consenting to the permanent
 monitoring of their behaviour. Its <dfn>user agent duties</dfn> include
 [[?TAKING-TRUST-SERIOUSLY]]:
 
 <dl>
   <dt><dfn>Duty of Protection</dfn></dt>
   <dd>
-    Protection requires [=user agents=] to actively protect a [=user=]'s data, beyond
+    Protection requires [=user agents=] to actively protect their [=user=]'s data, beyond
     simple security measures. It is insufficient to just encrypt at rest and in transit,
     but the [=user agent=] must also limit retention, help ensure that only strictly
     necessary data is collected, and require guarantees from any [=party=] that the user agent can reasonably be aware that it is shared to.
@@ -504,31 +506,32 @@ monitoring of their behaviour. Its <dfn>user agent duties</dfn> include
   </dd>
   <dt><dfn>Duty of Honesty</dfn></dt>
   <dd>
-    Honesty requires that the [=user agent=] try to give the [=user=]
-    information of which the [=user agent=] can reasonably be aware, that is relevant to the [=user=] and that will increase the [=user=]'s
+    Honesty requires that the [=user agent=] try to give its [=user=]
+    information of which the [=user agent=] can reasonably be aware, that is relevant to
+   them and that will increase their
     autonomy, as long as they can understand it and there's an appropriate
-    time. This is almost never when the [=user=] is trying to do something else such as
+    time. This is almost never when the [=person=] is trying to do something else such as
     read a page or activate a feature. The duty of honesty goes well beyond that of
     transparency that is often included in older privacy regimes. Unlike transparency, honesty
     can't hide relevant information in complex legal notices and it can't rely on
     very short summaries provided in a consent dialog.
-    If the user has provided [=consent=] to [=processing=] of their [=personal data=],
-    the [=user agent=] should inform the user of ongoing [=processing=], with a
+    If the person has provided [=consent=] to [=processing=] of their [=personal data=],
+    the [=user agent=] should inform the [=person=] of ongoing [=processing=], with a
     level of obviousness that is proportional to the reasonably foreseeable impact of the processing.
   </dd>
   <dt><dfn>Duty of Loyalty</dfn></dt>
   <dd>
     Because the [=user agent=] is a [=trustworthy agent=], it is held to be loyal to the
-    [=user=] in all situations, including in preference to the [=user agent=]'s implementer.
-    When a [=user agent=] carries out [=processing=] that is not directly in the [=user=]'s
+    [=person=] using it in all situations, including in preference to the [=user agent=]'s implementer.
+    When a [=user agent=] carries out [=processing=] that is not directly in the [=person=]'s
     interest but instead benefits another entity (such as the user agent's implementer) that behaviour is
     known as <dfn>self-dealing</dfn>. Behaviour can be [=self-dealing=] even if it is done at the
-    same time as [=processing=] that is in the [=user=]'s interest. [=Self-dealing=] is always
+    same time as [=processing=] that is in the [=person=]'s interest. [=Self-dealing=] is always
     [=inappropriate=]. Loyalty is the avoidance of [=self-dealing=].
   </dd>
 </dl>
 
-These duties ensure the [=user agent=] will <em>care</em> for the user. It is important to
+These duties ensure the [=user agent=] will <em>care</em> for its [=user=]. It is important to
 note that there is a subtle difference between care and <dfn>data paternalism</dfn>.
 [=Data paternalism=] claims to help in part by removing agency ("<em>don't worry about it,
 so long as your data is with us it's safe, you don't need to know what we do with it, it's
@@ -557,7 +560,7 @@ as recognising them in different [=contexts=] may force their vulnerability into
 
 In computer systems and on the Web, an [=identity=] seen by a particular website is typically
 assigned an <dfn>identifier</dfn> of some type, which makes it easier for an automated system to
-store data about that user.
+store data about that [=person=].
 
 <div class="practice">
 
@@ -575,11 +578,11 @@ default, [=user agents=] define a <dfn>machine-enforceable context</dfn> or <dfn
 * whose [=environment/top-level origins=] are in the [=same site=] (but see [[PSL-PROBLEMS]])
 * being visited within the same user agent installation (and browser profile, container, or
   container tab for user agents that support those features)
-* between points in time that the user or their agent clears that [=site=]'s cookies and other
+* between points in time that the person or user agent clears that [=site=]'s cookies and other
   storage (which is sometimes automatic at the end of each session).
 
 Even though this is the default, [=user agents=] are free to restrict this context as
-their users need. For example, some user agents may help their users present different
+people need. For example, some user agents may help people present different
 [=identities=] to subdivisions of a single [=site=].
 
 <div class="issue" data-number="1">
@@ -591,10 +594,10 @@ contexts=]. For example, some user agents might want to help their users present
 
 </div>
 
-[=User agents=] should prevent their user from being [=cross-context recognition|recognized=] across
-[=machine-enforceable contexts=] unless the user intends to be recognized. This is a "should" rather
+[=User agents=] should prevent people from being [=cross-context recognition|recognized=] across
+[=machine-enforceable contexts=] unless they intend to be recognized. This is a "should" rather
 than a "must" because there are many cases where the user agent isn't powerful enough to prevent
-recognition. For example if two or more services that a user needs to use insist that the user share
+recognition. For example if two or more services that a person needs to use insist that they share
 a difficult-to-forge piece of their identity in order to use the services, it's the services
 behaving [=inappropriately=] rather than the [=user agent=].
 
@@ -603,7 +606,11 @@ share data between the contexts, the fact that those distinct [=contexts=] fall 
 [=machine-enforceable context=] doesn't make sharing data or [=cross-context
 recognition|recognizing=] [=identities=] any less [=inappropriate=].
 
+<<<<<<< HEAD
 # User Control and Autonomy {#autonomy}
+=======
+## Personal Control and Autonomy {#autonomy}
+>>>>>>> main
 
 A [=person=]'s <dfn data-lt="autonomous">autonomy</dfn> is their ability to make decisions of their own volition,
 without undue influence from other parties. People have limited intellectual resources and
@@ -620,14 +627,14 @@ A [=dark pattern=] does not have to be intentional, the deceptive effect is suff
 define them [[?DARK-PATTERNS]], [[?DARK-PATTERN-DARK]].
 
 Because we are all subject to motivated reasoning, the design of defaults and affordances
-that may impact [=user=] [=autonomy=] should be the subject of independent scrutiny.
+that may impact [=autonomy=] should be the subject of independent scrutiny.
 Implementers are enjoined to be particularly cautious to avoid slipping into
 [=data paternalism=].
 
 Given the sheer volume of potential [=data=]-related decisions in today's data economy,
 complete informational self-determination is impossible. This fact, however, should not be
 confused with the contention that privacy is dead. Careful design of our technological
-infrastructure can ensure that [=users=]' [=autonomy=] as pertaining to their own [=data=]
+infrastructure can ensure that people's [=autonomy=] as pertaining to their own [=data=]
 is enhanced through [=appropriate=] defaults and choice architectures.
 
 In the 1970s, the <dfn>Fair Information Practices</dfn> or <dfn>FIPs</dfn> were elaborated
@@ -635,15 +642,15 @@ in support of individual [=autonomy=] in the face of growing concerns with datab
 [=FIPs=] assume that there is sufficiently little [=data processing=] taking place that any
 [=person=] will be able to carry out sufficient diligence to enable [=autonomy=] in their
 decision-making. Since they entirely offload the [=privacy labour=]
-to [=users=] and assume perfect, unfettered [=autonomy=], the [=FIPs=] do not forbid specific
+to people and assume perfect, unfettered [=autonomy=], the [=FIPs=] do not forbid specific
 types of [=data processing=] but only place them under different procedural requirements.
 Such an approach is [=appropriate=] for [=parties=] that are processing data in the 1970s.
 
 One notable issue with procedural approaches to privacy is that they tend to have the same
-requirements in situations where the [=user=] finds themselves in a significant asymmetry of
-power with a [=party=] — for instance the [=user=] of an essential service provided by a
-monopolistic platform — and those where [=user=] and [=parties=] are very much on equal
-footing, or even where the [=user=] may have greater power, as is the case with small
+requirements in situations where people find themselves in a significant asymmetry of
+power with a [=party=] — for instance a [=person=] using an essential service provided by a
+monopolistic platform — and those where people and [=parties=] are very much on equal
+footing, or even where the [=person=] may have greater power, as is the case with small
 businesses operating in a competitive environment. It further does not consider cases in
 which one [=party=] may coerce other [=parties=] into facilitating its [=inappropriate=]
 practices, as is often the case with dominant players in advertising [[?CONSENT-LACKEYS]] or
@@ -672,7 +679,7 @@ their [=data=] is being [=processed=] are referred to as <dfn data-lt="opt in">o
 When deployed thoughtfully, these mechanisms can enhance [=people=]'s [=autonomy=]. Often,
 however, they are used as a way to avoid putting in the difficult work of deciding which
 types of [=processing=] are [=appropriate=] and which are not, offloading [=privacy labour=]
-to the [=user=].
+to the people using a system.
 
 Privacy regulatory regimes are often anchored at extremes: either they default to allowing
 only very few strictly essential [=purposes=] such that many [=parties=] will have to
@@ -696,7 +703,7 @@ three privacy tiers:
     the [=Vegas Rule=] and more in line with respecting [=privacy=]). This default tier
     should also be defined differently for certain kinds of [=contexts=]. The legitimate
     [=processing=] that can take place in this tier derives its legitimacy from matching the
-    expectations and interests of both the [=user=] and the [=first party=] in their
+    expectations and interests of both the [=person=] and the [=first party=] they're interacting with
     relationship, as guided by the applicable [=norms=]. If the [=first party=] has knowledge
     of the person's [=identity=], it should make the [=identity=] it is using for the person,
     along with its own branding as the [=data controller], obvious to the person.
@@ -721,9 +728,9 @@ three privacy tiers:
     of permissions on the Web platform. In the same way that it should be clear when a given
     device capability is in use (eg. you are providing geolocation or camera access), sharing
     data under this tier should be set up in such a way that it requires deliberate, specific
-    action from the [=user=] (eg. triggering a form control) and if that [=consent=] is
+    action from the [=person=] (eg. triggering a form control) and if that [=consent=] is
     persistent, there should be an indicator that data is being transmitted shown at all
-    times, in such a way that the user can easily switch it off. In general, providing
+    times, in such a way that the person can easily switch it off. In general, providing
     [=consent=] should be rare, difficult, highly intentional, and temporary.
   </dd>
 </dl>
@@ -735,13 +742,13 @@ rectify the <dfn>automation asymmetry</dfn> whereby service providers can automa
 [=global opt-out=] mechanism is the <em>Global Privacy Control</em> [[?GPC]].
 
 Conceptually, a [=global opt-out=] mechanism is an automaton operating as part of the
-[=user agent=], which is to say that it is equivalent to a robot that would carry out the
-[=user=]'s bidding by pressing an [=opt-out=] button with every interaction that the
-[=user=] has with a site, or more generally conveys an expression of the [=user=]'s
-rights in a relevant jurisdiction. (For instance, under [[?GDPR]], the [=user=] may be
+[=user agent=], which is to say that it is equivalent to a robot that would carry out a
+[=person=]'s bidding by pressing an [=opt-out=] button with every interaction that the
+[=person=] has with a site, or more generally conveys an expression of the [=person=]'s
+rights in a relevant jurisdiction. (For instance, under [[?GDPR]], the [=person=] may be
 conveying objections to [=processing=] based on legitimate interest or the withdrawal of
 [=consent=] to specific [=purposes=].) It should be noted that, since a [=global opt-out=]
-signal is reaffirmed automatically with every [=user=] interaction, it will take precedence
+signal is reaffirmed automatically with every interaction, it will take precedence
 in terms of specificity over any manner of blanket [=consent=] that a site may obtain,
 unless that [=consent=] is directly attached to an interaction (eg. terms specified on a
 form upon submission).
@@ -790,11 +797,11 @@ This can produce self-reinforcing loops that can have deleterious effects both i
 collective [[?SEEING-LIKE-A-STATE]].
 
 Issues of [=autonomy=] occur depending on the manner in which [=legibility=] is implemented.
-When [=legibility=] is used to order the world following rules set by the [=user=] or
+When [=legibility=] is used to order the world following rules set by a [=person=] or
 following methods subject to public scrutiny and [=governance=] models with strong checks and
-balances (such as a newspaper's editorial decisions), then it will enhance [=user=] [=autonomy=]
-and tend to be [=legitimate=]. When it is done in the [=user=]'s stead and without [=governance=],
-it decreases [=user=] [=autonomy=] and tends to be [=illegitimate=].
+balances (such as a newspaper's editorial decisions), then it will enhance personal [=autonomy=]
+and tend to be [=legitimate=]. When it is done in the [=person=]'s stead and without [=governance=],
+it decreases personal [=autonomy=] and tends to be [=illegitimate=].
 
 <!--
 <p>
@@ -834,7 +841,7 @@ the funds would be used to support enhanced security for all.
 
 # High-Level Threats {#threats}
 
-User agents should attempt to defend their users from a variety of high-level
+User agents should attempt to defend the people using them from a variety of high-level
 threats or attacker goals, described in this section.
 
 These threats are an extension of the ones discussed by [[RFC6973]].
@@ -947,24 +954,24 @@ technical feature that is fundamental to the Web.</span></p>
 [=Partitions=] are separated in two ways that lead to distinct kinds of user-visible recognition.
 When their divisions between different sites are violated, that leads to <a
 href="#hl-recognition-cross-site"></a>. When a violation occurs at their other divisions, for
-example between different browser profiles or at the point a user clears their cookies and site
+example between different browser profiles or at the point someone clears their cookies and site
 storage, that leads to <a href="#hl-recognition-same-site"></a>.
 
 ## Same-site recognition {#hl-recognition-same-site}
 
-The web platform offers many ways for a website to recognize that a user is using the same
+The web platform offers many ways for a website to recognize that a [=person=] is using the same
 [=identity=] over time, including [[RFC6265|cookies]], {{WindowLocalStorage/localStorage}},
 {{WindowOrWorkerGlobalScope/indexedDB}}, {{CacheStorage}}, and other forms of storage. This allows
-sites to save the user's preferences, shopping carts, etc., and users have come to expect this
+sites to save the [=person=]'s preferences, shopping carts, etc., and people have come to expect this
 behavior in some contexts.
 
-A privacy harm occurs if the user reasonably expects that they'll be using a different [=identity=]
+A privacy harm occurs if a [=person=] reasonably expects that they'll be using a different [=identity=]
 on a site, but the site discovers and uses the fact that the two or more visits probably came from
-the same user anyway.
+the same [=person=] anyway.
 
 [=User agents=] can't, in general, determine exactly where intra-site [=context=] boundaries are, or
-how a site allows a user to express that they intend to change [=identities=], so they're not
-responsible to enforce that sites actually separate user [=identities=] at those boundaries. The <a
+how a site allows a [=person=] to express that they intend to change [=identities=], so they're not
+responsible to enforce that sites actually separate [=identities=] at those boundaries. The <a
 href="#principle-prevent-cross-partition-recognition">principle</a> here instead requires separation
 at [=partition=] boundaries.
 
@@ -977,16 +984,16 @@ more difficult to clear than other cookies or storage.
 Guidance § Clearing all local state</a> discusses how specifications can help
 browsers avoid this mistake.
 
-Fingerprinting consists of using attributes of the user's browser and platform
+Fingerprinting consists of using attributes of the [=person=]'s browser and platform
 that are consistent between two or more visits and probably unique to the
-user.
+person.
 
-The attributes can be exposed as information about the user's device that is
+The attributes can be exposed as information about the [=person=]'s device that is
 otherwise benign (as opposed to [[[#hl-sensitive-information]]]). For example:
 
-* What are the user's language and time zone?
-* What size is the user's window?
-* What system preferences has the user set? Dark mode, serif font, etc...
+* What are the person's language and time zone?
+* What size is the window?
+* What system preferences have been set? Dark mode, serif font, etc...
 * ...
 
 See [[fingerprinting-guidance]] for how to mitigate this threat.
@@ -997,7 +1004,7 @@ A privacy harm occurs if a site determines with high probability and uses the fa
 that site comes from the same person as another visit to a *different* site, unless the person could
 reasonably expect the sites to discover this. Traditionally, sites have accomplished this using <a
 href="https://tess.oconnor.cx/2020/10/parties#environment-cross-site">cross-site</a> cookies, but it
-can also be done by having a user navigate to a link that has been decorated with a user ID,
+can also be done by having someone navigate to a link that has been decorated with an identifier,
 collecting the same piece of identifying information on both sites, or by correlating the timestamps
 of an event that occurs nearly-simultaneously on both sites.
 
@@ -1006,34 +1013,34 @@ of an event that occurs nearly-simultaneously on both sites.
 Contributes to [=correlation=], [=identification=], [=secondary use=], and
 [=disclosure=].
 
-Many pieces of information about a user could cause privacy harms if disclosed.
+Many pieces of information about someone could cause privacy harms if disclosed.
 For example:
 
-* The user's location.
-* Video or audio from the user's camera or microphone.
-* The content of certain files on the user's filesystem.
+* Their location.
+* Video or audio from the their camera or microphone.
+* The content of certain files on their filesystem.
 * Financial data.
 * Contacts.
 * Calendar entries.
-* [Whether the user is using assistive technology.](https://w3ctag.github.io/design-principles/#do-not-expose-use-of-assistive-tech)
+* [Whether they are using assistive technology.](https://w3ctag.github.io/design-principles/#do-not-expose-use-of-assistive-tech)
 * ...
 
 A particular piece of information may have different sensitivity for different
-users. Language preferences, for example, might typically seem innocent, but
+people. Language preferences, for example, might typically seem innocent, but
 also can be an indicator of belonging to an ethnic minority. Precise location
 information can be extremely sensitive (because it's identifying, because it
 allows for in-person intrusions, because it can reveal detailed information
 about a person's life) but it might also be public and not sensitive at all, or
 it might be low-enough granularity that it is much less sensitive for many
-users.
+people.
 
 When considering whether a class of information is likely to be sensitive to
-users, consider at least these factors:
+a person, consider at least these factors:
 
 * whether it serves as a persistent identifier (see severity in Mitigating
     browser fingerprinting);
 * whether it discloses substantial (including intimate details or inferences)
-    information about the user or other users;
+    information about the the person using the system or other people;
 * whether it can be revoked (as in determining whether a permission is
     necessary);
 * whether it enables other threats, like intrusion.
@@ -1065,7 +1072,7 @@ that such information will not lead to them being re-identified</em>.
 Similarly, unexpected profiling is related to [[[#hl-sensitive-information]]],
 but the former is a superset of the latter;
 all cases of unexpected sensitive information disclosure are examples of
-unexpected profiling, but Web users may have attributes or characteristics
+unexpected profiling, but people using the Web may have attributes or characteristics
 about themselves that are not universally thought of as "sensitive", but which
 they never the less do not wish to share with the sites they visit. People
 may wish to not share these "non-sensitive" characteristics
@@ -1075,13 +1082,13 @@ or uncomfortable about a character trait or they might simply not wish to be pro
 
 Profiling occurs for many reasons. It can be used to facilitate price
 discrimination or offer manipulation, to make inferences about what products or
-services users might be more likely to purchase, or more generally, for a site
-to learn attributes about the Web user the Web user does not intend to share.
+services people might be more likely to purchase, or more generally, for a site
+to learn attributes about them that they do not intend to share.
 Unexpected profiling can also contribute to feelings of powerlessness and
 loss of agency.
 
-A privacy harm occurs if a site learns information about the user that the
-user reasonably expected the site would not be able to learn, regardless of
+A privacy harm occurs if a site learns information about a person that they
+reasonably expected the site would not be able to learn, regardless of
 whether that information aids (re)identification or is from a sensitive category
 of information (however defined).
 
@@ -1108,7 +1115,7 @@ intrusive for a site to
 * Occupy the full screen,
 * etc.
 
-if the user doesn't intend for it to do so.
+if the person browsing it doesn't intend for it to do so.
 
 # Powerful capabilities {#hl-capabilities}
 
