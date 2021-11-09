@@ -6,13 +6,13 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 
-- [Proposed Charter](#proposed-charter)
+- [Charter](#charter)
 - [Input documents](#input-documents)
 - [Related documents](#related-documents)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## Proposed Charter
+## Charter
 
 The purpose of the Privacy Model Task Force is to bring together a small group of people to draft a set of privacy principles for the web.  This document is to include definitions of key privacy concepts on the web, enabling us to use common language as we work together on new web technologies that have an impact on user privacy.  It would also consolidate some of the work already done to define a privacy threat model.
 
