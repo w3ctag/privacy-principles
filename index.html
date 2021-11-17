@@ -61,6 +61,11 @@
           href: 'https://www.theregister.com/2018/05/01/publishers_slam_google_ad_policy_gdpr_consent/',
           publisher: 'The Register',
         },
+        'CONVENTION-108': {
+          title: 'Convention for the Protection of Individuals with regard to Automatic Processing of Personal Data',
+          href: 'https://rm.coe.int/1680078b37',
+          publisher: 'Council of Europe',
+        },
         'DARK-PATTERNS': {
           title: 'Dark patterns: past, present, and future',
           authors: ['Arvind Narayanan', 'Arunesh Mathur', 'Marshini Chetty', 'Mihir Kshirsagar'],
@@ -127,6 +132,11 @@
           title: 'Privacy by Design',
           href: 'https://conversationalist.org/2019/09/13/feminism-explains-our-toxic-relationships-with-our-smartphones/',
           publisher: 'Office of the Information and Privacy Commissioner, Ontario',
+        },
+        'OECD-GUIDELINES': {
+          title: 'OECD Guidelines on the Protection of Privacy and Transborder Flows of Personal Data',
+          href: 'https://www.oecd.org/sti/ieconomy/oecdguidelinesontheprotectionofprivacyandtransborderflowsofpersonaldata.htm',
+          publisher: 'OECD',
         },
         'PHONE-ON-FEMINISM': {
           title: 'This is your phone on feminism',
@@ -280,69 +290,81 @@ benefit from having shared concepts to guide its evolution as a system built for
 can hopefully help all the Web's participants in different legal regimes. Our shared
 understanding is that the law is a floor, not a ceiling.
 
-# People &amp; Data {#people-data}
+# People {#people}
 
 A <dfn data-lt="individual">person</dfn> (also <dfn>user</dfn> or <dfn>data subject</dfn>) is any natural
 person. Throughout this document, we primarily use [=person=] or [=people=] to refer to human beings, as a
 reminder of their humanity. When we use the term [=user=], it is to talk about the specific [=person=]
 who happens to be using a given system at that time.
 
-We define <dfn data-lt="data">personal data</dfn> as any information relating to a [=person=] such
-that:
+A <dfn data-lt="vulnerable">vulnerable person</dfn>, in the [=context=] of a specific kind of
+[=data processing=], is a [=person=] who may be unable
+to exercise sufficient self-determination. Amongst other things, they should be treated with greater default
+privacy protections and may be considered unable to [=consent=] to the [=processing=].
+People can be vulnerable for different reasons, for example because they are children,
+are employees with respect to their employers, are facing a steep asymmetry of power,
+are people in some situations of intellectual or psychological impairment, are
+refugees, etc.
 
-* this [=person=] is identified, directly or indirectly, by reference to an
-  identifier such as a name, email address, an arbitrary identifier or
-  identification number, an online identifier such as an IP address or any
-  identifier attached to a device this [=person=] may be using, phone number,
-  location data, or factors specific to the physical, physiological, genetic,
-  mental, economic, cultural, or social identity of that [=person=], as well as
-  identifiers derived from such data, for instance through hashing; or
-* this [=person=] could reasonably be reidentified from a conjunction of this
-  data with other data; or
-* the data pertains to a group of people such that a [=person=] may find
-  themselves to be the subject of a treatment related to this group, even if the
-  entity carrying out the treatment has no way to identify that [=person=].
+# Data {#data}
 
-Data is <dfn>permanently de-identified</dfn> when there exists a high level of confidence
-that no human subject of the data can be identified, directly or indirectly (e.g., via
-association with an identifier, user agent, or device), by that data alone or in
-combination with other retained or available information, including as being part of a
-group. Note that further considerations relating to groups are covered in the
+We define <dfn data-lt="data">personal data</dfn> as any information about a [=person=],
+identified or identifiable, directly or indirectly, such as by reference to an [=identifier=]
+([[GDPR]], [[OECD-GUIDELINES]], [[CONVENTION-108]]).
+
+If a [=person=] could reasonably be identified or re-identified when [=data=] is combined with other
+[=data=], then that makes that data [=personal data=].
+
+Data is <dfn>de-identified</dfn> when there exists a high level of confidence
+that no [=person=] described by the data can be identified, directly or indirectly
+(e.g. via association with an [=identifier=], user agent, or device), by that data alone or in
+combination with other available information. Note
+that further considerations relating to groups are covered in the
 <a href="#collective">Collective Issues in Privacy</a> section.
 
-Data is <dfn data-lt="pseudonymous data|pseudonymity">pseudonymous</dfn> when:
+We talk of <dfn>controlled de-identified data</dfn> when there are strict controls that prevent the
+re-identification of [=people=] described by the data except for a well-defined set of [=purposes=].
 
-* the identifiers used in the data are under the direct and exclusive control of
-  the [=first party=]; and
+Different situations involving [=controlled de-identified data=] will require different controls. For instance,
+if the [=controlled de-identified data=] is <em>only</em> being processed by one [=party=], typical controls
+include making sure that the [=identifiers=] used in the data are unique to that dataset, that
+any person (e.g. an employee of the [=party=]) with access to the [=data=] is barred (e.g. based on
+legal terms) from sharing the [=data=] further, and that technical measures exist to prevent
+re-identification or the joining of different data sets involving this [=data=], notably against
+timing or k-anonymity attacks.
 
-* when these identifiers are shared with a [=third party=], they are made unique
+In general, the goal is to ensure that [=controlled de-identified data=] is used in a manner that provides a
+viable degree of oversight and accountability such that technical and procedural means to guarantee
+the maintenance of pseudonymity are preserved.
+
+This is more difficult when the [=controlled de-identified data=] is shared between several [=parties=]. In such
+cases, good examples of typical controls that are representative of best practices would include
+making sure that:
+
+* the [=identifiers=] used in the [=data=] are under the direct and exclusive control of
+  the [=first party=] who is prevented by strict controls from matching the identifiers with the
+  data;
+
+* when these [=identifiers=] are shared with a [=third party=], they are made unique
   to that [=third party=] such that if they are shared with more than one
-  [=third party=] these cannot then match them up with one another; and
+  [=third party=] these cannot then match them up with one another;
 
-* there is a strong level of confidence that no [=third party=] can match them
-  to any data other than that obtained through interactions with the [=first
-  party=]; and
+* there is a strong level of confidence that no [=third party=] can match the [=data=]
+  with any data other than that obtained through interactions with the [=first
+  party=];
 
-* any [=third party=] receiving such identifiers is barred (eg. based on legal
-  terms) from sharing them or the related data further; and
+* any [=third party=] receiving such [=data=] is barred (eg. based on legal terms)
+  from sharing it further;
 
 * technical measures exist to prevent re-identification or the joining of
-  different data sets involving these identifiers, notably against timing or
+  different data sets involving this [=data=], notably against timing or
   k-anonymity attacks; and
 
 * there exist contractual terms between the [=first party=] and [=third party=]
   describing the limited [=purpose=] for which the data is being shared.
 
-This can ensure that [=pseudonymous data=] is used in a manner that provides a minimum
-degree of governance such that technical and procedural means to guarantee the
-maintenance of pseudonymity are preserved. Note that [=pseudonymity=], on its own, is not
-sufficient to render [=data processing=] [=appropriate=].
-
-A <dfn data-lt="vulnerable">vulnerable person</dfn> is a [=person=] who, at least in the [=context=] of
-the [=processing=] being discussed, are unable to exercise sufficient
-self-determination for any consent they may provide to be receivable. This includes for
-example children, employees with respect to their employers, people in some situations of
-intellectual or psychological impairment, or refugees.
+Note that [=controlled de-identified data=], on its own, is not sufficient to render [=data processing=]
+[=appropriate=].
 
 # The Parties {#parties}
 
@@ -373,9 +395,8 @@ A <dfn>service provider</dfn> or <dfn>data processor</dfn> is considered to be t
 * may determine implementation details of the data processing in question but
   does not determine the [=purpose=] for which the data is being [=processed=]
   nor the overarching [=means=] through which the [=purpose=] is carried out;
-* has no independent right to use the data other than in a [=permanently
-  de-identified=] form (e.g., for monitoring service integrity, load balancing,
-  capacity planning, or billing); and,
+* has no independent right to use the data other than in a [=de-identified=] form (e.g., for
+  monitoring service integrity, load balancing, capacity planning, or billing); and,
 * has a contract in place with the [=party=] which is consistent with the above limitations.
 
 A <dfn>data controller</dfn> is a [=party=] that determines the [=means=] and [=purposes=]
@@ -560,7 +581,17 @@ as recognising them in different [=contexts=] may force their vulnerability into
 
 In computer systems and on the Web, an [=identity=] seen by a particular website is typically
 assigned an <dfn>identifier</dfn> of some type, which makes it easier for an automated system to
-store data about that [=person=].
+store data about that [=person=]. Examples of [=identifiers=] for a [=person=] can be:
+* their name,
+* an identification number including those mapping to a device that this [=person=] may be using,
+* their phone number,
+* their location data,
+* an online identifier such as email or IP addresses, or
+* factors specific to their physical, physiological, genetic, mental, economic, cultural, or social
+[=identity=].
+
+Strings derived from [=identifiers=], for instance through hashing, are still
+[=identifiers=] so long as they may identify a [=person=].
 
 <div class="practice">
 
@@ -766,7 +797,7 @@ What we consider is therefore not just the relation between the people who expos
 and the entities that invite that disclosure [[?RELATIONAL-TURN]], but also between the people
 who expose themselves and those who do not but may find themselves recognised as such indirectly
 anyway. One key understanding here is that such relations may persists even when data is
-[=permanently de-identified=].
+[=de-identified=].
 
 [=Legibility=] practices can be <dfn data-lt="legitimacy">legitimate</dfn> or
 <dfn data-lt="illegitimacy">illegitimate</dfn> depending
@@ -791,15 +822,6 @@ following methods subject to public scrutiny and [=governance=] models with stro
 balances (such as a newspaper's editorial decisions), then it will enhance personal [=autonomy=]
 and tend to be [=legitimate=]. When it is done in the [=person=]'s stead and without [=governance=],
 it decreases personal [=autonomy=] and tends to be [=illegitimate=].
-
-<!--
-<p>
-From an economics standpoint, it is important to note that the broad sharing of data can lead
-to anticompetitive outcomes, notably due to network effects stemming from processing data across
-multiple [=contexts=] [[?BIG-DATA-COMPETITION]]. Restricting flows of [=data=] between
-different [=contexts=] (and not just [=parties=]) is therefore likely to improve competition.
-</p>
--->
 
 <dfn data-lt="governance">Data governance</dfn> refers to the rules and processes for how [=data=] is
 [=processed=] in any given [=context=]. How data is <em>governed</em> describes who has
@@ -1026,7 +1048,7 @@ people.
 When considering whether a class of information is likely to be sensitive to
 a person, consider at least these factors:
 
-* whether it serves as a persistent identifier (see severity in Mitigating
+* whether it serves as a persistent [=identifier=] (see severity in Mitigating
     browser fingerprinting);
 * whether it discloses substantial (including intimate details or inferences)
     information about the the person using the system or other people;
