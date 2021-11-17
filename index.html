@@ -290,13 +290,7 @@ benefit from having shared concepts to guide its evolution as a system built for
 can hopefully help all the Web's participants in different legal regimes. Our shared
 understanding is that the law is a floor, not a ceiling.
 
-# Definitions {#definitions}
-
-This section provides a number of building blocks to create a shared understanding of
-privacy. Some of the definitions below build on top of the work in
-<em>Tracking Preference Expression (DNT)</em> [[tracking-dnt]].
-
-## People &amp; Data {#people}
+# People {#people}
 
 A <dfn data-lt="individual">person</dfn> (also <dfn>user</dfn> or <dfn>data subject</dfn>) is any natural
 person. Throughout this document, we primarily use [=person=] or [=people=] to refer to human beings, as a
@@ -312,7 +306,7 @@ are employees with respect to their employers, are facing a steep asymmetry of p
 are people in some situations of intellectual or psychological impairment, are
 refugees, etc.
 
-## Data {#data}
+# Data {#data}
 
 We define <dfn data-lt="data">personal data</dfn> as any information about a [=person=],
 identified or identifiable, directly or indirectly, such as by reference to an [=identifier=]
@@ -372,7 +366,7 @@ cases, typical controls would include making sure that
 Note that [=pseudonymity=], on its own, is not sufficient to render [=data processing=]
 [=appropriate=].
 
-## The Parties {#parties}
+# The Parties {#parties}
 
 A <dfn>party</dfn> is an entity that a [=person=] can reasonably understand as a single "thing"
 they're interacting with. Uses of this document in a particular domain are expected to describe how
@@ -416,7 +410,7 @@ baseline for [=appropriate=] [=data processing=], it is not always sufficient to
 [=appropriate=] [=processing=] since the [=first party=] can [=process=] data
 [=inappropriately=].
 
-## Acting on Data {#acting-on-data}
+# Acting on Data {#acting-on-data}
 
 A [=party=] <dfn data-lt="process|processing|processed|data processing">processes</dfn> data if it
 carries out operations on [=personal data=], whether or not by automated means, such as
@@ -432,7 +426,7 @@ A [=party=] <dfn data-lt="share|sharing">shares</dfn> data if it provides it to 
 A [=party=] <dfn data-lt="sell|selling">sells</dfn> data when it [=shares=] it in exchange
 for consideration, monetary or otherwise.
 
-## Contexts and Privacy
+# Contexts and Privacy
 
 The <dfn>purpose</dfn> of a given [=processing=] of data is an anticipated, intended, or
 planned outcome of this [=processing=] which is achieved or aimed for within a given
@@ -500,7 +494,7 @@ a [=person=] carry out the work of ensuring [=data processing=] of which they ar
 subject is [=appropriate=], instead of having the [=parties=] be responsible for that
 work as is more respectable.
 
-## User Agents {#user-agents}
+# User Agents {#user-agents}
 
 The <dfn>user agent</dfn> acts as an intermediary between a [=person=] (its [=user=]) and the web. The
 [=user agent=] is <em>not</em> a [=context=] because it is expected to align fully with the
@@ -569,7 +563,7 @@ In academic research, this relationship with a [=trustworthy agent=] is often de
 "fiduciary" [[?FIDUCIARY-UA]].
 
 
-## Identity on the Web {#identity}
+# Identity on the Web {#identity}
 
 A [=person=]'s <dfn>identity</dfn> is the set of characteristics that define them. Their identity
 *in a [=context=]* is the set of characteristics they present to that context. People
@@ -693,15 +687,8 @@ Reference to the [=FIPs=] survives to this day. They are often referenced as <em
 and choice</em>, which, in today's digital environment, is often a strong indication that
 [=inappropriate=] [=processing=] is being described.
 
-<figure>
-<img src="agnes-tc.jpg" alt="Agnes from Wandavision winking 'Transparency and choice'">
-<figcaption>
-  A method of privacy regulation which promises honesty and autonomy but delivers neither.
-  [[?CONFIDING]].
-</figcaption>
-</figure>
 
-## Opt-in, Consent, Opt-out, Global Controls {#opt-in-out}
+# Opt-in, Consent, Opt-out, Global Controls {#opt-in-out}
 
 Different procedural mechanisms exist to enable [=people=] to control the [=processing=]
 done to their [=data=]. Mechanisms that increase the number of [=purposes=] for which
@@ -786,7 +773,7 @@ in terms of specificity over any manner of blanket [=consent=] that a site may o
 unless that [=consent=] is directly attached to an interaction (eg. terms specified on a
 form upon submission).
 
-## Collective Issues in Privacy {#collective}
+# Collective Issues in Privacy {#collective}
 
 When designing Web technology, we naturally pay attention to potential impacts on the [=person=]
 using the Web through their [=user agent=]. In addition to potential individual harms we also
@@ -882,7 +869,7 @@ companies paying for access with strong checks and balances, and privacy guarant
 the funds would be used to support enhanced security for all.
 -->
 
-# Privacy principles by category {#principles}
+# High-Level Threats {#threats}
 
 User agents should attempt to defend the people using them from a variety of high-level
 threats or attacker goals, described in this section.
@@ -957,9 +944,9 @@ data-cite="RFC6973#section-5.2.5">RFC6973§5.2.5</a>.
 </dl>
 
 These threats combine into the particular concrete threats we want web
-specifications to defend against, described in subsections here:
+specifications to defend against, described in the sections that follow.
 
-## Unwanted cross-context recognition {#hl-recognition-cross-context}
+# Unwanted cross-context recognition {#hl-recognition-cross-context}
 
 Contributes to [=surveillance=], [=correlation=], and [=identification=].
 
@@ -1000,7 +987,7 @@ href="#hl-recognition-cross-site"></a>. When a violation occurs at their other d
 example between different browser profiles or at the point someone clears their cookies and site
 storage, that leads to <a href="#hl-recognition-same-site"></a>.
 
-### Same-site recognition {#hl-recognition-same-site}
+## Same-site recognition {#hl-recognition-same-site}
 
 The web platform offers many ways for a website to recognize that a [=person=] is using the same
 [=identity=] over time, including [[RFC6265|cookies]], {{WindowLocalStorage/localStorage}},
@@ -1041,7 +1028,7 @@ otherwise benign (as opposed to [[[#hl-sensitive-information]]]). For example:
 
 See [[fingerprinting-guidance]] for how to mitigate this threat.
 
-### Unwanted cross-site recognition {#hl-recognition-cross-site}
+## Unwanted cross-site recognition {#hl-recognition-cross-site}
 
 A privacy harm occurs if a site determines with high probability and uses the fact that a visit to
 that site comes from the same person as another visit to a *different* site, unless the person could
@@ -1051,7 +1038,7 @@ can also be done by having someone navigate to a link that has been decorated wi
 collecting the same piece of identifying information on both sites, or by correlating the timestamps
 of an event that occurs nearly-simultaneously on both sites.
 
-## Sensitive information disclosure {#hl-sensitive-information}
+# Sensitive information disclosure {#hl-sensitive-information}
 
 Contributes to [=correlation=], [=identification=], [=secondary use=], and
 [=disclosure=].
@@ -1091,7 +1078,7 @@ a person, consider at least these factors:
 Issue(16): This description of what makes information sensitive still needs to
 be refined.
 
-## Unexpected profiling {#hl-unexpected-profiling}
+# Unexpected profiling {#hl-unexpected-profiling}
 
 Contributes to [=surveillance=], [=correlation=], [=identification=], and
 singling-out / discrimination.
@@ -1146,7 +1133,7 @@ or personalize content around his furry-interest.
 
 </div>
 
-## Intrusive behavior {#hl-intrusion}
+# Intrusive behavior {#hl-intrusion}
 
 See [=intrusion=].
 
@@ -1160,13 +1147,33 @@ intrusive for a site to
 
 if the person browsing it doesn't intend for it to do so.
 
-## Powerful capabilities {#hl-capabilities}
+# Powerful capabilities {#hl-capabilities}
 
 Contributes to [=misattribution=].
 
 For example, a site that sends SMS without the user's intent could cause them to
 be blamed for things they didn't intend.
 
+<section class="appendix">
+
+# Acknowledgements {#acknowledgements}
+
+Some of the definitions in this document build on top of the work in
+[[[tracking-dnt]]].
+
+The following people, in alphabetical order of their first name, were instrumental
+in producing this document:
+Amy Guy,
+Christine Runnegar,
+Dan Appelquist,
+Don Marti,
+Jonathan Kingston,
+Peter Snyder,
+Sam Weiler,
+Tess O'Connor, and
+Wendy Seltzer.
+
+</section>
 
 </body>
 </html>
