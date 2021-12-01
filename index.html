@@ -7,13 +7,9 @@
   <script class="remove">
     // All config options at https://respec.org/docs/
     var respecConfig = {
-      specStatus: 'draft-finding',
+      specStatus: 'editor-draft-finding',
       isPreview: true,
-      postProcess: [(config, doc) => {
-        if (config.specStatus !== 'draft-finding') return;
-        let dt3 = doc.querySelector('.head dt:nth-of-type(3)');
-        while (dt3.previousElementSibling) dt3.parentNode.removeChild(dt3.previousElementSibling);
-      }],      format: 'markdown',
+      format: 'markdown',
       editors: [{
         name: 'Robin Berjon',
         company: 'The New York Times',
