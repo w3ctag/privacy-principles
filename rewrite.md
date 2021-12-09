@@ -17,36 +17,95 @@ spaces that control people's behaviour. What's more, automation renders informat
 Privacy is about the rules that govern information flows, and more precisely it is about how these
 rules constrain and distribute the power of information between different actors. Struggles over
 privacy are struggles over the rules that govern the power of data, they are about data governance.
+The focus of this document concerns leveraging this power differential against people, but the same
+techniques are also used to leverage the power of information against other entities, such as
+companies or governments.
 
 There are always privacy rules — the question is which ones best serve human values. So privacy is
 _instrumental_ to using data in service of a space designed _for_ everyone.
 
-Tk we should not be asking people to set rules for everything all the time. Include notions of
-consent and agency here. Who does the privacy labour?
+A data system designed for people is one in which people remain effectively able to reason about
+what is known about them. This means working to prevent hidden parties from acquiring such
+information, preventing any party from acquiring too much information about a person particularly in
+cross-referencing from multiple sources, restricting applications of this data that are hostile to
+people. [this needs all kinds of better phrasing]
+
+Move here:
+* automation asymmetry
+* Opt-in, Out, Consent, Global opt out
+* Personal Control and Autonomy (parts of)
+* dark patterns
+* privacy labour
 
 ## What Is Privacy
 
-Tk this is where we use CI and all that. Basically make it about defining rules in an institutional
-setting. Ctx = set of purposes.
+Establishing privacy as rules for the power of data within an institutional framework, using CI to
+describe rule system, agents, structures. This might benefit from some Ostrom too. Keep in mind to
+make context a set of purposes.
+
+* The Parties
+  * party, first party, third party
+  * service provider or processor
+  * data controller
+* Contexts & Privacy
+  * purpose, means
+  * context (and sub-notions)
+  * defining privacy
+  * tracking
 
 ## How To Implement Privacy
 
-Tk how to make the rules real. Why trust matters and how it gets created.
+A principled overview of how to make the rules real.
+
+### Privacy Threats on the Web
+
+* High-Level Threats
+* Unwanted Cross-Context Recognition
+* Sensitive information disclosure
+* Unexpected profiling
+* Intrusive behavior
+* Powerful capabilities
+* vulnerable person (considering including here as a threat similar to a11y failures: people who
+design in ablist ways — otherwise it can go next to dark patterns above)
 
 ### It's _Your_ Browser
 
-Tk trustworthy/fiduciary notions
+What the UA can do to protect from asymmetries.
+
+* User Agents
+  * trustworthy and related
 
 ### Browser Protections
 
-Tk all the things that browsers can do
+This is a discussion of what we can expect browsers to do.
 
-### Rules & Institutions
+* Identity
+  * cross-context recognition
+  * machine-enforceable context, partition
 
-Tk all the things that aren't supported directly by browsers, but that we expect from systems.
-Notably, it's important that this would include collective governance for security systems. Maybe
-also mention that consent is individualistic and imbalances of power can often be best redressed
-using collective tools.
+### Data Processor Protections
+
+This is a discussion of some practices that entities processing data can apply, not all of them
+good.
+
+* de-identified and controlled de-identified
+* FIPs
+* Vegas Rule
+
+### Data Governance
+
+This covers the rules & institutions that might not be supported directly by browsers, but that we
+expect from hunman-centric systems that. Also how this relates to trust and how trust gets created.
+
+This would include collective governance for security systems. Maybe also mention that consent is
+individualistic and imbalances of power can often be best redressed using collective tools.
+
+* Collective Issues
+  * POSIWID
+  * legibility
+  * legitimate & illegitimate
+  * reflexivity
+  * data governance
 
 ## Appendix: Common Concepts
 
@@ -54,6 +113,10 @@ This section contains definitions for terms mentioned in the document that are n
 they are used. The idea is that, if a term is common enough that people will naturally understand it
 but that it could nevertheless benefit from a strict definition in order to provide a common
 foundation for debate, then it goes here.
+
+* person
+* personal data
+* processes, shares, sells
 
 ## Notes
 
