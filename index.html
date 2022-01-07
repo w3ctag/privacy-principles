@@ -275,12 +275,6 @@ conclusion of the task force, the TAG intends to adopt this document as a Findin
 # Introduction {#intro}
 
 Privacy is an essential value of the Web ([[?ETHICAL-WEB]], [[?design-principles]]).
-In everyday life, people typically find it easy to assess whether a given flow of
-information is a violation of privacy or not [[?NYT-PRIVACY]]. However, in the digital
-space, people struggle to understand how their data may be moved between contexts and how that
-may affect them. This is particularly true if they may be affected at a much later time and
-in completely different situations. Some actors are using this confusion to extract and
-exploit [=personal data=] at scale.
 
 The goal of this document is to define principles that may prove useful in developing
 technology and policy that relate to privacy and [=personal data=].
@@ -292,7 +286,9 @@ benefit from having shared concepts to guide its evolution as a system built for
 can hopefully help all the Web's participants in different legal regimes. Our shared
 understanding is that the law is a floor, not a ceiling.
 
-# People {#people}
+# Who is Involved {#who}
+
+## People {#people}
 
 A <dfn data-lt="individual">person</dfn> (also <dfn>user</dfn> or <dfn>data subject</dfn>) is any natural
 person. Throughout this document, we primarily use [=person=] or [=people=] to refer to human beings, as a
@@ -308,198 +304,7 @@ are employees with respect to their employers, are facing a steep asymmetry of p
 are people in some situations of intellectual or psychological impairment, are
 refugees, etc.
 
-# Data {#data}
-
-We define <dfn data-lt="data">personal data</dfn> as any information that is directly or
-indirectly about an identified or identifiable [=person=], such as by reference to an
-[=identifier=] ([[GDPR]], [[OECD-GUIDELINES]], [[CONVENTION-108]]).
-
-If a [=person=] could reasonably be identified or re-identified when [=data=] is combined with other
-[=data=], then that makes that data [=personal data=].
-
-Data is <dfn>de-identified</dfn> when there exists a high level of confidence
-that no [=person=] described by the data can be identified, directly or indirectly
-(e.g. via association with an [=identifier=], user agent, or device), by that data alone or in
-combination with other available information. Note
-that further considerations relating to groups are covered in the
-<a href="#collective">Collective Issues in Privacy</a> section.
-
-We talk of <dfn>controlled de-identified data</dfn> when there are strict controls that prevent the
-re-identification of [=people=] described by the data except for a well-defined set of [=purposes=].
-
-Different situations involving [=controlled de-identified data=] will require different controls. For instance,
-if the [=controlled de-identified data=] is <em>only</em> being processed by one [=party=], typical controls
-include making sure that the [=identifiers=] used in the data are unique to that dataset, that
-any person (e.g. an employee of the [=party=]) with access to the [=data=] is barred (e.g. based on
-legal terms) from sharing the [=data=] further, and that technical measures exist to prevent
-re-identification or the joining of different data sets involving this [=data=], notably against
-timing or k-anonymity attacks.
-
-In general, the goal is to ensure that [=controlled de-identified data=] is used in a manner that provides a
-viable degree of oversight and accountability such that technical and procedural means to guarantee
-the maintenance of pseudonymity are preserved.
-
-This is more difficult when the [=controlled de-identified data=] is shared between several [=parties=]. In such
-cases, good examples of typical controls that are representative of best practices would include
-making sure that:
-
-* the [=identifiers=] used in the [=data=] are under the direct and exclusive control of
-  the [=first party=] who is prevented by strict controls from matching the identifiers with the
-  data;
-
-* when these [=identifiers=] are shared with a [=third party=], they are made unique
-  to that [=third party=] such that if they are shared with more than one
-  [=third party=] these cannot then match them up with one another;
-
-* there is a strong level of confidence that no [=third party=] can match the [=data=]
-  with any data other than that obtained through interactions with the [=first
-  party=];
-
-* any [=third party=] receiving such [=data=] is barred (eg. based on legal terms)
-  from sharing it further;
-
-* technical measures exist to prevent re-identification or the joining of
-  different data sets involving this [=data=], notably against timing or
-  k-anonymity attacks; and
-
-* there exist contractual terms between the [=first party=] and [=third party=]
-  describing the limited [=purpose=] for which the data is being shared.
-
-Note that [=controlled de-identified data=], on its own, is not sufficient to render [=data processing=]
-[=appropriate=].
-
-# The Parties {#parties}
-
-A <dfn>party</dfn> is an entity that a [=person=] can reasonably understand as a single "thing"
-they're interacting with. Uses of this document in a particular domain are expected to describe how
-the core concepts of that domain combine into a [=user=]-comprehensible [=party=], and those refined
-definitions are likely to differ between domains.
-
-The <dfn data-lt="first parties">first party</dfn> is a [=party=] with which a [=person=] intends to
-interact. Merely hovering over, muting, pausing, or closing a given piece of content does
-not mean a [=person=] intends to interact with another party, nor does the simple
-fact of loading a [=party=] embedded in the one with which the person intends to
-interact. In cases of clear and conspicuous joint branding, there can be multiple [=first
-parties=]. The [=first party=] is necessarily a [=data controller=] of the data processing
-that takes places as a consequence of a [=person=] interacting with it.
-
-A <dfn data-lt="third parties">third party</dfn> is any [=party=] other than the [=person=] visiting the website,
-the [=first party=], or a [=service provider=] acting on behalf of either the [=person=] or
-the [=first party=].
-
-A <dfn>service provider</dfn> or <dfn>data processor</dfn> is considered to be the same
-[=party=] as the entity contracting it to perform the relevant [=processing=] if it:
-
-* is processing the data on behalf of that [=party=];
-* ensures that the data is only retained, accessed, and used as directed by that
-  [=party=] and solely for the list of explicitly-specified [=purposes=]
-  detailed by the directing [=party=] or [=data controller=];
-* may determine implementation details of the data processing in question but
-  does not determine the [=purpose=] for which the data is being [=processed=]
-  nor the overarching [=means=] through which the [=purpose=] is carried out;
-* has no independent right to use the data other than in a [=de-identified=] form (e.g., for
-  monitoring service integrity, load balancing, capacity planning, or billing); and,
-* has a contract in place with the [=party=] which is consistent with the above limitations.
-
-A <dfn>data controller</dfn> is a [=party=] that determines the [=means=] and [=purposes=]
-of data processing. Any [=party=] that is not a [=service provider=] is a [=data controller=].
-
-The <dfn>Vegas Rule</dfn> is a simple implementation of privacy in which "<em>what happens with the
-[=first party=] stays with the [=first party=]</em>." Put differently, the [=Vegas Rule=] is followed
-when the [=first party=] is the only [=data controller=]. While the [=Vegas Rule=] is a good
-guideline, it's neither necessary nor sufficient for [=appropriate=] [=data processing=]. A [=first
-party=] that maintains exclusive access to a person's data can still [=process=] it
-[=inappropriately=], and there are cases where a third party can learn information about a person
-but still treat it [=appropriately=].
-
-# Acting on Data {#acting-on-data}
-
-A [=party=] <dfn data-lt="process|processing|processed|data processing">processes</dfn> data if it
-carries out operations on [=personal data=], whether or not by automated means, such as
-collection, recording, organisation, structuring, storage, adaptation or alteration,
-retrieval, consultation, use, disclosure by transmission, [=sharing=], dissemination or
-otherwise making available, [=selling=], alignment or combination, restriction, erasure or
-destruction.
-
-A [=party=] <dfn data-lt="share|sharing">shares</dfn> data if it provides it to any other
-[=party=]. Note that, under this definition, a [=party=] that provides data to its own
-[=service providers=] is not [=sharing=] it.
-
-A [=party=] <dfn data-lt="sell|selling">sells</dfn> data when it [=shares=] it in exchange
-for consideration, monetary or otherwise.
-
-# Contexts and Privacy
-
-The <dfn>purpose</dfn> of a given [=processing=] of data is an anticipated, intended, or
-planned outcome of this [=processing=] which is achieved or aimed for within a given
-[=context=]. A [=purpose=], when described, should be specific enough to be actionable by
-someone familiar with the relevant [=context=] (ie. they could independently determine
-[=means=] that reasonably correspond to an implementation of the [=purpose=]).
-
-<!--
-XXX given that contexts are defined from *user* purpose we might wish to have purpose in
-general and processing purpose for the above.
--->
-
-The <dfn>means</dfn> are the general method of [=data processing=] through which a given
-[=purpose=] is implemented, in a given [=context=], considered at a relatively abstract
-level and not necessarily all the way down to implementation details. Example:
-<em>a person will have their preferences restored (purpose) by looking up their identifier
-in a preferences store (means)</em>.
-
-A <dfn>context</dfn> is a physical or digital environment that a [=person=] interacts with
-for a purpose of their own (that they typically share with other [=person=] who interact
-with the same environment).
-
-A [=context=] can be further described through:
-
-* Its <dfn>actors</dfn>, which comprise the <dfn>subject</dfn> (a [=person=]) as well as
-  the <dfn>sender</dfn> and <dfn>recipient</dfn> of the data (which are [=parties=]).
-* Its <dfn>attributes</dfn>, which are the types of [=personal data=] being [=processed=]
-  in the [=context=].
-* Its <dfn>transmission principles</dfn>, which are the constraints (typically technical
-  or legal) being placed upon the [=data processing=].
-
-A [=context=] carries <dfn data-lt="norm">context-relative informational norms</dfn> that determine
-whether a given [=data processing=] is <dfn data-lt="appropriately">appropriate</dfn>
-(if the norms are adhered to) or <dfn data-lt="inappropriately">inappropriate</dfn>
-(when the norms are violated). A norm violation can be for instance the exfiltration of
-[=personal data=] from a context or the lack of respect for [=transmission principles=].
-When [=norms=] are respected in a given [=context=], we can say that <dfn>contextual
-integrity</dfn> is maintained; otherwise that it is violated ([[?PRIVACY-IN-CONTEXT]],
-[[?PRIVACY-AS-CI]]).
-
-We define <dfn>privacy</dfn> as a right to [=appropriate=] [=data processing=]. A
-<dfn>privacy violation</dfn> is, correspondingly, [=inappropriate=] [=data processing=]
-[[?PRIVACY-IN-CONTEXT]].
-
-Note that a [=first party=] can be comprised of multiple [=contexts=] if it is large
-enough that [=people=] would interact with it for more than one [=purpose=]. [=Sharing=]
-[=personal data=] across [=contexts=] is only [=appropriate=] if the subsequent
-use of that data follows the [=norms=] of both the context in which the data was
-collected and the context in which it is used.
-
-<div class="example" id="data-sharing-example">
-
-You share personal data with your bank in the context of managing your money. They would like to
-re-use that data in order to help another merchant sell you a product based on the purchase history
-the bank can see. Since marketing is a different [=context=] from banking, using your data in this
-way is usually a [=privacy violation=].
-
-If instead the bank is recommending a product to help your financial affairs, this may be an
-[=appropriate=] use of data, or even a use within the original [=context=].
-
-</div>
-
-Colloquially, <dfn>tracking</dfn> is understood to be any kind of [=inappropriate=] data
-collection.
-
-Additionally, <dfn data-lt="privacy-labor">privacy labour</dfn> is the practice of having
-a [=person=] carry out the work of ensuring [=data processing=] of which they are the
-subject is [=appropriate=], instead of having the [=parties=] be responsible for that
-work as is more respectable.
-
-# User Agents {#user-agents}
+## User Agents {#user-agents}
 
 The <dfn>user agent</dfn> acts as an intermediary between a [=person=] (its [=user=]) and the web. The
 [=user agent=] is <em>not</em> a [=context=] because it is expected to align fully with the
@@ -567,80 +372,70 @@ their agency and sovereignty.
 In academic research, this relationship with a [=trustworthy agent=] is often described as
 "fiduciary" [[?FIDUCIARY-UA]].
 
+## The Parties {#parties}
 
-# Identity on the Web {#identity}
+A <dfn>party</dfn> is an entity that a [=person=] can reasonably understand as a single "thing"
+they're interacting with. Uses of this document in a particular domain are expected to describe how
+the core concepts of that domain combine into a [=user=]-comprehensible [=party=], and those refined
+definitions are likely to differ between domains.
 
-A [=person=]'s <dfn>identity</dfn> is the set of characteristics that define them. Their identity
-*in a [=context=]* is the set of characteristics they present to that context. People
-frequently present different identities to different contexts, and also frequently share an identity
-among several contexts.
+The <dfn data-lt="first parties">first party</dfn> is a [=party=] with which a [=person=] intends to
+interact. Merely hovering over, muting, pausing, or closing a given piece of content does
+not mean a [=person=] intends to interact with another party, nor does the simple
+fact of loading a [=party=] embedded in the one with which the person intends to
+interact. In cases of clear and conspicuous joint branding, there can be multiple [=first
+parties=]. The [=first party=] is necessarily a [=data controller=] of the data processing
+that takes places as a consequence of a [=person=] interacting with it.
 
-<dfn>Cross-context recognition</dfn> is the act of recognising that an [=identity=] in one
-[=context=] is the same [=person=] as an [=identity=] in another [=context=]. [=Cross-context
-recognition=] can at times be [=appropriate=] but anyone who does it needs to be careful not to
-apply the [=norms=] of one [=context=] in ways that violate the [=norms=] around use of information
-acquired in a different [=context=]. (For example, if you meet your therapist at a cocktail party,
-you expect them to have rather different discussion topics with you than they usually would, and
-possibly even to pretend they do not know you.) This is particularly true for [=vulnerable=] people
-as recognising them in different [=contexts=] may force their vulnerability into the open.
+A <dfn data-lt="third parties">third party</dfn> is any [=party=] other than the [=person=] visiting the website,
+the [=first party=], or a [=service provider=] acting on behalf of either the [=person=] or
+the [=first party=].
 
-In computer systems and on the Web, an [=identity=] seen by a particular website is typically
-assigned an <dfn>identifier</dfn> of some type, which makes it easier for an automated system to
-store data about that [=person=]. Examples of [=identifiers=] for a [=person=] can be:
-* their name,
-* an identification number including those mapping to a device that this [=person=] may be using,
-* their phone number,
-* their location data,
-* an online identifier such as email or IP addresses, or
-* factors specific to their physical, physiological, genetic, mental, economic, cultural, or social
-[=identity=].
+# Contexts and Privacy
 
-Strings derived from [=identifiers=], for instance through hashing, are still
-[=identifiers=] so long as they may identify a [=person=].
+A <dfn>context</dfn> is a physical or digital environment that a [=person=] interacts with
+for a purpose of their own (that they typically share with other [=person=] who interact
+with the same environment).
 
-<div class="practice">
+A [=context=] can be further described through:
 
-<span class="practicelab" id="principle-identity-per-context">[=User agents=] should support
-their [=users=]' [=autonomy=] by helping them present their intended [=identity=] to each
-[=context=] that they visit.</span>
+* Its <dfn>actors</dfn>, which comprise the <dfn>subject</dfn> (a [=person=]) as well as
+  the <dfn>sender</dfn> and <dfn>recipient</dfn> of the data (which are [=parties=]).
+* Its <dfn>attributes</dfn>, which are the types of [=personal data=] being [=processed=]
+  in the [=context=].
+* Its <dfn>transmission principles</dfn>, which are the constraints (typically technical
+  or legal) being placed upon the [=data processing=].
+
+A [=context=] carries <dfn data-lt="norm">context-relative informational norms</dfn> that determine
+whether a given [=data processing=] is <dfn data-lt="appropriately">appropriate</dfn>
+(if the norms are adhered to) or <dfn data-lt="inappropriately">inappropriate</dfn>
+(when the norms are violated). A norm violation can be for instance the exfiltration of
+[=personal data=] from a context or the lack of respect for [=transmission principles=].
+When [=norms=] are respected in a given [=context=], we can say that <dfn>contextual
+integrity</dfn> is maintained; otherwise that it is violated ([[?PRIVACY-IN-CONTEXT]],
+[[?PRIVACY-AS-CI]]).
+
+We define <dfn>privacy</dfn> as a right to [=appropriate=] [=data processing=]. A
+<dfn>privacy violation</dfn> is, correspondingly, [=inappropriate=] [=data processing=]
+[[?PRIVACY-IN-CONTEXT]].
+
+Note that a [=first party=] can be comprised of multiple [=contexts=] if it is large
+enough that [=people=] would interact with it for more than one [=purpose=]. [=Sharing=]
+[=personal data=] across [=contexts=] is only [=appropriate=] if the subsequent
+use of that data follows the [=norms=] of both the context in which the data was
+collected and the context in which it is used.
+
+<div class="example" id="data-sharing-example">
+
+You share personal data with your bank in the context of managing your money. They would like to
+re-use that data in order to help another merchant sell you a product based on the purchase history
+the bank can see. Since marketing is a different [=context=] from banking, using your data in this
+way is usually a [=privacy violation=].
+
+If instead the bank is recommending a product to help your financial affairs, this may be an
+[=appropriate=] use of data, or even a use within the original [=context=].
 
 </div>
-
-To do this, [=user agents=] have to make some assumptions about the borders between [=contexts=]. By
-default, [=user agents=] define a <dfn>machine-enforceable context</dfn> or <dfn>partition</dfn> as:
-
-* A set of [=environments=] (roughly iframes (including cross-site iframes), workers, and top-level
-  pages)
-* whose [=environment/top-level origins=] are in the [=same site=] (but see [[PSL-PROBLEMS]])
-* being visited within the same user agent installation (and browser profile, container, or
-  container tab for user agents that support those features)
-* between points in time that the person or user agent clears that [=site=]'s cookies and other
-  storage (which is sometimes automatic at the end of each session).
-
-Even though this is the default, [=user agents=] are free to restrict this context as
-people need. For example, some user agents may help people present different
-[=identities=] to subdivisions of a single [=site=].
-
-<div class="issue" data-number="1">
-
-There is disagreement about whether [=user agents=] may also widen their [=machine-enforceable
-contexts=]. For example, some user agents might want to help their users present a single
-[=identity=] to multiple [=sites=] that the user understands represent a single [=party=], or to a
-[=site=] across multiple installations.
-
-</div>
-
-[=User agents=] should prevent people from being [=cross-context recognition|recognized=] across
-[=machine-enforceable contexts=] unless they intend to be recognized. This is a "should" rather
-than a "must" because there are many cases where the user agent isn't powerful enough to prevent
-recognition. For example if two or more services that a person needs to use insist that they share
-a difficult-to-forge piece of their identity in order to use the services, it's the services
-behaving [=inappropriately=] rather than the [=user agent=].
-
-If a [=site=] includes multiple [=contexts=] whose [=norms=] indicate that it's [=inappropriate=] to
-share data between the contexts, the fact that those distinct [=contexts=] fall inside a single
-[=machine-enforceable context=] doesn't make sharing data or [=cross-context
-recognition|recognizing=] [=identities=] any less [=inappropriate=].
 
 # Personal Control and Autonomy {#autonomy}
 
@@ -669,31 +464,7 @@ confused with the contention that privacy is dead. Careful design of our technol
 infrastructure can ensure that people's [=autonomy=] as pertaining to their own [=data=]
 is enhanced through [=appropriate=] defaults and choice architectures.
 
-In the 1970s, the <dfn>Fair Information Practices</dfn> or <dfn>FIPs</dfn> were elaborated
-in support of individual [=autonomy=] in the face of growing concerns with databases. The
-[=FIPs=] assume that there is sufficiently little [=data processing=] taking place that any
-[=person=] will be able to carry out sufficient diligence to enable [=autonomy=] in their
-decision-making. Since they entirely offload the [=privacy labour=]
-to people and assume perfect, unfettered [=autonomy=], the [=FIPs=] do not forbid specific
-types of [=data processing=] but only place them under different procedural requirements.
-Such an approach is [=appropriate=] for [=parties=] that are processing data in the 1970s.
-
-One notable issue with procedural approaches to privacy is that they tend to have the same
-requirements in situations where people find themselves in a significant asymmetry of
-power with a [=party=] — for instance a [=person=] using an essential service provided by a
-monopolistic platform — and those where people and [=parties=] are very much on equal
-footing, or even where the [=person=] may have greater power, as is the case with small
-businesses operating in a competitive environment. It further does not consider cases in
-which one [=party=] may coerce other [=parties=] into facilitating its [=inappropriate=]
-practices, as is often the case with dominant players in advertising [[?CONSENT-LACKEYS]] or
-in content aggregation [[?CAT]].
-
-Reference to the [=FIPs=] survives to this day. They are often referenced as <em>transparency
-and choice</em>, which, in today's digital environment, is often a strong indication that
-[=inappropriate=] [=processing=] is being described.
-
-
-# Opt-in, Consent, Opt-out, Global Controls {#opt-in-out}
+## Opt-in, Consent, Opt-out, Global Controls {#opt-in-out}
 
 Different procedural mechanisms exist to enable [=people=] to control the [=processing=]
 done to their [=data=]. Mechanisms that increase the number of [=purposes=] for which
@@ -778,7 +549,412 @@ in terms of specificity over any manner of blanket [=consent=] that a site may o
 unless that [=consent=] is directly attached to an interaction (eg. terms specified on a
 form upon submission).
 
-# Collective Issues in Privacy {#collective}
+## Privacy Labour
+
+Additionally, <dfn data-lt="privacy-labor">privacy labour</dfn> is the practice of having
+a [=person=] carry out the work of ensuring [=data processing=] of which they are the
+subject is [=appropriate=], instead of having the [=parties=] be responsible for that
+work as is more respectable.
+
+# How the World Sees Us {#data-privacy}
+
+In everyday life, people typically find it easy to assess whether a given flow of
+information is a violation of privacy or not [[?NYT-PRIVACY]]. However, in the digital
+space, people struggle to understand how their data may be moved between contexts and how that
+may affect them. This is particularly true if they may be affected at a much later time and
+in completely different situations. Some actors are using this confusion to extract and
+exploit [=personal data=] at scale.
+
+## Identity on the Web {#identity}
+
+A [=person=]'s <dfn>identity</dfn> is the set of characteristics that define them. Their identity
+*in a [=context=]* is the set of characteristics they present to that context. People
+frequently present different identities to different contexts, and also frequently share an identity
+among several contexts.
+
+<dfn>Cross-context recognition</dfn> is the act of recognising that an [=identity=] in one
+[=context=] is the same [=person=] as an [=identity=] in another [=context=]. [=Cross-context
+recognition=] can at times be [=appropriate=] but anyone who does it needs to be careful not to
+apply the [=norms=] of one [=context=] in ways that violate the [=norms=] around use of information
+acquired in a different [=context=]. (For example, if you meet your therapist at a cocktail party,
+you expect them to have rather different discussion topics with you than they usually would, and
+possibly even to pretend they do not know you.) This is particularly true for [=vulnerable=] people
+as recognising them in different [=contexts=] may force their vulnerability into the open.
+
+In computer systems and on the Web, an [=identity=] seen by a particular website is typically
+assigned an <dfn>identifier</dfn> of some type, which makes it easier for an automated system to
+store data about that [=person=]. Examples of [=identifiers=] for a [=person=] can be:
+* their name,
+* an identification number including those mapping to a device that this [=person=] may be using,
+* their phone number,
+* their location data,
+* an online identifier such as email or IP addresses, or
+* factors specific to their physical, physiological, genetic, mental, economic, cultural, or social
+[=identity=].
+
+Strings derived from [=identifiers=], for instance through hashing, are still
+[=identifiers=] so long as they may identify a [=person=].
+
+<div class="practice">
+
+<span class="practicelab" id="principle-identity-per-context">[=User agents=] should support
+their [=users=]' [=autonomy=] by helping them present their intended [=identity=] to each
+[=context=] that they visit.</span>
+
+</div>
+
+To do this, [=user agents=] have to make some assumptions about the borders between [=contexts=]. By
+default, [=user agents=] define a <dfn>machine-enforceable context</dfn> or <dfn>partition</dfn> as:
+
+* A set of [=environments=] (roughly iframes (including cross-site iframes), workers, and top-level
+  pages)
+* whose [=environment/top-level origins=] are in the [=same site=] (but see [[PSL-PROBLEMS]])
+* being visited within the same user agent installation (and browser profile, container, or
+  container tab for user agents that support those features)
+* between points in time that the person or user agent clears that [=site=]'s cookies and other
+  storage (which is sometimes automatic at the end of each session).
+
+Even though this is the default, [=user agents=] are free to restrict this context as
+people need. For example, some user agents may help people present different
+[=identities=] to subdivisions of a single [=site=].
+
+<div class="issue" data-number="1">
+
+There is disagreement about whether [=user agents=] may also widen their [=machine-enforceable
+contexts=]. For example, some user agents might want to help their users present a single
+[=identity=] to multiple [=sites=] that the user understands represent a single [=party=], or to a
+[=site=] across multiple installations.
+
+</div>
+
+[=User agents=] should prevent people from being [=cross-context recognition|recognized=] across
+[=machine-enforceable contexts=] unless they intend to be recognized. This is a "should" rather
+than a "must" because there are many cases where the user agent isn't powerful enough to prevent
+recognition. For example if two or more services that a person needs to use insist that they share
+a difficult-to-forge piece of their identity in order to use the services, it's the services
+behaving [=inappropriately=] rather than the [=user agent=].
+
+If a [=site=] includes multiple [=contexts=] whose [=norms=] indicate that it's [=inappropriate=] to
+share data between the contexts, the fact that those distinct [=contexts=] fall inside a single
+[=machine-enforceable context=] doesn't make sharing data or [=cross-context
+recognition|recognizing=] [=identities=] any less [=inappropriate=].
+
+### Unwanted cross-context recognition {#hl-recognition-cross-context}
+
+Contributes to [=surveillance=], [=correlation=], and [=identification=].
+
+As described in [[[#identity]]], [=cross-context recognition=] can sometimes be [=appropriate=], but
+users need to be able to control when websites do it as much as possible.
+
+<div class="practice">
+
+<p><span class="practicelab" id="principle-prevent-cross-partition-recognition">[=User agents=]
+should ensure that, if a [=person=] visits two or more web pages from different [=partitions=], that
+the pages cannot quickly determine that the visits probably came from the same person, for any
+significant or involuntary fraction of the people who use the web, unless the person explicitly
+expresses the same [=identity=] to the visits, or preventing this correlation would break a
+technical feature that is fundamental to the Web.</span></p>
+
+</div>
+
+* This principle uses "probably" because websites can do harm even if they can't be completely
+  certain that visits come from the same person.
+* This principle uses "quickly" because it currently appears impossible to prevent some forms of
+  fingerprinting that take a long time or many visits within each [=partition=].
+* This principle is limited in cases that only affect a small fraction of people who use the web
+  because people may configure their systems in unique ways, for example by using
+  a browser with a very small number of users. As long as a tracker can't track a significant number
+  of people, it's likely to be unviable to maintain the tracker. However, this doesn't excuse making
+  small groups of people trackable when those people didn't choose to be in the group.
+* This principle is also limited in cases where preventing recognition would break fundamental
+  aspects of the web. In many cases it's possible to change the design in a way that avoids the
+  violation without breaking valid use cases, but for cases where that's not possible this document
+  delegates to other documents, for example the [[[PRIVACY-THREAT]]], to discuss what detailed
+  tradeoffs to make.
+* This principle may not be able to be applied in situations where a [=person=] has shared [=identity=]
+  information in a medium that is not accessible to the [=user agent=].
+
+[=Partitions=] are separated in two ways that lead to distinct kinds of user-visible recognition.
+When their divisions between different sites are violated, that leads to <a
+href="#hl-recognition-cross-site"></a>. When a violation occurs at their other divisions, for
+example between different browser profiles or at the point someone clears their cookies and site
+storage, that leads to <a href="#hl-recognition-same-site"></a>.
+
+#### Same-site recognition {#hl-recognition-same-site}
+
+The web platform offers many ways for a website to recognize that a [=person=] is using the same
+[=identity=] over time, including [[RFC6265|cookies]], {{WindowLocalStorage/localStorage}},
+{{WindowOrWorkerGlobalScope/indexedDB}}, {{CacheStorage}}, and other forms of storage. This allows
+sites to save the [=person=]'s preferences, shopping carts, etc., and people have come to expect this
+behavior in some contexts.
+
+A privacy harm occurs if a [=person=] reasonably expects that they'll be using a different [=identity=]
+on a site, but the site discovers and uses the fact that the two or more visits probably came from
+the same [=person=] anyway.
+
+[=User agents=] can't, in general, determine exactly where intra-site [=context=] boundaries are, or
+how a site allows a [=person=] to express that they intend to change [=identities=], so they're not
+responsible to enforce that sites actually separate [=identities=] at those boundaries. The <a
+href="#principle-prevent-cross-partition-recognition">principle</a> here instead requires separation
+at [=partition=] boundaries.
+
+Cross-[=partition=] recognition is generally accomplished by either "supercookies" or <a>browser
+fingerprinting</a>.
+
+Supercookies occur when a browser stores data for a site but makes that data
+more difficult to clear than other cookies or storage.
+<a data-cite="fingerprinting-guidance#clearing-all-local-state">Fingerprinting
+Guidance § Clearing all local state</a> discusses how specifications can help
+browsers avoid this mistake.
+
+Fingerprinting consists of using attributes of the [=person=]'s browser and platform
+that are consistent between two or more visits and probably unique to the
+person.
+
+The attributes can be exposed as information about the [=person=]'s device that is
+otherwise benign (as opposed to [[[#hl-sensitive-information]]]). For example:
+
+* What are the person's language and time zone?
+* What size is the window?
+* What system preferences have been set? Dark mode, serif font, etc...
+* ...
+
+See [[fingerprinting-guidance]] for how to mitigate this threat.
+
+#### Unwanted cross-site recognition {#hl-recognition-cross-site}
+
+A privacy harm occurs if a site determines with high probability and uses the fact that a visit to
+that site comes from the same person as another visit to a *different* site, unless the person could
+reasonably expect the sites to discover this. Traditionally, sites have accomplished this using <a
+href="https://tess.oconnor.cx/2020/10/parties#environment-cross-site">cross-site</a> cookies, but it
+can also be done by having someone navigate to a link that has been decorated with an identifier,
+collecting the same piece of identifying information on both sites, or by correlating the timestamps
+of an event that occurs nearly-simultaneously on both sites.
+
+## Data {#data}
+
+We define <dfn data-lt="data">personal data</dfn> as any information that is directly or
+indirectly about an identified or identifiable [=person=], such as by reference to an
+[=identifier=] ([[GDPR]], [[OECD-GUIDELINES]], [[CONVENTION-108]]).
+
+If a [=person=] could reasonably be identified or re-identified when [=data=] is combined with other
+[=data=], then that makes that data [=personal data=].
+
+## Data users and use {#data-users}
+
+A <dfn>service provider</dfn> or <dfn>data processor</dfn> is considered to be the same
+[=party=] as the entity contracting it to perform the relevant [=processing=] if it:
+
+* is processing the data on behalf of that [=party=];
+* ensures that the data is only retained, accessed, and used as directed by that
+  [=party=] and solely for the list of explicitly-specified [=purposes=]
+  detailed by the directing [=party=] or [=data controller=];
+* may determine implementation details of the data processing in question but
+  does not determine the [=purpose=] for which the data is being [=processed=]
+  nor the overarching [=means=] through which the [=purpose=] is carried out;
+* has no independent right to use the data other than in a [=de-identified=] form (e.g., for
+  monitoring service integrity, load balancing, capacity planning, or billing); and,
+* has a contract in place with the [=party=] which is consistent with the above limitations.
+
+A <dfn>data controller</dfn> is a [=party=] that determines the [=means=] and [=purposes=]
+of data processing. Any [=party=] that is not a [=service provider=] is a [=data controller=].
+
+### Techniques {#data-techniques}
+
+The <dfn>Vegas Rule</dfn> is a simple implementation of privacy in which "<em>what happens with the
+[=first party=] stays with the [=first party=]</em>." Put differently, the [=Vegas Rule=] is followed
+when the [=first party=] is the only [=data controller=]. While the [=Vegas Rule=] is a good
+guideline, it's neither necessary nor sufficient for [=appropriate=] [=data processing=]. A [=first
+party=] that maintains exclusive access to a person's data can still [=process=] it
+[=inappropriately=], and there are cases where a third party can learn information about a person
+but still treat it [=appropriately=].
+
+#### De-identification
+
+Data is <dfn>de-identified</dfn> when there exists a high level of confidence
+that no [=person=] described by the data can be identified, directly or indirectly
+(e.g. via association with an [=identifier=], user agent, or device), by that data alone or in
+combination with other available information. Note
+that further considerations relating to groups are covered in the
+<a href="#collective">Collective Issues in Privacy</a> section.
+
+We talk of <dfn>controlled de-identified data</dfn> when there are strict controls that prevent the
+re-identification of [=people=] described by the data except for a well-defined set of [=purposes=].
+
+Different situations involving [=controlled de-identified data=] will require different controls. For instance,
+if the [=controlled de-identified data=] is <em>only</em> being processed by one [=party=], typical controls
+include making sure that the [=identifiers=] used in the data are unique to that dataset, that
+any person (e.g. an employee of the [=party=]) with access to the [=data=] is barred (e.g. based on
+legal terms) from sharing the [=data=] further, and that technical measures exist to prevent
+re-identification or the joining of different data sets involving this [=data=], notably against
+timing or k-anonymity attacks.
+
+In general, the goal is to ensure that [=controlled de-identified data=] is used in a manner that provides a
+viable degree of oversight and accountability such that technical and procedural means to guarantee
+the maintenance of pseudonymity are preserved.
+
+This is more difficult when the [=controlled de-identified data=] is shared between several [=parties=]. In such
+cases, good examples of typical controls that are representative of best practices would include
+making sure that:
+
+* the [=identifiers=] used in the [=data=] are under the direct and exclusive control of
+  the [=first party=] who is prevented by strict controls from matching the identifiers with the
+  data;
+
+* when these [=identifiers=] are shared with a [=third party=], they are made unique
+  to that [=third party=] such that if they are shared with more than one
+  [=third party=] these cannot then match them up with one another;
+
+* there is a strong level of confidence that no [=third party=] can match the [=data=]
+  with any data other than that obtained through interactions with the [=first
+  party=];
+
+* any [=third party=] receiving such [=data=] is barred (eg. based on legal terms)
+  from sharing it further;
+
+* technical measures exist to prevent re-identification or the joining of
+  different data sets involving this [=data=], notably against timing or
+  k-anonymity attacks; and
+
+* there exist contractual terms between the [=first party=] and [=third party=]
+  describing the limited [=purpose=] for which the data is being shared.
+
+Note that [=controlled de-identified data=], on its own, is not sufficient to render [=data processing=]
+[=appropriate=].
+
+#### Fair Information Practices {#fips}
+
+In the 1970s, the <dfn>Fair Information Practices</dfn> or <dfn>FIPs</dfn> were elaborated
+in support of individual [=autonomy=] in the face of growing concerns with databases. The
+[=FIPs=] assume that there is sufficiently little [=data processing=] taking place that any
+[=person=] will be able to carry out sufficient diligence to enable [=autonomy=] in their
+decision-making. Since they entirely offload the [=privacy labour=]
+to people and assume perfect, unfettered [=autonomy=], the [=FIPs=] do not forbid specific
+types of [=data processing=] but only place them under different procedural requirements.
+Such an approach is [=appropriate=] for [=parties=] that are processing data in the 1970s.
+
+One notable issue with procedural approaches to privacy is that they tend to have the same
+requirements in situations where people find themselves in a significant asymmetry of
+power with a [=party=] — for instance a [=person=] using an essential service provided by a
+monopolistic platform — and those where people and [=parties=] are very much on equal
+footing, or even where the [=person=] may have greater power, as is the case with small
+businesses operating in a competitive environment. It further does not consider cases in
+which one [=party=] may coerce other [=parties=] into facilitating its [=inappropriate=]
+practices, as is often the case with dominant players in advertising [[?CONSENT-LACKEYS]] or
+in content aggregation [[?CAT]].
+
+Reference to the [=FIPs=] survives to this day. They are often referenced as <em>transparency
+and choice</em>, which, in today's digital environment, is often a strong indication that
+[=inappropriate=] [=processing=] is being described.
+
+## Tracking {#tracking}
+
+Colloquially, <dfn>tracking</dfn> is understood to be any kind of [=inappropriate=] data
+collection.
+
+## Sensitive information disclosure {#hl-sensitive-information}
+
+Contributes to [=correlation=], [=identification=], [=secondary use=], and
+[=disclosure=].
+
+Many pieces of information about someone could cause privacy harms if disclosed.
+For example:
+
+* Their location.
+* Video or audio from the their camera or microphone.
+* The content of certain files on their filesystem.
+* Financial data.
+* Contacts.
+* Calendar entries.
+* [Whether they are using assistive technology.](https://w3ctag.github.io/design-principles/#do-not-expose-use-of-assistive-tech)
+* ...
+
+A particular piece of information may have different sensitivity for different
+people. Language preferences, for example, might typically seem innocent, but
+also can be an indicator of belonging to an ethnic minority. Precise location
+information can be extremely sensitive (because it's identifying, because it
+allows for in-person intrusions, because it can reveal detailed information
+about a person's life) but it might also be public and not sensitive at all, or
+it might be low-enough granularity that it is much less sensitive for many
+people.
+
+When considering whether a class of information is likely to be sensitive to
+a person, consider at least these factors:
+
+* whether it serves as a persistent [=identifier=] (see severity in Mitigating
+    browser fingerprinting);
+* whether it discloses substantial (including intimate details or inferences)
+    information about the the person using the system or other people;
+* whether it can be revoked (as in determining whether a permission is
+    necessary);
+* whether it enables other threats, like intrusion.
+
+Issue(16): This description of what makes information sensitive still needs to
+be refined.
+
+## Unexpected profiling {#hl-unexpected-profiling}
+
+Contributes to [=surveillance=], [=correlation=], [=identification=], and
+singling-out / discrimination.
+
+Unexpected profiling occurs when a site is able to learn attributes or
+characteristics about a person, that a) the site visitor did not intend the site
+to learn, and b) the site visitor reasonably could not anticipate a
+site would be able to learn.
+
+Profiling contributes to, but is distinct from, other privacy risks discussed
+in this document.
+For example, unexpected profiling may contribute to
+[[[#hl-recognition-same-site]]], by adding stable and semi-identifying
+information that can contribute to <a
+data-cite="fingerprinting-guidance#dfn-browser-fingerprinting">browser
+fingerprinting</a>. Unexpected profiling is distinct from same-site
+recognition though, in that a person may wish to not share some kinds
+of information about themselves <em>even in the presence of guarantees
+that such information will not lead to them being re-identified</em>.
+
+Similarly, unexpected profiling is related to [[[#hl-sensitive-information]]],
+but the former is a superset of the latter;
+all cases of unexpected sensitive information disclosure are examples of
+unexpected profiling, but people using the Web may have attributes or characteristics
+about themselves that are not universally thought of as "sensitive", but which
+they never the less do not wish to share with the sites they visit. People
+may wish to not share these "non-sensitive" characteristics
+for a variety of reasons (e.g., a person may worry that their ideas of what
+counts as "sensitive" is different from others, a person might might be ashamed
+or uncomfortable about a character trait or they might simply not wish to be profiled).
+
+Profiling occurs for many reasons. It can be used to facilitate price
+discrimination or offer manipulation, to make inferences about what products or
+services people might be more likely to purchase, or more generally, for a site
+to learn attributes about them that they do not intend to share.
+Unexpected profiling can also contribute to feelings of powerlessness and
+loss of agency [[?PRIVACY-CONCERNED]].
+
+A privacy harm occurs if a site learns information about a person that they
+reasonably expected the site would not be able to learn, regardless of
+whether that information aids (re)identification or is from a sensitive category
+of information (however defined).
+
+<div class="example">
+
+Peter is a <a href="https://en.wikipedia.org/wiki/Furry_fandom">furry</a>.
+Despite knowing that there are thousands of
+other furries on the internet, and despite using a browser with
+robust browser fingerprinting protections, and despite the growing cultural
+acceptance of furries, Peter does not want (most) sites to learn
+or personalize content around his furry-interest.
+
+</div>
+
+## Powerful capabilities {#hl-capabilities}
+
+Contributes to [=misattribution=].
+
+For example, a site that sends SMS without the user's intent could cause them to
+be blamed for things they didn't intend.
+
+## Collective Issues in Privacy {#collective}
 
 When designing Web technology, we naturally pay attention to potential impacts on the [=person=]
 using the Web through their [=user agent=]. In addition to potential individual harms we also
@@ -854,6 +1030,57 @@ data could be collected through a data trust under stakeholder governance, searc
 companies paying for access with strong checks and balances, and privacy guarantees, and
 the funds would be used to support enhanced security for all.
 -->
+
+# Intrusive behavior {#hl-intrusion}
+
+See [=intrusion=].
+
+Privacy harms don't always come from a site learning things. For example it is
+intrusive for a site to
+
+* Display messages or notifications,
+* Play sounds,
+* Occupy the full screen,
+* etc.
+
+if the person browsing it doesn't intend for it to do so.
+
+# Terms you probably already know {#boring-terminology}
+
+## Acting on Data {#acting-on-data}
+
+A [=party=] <dfn data-lt="process|processing|processed|data processing">processes</dfn> data if it
+carries out operations on [=personal data=], whether or not by automated means, such as
+collection, recording, organisation, structuring, storage, adaptation or alteration,
+retrieval, consultation, use, disclosure by transmission, [=sharing=], dissemination or
+otherwise making available, [=selling=], alignment or combination, restriction, erasure or
+destruction.
+
+A [=party=] <dfn data-lt="share|sharing">shares</dfn> data if it provides it to any other
+[=party=]. Note that, under this definition, a [=party=] that provides data to its own
+[=service providers=] is not [=sharing=] it.
+
+A [=party=] <dfn data-lt="sell|selling">sells</dfn> data when it [=shares=] it in exchange
+for consideration, monetary or otherwise.
+
+The <dfn>purpose</dfn> of a given [=processing=] of data is an anticipated, intended, or
+planned outcome of this [=processing=] which is achieved or aimed for within a given
+[=context=]. A [=purpose=], when described, should be specific enough to be actionable by
+someone familiar with the relevant [=context=] (ie. they could independently determine
+[=means=] that reasonably correspond to an implementation of the [=purpose=]).
+
+<!--
+XXX given that contexts are defined from *user* purpose we might wish to have purpose in
+general and processing purpose for the above.
+-->
+
+The <dfn>means</dfn> are the general method of [=data processing=] through which a given
+[=purpose=] is implemented, in a given [=context=], considered at a relatively abstract
+level and not necessarily all the way down to implementation details. Example:
+<em>a person will have their preferences restored (purpose) by looking up their identifier
+in a preferences store (means)</em>.
+
+<section class="appendix">
 
 # High-Level Threats {#threats}
 
@@ -932,214 +1159,7 @@ data-cite="RFC6973#section-5.2.5">RFC6973§5.2.5</a>.
 These threats combine into the particular concrete threats we want web
 specifications to defend against, described in the sections that follow.
 
-# Unwanted cross-context recognition {#hl-recognition-cross-context}
-
-Contributes to [=surveillance=], [=correlation=], and [=identification=].
-
-As described in [[[#identity]]], [=cross-context recognition=] can sometimes be [=appropriate=], but
-users need to be able to control when websites do it as much as possible.
-
-<div class="practice">
-
-<p><span class="practicelab" id="principle-prevent-cross-partition-recognition">[=User agents=]
-should ensure that, if a [=person=] visits two or more web pages from different [=partitions=], that
-the pages cannot quickly determine that the visits probably came from the same person, for any
-significant or involuntary fraction of the people who use the web, unless the person explicitly
-expresses the same [=identity=] to the visits, or preventing this correlation would break a
-technical feature that is fundamental to the Web.</span></p>
-
-</div>
-
-* This principle uses "probably" because websites can do harm even if they can't be completely
-  certain that visits come from the same person.
-* This principle uses "quickly" because it currently appears impossible to prevent some forms of
-  fingerprinting that take a long time or many visits within each [=partition=].
-* This principle is limited in cases that only affect a small fraction of people who use the web
-  because people may configure their systems in unique ways, for example by using
-  a browser with a very small number of users. As long as a tracker can't track a significant number
-  of people, it's likely to be unviable to maintain the tracker. However, this doesn't excuse making
-  small groups of people trackable when those people didn't choose to be in the group.
-* This principle is also limited in cases where preventing recognition would break fundamental
-  aspects of the web. In many cases it's possible to change the design in a way that avoids the
-  violation without breaking valid use cases, but for cases where that's not possible this document
-  delegates to other documents, for example the [[[PRIVACY-THREAT]]], to discuss what detailed
-  tradeoffs to make.
-* This principle may not be able to be applied in situations where a [=person=] has shared [=identity=]
-  information in a medium that is not accessible to the [=user agent=].
-
-[=Partitions=] are separated in two ways that lead to distinct kinds of user-visible recognition.
-When their divisions between different sites are violated, that leads to <a
-href="#hl-recognition-cross-site"></a>. When a violation occurs at their other divisions, for
-example between different browser profiles or at the point someone clears their cookies and site
-storage, that leads to <a href="#hl-recognition-same-site"></a>.
-
-## Same-site recognition {#hl-recognition-same-site}
-
-The web platform offers many ways for a website to recognize that a [=person=] is using the same
-[=identity=] over time, including [[RFC6265|cookies]], {{WindowLocalStorage/localStorage}},
-{{WindowOrWorkerGlobalScope/indexedDB}}, {{CacheStorage}}, and other forms of storage. This allows
-sites to save the [=person=]'s preferences, shopping carts, etc., and people have come to expect this
-behavior in some contexts.
-
-A privacy harm occurs if a [=person=] reasonably expects that they'll be using a different [=identity=]
-on a site, but the site discovers and uses the fact that the two or more visits probably came from
-the same [=person=] anyway.
-
-[=User agents=] can't, in general, determine exactly where intra-site [=context=] boundaries are, or
-how a site allows a [=person=] to express that they intend to change [=identities=], so they're not
-responsible to enforce that sites actually separate [=identities=] at those boundaries. The <a
-href="#principle-prevent-cross-partition-recognition">principle</a> here instead requires separation
-at [=partition=] boundaries.
-
-Cross-[=partition=] recognition is generally accomplished by either "supercookies" or <a>browser
-fingerprinting</a>.
-
-Supercookies occur when a browser stores data for a site but makes that data
-more difficult to clear than other cookies or storage.
-<a data-cite="fingerprinting-guidance#clearing-all-local-state">Fingerprinting
-Guidance § Clearing all local state</a> discusses how specifications can help
-browsers avoid this mistake.
-
-Fingerprinting consists of using attributes of the [=person=]'s browser and platform
-that are consistent between two or more visits and probably unique to the
-person.
-
-The attributes can be exposed as information about the [=person=]'s device that is
-otherwise benign (as opposed to [[[#hl-sensitive-information]]]). For example:
-
-* What are the person's language and time zone?
-* What size is the window?
-* What system preferences have been set? Dark mode, serif font, etc...
-* ...
-
-See [[fingerprinting-guidance]] for how to mitigate this threat.
-
-## Unwanted cross-site recognition {#hl-recognition-cross-site}
-
-A privacy harm occurs if a site determines with high probability and uses the fact that a visit to
-that site comes from the same person as another visit to a *different* site, unless the person could
-reasonably expect the sites to discover this. Traditionally, sites have accomplished this using <a
-href="https://tess.oconnor.cx/2020/10/parties#environment-cross-site">cross-site</a> cookies, but it
-can also be done by having someone navigate to a link that has been decorated with an identifier,
-collecting the same piece of identifying information on both sites, or by correlating the timestamps
-of an event that occurs nearly-simultaneously on both sites.
-
-# Sensitive information disclosure {#hl-sensitive-information}
-
-Contributes to [=correlation=], [=identification=], [=secondary use=], and
-[=disclosure=].
-
-Many pieces of information about someone could cause privacy harms if disclosed.
-For example:
-
-* Their location.
-* Video or audio from the their camera or microphone.
-* The content of certain files on their filesystem.
-* Financial data.
-* Contacts.
-* Calendar entries.
-* [Whether they are using assistive technology.](https://w3ctag.github.io/design-principles/#do-not-expose-use-of-assistive-tech)
-* ...
-
-A particular piece of information may have different sensitivity for different
-people. Language preferences, for example, might typically seem innocent, but
-also can be an indicator of belonging to an ethnic minority. Precise location
-information can be extremely sensitive (because it's identifying, because it
-allows for in-person intrusions, because it can reveal detailed information
-about a person's life) but it might also be public and not sensitive at all, or
-it might be low-enough granularity that it is much less sensitive for many
-people.
-
-When considering whether a class of information is likely to be sensitive to
-a person, consider at least these factors:
-
-* whether it serves as a persistent [=identifier=] (see severity in Mitigating
-    browser fingerprinting);
-* whether it discloses substantial (including intimate details or inferences)
-    information about the the person using the system or other people;
-* whether it can be revoked (as in determining whether a permission is
-    necessary);
-* whether it enables other threats, like intrusion.
-
-Issue(16): This description of what makes information sensitive still needs to
-be refined.
-
-# Unexpected profiling {#hl-unexpected-profiling}
-
-Contributes to [=surveillance=], [=correlation=], [=identification=], and
-singling-out / discrimination.
-
-Unexpected profiling occurs when a site is able to learn attributes or
-characteristics about a person, that a) the site visitor did not intend the site
-to learn, and b) the site visitor reasonably could not anticipate a
-site would be able to learn.
-
-Profiling contributes to, but is distinct from, other privacy risks discussed
-in this document.
-For example, unexpected profiling may contribute to
-[[[#hl-recognition-same-site]]], by adding stable and semi-identifying
-information that can contribute to <a
-data-cite="fingerprinting-guidance#dfn-browser-fingerprinting">browser
-fingerprinting</a>. Unexpected profiling is distinct from same-site
-recognition though, in that a person may wish to not share some kinds
-of information about themselves <em>even in the presence of guarantees
-that such information will not lead to them being re-identified</em>.
-
-Similarly, unexpected profiling is related to [[[#hl-sensitive-information]]],
-but the former is a superset of the latter;
-all cases of unexpected sensitive information disclosure are examples of
-unexpected profiling, but people using the Web may have attributes or characteristics
-about themselves that are not universally thought of as "sensitive", but which
-they never the less do not wish to share with the sites they visit. People
-may wish to not share these "non-sensitive" characteristics
-for a variety of reasons (e.g., a person may worry that their ideas of what
-counts as "sensitive" is different from others, a person might might be ashamed
-or uncomfortable about a character trait or they might simply not wish to be profiled).
-
-Profiling occurs for many reasons. It can be used to facilitate price
-discrimination or offer manipulation, to make inferences about what products or
-services people might be more likely to purchase, or more generally, for a site
-to learn attributes about them that they do not intend to share.
-Unexpected profiling can also contribute to feelings of powerlessness and
-loss of agency [[?PRIVACY-CONCERNED]].
-
-A privacy harm occurs if a site learns information about a person that they
-reasonably expected the site would not be able to learn, regardless of
-whether that information aids (re)identification or is from a sensitive category
-of information (however defined).
-
-<div class="example">
-
-Peter is a <a href="https://en.wikipedia.org/wiki/Furry_fandom">furry</a>.
-Despite knowing that there are thousands of
-other furries on the internet, and despite using a browser with
-robust browser fingerprinting protections, and despite the growing cultural
-acceptance of furries, Peter does not want (most) sites to learn
-or personalize content around his furry-interest.
-
-</div>
-
-# Intrusive behavior {#hl-intrusion}
-
-See [=intrusion=].
-
-Privacy harms don't always come from a site learning things. For example it is
-intrusive for a site to
-
-* Display messages or notifications,
-* Play sounds,
-* Occupy the full screen,
-* etc.
-
-if the person browsing it doesn't intend for it to do so.
-
-# Powerful capabilities {#hl-capabilities}
-
-Contributes to [=misattribution=].
-
-For example, a site that sends SMS without the user's intent could cause them to
-be blamed for things they didn't intend.
-
+</section>
 <section class="appendix">
 
 # Acknowledgements {#acknowledgements}
