@@ -301,7 +301,7 @@ understanding is that the law is a floor, not a ceiling.
 
 ## People {#people}
 
-A <dfn data-lt="individual|people">person</dfn> (also <dfn>user</dfn> or <dfn>data subject</dfn>) is any natural
+A <dfn data-lt="individual|people|user|data subject">person</dfn> (also [=user=] or [=data subject=]) is any natural
 person. Throughout this document, we primarily use [=person=] or [=people=] to refer to human beings, as a
 reminder of their humanity. When we use the term [=user=], it is to talk about the specific [=person=]
 who happens to be using a given system at that time.
@@ -331,14 +331,14 @@ monitoring of their behaviour. Its <dfn>user agent duties</dfn> include
 [[?TAKING-TRUST-SERIOUSLY]]:
 
 <dl>
-  <dt><dfn>Duty of Protection</dfn></dt>
+  <dt><dfn class="export">Duty of Protection</dfn></dt>
   <dd>
     Protection requires [=user agents=] to actively protect their [=user=]'s data, beyond
     simple security measures. It is insufficient to just encrypt at rest and in transit,
     but the [=user agent=] must also limit retention, help ensure that only strictly
     necessary data is collected, and require guarantees from any [=party=] that the user agent can reasonably be aware that it is shared to.
   </dd>
-  <dt><dfn>Duty of Discretion</dfn></dt>
+  <dt><dfn class="export">Duty of Discretion</dfn></dt>
   <dd>
     Discretion requires the [=user agent=] to make best efforts to enforce
     [=norms=] by placing limits on the flow and
@@ -346,7 +346,7 @@ monitoring of their behaviour. Its <dfn>user agent duties</dfn> include
     can be preserved even when the [=user agent=] shares some [=personal data=], so long as
     it is done in an [=appropriately=] discreet manner.
   </dd>
-  <dt><dfn>Duty of Honesty</dfn></dt>
+  <dt><dfn class="export">Duty of Honesty</dfn></dt>
   <dd>
     Honesty requires that the [=user agent=] try to give its [=user=]
     information of which the [=user agent=] can reasonably be aware, that is relevant to
@@ -361,7 +361,7 @@ monitoring of their behaviour. Its <dfn>user agent duties</dfn> include
     the [=user agent=] should inform the [=person=] of ongoing [=processing=], with a
     level of obviousness that is proportional to the reasonably foreseeable impact of the processing.
   </dd>
-  <dt><dfn>Duty of Loyalty</dfn></dt>
+  <dt><dfn class="export">Duty of Loyalty</dfn></dt>
   <dd>
     Because the [=user agent=] is a [=trustworthy agent=], it is held to be loyal to the
     [=person=] using it in all situations, including in preference to the [=user agent=]'s implementer.
@@ -461,9 +461,9 @@ notifications about irrelevant products aren't.
 
 </aside>
 
-When [=norms=] are respected in a given [=context=], we can say that <dfn>contextual
-integrity</dfn> is maintained; otherwise that it is violated ([[?PRIVACY-IN-CONTEXT]],
-[[?PRIVACY-AS-CI]]).
+When [=norms=] are respected in a given [=context=], we can say that <dfn
+class="export">contextual integrity</dfn> is maintained; otherwise that it is violated
+([[?PRIVACY-IN-CONTEXT]], [[?PRIVACY-AS-CI]]).
 
 <aside class="issue">
 
@@ -528,8 +528,8 @@ is enhanced through [=appropriate=] defaults and choice architectures.
 
 Different procedural mechanisms exist to enable [=people=] to control how they interact
 with systems in the world. Mechanisms that increase the number of [=purposes=] for which
-their [=data=] is being [=processed=] are referred to as <dfn data-lt="opt in">opt-in</dfn> or
-<dfn>consent</dfn>; mechanisms that decrease this number of [=purposes=] are known as
+their [=data=] is being [=processed=] are referred to as [=opt-in=] or
+<dfn data-lt="opt in|opt-in">consent</dfn>; mechanisms that decrease this number of [=purposes=] are known as
 <dfn data-lt="opt out">opt-out</dfn>.
 
 When deployed thoughtfully, these mechanisms can enhance [=people=]'s [=autonomy=]. Often,
@@ -549,7 +549,7 @@ trustworthy, [=person=]-centric environment is to establish a regime consisting 
 three privacy tiers:
 
 <dl>
-  <dt><dfn>Default Privacy Tier</dfn></dt>
+  <dt>Default Privacy Tier</dt>
   <dd>
     This is the set of [=purposes=] that are deemed [=appropriate=] in a given [=context=]
     and the [=processing=] that a [=person=] can expect without having triggered any
@@ -566,7 +566,7 @@ three privacy tiers:
     [[?TWITTER-DEVELOPER-POLICY]] This tier is more [=appropriate=] the more the [=first party=]
     acts in accordance with [=user agent duties=].
   </dd>
-  <dt><dfn>Opt-out Privacy Tier</dfn></dt>
+  <dt>Opt-out Privacy Tier</dt>
   <dd>
     [=People=] who, either from personal preference or because they are [=vulnerable=],
     require greater obscurity in some or even most [=contexts=], would be able to transition
@@ -574,7 +574,7 @@ three privacy tiers:
     necessary [=purposes=]. This tier should be [=appropriate=] for [=vulnerable=]
     [=people=].
   </dd>
-  <dt><dfn>Opt-in Privacy Tier</dfn></dt>
+  <dt>Opt-in Privacy Tier</dt>
   <dd>
     In rare and highly specific cases, [=people=] should be able to [=consent=] to more
     sensitive [=purposes=], such as having their [=identity=] recognised across contexts or
@@ -593,7 +593,7 @@ three privacy tiers:
 
 When an [=opt-out=] mechanism exists, it should preferably be complemented by a
 <dfn>global opt-out</dfn> mechanism. The function of a [=global opt-out=] mechanism is to
-rectify the <dfn>automation asymmetry</dfn> whereby service providers can automate
+rectify the <dfn class="export">automation asymmetry</dfn> whereby service providers can automate
 [=data processing=] but [=people=] have to take manual action. A good example of a
 [=global opt-out=] mechanism is the <em>Global Privacy Control</em> [[?GPC]].
 
@@ -806,7 +806,7 @@ If a [=person=] could reasonably be identified or re-identified when [=data=] is
 
 ## Data users and use {#data-users}
 
-A <dfn>service provider</dfn> or <dfn>data processor</dfn> is considered to be the same
+A <dfn data-lt="data processor">service provider</dfn> or [=data processor=] is considered to be the same
 [=party=] as the entity contracting it to perform the relevant [=processing=] if it:
 
 * is processing the data on behalf of that [=party=];
@@ -888,7 +888,7 @@ Note that [=controlled de-identified data=], on its own, is not sufficient to re
 
 #### Fair Information Practices {#fips}
 
-In the 1970s, the <dfn>Fair Information Practices</dfn> or <dfn>FIPs</dfn> were elaborated
+In the 1970s, the <dfn data-lt="FIPs">Fair Information Practices</dfn> or [=FIPs=] were elaborated
 in support of individual [=autonomy=] in the face of growing concerns with databases. The
 [=FIPs=] assume that there is sufficiently little [=data processing=] taking place that any
 [=person=] will be able to carry out sufficient diligence to enable [=autonomy=] in their
@@ -910,11 +910,6 @@ in content aggregation [[?CAT]].
 Reference to the [=FIPs=] survives to this day. They are often referenced as <em>transparency
 and choice</em>, which, in today's digital environment, is often a strong indication that
 [=inappropriate=] [=processing=] is being described.
-
-## Tracking {#tracking}
-
-Colloquially, <dfn>tracking</dfn> is understood to be any kind of [=inappropriate=] data
-collection.
 
 ## Sensitive information disclosure {#hl-sensitive-information}
 
@@ -1030,7 +1025,7 @@ pay heed to collective effects that emerge from the accumulation of individual a
 influenced by entities and the structure of technology.
 
 Note that in evaluating impact, we deliberately ignore what implementers or specifiers may
-have <em>intended</em> and only focus on outcomes. This framing is known as <dfn>POSIWID</dfn>, or
+have <em>intended</em> and only focus on outcomes. This framing is known as <abbr>POSIWID</abbr>, or
 "<em>the Purpose Of a System Is What It Does</em>".
 
 The collective problem of privacy is known as <dfn>legibility</dfn>. [=Legibility=] concerns
@@ -1168,7 +1163,7 @@ These threats are an extension of the ones discussed by [[RFC6973]].
 communications or activities. See <a
 data-cite="RFC6973#section-5.1.1">RFC6973§5.1.1</a>.
 
-<dt><dfn>Data Compromise</dfn>
+<dt>Data Compromise
 
 <dd> End systems that do not take adequate measures to secure data from
     unauthorized or inappropriate access. See <a
@@ -1180,7 +1175,7 @@ data-cite="RFC6973#section-5.1.1">RFC6973§5.1.1</a>.
     activities. See <a
     data-cite="RFC6973#section-5.1.3">RFC6973§5.1.3</a>.
 
-<dt><dfn>Misattribution</dfn>
+<dt>Misattribution
 
 <dd> Misattribution occurs when data or communications related to one individual
     are attributed to another. See <a
@@ -1193,7 +1188,7 @@ data-cite="RFC6973#section-5.1.4">RFC6973§5.1.4</a>.
     <a
 data-cite="RFC6973#section-5.2.1">RFC6973§5.2.1</a>.
 
-<dt><dfn>Profiling</dfn></dt>
+<dt>Profiling</dt>
 
 <dd>The inference, evaluation, or prediction of an individual's attributes, interests, or
 behaviours.</dd>
@@ -1219,7 +1214,7 @@ data-cite="RFC6973#section-5.2.3">RFC6973§5.2.3</a>.
     the way others judge the individual. See <a
 data-cite="RFC6973#section-5.2.4">RFC6973§5.2.4</a>.
 
-<dt><dfn>Exclusion</dfn>
+<dt>Exclusion
 
 <dd>Exclusion is the failure to allow individuals to know about the data that
     others have about them and to participate in its handling and use. See
