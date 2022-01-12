@@ -287,8 +287,7 @@ data-lt="privacy violation">violated</dfn>.
 
 </aside>
 
-The goal of this document is to define principles that may prove useful in developing
-technology and policy that relate to privacy and [=personal data=].
+The goal of this document is to define privacy principles for the Web.
 
 Privacy is covered by legal frameworks and this document recognises that existing data
 protection laws take precedence for legal matters. However, because the Web is global, we
@@ -341,8 +340,8 @@ monitoring of their behaviour. Its <dfn>user agent duties</dfn> include
   <dt><dfn class="export">Duty of Discretion</dfn></dt>
   <dd>
     Discretion requires the [=user agent=] to make best efforts to enforce
-    [=norms=] by placing limits on the flow and
-    [=processing=] of [=personal data=] that it can reasonably detect. Discretion is not confidentiality or secrecy: trust
+    [=norms=] by taking care in the ways it discloses the [=personal data=]
+    that it manages. Discretion is not confidentiality or secrecy: trust
     can be preserved even when the [=user agent=] shares some [=personal data=], so long as
     it is done in an [=appropriately=] discreet manner.
   </dd>
@@ -373,15 +372,9 @@ monitoring of their behaviour. Its <dfn>user agent duties</dfn> include
   </dd>
 </dl>
 
-These duties ensure the [=user agent=] will <em>care</em> for its [=user=]. It is important to
-note that there is a subtle difference between care and <dfn>data paternalism</dfn>.
-[=Data paternalism=] claims to help in part by removing agency ("<em>don't worry about it,
-so long as your data is with us it's safe, you don't need to know what we do with it, it's
-all good because we're good people</em>") whereas care aims to support people by enhancing
-their agency and sovereignty.
-
-In academic research, this relationship with a [=trustworthy agent=] is often described as
-"fiduciary" [[?FIDUCIARY-UA]].
+These duties ensure the [=user agent=] will <em>care</em> for its [=user=]. In academic
+research, this relationship with a [=trustworthy agent=] is often described as "fiduciary"
+[[?FIDUCIARY-UA]]. Various legal systems have a similar meaning for "fiduciary duties".
 
 ## Guardians and Device Owners {#guardians-and-owners}
 
@@ -513,8 +506,6 @@ define them [[?DARK-PATTERNS]], [[?DARK-PATTERN-DARK]].
 
 Because we are all subject to motivated reasoning, the design of defaults and affordances
 that may impact [=autonomy=] should be the subject of independent scrutiny.
-Implementers are enjoined to be particularly cautious to avoid slipping into
-[=data paternalism=].
 
 Given the sheer volume of potential [=data=]-related decisions in today's data economy,
 complete informational self-determination is impossible. This fact, however, should not be
@@ -614,7 +605,8 @@ form upon submission).
 Additionally, <dfn data-lt="privacy-labor">privacy labour</dfn> is the practice of having
 a [=person=] carry out the work of ensuring [=data processing=] of which they are the
 subject is [=appropriate=], instead of having the [=parties=] be responsible for that
-work as is more respectable.
+work as is more respectable. Data systems that are based on asking [=people=] for their
+[=consent=] tend to increase [=privacy labour=].
 
 # How the World Sees Us {#data-privacy}
 
