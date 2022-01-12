@@ -274,12 +274,23 @@ conclusion of the task force, the TAG intends to adopt this document as a Findin
 
 # Introduction {#intro}
 
-Privacy is an essential value of the Web ([[?ETHICAL-WEB]], [[?design-principles]]).
+<dfn>Privacy</dfn> is an essential value of the Web ([[?ETHICAL-WEB]],
+[[?design-principles]]).
+
+<aside class="issue">
+
+Improve this introduction to introduce the several forms of privacy covered in this
+document. The term privacy covers several related topics, both about having <a
+href="#data-privacy">reasonable control over other people's impressions of you</a>, and <a
+href="#intrusion">preventing them from bothering you</a>. Privacy can be <dfn
+data-lt="privacy violation">violated</dfn>.
+
+</aside>
 
 The goal of this document is to define principles that may prove useful in developing
 technology and policy that relate to privacy and [=personal data=].
 
-[=Personal data=] is covered by legal frameworks and this document recognises that existing data
+Privacy is covered by legal frameworks and this document recognises that existing data
 protection laws take precedence for legal matters. However, because the Web is global, we
 benefit from having shared concepts to guide its evolution as a system built for the people using it
 [[?RFC8890]]. A clear and well-defined view of privacy on the Web, informed by research,
@@ -290,21 +301,21 @@ understanding is that the law is a floor, not a ceiling.
 
 ## People {#people}
 
-A <dfn data-lt="individual">person</dfn> (also <dfn>user</dfn> or <dfn>data subject</dfn>) is any natural
+A <dfn data-lt="individual|people">person</dfn> (also <dfn>user</dfn> or <dfn>data subject</dfn>) is any natural
 person. Throughout this document, we primarily use [=person=] or [=people=] to refer to human beings, as a
 reminder of their humanity. When we use the term [=user=], it is to talk about the specific [=person=]
 who happens to be using a given system at that time.
 
-A <dfn data-lt="vulnerable">vulnerable person</dfn>, in the [=context=] of a specific kind of
-[=data processing=], is a [=person=] who may be unable
-to exercise sufficient self-determination. Amongst other things, they should be treated with greater default
-privacy protections and may be considered unable to [=consent=] to the [=processing=].
+A <dfn data-lt="vulnerable">vulnerable person</dfn> is a [=person=] who may be unable to
+exercise sufficient self-determination in a [=context=]. Amongst other things, they should
+be treated with greater default privacy protections and may be considered unable to
+[=consent=] to various interactions with a system.
 People can be vulnerable for different reasons, for example because they are children,
 are employees with respect to their employers, are facing a steep asymmetry of power,
 are people in some situations of intellectual or psychological impairment, are
 refugees, etc.
 
-## User Agents {#user-agents}
+## Their Software Agents {#user-agents}
 
 The <dfn>user agent</dfn> acts as an intermediary between a [=person=] (its [=user=]) and the web. The
 [=user agent=] is <em>not</em> a [=context=] because it is expected to align fully with the
@@ -330,7 +341,7 @@ monitoring of their behaviour. Its <dfn>user agent duties</dfn> include
   <dt><dfn>Duty of Discretion</dfn></dt>
   <dd>
     Discretion requires the [=user agent=] to make best efforts to enforce
-    [=context-relative informational norms=] by placing limits on the flow and
+    [=norms=] by placing limits on the flow and
     [=processing=] of [=personal data=] that it can reasonably detect. Discretion is not confidentiality or secrecy: trust
     can be preserved even when the [=user agent=] shares some [=personal data=], so long as
     it is done in an [=appropriately=] discreet manner.
@@ -372,7 +383,12 @@ their agency and sovereignty.
 In academic research, this relationship with a [=trustworthy agent=] is often described as
 "fiduciary" [[?FIDUCIARY-UA]].
 
-## The Parties {#parties}
+## Guardians and Device Owners {#guardians-and-owners}
+
+<aside class="issue" data-number="2">
+</aside>
+
+## Server-Side Parties {#parties}
 
 A <dfn>party</dfn> is an entity that a [=person=] can reasonably understand as a single "thing"
 they're interacting with. Uses of this document in a particular domain are expected to describe how
@@ -387,37 +403,79 @@ interact. In cases of clear and conspicuous joint branding, there can be multipl
 parties=]. The [=first party=] is necessarily a [=data controller=] of the data processing
 that takes places as a consequence of a [=person=] interacting with it.
 
+<aside class="issue">Refine the description of third parties so it matches
+intuition better.</aside>
+
 A <dfn data-lt="third parties">third party</dfn> is any [=party=] other than the [=person=] visiting the website,
 the [=first party=], or a [=service provider=] acting on behalf of either the [=person=] or
 the [=first party=].
 
-# Contexts and Privacy
+# Contexts {#contexts}
 
 A <dfn>context</dfn> is a physical or digital environment that a [=person=] interacts with
-for a purpose of their own (that they typically share with other [=person=] who interact
-with the same environment).
+for a [=purpose=] of their own (that they typically share with other [=people=] who
+interact with the same environment).
 
-A [=context=] can be further described through:
+<aside class="example" id="example-contexts">
 
-* Its <dfn>actors</dfn>, which comprise the <dfn>subject</dfn> (a [=person=]) as well as
-  the <dfn>sender</dfn> and <dfn>recipient</dfn> of the data (which are [=parties=]).
-* Its <dfn>attributes</dfn>, which are the types of [=personal data=] being [=processed=]
-  in the [=context=].
-* Its <dfn>transmission principles</dfn>, which are the constraints (typically technical
-  or legal) being placed upon the [=data processing=].
+Some examples of distinct contexts include:
 
-A [=context=] carries <dfn data-lt="norm">context-relative informational norms</dfn> that determine
-whether a given [=data processing=] is <dfn data-lt="appropriately">appropriate</dfn>
-(if the norms are adhered to) or <dfn data-lt="inappropriately">inappropriate</dfn>
-(when the norms are violated). A norm violation can be for instance the exfiltration of
-[=personal data=] from a context or the lack of respect for [=transmission principles=].
+* a cocktail party
+* a series of therapy sessions
+* news reading
+* searching for general information
+* applying to a job
+* getting from one place to another
+* shopping
+* mail reading
+* chatting
+
+Subcategories of these contexts may also be distinct contexts, and the same activity in
+a different setting or with a different set of other [=parties=] is usually a different
+[=context=].
+
+</aside>
+
+A [=context=] carries <dfn data-lt="norm">norms</dfn> that determine whether particular
+interactions are <dfn data-lt="appropriately">appropriate</dfn> with the [=people=] in
+that context (if the norms are adhered to) or <dfn
+data-lt="inappropriately">inappropriate</dfn> (if the norms are violated).
+
+<aside class="example" id="example-norms">
+
+Norms could cover:
+
+* How information shared within that context can be used.
+* How information from the context can be re-shared.
+* Whether and what kind of interruptions are appropriate.
+* Etc.
+
+For example, information gained in a therapy session can't be used or re-shared at all
+outside the therapy context, except in very specific cases, while information from a
+cocktail party is more open. Information about what a person searches or shops for could
+be used to improve their future search results, but shouldn't be used to affect a job
+application or even to gossip with their neighbors. Information about where a person is
+trying to go can be used to help them get there, but not to tell their partner they're
+cheating. Interruptions from chat partners are expected, but flashing ads and
+notifications about irrelevant products aren't.
+
+</aside>
+
 When [=norms=] are respected in a given [=context=], we can say that <dfn>contextual
 integrity</dfn> is maintained; otherwise that it is violated ([[?PRIVACY-IN-CONTEXT]],
 [[?PRIVACY-AS-CI]]).
 
-We define <dfn>privacy</dfn> as a right to [=appropriate=] [=data processing=]. A
-<dfn>privacy violation</dfn> is, correspondingly, [=inappropriate=] [=data processing=]
-[[?PRIVACY-IN-CONTEXT]].
+<aside class="issue">
+
+Mention that contextual integrity doesn't answer whether situations are appropriate by
+itself: you could describe even the worst data practices and come up with a norm that says
+it's okay. It just provides a framework for discussion. See <a
+href="https://github.com/w3ctag/privacy-principles/issues/11">#11</a>.
+
+</aside>
+
+[=Privacy=] includes a right to [=appropriate=] interactions. Correspondingly,
+[=inappropriate=] interactions are [=privacy violations=]. [[?PRIVACY-IN-CONTEXT]].
 
 Note that a [=first party=] can be comprised of multiple [=contexts=] if it is large
 enough that [=people=] would interact with it for more than one [=purpose=]. [=Sharing=]
@@ -466,8 +524,10 @@ is enhanced through [=appropriate=] defaults and choice architectures.
 
 ## Opt-in, Consent, Opt-out, Global Controls {#opt-in-out}
 
-Different procedural mechanisms exist to enable [=people=] to control the [=processing=]
-done to their [=data=]. Mechanisms that increase the number of [=purposes=] for which
+<aside class="issue">Broaden this from [=processing=] to general interactions with systems.</aside>
+
+Different procedural mechanisms exist to enable [=people=] to control how they interact
+with systems in the world. Mechanisms that increase the number of [=purposes=] for which
 their [=data=] is being [=processed=] are referred to as <dfn data-lt="opt in">opt-in</dfn> or
 <dfn>consent</dfn>; mechanisms that decrease this number of [=purposes=] are known as
 <dfn data-lt="opt out">opt-out</dfn>.
@@ -558,6 +618,8 @@ work as is more respectable.
 
 # How the World Sees Us {#data-privacy}
 
+<aside class="issue">Introduce this aspect of privacy and tie it to control over how our data is used. Per [[?DEMOCRATIC-DATA]], don't imply that an individual is the only person with an interest in determining how their data is used, even though we only dig into that aspect in <a href="#collective"></a>.</aside>
+
 In everyday life, people typically find it easy to assess whether a given flow of
 information is a violation of privacy or not [[?NYT-PRIVACY]]. However, in the digital
 space, people struggle to understand how their data may be moved between contexts and how that
@@ -640,6 +702,8 @@ share data between the contexts, the fact that those distinct [=contexts=] fall 
 recognition|recognizing=] [=identities=] any less [=inappropriate=].
 
 ### Unwanted cross-context recognition {#hl-recognition-cross-context}
+
+<aside class="issue">Merge this into its parent section on identity.</aside>
 
 Contributes to [=surveillance=], [=correlation=], and [=identification=].
 
@@ -947,12 +1011,16 @@ or personalize content around his furry-interest.
 
 </div>
 
-## Powerful capabilities {#hl-capabilities}
+## Safety Systems {#safety}
 
-Contributes to [=misattribution=].
+<aside class="issue" data-number="73">
 
-For example, a site that sends SMS without the user's intent could cause them to
-be blamed for things they didn't intend.
+Discuss how systems intended to protect a person might justifiably collect more data from
+that person and from people who might be trying to attack that person. Also discuss
+whether systems intended to protect server-side parties from abuse can collect more data
+from users.
+
+</aside>
 
 ## Collective Issues in Privacy {#collective}
 
@@ -1031,12 +1099,10 @@ companies paying for access with strong checks and balances, and privacy guarant
 the funds would be used to support enhanced security for all.
 -->
 
-# Intrusive behavior {#hl-intrusion}
-
-See [=intrusion=].
+# How We Experience the World {#intrusion}
 
 Privacy harms don't always come from a site learning things. For example it is
-intrusive for a site to
+[=intrusion|intrusive=] for a site to
 
 * Display messages or notifications,
 * Play sounds,
@@ -1045,7 +1111,11 @@ intrusive for a site to
 
 if the person browsing it doesn't intend for it to do so.
 
-# Terms you probably already know {#boring-terminology}
+<aside class="issue">Connect intrusiveness to [=autonomy=], and write some principles.</aside>
+
+<section class="appendix">
+
+# Common Concepts {#boring-terminology}
 
 ## Acting on Data {#acting-on-data}
 
@@ -1079,6 +1149,8 @@ The <dfn>means</dfn> are the general method of [=data processing=] through which
 level and not necessarily all the way down to implementation details. Example:
 <em>a person will have their preferences restored (purpose) by looking up their identifier
 in a preferences store (means)</em>.
+
+</section>
 
 <section class="appendix">
 
@@ -1160,6 +1232,9 @@ These threats combine into the particular concrete threats we want web
 specifications to defend against, described in the sections that follow.
 
 </section>
+
+<section class="appendix" id="bp-summary"></section>
+
 <section class="appendix">
 
 # Acknowledgements {#acknowledgements}
@@ -1180,6 +1255,8 @@ Tess O'Connor, and
 Wendy Seltzer.
 
 </section>
+
+<section class="appendix" id="issue-summary"></section>
 
 </body>
 </html>
