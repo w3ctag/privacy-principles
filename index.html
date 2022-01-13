@@ -270,25 +270,7 @@ document as anything other than a work in progress.
 It will continue to evolve and the task force will issue updates as often as needed. At the
 conclusion of the task force, the TAG intends to adopt this document as a Finding.
 
-</section>
-
-# Privacy on the Web {#intro}
-
-<dfn>Privacy</dfn> is an essential value of the Web ([[?ETHICAL-WEB]],
-[[?design-principles]]).
-
-<aside class="issue">
-
-Improve this introduction to introduce the several forms of privacy covered in this
-document. The term privacy covers several related topics, both about having <a
-href="#data-privacy">reasonable control over other people's impressions of you</a>, and <a
-href="#intrusion">preventing them from bothering you</a>. Privacy can be <dfn
-data-lt="privacy violation">violated</dfn>.
-
-</aside>
-
-The goal of this document is to define principles that may prove useful in developing
-technology and policy that relate to privacy and [=personal data=].
+<aside class="note">
 
 Privacy is covered by legal frameworks and this document recognises that existing data
 protection laws take precedence for legal matters. However, because the Web is global, we
@@ -296,6 +278,41 @@ benefit from having shared concepts to guide its evolution as a system built for
 [[?RFC8890]]. A clear and well-defined view of privacy on the Web, informed by research,
 can hopefully help all the Web's participants in different legal regimes. Our shared
 understanding is that the law is a floor, not a ceiling.
+
+</aside>
+
+</section>
+
+# Privacy on the Web {#intro}
+
+<dfn>Privacy</dfn> is an essential value of the Web ([[?ETHICAL-WEB]],
+[[?design-principles]]), both for information privacy (defining which flows of information
+are appropriate) and for interference privacy (covering for instance harassment,
+manipulation).
+
+<aside class="issue">
+
+**RB**: I went with "interference privacy" because I don't know what to call this. I'm not
+sure what goes into it, it doesn't match practice that I'm conversant with. It would be
+helpful to have some references about it to help shape it as a field.
+
+I also don't know how to define <dfn>privacy violation</dfn> when privacy covers so much
+(in my mind) unrelated stuff.
+
+</aside>
+
+The Web is a set of technologies and practices that together define a system of rules
+concerning the way in which different [=actors=] may, must, or must not act on or learn
+about other [=actors=].
+
+
+
+GKC, IAD
+
+<!--
+Privacy isn’t an intrinsic good, it is a means to an end. It helps support identity, freedom, protection. It gives us the obscurity and intimacy we need to develop our identity without being observed, and to have different identities in different contexts, which is key to a thriving human life. It protects us from excessive power ([Privacy as Power](https://www.notion.so/Privacy-as-Power-49d78c2595fe465ca941bb9926122347), [Privacy as Relational](https://www.notion.so/Privacy-as-Relational-b48134bdbe4941e6bbb760c6045b3c22)) in the hands of government or corporations (or any other actor) that can use surveillance or capture ([Surveillance vs Capture](https://www.notion.so/Surveillance-vs-Capture-1c1c7820cecf4a05b4d4b5720b869b0f)) for power, blackmail, optimisation — in general to give themselves the upper hand as a structure again people’s agency ([Structure vs Agency](https://www.notion.so/Structure-vs-Agency-c83db40386dd48efb6c57ec4a46ef372)). It brings protection because information is power, and privacy protects us from sorting and persuasion, defending against information and automation asymmetries. Battles over privacy will determine the future allocation of power in society.
+-->
+
 
 ## Who is Involved {#who}
 
@@ -415,6 +432,15 @@ the [=first party=].
 A <dfn>context</dfn> is a physical or digital environment that a [=person=] interacts with
 for a [=purpose=] of their own (that they typically share with other [=people=] who
 interact with the same environment).
+
+A [=context=] is made up of:
+
+* Its <dfn>actors</dfn>, which comprise the <dfn>subject</dfn> (a [=person=]) as well as
+  the <dfn>sender</dfn> and <dfn>recipient</dfn> of the data (which are [=parties=]).
+* Its <dfn>attributes</dfn>, which are the types of [=personal data=] being [=processed=]
+  in the [=context=].
+* Its <dfn>transmission principles</dfn>, which are the constraints (typically technical
+  or legal) being placed upon the [=data processing=].
 
 <aside class="example" id="example-contexts">
 
