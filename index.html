@@ -130,11 +130,23 @@
           href: 'https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679&from=EN',
           authors: ['European Parliament and Council of European Union'],
         },
+        'GKC-Privacy': {
+          title: 'Governing Privacy in Knowledge Commons',
+          authors: ['Madelyn Rose Sanfilippo', 'Brett M. Frischmann', 'Katherine J. Strandburg'],
+          href: 'https://www.cambridge.org/core/books/governing-privacy-in-knowledge-commons/FA569455669E2CECA25DF0244C62C1A1',
+          publisher: 'Cambridge University Press',
+        },
         'GPC': {
           title: 'Global Privacy Control (GPC)',
           authors: ['Robin Berjon', 'Sebastian Zimmeck', 'Ashkan Soltani', 'David Harbage', 'Peter Snyder'],
           href: 'https://globalprivacycontrol.github.io/gpc-spec/',
           publisher: 'W3C',
+        },
+        'IAD': {
+          title: ' Understanding Institutional Diversity',
+          authors: ['Elinor Ostrom'],
+          href: 'https://press.princeton.edu/books/paperback/9780691122380/understanding-institutional-diversity',
+          publisher: 'Princeton University Press',
         },
         'Industry-Unbound': {
           title: 'Industry Unbound: the inside story of privacy, data, and corporate power',
@@ -288,16 +300,66 @@ understanding is that the law is a floor, not a ceiling.
 
 # Privacy on the Web {#intro}
 
-The Web is for everyone. This means that it needs to be built to serve people and to serve human
-values. One of the ways in which the Web can serve people is by protecting them in the face of
-asymmetries of power.
-
 Information is power. It can be used to predict and to influence people, as well as to design online
-spaces that control people's behaviour. What's more, automation renders information more efficient.
+spaces that control people's behaviour. The collection and [=processing=] of information in greater
+volume, with greater precision and reliability, with increasing interoperability across a greater
+variety of data types, and at increasing speed is leading to an unprecedented concentration of power
+that threatens private and public liberties.
 
-Privacy is about the rules that govern information flows, and more precisely it is about how these
-rules constrain and distribute the power of information between different actors. Struggles over
-privacy are struggles over the rules that govern the power of data, they are about data governance.
+What's more, automation and the increasing computerisation of all aspects of our lives make it
+possible for comparatively small groups to project power at a distance both in space and time. This
+both increases the power of information and decreases the cost of a number of intrusive antisocial
+behaviours that would be more easily kept in check if the perpetrator had to be in the same room as
+the victim.
+
+These asymmetries of information and of automation create commanding asymmetries of power. It is not
+so much that "<em>code is law</em>"  but rather that code is judge, jury, and executioner.
+
+The Web is for everyone ([[?For-Everyone]]). Its purpose is to serve people and to support the
+furthering of human values ([[?ETHICAL-WEB]], [[?design-principles]]). One of the ways in which the
+Web serves people is by protecting them in the face of asymmetries of power and this includes
+establishing and enforcing rules to govern the power of data.
+
+Privacy is the system of [=rules=] that govern information flows. More precisely, it is about how
+these rules constrain and distribute the power of information between different [=actors=].
+<dfn data-lt="rules">Privacy rules</dfn> describe the way in which different [=actors=] may, must,
+or must not produce or [=process=] flows of information from, to, or about other [=actors=]
+([[?GKC-Privacy]], [[?IAD]]).
+
+Typically, <dfn>actors</dfn> are [=people=] but they can also be collective endeavours such as
+companies, associations, or political parties (eg. in the case of espionage). It is important to
+keep in mind that not all people are equal in how they may resist the imposition of unfair rules,
+some [=people=] are more [=vulnerable=] and therefore in greater need of protection.
+
+The [=rules=] that apply vary from [=context=] to [=context=] ([[?Understanding-Privacy]]): people
+have different expectations of [=privacy=] at work, at a café, or at home. Understanding and
+evaluating a privacy situation is best done by clearly identifying:
+
+* Its [=actors=], which include the subject of the information as well as the sender and recipient
+  of the [=information flow=]. (Note that recipients might not be intentional.)
+* The specific type of data in the [=information flow=].
+* The [=rules=] that are in use in this specific context.
+
+Information flows need to be understood in a bidirectional manner: the flow of information
+<em>about</em> a person (the subject) just as well as the flow of information <em>towards</em> a
+person (the recipient). Recipients can have their privacy violated in multiple ways such as
+unexpected shocking images, loud noises while one intends to sleep, manipulative information,
+interruptive messages when a person's focus is on something else, or harassment when they seek
+social interactions.
+
+<dfn data-lt='information'>Information flows</dfn> are relevant to privacy whenever people are involved. The information
+itself need not necessarily be [=personal data=]. Disruptive or interruptive information flowing to
+a person is in scope, as is [=de-identified=] [=data=] that can be used to manipulate people or that
+was extracted by observing people's behaviour on someone else's website.
+
+
+tk tk tk ==========
+
+have some subsections
+
+data governance.
+
+
 The focus of this document concerns leveraging this power differential against people, but the same
 techniques are also used to leverage the power of information against other entities, such as
 companies or governments.
@@ -313,19 +375,9 @@ people. [this needs all kinds of better phrasing]
 
 
 
-
-
-<dfn>Privacy</dfn> is an essential value of the Web ([[?ETHICAL-WEB]],
-[[?design-principles]]).
-
-
-The Web is a set of technologies and practices that together define a system of rules
-concerning the way in which different [=actors=] may, must, or must not act on or learn
-about other [=actors=].
-
-
-
-GKC, IAD
+Tk
+- rules & contexts
+- actors and agents
 
 <!--
 Privacy isn’t an intrinsic good, it is a means to an end. It helps support identity, freedom, protection. It gives us the obscurity and intimacy we need to develop our identity without being observed, and to have different identities in different contexts, which is key to a thriving human life. It protects us from excessive power ([Privacy as Power](https://www.notion.so/Privacy-as-Power-49d78c2595fe465ca941bb9926122347), [Privacy as Relational](https://www.notion.so/Privacy-as-Relational-b48134bdbe4941e6bbb760c6045b3c22)) in the hands of government or corporations (or any other actor) that can use surveillance or capture ([Surveillance vs Capture](https://www.notion.so/Surveillance-vs-Capture-1c1c7820cecf4a05b4d4b5720b869b0f)) for power, blackmail, optimisation — in general to give themselves the upper hand as a structure again people’s agency ([Structure vs Agency](https://www.notion.so/Structure-vs-Agency-c83db40386dd48efb6c57ec4a46ef372)). It brings protection because information is power, and privacy protects us from sorting and persuasion, defending against information and automation asymmetries. Battles over privacy will determine the future allocation of power in society.
@@ -341,22 +393,6 @@ collective takes, eg. fraud, all policing.
 
 
 ## Who is Involved {#who}
-
-### People {#people}
-
-A <dfn data-lt="individual|people|user|data subject">person</dfn> (also [=user=] or [=data subject=]) is any natural
-person. Throughout this document, we primarily use [=person=] or [=people=] to refer to human beings, as a
-reminder of their humanity. When we use the term [=user=], it is to talk about the specific [=person=]
-who happens to be using a given system at that time.
-
-A <dfn data-lt="vulnerable">vulnerable person</dfn> is a [=person=] who may be unable to
-exercise sufficient self-determination in a [=context=]. Amongst other things, they should
-be treated with greater default privacy protections and may be considered unable to
-[=consent=] to various interactions with a system.
-People can be vulnerable for different reasons, for example because they are children,
-are employees with respect to their employers, are facing a steep asymmetry of power,
-are people in some situations of intellectual or psychological impairment, are
-refugees, etc.
 
 ### Their Software Agents {#user-agents}
 
@@ -453,20 +489,6 @@ A <dfn data-lt="third parties">third party</dfn> is any [=party=] other than the
 the [=first party=], or a [=service provider=] acting on behalf of either the [=person=] or
 the [=first party=].
 
-## Contexts {#contexts}
-
-A <dfn>context</dfn> is a physical or digital environment that a [=person=] interacts with
-for a [=purpose=] of their own (that they typically share with other [=people=] who
-interact with the same environment).
-
-A [=context=] is made up of:
-
-* Its <dfn>actors</dfn>, which comprise the <dfn>subject</dfn> (a [=person=]) as well as
-  the <dfn>sender</dfn> and <dfn>recipient</dfn> of the data (which are [=parties=]).
-* Its <dfn>attributes</dfn>, which are the types of [=personal data=] being [=processed=]
-  in the [=context=].
-* Its <dfn>transmission principles</dfn>, which are the constraints (typically technical
-  or legal) being placed upon the [=data processing=].
 
 <aside class="example" id="example-contexts">
 
@@ -1164,6 +1186,26 @@ if the person browsing it doesn't intend for it to do so.
 
 # Common Concepts {#boring-terminology}
 
+### People {#people}
+
+A <dfn data-lt="individual|people|user|data subject">person</dfn> (also [=user=] or
+[=data subject=]) is any natural person. Throughout this document, we primarily use [=person=] or
+[=people=] to refer to human beings, as a reminder of their humanity. When we use the term [=user=],
+it is to talk about the specific [=person=] who happens to be using a given system at that time.
+
+A <dfn data-lt="vulnerable">vulnerable person</dfn> is a [=person=] who may be unable to
+exercise sufficient self-determination in a [=context=]. Amongst other things, they should
+be treated with greater default privacy protections and may be considered unable to
+[=consent=] to various interactions with a system.
+People can be vulnerable for different reasons, for example because they are children,
+are employees with respect to their employers, are facing a steep asymmetry of power,
+are people in some situations of intellectual or psychological impairment, are
+refugees, etc.
+
+A <dfn>context</dfn> is a physical or digital environment that a [=person=] interacts with
+for a set of [=purposes=] (that they typically share with other [=people=] who interact with the
+same environment).
+
 ## Acting on Data {#acting-on-data}
 
 A [=party=] <dfn data-lt="process|processing|processed|data processing">processes</dfn> data if it
@@ -1296,6 +1338,7 @@ Christine Runnegar,
 Dan Appelquist,
 Don Marti,
 Jonathan Kingston,
+Nick Doty,
 Peter Snyder,
 Sam Weiler,
 Tess O'Connor, and
