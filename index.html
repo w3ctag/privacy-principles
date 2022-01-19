@@ -1176,24 +1176,87 @@ to offer better protection by default? Given the contested nature of the [^a/pin
 the absence of a forcing function to support collective enforcement, the scheme failed to deliver
 improved privacy.
 
-## Principles for Safety Systems {#safety}
+## Principles for Safety, Abuse, and Fraud {#safety}
 
-<aside class="issue">
-  This section has not been edited for narrative.
-</aside>
+There are some cases where privacy and safety are in tension. These cases are more rare
+than one might think at first glance, but they still exist. We can distinguish three
+categories:
 
+1. A person's privacy exists in a tradeoff with their own safety.
 
-<aside class="issue" data-number="73">
+   <aside class="example" id="example-single-user-safety-tradeoff">
 
-Discuss how systems intended to protect a person might justifiably collect more data from
-that person and from people who might be trying to attack that person. Also discuss
-whether systems intended to protect server-side parties from abuse can collect more data
-from users.
+   * A phone might be able to detect a car crash and automatically send its location to
+     emergency services.
 
-Discuss what limits need to be placed on such practices to distinguish them from privatised
-law enforcement and intellligence agencies.
+   * A person might want to sign up many accounts ("sockpuppets") on a service in order to
+     trick other people into thinking a belief had more support than it really has. To
+     combat this, the service might collect extra data from all users in order to
+     distinguish those two kinds of accounts. The innocent users are being protected by
+     that extra data collection.
 
-</aside>
+   </aside>
+
+1. The privacy of a person using a service exists in a tradeoff with the safety of other
+   people using that service.
+
+   <aside class="example" id="example-multi-user-safety-tradeoff">
+
+   * In the <a href="#example-single-user-safety-tradeoff">sockpuppet example</a>, the
+     person trying to create multiple accounts is not having their own safety protected by
+     the extra data collection. Instead, other people are being protected from them.
+
+   * A person might want to pretend to view or click an ad many times, either to convince
+     an advertiser to pay the website the ad appeared on, or to cost a particular
+     advertiser a lot of money. People browsing websites and people posting advertisements
+     are both users of the advertising network that manages click data, and the
+     advertising network might collect extra data from all the viewers and clickers in
+     order to protect the advertisers.
+
+   </aside>
+
+1. The privacy of a person using a service exists in a tradeoff with the safety of the
+   service itself.
+
+   <aside class="example" id="example-user-service-safety-tradeoff">
+
+   * A service might collect IP address data from its visitors in order to block any that
+     are attacking the service. While a successful attack might also harm users, for
+     example if it prevents them from using the service or reveals their private data to
+     the attacker, the service might still be primarily motivated by preventing damage to
+     itself.
+
+   </aside>
+
+<div class="practice">
+
+<p><span class="practicelab" id="principle-safety-with-privacy">As much as possible,
+services should provide both safety and privacy.</span></p>
+
+</div>
+
+<div class="practice">
+
+<p><span class="practicelab" id="principle-violation-sacrifices-privacy">When a
+person violates the [=principles=] of a [=context=] they're interacting with, the service
+operating that context may use their data in ways that would otherwise be
+[=inappropriate=] solely in order to protect other users of that service.</span></p>
+
+Some extra use of personal data might also be [=appropriate=] in order to protect the
+service itself, but less than is appropriate to protect other people.
+
+<strong>However:</strong>
+
+1. These principles need to be widely-agreed, not just details within a unilateral
+   terms-of-service. For example, in most [=contexts=], it's [=inappropriate=] for a user
+   to attempt to execute their own code with the context's host's privileges. On the other
+   hand, there's generally no principle against viewing content using accessibility tools,
+   even if a site's terms of service prohibit it.
+
+1. The service must take technical and legal measures to ensure the extra data it's
+   collecting for safety reasons cannot be used for other purposes.
+
+</div>
 
 
 ## Principles for Guardians and Device Owners {#guardians-and-owners}
@@ -1210,8 +1273,8 @@ law enforcement and intellligence agencies.
 ## Unwanted Information {#unwanted-information}
 
 Receiving unsolicited information that either may cause distress or waste the recipient's
-time or resources is a violation of privacy. 
-    
+time or resources is a violation of privacy.
+
 <div class="practice">
 
 <p>
