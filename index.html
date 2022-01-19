@@ -357,18 +357,18 @@ It is important to keep in mind that there are <em>always</em> privacy [=rules=]
 purportedly neutral situation in which no rules apply. We must therefore determine which [=rules=]
 best serve human values ([[?ETHICAL-WEB]], [[?Why-Privacy]]).
 
-Information flows need to be understood in a bidirectional manner: the flow of information
-<em>about</em> a person (the subject) just as well as the flow of information <em>towards</em> a
-person (the recipient). Recipients can have their privacy violated in multiple ways such as
-unexpected shocking images, loud noises while one intends to sleep, manipulative information,
-interruptive messages when a person's focus is on something else, or harassment when they seek
-social interactions.
-
 <dfn data-lt='information'>Information flows</dfn> are relevant to privacy whenever people are
 involved. The information itself need not necessarily be [=personal data=]. Disruptive or
 interruptive information flowing to a person is in scope, as is [=de-identified=] [=data=] that can
 be used to manipulate people or that was extracted by observing people's behaviour on someone else's
 website.
+
+[=Information flows=] need to be understood in a bidirectional manner: the flow of information
+<em>about</em> a person (the subject) just as well as the flow of information <em>towards</em> a
+person (the recipient). Recipients can have their privacy violated in multiple ways such as
+unexpected shocking images, loud noises while one intends to sleep, manipulative information,
+interruptive messages when a person's focus is on something else, or harassment when they seek
+social interactions.
 
 ## Individual Autonomy {#autonomy}
 
@@ -410,6 +410,106 @@ however, they are used as a way to avoid putting in the difficult work of decidi
 types of [=processing=] are [=appropriate=] and which are not, offloading [=privacy labour=]
 to the people using a system.
 
+In rare and highly specific cases, [=people=] should be able to [=consent=] to more
+sensitive [=purposes=], such as having their [=identity=] recognised across contexts or
+their reading history shared with a company. The burden of proof on ensuring that informed
+[=consent=] has been obtained needs in this case to be very high (much higher than what prevails for
+instance in [[?GDPR]] jurisdictions as currently practiced). [=Consent=] is comparable to the
+general problem of permissions on the Web platform. In the same way that it should be clear when a
+given device capability is in use (eg. you are providing geolocation or camera access), sharing
+data should be set up in such a way that it requires deliberate, specific action from the [=person=]
+(eg. triggering a form control that is not on a modal dialog) and if that [=consent=] is persistent,
+there should be a vivid indicator that data is being transmitted shown at all times, in such a way
+that the person can easily switch it off. In general, providing [=consent=] should be rare,
+difficult, highly intentional, and temporary.
+
+When an [=opt-out=] mechanism exists, it should preferably be complemented by a
+<dfn>global opt-out</dfn> mechanism. The function of a [=global opt-out=] mechanism is to
+rectify the <dfn class="export">automation asymmetry</dfn> whereby service providers can automate
+[=data processing=] but [=people=] have to take manual action. A good example of a
+[=global opt-out=] mechanism is the <em>Global Privacy Control</em> [[?GPC]].
+
+Conceptually, a [=global opt-out=] mechanism is an automaton operating as part of the
+[=user agent=], which is to say that it is equivalent to a robot that would carry out a
+[=person=]'s bidding by pressing an [=opt-out=] button with every interaction that the
+[=person=] has with a site, or more generally conveys an expression of the [=person=]'s
+rights in a relevant jurisdiction. (For instance, under [[?GDPR]], the [=person=] may be
+conveying objections to [=processing=] based on legitimate interest or the withdrawal of
+[=consent=] to specific [=purposes=].) It should be noted that, since a [=global opt-out=]
+signal is reaffirmed automatically with every interaction, it will take precedence
+in terms of specificity over any manner of blanket [=consent=] that a site may obtain,
+unless that [=consent=] is directly attached to an interaction (eg. terms specified on a
+form upon submission).
+
+### Privacy Labour
+
+<dfn data-lt="privacy labor">Privacy labour</dfn> is the practice of having a [=person=] carry out
+the work of ensuring [=data processing=] of which they are the subject or recipient is
+[=appropriate=], instead of having the [=parties=] be responsible for that work as is more
+respectable.
+
+## Collective Governance {#collective}
+
+Privacy [=rules=] are socially negotiated and often contested ([[?Privact-Contested]]). This makes
+privacy a problem of collective action ([[?GKC-Privacy]]).
+
+Population-level [=data processing=] may impact populations or individuals, including in
+ways that [=people=] could not control even under the optimistic assumptions of [=consent=].
+For example, based on population-level analysis, a company may know that <var>site.example</var>
+is predominantly visited by [=people=] of a given race or gender, and decide not to run its
+job ads there. Visitors to that page are implicitly having their [=data=] processed in
+[=inappropriate=] ways, with no way to discover the discrimination or seek relief
+([[?Democratic-Data]]).
+
+What we consider is therefore not just the relation between the [=people=] who share data
+and the [=parties=] that invite that disclosure ([[?Relational-Turn]]), but also between the [=people=]
+who may find themselves categorised indirectly even without sharing data. One key understanding here
+is that such relations may persists even when data is [=de-identified=]. What's more, such
+categorisation of people, voluntary or not, will change the way in which the world operates.
+This can produce self-reinforcing loops that can have deleterious effects both individual and
+collective ([[?Seeing-Like-A-State]]).
+
+Setting [=rules=] for privacy is <dfn data-lt="legitimacy">legitimate</dfn> when it is based on a
+form of open consensus process; <dfn data-lt="illegitimacy">illegitimate</dfn> otherwise.
+For example, it is often considered [=legitimate=] for a government, under the control of its
+citizens, to maintain a database of license plates for the [=purpose=] of enforcing the rules of the
+road. It would be [=illegitimate=] to observe the same license plates near places of worship to
+build a database of religious identity.
+
+In general, collective issues in [=data=] require collective solutions. The goal of
+[=data governance=] in Web standards is the development of structural controls
+in [=user agents=] and the creation of institutions that can handle issues of [=privacy=].
+[=Governance=] will often struggle to achieve its goals if it works primarily by
+increasing <em>individual</em> control. A collective approach reduces the cost of control.
+
+Collecting data at large scales can have significant pro-social outcomes. Problems tend to
+emerge when entities take part in dual-use collection in which [=data=] is [=processed=]
+for collective benefit but also for [=self-dealing=] [=purposes=].
+The [=self-dealing=] [=purposes=] will be justified as bankrolling the pro-social outcomes,
+which, without collective oversight, cannot be [=legitimate=].
+
+
+
+
+
+
+
+
+
+
+<!--
+=== MATERIAL ===
+
+See Privacy as Rules
+
+ABOUT REASONING
+A data system designed for people is one in which people remain effectively able to reason about
+what is known about them. This means working to prevent hidden parties from acquiring such
+information, preventing any party from acquiring too much information about a person particularly in
+cross-referencing from multiple sources, restricting applications of this data that are hostile to
+people. [this needs all kinds of better phrasing]
+
+RULES ABOUT PARTIES
 Privacy regulatory regimes are often anchored at extremes: either they default to allowing
 only very few strictly essential [=purposes=] such that many [=parties=] will have to
 resort to [=consent=], habituating [=people=] to ignore legal prompts and incentivising
@@ -449,66 +549,9 @@ three privacy tiers:
   </dd>
   <dt>Opt-in Privacy Tier</dt>
   <dd>
-    In rare and highly specific cases, [=people=] should be able to [=consent=] to more
-    sensitive [=purposes=], such as having their [=identity=] recognised across contexts or
-    their reading history shared with a company. The burden of proof on ensuring that informed [=consent=] has
-    been obtained needs in this case to be very high (much higher than what prevails for
-    instance in [[?GDPR]] jurisdictions as currently practices). [=Consent=] is comparable to the general problem
-    of permissions on the Web platform. In the same way that it should be clear when a given
-    device capability is in use (eg. you are providing geolocation or camera access), sharing
-    data under this tier should be set up in such a way that it requires deliberate, specific
-    action from the [=person=] (eg. triggering a form control) and if that [=consent=] is
-    persistent, there should be an indicator that data is being transmitted shown at all
-    times, in such a way that the person can easily switch it off. In general, providing
-    [=consent=] should be rare, difficult, highly intentional, and temporary.
   </dd>
 </dl>
 
-When an [=opt-out=] mechanism exists, it should preferably be complemented by a
-<dfn>global opt-out</dfn> mechanism. The function of a [=global opt-out=] mechanism is to
-rectify the <dfn class="export">automation asymmetry</dfn> whereby service providers can automate
-[=data processing=] but [=people=] have to take manual action. A good example of a
-[=global opt-out=] mechanism is the <em>Global Privacy Control</em> [[?GPC]].
-
-Conceptually, a [=global opt-out=] mechanism is an automaton operating as part of the
-[=user agent=], which is to say that it is equivalent to a robot that would carry out a
-[=person=]'s bidding by pressing an [=opt-out=] button with every interaction that the
-[=person=] has with a site, or more generally conveys an expression of the [=person=]'s
-rights in a relevant jurisdiction. (For instance, under [[?GDPR]], the [=person=] may be
-conveying objections to [=processing=] based on legitimate interest or the withdrawal of
-[=consent=] to specific [=purposes=].) It should be noted that, since a [=global opt-out=]
-signal is reaffirmed automatically with every interaction, it will take precedence
-in terms of specificity over any manner of blanket [=consent=] that a site may obtain,
-unless that [=consent=] is directly attached to an interaction (eg. terms specified on a
-form upon submission).
-
-### Privacy Labour
-
-Additionally, <dfn data-lt="privacy-labor">privacy labour</dfn> is the practice of having
-a [=person=] carry out the work of ensuring [=data processing=] of which they are the
-subject is [=appropriate=], instead of having the [=parties=] be responsible for that
-work as is more respectable.
-
-
-
-<!--
-=== MATERIAL ===
-
-See Privacy as Rules
-
-Don't talk about collective privacy, weave that throughout. Call out cases that would call for
-collective takes, eg. fraud, all policing.
-
-COLLECTIVE
-Privacy [=rules=] are socially negotiated and often contested ([[?Privact-Contested]]). This makes
-privacy a problem of collective action ([[?GKC-Privacy]]).
-
-ABOUT REASONING
-A data system designed for people is one in which people remain effectively able to reason about
-what is known about them. This means working to prevent hidden parties from acquiring such
-information, preventing any party from acquiring too much information about a person particularly in
-cross-referencing from multiple sources, restricting applications of this data that are hostile to
-people. [this needs all kinds of better phrasing]
 
 -->
 
@@ -1083,83 +1126,6 @@ whether systems intended to protect server-side parties from abuse can collect m
 from users.
 
 </aside>
-
-## Collective Issues in Privacy {#collective}
-
-When designing Web technology, we naturally pay attention to potential impacts on the [=person=]
-using the Web through their [=user agent=]. In addition to potential individual harms we also
-pay heed to collective effects that emerge from the accumulation of individual actions as
-influenced by entities and the structure of technology.
-
-Note that in evaluating impact, we deliberately ignore what implementers or specifiers may
-have <em>intended</em> and only focus on outcomes. This framing is known as <abbr>POSIWID</abbr>, or
-"<em>the Purpose Of a System Is What It Does</em>".
-
-The collective problem of privacy is known as <dfn>legibility</dfn>. [=Legibility=] concerns
-population-level [=data processing=] that may impact populations or individuals, including in
-ways that [=people=] could not control even under the optimistic assumptions of the [=FIPs=].
-For example, based on population-level analysis, a company may know that <var>site.example</var>
-is predominantly visited by [=people=] of a given race or gender, and decide not to run its
-job ads there. Visitors to that page are implicitly having their [=data=] processed in
-[=inappropriate=] ways, with no way to discover the discrimination or seek relief
-[[?Democratic-Data]].
-
-What we consider is therefore not just the relation between the people who expose themselves
-and the entities that invite that disclosure [[?Relational-Turn]], but also between the people
-who expose themselves and those who do not but may find themselves recognised as such indirectly
-anyway. One key understanding here is that such relations may persists even when data is
-[=de-identified=].
-
-[=Legibility=] practices can be <dfn data-lt="legitimacy">legitimate</dfn> or
-<dfn data-lt="illegitimacy">illegitimate</dfn> depending
-on the [=context=] and on the [=norms=] that apply in that [=context=]. Typically, a
-[=legibility=] practice may be [=legitimate=] if it is managed through an acceptable process
-of collective [=governance=]. For example, it is often considered [=legitimate=] for a
-government, under the control of its citizens, to maintain a database of license plates for
-the [=purpose=] of enforcing the rules of the road. It would be [=illegitimate=] to observe
-the same license plates near places of worship to build a database of religious identity.
-
-[=Legibility=] is often used to order information about the world. This can notably create
-problems of [=reflexivity=] and of [=autonomy=].
-
-Problems of <dfn>reflexivity</dfn> occur when the ordering of information about the world
-used to produce [=legibility=] finds itself changing the way in which the world operates.
-This can produce self-reinforcing loops that can have deleterious effects both individual and
-collective [[?Seeing-Like-A-State]].
-
-Issues of [=autonomy=] occur depending on the manner in which [=legibility=] is implemented.
-When [=legibility=] is used to order the world following rules set by a [=person=] or
-following methods subject to public scrutiny and [=governance=] models with strong checks and
-balances (such as a newspaper's editorial decisions), then it will enhance personal [=autonomy=]
-and tend to be [=legitimate=]. When it is done in the [=person=]'s stead and without [=governance=],
-it decreases personal [=autonomy=] and tends to be [=illegitimate=].
-
-<dfn data-lt="governance">Data governance</dfn> refers to the rules and processes for how [=data=] is
-[=processed=] in any given [=context=]. How data is <em>governed</em> describes who has
-power to make decisions over [=data=] and how [[?Data-Futures-Glossary]].
-
-In general, collective issues in [=data=] require collective solutions. The proper goal of
-[=data governance=] at the standards-setting level is the development of structural controls
-in [=user agents=] and the provision of institutions that can handle population-level problems
-in [=data=]. [=Governance=] will often struggle to achieve its goals if it works primarily by
-increasing <em>individual</em> control over [=data=]. A collective approach reduces the cost of
-control.
-
-Collecting data at large scales can have significant pro-social outcomes. Problems tend to
-emerge when entities take part in dual-use collection in which [=data=] is [=processed=]
-for collective benefit but also for [=self-dealing=] [=purposes=] that may degrade welfare.
-The [=self-dealing=] [=purposes=] will be justified as bankrolling the pro-social outcomes,
-which, absent collective oversight, cannot be considered to support claims to [=legitimacy=]
-for such [=legibility=]. It is vital for standards-setting organisations to establish not
-just purely technical devices but techno-social systems that can govern data at scale.
-
-<!--
-Imagine a case in which collecting browser data can be leveraged to improve both search
-services (which have a business model) and user security (which generally doesn't). This
-data could be collected through a data trust under stakeholder governance, search
-companies paying for access with strong checks and balances, and privacy guarantees, and
-the funds would be used to support enhanced security for all.
--->
 
 # How We Experience the World {#intrusion}
 
