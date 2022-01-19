@@ -334,7 +334,9 @@ or must not produce or [=process=] flows of information from, to, or about other
 ([[?GKC-Privacy]], [[?IAD]]). <dfn>Privacy</dfn> is achieved when the governance situation has
 human impact, either by involving [=personal data=] or by exerting action over [=people=], and the
 [=rules=] are followed appropriately. When the governance situation has human impact but the
-[=rules=] are not followed, there is a <dfn>privacy violation</dfn>.
+[=rules=] are not followed, there is a <dfn>privacy violation</dfn>. Similarly, we say that a
+particular interaction is <dfn data-lt="appropriately">appropriate</dfn> when the rules are adhered
+to) or <dfn data-lt="inappropriately">inappropriate</dfn> otherwise.
 
 Typically, <dfn>actors</dfn> are [=people=] but they can also be collective endeavours such as
 companies, associations, or political parties (eg. in the case of espionage), which are known as
@@ -441,12 +443,39 @@ in terms of specificity over any manner of blanket [=consent=] that a site may o
 unless that [=consent=] is directly attached to an interaction (eg. terms specified on a
 form upon submission).
 
-### Privacy Labour
+### Privacy Labour {#privacy-labour}
 
 <dfn data-lt="privacy labor">Privacy labour</dfn> is the practice of having a [=person=] carry out
 the work of ensuring [=data processing=] of which they are the subject or recipient is
 [=appropriate=], instead of having the [=parties=] be responsible for that work as is more
 respectable.
+
+More generally, implementations of [=privacy=] are often dominated by self-governing approaches that
+offload labour to [=people=]. This is notably true of the regimes descended from the
+<dfn data-lt="FIPs">Fair Information Practices</dfn> ([=FIPs=]), a loose set of principles initially
+elaborated in the 1970s in support of individual [=autonomy=] in the face of growing concerns with databases. The
+[=FIPs=] generally assume that there is sufficiently little [=data processing=] taking place that any
+[=person=] will be able to carry out sufficient diligence to enable [=autonomy=] in their
+decision-making. Since they entirely offload the [=privacy labour=]
+to people and assume perfect, unlimited [=autonomy=], the [=FIPs=] do not forbid specific
+types of [=data processing=] but only place them under different procedural requirements.
+Such an approach is [=appropriate=] for [=parties=] that are processing data in the 1970s.
+
+One notable issue with procedural approaches to privacy is that they tend to have the same
+requirements in situations where people find themselves in a significant asymmetry of
+power with a [=party=] — for instance a [=person=] using an essential service provided by a
+monopolistic platform — and those where people and [=parties=] are very much on equal
+footing, or even where the [=person=] may have greater power, as is the case with small
+businesses operating in a competitive environment. It further does not consider cases in
+which one [=party=] may coerce other [=parties=] into facilitating its [=inappropriate=]
+practices, as is often the case with dominant players in advertising or
+in content aggregation ([[?Consent-Lackeys]], [[?CAT]]).
+
+Reference to the [=FIPs=] survives to this day. They are often referenced as <em>transparency
+and choice</em>, which, in today's digital environment, is often a strong indication that
+[=inappropriate=] [=processing=] is being described.
+
+
 
 ## Collective Governance {#collective}
 
@@ -561,187 +590,26 @@ Many of the [=rules=] described in the rest of this document extend the [=user a
 make them more precise.
 
 
-<!--
-=== MATERIAL ===
-
-See Privacy as Rules
-
-ABOUT REASONING
-A data system designed for people is one in which people remain effectively able to reason about
-what is known about them. This means working to prevent hidden parties from acquiring such
-information, preventing any party from acquiring too much information about a person particularly in
-cross-referencing from multiple sources, restricting applications of this data that are hostile to
-people. [this needs all kinds of better phrasing]
-
-RULES ABOUT PARTIES
-Privacy regulatory regimes are often anchored at extremes: either they default to allowing
-only very few strictly essential [=purposes=] such that many [=parties=] will have to
-resort to [=consent=], habituating [=people=] to ignore legal prompts and incentivising
-[=dark patterns=], or, conversely, they default to forbidding only very few, particularly
-egregious [=purposes=], such that [=people=] will have to perform the [=privacy labour=] to
-[=opt out=] in every [=context=] in order to produce [=appropriate=] [=processing=].
-
-An approach that is more aligned with the expectation that the Web should provide a
-trustworthy, [=person=]-centric environment is to establish a regime consisting of
-three privacy tiers:
-
-<dl>
-  <dt>Default Privacy Tier</dt>
-  <dd>
-    This is the set of [=purposes=] that are deemed [=appropriate=] in a given [=context=]
-    and the [=processing=] that a [=person=] can expect without having triggered any
-    mechanisms to change their preferences. The exact details for this tier require clear
-    definition, including aspects such as data retention, but [=data=] would have to be
-    systematically siloed by [=context=] (<em>not</em> by [=party=], making it stricter than
-    the [=Vegas Rule=] and more in line with respecting [=privacy=]). This default tier
-    should also be defined differently for certain kinds of [=contexts=]. The legitimate
-    [=processing=] that can take place in this tier derives its legitimacy from matching the
-    expectations and interests of both the [=person=] and the [=first party=] they're interacting with
-    relationship, as guided by the applicable [=norms=]. If the [=first party=] has knowledge
-    of the person's [=identity=], it should make the [=identity=] it is using for the person,
-    along with its own branding as the [=data controller], obvious to the person.
-    [[?Twitter-Developer-Policy]] This tier is more [=appropriate=] the more the [=first party=]
-    acts in accordance with [=user agent duties=].
-  </dd>
-  <dt>Opt-out Privacy Tier</dt>
-  <dd>
-    [=People=] who, either from personal preference or because they are [=vulnerable=],
-    require greater obscurity in some or even most [=contexts=], would be able to transition
-    to this tier through an [=opt-out=] mechanism. This tier would only permit strictly
-    necessary [=purposes=]. This tier should be [=appropriate=] for [=vulnerable=]
-    [=people=].
-  </dd>
-  <dt>Opt-in Privacy Tier</dt>
-  <dd>
-  </dd>
-</dl>
 
 
--->
+# Rules for Privacy on the Web
 
+As indicated above, different [=contexts=] require different [=rules=]. This section describes a set
+of [=rules=] designed to apply to the Web [=context=] in general. The Web is a big place, and we
+fully expect more specific [=contexts=] of the Web to add their own [=rules=] to further constrain
+[=information flows=].
 
-## Who is Involved {#who}
+To the extent possible, [=user agents=] are expected to enforce these rules. However, this is not
+always possible and additional enforcement mechanisms are needed. One particularly salient issue
+is that a [=context=] is not defined in terms of who own it (it is not a [=party=]). Sharing
+[=data=] between different services of a single company is just as much a [=privacy violation=] as
+if the same data were shared between unrelated [=parties=].
 
-
-### Guardians and Device Owners {#guardians-and-owners}
-
-<aside class="issue" data-number="2">
-</aside>
-
-### Server-Side Parties {#parties}
-
-A <dfn>party</dfn> is an entity that a [=person=] can reasonably understand as a single "thing"
-they're interacting with. Uses of this document in a particular domain are expected to describe how
-the core concepts of that domain combine into a [=user=]-comprehensible [=party=], and those refined
-definitions are likely to differ between domains.
-
-The <dfn data-lt="first parties">first party</dfn> is a [=party=] with which a [=person=] intends to
-interact. Merely hovering over, muting, pausing, or closing a given piece of content does
-not mean a [=person=] intends to interact with another party, nor does the simple
-fact of loading a [=party=] embedded in the one with which the person intends to
-interact. In cases of clear and conspicuous joint branding, there can be multiple [=first
-parties=]. The [=first party=] is necessarily a [=data controller=] of the data processing
-that takes places as a consequence of a [=person=] interacting with it.
-
-<aside class="issue">Refine the description of third parties so it matches
-intuition better.</aside>
-
-A <dfn data-lt="third parties">third party</dfn> is any [=party=] other than the [=person=] visiting the website,
-the [=first party=], or a [=service provider=] acting on behalf of either the [=person=] or
-the [=first party=].
-
-
-<aside class="example" id="example-contexts">
-
-Some examples of distinct contexts include:
-
-* a cocktail party
-* a series of therapy sessions
-* news reading
-* searching for general information
-* applying to a job
-* getting from one place to another
-* shopping
-* mail reading
-* chatting
-
-Subcategories of these contexts may also be distinct contexts, and the same activity in
-a different setting or with a different set of other [=parties=] is usually a different
-[=context=].
-
-</aside>
-
-A [=context=] carries <dfn data-lt="norm">norms</dfn> that determine whether particular
-interactions are <dfn data-lt="appropriately">appropriate</dfn> with the [=people=] in
-that context (if the norms are adhered to) or <dfn
-data-lt="inappropriately">inappropriate</dfn> (if the norms are violated).
-
-<aside class="example" id="example-norms">
-
-Norms could cover:
-
-* How information shared within that context can be used.
-* How information from the context can be re-shared.
-* Whether and what kind of interruptions are appropriate.
-* Etc.
-
-For example, information gained in a therapy session can't be used or re-shared at all
-outside the therapy context, except in very specific cases, while information from a
-cocktail party is more open. Information about what a person searches or shops for could
-be used to improve their future search results, but shouldn't be used to affect a job
-application or even to gossip with their neighbors. Information about where a person is
-trying to go can be used to help them get there, but not to tell their partner they're
-cheating. Interruptions from chat partners are expected, but flashing ads and
-notifications about irrelevant products aren't.
-
-</aside>
-
-When [=norms=] are respected in a given [=context=], we can say that <dfn
-class="export">contextual integrity</dfn> is maintained; otherwise that it is violated
-([[?Privacy-In-Context]], [[?CI]]).
+## Rules for Identity on the Web {#identity}
 
 <aside class="issue">
-
-Mention that contextual integrity doesn't answer whether situations are appropriate by
-itself: you could describe even the worst data practices and come up with a norm that says
-it's okay. It just provides a framework for discussion. See <a
-href="https://github.com/w3ctag/privacy-principles/issues/11">#11</a>.
-
+  This section has not been edited for narrative.
 </aside>
-
-[=Privacy=] includes a right to [=appropriate=] interactions. Correspondingly,
-[=inappropriate=] interactions are [=privacy violations=]. [[?Privacy-In-Context]].
-
-Note that a [=first party=] can be comprised of multiple [=contexts=] if it is large
-enough that [=people=] would interact with it for more than one [=purpose=]. [=Sharing=]
-[=personal data=] across [=contexts=] is only [=appropriate=] if the subsequent
-use of that data follows the [=norms=] of both the context in which the data was
-collected and the context in which it is used.
-
-<div class="example" id="data-sharing-example">
-
-You share personal data with your bank in the context of managing your money. They would like to
-re-use that data in order to help another merchant sell you a product based on the purchase history
-the bank can see. Since marketing is a different [=context=] from banking, using your data in this
-way is usually a [=privacy violation=].
-
-If instead the bank is recommending a product to help your financial affairs, this may be an
-[=appropriate=] use of data, or even a use within the original [=context=].
-
-</div>
-
-# How the World Sees Us {#data-privacy}
-
-<aside class="issue">Introduce this aspect of privacy and tie it to control over how our data is used. Per [[?Democratic-Data]], don't imply that an individual is the only person with an interest in determining how their data is used, even though we only dig into that aspect in <a href="#collective"></a>.</aside>
-
-In everyday life, people typically find it easy to assess whether a given flow of
-information is a violation of privacy or not [[?NYT-Privacy]]. However, in the digital
-space, people struggle to understand how their data may be moved between contexts and how that
-may affect them. This is particularly true if they may be affected at a much later time and
-in completely different situations. Some actors are using this confusion to extract and
-exploit [=personal data=] at scale.
-
-## Identity on the Web {#identity}
 
 A [=person=]'s <dfn>identity</dfn> is the set of characteristics that define them. Their identity
 *in a [=context=]* is the set of characteristics they present to that context. People
@@ -909,7 +777,12 @@ can also be done by having someone navigate to a link that has been decorated wi
 collecting the same piece of identifying information on both sites, or by correlating the timestamps
 of an event that occurs nearly-simultaneously on both sites.
 
-## Data {#data}
+
+## Rules for Personal Data {#data}
+
+<aside class="issue">
+  This section has not been edited for narrative.
+</aside>
 
 We define <dfn data-lt="data">personal data</dfn> as any information that is directly or
 indirectly about an identified or identifiable [=person=], such as by reference to an
@@ -1000,32 +873,7 @@ making sure that:
 Note that [=controlled de-identified data=], on its own, is not sufficient to render [=data processing=]
 [=appropriate=].
 
-#### Fair Information Practices {#fips}
-
-In the 1970s, the <dfn data-lt="FIPs">Fair Information Practices</dfn> or [=FIPs=] were elaborated
-in support of individual [=autonomy=] in the face of growing concerns with databases. The
-[=FIPs=] assume that there is sufficiently little [=data processing=] taking place that any
-[=person=] will be able to carry out sufficient diligence to enable [=autonomy=] in their
-decision-making. Since they entirely offload the [=privacy labour=]
-to people and assume perfect, unfettered [=autonomy=], the [=FIPs=] do not forbid specific
-types of [=data processing=] but only place them under different procedural requirements.
-Such an approach is [=appropriate=] for [=parties=] that are processing data in the 1970s.
-
-One notable issue with procedural approaches to privacy is that they tend to have the same
-requirements in situations where people find themselves in a significant asymmetry of
-power with a [=party=] — for instance a [=person=] using an essential service provided by a
-monopolistic platform — and those where people and [=parties=] are very much on equal
-footing, or even where the [=person=] may have greater power, as is the case with small
-businesses operating in a competitive environment. It further does not consider cases in
-which one [=party=] may coerce other [=parties=] into facilitating its [=inappropriate=]
-practices, as is often the case with dominant players in advertising [[?Consent-Lackeys]] or
-in content aggregation [[?CAT]].
-
-Reference to the [=FIPs=] survives to this day. They are often referenced as <em>transparency
-and choice</em>, which, in today's digital environment, is often a strong indication that
-[=inappropriate=] [=processing=] is being described.
-
-## Sensitive information disclosure {#hl-sensitive-information}
+## Rules for Sensitive Information {#hl-sensitive-information}
 
 Contributes to [=correlation=], [=identification=], [=secondary use=], and
 [=disclosure=].
@@ -1065,7 +913,11 @@ a person, consider at least these factors:
 Issue(16): This description of what makes information sensitive still needs to
 be refined.
 
-## Unexpected profiling {#hl-unexpected-profiling}
+## Rules for Profiling {#hl-unexpected-profiling}
+
+<aside class="issue">
+  This section has not been edited for narrative.
+</aside>
 
 Contributes to [=surveillance=], [=correlation=], [=identification=], and
 singling-out / discrimination.
@@ -1120,7 +972,12 @@ or personalize content around his furry-interest.
 
 </div>
 
-## Safety Systems {#safety}
+## Rules for Safety Systems {#safety}
+
+<aside class="issue">
+  This section has not been edited for narrative.
+</aside>
+
 
 <aside class="issue" data-number="73">
 
@@ -1131,25 +988,108 @@ from users.
 
 </aside>
 
-# How We Experience the World {#intrusion}
 
-Privacy harms don't always come from a site learning things. For example it is
-[=intrusion|intrusive=] for a site to
+## Rules for Guardians and Device Owners {#guardians-and-owners}
 
-* Display messages or notifications,
-* Play sounds,
-* Occupy the full screen,
-* etc.
+<aside class="issue" data-number="2">
+</aside>
 
-if the person browsing it doesn't intend for it to do so.
+## Rules for Influence and Manipulation
+
+<aside class="issue">
+  This section has not been written.
+</aside>
+
+## Rules for Harassment
+
+<aside class="issue">
+  This section has not been written.
+</aside>
+
+## Rules for Unwanted Information
+
+<aside class="issue">
+  This section has not been written.
+</aside>
+
+## Rules for Vulnerable People
+
+<aside class="issue">
+  This section has not been written.
+</aside>
+
+## Rules for Notifications and Interruptions
+
+<aside class="issue">
+  This section has not been written.
+</aside>
 
 <aside class="issue">Connect intrusiveness to [=autonomy=], and write some principles.</aside>
+
+
+<!--
+# EVERYTHING BELOW THIS LINE IS MATERIAL
+
+See Privacy as Rules
+
+ABOUT REASONING
+A data system designed for people is one in which people remain effectively able to reason about
+what is known about them. This means working to prevent hidden parties from acquiring such
+information, preventing any party from acquiring too much information about a person particularly in
+cross-referencing from multiple sources, restricting applications of this data that are hostile to
+people. [this needs all kinds of better phrasing]
+
+RULES ABOUT PARTIES
+Privacy regulatory regimes are often anchored at extremes: either they default to allowing
+only very few strictly essential [=purposes=] such that many [=parties=] will have to
+resort to [=consent=], habituating [=people=] to ignore legal prompts and incentivising
+[=dark patterns=], or, conversely, they default to forbidding only very few, particularly
+egregious [=purposes=], such that [=people=] will have to perform the [=privacy labour=] to
+[=opt out=] in every [=context=] in order to produce [=appropriate=] [=processing=].
+
+An approach that is more aligned with the expectation that the Web should provide a
+trustworthy, [=person=]-centric environment is to establish a regime consisting of
+three privacy tiers:
+
+<dl>
+  <dt>Default Privacy Tier</dt>
+  <dd>
+    This is the set of [=purposes=] that are deemed [=appropriate=] in a given [=context=]
+    and the [=processing=] that a [=person=] can expect without having triggered any
+    mechanisms to change their preferences. The exact details for this tier require clear
+    definition, including aspects such as data retention, but [=data=] would have to be
+    systematically siloed by [=context=] (<em>not</em> by [=party=], making it stricter than
+    the [=Vegas Rule=] and more in line with respecting [=privacy=]). This default tier
+    should also be defined differently for certain kinds of [=contexts=]. The legitimate
+    [=processing=] that can take place in this tier derives its legitimacy from matching the
+    expectations and interests of both the [=person=] and the [=first party=] they're interacting with
+    relationship, as guided by the applicable [=norms=]. If the [=first party=] has knowledge
+    of the person's [=identity=], it should make the [=identity=] it is using for the person,
+    along with its own branding as the [=data controller], obvious to the person.
+    [[?Twitter-Developer-Policy]] This tier is more [=appropriate=] the more the [=first party=]
+    acts in accordance with [=user agent duties=].
+  </dd>
+  <dt>Opt-out Privacy Tier</dt>
+  <dd>
+    [=People=] who, either from personal preference or because they are [=vulnerable=],
+    require greater obscurity in some or even most [=contexts=], would be able to transition
+    to this tier through an [=opt-out=] mechanism. This tier would only permit strictly
+    necessary [=purposes=]. This tier should be [=appropriate=] for [=vulnerable=]
+    [=people=].
+  </dd>
+  <dt>Opt-in Privacy Tier</dt>
+  <dd>
+  </dd>
+</dl>
+
+
+-->
 
 <section class="appendix">
 
 # Common Concepts {#boring-terminology}
 
-### People {#people}
+## People {#people}
 
 A <dfn data-lt="individual|people|user|data subject">person</dfn> (also [=user=] or
 [=data subject=]) is any natural person. Throughout this document, we primarily use [=person=] or
@@ -1168,6 +1108,28 @@ refugees, etc.
 A <dfn>context</dfn> is a physical or digital environment that a [=person=] interacts with
 for a set of [=purposes=] (that they typically share with other [=people=] who interact with the
 same environment).
+
+## Server-Side Parties {#parties}
+
+A <dfn>party</dfn> is an entity that a [=person=] can reasonably understand as a single "thing"
+they're interacting with. Uses of this document in a particular domain are expected to describe how
+the core concepts of that domain combine into a [=user=]-comprehensible [=party=], and those refined
+definitions are likely to differ between domains.
+
+The <dfn data-lt="first parties">first party</dfn> is a [=party=] with which a [=person=] intends to
+interact. Merely hovering over, muting, pausing, or closing a given piece of content does
+not mean a [=person=] intends to interact with another party, nor does the simple
+fact of loading a [=party=] embedded in the one with which the person intends to
+interact. In cases of clear and conspicuous joint branding, there can be multiple [=first
+parties=]. The [=first party=] is necessarily a [=data controller=] of the data processing
+that takes places as a consequence of a [=person=] interacting with it.
+
+<aside class="issue">Refine the description of third parties so it matches
+intuition better.</aside>
+
+A <dfn data-lt="third parties">third party</dfn> is any [=party=] other than the [=person=] visiting the website,
+the [=first party=], or a [=service provider=] acting on behalf of either the [=person=] or
+the [=first party=].
 
 ## Acting on Data {#acting-on-data}
 
