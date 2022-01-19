@@ -488,13 +488,77 @@ for collective benefit but also for [=self-dealing=] [=purposes=].
 The [=self-dealing=] [=purposes=] will be justified as bankrolling the pro-social outcomes,
 which, without collective oversight, cannot be [=legitimate=].
 
+## People's Agents {#user-agents}
 
+The <dfn>user agent</dfn> acts as an intermediary between a [=person=] (its [=user=]) and the web.
+[=User agents=] implement, to the extent possible, the [=rules=] that collective governance
+establishes in favour of individuals. They seek to prevent the creation of asymmetries of
+information, and serve their [=user=] by providing them with automation, to rectity
+[=automation asymmetries=]. Where possible, they protect their [=user=] from receiving
+[=inappropriate=] information.
 
+The [=user agent=] is expected to align fully with the [=person=] using it and operate exclusively
+in that [=person=]'s interest. It is <em>not</em> the [=first party=]. The [=user agent=] serves the
+[=person=] as a <dfn>trustworthy agent</dfn>:
+it always puts that [=person=]'s interest first. In some occasions, this can mean protecting
+that [=person=] from themselves by preventing them from carrying out a dangerous decision,
+or by slowing down the person in their decision. For example, the
+[=user agent=] will make it difficult for that [=person=] to connect to a site if it can't verify
+that the site is authentic. It will check that that [=person=] really intends to expose a
+sensitive device to a page. It will prevent that [=person=] from consenting to the permanent
+monitoring of their behaviour. Its <dfn>user agent duties</dfn> include
+([[?Taking-Trust-Seriously]]):
 
+<dl>
+  <dt><dfn class="export">Duty of Protection</dfn></dt>
+  <dd>
+    Protection requires [=user agents=] to actively protect their [=user=]'s data, beyond
+    simple security measures. It is insufficient to just encrypt at rest and in transit,
+    but the [=user agent=] must also limit retention, help ensure that only strictly
+    necessary data is collected, and require guarantees from any [=party=] that the user agent can
+    reasonably be aware that it is shared to.
+  </dd>
+  <dt><dfn class="export">Duty of Discretion</dfn></dt>
+  <dd>
+    Discretion requires the [=user agent=] to make best efforts to enforce
+    [=norms=] by placing limits on the flow and
+    [=processing=] of [=personal data=] that it can reasonably detect. Discretion is not
+    confidentiality or secrecy: trust
+    can be preserved even when the [=user agent=] shares some [=personal data=], so long as
+    it is done in an [=appropriately=] discreet manner.
+  </dd>
+  <dt><dfn class="export">Duty of Honesty</dfn></dt>
+  <dd>
+    Honesty requires that the [=user agent=] try to give its [=user=]
+    information of which the [=user agent=] can reasonably be aware, that is relevant to
+    them and that will increase their
+    autonomy, as long as they can understand it and there's an appropriate
+    time. This is almost never when the [=person=] is trying to do something else such as
+    read a page or activate a feature. The duty of honesty goes well beyond that of
+    transparency that is often included in older privacy regimes. Unlike transparency, honesty
+    can't hide relevant information in complex legal notices and it can't rely on
+    very short summaries provided in a consent dialog.
+    If the person has provided [=consent=] to [=processing=] of their [=personal data=],
+    the [=user agent=] should inform the [=person=] of ongoing [=processing=], with a
+    level of obviousness that is proportional to the reasonably foreseeable impact of the processing.
+  </dd>
+  <dt><dfn class="export">Duty of Loyalty</dfn></dt>
+  <dd>
+    Because the [=user agent=] is a [=trustworthy agent=], it is held to be loyal to the
+    [=person=] using it in all situations, including in preference to the [=user agent=]'s implementer.
+    When a [=user agent=] carries out [=processing=] that is not in the [=person=]'s
+    interest but instead benefits another entity (such as the user agent's implementer) that behaviour is
+    known as <dfn>self-dealing</dfn>. Behaviour can be [=self-dealing=] even if it is done at the
+    same time as [=processing=] that is in the [=person=]'s interest. [=Self-dealing=] is always
+    [=inappropriate=]. Loyalty is the avoidance of [=self-dealing=].
+  </dd>
+</dl>
 
+In academic research, this relationship with a [=trustworthy agent=] is often described as
+"fiduciary" [[?Fiduciary-UA]].
 
-
-
+Many of the [=rules=] described in the rest of this document extend the [=user agent=]'s duties and
+make them more precise.
 
 
 <!--
@@ -558,66 +622,6 @@ three privacy tiers:
 
 ## Who is Involved {#who}
 
-### Their Software Agents {#user-agents}
-
-The <dfn>user agent</dfn> acts as an intermediary between a [=person=] (its [=user=]) and the web. The
-[=user agent=] is <em>not</em> a [=context=] because it is expected to align fully with the
-[=person=] using it and operate exclusively in that [=person=]'s interest. It is <em>not</em> the
-[=first party=]. The [=user agent=] serves the [=person=] as a <dfn>trustworthy agent</dfn>:
-it always puts that [=person=]'s interest first. In some occasions, this can mean protecting
-that [=person=] from themselves by preventing them from carrying out a dangerous decision,
-or by slowing down the person in their decision. For example, the
-[=user agent=] will make it difficult for that [=person=] to connect to a site if it can't verify
-that the site is authentic. It will check that that [=person=] really intends to expose a
-sensitive device to a page. It will prevent that [=person=] from consenting to the permanent
-monitoring of their behaviour. Its <dfn>user agent duties</dfn> include
-[[?Taking-Trust-Seriously]]:
-
-<dl>
-  <dt><dfn class="export">Duty of Protection</dfn></dt>
-  <dd>
-    Protection requires [=user agents=] to actively protect their [=user=]'s data, beyond
-    simple security measures. It is insufficient to just encrypt at rest and in transit,
-    but the [=user agent=] must also limit retention, help ensure that only strictly
-    necessary data is collected, and require guarantees from any [=party=] that the user agent can reasonably be aware that it is shared to.
-  </dd>
-  <dt><dfn class="export">Duty of Discretion</dfn></dt>
-  <dd>
-    Discretion requires the [=user agent=] to make best efforts to enforce
-    [=norms=] by placing limits on the flow and
-    [=processing=] of [=personal data=] that it can reasonably detect. Discretion is not confidentiality or secrecy: trust
-    can be preserved even when the [=user agent=] shares some [=personal data=], so long as
-    it is done in an [=appropriately=] discreet manner.
-  </dd>
-  <dt><dfn class="export">Duty of Honesty</dfn></dt>
-  <dd>
-    Honesty requires that the [=user agent=] try to give its [=user=]
-    information of which the [=user agent=] can reasonably be aware, that is relevant to
-   them and that will increase their
-    autonomy, as long as they can understand it and there's an appropriate
-    time. This is almost never when the [=person=] is trying to do something else such as
-    read a page or activate a feature. The duty of honesty goes well beyond that of
-    transparency that is often included in older privacy regimes. Unlike transparency, honesty
-    can't hide relevant information in complex legal notices and it can't rely on
-    very short summaries provided in a consent dialog.
-    If the person has provided [=consent=] to [=processing=] of their [=personal data=],
-    the [=user agent=] should inform the [=person=] of ongoing [=processing=], with a
-    level of obviousness that is proportional to the reasonably foreseeable impact of the processing.
-  </dd>
-  <dt><dfn class="export">Duty of Loyalty</dfn></dt>
-  <dd>
-    Because the [=user agent=] is a [=trustworthy agent=], it is held to be loyal to the
-    [=person=] using it in all situations, including in preference to the [=user agent=]'s implementer.
-    When a [=user agent=] carries out [=processing=] that is not in the [=person=]'s
-    interest but instead benefits another entity (such as the user agent's implementer) that behaviour is
-    known as <dfn>self-dealing</dfn>. Behaviour can be [=self-dealing=] even if it is done at the
-    same time as [=processing=] that is in the [=person=]'s interest. [=Self-dealing=] is always
-    [=inappropriate=]. Loyalty is the avoidance of [=self-dealing=].
-  </dd>
-</dl>
-
-In academic research, this relationship with a [=trustworthy agent=] is often described as
-"fiduciary" [[?Fiduciary-UA]].
 
 ### Guardians and Device Owners {#guardians-and-owners}
 
