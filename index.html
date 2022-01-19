@@ -370,6 +370,124 @@ interruptive information flowing to a person is in scope, as is [=de-identified=
 be used to manipulate people or that was extracted by observing people's behaviour on someone else's
 website.
 
+## Individual Autonomy {#autonomy}
+
+A [=person=]'s <dfn data-lt="autonomous">autonomy</dfn> is their ability to make decisions of their own volition,
+without undue influence from other parties. People have limited intellectual resources and
+time with which to weigh decisions, and by necessity rely on shortcuts when making
+decisions. This makes their privacy preferences malleable and susceptible to
+manipulation ([[?Privacy-Behavior]], [[?Digital-Market-Manipulation]]). A [=person=]'s [=autonomy=] is enhanced by a
+system or device when that system offers a shortcut that aligns more with what that [=person=] would
+have decided given arbitrary amounts of time and relatively unlimited intellectual ability;
+and [=autonomy=] is decreased when a similar shortcut goes against decisions made under such
+ideal conditions.
+
+Affordances and interactions that decrease [=autonomy=] are known as <dfn>dark patterns</dfn>.
+A [=dark pattern=] does not have to be intentional, the deceptive effect is sufficient to
+define them ([[?Dark-Patterns]], [[?Dark-Pattern-Dark]]).
+
+Because we are all subject to motivated reasoning, the design of defaults and affordances
+that may impact [=autonomy=] should be the subject of independent scrutiny.
+
+Given the large volume of potential [=data=]-related decisions in today's data economy,
+complete informational self-determination is impossible. This fact, however, should not be
+confused with the idea that privacy is dead. Careful design of our technological
+infrastructure can ensure that people's [=autonomy=] as pertaining to their own [=data=]
+is enhanced through [=appropriate=] defaults and choice architectures.
+
+### Opt-in, Consent, Opt-out, Global Controls {#opt-in-out}
+
+<aside class="issue">Broaden this from [=processing=] to general interactions with systems.</aside>
+
+Different procedural mechanisms exist to enable [=people=] to control how they interact
+with systems in the world. Mechanisms that increase the number of [=purposes=] for which
+their [=data=] is being [=processed=] are referred to as [=opt-in=] or
+<dfn data-lt="opt in|opt-in">consent</dfn>; mechanisms that decrease this number of [=purposes=] are known as
+<dfn data-lt="opt out">opt-out</dfn>.
+
+When deployed thoughtfully, these mechanisms can enhance [=people=]'s [=autonomy=]. Often,
+however, they are used as a way to avoid putting in the difficult work of deciding which
+types of [=processing=] are [=appropriate=] and which are not, offloading [=privacy labour=]
+to the people using a system.
+
+Privacy regulatory regimes are often anchored at extremes: either they default to allowing
+only very few strictly essential [=purposes=] such that many [=parties=] will have to
+resort to [=consent=], habituating [=people=] to ignore legal prompts and incentivising
+[=dark patterns=], or, conversely, they default to forbidding only very few, particularly
+egregious [=purposes=], such that [=people=] will have to perform the [=privacy labour=] to
+[=opt out=] in every [=context=] in order to produce [=appropriate=] [=processing=].
+
+An approach that is more aligned with the expectation that the Web should provide a
+trustworthy, [=person=]-centric environment is to establish a regime consisting of
+three privacy tiers:
+
+<dl>
+  <dt>Default Privacy Tier</dt>
+  <dd>
+    This is the set of [=purposes=] that are deemed [=appropriate=] in a given [=context=]
+    and the [=processing=] that a [=person=] can expect without having triggered any
+    mechanisms to change their preferences. The exact details for this tier require clear
+    definition, including aspects such as data retention, but [=data=] would have to be
+    systematically siloed by [=context=] (<em>not</em> by [=party=], making it stricter than
+    the [=Vegas Rule=] and more in line with respecting [=privacy=]). This default tier
+    should also be defined differently for certain kinds of [=contexts=]. The legitimate
+    [=processing=] that can take place in this tier derives its legitimacy from matching the
+    expectations and interests of both the [=person=] and the [=first party=] they're interacting with
+    relationship, as guided by the applicable [=norms=]. If the [=first party=] has knowledge
+    of the person's [=identity=], it should make the [=identity=] it is using for the person,
+    along with its own branding as the [=data controller], obvious to the person.
+    [[?Twitter-Developer-Policy]] This tier is more [=appropriate=] the more the [=first party=]
+    acts in accordance with [=user agent duties=].
+  </dd>
+  <dt>Opt-out Privacy Tier</dt>
+  <dd>
+    [=People=] who, either from personal preference or because they are [=vulnerable=],
+    require greater obscurity in some or even most [=contexts=], would be able to transition
+    to this tier through an [=opt-out=] mechanism. This tier would only permit strictly
+    necessary [=purposes=]. This tier should be [=appropriate=] for [=vulnerable=]
+    [=people=].
+  </dd>
+  <dt>Opt-in Privacy Tier</dt>
+  <dd>
+    In rare and highly specific cases, [=people=] should be able to [=consent=] to more
+    sensitive [=purposes=], such as having their [=identity=] recognised across contexts or
+    their reading history shared with a company. The burden of proof on ensuring that informed [=consent=] has
+    been obtained needs in this case to be very high (much higher than what prevails for
+    instance in [[?GDPR]] jurisdictions as currently practices). [=Consent=] is comparable to the general problem
+    of permissions on the Web platform. In the same way that it should be clear when a given
+    device capability is in use (eg. you are providing geolocation or camera access), sharing
+    data under this tier should be set up in such a way that it requires deliberate, specific
+    action from the [=person=] (eg. triggering a form control) and if that [=consent=] is
+    persistent, there should be an indicator that data is being transmitted shown at all
+    times, in such a way that the person can easily switch it off. In general, providing
+    [=consent=] should be rare, difficult, highly intentional, and temporary.
+  </dd>
+</dl>
+
+When an [=opt-out=] mechanism exists, it should preferably be complemented by a
+<dfn>global opt-out</dfn> mechanism. The function of a [=global opt-out=] mechanism is to
+rectify the <dfn class="export">automation asymmetry</dfn> whereby service providers can automate
+[=data processing=] but [=people=] have to take manual action. A good example of a
+[=global opt-out=] mechanism is the <em>Global Privacy Control</em> [[?GPC]].
+
+Conceptually, a [=global opt-out=] mechanism is an automaton operating as part of the
+[=user agent=], which is to say that it is equivalent to a robot that would carry out a
+[=person=]'s bidding by pressing an [=opt-out=] button with every interaction that the
+[=person=] has with a site, or more generally conveys an expression of the [=person=]'s
+rights in a relevant jurisdiction. (For instance, under [[?GDPR]], the [=person=] may be
+conveying objections to [=processing=] based on legitimate interest or the withdrawal of
+[=consent=] to specific [=purposes=].) It should be noted that, since a [=global opt-out=]
+signal is reaffirmed automatically with every interaction, it will take precedence
+in terms of specificity over any manner of blanket [=consent=] that a site may obtain,
+unless that [=consent=] is directly attached to an interaction (eg. terms specified on a
+form upon submission).
+
+### Privacy Labour
+
+Additionally, <dfn data-lt="privacy-labor">privacy labour</dfn> is the practice of having
+a [=person=] carry out the work of ensuring [=data processing=] of which they are the
+subject is [=appropriate=], instead of having the [=parties=] be responsible for that
+work as is more respectable.
 
 
 
@@ -454,13 +572,6 @@ monitoring of their behaviour. Its <dfn>user agent duties</dfn> include
     [=inappropriate=]. Loyalty is the avoidance of [=self-dealing=].
   </dd>
 </dl>
-
-These duties ensure the [=user agent=] will <em>care</em> for its [=user=]. It is important to
-note that there is a subtle difference between care and <dfn>data paternalism</dfn>.
-[=Data paternalism=] claims to help in part by removing agency ("<em>don't worry about it,
-so long as your data is with us it's safe, you don't need to know what we do with it, it's
-all good because we're good people</em>") whereas care aims to support people by enhancing
-their agency and sovereignty.
 
 In academic research, this relationship with a [=trustworthy agent=] is often described as
 "fiduciary" [[?Fiduciary-UA]].
@@ -571,127 +682,6 @@ If instead the bank is recommending a product to help your financial affairs, th
 [=appropriate=] use of data, or even a use within the original [=context=].
 
 </div>
-
-## Personal Control and Autonomy {#autonomy}
-
-A [=person=]'s <dfn data-lt="autonomous">autonomy</dfn> is their ability to make decisions of their own volition,
-without undue influence from other parties. People have limited intellectual resources and
-time with which to weigh decisions, and by necessity rely on shortcuts when making
-decisions. This makes their privacy preferences malleable [[?Privacy-Behavior]] and susceptible to
-manipulation [[?Digital-Market-Manipulation]]. A [=person=]'s [=autonomy=] is enhanced by a
-system or device when that system offers a shortcut that aligns more with what that [=person=] would
-have decided given arbitrary amounts of time and relatively unfettered intellectual ability;
-and [=autonomy=] is decreased when a similar shortcut goes against decisions made under
-ideal conditions.
-
-Affordances and interactions that decrease [=autonomy=] are known as <dfn>dark patterns</dfn>.
-A [=dark pattern=] does not have to be intentional, the deceptive effect is sufficient to
-define them [[?Dark-Patterns]], [[?Dark-Pattern-Dark]].
-
-Because we are all subject to motivated reasoning, the design of defaults and affordances
-that may impact [=autonomy=] should be the subject of independent scrutiny.
-Implementers are enjoined to be particularly cautious to avoid slipping into
-[=data paternalism=].
-
-Given the sheer volume of potential [=data=]-related decisions in today's data economy,
-complete informational self-determination is impossible. This fact, however, should not be
-confused with the contention that privacy is dead. Careful design of our technological
-infrastructure can ensure that people's [=autonomy=] as pertaining to their own [=data=]
-is enhanced through [=appropriate=] defaults and choice architectures.
-
-### Opt-in, Consent, Opt-out, Global Controls {#opt-in-out}
-
-<aside class="issue">Broaden this from [=processing=] to general interactions with systems.</aside>
-
-Different procedural mechanisms exist to enable [=people=] to control how they interact
-with systems in the world. Mechanisms that increase the number of [=purposes=] for which
-their [=data=] is being [=processed=] are referred to as [=opt-in=] or
-<dfn data-lt="opt in|opt-in">consent</dfn>; mechanisms that decrease this number of [=purposes=] are known as
-<dfn data-lt="opt out">opt-out</dfn>.
-
-When deployed thoughtfully, these mechanisms can enhance [=people=]'s [=autonomy=]. Often,
-however, they are used as a way to avoid putting in the difficult work of deciding which
-types of [=processing=] are [=appropriate=] and which are not, offloading [=privacy labour=]
-to the people using a system.
-
-Privacy regulatory regimes are often anchored at extremes: either they default to allowing
-only very few strictly essential [=purposes=] such that many [=parties=] will have to
-resort to [=consent=], habituating [=people=] to ignore legal prompts and incentivising
-[=dark patterns=], or, conversely, they default to forbidding only very few, particularly
-egregious [=purposes=], such that [=people=] will have to perform the [=privacy labour=] to
-[=opt out=] in every [=context=] in order to produce [=appropriate=] [=processing=].
-
-An approach that is more aligned with the expectation that the Web should provide a
-trustworthy, [=person=]-centric environment is to establish a regime consisting of
-three privacy tiers:
-
-<dl>
-  <dt>Default Privacy Tier</dt>
-  <dd>
-    This is the set of [=purposes=] that are deemed [=appropriate=] in a given [=context=]
-    and the [=processing=] that a [=person=] can expect without having triggered any
-    mechanisms to change their preferences. The exact details for this tier require clear
-    definition, including aspects such as data retention, but [=data=] would have to be
-    systematically siloed by [=context=] (<em>not</em> by [=party=], making it stricter than
-    the [=Vegas Rule=] and more in line with respecting [=privacy=]). This default tier
-    should also be defined differently for certain kinds of [=contexts=]. The legitimate
-    [=processing=] that can take place in this tier derives its legitimacy from matching the
-    expectations and interests of both the [=person=] and the [=first party=] they're interacting with
-    relationship, as guided by the applicable [=norms=]. If the [=first party=] has knowledge
-    of the person's [=identity=], it should make the [=identity=] it is using for the person,
-    along with its own branding as the [=data controller], obvious to the person.
-    [[?Twitter-Developer-Policy]] This tier is more [=appropriate=] the more the [=first party=]
-    acts in accordance with [=user agent duties=].
-  </dd>
-  <dt>Opt-out Privacy Tier</dt>
-  <dd>
-    [=People=] who, either from personal preference or because they are [=vulnerable=],
-    require greater obscurity in some or even most [=contexts=], would be able to transition
-    to this tier through an [=opt-out=] mechanism. This tier would only permit strictly
-    necessary [=purposes=]. This tier should be [=appropriate=] for [=vulnerable=]
-    [=people=].
-  </dd>
-  <dt>Opt-in Privacy Tier</dt>
-  <dd>
-    In rare and highly specific cases, [=people=] should be able to [=consent=] to more
-    sensitive [=purposes=], such as having their [=identity=] recognised across contexts or
-    their reading history shared with a company. The burden of proof on ensuring that informed [=consent=] has
-    been obtained needs in this case to be very high (much higher than what prevails for
-    instance in [[?GDPR]] jurisdictions as currently practices). [=Consent=] is comparable to the general problem
-    of permissions on the Web platform. In the same way that it should be clear when a given
-    device capability is in use (eg. you are providing geolocation or camera access), sharing
-    data under this tier should be set up in such a way that it requires deliberate, specific
-    action from the [=person=] (eg. triggering a form control) and if that [=consent=] is
-    persistent, there should be an indicator that data is being transmitted shown at all
-    times, in such a way that the person can easily switch it off. In general, providing
-    [=consent=] should be rare, difficult, highly intentional, and temporary.
-  </dd>
-</dl>
-
-When an [=opt-out=] mechanism exists, it should preferably be complemented by a
-<dfn>global opt-out</dfn> mechanism. The function of a [=global opt-out=] mechanism is to
-rectify the <dfn class="export">automation asymmetry</dfn> whereby service providers can automate
-[=data processing=] but [=people=] have to take manual action. A good example of a
-[=global opt-out=] mechanism is the <em>Global Privacy Control</em> [[?GPC]].
-
-Conceptually, a [=global opt-out=] mechanism is an automaton operating as part of the
-[=user agent=], which is to say that it is equivalent to a robot that would carry out a
-[=person=]'s bidding by pressing an [=opt-out=] button with every interaction that the
-[=person=] has with a site, or more generally conveys an expression of the [=person=]'s
-rights in a relevant jurisdiction. (For instance, under [[?GDPR]], the [=person=] may be
-conveying objections to [=processing=] based on legitimate interest or the withdrawal of
-[=consent=] to specific [=purposes=].) It should be noted that, since a [=global opt-out=]
-signal is reaffirmed automatically with every interaction, it will take precedence
-in terms of specificity over any manner of blanket [=consent=] that a site may obtain,
-unless that [=consent=] is directly attached to an interaction (eg. terms specified on a
-form upon submission).
-
-### Privacy Labour
-
-Additionally, <dfn data-lt="privacy-labor">privacy labour</dfn> is the practice of having
-a [=person=] carry out the work of ensuring [=data processing=] of which they are the
-subject is [=appropriate=], instead of having the [=parties=] be responsible for that
-work as is more respectable.
 
 # How the World Sees Us {#data-privacy}
 
