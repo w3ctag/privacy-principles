@@ -298,6 +298,9 @@
       color: cornflowerblue;
       font-weight: bold;
     }
+    q {
+      font-style: italic;
+    }
   </style>
 </head>
 <body data-cite="html indexedDB service-workers fingerprinting-guidance url">
@@ -343,8 +346,8 @@ understanding is that the law is a floor, not a ceiling.
 
 Information is power. It can be used to predict and to influence people, as well as to design online
 spaces that control people's behaviour. The collection and [=processing=] of information in greater
-volume, with greater precision and reliability, with increasing interoperability across a greater
-variety of data types, and at increasing speed is leading to an unprecedented concentration of power
+volume, with greater precision and reliability, with increasing interoperability across a growing
+variety of data types, and at intensifying speed is leading to an unprecedented concentration of power
 that threatens private and public liberties.
 
 What's more, automation and the increasing computerisation of all aspects of our lives
@@ -361,43 +364,47 @@ Web serves people is by protecting them in the face of asymmetries of power and 
 establishing and enforcing rules to govern the power of data.
 
 The Web is a social and technical system made up of [=information flows=]. Because this document
-focuses on [=privacy=] as it applies to the Web, it also focuses on privacy around information flows.
+is specifically about [=privacy=] as it applies to the Web, it also focuses on privacy around
+information flows.
+
 <dfn data-lt="governance">Data governance</dfn> is the system of [=rules=] that regulate [=information flows=]. When
 [=people=] are involved in these [=information flows=], [=data governance=] determines how
 these rules constrain and distribute the power of information between different [=actors=].
 The <dfn>rules</dfn> describe the way in which different [=actors=] may, must,
 or must not produce or [=process=] flows of information from, to, or about other [=actors=]
-([[?GKC-Privacy]], [[?IAD]]). <dfn>Privacy</dfn> is achieved when the governance situation has
-human impact, either by involving [=personal data=] or by exerting action over [=people=], and the
-[=rules=] are followed appropriately. When the governance situation has human impact but the
-[=rules=] are not followed, there is a <dfn>privacy violation</dfn>. Similarly, we say that a
-particular interaction is <dfn data-lt="appropriately">appropriate</dfn> when the [=rules=] are adhered
+([[?GKC-Privacy]], [[?IAD]]).
+
+<dfn>Privacy</dfn> is achieved in a given [=context=] that either involves [=personal data=] or
+involves information being presented to [=people=], and the [=rules=] of that [=context=] are
+followed appropriately. When the [=rules=] for that [=context=] are not followed, there is a
+<dfn>privacy violation</dfn>. Similarly, we say that a particular interaction is
+<dfn data-lt="appropriately">appropriate</dfn> when the [=rules=] are adhered
 to) or <dfn data-lt="inappropriately">inappropriate</dfn> otherwise.
 
 Typically, <dfn>actors</dfn> are [=people=] but they can also be collective endeavours such as
 companies, associations, or political parties (eg. in the case of espionage), which are known as
 [=parties=]. It is important to keep in mind that not all people are equal in how they may resist
 the imposition of unfair [=rules=], some [=people=] are more [=vulnerable=] and therefore in greater
-need of protection. The focus of this document concerns leveraging this power differential against
-people, but the same techniques are also used to leverage the power of information against other
-entities, such as companies or governments.
+need of protection. The focus of this document is on the impact that leveraging this power
+differential can have against people, but the same techniques are also used to leverage the power of
+information against other entities, such as companies or governments.
 
 The [=rules=] that apply vary from [=context=] to [=context=] ([[?Understanding-Privacy]], [[?CI]]): people
-have different expectations of [=privacy=] at work, at a café, or at home. Understanding and
+have different expectations of [=privacy=] at work, at a café, or at home for instance. Understanding and
 evaluating a privacy situation is best done by clearly identifying:
 
-* Its [=actors=], which include the subject of the information as well as the sender and recipient
-  of the [=information flow=]. (Note that recipients might not be intentional.)
+* Its [=actors=], which include the subject of the information as well as the sender and the recipient
+  of the [=information flow=]. (Note that recipients might not always intend to be recipients.)
 * The specific type of data in the [=information flow=].
 * The [=rules=] that are in use in this specific context.
 
 It is important to keep in mind that there are <em>always</em> privacy [=rules=]. There is no
 purportedly neutral situation in which no [=rules=] apply. We must therefore determine which [=rules=]
-best serve human values ([[?ETHICAL-WEB]], [[?Why-Privacy]]).
+best align with ethical Web values ([[?ETHICAL-WEB]], [[?Why-Privacy]]).
 
 <dfn data-lt='information'>Information flows</dfn> as understood in this document are information
-exchanged or processed by [=actors=], whenever people are involved. The information itself need not
-necessarily be [=personal data=]. Disruptive or interruptive information flowing <em>to</em> a
+exchanged or processed by [=actors=]. The information itself need not necessarily be
+[=personal data=]. Disruptive or interruptive information flowing <em>to</em> a
 person is in scope, as is [=de-identified=] [=data=] that can be used to manipulate people or that
 was extracted by observing people's behaviour on someone else's website.
 
