@@ -22,11 +22,31 @@
       }],
       github: 'w3ctag/privacy-principles',
       shortName: 'privacy-principles',
+      postProcess: [
+        () => {
+          // relabel each principle, and lose the numbering, delabel principle summary
+          for (let label of document.querySelectorAll('div.practice > a.marker > bdi, #bp-summary > ul > li > a.marker > bdi')) {
+            label.textContent = 'Principle';
+          }
+          for (let prac of document.querySelectorAll('div.practice.advisement')) {
+            prac.classList.remove('advisement');
+            prac.classList.add('principle');
+          }
+          let h2 = document.querySelector('#bp-summary > h2');
+          h2.innerHTML = h2.innerHTML.replace('Best Practices Summary', 'Principles Summary');
+        }
+      ],
       localBiblio: {
         'Anti-Tracking-Policy': {
           title: 'Anti-Tracking Policy',
           href: 'https://wiki.mozilla.org/Security/Anti_tracking_policy#Tracking_Definition',
           publisher: 'Mozilla',
+        },
+        'Automating-Inequality': {
+          title: 'Automating Inequality: How High-Tech Tools Profile, Police, and Punish the Poor',
+          href: 'https://us.macmillan.com/books/9781250074317/automatinginequality',
+          authors: ['Virginia Eubanks'],
+          publisher: 'Macmillan',
         },
         'Big-Data-Competition': {
           title: 'Big Data and Competition Policy',
@@ -264,6 +284,21 @@
       },
     };
   </script>
+  <style>
+    .principle {
+      border: .5em;
+      border-color: cornflowerblue;
+      border-style: none none none double;
+      background: transparent;
+      padding: .5em;
+      page-break-inside: avoid;
+      margin: 1em auto;
+    }
+    .principle > .marker {
+      color: cornflowerblue;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body data-cite="html indexedDB service-workers fingerprinting-guidance url">
 
@@ -1043,9 +1078,8 @@ from users.
 
 ## Principles for Vulnerable People
 
-<aside class="issue">
-  This section has not been written.
-</aside>
+Some people, or groups of people, are at greater risk from the asymmetries of power created by the
+concentration of information power ([[?Automating-Inequality]]).
 
 ## Principles for Notifications and Interruptions
 
