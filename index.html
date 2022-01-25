@@ -1473,9 +1473,56 @@ to offer better protection by default? Given the contested nature of the [^a/pin
 the absence of a forcing function to support collective enforcement, the scheme failed to deliver
 improved privacy.
 
-## Guardians and Device Owners {#guardians-and-owners}
+## Device Owners {#device-owners}
 
-<aside class="issue" data-number="2">
+<div class="practice">
+<span class="practicelab" id="principle-owned-devices-disclose-surveillance">
+[=User agents=] must not help a [=device owner=] spy on the people using their devices without those
+people's knowledge.
+</span>
+</div>
+
+<div class="practice">
+<span class="practicelab" id="principle-reasonable-disclosure-on-owned-devices">
+[=User agents=] should only tell a [=device owner=] about user behavior when that disclosure is
+necessary to enforce reasonable constraints on use of the device.
+</span>
+</div>
+
+
+Many [=user agents=] run on devices that are owned by a different [=actor=] than the [=person=]
+using the [=user agent=]. There are several different sorts of these <dfn>device owners</dfn>, which
+include:
+
+<table class="data">
+<thead>
+<tr><th>[=device owner|Owner=]<th>User
+<tbody>
+<tr><td>Employer<td>Employee
+<tr><td>Parent<td>Child
+<tr><td>Romantic partner<td>Romantic partner
+<tr><td>Friend<td>Visitor
+</table>
+
+While a [=device owner=] has an interest and sometimes a responsibility to make sure their device is
+used in the ways they intended, the person _using_ the device still has a right to privacy while
+using it. The above principles enforce this right to privacy in two ways:
+
+1. [=User agent=] developers need to consider whether requests from [=device owners=] are
+   reasonable, and refuse to implement unreasonable requests, even if that means fewer sales. Owner
+   needs must not simply trump user needs in the <a
+   data-cite="design-principles#priority-of-constituencies">priority of constituencies</a>.
+1. Even when information disclosure is reasonable, the [=person=] whose data is being disclosed
+   needs to opt into that disclosure by using the device after being told what's going to happen.
+
+Some [=device owner=] requests might be reasonable for some sorts of users, like employees or
+especially children, but not be reasonable for other sorts, like friends or romantic partners. In
+those cases, the [=user agent=] can explain what the [=device owner=] is going to learn in a way
+that also says what sort of user is expected to agree. Users in other classes can then react
+appropriately.
+
+<aside class="issue">
+Link this to the "guardians" section when that's written.
 </aside>
 
 ## Harassment
