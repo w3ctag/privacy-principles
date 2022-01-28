@@ -1176,109 +1176,64 @@ to offer better protection by default? Given the contested nature of the [^a/pin
 the absence of a forcing function to support collective enforcement, the scheme failed to deliver
 improved privacy.
 
-## Principles for Safety, Abuse, and Fraud {#safety}
+## Balancing Conflicting Privacy Rights {#balancing}
 
-There are some cases where privacy and safety are in tension. Many of these cases are
-short-term, only existing until we develop a system that achieves both privacy and
-safety. Long-term cases are rare, but still occasionally come up. We can distinguish
-three categories:
-
-1. A person's privacy exists in a tradeoff with their own safety.
-
-   <aside class="example" id="example-single-user-safety-tradeoff">
-
-   * A phone might be able to detect a car crash and automatically send its location to
-     emergency services.
-
-   * A person might want to sign up many accounts ("sockpuppets") on a service in order to
-     trick other people into thinking a belief had more support than it really has. To
-     combat this, the service might collect extra data from all users in order to
-     distinguish those two kinds of accounts. The innocent users are being protected by
-     that extra data collection.
-
-   </aside>
-
-1. The privacy of a person using a service exists in a tradeoff with the safety of other
-   people using that service.
-
-   <aside class="example" id="example-multi-user-safety-tradeoff">
-
-   * In the <a href="#example-single-user-safety-tradeoff">sockpuppet example</a>, the
-     person trying to create multiple accounts is not having their own safety protected by
-     the extra data collection. Instead, other people are being protected from them.
-
-     * A person might want to post false or fraudulent information, or malware, to a
-       content hosting service. While the service can take down this information as it's
-       discovered, if the poster has complete privacy after misbehaving, they can just
-       re-upload the malicious content and can escape prosecution for anything illegal.
-
-     * In a service aimed at children, pedophiles might want to pretend to be children in
-       order to take advantage of the other users. While an ethical platform will likely
-       have content filtering and reporting features, attackers have been known to
-       encourage children to switch to platforms that aren't intended for children in
-       order to avoid these controls.
-
-     * People trying to misinform others will often find it easier when their victims
-       can't find the authors' real affiliations. One aspect of this is
-       [astroturfing](https://en.wikipedia.org/wiki/Astroturfing), where powerful
-       interests pay people or create fake accounts in order to create the impression of
-       agreement from more-sympathetic sources.
-
-   * A person might want to pretend to view or click an ad many times, either to convince
-     an advertiser to pay the website the ad appeared on, or to cost a particular
-     advertiser a lot of money. People browsing websites and people posting advertisements
-     are both users of the advertising network that manages click data, and the
-     advertising network might collect extra data from all the viewers and clickers in
-     order to protect the advertisers.
-
-   </aside>
-
-1. The privacy of a person using a service exists in a tradeoff with the safety of the
-   service itself.
-
-   <aside class="example" id="example-user-service-safety-tradeoff">
-
-   * A service might collect IP address data from its visitors in order to block any that
-     are attacking the service. While a successful attack might also harm users, for
-     example if it prevents them from using the service or reveals their private data to
-     the attacker, the service might still be primarily motivated by preventing damage to
-     itself.
-
-   </aside>
-
-<div class="practice">
-
-<p><span class="practicelab" id="principle-safety-with-privacy">As much as possible,
-services should provide both safety and privacy.</span></p>
-
-This may require the development and adoption of new technologies. For example, wider
-adoption of [[?WebAuthn]] could reduce account hijacking enough that services no longer
-need to fingerprint devices to prevent it.
-
-</div>
+Sometimes different people's privacy rights come into conflict. Often this happens when
+one user of a service is trying to invade another user's privacy: hiding all private
+information about the first user can prevent the service from protecting the second user.
 
 <div class="practice">
 
 <p><span class="practicelab" id="principle-violation-sacrifices-privacy">When a
 person violates the [=principles=] of a [=context=] they're interacting with, the service
 operating that context may use their data in ways that would otherwise be
-[=inappropriate=] solely in order to protect other users of that service.</span></p>
+[=inappropriate=] in order to protect other people.</span></p>
 
-Some extra use of personal data might also be [=appropriate=] in order to protect the
-service itself, but less than is appropriate to protect other people.
+The service may also use innocent people's data in order to distinguish them from these
+bad actors.
 
 <strong>However:</strong>
 
 1. These principles need to be widely-agreed, not just details within a unilateral
-   terms-of-service. For example, in most [=contexts=], it's [=inappropriate=] for a user
-   to attempt to execute their own code with the context's host's privileges. On the other
-   hand, there's generally no principle against viewing content using accessibility tools,
-   even if a site's terms of service prohibit it.
+   terms-of-service. For example, in most [=contexts=], it's [=inappropriate=] for a
+   person to misrepresent themself in order to trick other people. On the other hand,
+   there's generally no principle against transparently adopting a pseudonym, even if a
+   site's terms of service prohibit it.
 
 1. The service must take technical and legal measures to ensure the extra data it's
-   collecting for safety reasons cannot be used for other purposes.
+   collecting to protect people cannot be used for other purposes, like to grow the
+   service.
 
 </div>
+
+<aside class="example" id="example-sockpuppets" title="Sockpuppets">
+
+A person might want to sign up many accounts ("sockpuppets") on a service in order to
+trick other people into thinking a belief has more support than it really has. This
+violates the other people's rights to be free from manipulation, and so it's
+[=appropriate=] to collect enough extra data to identify these sockpuppets.
+
+Similar measures are appropriate to resist
+[astroturfing](https://en.wikipedia.org/wiki/Astroturfing).
+
+</aside>
+
+<aside class="example" id="example-children" title="Children's Services">
+
+Children using a service (or their guardians) may want to ensure their interaction with
+that service is only visible to other children. This can justify collecting ages from the
+service's users in order to exclude adults, but not to then use those ages for other
+purposes.
+
+</aside>
+
+<aside class="note">
+
+Note that people's privacy can also conflict with other important concerns. As discussed
+in the [[[Ethical-Web]]], it's important to balance these concerns, but this document
+doesn't discuss how to do to.
+
+</aside>
 
 
 ## Principles for Guardians and Device Owners {#guardians-and-owners}
