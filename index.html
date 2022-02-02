@@ -527,14 +527,14 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "id": "why-privacy"
     }
   },
-  "publishISODate": "2022-02-01T00:00:00.000Z",
-  "generatedSubtitle": "Draft TAG Finding 01 February 2022"
+  "publishISODate": "2022-02-02T00:00:00.000Z",
+  "generatedSubtitle": "Draft TAG Finding 02 February 2022"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/base.css"></head>
 <body data-cite="html indexedDB service-workers fingerprinting-guidance url" class="h-entry informative"><div class="head">
      <h1 id="title" class="title">Privacy Principles</h1>
     
-    <p id="w3c-state"><a href="https://www.w3.org/standards/types#editor-draft-finding">W3C Draft TAG Finding</a> <time class="dt-published" datetime="2022-02-01">01 February 2022</time></p>
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#editor-draft-finding">W3C Draft TAG Finding</a> <time class="dt-published" datetime="2022-02-02">02 February 2022</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
@@ -918,11 +918,14 @@ store data about that <a data-link-type="dfn" href="#dfn-individual" class="inte
 </ul>
 <p>Strings derived from <a data-link-type="dfn" href="#dfn-identifier" class="internalDFN" id="ref-for-dfn-identifier-2">identifiers</a>, for instance through hashing, are still
 <a data-link-type="dfn" href="#dfn-identifier" class="internalDFN" id="ref-for-dfn-identifier-3">identifiers</a> so long as they may identify a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-53">person</a>.</p>
-<div class="practice principle"><a class="marker self-link" href="#principle-identity-per-context"><bdi lang="en">Principle</bdi></a>: <span class="practicelab" id="principle-identity-per-context"><a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-20">User agents</a> should support
-their <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-54">users</a>' <a data-link-type="dfn" href="#dfn-autonomous" class="internalDFN" id="ref-for-dfn-autonomous-11">autonomy</a> by helping them present their intended <a data-link-type="dfn" href="#dfn-identity" class="internalDFN" id="ref-for-dfn-identity-6">identity</a> to each
-<a data-link-type="dfn" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-15">context</a> that they visit.</span>
+<div class="practice principle"><a class="marker self-link" href="#principle-identity-per-context"><bdi lang="en">Principle</bdi></a>: <span class="practicelab" id="principle-identity-per-context">A <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-20">user agent</a> should help
+its user present the <a data-link-type="dfn" href="#dfn-identity" class="internalDFN" id="ref-for-dfn-identity-6">identity</a> they want in each <a data-link-type="dfn" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-15">context</a> they find themself
+in.</span>
 
 <p></p>
+<p>Sometimes this means the UA should ensure that one site can't learn anything about their
+user's behavior on another site, while at other times the UA should help their user prove to
+one site that they have a particular identity on another site.</p>
 </div>
 
 <p>To do this, <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-21">user agents</a> have to make some assumptions about the borders between <a data-link-type="dfn" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-16">contexts</a>. By
@@ -964,7 +967,7 @@ share data between the contexts, the fact that those distinct <a data-link-type=
 <p>As described in <a href="#identity" class="sec-ref"><bdi class="secno">2.1 </bdi>Principles for Identity on the Web</a>, <a data-link-type="dfn" href="#dfn-cross-context-recognition" class="internalDFN" id="ref-for-dfn-cross-context-recognition-4">cross-context recognition</a> can sometimes be <a data-link-type="dfn" href="#dfn-appropriately" class="internalDFN" id="ref-for-dfn-appropriately-8">appropriate</a>, but
 users need to be able to control when websites do it as much as possible.</p>
 <div class="practice principle"><a class="marker self-link" href="#principle-prevent-cross-partition-recognition"><bdi lang="en">Principle</bdi></a>: <span class="practicelab" id="principle-prevent-cross-partition-recognition"><a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-27">User agents</a>
-should ensure that, if a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-55">person</a> visits two or more web pages from different <a data-link-type="dfn" href="#dfn-partition" class="internalDFN" id="ref-for-dfn-partition-1">partitions</a>, that
+should ensure that, if a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-54">person</a> visits two or more web pages from different <a data-link-type="dfn" href="#dfn-partition" class="internalDFN" id="ref-for-dfn-partition-1">partitions</a>, that
 the pages cannot quickly determine that the visits probably came from the same person, for any
 significant or involuntary fraction of the people who use the web, unless the person explicitly
 expresses the same <a data-link-type="dfn" href="#dfn-identity" class="internalDFN" id="ref-for-dfn-identity-10">identity</a> to the visits, or preventing this correlation would break a
@@ -989,23 +992,23 @@ aspects of the web. In many cases it's possible to change the design in a way th
 violation without breaking valid use cases, but for cases where that's not possible this document
 delegates to other documents, for example the <cite><a href="https://w3cping.github.io/privacy-threat-model/">Target Privacy Threat Model</a></cite>, to discuss what detailed
 tradeoffs to make.</li>
-<li>This principle may not be able to be applied in situations where a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-56">person</a> has shared <a data-link-type="dfn" href="#dfn-identity" class="internalDFN" id="ref-for-dfn-identity-11">identity</a>
+<li>This principle may not be able to be applied in situations where a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-55">person</a> has shared <a data-link-type="dfn" href="#dfn-identity" class="internalDFN" id="ref-for-dfn-identity-11">identity</a>
 information in a medium that is not accessible to the <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-28">user agent</a>.</li>
 </ul>
 <p><a data-link-type="dfn" href="#dfn-partition" class="internalDFN" id="ref-for-dfn-partition-3">Partitions</a> are separated in two ways that lead to distinct kinds of user-visible recognition.
 When their divisions between different sites are violated, that leads to <a href="#hl-recognition-cross-site" class="sec-ref"><bdi class="secno">2.1.1.2 </bdi>Unwanted cross-site recognition</a>. When a violation occurs at their other divisions, for
 example between different browser profiles or at the point someone clears their cookies and site
 storage, that leads to <a href="#hl-recognition-same-site" class="sec-ref"><bdi class="secno">2.1.1.1 </bdi>Same-site recognition</a>.</p>
-<section id="same-site-recognition"><h5 id="hl-recognition-same-site"><bdi class="secno">2.1.1.1 </bdi>Same-site recognition</h5><a class="self-link" href="#hl-recognition-same-site" aria-label="Permalink for Section 2.1.1.1"></a><p>The web platform offers many ways for a website to recognize that a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-57">person</a> is using the same
+<section id="same-site-recognition"><h5 id="hl-recognition-same-site"><bdi class="secno">2.1.1.1 </bdi>Same-site recognition</h5><a class="self-link" href="#hl-recognition-same-site" aria-label="Permalink for Section 2.1.1.1"></a><p>The web platform offers many ways for a website to recognize that a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-56">person</a> is using the same
 <a data-link-type="dfn" href="#dfn-identity" class="internalDFN" id="ref-for-dfn-identity-12">identity</a> over time, including <cite><a class="bibref" data-link-type="biblio" href="#bib-rfc6265" title="HTTP State Management Mechanism">cookies</a></cite>, <a data-link-type="idl" data-type="attribute" href="https://html.spec.whatwg.org/multipage/webstorage.html#dom-localstorage"><code>localStorage</code></a>,
 <a data-link-type="idl" data-type="attribute" href="https://www.w3.org/TR/IndexedDB/#dom-windoworworkerglobalscope-indexeddb"><code>indexedDB</code></a>, <a data-link-type="idl" data-lt="CacheStorage" data-type="interface" href="https://www.w3.org/TR/service-workers-1/#cachestorage"><code>CacheStorage</code></a>, and other forms of storage. This allows
-sites to save the <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-58">person</a>'s preferences, shopping carts, etc., and people have come to expect this
+sites to save the <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-57">person</a>'s preferences, shopping carts, etc., and people have come to expect this
 behavior in some contexts.</p>
-<p>A privacy harm occurs if a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-59">person</a> reasonably expects that they'll be using a different <a data-link-type="dfn" href="#dfn-identity" class="internalDFN" id="ref-for-dfn-identity-13">identity</a>
+<p>A privacy harm occurs if a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-58">person</a> reasonably expects that they'll be using a different <a data-link-type="dfn" href="#dfn-identity" class="internalDFN" id="ref-for-dfn-identity-13">identity</a>
 on a site, but the site discovers and uses the fact that the two or more visits probably came from
-the same <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-60">person</a> anyway.</p>
+the same <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-59">person</a> anyway.</p>
 <p><a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-29">User agents</a> can't, in general, determine exactly where intra-site <a data-link-type="dfn" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-19">context</a> boundaries are, or
-how a site allows a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-61">person</a> to express that they intend to change <a data-link-type="dfn" href="#dfn-identity" class="internalDFN" id="ref-for-dfn-identity-14">identities</a>, so they're not
+how a site allows a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-60">person</a> to express that they intend to change <a data-link-type="dfn" href="#dfn-identity" class="internalDFN" id="ref-for-dfn-identity-14">identities</a>, so they're not
 responsible to enforce that sites actually separate <a data-link-type="dfn" href="#dfn-identity" class="internalDFN" id="ref-for-dfn-identity-15">identities</a> at those boundaries. The <a href="#principle-prevent-cross-partition-recognition">principle</a> here instead requires separation
 at <a data-link-type="dfn" href="#dfn-partition" class="internalDFN" id="ref-for-dfn-partition-4">partition</a> boundaries.</p>
 <p>Cross-<a data-link-type="dfn" href="#dfn-partition" class="internalDFN" id="ref-for-dfn-partition-5">partition</a> recognition is generally accomplished by either "supercookies" or <a data-type="dfn" href="https://www.w3.org/TR/fingerprinting-guidance/#dfn-browser-fingerprinting">browser
@@ -1015,10 +1018,10 @@ more difficult to clear than other cookies or storage.
 <a href="https://www.w3.org/TR/fingerprinting-guidance/#clearing-all-local-state">Fingerprinting
 Guidance § Clearing all local state</a> discusses how specifications can help
 browsers avoid this mistake.</p>
-<p>Fingerprinting consists of using attributes of the <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-62">person</a>'s browser and platform
+<p>Fingerprinting consists of using attributes of the <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-61">person</a>'s browser and platform
 that are consistent between two or more visits and probably unique to the
 person.</p>
-<p>The attributes can be exposed as information about the <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-63">person</a>'s device that is
+<p>The attributes can be exposed as information about the <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-62">person</a>'s device that is
 otherwise benign (as opposed to <a href="#hl-sensitive-information" class="sec-ref"><bdi class="secno">2.3 </bdi>Principles for Sensitive Information</a>). For example:</p>
 <ul>
 <li>What are the person's language and time zone?</li>
@@ -1040,9 +1043,9 @@ of an event that occurs nearly-simultaneously on both sites.</p>
 </aside></div>
 
 <p>We define <dfn data-lt="data|personal data" id="dfn-data" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">personal data</dfn> as any information that is directly or
-indirectly related to an identified or identifiable <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-64">person</a>, such as by reference to an
+indirectly related to an identified or identifiable <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-63">person</a>, such as by reference to an
 <a data-link-type="dfn" href="#dfn-identifier" class="internalDFN" id="ref-for-dfn-identifier-4">identifier</a> ([<cite><a class="bibref" data-link-type="biblio" href="#bib-gdpr" title="General Data Protection Regulations (GDPR) / Regulation (EU) 2016/679">GDPR</a></cite>], [<cite><a class="bibref" data-link-type="biblio" href="#bib-oecd-guidelines" title="OECD Guidelines on the Protection of Privacy and Transborder Flows of Personal Data">OECD-Guidelines</a></cite>], [<cite><a class="bibref" data-link-type="biblio" href="#bib-convention-108" title="Convention for the Protection of Individuals with regard to Automatic Processing of Personal Data">Convention-108</a></cite>]).</p>
-<p>If a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-65">person</a> could reasonably be identified or re-identified when <a data-link-type="dfn" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-13">data</a> is combined with other
+<p>If a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-64">person</a> could reasonably be identified or re-identified when <a data-link-type="dfn" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-13">data</a> is combined with other
 <a data-link-type="dfn" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-14">data</a>, then that makes that data <a data-link-type="dfn" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-15">personal data</a>.</p>
 <section id="data-users-and-use"><h4 id="data-users"><bdi class="secno">2.2.1 </bdi>Data users and use</h4><a class="self-link" href="#data-users" aria-label="Permalink for Section 2.2.1"></a><p>A <dfn data-lt="data processor|service provider" data-plurals="service providers" id="dfn-data-processor" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">service provider</dfn> or <a data-link-type="dfn" href="#dfn-data-processor" class="internalDFN" id="ref-for-dfn-data-processor-1">data processor</a> is considered to be the same
 <a data-link-type="dfn" href="#dfn-party" class="internalDFN" id="ref-for-dfn-party-13">party</a> as the entity contracting it to perform the relevant <a data-link-type="dfn" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-18">processing</a> if it:</p>
@@ -1068,13 +1071,13 @@ guideline, it's neither necessary nor sufficient for <a data-link-type="dfn" hre
 but still treat it <a data-link-type="dfn" href="#dfn-appropriately" class="internalDFN" id="ref-for-dfn-appropriately-10">appropriately</a>.</p>
 <section id="de-identification"><h5 id="x2-2-2-1-de-identification"><bdi class="secno">2.2.2.1 </bdi>De-identification</h5><a class="self-link" href="#de-identification" aria-label="Permalink for Section 2.2.2.1"></a>
 <p>Data is <dfn id="dfn-de-identified" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">de-identified</dfn> when there exists a high level of confidence
-that no <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-66">person</a> described by the data can be identified, directly or indirectly
+that no <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-65">person</a> described by the data can be identified, directly or indirectly
 (e.g. via association with an <a data-link-type="dfn" href="#dfn-identifier" class="internalDFN" id="ref-for-dfn-identifier-5">identifier</a>, user agent, or device), by that data alone or in
 combination with other available information. Note
 that further considerations relating to groups are covered in the
 <a href="#collective">Collective Issues in Privacy</a> section.</p>
 <p>We talk of <dfn id="dfn-controlled-de-identified-data" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">controlled de-identified data</dfn> when there are strict controls that prevent the
-re-identification of <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-67">people</a> described by the data except for a well-defined set of <a data-link-type="dfn" href="#dfn-purpose" class="internalDFN" id="ref-for-dfn-purpose-11">purposes</a>.</p>
+re-identification of <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-66">people</a> described by the data except for a well-defined set of <a data-link-type="dfn" href="#dfn-purpose" class="internalDFN" id="ref-for-dfn-purpose-11">purposes</a>.</p>
 <p>Different situations involving <a data-link-type="dfn" href="#dfn-controlled-de-identified-data" class="internalDFN" id="ref-for-dfn-controlled-de-identified-data-1">controlled de-identified data</a> will require different controls. For instance,
 if the <a data-link-type="dfn" href="#dfn-controlled-de-identified-data" class="internalDFN" id="ref-for-dfn-controlled-de-identified-data-2">controlled de-identified data</a> is <em>only</em> being processed by one <a data-link-type="dfn" href="#dfn-party" class="internalDFN" id="ref-for-dfn-party-20">party</a>, typical controls
 include making sure that the <a data-link-type="dfn" href="#dfn-identifier" class="internalDFN" id="ref-for-dfn-identifier-6">identifiers</a> used in the data are unique to that dataset, that
@@ -1113,7 +1116,7 @@ describing the limited <a data-link-type="dfn" href="#dfn-purpose" class="intern
 </ul>
 <p>Note that <a data-link-type="dfn" href="#dfn-controlled-de-identified-data" class="internalDFN" id="ref-for-dfn-controlled-de-identified-data-5">controlled de-identified data</a>, on its own, is not sufficient to render <a data-link-type="dfn" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-22">data processing</a>
 <a data-link-type="dfn" href="#dfn-appropriately" class="internalDFN" id="ref-for-dfn-appropriately-11">appropriate</a>.</p>
-</section></section><section id="rights"><h4 id="data-rights"><bdi class="secno">2.2.3 </bdi>Rights</h4><a class="self-link" href="#data-rights" aria-label="Permalink for Section 2.2.3"></a><p>To the extent possible, <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-68">people</a> should retain a certain number of rights over their data, and
+</section></section><section id="rights"><h4 id="data-rights"><bdi class="secno">2.2.3 </bdi>Rights</h4><a class="self-link" href="#data-rights" aria-label="Permalink for Section 2.2.3"></a><p>To the extent possible, <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-67">people</a> should retain a certain number of rights over their data, and
 these rights should be facilitated by the <a data-link-type="dfn" href="#dfn-party" class="internalDFN" id="ref-for-dfn-party-23">parties</a>. While data rights are a self-governing
 mechanism that is not sufficient to support <a data-link-type="dfn" href="#dfn-privacy" class="internalDFN" id="ref-for-dfn-privacy-6">privacy</a>, they do complement self-determination and
 help improve accountability. Such rights should include:</p>
@@ -1266,7 +1269,7 @@ law enforcement and intellligence agencies.</p>
 </section><section id="principles-for-notifications-and-interruptions"><h3 id="x2-11-principles-for-notifications-and-interruptions"><bdi class="secno">2.11 </bdi>Principles for Notifications and Interruptions</h3><a class="self-link" href="#principles-for-notifications-and-interruptions" aria-label="Permalink for Section 2.11"></a>
 <div class="issue" id="issue-container-generatedID-10"><div role="heading" class="issue-title marker" id="h-issue-12" aria-level="2"><span>Issue</span></div><aside class="">
 
-<p>Connect intrusiveness to <a data-link-type="dfn" href="#dfn-autonomous" class="internalDFN" id="ref-for-dfn-autonomous-12">autonomy</a>, and write some principles.</p>
+<p>Connect intrusiveness to <a data-link-type="dfn" href="#dfn-autonomous" class="internalDFN" id="ref-for-dfn-autonomous-11">autonomy</a>, and write some principles.</p>
 </aside></div>
 
 
@@ -1274,11 +1277,11 @@ law enforcement and intellligence agencies.</p>
 
 </section></section><section class="appendix" id="common-concepts"><h2 id="boring-terminology"><bdi class="secno">A. </bdi>Common Concepts</h2><a class="self-link" href="#boring-terminology" aria-label="Permalink for Appendix A."></a>
 
-<section id="people-0"><h3 id="people"><bdi class="secno">A.1 </bdi>People</h3><a class="self-link" href="#people" aria-label="Permalink for Appendix A.1"></a><p>A <dfn data-lt="individual|people|user|data subject|person" data-plurals="users" id="dfn-individual" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">person</dfn> (also <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-69">user</a> or
-<a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-70">data subject</a>) is any natural person. Throughout this document, we primarily use <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-71">person</a> or
-<a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-72">people</a> to refer to human beings, as a reminder of their humanity. When we use the term <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-73">user</a>,
-it is to talk about the specific <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-74">person</a> who happens to be using a given system at that time.</p>
-<p>A <dfn data-lt="vulnerable|vulnerable person" id="dfn-vulnerable" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">vulnerable person</dfn> is a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-75">person</a> who may be unable to
+<section id="people-0"><h3 id="people"><bdi class="secno">A.1 </bdi>People</h3><a class="self-link" href="#people" aria-label="Permalink for Appendix A.1"></a><p>A <dfn data-lt="individual|people|user|data subject|person" id="dfn-individual" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">person</dfn> (also <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-68">user</a> or
+<a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-69">data subject</a>) is any natural person. Throughout this document, we primarily use <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-70">person</a> or
+<a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-71">people</a> to refer to human beings, as a reminder of their humanity. When we use the term <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-72">user</a>,
+it is to talk about the specific <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-73">person</a> who happens to be using a given system at that time.</p>
+<p>A <dfn data-lt="vulnerable|vulnerable person" id="dfn-vulnerable" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">vulnerable person</dfn> is a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-74">person</a> who may be unable to
 exercise sufficient self-determination in a <a data-link-type="dfn" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-20">context</a>. Amongst other things, they should
 be treated with greater default privacy protections and may be considered unable to
 <a data-link-type="dfn" href="#dfn-opt-in" class="internalDFN" id="ref-for-dfn-opt-in-13">consent</a> to various interactions with a system.
@@ -1286,30 +1289,30 @@ People can be vulnerable for different reasons, for example because they are chi
 are employees with respect to their employers, are facing a steep asymmetry of power,
 are people in some situations of intellectual or psychological impairment, are
 refugees, etc.</p>
-<p>A <dfn data-plurals="contexts" id="dfn-context" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">context</dfn> is a physical or digital environment that a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-76">person</a> interacts with
-for a set of <a data-link-type="dfn" href="#dfn-purpose" class="internalDFN" id="ref-for-dfn-purpose-13">purposes</a> (that they typically share with other <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-77">people</a> who interact with the
+<p>A <dfn data-plurals="contexts" id="dfn-context" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">context</dfn> is a physical or digital environment that a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-75">person</a> interacts with
+for a set of <a data-link-type="dfn" href="#dfn-purpose" class="internalDFN" id="ref-for-dfn-purpose-13">purposes</a> (that they typically share with other <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-76">people</a> who interact with the
 same environment).</p>
-</section><section id="server-side-parties"><h3 id="parties"><bdi class="secno">A.2 </bdi>Server-Side Parties</h3><a class="self-link" href="#parties" aria-label="Permalink for Appendix A.2"></a><p>A <dfn data-plurals="parties" id="dfn-party" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">party</dfn> is an entity that a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-78">person</a> can reasonably understand as a single "thing"
+</section><section id="server-side-parties"><h3 id="parties"><bdi class="secno">A.2 </bdi>Server-Side Parties</h3><a class="self-link" href="#parties" aria-label="Permalink for Appendix A.2"></a><p>A <dfn data-plurals="parties" id="dfn-party" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">party</dfn> is an entity that a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-77">person</a> can reasonably understand as a single "thing"
 they're interacting with. Uses of this document in a particular domain are expected to describe how
-the core concepts of that domain combine into a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-79">user</a>-comprehensible <a data-link-type="dfn" href="#dfn-party" class="internalDFN" id="ref-for-dfn-party-25">party</a>, and those refined
+the core concepts of that domain combine into a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-78">user</a>-comprehensible <a data-link-type="dfn" href="#dfn-party" class="internalDFN" id="ref-for-dfn-party-25">party</a>, and those refined
 definitions are likely to differ between domains.</p>
-<p>The <dfn data-lt="first parties|first party" id="dfn-first-parties" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">first party</dfn> is a <a data-link-type="dfn" href="#dfn-party" class="internalDFN" id="ref-for-dfn-party-26">party</a> with which a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-80">person</a> intends to
+<p>The <dfn data-lt="first parties|first party" id="dfn-first-parties" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">first party</dfn> is a <a data-link-type="dfn" href="#dfn-party" class="internalDFN" id="ref-for-dfn-party-26">party</a> with which a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-79">person</a> intends to
 interact. Merely hovering over, muting, pausing, or closing a given piece of content does
-not mean a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-81">person</a> intends to interact with another party, nor does the simple
+not mean a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-80">person</a> intends to interact with another party, nor does the simple
 fact of loading a <a data-link-type="dfn" href="#dfn-party" class="internalDFN" id="ref-for-dfn-party-27">party</a> embedded in the one with which the person intends to
 interact. In cases of clear and conspicuous joint branding, there can be multiple <a data-link-type="dfn" href="#dfn-first-parties" class="internalDFN" id="ref-for-dfn-first-parties-9">first parties</a>. The <a data-link-type="dfn" href="#dfn-first-parties" class="internalDFN" id="ref-for-dfn-first-parties-10">first party</a> is necessarily a <a data-link-type="dfn" href="#dfn-data-controller" class="internalDFN" id="ref-for-dfn-data-controller-4">data controller</a> of the data processing
-that takes places as a consequence of a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-82">person</a> interacting with it.</p>
+that takes places as a consequence of a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-81">person</a> interacting with it.</p>
 <div class="issue" id="issue-container-generatedID-11"><div role="heading" class="issue-title marker" id="h-issue-13" aria-level="3"><span>Issue</span></div><aside class="">
 
 <p>Refine the description of third parties so it matches
 intuition better.</p>
 </aside></div>
 
-<p>A <dfn data-lt="third parties|third party" id="dfn-third-parties" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">third party</dfn> is any <a data-link-type="dfn" href="#dfn-party" class="internalDFN" id="ref-for-dfn-party-28">party</a> other than the <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-83">person</a> visiting the website,
-the <a data-link-type="dfn" href="#dfn-first-parties" class="internalDFN" id="ref-for-dfn-first-parties-11">first party</a>, or a <a data-link-type="dfn" href="#dfn-data-processor" class="internalDFN" id="ref-for-dfn-data-processor-3">service provider</a> acting on behalf of either the <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-84">person</a> or
+<p>A <dfn data-lt="third parties|third party" id="dfn-third-parties" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">third party</dfn> is any <a data-link-type="dfn" href="#dfn-party" class="internalDFN" id="ref-for-dfn-party-28">party</a> other than the <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-82">person</a> visiting the website,
+the <a data-link-type="dfn" href="#dfn-first-parties" class="internalDFN" id="ref-for-dfn-first-parties-11">first party</a>, or a <a data-link-type="dfn" href="#dfn-data-processor" class="internalDFN" id="ref-for-dfn-data-processor-3">service provider</a> acting on behalf of either the <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-83">person</a> or
 the <a data-link-type="dfn" href="#dfn-first-parties" class="internalDFN" id="ref-for-dfn-first-parties-12">first party</a>.</p>
 </section><section id="acting-on-data-0"><h3 id="acting-on-data"><bdi class="secno">A.3 </bdi>Acting on Data</h3><a class="self-link" href="#acting-on-data" aria-label="Permalink for Appendix A.3"></a><p><dfn id="dfn-privacy" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Privacy</dfn> is achieved in a given <a data-link-type="dfn" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-21">context</a> that either involves <a data-link-type="dfn" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-27">personal data</a> or
-involves information being presented to <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-85">people</a> when the <a data-link-type="dfn" href="#dfn-principles" class="internalDFN" id="ref-for-dfn-principles-21">principles</a> of that <a data-link-type="dfn" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-22">context</a> are
+involves information being presented to <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-84">people</a> when the <a data-link-type="dfn" href="#dfn-principles" class="internalDFN" id="ref-for-dfn-principles-21">principles</a> of that <a data-link-type="dfn" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-22">context</a> are
 followed appropriately. When the <a data-link-type="dfn" href="#dfn-principles" class="internalDFN" id="ref-for-dfn-principles-22">principles</a> for that <a data-link-type="dfn" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-23">context</a> are not followed, there is a
 <dfn id="dfn-privacy-violation" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">privacy violation</dfn>. Similarly, we say that a particular interaction is
 <dfn data-lt="appropriately|appropriate" id="dfn-appropriately" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">appropriate</dfn> when the <a data-link-type="dfn" href="#dfn-principles" class="internalDFN" id="ref-for-dfn-principles-23">principles</a> are adhered
@@ -1407,10 +1410,10 @@ be <a data-link-type="dfn" href="#dfn-inappropriately" class="internalDFN" id="r
 specifications to defend against, described in the sections that follow.</p>
 </section>
 
-<section class="appendix" id="bp-summary"><h2 id="c-best-practices-summary"><bdi class="secno">C. </bdi>Principles Summary</h2><a class="self-link" href="#bp-summary" aria-label="Permalink for Appendix C."></a><ul><li><a class="marker self-link" href="#principle-identity-per-context"><bdi lang="en">Principle</bdi></a>: <span class="practicelab"><a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-30">User agents</a> should support
-their <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-86">users</a>' <a data-link-type="dfn" href="#dfn-autonomous" class="internalDFN" id="ref-for-dfn-autonomous-13">autonomy</a> by helping them present their intended <a data-link-type="dfn" href="#dfn-identity" class="internalDFN" id="ref-for-dfn-identity-17">identity</a> to each
-<a data-link-type="dfn" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-28">context</a> that they visit.</span></li><li><a class="marker self-link" href="#principle-prevent-cross-partition-recognition"><bdi lang="en">Principle</bdi></a>: <span class="practicelab"><a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-31">User agents</a>
-should ensure that, if a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-87">person</a> visits two or more web pages from different <a data-link-type="dfn" href="#dfn-partition" class="internalDFN" id="ref-for-dfn-partition-6">partitions</a>, that
+<section class="appendix" id="bp-summary"><h2 id="c-best-practices-summary"><bdi class="secno">C. </bdi>Principles Summary</h2><a class="self-link" href="#bp-summary" aria-label="Permalink for Appendix C."></a><ul><li><a class="marker self-link" href="#principle-identity-per-context"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">A <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-30">user agent</a> should help
+its user present the <a data-link-type="dfn" href="#dfn-identity" class="internalDFN" id="ref-for-dfn-identity-17">identity</a> they want in each <a data-link-type="dfn" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-28">context</a> they find themself
+in.</span></li><li><a class="marker self-link" href="#principle-prevent-cross-partition-recognition"><bdi lang="en">Principle</bdi></a>: <span class="practicelab"><a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-31">User agents</a>
+should ensure that, if a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-85">person</a> visits two or more web pages from different <a data-link-type="dfn" href="#dfn-partition" class="internalDFN" id="ref-for-dfn-partition-6">partitions</a>, that
 the pages cannot quickly determine that the visits probably came from the same person, for any
 significant or involuntary fraction of the people who use the web, unless the person explicitly
 expresses the same <a data-link-type="dfn" href="#dfn-identity" class="internalDFN" id="ref-for-dfn-identity-18">identity</a> to the visits, or preventing this correlation would break a
@@ -1522,11 +1525,7 @@ Wendy Seltzer.</p>
   </li><li>
     <a href="#ref-for-dfn-autonomous-10" title="§ 1.2.1 Transparency and Research">§ 1.2.1 Transparency and Research</a> 
   </li><li>
-    <a href="#ref-for-dfn-autonomous-11" title="§ 2.1 Principles for Identity on the Web">§ 2.1 Principles for Identity on the Web</a> 
-  </li><li>
-    <a href="#ref-for-dfn-autonomous-12" title="§ 2.11 Principles for Notifications and Interruptions">§ 2.11 Principles for Notifications and Interruptions</a> 
-  </li><li>
-    <a href="#ref-for-dfn-autonomous-13" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> 
+    <a href="#ref-for-dfn-autonomous-11" title="§ 2.11 Principles for Notifications and Interruptions">§ 2.11 Principles for Notifications and Interruptions</a> 
   </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-dark-patterns" aria-label="Links in this document to definition: dark patterns">
@@ -1932,25 +1931,25 @@ Wendy Seltzer.</p>
   </li><li>
     <a href="#ref-for-dfn-individual-27" title="§ 1.3 People's Agents">§ 1.3 People's Agents</a> <a href="#ref-for-dfn-individual-28" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-29" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-30" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-31" title="Reference 5">(5)</a> <a href="#ref-for-dfn-individual-32" title="Reference 6">(6)</a> <a href="#ref-for-dfn-individual-33" title="Reference 7">(7)</a> <a href="#ref-for-dfn-individual-34" title="Reference 8">(8)</a> <a href="#ref-for-dfn-individual-35" title="Reference 9">(9)</a> <a href="#ref-for-dfn-individual-36" title="Reference 10">(10)</a> <a href="#ref-for-dfn-individual-37" title="Reference 11">(11)</a> <a href="#ref-for-dfn-individual-38" title="Reference 12">(12)</a> <a href="#ref-for-dfn-individual-39" title="Reference 13">(13)</a> <a href="#ref-for-dfn-individual-40" title="Reference 14">(14)</a> <a href="#ref-for-dfn-individual-41" title="Reference 15">(15)</a> <a href="#ref-for-dfn-individual-42" title="Reference 16">(16)</a> <a href="#ref-for-dfn-individual-43" title="Reference 17">(17)</a> <a href="#ref-for-dfn-individual-44" title="Reference 18">(18)</a> <a href="#ref-for-dfn-individual-45" title="Reference 19">(19)</a> <a href="#ref-for-dfn-individual-46" title="Reference 20">(20)</a> <a href="#ref-for-dfn-individual-47" title="Reference 21">(21)</a> 
   </li><li>
-    <a href="#ref-for-dfn-individual-48" title="§ 2.1 Principles for Identity on the Web">§ 2.1 Principles for Identity on the Web</a> <a href="#ref-for-dfn-individual-49" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-50" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-51" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-52" title="Reference 5">(5)</a> <a href="#ref-for-dfn-individual-53" title="Reference 6">(6)</a> <a href="#ref-for-dfn-individual-54" title="Reference 7">(7)</a> 
+    <a href="#ref-for-dfn-individual-48" title="§ 2.1 Principles for Identity on the Web">§ 2.1 Principles for Identity on the Web</a> <a href="#ref-for-dfn-individual-49" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-50" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-51" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-52" title="Reference 5">(5)</a> <a href="#ref-for-dfn-individual-53" title="Reference 6">(6)</a> 
   </li><li>
-    <a href="#ref-for-dfn-individual-55" title="§ 2.1.1 Unwanted cross-context recognition">§ 2.1.1 Unwanted cross-context recognition</a> <a href="#ref-for-dfn-individual-56" title="Reference 2">(2)</a> 
+    <a href="#ref-for-dfn-individual-54" title="§ 2.1.1 Unwanted cross-context recognition">§ 2.1.1 Unwanted cross-context recognition</a> <a href="#ref-for-dfn-individual-55" title="Reference 2">(2)</a> 
   </li><li>
-    <a href="#ref-for-dfn-individual-57" title="§ 2.1.1.1 Same-site recognition">§ 2.1.1.1 Same-site recognition</a> <a href="#ref-for-dfn-individual-58" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-59" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-60" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-61" title="Reference 5">(5)</a> <a href="#ref-for-dfn-individual-62" title="Reference 6">(6)</a> <a href="#ref-for-dfn-individual-63" title="Reference 7">(7)</a> 
+    <a href="#ref-for-dfn-individual-56" title="§ 2.1.1.1 Same-site recognition">§ 2.1.1.1 Same-site recognition</a> <a href="#ref-for-dfn-individual-57" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-58" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-59" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-60" title="Reference 5">(5)</a> <a href="#ref-for-dfn-individual-61" title="Reference 6">(6)</a> <a href="#ref-for-dfn-individual-62" title="Reference 7">(7)</a> 
   </li><li>
-    <a href="#ref-for-dfn-individual-64" title="§ 2.2 Principles for Personal Data">§ 2.2 Principles for Personal Data</a> <a href="#ref-for-dfn-individual-65" title="Reference 2">(2)</a> 
+    <a href="#ref-for-dfn-individual-63" title="§ 2.2 Principles for Personal Data">§ 2.2 Principles for Personal Data</a> <a href="#ref-for-dfn-individual-64" title="Reference 2">(2)</a> 
   </li><li>
-    <a href="#ref-for-dfn-individual-66" title="§ 2.2.2.1 De-identification">§ 2.2.2.1 De-identification</a> <a href="#ref-for-dfn-individual-67" title="Reference 2">(2)</a> 
+    <a href="#ref-for-dfn-individual-65" title="§ 2.2.2.1 De-identification">§ 2.2.2.1 De-identification</a> <a href="#ref-for-dfn-individual-66" title="Reference 2">(2)</a> 
   </li><li>
-    <a href="#ref-for-dfn-individual-68" title="§ 2.2.3 Rights">§ 2.2.3 Rights</a> 
+    <a href="#ref-for-dfn-individual-67" title="§ 2.2.3 Rights">§ 2.2.3 Rights</a> 
   </li><li>
-    <a href="#ref-for-dfn-individual-69" title="§ A.1 People">§ A.1 People</a> <a href="#ref-for-dfn-individual-70" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-71" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-72" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-73" title="Reference 5">(5)</a> <a href="#ref-for-dfn-individual-74" title="Reference 6">(6)</a> <a href="#ref-for-dfn-individual-75" title="Reference 7">(7)</a> <a href="#ref-for-dfn-individual-76" title="Reference 8">(8)</a> <a href="#ref-for-dfn-individual-77" title="Reference 9">(9)</a> 
+    <a href="#ref-for-dfn-individual-68" title="§ A.1 People">§ A.1 People</a> <a href="#ref-for-dfn-individual-69" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-70" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-71" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-72" title="Reference 5">(5)</a> <a href="#ref-for-dfn-individual-73" title="Reference 6">(6)</a> <a href="#ref-for-dfn-individual-74" title="Reference 7">(7)</a> <a href="#ref-for-dfn-individual-75" title="Reference 8">(8)</a> <a href="#ref-for-dfn-individual-76" title="Reference 9">(9)</a> 
   </li><li>
-    <a href="#ref-for-dfn-individual-78" title="§ A.2 Server-Side Parties">§ A.2 Server-Side Parties</a> <a href="#ref-for-dfn-individual-79" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-80" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-81" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-82" title="Reference 5">(5)</a> <a href="#ref-for-dfn-individual-83" title="Reference 6">(6)</a> <a href="#ref-for-dfn-individual-84" title="Reference 7">(7)</a> 
+    <a href="#ref-for-dfn-individual-77" title="§ A.2 Server-Side Parties">§ A.2 Server-Side Parties</a> <a href="#ref-for-dfn-individual-78" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-79" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-80" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-81" title="Reference 5">(5)</a> <a href="#ref-for-dfn-individual-82" title="Reference 6">(6)</a> <a href="#ref-for-dfn-individual-83" title="Reference 7">(7)</a> 
   </li><li>
-    <a href="#ref-for-dfn-individual-85" title="§ A.3 Acting on Data">§ A.3 Acting on Data</a> 
+    <a href="#ref-for-dfn-individual-84" title="§ A.3 Acting on Data">§ A.3 Acting on Data</a> 
   </li><li>
-    <a href="#ref-for-dfn-individual-86" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> <a href="#ref-for-dfn-individual-87" title="Reference 2">(2)</a> 
+    <a href="#ref-for-dfn-individual-85" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> 
   </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-vulnerable" aria-label="Links in this document to definition: vulnerable person">
