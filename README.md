@@ -41,6 +41,7 @@ e.g.
 
 * Daniel Appelquist (Samsung, TAG)
 * Robin Berjon (The New York Times, TAG alum)
+* Nick Doty (Center for Democracy & Technology, PING)
 * Amy Guy (Digital Bazaar, TAG)
 * Don Marti (CafeMedia, PING)
 * Jonathan Kingston (DuckDuckGo)
@@ -58,6 +59,7 @@ Constituencies we want to represent
 * Civil society
 * Adtech intermediaries
 * Advertising buyers
+* People fighting abuse and fraud
 * Web developers
 * Members of marginalized communities who use the web
 * Other people who use the web
