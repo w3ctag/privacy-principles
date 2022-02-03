@@ -187,6 +187,13 @@
           href: 'https://www.cambridge.org/core/books/industry-unbound/787989F90DBFC08E47546178A7AB04F7',
           publisher: 'Cambridge University Press',
         },
+        'NIST-800-63A': {
+          title: 'Digital Identity Guidelines: Enrollment and Identity Proofing Requirements',
+          href: 'https://pages.nist.gov/800-63-3/sp800-63a.html',
+          publisher: 'NIST',
+          authors: ['Paul A. Grassi', 'James L. Fenton', 'Naomi B. Lefkovitz', 'Jamie M. Danker', 'Yee-Yin Choong', 'Kristen K. Greene', 'Mary F. Theofanos'],
+          date: 'March 2020'
+        },
         'NYT-Privacy': {
           title: 'How The New York Times Thinks About Your Privacy',
           author: ['Robin Berjon'],
@@ -1176,56 +1183,75 @@ to offer better protection by default? Given the contested nature of the [^a/pin
 the absence of a forcing function to support collective enforcement, the scheme failed to deliver
 improved privacy.
 
-## Balancing Conflicting Privacy Rights {#balancing}
+## Balancing Conflicting Privacy Principles {#balancing}
 
-Sometimes different people's privacy rights come into conflict. Often this happens when
-one user of a service is trying to invade another user's privacy: keeping a user's
-information private can limit the ways that a service can protect another user.
+Sometimes different privacy principles come into conflict. Often this happens when one
+user of a service is trying to invade another user's privacy: keeping a user's information
+private can limit the ways that a service can protect them or another user.
 
-<div class="practice">
-
-<p><span class="practicelab" id="principle-violation-sacrifices-privacy">When a
-person violates the [=principles=] of a [=context=] they're interacting with, the service
-operating that context may use their data in ways that would otherwise be
-[=inappropriate=] in order to protect other people.</span></p>
-
-The service may also use innocent people's data in order to distinguish them from these
-bad actors.
-
-<strong>However:</strong>
-
-1. These principles need to be widely-agreed, not just details within a unilateral
-   terms-of-service. For example, in most [=contexts=], it's [=inappropriate=] for a
-   person to misrepresent themself in order to trick other people. On the other hand,
-   there's generally no principle against transparently adopting a pseudonym, even if a
-   site's terms of service prohibit it.
-
-1. The service must take technical and legal measures to ensure the extra data it's
-   collecting to protect people cannot be used for other purposes, like to grow the
-   service.
-
-</div>
+However, the choice of which privacy principles to prefer is complex and depends heavily
+on the details of each particular situation. <span class="note">Note that people's privacy
+can also conflict with other important non-privacy concerns. As discussed in the
+[[[Ethical-Web]]], it's important to balance these concerns too, but this document doesn't
+discuss how to do that.</span>
 
 <aside class="example" id="example-sockpuppets" title="Sockpuppets">
 
-A person might want to sign up many accounts ("sockpuppets") on a service in order to
+A person might want to sign up many accounts ("sockpuppets") or disguise the affiliation
+of individual-owned accounts
+("[astroturfing](https://en.wikipedia.org/wiki/Astroturfing)") on a service in order to
 trick other people into thinking a belief has more support than it really has. This
-violates the other people's rights to be free from manipulation, and so it's
-[=appropriate=] to collect enough extra data to identify these sockpuppets.
+violates the other people's rights to be free from manipulation.
 
-Similar measures are appropriate to resist
-[astroturfing](https://en.wikipedia.org/wiki/Astroturfing).
+On the other hand, identifying everyone with enough detail to detect these cases tends to
+violate their rights to be free from [=surveillance=] and [=correlation=].
 
 </aside>
 
 <aside class="example" id="example-children" title="Children's Services">
 
 Children using a service (or their guardians) may want to ensure their interaction with
-that service is only visible to other children. This can justify collecting ages from the
-service's users in order to exclude adults, but not to then use those ages for other
-purposes.
+that service is only visible to other children. To accomplish this, the service would need
+to verify all of its users' ages.
+
+However, verifying ages is potentially an invasive process, requiring automated facial
+recognition, collection of live images, or strongly identifying the children (e.g. via
+[[NIST-800-63A]]).
 
 </aside>
+
+<aside class="example" id="example-account-security" title="Account Security">
+
+Accounts with a service need to be protected more strongly than just with a username and
+password. Since a compromised account reveals all the private information stored in the
+account, this is a privacy issue and not just a security issue. Services often store the
+historical locations and machine characteristics that have accessed an account, in order
+to make it harder to log in from an unusual place or type of machine. They might also
+store other personal data, like a phone number or address, in order to check that a
+suspicious login actually comes from the real account owner.
+
+</aside>
+
+It is attractive to say that if someone violates the norms of a service they're using,
+then they sacrifice a proportionate amount of their privacy protections, but
+
+1. Often the service can only prevent the norm violation by also collecting data from
+   innocent users. This extra collection is not always [=appropriate=], especially if it
+   allows pervasive monitoring ([[RFC7258]], [[RFC7687]]).
+1. If a service owner wants to collect some extra data, it can be tempting for them to
+   define norms and proportionality that allow them to do so.
+
+<div class="practice">
+
+<p><span class="practicelab" id="principle-limited-collection-for-safety">If a service
+collects extra data from its users in order to protect those or other users, it must take
+extra technical and legal measures to ensure that this data can't be then used for other
+purposes, like to grow the service.</span></p>
+
+This is a special case of the more general principle that data can't be used for more
+[=purposes=] than the data's subjects understood it was being collected for.
+
+</div>
 
 <aside class="example" id="example-technical-legal-measures" title="Technical and Legal Measures">
 
@@ -1235,17 +1261,9 @@ A site might segregate the data it collects for safety reasons from its business
    measure)
 1. Using multi-party computation to ensure that its business side can't learn the
    sensitive safety data unless both its safety side and a trusted third party collude. (A technical measure)
-1. Hiring a trusted auditor to check that the algorithms are sufficient to provide the
-   guarantees they claim to provide, and that there isn't, in fact, any collusion.
-   (Another technical measure)
-
-</aside>
-
-<aside class="note">
-
-Note that people's privacy can also conflict with other important concerns. As discussed
-in the [[[Ethical-Web]]], it's important to balance these concerns, but this document
-doesn't discuss how to do to.
+1. Hiring a trusted auditor to publicly check that the algorithms are sufficient to
+   provide the guarantees they claim to provide, and that there isn't, in fact, any
+   collusion. (Another technical measure)
 
 </aside>
 
