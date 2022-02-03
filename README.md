@@ -37,7 +37,7 @@ We will strike a balance between working on the web as it is and also not being 
 e.g.
 > As a target threat model, it describes not the current state of the Web including all current maybe-unwise APIs, but rather an end state that we hope to migrate to, and that new APIs should be held to. This is meant to be a plausible threat model: it doesn’t expect to remove any APIs or browser behavior that is deemed essential to the viability of the Web.
 
-Privacy Task Force Members:
+## Privacy Task Force Members
 
 * Daniel Appelquist (Samsung, TAG)
 * Robin Berjon (The New York Times, TAG alum)
