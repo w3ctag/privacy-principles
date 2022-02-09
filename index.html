@@ -894,7 +894,15 @@ always possible and additional enforcement mechanisms are needed. One particular
 is that a <a data-link-type="dfn" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-7">context</a> is not defined in terms of who owns it (it is not a <a data-link-type="dfn" href="#dfn-party" class="internalDFN" id="ref-for-dfn-party-11">party</a>). Sharing
 <a data-link-type="dfn" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-12">data</a> between different <a data-link-type="dfn" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-8">contexts</a> of a single company is just as much a <a data-link-type="dfn" href="#dfn-privacy-violation" class="internalDFN" id="ref-for-dfn-privacy-violation-1">privacy violation</a> as
 if the same data were shared between unrelated <a data-link-type="dfn" href="#dfn-party" class="internalDFN" id="ref-for-dfn-party-12">parties</a>.</p>
-<section id="principles-for-identity-on-the-web"><div class="header-wrapper"><h3 id="identity"><bdi class="secno">2.1 </bdi>Principles for Identity on the Web</h3><a class="self-link" href="#identity" aria-label="Permalink for Section 2.1"></a></div><div class="issue" id="issue-container-generatedID-0"><div role="heading" class="issue-title marker" id="h-issue-0" aria-level="2"><span>Issue</span></div><aside class="">
+<div class="issue" id="issue-container-generatedID-0"><div role="heading" class="issue-title marker" id="h-issue-0" aria-level="2"><span>Issue</span></div><aside class="">
+
+
+<p>  Please note that the initial focus of this draft was on <a href="#intro" class="sec-ref"><bdi class="secno">1. </bdi>An Introduction to Privacy on the Web</a>. This section is
+  incomplete and has uneven maturity. The absence of a specific principle should not be seen as an
+  indication that the Task Force considers it to be of lesser importance.</p>
+</aside></div>
+
+<section id="principles-for-identity-on-the-web"><div class="header-wrapper"><h3 id="identity"><bdi class="secno">2.1 </bdi>Principles for Identity on the Web</h3><a class="self-link" href="#identity" aria-label="Permalink for Section 2.1"></a></div><div class="issue" id="issue-container-generatedID-1"><div role="heading" class="issue-title marker" id="h-issue-1" aria-level="2"><span>Issue</span></div><aside class="">
 
 
 <p>  This section has not been edited for narrative.</p>
@@ -949,7 +957,7 @@ storage (which is sometimes automatic at the end of each session).</li>
 <p>Even though this is the default, <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-23">user agents</a> are free to restrict this context as
 people need. For example, some user agents may help people present different
 <a data-link-type="dfn" href="#dfn-identity" class="internalDFN" id="ref-for-dfn-identity-7">identities</a> to subdivisions of a single <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/origin.html#site">site</a>.</p>
-<div class="issue" id="issue-container-number-1"><div role="heading" class="issue-title marker" id="h-issue-1" aria-level="2"><a href="https://github.com/w3ctag/privacy-principles/issues/1"><span class="issue-number">Issue 1</span></a><span class="issue-label">: Figure out the default privacy boundary for the web</span></div><div class="">
+<div class="issue" id="issue-container-number-1"><div role="heading" class="issue-title marker" id="h-issue-2" aria-level="2"><a href="https://github.com/w3ctag/privacy-principles/issues/1"><span class="issue-number">Issue 1</span></a><span class="issue-label">: Figure out the default privacy boundary for the web</span></div><div class="">
 
 <p>There is disagreement about whether <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-24">user agents</a> may also widen their <a data-link-type="dfn" href="#dfn-machine-enforceable-context" class="internalDFN" id="ref-for-dfn-machine-enforceable-context-1">machine-enforceable contexts</a>. For example, some user agents might want to help their users present a single
 <a data-link-type="dfn" href="#dfn-identity" class="internalDFN" id="ref-for-dfn-identity-8">identity</a> to multiple <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/origin.html#site">sites</a> that the user understands represent a single <a data-link-type="dfn" href="#dfn-party" class="internalDFN" id="ref-for-dfn-party-13">party</a>, or to a
@@ -965,7 +973,7 @@ behaving <a data-link-type="dfn" href="#dfn-inappropriately" class="internalDFN"
 <p>If a <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/origin.html#site">site</a> includes multiple <a data-link-type="dfn" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-17">contexts</a> whose <a data-link-type="dfn" href="#dfn-principles" class="internalDFN" id="ref-for-dfn-principles-20">principles</a> indicate that it's <a data-link-type="dfn" href="#dfn-inappropriately" class="internalDFN" id="ref-for-dfn-inappropriately-6">inappropriate</a> to
 share data between the contexts, the fact that those distinct <a data-link-type="dfn" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-18">contexts</a> fall inside a single
 <a data-link-type="dfn" href="#dfn-machine-enforceable-context" class="internalDFN" id="ref-for-dfn-machine-enforceable-context-3">machine-enforceable context</a> doesn't make sharing data or <a data-link-type="dfn" data-lt="cross-context recognition" href="#dfn-cross-context-recognition" class="internalDFN" id="ref-for-dfn-cross-context-recognition-3">recognizing</a> <a data-link-type="dfn" href="#dfn-identity" class="internalDFN" id="ref-for-dfn-identity-9">identities</a> any less <a data-link-type="dfn" href="#dfn-inappropriately" class="internalDFN" id="ref-for-dfn-inappropriately-7">inappropriate</a>.</p>
-<section id="unwanted-cross-context-recognition"><div class="header-wrapper"><h4 id="hl-recognition-cross-context"><bdi class="secno">2.1.1 </bdi>Unwanted cross-context recognition</h4><a class="self-link" href="#hl-recognition-cross-context" aria-label="Permalink for Section 2.1.1"></a></div><div class="issue" id="issue-container-generatedID-1"><div role="heading" class="issue-title marker" id="h-issue-2" aria-level="2"><span>Issue</span></div><aside class="">
+<section id="unwanted-cross-context-recognition"><div class="header-wrapper"><h4 id="hl-recognition-cross-context"><bdi class="secno">2.1.1 </bdi>Unwanted cross-context recognition</h4><a class="self-link" href="#hl-recognition-cross-context" aria-label="Permalink for Section 2.1.1"></a></div><div class="issue" id="issue-container-generatedID-2"><div role="heading" class="issue-title marker" id="h-issue-3" aria-level="2"><span>Issue</span></div><aside class="">
 
 <p>Merge this into its parent section on identity.</p>
 </aside></div>
@@ -1043,7 +1051,7 @@ reasonably expect the sites to discover this. Traditionally, sites have accompli
 can also be done by having someone navigate to a link that has been decorated with an identifier,
 collecting the same piece of identifying information on both sites, or by correlating the timestamps
 of an event that occurs nearly-simultaneously on both sites.</p>
-</section></section></section><section id="principles-for-personal-data"><div class="header-wrapper"><h3 id="data"><bdi class="secno">2.2 </bdi>Principles for Personal Data</h3><a class="self-link" href="#data" aria-label="Permalink for Section 2.2"></a></div><div class="issue" id="issue-container-generatedID-2"><div role="heading" class="issue-title marker" id="h-issue-3" aria-level="2"><span>Issue</span></div><aside class="">
+</section></section></section><section id="principles-for-personal-data"><div class="header-wrapper"><h3 id="data"><bdi class="secno">2.2 </bdi>Principles for Personal Data</h3><a class="self-link" href="#data" aria-label="Permalink for Section 2.2"></a></div><div class="issue" id="issue-container-generatedID-3"><div role="heading" class="issue-title marker" id="h-issue-4" aria-level="2"><span>Issue</span></div><aside class="">
 
 
 <p>  This section has not been edited for narrative.</p>
@@ -1171,7 +1179,7 @@ a person, consider at least these factors:</p>
 </ul>
 <p>Issue(16): This description of what makes information sensitive still needs to
 be refined.</p>
-</section><section id="principles-for-profiling"><div class="header-wrapper"><h3 id="hl-unexpected-profiling"><bdi class="secno">2.4 </bdi>Principles for Profiling</h3><a class="self-link" href="#hl-unexpected-profiling" aria-label="Permalink for Section 2.4"></a></div><div class="issue" id="issue-container-generatedID-3"><div role="heading" class="issue-title marker" id="h-issue-4" aria-level="2"><span>Issue</span></div><aside class="">
+</section><section id="principles-for-profiling"><div class="header-wrapper"><h3 id="hl-unexpected-profiling"><bdi class="secno">2.4 </bdi>Principles for Profiling</h3><a class="self-link" href="#hl-unexpected-profiling" aria-label="Permalink for Section 2.4"></a></div><div class="issue" id="issue-container-generatedID-4"><div role="heading" class="issue-title marker" id="h-issue-5" aria-level="2"><span>Issue</span></div><aside class="">
 
 
 <p>  This section has not been edited for narrative.</p>
@@ -1222,14 +1230,14 @@ acceptance of furries, Peter does not want (most) sites to learn
 or personalize content around his furry-interest.</p>
 </div>
 
-</section><section id="principles-for-safety-systems"><div class="header-wrapper"><h3 id="safety"><bdi class="secno">2.5 </bdi>Principles for Safety Systems</h3><a class="self-link" href="#safety" aria-label="Permalink for Section 2.5"></a></div><div class="issue" id="issue-container-generatedID-4"><div role="heading" class="issue-title marker" id="h-issue-5" aria-level="2"><span>Issue</span></div><aside class="">
+</section><section id="principles-for-safety-systems"><div class="header-wrapper"><h3 id="safety"><bdi class="secno">2.5 </bdi>Principles for Safety Systems</h3><a class="self-link" href="#safety" aria-label="Permalink for Section 2.5"></a></div><div class="issue" id="issue-container-generatedID-5"><div role="heading" class="issue-title marker" id="h-issue-6" aria-level="2"><span>Issue</span></div><aside class="">
 
 
 <p>  This section has not been edited for narrative.</p>
 </aside></div>
 
 
-<div class="issue" id="issue-container-number-73"><div role="heading" class="issue-title marker" id="h-issue-6" aria-level="2"><a href="https://github.com/w3ctag/privacy-principles/issues/73"><span class="issue-number">Issue 73</span></a><span class="issue-label">: How do safety systems relate to privacy <a class="respec-gh-label" href="https://github.com/w3ctag/privacy-principles/issues/?q=is%3Aissue+is%3Aopen+label%3A%22agenda%2B%22" style="background-color: rgb(245, 169, 184); color: rgb(0, 0, 0);" aria-label="GitHub label: agenda+">agenda+</a></span></div><aside class="">
+<div class="issue" id="issue-container-number-73"><div role="heading" class="issue-title marker" id="h-issue-7" aria-level="2"><a href="https://github.com/w3ctag/privacy-principles/issues/73"><span class="issue-number">Issue 73</span></a><span class="issue-label">: How do safety systems relate to privacy <a class="respec-gh-label" href="https://github.com/w3ctag/privacy-principles/issues/?q=is%3Aissue+is%3Aopen+label%3A%22agenda%2B%22" style="background-color: rgb(245, 169, 184); color: rgb(0, 0, 0);" aria-label="GitHub label: agenda+">agenda+</a></span></div><aside class="">
 
 <p>Discuss how systems intended to protect a person might justifiably collect more data from
 that person and from people who might be trying to attack that person. Also discuss
@@ -1240,11 +1248,11 @@ law enforcement and intellligence agencies.</p>
 </aside></div>
 
 
-</section><section id="principles-for-guardians-and-device-owners"><div class="header-wrapper"><h3 id="guardians-and-owners"><bdi class="secno">2.6 </bdi>Principles for Guardians and Device Owners</h3><a class="self-link" href="#guardians-and-owners" aria-label="Permalink for Section 2.6"></a></div><div class="issue" id="issue-container-number-2"><div role="heading" class="issue-title marker" id="h-issue-7" aria-level="2"><a href="https://github.com/w3ctag/privacy-principles/issues/2"><span class="issue-number">Issue 2</span></a><span class="issue-label">: Address device owners <a class="respec-gh-label" href="https://github.com/w3ctag/privacy-principles/issues/?q=is%3Aissue+is%3Aopen+label%3A%22agenda%2B%22" style="background-color: rgb(245, 169, 184); color: rgb(0, 0, 0);" aria-label="GitHub label: agenda+">agenda+</a></span></div><p dir="auto">Most of our thinking about stakeholders on the web follows the <a href="https://www.w3.org/TR/html-design-principles/#priority-of-constituencies" rel="nofollow">priority of constituencies</a>: we consider users, authors, implementors, and specifiers. Sometimes we also consider <a href="https://w3ctag.github.io/ethical-web-principles/#noharm" rel="nofollow">society</a> or national governments. In <a class="issue-link js-issue-link" data-error-text="Failed to load title" data-id="802499101" data-permission-text="Title is private" data-url="https://github.com/w3ctag/design-reviews/issues/606" data-hovercard-type="issue" data-hovercard-url="/w3ctag/design-reviews/issues/606/hovercard" href="https://github.com/w3ctag/design-reviews/issues/606">w3ctag/design-reviews#606</a> and other enterprise-focused designs we need to address device owners or administrators, and I haven't been able to find any W3C discussion of how to consider them.</p>
+</section><section id="principles-for-guardians-and-device-owners"><div class="header-wrapper"><h3 id="guardians-and-owners"><bdi class="secno">2.6 </bdi>Principles for Guardians and Device Owners</h3><a class="self-link" href="#guardians-and-owners" aria-label="Permalink for Section 2.6"></a></div><div class="issue" id="issue-container-number-2"><div role="heading" class="issue-title marker" id="h-issue-8" aria-level="2"><a href="https://github.com/w3ctag/privacy-principles/issues/2"><span class="issue-number">Issue 2</span></a><span class="issue-label">: Address device owners <a class="respec-gh-label" href="https://github.com/w3ctag/privacy-principles/issues/?q=is%3Aissue+is%3Aopen+label%3A%22agenda%2B%22" style="background-color: rgb(245, 169, 184); color: rgb(0, 0, 0);" aria-label="GitHub label: agenda+">agenda+</a></span></div><p dir="auto">Most of our thinking about stakeholders on the web follows the <a href="https://www.w3.org/TR/html-design-principles/#priority-of-constituencies" rel="nofollow">priority of constituencies</a>: we consider users, authors, implementors, and specifiers. Sometimes we also consider <a href="https://w3ctag.github.io/ethical-web-principles/#noharm" rel="nofollow">society</a> or national governments. In <a class="issue-link js-issue-link" data-error-text="Failed to load title" data-id="802499101" data-permission-text="Title is private" data-url="https://github.com/w3ctag/design-reviews/issues/606" data-hovercard-type="issue" data-hovercard-url="/w3ctag/design-reviews/issues/606/hovercard" href="https://github.com/w3ctag/design-reviews/issues/606">w3ctag/design-reviews#606</a> and other enterprise-focused designs we need to address device owners or administrators, and I haven't been able to find any W3C discussion of how to consider them.</p>
 <p dir="auto">This is a broader question than just the privacy principles we're working on here, but some of the answer belongs here. We should say something about the power dynamics of employees, children, romantic partners, etc. who have to use devices owned by other people who might not always have their best interests in mind, and how the UA is responsible to protect the user while also respecting whatever rights the device owner ought to have.</p></div>
 
 </section><section id="principles-for-influence-and-manipulation"><div class="header-wrapper"><h3 id="x2-7-principles-for-influence-and-manipulation"><bdi class="secno">2.7 </bdi>Principles for Influence and Manipulation</h3><a class="self-link" href="#principles-for-influence-and-manipulation" aria-label="Permalink for Section 2.7"></a></div>
-<div class="issue" id="issue-container-generatedID-5"><div role="heading" class="issue-title marker" id="h-issue-8" aria-level="2"><span>Issue</span></div><aside class="">
+<div class="issue" id="issue-container-generatedID-6"><div role="heading" class="issue-title marker" id="h-issue-9" aria-level="2"><span>Issue</span></div><aside class="">
 
 
 <p>  This section has not been written.</p>
@@ -1253,28 +1261,28 @@ law enforcement and intellligence agencies.</p>
 
 
 </section><section id="principles-for-harassment"><div class="header-wrapper"><h3 id="x2-8-principles-for-harassment"><bdi class="secno">2.8 </bdi>Principles for Harassment</h3><a class="self-link" href="#principles-for-harassment" aria-label="Permalink for Section 2.8"></a></div>
-<div class="issue" id="issue-container-generatedID-6"><div role="heading" class="issue-title marker" id="h-issue-9" aria-level="2"><span>Issue</span></div><aside class="">
-
-
-<p>  This section has not been written.</p>
-</aside></div>
-
-</section><section id="principles-for-unwanted-information"><div class="header-wrapper"><h3 id="x2-9-principles-for-unwanted-information"><bdi class="secno">2.9 </bdi>Principles for Unwanted Information</h3><a class="self-link" href="#principles-for-unwanted-information" aria-label="Permalink for Section 2.9"></a></div>
 <div class="issue" id="issue-container-generatedID-7"><div role="heading" class="issue-title marker" id="h-issue-10" aria-level="2"><span>Issue</span></div><aside class="">
 
 
 <p>  This section has not been written.</p>
 </aside></div>
 
-</section><section id="principles-for-vulnerable-people"><div class="header-wrapper"><h3 id="x2-10-principles-for-vulnerable-people"><bdi class="secno">2.10 </bdi>Principles for Vulnerable People</h3><a class="self-link" href="#principles-for-vulnerable-people" aria-label="Permalink for Section 2.10"></a></div>
+</section><section id="principles-for-unwanted-information"><div class="header-wrapper"><h3 id="x2-9-principles-for-unwanted-information"><bdi class="secno">2.9 </bdi>Principles for Unwanted Information</h3><a class="self-link" href="#principles-for-unwanted-information" aria-label="Permalink for Section 2.9"></a></div>
 <div class="issue" id="issue-container-generatedID-8"><div role="heading" class="issue-title marker" id="h-issue-11" aria-level="2"><span>Issue</span></div><aside class="">
 
 
 <p>  This section has not been written.</p>
 </aside></div>
 
-</section><section id="principles-for-notifications-and-interruptions"><div class="header-wrapper"><h3 id="x2-11-principles-for-notifications-and-interruptions"><bdi class="secno">2.11 </bdi>Principles for Notifications and Interruptions</h3><a class="self-link" href="#principles-for-notifications-and-interruptions" aria-label="Permalink for Section 2.11"></a></div>
+</section><section id="principles-for-vulnerable-people"><div class="header-wrapper"><h3 id="x2-10-principles-for-vulnerable-people"><bdi class="secno">2.10 </bdi>Principles for Vulnerable People</h3><a class="self-link" href="#principles-for-vulnerable-people" aria-label="Permalink for Section 2.10"></a></div>
 <div class="issue" id="issue-container-generatedID-9"><div role="heading" class="issue-title marker" id="h-issue-12" aria-level="2"><span>Issue</span></div><aside class="">
+
+
+<p>  This section has not been written.</p>
+</aside></div>
+
+</section><section id="principles-for-notifications-and-interruptions"><div class="header-wrapper"><h3 id="x2-11-principles-for-notifications-and-interruptions"><bdi class="secno">2.11 </bdi>Principles for Notifications and Interruptions</h3><a class="self-link" href="#principles-for-notifications-and-interruptions" aria-label="Permalink for Section 2.11"></a></div>
+<div class="issue" id="issue-container-generatedID-10"><div role="heading" class="issue-title marker" id="h-issue-13" aria-level="2"><span>Issue</span></div><aside class="">
 
 <p>Connect intrusiveness to <a data-link-type="dfn" href="#dfn-autonomous" class="internalDFN" id="ref-for-dfn-autonomous-11">autonomy</a>, and write some principles.</p>
 </aside></div>
@@ -1309,7 +1317,7 @@ not mean a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id
 fact of loading a <a data-link-type="dfn" href="#dfn-party" class="internalDFN" id="ref-for-dfn-party-28">party</a> embedded in the one with which the person intends to
 interact. In cases of clear and conspicuous joint branding, there can be multiple <a data-link-type="dfn" href="#dfn-first-parties" class="internalDFN" id="ref-for-dfn-first-parties-9">first parties</a>. The <a data-link-type="dfn" href="#dfn-first-parties" class="internalDFN" id="ref-for-dfn-first-parties-10">first party</a> is necessarily a <a data-link-type="dfn" href="#dfn-data-controller" class="internalDFN" id="ref-for-dfn-data-controller-4">data controller</a> of the data processing
 that takes places as a consequence of a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-81">person</a> interacting with it.</p>
-<div class="issue" id="issue-container-generatedID-10"><div role="heading" class="issue-title marker" id="h-issue-13" aria-level="3"><span>Issue</span></div><aside class="">
+<div class="issue" id="issue-container-generatedID-11"><div role="heading" class="issue-title marker" id="h-issue-14" aria-level="3"><span>Issue</span></div><aside class="">
 
 <p>Refine the description of third parties so it matches
 intuition better.</p>
@@ -1444,7 +1452,7 @@ Tess O'Connor, and
 Wendy Seltzer.</p>
 </section>
 
-<section class="appendix" id="issue-summary"><div class="header-wrapper"><h2 id="e-issue-summary"><bdi class="secno">E. </bdi>Issue summary</h2><a class="self-link" href="#issue-summary" aria-label="Permalink for Appendix E."></a></div><ul><li><a href="#issue-container-generatedID">Issue</a></li><li><a href="#issue-container-generatedID-0">Issue</a></li><li><a href="#issue-container-number-1">Issue 1</a><span style="text-transform: none">: Figure out the default privacy boundary for the web</span></li><li><a href="#issue-container-generatedID-1">Issue</a></li><li><a href="#issue-container-generatedID-2">Issue</a></li><li><a href="#issue-container-generatedID-3">Issue</a></li><li><a href="#issue-container-generatedID-4">Issue</a></li><li><a href="#issue-container-number-73">Issue 73</a><span style="text-transform: none">: How do safety systems relate to privacy</span></li><li><a href="#issue-container-number-2">Issue 2</a><span style="text-transform: none">: Address device owners</span></li><li><a href="#issue-container-generatedID-5">Issue</a></li><li><a href="#issue-container-generatedID-6">Issue</a></li><li><a href="#issue-container-generatedID-7">Issue</a></li><li><a href="#issue-container-generatedID-8">Issue</a></li><li><a href="#issue-container-generatedID-9">Issue</a></li><li><a href="#issue-container-generatedID-10">Issue</a></li></ul></section><section id="references" class="appendix"><div class="header-wrapper"><h2 id="f-references"><bdi class="secno">F. </bdi>References</h2><a class="self-link" href="#references" aria-label="Permalink for Appendix F."></a></div><section id="informative-references"><div class="header-wrapper"><h3 id="f-1-informative-references"><bdi class="secno">F.1 </bdi>Informative references</h3><a class="self-link" href="#informative-references" aria-label="Permalink for Appendix F.1"></a></div>
+<section class="appendix" id="issue-summary"><div class="header-wrapper"><h2 id="e-issue-summary"><bdi class="secno">E. </bdi>Issue summary</h2><a class="self-link" href="#issue-summary" aria-label="Permalink for Appendix E."></a></div><ul><li><a href="#issue-container-generatedID">Issue</a></li><li><a href="#issue-container-generatedID-0">Issue</a></li><li><a href="#issue-container-generatedID-1">Issue</a></li><li><a href="#issue-container-number-1">Issue 1</a><span style="text-transform: none">: Figure out the default privacy boundary for the web</span></li><li><a href="#issue-container-generatedID-2">Issue</a></li><li><a href="#issue-container-generatedID-3">Issue</a></li><li><a href="#issue-container-generatedID-4">Issue</a></li><li><a href="#issue-container-generatedID-5">Issue</a></li><li><a href="#issue-container-number-73">Issue 73</a><span style="text-transform: none">: How do safety systems relate to privacy</span></li><li><a href="#issue-container-number-2">Issue 2</a><span style="text-transform: none">: Address device owners</span></li><li><a href="#issue-container-generatedID-6">Issue</a></li><li><a href="#issue-container-generatedID-7">Issue</a></li><li><a href="#issue-container-generatedID-8">Issue</a></li><li><a href="#issue-container-generatedID-9">Issue</a></li><li><a href="#issue-container-generatedID-10">Issue</a></li><li><a href="#issue-container-generatedID-11">Issue</a></li></ul></section><section id="references" class="appendix"><div class="header-wrapper"><h2 id="f-references"><bdi class="secno">F. </bdi>References</h2><a class="self-link" href="#references" aria-label="Permalink for Appendix F."></a></div><section id="informative-references"><div class="header-wrapper"><h3 id="f-1-informative-references"><bdi class="secno">F.1 </bdi>Informative references</h3><a class="self-link" href="#informative-references" aria-label="Permalink for Appendix F.1"></a></div>
     
     <dl class="bibliography"><dt id="bib-cat">[CAT]</dt><dd>
       <a href="https://nytimes.github.io/std-cat/"><cite>Content Aggregation Technology (CAT)</cite></a>. Robin Berjon; Justin Heideman. URL: <a href="https://nytimes.github.io/std-cat/">https://nytimes.github.io/std-cat/</a>
