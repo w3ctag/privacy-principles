@@ -459,11 +459,11 @@ however, they are used as a way to avoid putting in the difficult work of decidi
 types of [=processing=] are [=appropriate=] and which are not, offloading [=privacy labour=]
 to the people using a system.
 
-In rare and highly specific cases, [=people=] should be able to [=consent=] to more
+In specific cases, [=people=] should be able to [=consent=] to more
 sensitive [=purposes=], such as having their [=identity=] recognised across contexts or
 their reading history shared with a company. The burden of proof on ensuring that informed
-[=consent=] has been obtained needs in this case to be very high (much higher than what prevails for
-instance in [[?GDPR]] jurisdictions as currently practiced). [=Consent=] is comparable to the
+[=consent=] has been obtained needs to be very high in this case.
+[=Consent=] is comparable to the
 general problem of permissions on the Web platform. In the same way that it should be clear when a
 given device capability is in use (eg. you are providing geolocation or camera access), sharing
 data should be set up in such a way that it requires deliberate, specific action from the [=person=]
@@ -486,9 +486,9 @@ rights in a relevant jurisdiction. (For instance, under [[?GDPR]], the [=person=
 conveying objections to [=processing=] based on legitimate interest or the withdrawal of
 [=consent=] to specific [=purposes=].) It should be noted that, since a [=global opt-out=]
 signal is reaffirmed automatically with every interaction, it will take precedence
-in terms of specificity over any manner of blanket [=consent=] that a site may obtain,
-unless that [=consent=] is directly attached to an interaction (eg. terms specified on a
-form upon submission).
+in terms of specificity over any general obtention of [=consent=] by a site,
+and only superseded by specific [=consent=] obtained through a deliberate action taken by
+the user with the intent of overriding their global opt-out.
 
 ### Privacy Labour {#privacy-labour}
 
@@ -1139,6 +1139,57 @@ more accountable. Examples of mitigations include:
 <aside class="issue">
   This section has not been written.
 </aside>
+
+
+## Principles for Consent, Withdrawal of Consent, Opt-Outs, and Objections {#consent-principles}
+
+<div class="practice">
+<p>
+  <span class="practicelab" id="principle-consent-user-preference">
+    When any [=actor=] obtains [=consent=] for processing from a [=person=], the
+    actor should design the consent request so as to learn the person's true
+    intent to consent or not, and not to maximize the processing consented to.
+  </span>
+</p>
+</div>
+
+Attempts to obtain consent to [=processing=] that is not in accordance with the person's
+true preferences result in imposing unwanted [=privacy labour=] on the person, and may
+result in people erroneously giving consent that they regret later.
+
+<div class="practice">
+<p>
+  <span class="practicelab" id="principle-minimize-consent-requests">
+    An [=actor=] should avoid interrupting a [=person=]'s use of a site for
+	consent requests when an alternative is available.
+  </span>
+</p>
+</div>
+
+Examples of alternatives to interrupting users with consent requests include:
+
+ * Considering the information sharing norms in the site's audience
+   and category, and requesting only consent that is appropriate
+   to the purpose of the site. (For example, a photo sharing site's
+   users might expect to be prompted for consent to share their
+   uploaded work.)  Sites should consider conducting user research on
+   people's expectations for how data is processed.
+
+ * Relying on a [=global opt-out=] signal from the [=user agent=].
+
+ * Delaying a prompt for consent until a [=user=] does something that puts the request in context,
+    which will also help them give an informed response.
+
+<div class="practice">
+<p>
+  <span class="practicelab" id="principle-consent-withdraw">
+    It should be as easy for a user to check what consent they have given,
+	to withdraw consent, or to opt out or object,
+	as to give consent.
+  </span>
+</p>
+</div>
+
 
 ## Principles for Notifications and Interruptions
 
