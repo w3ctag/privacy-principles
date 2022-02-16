@@ -722,8 +722,7 @@ apparent tradeoff, first seek the Pareto frontier.</span></p>
 
 Given any initial design that doesn't perfectly satisfy all goals, there are usually some
 other designs that improve the situation for some goals without sacrificing anything about
-the other goals. Sometimes one of these other designs is good enough that tradeoffs are
-unnecessary.
+the other goals. Work to find those designs.
 
 </div>
 
@@ -732,7 +731,44 @@ privacy principles to prefer is complex and depends heavily on the details of ea
 particular situation. <span class="note">Note that people's privacy can also be in tension
 with other important non-privacy concerns. As discussed in the [[[Ethical-Web]]], it's
 important to balance these concerns too, but this document doesn't discuss how to do
-that.</span>
+that.</span> Despite this complexity, there is a basic ground rule to follow:
+
+<div class="practice">
+
+<p><span class="practicelab" id="principle-limited-collection-for-safety">If a service
+collects extra data from its users in order to protect those or other users, it must take
+extra technical and legal measures to ensure that this data can't be then used for other
+purposes, like to grow the service.</span></p>
+
+This is a special case of the more general principle that data can't be used for more
+[=purposes=] than the data's subjects understood it was being collected for.
+
+</div>
+
+<aside class="example" id="example-technical-legal-measures" title="Technical and Legal Measures">
+
+A site might segregate the data it collects for safety reasons from its business data by:
+
+1. Writing in its privacy policy that these types of data are kept separate. (A legal
+   measure)
+1. Using multi-party computation to ensure that its business side can't learn the
+   sensitive safety data unless both its safety side and a trusted third party collude. (A technical measure)
+1. Hiring a trusted auditor to publicly check that the algorithms are sufficient to
+   provide the guarantees they claim to provide, and that there isn't, in fact, any
+   collusion. (Another technical measure)
+
+</aside>
+
+It is attractive to say that if someone violates the norms of a service they're using,
+then they sacrifice a proportionate amount of their privacy protections, but
+
+1. Often the service can only prevent the norm violation by also collecting data from
+   innocent users. This extra collection is not always [=appropriate=], especially if it
+   allows pervasive monitoring ([[RFC7258]], [[RFC7687]]).
+1. If a service owner wants to collect some extra data, it can be tempting for them to
+   define norms and proportionality that allow them to do so.
+
+The following examples illustrate some of the tensions:
 
 <aside class="example" id="example-sockpuppets" title="Sockpuppets">
 
@@ -770,42 +806,6 @@ store other personal data, like a phone number or address, in order to check tha
 suspicious login actually comes from the real account owner.
 
 </aside>
-
-It is attractive to say that if someone violates the norms of a service they're using,
-then they sacrifice a proportionate amount of their privacy protections, but
-
-1. Often the service can only prevent the norm violation by also collecting data from
-   innocent users. This extra collection is not always [=appropriate=], especially if it
-   allows pervasive monitoring ([[RFC7258]], [[RFC7687]]).
-1. If a service owner wants to collect some extra data, it can be tempting for them to
-   define norms and proportionality that allow them to do so.
-
-<div class="practice">
-
-<p><span class="practicelab" id="principle-limited-collection-for-safety">If a service
-collects extra data from its users in order to protect those or other users, it must take
-extra technical and legal measures to ensure that this data can't be then used for other
-purposes, like to grow the service.</span></p>
-
-This is a special case of the more general principle that data can't be used for more
-[=purposes=] than the data's subjects understood it was being collected for.
-
-</div>
-
-<aside class="example" id="example-technical-legal-measures" title="Technical and Legal Measures">
-
-A site might segregate the data it collects for safety reasons from its business data by:
-
-1. Writing in its privacy policy that these types of data are kept separate. (A legal
-   measure)
-1. Using multi-party computation to ensure that its business side can't learn the
-   sensitive safety data unless both its safety side and a trusted third party collude. (A technical measure)
-1. Hiring a trusted auditor to publicly check that the algorithms are sufficient to
-   provide the guarantees they claim to provide, and that there isn't, in fact, any
-   collusion. (Another technical measure)
-
-</aside>
-
 
 # Principles for Privacy on the Web
 
