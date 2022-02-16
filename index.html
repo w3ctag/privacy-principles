@@ -1445,8 +1445,35 @@ Examples of alternatives to interrupting users with consent requests include:
 
 ## Principles for Notifications and Interruptions
 
-<aside class="issue">Connect intrusiveness to [=autonomy=], and write some principles.</aside>
+<aside class="issue">This is relateds to [=autonomy=].</aside>
 
+Notifications and other interruptive UI can be a powerful way to capture attention. 
+Depending on the operating system in use, a notification can eppear outside of the
+browser context (for example, in a general notifications tray) or even cause a device to
+buzz or play an alert tone.
+Like all powerful features, notifications can be misused to and can become an annoyance 
+or even used to manipulate behaviour and thus reduce [=atonomy=].
+
+<div class="practice">
+
+  <span class="practicelab" id="principle-notifications control">A [=user agent=] should help
+    users control notifications and other interruptive UI that can be used to manipulate behavior.</span>
+
+  [=User agents=] should provide UI that allow's their user to audit which web [=sites=] have been granted 
+  permission to display alerts and to revoke these permissions.  
+  [=User agents=] may also apply some quality metric to the initial request for permissions to receive
+  notifications (for example, disallowing sites from requesting permission on first visit).
+  
+  <span class="practicelab" id="principle-notifications-context">Web [=sites=] should use notifications
+    only for information that their users have spedcifically requested.
+  </span>
+  
+  Web [=sites=] should be specific with their users about what kind of information they can expect to 
+  receive, and how notifications can be turned off,  when requesting permission to send interruptive 
+  notifications.  Web [=sites=] should not request permission to send notifications on first visit.
+  Permissions should be requested in [=context=].
+
+</div>
 
 <!--
 # EVERYTHING BELOW THIS LINE IS MATERIAL
