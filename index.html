@@ -37,6 +37,7 @@
           h2.innerHTML = h2.innerHTML.replace('Best Practices Summary', 'Principles Summary');
         }
       ],
+      xref: ['html'],
       localBiblio: {
         'Anti-Tracking-Policy': {
           title: 'Anti-Tracking Policy',
@@ -48,6 +49,12 @@
           href: 'https://us.macmillan.com/books/9781250074317/automatinginequality',
           authors: ['Virginia Eubanks'],
           publisher: 'Macmillan',
+        },
+        'Beyond-Individual': {
+          title: 'Privacy Beyond the Individual Level (in Modern Socio-Technical Perspectives on Privacy)',
+          href: 'https://doi.org/10.1007/978-3-030-82786-1_6',
+          authors: ['J.J. Suh', 'M.J. Metzger'],
+          publisher: 'Springer',
         },
         'Big-Data-Competition': {
           title: 'Big Data and Competition Policy',
@@ -164,10 +171,16 @@
           publisher: 'W3C',
         },
         'IAD': {
-          title: ' Understanding Institutional Diversity',
+          title: 'Understanding Institutional Diversity',
           authors: ['Elinor Ostrom'],
           href: 'https://press.princeton.edu/books/paperback/9780691122380/understanding-institutional-diversity',
           publisher: 'Princeton University Press',
+        },
+        'Individual-Group-Privacy': {
+          title: 'From Individual to Group Privacy in Big Data Analytics',
+          authors: ['Brent Mittelstadt'],
+          href: 'https://link.springer.com/article/10.1007/s13347-017-0253-7',
+          publisher: 'Philosophy & Technology',
         },
         'Industry-Unbound': {
           title: 'Industry Unbound: the inside story of privacy, data, and corporate power',
@@ -248,6 +261,18 @@
           title: 'Seeing Like a State: How Certain Schemes to Improve the Human Condition Have Failed',
           href: 'https://bookshop.org/books/seeing-like-a-state-how-certain-schemes-to-improve-the-human-condition-have-failed/9780300246759',
           authors: ['James C. Scott'],
+        },
+        'Strava-Debacle': {
+          title: 'The Latest Data Privacy Debacle',
+          authors: ['Zeynep Tufekci'],
+          href: 'https://www.nytimes.com/2018/01/30/opinion/strava-privacy.html',
+          publisher: 'The New York Times',
+        },
+        'Strava-Reveal-Military': {
+          title: 'Strava Fitness App Can Reveal Military Sites, Analysts Say',
+          authors: ['Richard Pérez-Peña', 'Matthew Rosenberg'],
+          href: 'https://www.nytimes.com/2018/01/29/world/middleeast/strava-heat-map.html',
+          publisher: 'The New York Times',
         },
         'Surveillance-Capitalism': {
           title: 'The Age of Surveillance Capitalism: The Fight for a Human Future at the New Frontier of Power',
@@ -528,9 +553,9 @@ and choice</i>", which, in today's digital environment, is often an indication t
 
 Privacy [=principles=] are socially negotiated and the definition of [=privacy=] is essentially
 contested ([[?Privacy-Contested]]). This makes privacy a problem of collective action ([[?GKC-Privacy]]).
-Population-level [=data processing=] may impact populations or individuals, including in
+Group-level [=data processing=] may impact populations or individuals, including in
 ways that [=people=] could not control even under the optimistic assumptions of [=consent=].
-For example, based on population-level analysis, a company may know that <var>site.example</var>
+For example, based on group-level analysis, a company may know that <var>site.example</var>
 is predominantly visited by [=people=] of a given race or gender, and decide not to run its
 job ads there. Visitors to that page are implicitly having their [=data=] processed in
 [=inappropriate=] ways, with no way to discover the discrimination or seek relief
@@ -538,9 +563,9 @@ job ads there. Visitors to that page are implicitly having their [=data=] proces
 
 What we consider is therefore not just the relation between the [=people=] who share data
 and the [=parties=] that invite that disclosure ([[?Relational-Turn]]), but also between the [=people=]
-who may find themselves categorised indirectly even without sharing data. One key understanding here
-is that such relations may persist even when data is [=de-identified=]. What's more, such
-categorisation of people, voluntary or not, changes the way in which the world operates.
+who may find themselves categorised indirectly as part of a group even without sharing data. One key
+understanding here is that such relations may persist even when data is [=de-identified=]. What's
+more, such categorisation of people, voluntary or not, changes the way in which the world operates.
 This can produce self-reinforcing loops that can damage both individuals and
 groups ([[?Seeing-Like-A-State]]).
 
@@ -555,6 +580,29 @@ emerge when [=actors=] [=process=] [=data=]
 for collective benefit and for [=self-dealing=] [=purposes=] at the same time.
 The [=self-dealing=] [=purposes=] are often justified as bankrolling the pro-social outcomes
 but this requires collective oversight to be [=appropriate=].
+
+### Group Privacy {#group-privacy}
+
+There are different ways for [=people=] to become members of a group. Either they can join it
+deliberately, making it a self-constituted group such as when joining a club, or they can be
+classified into it by an external party, typically a bureaucracy or its computerised equivalent
+([[?Beyond-Individual]]). In the latter case, [=people=] may not be aware that they are being
+grouped together, and the definition of the group may not be intelligible (for instance if it is
+created from opaque machine learning techniques).
+
+Protecting group privacy can take place at two different levels. [=People=] may wish to protect
+knowledge that they are members of the group even though the existence of the group and its actions
+may be well knows (eg. membership in a dissidents movement under authoritarian rule). Conversely,
+the existence of a group or at least its activities may need to be protected even in cases in which
+its members are guaranteed to remain anonymous. An example [=privacy violation=] for the latter case
+is the fitness app Strava that did not reveal individual behaviour or identity but published heat
+maps of popular running routes. In doing so, it revealed secret US bases around which military
+personnel took frequent runs ([[?Strava-Debacle]], [[?Strava-Reveal-Military]]).
+
+When [=people=] do not know that they are members of a group, when they cannot easily find other
+members of the group so as to advocate for their rights together, or when they cannot easily
+understand why they are being categorised into a given group their ability to protect themselves
+through self-governing approaches to privacy is largely eliminated.
 
 ### Transparency and Research {#transparency}
 
@@ -1058,40 +1106,33 @@ or personalize content around his furry-interest.
 
 <p>
   <span class="practicelab" id="principle-collective-privacy">
-    [=Data=] [=processing=] that has collective consequences must be governed by legitimate collective rules.
+    Groups and various forms of institutions may best protect and support autonomy by making
+    decisions that apply collectively rather than individually to either prevent or enable data
+    sharing, and to set defaults for data processing rules.
   </span>
 </p>
 
-This includes processing for which informed individualistic
-decisions are unlikely (due to the complexity of the processing, the volume or frequency of
-processing, or both), or that cannot operate when individual decisions are enabled (eg. fraud
-detection).
 </div>
 
-We identify three types of situations in which establishing privacy rules will be
-better done through a collective process than individually. These are:
+Privacy principles are often defined in terms of extending rights to individuals. However, there are
+cases in which deciding which principles apply is best done collectively, on behalf of a group.
 
-1. **Processing with collective consequences**. For instance, if enough [=people=] reveal their
-membership in a given social group, then their behaviour can be analysed and used to discrimimate
-against [=people=] of that group even when they have decided _not_ to reveal [=information=] about
-themselves (eg. knowing that [=people=] of a given race or gender tend not to read a certain type of
-content makes it possible to target job ads to that content so that they are less likely to find
-them). We consider cases in which [=processing=] is unjust not from the violation of individual
-[=autonomy=] but because it violates ideals of social equality ([[?Relational-Governance]]).
-1. **Processing for which informed individual decision-making is unrealistic**. Expecting laypeople
-to make informed decisions relating to complex [=data=] [=processing=] or to make decisions on a
-very frequent basis even if the [=processing=] is relatively simple, is unrealistic if we also
-expect them to have reasonable levels of [=autonomy=] in making these decisions. When it comes to
-chemical safety, we do not expect [=people=] to be up to date with the domain's scientific literature
-or to conduct randomised controlled trials at home in order to decide for themselves which compound
-is tolerably safe and which isn't. In a similar vein, we should not expect [=people=] to make
-decisions as to which complex [=processing=] they are willing to subject themselves to.
-1. **Processing that cannot work when individual decisions are enabled**. For instance, if
-fraudsters can exclude themselves from fraud-detection processing, they will. A key aspect to note
-here is that, just because the [=processing=] _cannot_ work with individual consent and can be
-construed as legitimate does not automatically render it [=appropriate=]. Collective rules must
-still be established such that they can constrain the [=processing=] and offer guarantees as to its
-misuse, starting from a position of skepticism.
+One such case, which has become increasingly common with widespread profiling, is that of information
+relating to membership of a group or to a group's behaviour, as detailed in
+<a href="#group-privacy"></a>. As Brent Mittelstadt explains, “<em>Algorithmically grouped
+individuals have a collective interest in the creation of information about the group, and actions
+taken on its behalf.</em>” ([[?Individual-Group-Privacy]]) This justifies ensuring that grouped
+people can benefit from both individual and collective means to support their [=autonomy=] with respect
+to [=data=] [=processing=]. It should be noted that [=processing=] can be unjust even if individuals
+remain anonymous, not from the violation of individual [=autonomy=] but because it violates ideals
+of social equality ([[?Relational-Governance]]).
+
+Another case in which collective decision-making is preferable is for [=processing=] for which
+informed individual decision-making is unrealistic (due to the complexity of the processing, the
+volume or frequency of processing, or both). Expecting laypeople (or even experts) to make informed
+decisions relating to complex [=data=] [=processing=] or to make decisions on a very frequent basis
+even if the [=processing=] is relatively simple, is unrealistic if we also want them to have
+reasonable levels of [=autonomy=] in making these decisions.
 
 The purpose of this principle is to require that [=data governance=] provide ways to distinguish
 [=appropriate=] [=data=] [=processing=] without relying on individual decisions whenever the latter
@@ -1100,6 +1141,31 @@ are impossible, which is often ([[?Relational-Governance]], [[?Relational-Turn]]
 Which forms of collective governance are recognised as legitimate will depend on domains. These may
 take many forms, such as governmental bodies at various administrative levels, standards
 organisations, worker bargaining units, or civil society fora.
+
+It must be noted that, even though collective decision-making can be better than offloading
+[=privacy labour=] to [=individuals=], it is not necessarily a panacea. When considering such
+collective arrangements it is important to keep in mind the principles that are likely to support
+viable and effective institutions at any level of complexity ([[?IAD]]).
+
+A good example of a failure in collective privacy decisions was the standardisation of the
+[^a/ping^] attribute. Search engines, social sites, and other algorithmic media in the same vein
+have an interest in knowing which sites that they link to [=people=] choose to visit (which in turn
+could improve the service for everyone). But [=people=] may have an interest in keeping that
+information private from algorithmic media companies (as do the sites being linked to, as that
+facilitates timing attacks to recognise [=people=] there). A [=person=]'s exit through a specific
+link can either be tracked with JavaScript tricks or through bounce tracking, both of which are slow
+and difficult for user agents to defend against. The value proposition of the [^a/ping^] attribute
+in this context is therefore straightforward: by providing declarative support for this
+functionality it can be made fast (the browser sends an asynchronous notification to a ping
+endpoint after the [=person=] exits through a link) and the user agent can provide its [=user=] with
+the option to opt out of such tracking — or disable it by default.
+
+Unfortunately, this arrangement proved to be unworkable. What prevents a site from using [^a/ping^]
+for [=people=] who have it activated and bounce tracking for others? What prevents a browsers from
+opting everyone out because it wishes to offer better protection by default? Given the contested
+nature of the [^a/ping^] attribute and the absence of a forcing function to support collective
+enforcement, the scheme largely fell apart and while nominally standardised it is unevenly supported
+in browsers.
 
 ## Principles for Safety Systems {#safety}
 
