@@ -843,6 +843,7 @@ if the same data were shared between unrelated [=parties=].
   indication that the Task Force considers it to be of lesser importance.
 </aside>
 
+
 ## Principles for Identity on the Web {#identity}
 
 <aside class="issue">
@@ -1023,32 +1024,44 @@ of an event that occurs nearly-simultaneously on both sites.
 ## Principles for Personal Data {#data}
 
 <aside class="issue">
+  <h4>Pete's Funtime Reference Corral</h4>
+</aside>
+
+<aside class="issue">
   This section has not been edited for narrative.
 </aside>
 
-We define <dfn data-lt="data">personal data</dfn> as any information that is directly or
-indirectly related to an identified or identifiable [=person=], such as by reference to an
-[=identifier=] ([[GDPR]], [[OECD-Guidelines]], [[Convention-108]]).
+<p><span class="practicelab" id="user-agent-data-sharing">
+User agents should only share and present information about the user that
+the user can reasonably anticipate being shared, and which directly relate to the users overt, immediate goals.
+User agents and sites should be conservative when deciding if information is related to a users goals; the
+longer the chain of reasoning used to justify data collection, the less likely for that data
+collection to be ethical and principled.
+</span></p>
 
-If a [=person=] could reasonably be identified or re-identified when [=data=] is combined with other
-[=data=], then that makes that data [=personal data=].
+Examples:
 
-### Data users and use {#data-users}
+ - Sharing geo-location data with a map website after a user has clicked a "share my location" button has
+   a small number of "hops" between intent and data.
+ - Sharing information about the user's selected DNS resolver with a site, so that the site authors can debug
+   possible issues around tail/uncommon resolvers, has a large number of "hops" between user intent (to do
+   a thing on the website) and collection motivation (users like our site, so users will want to share information
+   with us to help us improve the site).
 
-A <dfn data-lt="data processor">service provider</dfn> or [=data processor=] is considered to be the same
-[=party=] as the [=actor=] contracting it to perform the relevant [=processing=] if it:
+<p><span class="practicelab" id="sensitive-vs-non-sensitive-data">
+User agents should generally not attempt to distinguish between sensitive and nonsensitive personal data; all
+data and personal information is likely to be sensitive to some users, often in ways unanticipated by
+browser vendors and site operators.
+</span></p>
 
-* is processing the data on behalf of that [=party=];
-* ensures that the data is only retained, accessed, and used as directed by that
-  [=party=] and solely for the list of explicitly-specified [=purposes=]
-  detailed by the directing [=party=] or [=data controller=];
-* may determine implementation details of the data processing in question but
-  does not determine the [=purpose=] for which the data is being [=processed=]
-  nor the overarching [=means=] through which the [=purpose=] is carried out;
-* has no independent right to use the data other than in a [=de-identified=] form (e.g., for
-  monitoring service integrity, load balancing, capacity planning, or billing); and,
-* has a contract in place with the [=party=] which is consistent with the above limitations.
+<p><span class="practicelab" id="minimal-data-sharing">
+User agents should always aim to share the minimal amount of information with a site
+that is needed for the user to achieve a user's goals. Data collected today can often be used in
+unanticipated ways in the future to enact privacy harms, even data that seems unlikely to
+be identifying, sensitive or otherwise privacy-harming.
+</span></p>
 
+<<<<<<< HEAD
 A <dfn>data controller</dfn> is a [=party=] that determines the [=means=] and [=purposes=]
 of data processing. Any [=party=] that is not a [=service provider=] is a [=data controller=].
 
@@ -1167,6 +1180,8 @@ themselves. Retaining rights requires ongoing control, not just at the time of c
 The OECD Privacy Principles [[OECD-Guidelines]], [[Records-Computers-Rights]], and the [[GDPR]],
 among other places, include many of the rights [=people=] have as data subjects. These participatory
 rights by people over data about themselves are inherent to [=autonomy=].
+=======
+>>>>>>> e824a4e (merging and flattening 2.2 and 2.4)
 
 ## Principles for Sensitive Information {#hl-sensitive-information}
 
@@ -1208,64 +1223,6 @@ a person, consider at least these factors:
 Issue(16): This description of what makes information sensitive still needs to
 be refined.
 
-## Principles for Profiling {#hl-unexpected-profiling}
-
-<aside class="issue">
-  This section has not been edited for narrative.
-</aside>
-
-Contributes to [=surveillance=], [=correlation=], [=identification=], and
-singling-out / discrimination.
-
-Unexpected profiling occurs when a site is able to learn attributes or
-characteristics about a person, that a) the site visitor did not intend the site
-to learn, and b) the site visitor reasonably could not anticipate a
-site would be able to learn.
-
-Profiling contributes to, but is distinct from, other privacy risks discussed
-in this document.
-For example, unexpected profiling may contribute to
-[[[#hl-recognition-same-site]]], by adding stable and semi-identifying
-information that can contribute to <a
-data-cite="fingerprinting-guidance#dfn-browser-fingerprinting">browser
-fingerprinting</a>. Unexpected profiling is distinct from same-site
-recognition though, in that a person may wish to not share some kinds
-of information about themselves <em>even in the presence of guarantees
-that such information will not lead to them being re-identified</em>.
-
-Similarly, unexpected profiling is related to [[[#hl-sensitive-information]]],
-but the former is a superset of the latter;
-all cases of unexpected sensitive information disclosure are examples of
-unexpected profiling, but people using the Web may have attributes or characteristics
-about themselves that are not universally thought of as "sensitive", but which
-they never the less do not wish to share with the sites they visit. People
-may wish to not share these "non-sensitive" characteristics
-for a variety of reasons (e.g., a person may worry that their ideas of what
-counts as "sensitive" is different from others, a person might might be ashamed
-or uncomfortable about a character trait or they might simply not wish to be profiled).
-
-Profiling occurs for many reasons. It can be used to facilitate price
-discrimination or offer manipulation, to make inferences about what products or
-services people might be more likely to purchase, or more generally, for a site
-to learn attributes about them that they do not intend to share.
-Unexpected profiling can also contribute to feelings of powerlessness and
-loss of agency [[?Privacy-Concerned]].
-
-A privacy harm occurs if a site learns information about a person that they
-reasonably expected the site would not be able to learn, regardless of
-whether that information aids (re)identification or is from a sensitive category
-of information (however defined).
-
-<div class="example">
-
-Peter is a <a href="https://en.wikipedia.org/wiki/Furry_fandom">furry</a>.
-Despite knowing that there are thousands of
-other furries on the internet, and despite using a browser with
-robust browser fingerprinting protections, and despite the growing cultural
-acceptance of furries, Peter does not want (most) sites to learn
-or personalize content around his furry-interest.
-
-</div>
 
 ## Collective Privacy {#collective-privacy}
 
