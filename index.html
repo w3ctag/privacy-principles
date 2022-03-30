@@ -708,10 +708,10 @@ research, this relationship with a [=trustworthy agent=] is often described as "
 Many of the [=principles=] described in the rest of this document extend the [=user agent=]'s duties and
 make them more precise.
 
-## Balancing Different Privacy Principles {#balancing}
+## Incorporating Different Privacy Principles {#balancing}
 
 While privacy principles are designed to work together and support each other,
-occasionally a proposal to improve how a system follows one privacy principle will reduce
+occasionally a proposal to improve how a system follows one privacy principle may reduce
 how well it follows another principle.
 
 <div class="practice">
@@ -732,19 +732,25 @@ off between principles.
 Once one is choosing between different designs at the Pareto frontier, the choice of which
 privacy principles to prefer is complex and depends heavily on the details of each
 particular situation. <span class="note">Note that people's privacy can also be in tension
-with other important non-privacy concerns. As discussed in the [[[Ethical-Web]]], it's
-important to balance these concerns too, but this document doesn't discuss how to do
-that.</span> Despite this complexity, there is a basic ground rule to follow:
+with non-privacy concerns. As discussed in the [[[Ethical-Web]]], "it is important to
+consider the context in which a particular technology is being applied, the expected
+audience(s) for the technology, who the technology benefits and who it may disadvantage,
+and any power dynamics involved".</span> Despite this complexity, there is a basic ground
+rule to follow:
 
 <div class="practice">
 
 <p><span class="practicelab" id="principle-limited-collection-for-safety">If a service
-collects extra data from its users in order to protect those or other users, it must take
-extra technical and legal measures to ensure that this data can't be then used for other
-purposes, like to grow the service.</span></p>
+needs to collect extra data from its users in order to protect those or other users, it
+must take extra technical and legal measures to ensure that this data can't be then used
+for other purposes, like to grow the service.</span></p>
 
-This is a special case of the more general principle that data can't be used for more
+This is a special case of the more general principle that data should not be used for more
 [=purposes=] than the data's subjects understood it was being collected for.
+
+A service should explain how it uses people's data to protect them and other people, and
+how it might additionally use someone's data if it believes that person has broken the
+rules.
 
 </div>
 
@@ -752,13 +758,14 @@ This is a special case of the more general principle that data can't be used for
 
 A site might segregate the data it collects for safety reasons from its business data by:
 
-1. Writing in its privacy policy that these types of data are kept separate. (A legal
-   measure)
+1. Specifying in its privacy statement that these types of data are kept separate and
+   implementing policies and procedures to ensure the data is stored separately. (legal
+   and procedural/compliance measures)
 1. Using multi-party computation to ensure that its business side can't learn the
-   sensitive safety data unless both its safety side and a trusted third party collude. (A technical measure)
-1. Hiring a trusted auditor to publicly check that the algorithms are sufficient to
-   provide the guarantees they claim to provide, and that there isn't, in fact, any
-   collusion. (Another technical measure)
+   sensitive safety data unless both its safety side and a trusted independent third party
+   collude. (A technical measure)
+1. Hiring a trusted auditor to publicly check that the data is effectively segregated. (a
+   compliance measure)
 
 </aside>
 
@@ -790,11 +797,13 @@ violate their rights to be free from [=surveillance=] and [=correlation=].
 
 Children using a service (or their guardians) may want to ensure their interaction with
 that service is only visible to other children. To accomplish this, the service would need
-to verify all of its users' ages.
+to check all of its users' ages.
 
-However, verifying ages is potentially an invasive process, requiring automated facial
-recognition, collection of live images, or strongly identifying the children (e.g. via
-[[NIST-800-63A]]).
+While a service can ask its users to self-assert that they are under the specified age
+(without verifying those assertions), or it might rely on trusted institutions (like
+schools) to verify people's ages, to verify people's ages directly can be
+privacy-invasive. It can require automated facial recognition, collection of live images,
+or strongly identifying the children (e.g. via [[NIST-800-63A]]).
 
 </aside>
 
