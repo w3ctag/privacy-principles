@@ -1470,7 +1470,7 @@ or even used to manipulate behaviour and thus reduce [=autonomy=].
   
   Web [=sites=] should tell their users what specific kind of information people can expect to 
   receive, and how notifications can be turned off,  when requesting permission to send interruptive 
-  notifications.  Web [=sites=] should not request permission to send notifications on first visit.
+  notifications.  Web [=sites=] should not request permission to send notifications when the user is unlikely to have sufficient knowledge (e.g. information about what kinds of notifications they are signing up for) to make an informed response. If it's unlikely that such information could have been provided then the [=user agent=] should apply mitigations (for example, warming about potential malicious use of the notifications API).
   Permissions should be requested in [=context=].
 
 </div>
