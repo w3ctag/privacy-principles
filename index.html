@@ -1363,18 +1363,21 @@ they're interacting with. Uses of this document in a particular domain are expec
 the core concepts of that domain combine into a [=user=]-comprehensible [=party=], and those refined
 definitions are likely to differ between domains.
 
-The [=parties=] that a reasonable person would think they are interacting with are known
-as the <dfn id="dfn-first-party" data-lt="first party">first parties</dfn>. Usually, there
-is just one first party, but clear-enough joint branding can make people aware that
-they're interacting with multiple other parties. When a [=person=] hovers over, mutes,
-pauses, or closes a piece of content controlled by a different party, that doesn't imply
-that they're aware that they've interacted with a different party. Simply loading content
-controlled by another [=party=] especially doesn't imply this. When data is entered in the
-context of a [=first party=], that party is accountable for the ways that data gets
-processed, even if another party does the processing.
+[=User agents=] tend to explain to [=people=] which [=origin=] or [=site=] provided the
+web page they're looking at. The [=party=] that controls this [=origin=] or [=site=] is
+known as the web page's <dfn data-dfn-for="page">first party</dfn>. When a [=person=]
+interacts with a UI element on a web page, the <dfn>first party</dfn> of that interaction
+is usually the web page's [=page/first party=]. However, if a different [=party=] controls
+the UI element, and a reasonable person with a realistic cognitive budget would realize
+that this other [=party=] controls the UI element they're interacting with, this other
+[=party=] is the [=first party=] for the interaction instead.
 
-A <dfn data-lt="third parties">third party</dfn> is any [=party=] other than the [=person=] visiting the website
-or the [=first parties=] they expect to be interacting with.
+The [=first party=] to an interaction is accountable for the processing of data produced
+by that interaction, even if another party does the processing.
+
+A <dfn data-lt="third parties">third party</dfn> is any [=party=] other than the
+[=person=] visiting the website or the [=first parties=] they expect to be interacting
+with.
 
 ## Acting on Data {#acting-on-data}
 
