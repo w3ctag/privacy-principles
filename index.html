@@ -187,6 +187,13 @@
           href: 'https://www.cambridge.org/core/books/industry-unbound/787989F90DBFC08E47546178A7AB04F7',
           publisher: 'Cambridge University Press',
         },
+        'NIST-800-63A': {
+          title: 'Digital Identity Guidelines: Enrollment and Identity Proofing Requirements',
+          href: 'https://pages.nist.gov/800-63-3/sp800-63a.html',
+          publisher: 'NIST',
+          authors: ['Paul A. Grassi', 'James L. Fenton', 'Naomi B. Lefkovitz', 'Jamie M. Danker', 'Yee-Yin Choong', 'Kristen K. Greene', 'Mary F. Theofanos'],
+          date: 'March 2020'
+        },
         'NYT-Privacy': {
           title: 'How The New York Times Thinks About Your Privacy',
           author: ['Robin Berjon'],
@@ -706,8 +713,116 @@ research, this relationship with a [=trustworthy agent=] is often described as "
 Many of the [=principles=] described in the rest of this document extend the [=user agent=]'s duties and
 make them more precise.
 
+## Incorporating Different Privacy Principles {#balancing}
 
+While privacy principles are designed to work together and support each other,
+occasionally a proposal to improve how a system follows one privacy principle may reduce
+how well it follows another principle.
 
+<div class="practice">
+
+<p><span class="practicelab" id="principle-pareto-frontier">When confronted with an
+apparent tradeoff, first look for ways to improve all principles at once.</span></p>
+
+Given any initial design that doesn't perfectly satisfy all principles, there are usually
+some other designs that improve the situation for some principles without sacrificing
+anything about the other principles. Work to find those designs.
+
+Another way to say this is to look for [Pareto
+improvements](https://en.wikipedia.org/wiki/Pareto_efficiency) before starting to trade
+off between principles.
+
+</div>
+
+Once one is choosing between different designs at the Pareto frontier, the choice of which
+privacy principles to prefer is complex and depends heavily on the details of each
+particular situation. <span class="note">Note that people's privacy can also be in tension
+with non-privacy concerns. As discussed in the [[[Ethical-Web]]], "it is important to
+consider the context in which a particular technology is being applied, the expected
+audience(s) for the technology, who the technology benefits and who it may disadvantage,
+and any power dynamics involved".</span> Despite this complexity, there is a basic ground
+rule to follow:
+
+<div class="practice">
+
+<p><span class="practicelab" id="principle-limited-collection-for-safety">If a service
+needs to collect extra data from its users in order to protect those or other users, it
+must take extra technical and legal measures to ensure that this data can't be then used
+for other purposes, like to grow the service.</span></p>
+
+This is a special case of the more general principle that data should not be used for more
+[=purposes=] than the data's subjects understood it was being collected for.
+
+A service should explain how it uses people's data to protect them and other people, and
+how it might additionally use someone's data if it believes that person has broken the
+rules.
+
+</div>
+
+<aside class="example" id="example-technical-legal-measures" title="Technical and Legal Measures">
+
+A site might segregate the data it collects for safety reasons from its business data by:
+
+1. Specifying in its privacy statement that these types of data are kept separate and
+   implementing policies and procedures to ensure the data is stored separately. (legal
+   and procedural/compliance measures)
+1. Using multi-party computation to ensure that its business side can't learn the
+   sensitive safety data unless both its safety side and a trusted independent third party
+   collude. (A technical measure)
+1. Hiring a trusted auditor to publicly check that the data is effectively segregated. (a
+   compliance measure)
+
+</aside>
+
+It is attractive to say that if someone violates the norms of a service they're using,
+then they sacrifice a proportionate amount of their privacy protections, but
+
+1. Often the service can only prevent the norm violation by also collecting data from
+   innocent users. This extra collection is not always [=appropriate=], especially if it
+   allows pervasive monitoring ([[RFC7258]], [[RFC7687]]).
+1. If a service owner wants to collect some extra data, it can be tempting for them to
+   define norms and proportionality that allow them to do so.
+
+The following examples illustrate some of the tensions:
+
+<aside class="example" id="example-sockpuppets" title="Sockpuppets">
+
+A person might want to sign up many accounts ("sockpuppets") or disguise the affiliation
+of individual-owned accounts
+("[astroturfing](https://en.wikipedia.org/wiki/Astroturfing)") on a service in order to
+trick other people into thinking a belief has more support than it really has. This
+violates the other people's rights to be free from manipulation.
+
+On the other hand, identifying everyone with enough detail to detect these cases tends to
+violate their rights to be free from [=surveillance=] and [=correlation=].
+
+</aside>
+
+<aside class="example" id="example-children" title="Children's Services">
+
+Children using a service (or their guardians) may want to ensure their interaction with
+that service is only visible to other children. To accomplish this, the service would need
+to check all of its users' ages.
+
+While a service can ask its users to self-assert that they are under the specified age
+(without verifying those assertions), or it might rely on trusted institutions (like
+schools) to verify people's ages, to verify people's ages directly can be
+privacy-invasive. It can require automated facial recognition, collection of live images,
+or strongly identifying the children (e.g. via [[NIST-800-63A]]).
+
+</aside>
+
+<aside class="example" id="example-account-security" title="Account Security">
+
+Accounts with a service need to be protected more strongly than just with a username and
+password. Since a compromised account reveals all the private information stored in the
+account, this is a privacy issue and not just a security issue. Services often store the
+historical locations and machine characteristics that have accessed an account, in order
+to make it harder to log in from an unusual place or type of machine. They might also
+store other personal data, like a phone number or address, in order to check that a
+suspicious login actually comes from the real account owner.
+
+</aside>
 
 # Principles for Privacy on the Web
 
@@ -1219,26 +1334,6 @@ to offer better protection by default? Given the contested nature of the [^a/pin
 the absence of a forcing function to support collective enforcement, the scheme failed to deliver
 improved privacy.
 
-## Principles for Safety Systems {#safety}
-
-<aside class="issue">
-  This section has not been edited for narrative.
-</aside>
-
-
-<aside class="issue" data-number="73">
-
-Discuss how systems intended to protect a person might justifiably collect more data from
-that person and from people who might be trying to attack that person. Also discuss
-whether systems intended to protect server-side parties from abuse can collect more data
-from users.
-
-Discuss what limits need to be placed on such practices to distinguish them from privatised
-law enforcement and intellligence agencies.
-
-</aside>
-
-
 ## Principles for Guardians and Device Owners {#guardians-and-owners}
 
 <aside class="issue" data-number="2">
@@ -1253,8 +1348,8 @@ law enforcement and intellligence agencies.
 ## Unwanted Information {#unwanted-information}
 
 Receiving unsolicited information that either may cause distress or waste the recipient's
-time or resources is a violation of privacy. 
-    
+time or resources is a violation of privacy.
+
 <div class="practice">
 
 <p>
