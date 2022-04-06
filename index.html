@@ -1443,15 +1443,15 @@ Examples of alternatives to interrupting users with consent requests include:
 </div>
 
 
-## Principles for Notifications and Interruptions
+## Principles for Notifications and Interruptions {#interruptions}
 
 <aside class="issue">This is related to [=autonomy=].</aside>
 
-Notifications and other interruptive UI can be a powerful way to capture attention. 
+Notifications and other interruptive UI can be a powerful way to capture attention.
 Depending on the operating system in use, a notification can appear outside of the
 browser context (for example, in a general notifications tray) or even cause a device to
 buzz or play an alert tone.
-Like all powerful features, notifications can be misused and can become an annoyance 
+Like all powerful features, notifications can be misused and can become an annoyance
 or even used to manipulate behaviour and thus reduce [=autonomy=].
 
 <div class="practice">
@@ -1459,19 +1459,26 @@ or even used to manipulate behaviour and thus reduce [=autonomy=].
   <span class="practicelab" id="principle-notifications-control">A [=user agent=] should help
     users control notifications and other interruptive UI that can be used to manipulate behavior.</span>
 
-  [=User agents=] should provide UI that allows their users to audit which web [=sites=] have been granted 
-  permission to display alerts and to revoke these permissions.  
+  [=User agents=] should provide UI that allows their users to audit which web [=sites=] have been granted
+  permission to display alerts and to revoke these permissions.
   [=User agents=] should also apply some quality metric to the initial request for permissions to receive
   notifications (for example, disallowing sites from requesting permission on first visit).
+
 </div>
 <div class="practice">
+
   <span class="practicelab" id="principle-notifications-context">Web [=sites=] should use notifications
     only for information that their users have specifically requested.
   </span>
-  
-  Web [=sites=] should tell their users what specific kind of information people can expect to 
-  receive, and how notifications can be turned off,  when requesting permission to send interruptive 
-  notifications.  Web [=sites=] should not request permission to send notifications when the user is unlikely to have sufficient knowledge (e.g. information about what kinds of notifications they are signing up for) to make an informed response. If it's unlikely that such information could have been provided then the [=user agent=] should apply mitigations (for example, warning about potential malicious use of the notifications API).
+
+  Web [=sites=] should tell their users what specific kind of information people can expect to
+  receive, and how notifications can be turned off,  when requesting permission to send interruptive
+  notifications.  Web [=sites=] should not request permission to send notifications when
+  the user is unlikely to have sufficient knowledge (e.g. information about what kinds of
+  notifications they are signing up for) to make an informed response. If it's unlikely
+  that such information could have been provided then the [=user agent=] should apply
+  mitigations (for example, warning about potential malicious use of the notifications
+  API).
   Permissions should be requested in context.
 
 </div>
