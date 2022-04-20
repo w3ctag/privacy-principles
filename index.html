@@ -1128,6 +1128,66 @@ a person, consider at least these factors:
 Issue(16): This description of what makes information sensitive still needs to
 be refined.
 
+## De-identified Data {#deidentified-data}
+
+<div class="practice">
+
+<p><span class="practicelab" id="minimal-data-sharing">
+Whenever possible, processors should work with [=data=] that has been [=de-identified=].
+</span></p>
+
+</div>
+
+Data is <dfn>de-identified</dfn> when there exists a high level of confidence
+that no [=person=] described by the data can be identified, directly or indirectly
+(e.g. via association with an [=identifier=], user agent, or device), by that data alone or in
+combination with other available information. Note
+that further considerations relating to groups are covered in the
+<a href="#collective">Collective Issues in Privacy</a> section.
+
+We talk of <dfn>controlled de-identified data</dfn> when there are strict controls that prevent the
+re-identification of [=people=] described by the data except for a well-defined set of [=purposes=].
+
+Different situations involving [=controlled de-identified data=] will require different controls.
+For instance, if the [=controlled de-identified data=] is <em>only</em> being processed by one
+[=party=], typical controls include making sure that the [=identifiers=] used in the data are unique
+to that dataset, that any person (e.g. an employee of the [=party=]) with access to the [=data=] is
+barred (e.g. based on legal terms) from sharing the [=data=] further, and that technical measures
+exist to prevent re-identification or the joining of different data sets involving this [=data=],
+notably against timing or k-anonymity attacks.
+
+In general, the goal is to ensure that [=controlled de-identified data=] is used in a manner that
+provides a viable degree of oversight and accountability such that technical and procedural means to
+guarantee the maintenance of pseudonymity are preserved.
+
+This is more difficult when the [=controlled de-identified data=] is shared between several
+[=parties=]. In such cases, good examples of typical controls that are representative of best
+practices would include making sure that:
+
+* the [=identifiers=] used in the [=data=] are under the direct and exclusive control of
+  the [=first party=] who is prevented by strict controls from matching the identifiers with the
+  data;
+
+* when these [=identifiers=] are shared with a [=third party=], they are made unique
+  to that [=third party=] such that if they are shared with more than one
+  [=third party=] these cannot then match them up with one another;
+
+* there is a strong level of confidence that no [=third party=] can match the [=data=]
+  with any data other than that obtained through interactions with the [=first
+  party=];
+
+* any [=third party=] receiving such [=data=] is barred (eg. based on legal terms)
+  from sharing it further;
+
+* technical measures exist to prevent re-identification or the joining of
+  different data sets involving this [=data=], notably against timing or
+  k-anonymity attacks; and
+
+* there exist contractual terms between the [=first party=] and [=third party=]
+  describing the limited [=purpose=] for which the data is being shared.
+
+Note that [=controlled de-identified data=], on its own, is not sufficient to render
+[=data processing=] [=appropriate=].
 
 ## Collective Privacy {#collective-privacy}
 
