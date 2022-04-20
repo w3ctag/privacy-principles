@@ -5,8 +5,8 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-
 - [Charter](#charter)
+- [Privacy Task Force Members](#privacy-task-force-members)
 - [Input documents](#input-documents)
 - [Related documents](#related-documents)
 
