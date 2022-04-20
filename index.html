@@ -29,6 +29,10 @@
           for (let label of document.querySelectorAll('div.practice > a.marker > bdi, #bp-summary > ul > li > a.marker > bdi')) {
             label.textContent = 'Principle';
           }
+          // I hate markdown
+          for (let p of document.querySelectorAll('div.practice > p')) {
+            if (/^\s*$/.test(p.textContent)) p.remove();
+          }
           for (let prac of document.querySelectorAll('div.practice.advisement')) {
             prac.classList.remove('advisement');
             prac.classList.add('principle');
@@ -476,9 +480,11 @@ that may impact [=autonomy=] should be the subject of independent scrutiny.
 
 Given the large volume of potential [=data=]-related decisions in today's data economy,
 complete informational self-determination is impossible. This fact, however, should not be
-confused with the idea that privacy is dead. Careful design of our technological
-infrastructure can ensure that people's [=autonomy=] with respect to their own [=data=]
-is enhanced through [=appropriate=] defaults and choice architectures.
+confused with the idea that privacy is dead. Studies show that [=people=] remain concerned over how
+their [=data=] is [=processed=], feeling powerless and like they have lost agency
+([[?Privacy-Concerned]]). Careful design of our technological infrastructure can ensure that
+people's [=autonomy=] with respect to their own [=data=] is enhanced through [=appropriate=]
+defaults and choice architectures.
 
 ### Opt-in, Consent, Opt-out, Global Controls {#opt-in-out}
 
@@ -1026,23 +1032,6 @@ of an event that occurs nearly-simultaneously on both sites.
 ## Principles for Personal Data {#data}
 
 <aside class="issue">
-<h4>Pete's Funtime Reference Corral</h4>
-
-* <dfn data-lt="data">personal data</dfn>
-* <dfn data-lt="data processor">service provider</dfn>
-* <dfn data-export="">right to access</dfn>
-* <dfn data-export="" data-lt="right to erase">right to erase</dfn>
-* <dfn data-export="" data-lt="right to portability" data-local-lt="portability">right to port</dfn>
-* <dfn data-export="">right to correct</dfn>
-* <dfn data-export="">right to be free from automated decision-making</dfn>
-* <dfn data-export="" data-lt="right to object|right to withdraw consent|right to restrict use">right to object, withdraw consent, and restrict use</dfn>
-* <dfn>de-identified</dfn>
-* [=third party=]
-* [[?Privacy-Concerned]]
-
-</aside>
-
-<aside class="issue">
   This section has not been edited for narrative.
 </aside>
 
@@ -1086,6 +1075,7 @@ unanticipated ways in the future to enact privacy harms, even data that seems un
 be identifying, sensitive or otherwise privacy-harming.
 </span></p>
 
+</div>
 
 ## Principles for Sensitive Information {#hl-sensitive-information}
 
@@ -1127,6 +1117,127 @@ a person, consider at least these factors:
 Issue(16): This description of what makes information sensitive still needs to
 be refined.
 
+## Data Rights {#data-rights}
+
+<p>
+  <span class="practicelab" id="respect-data-rights">
+    [=People=] have certain rights over [=data=] that is about themselves, and these rights should
+    be facilitated by their [=user agent=] and the [=parties=] that are [=processing=] their
+    [=data=].
+  </span>
+</p>
+
+While data rights alone are not sufficient to satisfy all [=privacy=] principles for the Web, they
+do support self-determination and help improve accountability. Such rights include:
+
+* The <dfn data-export="">right to access</dfn> [=data=] about oneself.
+
+This right includes being able to discover data about oneself (implying no databases are kept
+secret) and to review
+what information has been collected or inferred.
+
+* The <dfn data-export="" data-lt="right to erase">right to erase</dfn> [=data=] about oneself.
+
+The right to erase applies whether or not terminating use of a service altogether, though what
+[=data=] can be erased may differ between those two cases. On the Web, [=people=] may wish to erase
+data on their device, on a server, or both, and the distinctions may not always be clear.
+
+* The <dfn data-export="" data-lt="right to portability" data-local-lt="portability">right to
+port</dfn> [=data=], including data one has stored with a [=party=], so it can easily be reused or
+transferred elsewhere.
+
+Portability is needed to realize the ability for [=people=] to make choices about services with
+different data practices. Standards for interoperability are essential for effective re-use.
+
+* The <dfn data-export="">right to correct</dfn> [=data=] about oneself, to ensure that one's
+[=identity=] is properly reflected in a system.
+
+* The <dfn data-export="">right to be free from automated decision-making</dfn> based on [=data=]
+about oneself.
+
+For some kinds of decision-making with substantial consequences, there is a privacy interest in
+being able to exclude oneself from automated profiling. For example, some services may alter the
+price of products (price discrimination) or offers for credit or insurance based on [=data=]
+collected about a person. Those alterations may be consequential (financially, say) and
+objectionable to people who believe those decisions based on data about them are inaccurate or
+unjust. As another example, some services may draw inferences about a user's identity, humanity or
+presence based on facial recognition algorithms run on camera data. Because facial recognition
+algorithms and training sets are fallible and may exhibit certain biases, people may not wish to
+submit to decisions based on that kind of automated recognition.
+
+* The <dfn data-export=""
+  data-lt="right to object|right to withdraw consent|right to restrict use">right to object,
+withdraw consent, and restrict use</dfn> of data about oneself.
+
+[=People=] may change their decisions about consent or may object to subsequent uses of data about
+themselves. Retaining rights requires ongoing control, not just at the time of collection.
+
+The OECD Privacy Principles [[OECD-Guidelines]], [[Records-Computers-Rights]], and the [[GDPR]],
+among other places, include many of the rights [=people=] have as data subjects. These participatory
+rights by people over data about themselves are inherent to [=autonomy=].
+
+## De-identified Data {#deidentified-data}
+
+<div class="practice">
+
+<p>
+  <span class="practicelab" id="de-identify-data">
+    Whenever possible, processors should work with [=data=] that has been [=de-identified=].
+  </span>
+</p>
+
+</div>
+
+Data is <dfn>de-identified</dfn> when there exists a high level of confidence
+that no [=person=] described by the data can be identified, directly or indirectly
+(e.g. via association with an [=identifier=], user agent, or device), by that data alone or in
+combination with other available information. Note
+that further considerations relating to groups are covered in the
+<a href="#collective">Collective Issues in Privacy</a> section.
+
+We talk of <dfn>controlled de-identified data</dfn> when there are strict controls that prevent the
+re-identification of [=people=] described by the data except for a well-defined set of [=purposes=].
+
+Different situations involving [=controlled de-identified data=] will require different controls.
+For instance, if the [=controlled de-identified data=] is <em>only</em> being processed by one
+[=party=], typical controls include making sure that the [=identifiers=] used in the data are unique
+to that dataset, that any person (e.g. an employee of the [=party=]) with access to the [=data=] is
+barred (e.g. based on legal terms) from sharing the [=data=] further, and that technical measures
+exist to prevent re-identification or the joining of different data sets involving this [=data=],
+notably against timing or k-anonymity attacks.
+
+In general, the goal is to ensure that [=controlled de-identified data=] is used in a manner that
+provides a viable degree of oversight and accountability such that technical and procedural means to
+guarantee the maintenance of pseudonymity are preserved.
+
+This is more difficult when the [=controlled de-identified data=] is shared between several
+[=parties=]. In such cases, good examples of typical controls that are representative of best
+practices would include making sure that:
+
+* the [=identifiers=] used in the [=data=] are under the direct and exclusive control of
+  the [=first party=] who is prevented by strict controls from matching the identifiers with the
+  data;
+
+* when these [=identifiers=] are shared with a [=third party=], they are made unique
+  to that [=third party=] such that if they are shared with more than one
+  [=third party=] these cannot then match them up with one another;
+
+* there is a strong level of confidence that no [=third party=] can match the [=data=]
+  with any data other than that obtained through interactions with the [=first
+  party=];
+
+* any [=third party=] receiving such [=data=] is barred (eg. based on legal terms)
+  from sharing it further;
+
+* technical measures exist to prevent re-identification or the joining of
+  different data sets involving this [=data=], notably against timing or
+  k-anonymity attacks; and
+
+* there exist contractual terms between the [=first party=] and [=third party=]
+  describing the limited [=purpose=] for which the data is being shared.
+
+Note that [=controlled de-identified data=], on its own, is not sufficient to render
+[=data processing=] [=appropriate=].
 
 ## Collective Privacy {#collective-privacy}
 
@@ -1430,7 +1541,22 @@ A <dfn data-lt="third parties">third party</dfn> is any [=party=] other than the
 [=person=] visiting the website or the [=first parties=] they expect to be interacting
 with.
 
+The <dfn>Vegas Rule</dfn> is a simple implementation of privacy in which "<i>what happens with the
+[=first party=] stays with the [=first party=]</i>." Put differently, the [=Vegas Rule=] is followed
+when the [=first party=] is the only [=data controller=]. While the [=Vegas Rule=] is a good
+guideline, it's neither necessary nor sufficient for [=appropriate=] [=data processing=]. A [=first
+party=] that maintains exclusive access to a person's data can still [=process=] it
+[=inappropriately=], and there are cases where a third party can learn information about a person
+but still treat it [=appropriately=].
+
 ## Acting on Data {#acting-on-data}
+
+We define <dfn data-lt="data">personal data</dfn> as any information that is directly or
+indirectly related to an identified or identifiable [=person=], such as by reference to an
+[=identifier=] ([[GDPR]], [[OECD-Guidelines]], [[Convention-108]]).
+
+If a [=person=] could reasonably be identified or re-identified when [=data=] is combined with other
+[=data=], then that makes that data [=personal data=].
 
 <dfn>Privacy</dfn> is achieved in a given [=context=] that either involves [=personal data=] or
 involves information being presented to [=people=] when the [=principles=] of that [=context=] are
@@ -1469,6 +1595,23 @@ The <dfn>means</dfn> are the general method of [=data processing=] through which
 level and not necessarily all the way down to implementation details. Example:
 <em>a person will have their preferences restored (purpose) by looking up their identifier
 in a preferences store (means)</em>.
+
+A <dfn>data controller</dfn> is a [=party=] that determines the [=means=] and [=purposes=]
+of data processing. Any [=party=] that is not a [=service provider=] is a [=data controller=].
+
+A <dfn data-lt="data processor">service provider</dfn> or [=data processor=] is considered to be the
+same [=party=] as the [=actor=] contracting it to perform the relevant [=processing=] if it:
+
+* is processing the data on behalf of that [=party=];
+* ensures that the data is only retained, accessed, and used as directed by that
+  [=party=] and solely for the list of explicitly-specified [=purposes=]
+  detailed by the directing [=party=] or [=data controller=];
+* may determine implementation details of the data processing in question but
+  does not determine the [=purpose=] for which the data is being [=processed=]
+  nor the overarching [=means=] through which the [=purpose=] is carried out;
+* has no independent right to use the data other than in a [=de-identified=] form (e.g., for
+  monitoring service integrity, load balancing, capacity planning, or billing); and,
+* has a contract in place with the [=party=] which is consistent with the above limitations.
 
 </section>
 
