@@ -29,6 +29,10 @@
           for (let label of document.querySelectorAll('div.practice > a.marker > bdi, #bp-summary > ul > li > a.marker > bdi')) {
             label.textContent = 'Principle';
           }
+          // I hate markdown
+          for (let p of document.querySelectorAll('div.practice > p')) {
+            if (/^\s*$/.test(p.textContent)) p.remove();
+          }
           for (let prac of document.querySelectorAll('div.practice.advisement')) {
             prac.classList.remove('advisement');
             prac.classList.add('principle');
@@ -1036,7 +1040,6 @@ of an event that occurs nearly-simultaneously on both sites.
 * <dfn data-export="">right to correct</dfn>
 * <dfn data-export="">right to be free from automated decision-making</dfn>
 * <dfn data-export="" data-lt="right to object|right to withdraw consent|right to restrict use">right to object, withdraw consent, and restrict use</dfn>
-* <dfn>de-identified</dfn>
 * [=third party=]
 * [[?Privacy-Concerned]]
 
