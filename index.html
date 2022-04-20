@@ -1032,7 +1032,6 @@ of an event that occurs nearly-simultaneously on both sites.
 <aside class="issue">
 <h4>Pete's Funtime Reference Corral</h4>
 
-* <dfn data-lt="data processor">service provider</dfn>
 * [=third party=]
 * [[?Privacy-Concerned]]
 
@@ -1597,6 +1596,20 @@ in a preferences store (means)</em>.
 
 A <dfn>data controller</dfn> is a [=party=] that determines the [=means=] and [=purposes=]
 of data processing. Any [=party=] that is not a [=service provider=] is a [=data controller=].
+
+A <dfn data-lt="data processor">service provider</dfn> or [=data processor=] is considered to be the
+same [=party=] as the [=actor=] contracting it to perform the relevant [=processing=] if it:
+
+* is processing the data on behalf of that [=party=];
+* ensures that the data is only retained, accessed, and used as directed by that
+  [=party=] and solely for the list of explicitly-specified [=purposes=]
+  detailed by the directing [=party=] or [=data controller=];
+* may determine implementation details of the data processing in question but
+  does not determine the [=purpose=] for which the data is being [=processed=]
+  nor the overarching [=means=] through which the [=purpose=] is carried out;
+* has no independent right to use the data other than in a [=de-identified=] form (e.g., for
+  monitoring service integrity, load balancing, capacity planning, or billing); and,
+* has a contract in place with the [=party=] which is consistent with the above limitations.
 
 </section>
 
