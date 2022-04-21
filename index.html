@@ -7,21 +7,26 @@
   <script class="remove">
     // All config options at https://respec.org/docs/
     var respecConfig = {
-      specStatus: 'editor-draft-finding',
+      specStatus: 'DNOTE',
       group: 'tag',
+      publishDate: '2022-04-27',
       format: 'markdown',
       editors: [{
         name: 'Robin Berjon',
         company: 'The New York Times',
         companyURL: 'https://nytimes.com/',
         url: 'https://berjon.com/',
+        w3cid: 34327,
       }, {
         name: 'Jeffrey Yasskin',
         company: 'Google',
         companyURL: 'https://google.com/',
       }],
       github: 'w3ctag/privacy-principles',
-      shortName: 'privacy-principles',
+      shortName: 'privacy',
+      lint: {
+        'required-sections': false,
+      },
       postProcess: [
         () => {
           // relabel each principle, and lose the numbering, delabel principle summary
@@ -357,10 +362,11 @@ document is written to work with both.
 
 <section id="sotd">
 
-This document is a Draft Finding of the [Technical Architecture Group (TAG)](https://www.w3.org/2001/tag/).
+This document is a Draft Finding of the [Technical Architecture Group (TAG)](https://www.w3.org/2001/tag/)
+which we are releasing as a Draft Note. The intent is for this document to become a W3C Statement.
 It was prepared by the [Web Privacy Principles Task Force](https://github.com/w3ctag/privacy-principles),
-which was convened by the TAG. Publication as a Draft Finding does not imply endorsement by the TAG
-or by the W3C Membership.
+which was convened by the TAG. Publication as a Draft Finding or Draft Note does not imply
+endorsement by the TAG or by the W3C Membership.
 
 This draft <strong>does not yet</strong> reflect the consensus of the TAG or the task force and may
 be updated, replaced, or obsoleted by other documents at any time. It is inappropriate to cite this
