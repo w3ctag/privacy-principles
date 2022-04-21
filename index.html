@@ -28,6 +28,10 @@
           for (let label of document.querySelectorAll('div.practice > a.marker > bdi, #bp-summary > ul > li > a.marker > bdi')) {
             label.textContent = 'Principle';
           }
+          // I hate markdown
+          for (let p of document.querySelectorAll('div.practice > p')) {
+            if (/^\s*$/.test(p.textContent)) p.remove();
+          }
           for (let prac of document.querySelectorAll('div.practice.advisement')) {
             prac.classList.remove('advisement');
             prac.classList.add('principle');
@@ -475,9 +479,11 @@ that may impact [=autonomy=] should be the subject of independent scrutiny.
 
 Given the large volume of potential [=data=]-related decisions in today's data economy,
 complete informational self-determination is impossible. This fact, however, should not be
-confused with the idea that privacy is dead. Careful design of our technological
-infrastructure can ensure that people's [=autonomy=] with respect to their own [=data=]
-is enhanced through [=appropriate=] defaults and choice architectures.
+confused with the idea that privacy is dead. Studies show that [=people=] remain concerned over how
+their [=data=] is [=processed=], feeling powerless and like they have lost agency
+([[?Privacy-Concerned]]). Careful design of our technological infrastructure can ensure that
+people's [=autonomy=] with respect to their own [=data=] is enhanced through [=appropriate=]
+defaults and choice architectures.
 
 ### Opt-in, Consent, Opt-out, Global Controls {#opt-in-out}
 
@@ -634,7 +640,9 @@ TAG's resolution on a [Strong and Secure Web Platform](https://www.w3.org/blog/2
 to ensure that "<i>broad testing and audit continues to be possible</i>" where
 [=information flows=] and automated decisions are involved.
 
-Such transparency can only function if there are strong [rights](#data-rights) of access to data (including data
+Such transparency can only function if there are strong
+<!-- [rights](#data-rights) --> rights
+of access to data (including data
 derived from one's personal data) as well as mechanisms to explain the outcomes of automated
 decisions.
 
@@ -842,6 +850,7 @@ if the same data were shared between unrelated [=parties=].
   indication that the Task Force considers it to be of lesser importance.
 </aside>
 
+
 ## Principles for Identity on the Web {#identity}
 
 <aside class="issue">
@@ -1025,101 +1034,107 @@ of an event that occurs nearly-simultaneously on both sites.
   This section has not been edited for narrative.
 </aside>
 
-We define <dfn data-lt="data">personal data</dfn> as any information that is directly or
-indirectly related to an identified or identifiable [=person=], such as by reference to an
-[=identifier=] ([[GDPR]], [[OECD-Guidelines]], [[Convention-108]]).
+<aside class="issue">
+  There is not currnetly consensus among the authors and contributors to this
+  document about the below principles.
+  Please see <a href="https://github.com/w3ctag/privacy-principles/issues/150">this issue</a>
+  for more details.
+</aside>
 
-If a [=person=] could reasonably be identified or re-identified when [=data=] is combined with other
-[=data=], then that makes that data [=personal data=].
+<div class="practice">
 
-### Data users and use {#data-users}
+<p><span class="practicelab" id="user-agent-data-sharing">
+User agents should only share and present information about the user that
+the user can reasonably anticipate being shared, and which directly relate to the users overt, immediate goals.
+User agents and sites should be conservative when deciding if information is related to a users goals; the
+longer the chain of reasoning used to justify data collection, the less likely for that data
+collection to be ethical and principled.
+</span></p>
 
-A <dfn data-lt="data processor">service provider</dfn> or [=data processor=] is considered to be the same
-[=party=] as the [=actor=] contracting it to perform the relevant [=processing=] if it:
+</div>
 
-* is processing the data on behalf of that [=party=];
-* ensures that the data is only retained, accessed, and used as directed by that
-  [=party=] and solely for the list of explicitly-specified [=purposes=]
-  detailed by the directing [=party=] or [=data controller=];
-* may determine implementation details of the data processing in question but
-  does not determine the [=purpose=] for which the data is being [=processed=]
-  nor the overarching [=means=] through which the [=purpose=] is carried out;
-* has no independent right to use the data other than in a [=de-identified=] form (e.g., for
-  monitoring service integrity, load balancing, capacity planning, or billing); and,
-* has a contract in place with the [=party=] which is consistent with the above limitations.
+Examples:
 
-A <dfn>data controller</dfn> is a [=party=] that determines the [=means=] and [=purposes=]
-of data processing. Any [=party=] that is not a [=service provider=] is a [=data controller=].
+* Sharing geo-location data with a map website after a user has clicked a "share my location" button has
+  a small number of "hops" between intent and data.
+* Sharing information about the user's selected DNS resolver with a site, so that the site authors can debug
+  possible issues around tail/uncommon resolvers, has a large number of "hops" between user intent (to do
+  a thing on the website) and collection motivation (users like our site, so users will want to share information
+  with us to help us improve the site).
 
-### Techniques {#data-techniques}
+<div class="practice">
 
-The <dfn>Vegas Rule</dfn> is a simple implementation of privacy in which "<i>what happens with the
-[=first party=] stays with the [=first party=]</i>." Put differently, the [=Vegas Rule=] is followed
-when the [=first party=] is the only [=data controller=]. While the [=Vegas Rule=] is a good
-guideline, it's neither necessary nor sufficient for [=appropriate=] [=data processing=]. A [=first
-party=] that maintains exclusive access to a person's data can still [=process=] it
-[=inappropriately=], and there are cases where a third party can learn information about a person
-but still treat it [=appropriately=].
+<p><span class="practicelab" id="sensitive-vs-non-sensitive-data">
+User agents should generally not attempt to distinguish between sensitive and nonsensitive personal data; all
+data and personal information is likely to be sensitive to some users, often in ways unanticipated by
+browser vendors and site operators.
+</span></p>
 
-#### De-identification
+</div>
 
-Data is <dfn>de-identified</dfn> when there exists a high level of confidence
-that no [=person=] described by the data can be identified, directly or indirectly
-(e.g. via association with an [=identifier=], user agent, or device), by that data alone or in
-combination with other available information. Note
-that further considerations relating to groups are covered in the
-<a href="#collective">Collective Issues in Privacy</a> section.
+<div class="practice">
 
-We talk of <dfn>controlled de-identified data</dfn> when there are strict controls that prevent the
-re-identification of [=people=] described by the data except for a well-defined set of [=purposes=].
+<p><span class="practicelab" id="minimal-data-sharing">
+User agents should always aim to share the minimal amount of information with a site
+that is needed for the user to achieve a user's goals. Data collected today can often be used in
+unanticipated ways in the future to enact privacy harms, even data that seems unlikely to
+be identifying, sensitive or otherwise privacy-harming.
+</span></p>
 
-Different situations involving [=controlled de-identified data=] will require different controls. For instance,
-if the [=controlled de-identified data=] is <em>only</em> being processed by one [=party=], typical controls
-include making sure that the [=identifiers=] used in the data are unique to that dataset, that
-any person (e.g. an employee of the [=party=]) with access to the [=data=] is barred (e.g. based on
-legal terms) from sharing the [=data=] further, and that technical measures exist to prevent
-re-identification or the joining of different data sets involving this [=data=], notably against
-timing or k-anonymity attacks.
+</div>
 
-In general, the goal is to ensure that [=controlled de-identified data=] is used in a manner that provides a
-viable degree of oversight and accountability such that technical and procedural means to guarantee
-the maintenance of pseudonymity are preserved.
+## Principles for Sensitive Information {#hl-sensitive-information}
 
-This is more difficult when the [=controlled de-identified data=] is shared between several [=parties=]. In such
-cases, good examples of typical controls that are representative of best practices would include
-making sure that:
+Contributes to [=correlation=], [=identification=], [=secondary use=], and
+[=disclosure=].
 
-* the [=identifiers=] used in the [=data=] are under the direct and exclusive control of
-  the [=first party=] who is prevented by strict controls from matching the identifiers with the
-  data;
+Many pieces of information about someone could cause privacy harms if disclosed.
+For example:
 
-* when these [=identifiers=] are shared with a [=third party=], they are made unique
-  to that [=third party=] such that if they are shared with more than one
-  [=third party=] these cannot then match them up with one another;
+* Their location.
+* Video or audio from the their camera or microphone.
+* The content of certain files on their filesystem.
+* Financial data.
+* Contacts.
+* Calendar entries.
+* [Whether they are using assistive technology.](https://w3ctag.github.io/design-principles/#do-not-expose-use-of-assistive-tech)
+* ...
 
-* there is a strong level of confidence that no [=third party=] can match the [=data=]
-  with any data other than that obtained through interactions with the [=first
-  party=];
+A particular piece of information may have different sensitivity for different
+people. Language preferences, for example, might typically seem innocent, but
+also can be an indicator of belonging to an ethnic minority. Precise location
+information can be extremely sensitive (because it's identifying, because it
+allows for in-person intrusions, because it can reveal detailed information
+about a person's life) but it might also be public and not sensitive at all, or
+it might be low-enough granularity that it is much less sensitive for many
+people.
 
-* any [=third party=] receiving such [=data=] is barred (eg. based on legal terms)
-  from sharing it further;
+When considering whether a class of information is likely to be sensitive to
+a person, consider at least these factors:
 
-* technical measures exist to prevent re-identification or the joining of
-  different data sets involving this [=data=], notably against timing or
-  k-anonymity attacks; and
+* whether it serves as a persistent [=identifier=] (see severity in Mitigating
+    browser fingerprinting);
+* whether it discloses substantial (including intimate details or inferences)
+    information about the the person using the system or other people;
+* whether it can be revoked (as in determining whether a permission is
+    necessary);
+* whether it enables other threats, like intrusion.
 
-* there exist contractual terms between the [=first party=] and [=third party=]
-  describing the limited [=purpose=] for which the data is being shared.
+Issue(16): This description of what makes information sensitive still needs to
+be refined.
 
-Note that [=controlled de-identified data=], on its own, is not sufficient to render [=data processing=]
-[=appropriate=].
+## Data Rights {#data-rights}
 
-### Rights {#data-rights}
+<p>
+  <span class="practicelab" id="respect-data-rights">
+    [=People=] have certain rights over [=data=] that is about themselves, and these rights should
+    be facilitated by their [=user agent=] and the [=parties=] that are [=processing=] their
+    [=data=].
+  </span>
+</p>
 
-[=People=] retain certain rights over data about themselves, and these rights should be facilitated
-by their [=user agent=] and the [=parties=] they're interacting with. While data rights alone are
-not sufficient to satisfy all [=privacy=] principles for the Web, they do support self-determination
-and help improve accountability. Such rights include:
+While data rights alone are not sufficient to satisfy all [=privacy=] principles for the Web, they
+do support self-determination and help improve accountability. Such rights include:
 
 * The <dfn data-export="">right to access</dfn> [=data=] about oneself.
 
@@ -1167,104 +1182,68 @@ The OECD Privacy Principles [[OECD-Guidelines]], [[Records-Computers-Rights]], a
 among other places, include many of the rights [=people=] have as data subjects. These participatory
 rights by people over data about themselves are inherent to [=autonomy=].
 
-## Principles for Sensitive Information {#hl-sensitive-information}
+## De-identified Data {#deidentified-data}
 
-Contributes to [=correlation=], [=identification=], [=secondary use=], and
-[=disclosure=].
+<div class="practice">
 
-Many pieces of information about someone could cause privacy harms if disclosed.
-For example:
-
-* Their location.
-* Video or audio from the their camera or microphone.
-* The content of certain files on their filesystem.
-* Financial data.
-* Contacts.
-* Calendar entries.
-* [Whether they are using assistive technology.](https://w3ctag.github.io/design-principles/#do-not-expose-use-of-assistive-tech)
-* ...
-
-A particular piece of information may have different sensitivity for different
-people. Language preferences, for example, might typically seem innocent, but
-also can be an indicator of belonging to an ethnic minority. Precise location
-information can be extremely sensitive (because it's identifying, because it
-allows for in-person intrusions, because it can reveal detailed information
-about a person's life) but it might also be public and not sensitive at all, or
-it might be low-enough granularity that it is much less sensitive for many
-people.
-
-When considering whether a class of information is likely to be sensitive to
-a person, consider at least these factors:
-
-* whether it serves as a persistent [=identifier=] (see severity in Mitigating
-    browser fingerprinting);
-* whether it discloses substantial (including intimate details or inferences)
-    information about the the person using the system or other people;
-* whether it can be revoked (as in determining whether a permission is
-    necessary);
-* whether it enables other threats, like intrusion.
-
-Issue(16): This description of what makes information sensitive still needs to
-be refined.
-
-## Principles for Profiling {#hl-unexpected-profiling}
-
-<aside class="issue">
-  This section has not been edited for narrative.
-</aside>
-
-Contributes to [=surveillance=], [=correlation=], [=identification=], and
-singling-out / discrimination.
-
-Unexpected profiling occurs when a site is able to learn attributes or
-characteristics about a person, that a) the site visitor did not intend the site
-to learn, and b) the site visitor reasonably could not anticipate a
-site would be able to learn.
-
-Profiling contributes to, but is distinct from, other privacy risks discussed
-in this document.
-For example, unexpected profiling may contribute to
-[[[#hl-recognition-same-site]]], by adding stable and semi-identifying
-information that can contribute to <a
-data-cite="fingerprinting-guidance#dfn-browser-fingerprinting">browser
-fingerprinting</a>. Unexpected profiling is distinct from same-site
-recognition though, in that a person may wish to not share some kinds
-of information about themselves <em>even in the presence of guarantees
-that such information will not lead to them being re-identified</em>.
-
-Similarly, unexpected profiling is related to [[[#hl-sensitive-information]]],
-but the former is a superset of the latter;
-all cases of unexpected sensitive information disclosure are examples of
-unexpected profiling, but people using the Web may have attributes or characteristics
-about themselves that are not universally thought of as "sensitive", but which
-they never the less do not wish to share with the sites they visit. People
-may wish to not share these "non-sensitive" characteristics
-for a variety of reasons (e.g., a person may worry that their ideas of what
-counts as "sensitive" is different from others, a person might might be ashamed
-or uncomfortable about a character trait or they might simply not wish to be profiled).
-
-Profiling occurs for many reasons. It can be used to facilitate price
-discrimination or offer manipulation, to make inferences about what products or
-services people might be more likely to purchase, or more generally, for a site
-to learn attributes about them that they do not intend to share.
-Unexpected profiling can also contribute to feelings of powerlessness and
-loss of agency [[?Privacy-Concerned]].
-
-A privacy harm occurs if a site learns information about a person that they
-reasonably expected the site would not be able to learn, regardless of
-whether that information aids (re)identification or is from a sensitive category
-of information (however defined).
-
-<div class="example">
-
-Peter is a <a href="https://en.wikipedia.org/wiki/Furry_fandom">furry</a>.
-Despite knowing that there are thousands of
-other furries on the internet, and despite using a browser with
-robust browser fingerprinting protections, and despite the growing cultural
-acceptance of furries, Peter does not want (most) sites to learn
-or personalize content around his furry-interest.
+<p>
+  <span class="practicelab" id="de-identify-data">
+    Whenever possible, processors should work with [=data=] that has been [=de-identified=].
+  </span>
+</p>
 
 </div>
+
+Data is <dfn>de-identified</dfn> when there exists a high level of confidence
+that no [=person=] described by the data can be identified, directly or indirectly
+(e.g. via association with an [=identifier=], user agent, or device), by that data alone or in
+combination with other available information. Note
+that further considerations relating to groups are covered in the
+<a href="#collective">Collective Issues in Privacy</a> section.
+
+We talk of <dfn>controlled de-identified data</dfn> when there are strict controls that prevent the
+re-identification of [=people=] described by the data except for a well-defined set of [=purposes=].
+
+Different situations involving [=controlled de-identified data=] will require different controls.
+For instance, if the [=controlled de-identified data=] is <em>only</em> being processed by one
+[=party=], typical controls include making sure that the [=identifiers=] used in the data are unique
+to that dataset, that any person (e.g. an employee of the [=party=]) with access to the [=data=] is
+barred (e.g. based on legal terms) from sharing the [=data=] further, and that technical measures
+exist to prevent re-identification or the joining of different data sets involving this [=data=],
+notably against timing or k-anonymity attacks.
+
+In general, the goal is to ensure that [=controlled de-identified data=] is used in a manner that
+provides a viable degree of oversight and accountability such that technical and procedural means to
+guarantee the maintenance of pseudonymity are preserved.
+
+This is more difficult when the [=controlled de-identified data=] is shared between several
+[=parties=]. In such cases, good examples of typical controls that are representative of best
+practices would include making sure that:
+
+* the [=identifiers=] used in the [=data=] are under the direct and exclusive control of
+  the [=first party=] who is prevented by strict controls from matching the identifiers with the
+  data;
+
+* when these [=identifiers=] are shared with a [=third party=], they are made unique
+  to that [=third party=] such that if they are shared with more than one
+  [=third party=] these cannot then match them up with one another;
+
+* there is a strong level of confidence that no [=third party=] can match the [=data=]
+  with any data other than that obtained through interactions with the [=first
+  party=];
+
+* any [=third party=] receiving such [=data=] is barred (eg. based on legal terms)
+  from sharing it further;
+
+* technical measures exist to prevent re-identification or the joining of
+  different data sets involving this [=data=], notably against timing or
+  k-anonymity attacks; and
+
+* there exist contractual terms between the [=first party=] and [=third party=]
+  describing the limited [=purpose=] for which the data is being shared.
+
+Note that [=controlled de-identified data=], on its own, is not sufficient to render
+[=data processing=] [=appropriate=].
 
 ## Collective Privacy {#collective-privacy}
 
@@ -1568,7 +1547,22 @@ A <dfn data-lt="third parties">third party</dfn> is any [=party=] other than the
 [=person=] visiting the website or the [=first parties=] they expect to be interacting
 with.
 
+The <dfn>Vegas Rule</dfn> is a simple implementation of privacy in which "<i>what happens with the
+[=first party=] stays with the [=first party=]</i>." Put differently, the [=Vegas Rule=] is followed
+when the [=first party=] is the only [=data controller=]. While the [=Vegas Rule=] is a good
+guideline, it's neither necessary nor sufficient for [=appropriate=] [=data processing=]. A [=first
+party=] that maintains exclusive access to a person's data can still [=process=] it
+[=inappropriately=], and there are cases where a third party can learn information about a person
+but still treat it [=appropriately=].
+
 ## Acting on Data {#acting-on-data}
+
+We define <dfn data-lt="data">personal data</dfn> as any information that is directly or
+indirectly related to an identified or identifiable [=person=], such as by reference to an
+[=identifier=] ([[GDPR]], [[OECD-Guidelines]], [[Convention-108]]).
+
+If a [=person=] could reasonably be identified or re-identified when [=data=] is combined with other
+[=data=], then that makes that data [=personal data=].
 
 <dfn>Privacy</dfn> is achieved in a given [=context=] that either involves [=personal data=] or
 involves information being presented to [=people=] when the [=principles=] of that [=context=] are
@@ -1607,6 +1601,23 @@ The <dfn>means</dfn> are the general method of [=data processing=] through which
 level and not necessarily all the way down to implementation details. Example:
 <em>a person will have their preferences restored (purpose) by looking up their identifier
 in a preferences store (means)</em>.
+
+A <dfn>data controller</dfn> is a [=party=] that determines the [=means=] and [=purposes=]
+of data processing. Any [=party=] that is not a [=service provider=] is a [=data controller=].
+
+A <dfn data-lt="data processor">service provider</dfn> or [=data processor=] is considered to be the
+same [=party=] as the [=actor=] contracting it to perform the relevant [=processing=] if it:
+
+* is processing the data on behalf of that [=party=];
+* ensures that the data is only retained, accessed, and used as directed by that
+  [=party=] and solely for the list of explicitly-specified [=purposes=]
+  detailed by the directing [=party=] or [=data controller=];
+* may determine implementation details of the data processing in question but
+  does not determine the [=purpose=] for which the data is being [=processed=]
+  nor the overarching [=means=] through which the [=purpose=] is carried out;
+* has no independent right to use the data other than in a [=de-identified=] form (e.g., for
+  monitoring service integrity, load balancing, capacity planning, or billing); and,
+* has a contract in place with the [=party=] which is consistent with the above limitations.
 
 </section>
 
