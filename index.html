@@ -135,6 +135,7 @@ for privacy and related concepts that are applicable worldwide. It also provides
 principles that should guide the development of the Web as a trustworthy platform. People using
 the Web would benefit from a stronger relationship between technology and policy, and this
 document is written to work with both.">
+<link rel="canonical" href="https://www.w3.org/privacy-principles/">
 <style>
 var{position:relative;cursor:pointer}
 var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}
@@ -143,24 +144,30 @@ var[data-type]::after{content:attr(data-type);transform:translateX(-50%) transla
 var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 </style>
 <script id="initialUserConfig" type="application/json">{
-  "specStatus": "editor-draft-finding",
+  "specStatus": "DNOTE",
   "group": "tag",
+  "publishDate": "2022-04-27",
   "format": "markdown",
   "editors": [
     {
       "name": "Robin Berjon",
       "company": "The New York Times",
       "companyURL": "https://nytimes.com/",
-      "url": "https://berjon.com/"
+      "url": "https://berjon.com/",
+      "w3cid": 34327
     },
     {
       "name": "Jeffrey Yasskin",
       "company": "Google",
-      "companyURL": "https://google.com/"
+      "companyURL": "https://google.com/",
+      "w3cid": 75192
     }
   ],
   "github": "w3ctag/privacy-principles",
   "shortName": "privacy-principles",
+  "lint": {
+    "required-sections": false
+  },
   "postProcess": [
     null
   ],
@@ -598,22 +605,26 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "id": "records-computers-rights"
     }
   },
-  "publishISODate": "2022-04-25T00:00:00.000Z",
-  "generatedSubtitle": "W3C Draft TAG Finding 25 April 2022"
+  "publishISODate": "2022-04-27T00:00:00.000Z",
+  "generatedSubtitle": "W3C Group Draft Note 27 April 2022"
 }</script>
-<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/base.css"></head>
+<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-DNOTE"></head>
 <body data-cite="html indexedDB service-workers fingerprinting-guidance url" class="h-entry informative"><div class="head">
     <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a></p>
     <h1 id="title" class="title">Privacy Principles</h1> 
-    <p id="w3c-state"><a href="https://www.w3.org/standards/types#editor-draft-finding">W3C Draft TAG Finding</a> <time class="dt-published" datetime="2022-04-25">25 April 2022</time></p>
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#DNOTE">W3C Group Draft Note</a> <time class="dt-published" datetime="2022-04-27">27 April 2022</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
         
-        
+        <dt>Latest published version:</dt><dd>
+                <a href="https://www.w3.org/privacy-principles/">https://www.w3.org/privacy-principles/</a>
+              </dd>
         <dt>Latest editor's draft:</dt><dd><a href="https://w3ctag.github.io/privacy-principles/">https://w3ctag.github.io/privacy-principles/</a></dd>
         <dt>History:</dt><dd>
+                    <a href="https://www.w3.org/standards/history/privacy-principles">https://www.w3.org/standards/history/privacy-principles</a>
+                  </dd><dd>
                     <a href="https://github.com/w3ctag/privacy-principles/commits/">Commit history</a>
                   </dd>
         
@@ -621,9 +632,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         
         
         
-        <dt>Editors:</dt><dd class="editor p-author h-card vcard">
+        <dt>Editors:</dt><dd class="editor p-author h-card vcard" data-editor-id="34327">
     <a class="u-url url p-name fn" href="https://berjon.com/">Robin Berjon</a> (<a class="p-org org h-org" href="https://nytimes.com/">The New York Times</a>)
-  </dd><dd class="editor p-author h-card vcard">
+  </dd><dd class="editor p-author h-card vcard" data-editor-id="75192">
     <span class="p-name fn">Jeffrey Yasskin</span> (<a class="p-org org h-org" href="https://google.com/">Google</a>)
   </dd>
         
@@ -662,18 +673,45 @@ the Web would benefit from a stronger relationship between technology and policy
 document is written to work with both.</p>
 </section>
 
-<section id="sotd" class="introductory"><h2>Status of This Document</h2>
+<section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this
+      document at the time of its publication. A list of current <abbr title="World Wide Web Consortium">W3C</abbr>
+      publications and the latest revision of this technical report can be found
+      in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at
+      https://www.w3.org/TR/.</em></p>
 
-<p>This document is a Draft Finding of the <a href="https://www.w3.org/2001/tag/">Technical Architecture Group (TAG)</a>.
+<p>This document is a Draft Finding of the <a href="https://www.w3.org/2001/tag/">Technical Architecture Group (TAG)</a>
+which we are releasing as a Draft Note. The intent is for this document to become a <abbr title="World Wide Web Consortium">W3C</abbr> Statement.
 It was prepared by the <a href="https://github.com/w3ctag/privacy-principles">Web Privacy Principles Task Force</a>,
-which was convened by the TAG. Publication as a Draft Finding does not imply endorsement by the TAG
-or by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership.</p>
+which was convened by the TAG. Publication as a Draft Finding or Draft Note does not imply
+endorsement by the TAG or by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership.</p>
 <p>This draft <strong>does not yet</strong> reflect the consensus of the TAG or the task force and may
 be updated, replaced, or obsoleted by other documents at any time. It is inappropriate to cite this
 document as anything other than a work in progress.</p>
 <p>It will continue to evolve and the task force will issue updates as often as needed. At the
 conclusion of the task force, the TAG intends to adopt this document as a Finding.</p>
-</section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#how-this-document-fits-in">How This Document Fits In</a></li><li class="tocline"><a class="tocxref" href="#intro"><bdi class="secno">1. </bdi>An Introduction to Privacy on the Web</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#autonomy"><bdi class="secno">1.1 </bdi>Individual Autonomy</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#opt-in-out"><bdi class="secno">1.1.1 </bdi>Opt-in, Consent, Opt-out, Global Controls</a></li><li class="tocline"><a class="tocxref" href="#privacy-labour"><bdi class="secno">1.1.2 </bdi>Privacy Labour</a></li></ol></li><li class="tocline"><a class="tocxref" href="#collective"><bdi class="secno">1.2 </bdi>Collective Governance</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#group-privacy"><bdi class="secno">1.2.1 </bdi>Group Privacy</a></li><li class="tocline"><a class="tocxref" href="#transparency"><bdi class="secno">1.2.2 </bdi>Transparency and Research</a></li></ol></li><li class="tocline"><a class="tocxref" href="#user-agents"><bdi class="secno">1.3 </bdi>People's Agents</a></li><li class="tocline"><a class="tocxref" href="#balancing"><bdi class="secno">1.4 </bdi>Incorporating Different Privacy Principles</a></li></ol></li><li class="tocline"><a class="tocxref" href="#principles-for-privacy-on-the-web"><bdi class="secno">2. </bdi>Principles for Privacy on the Web</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#identity"><bdi class="secno">2.1 </bdi>Identity on the Web</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#hl-recognition-cross-context"><bdi class="secno">2.1.1 </bdi>Unwanted cross-context recognition</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#hl-recognition-same-site"><bdi class="secno">2.1.1.1 </bdi>Same-site recognition</a></li><li class="tocline"><a class="tocxref" href="#hl-recognition-cross-site"><bdi class="secno">2.1.1.2 </bdi>Unwanted cross-site recognition</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#data"><bdi class="secno">2.2 </bdi>Personal Data</a></li><li class="tocline"><a class="tocxref" href="#hl-sensitive-information"><bdi class="secno">2.3 </bdi>Sensitive Information</a></li><li class="tocline"><a class="tocxref" href="#data-rights"><bdi class="secno">2.4 </bdi>Data Rights</a></li><li class="tocline"><a class="tocxref" href="#deidentified-data"><bdi class="secno">2.5 </bdi>De-identified Data</a></li><li class="tocline"><a class="tocxref" href="#collective-privacy"><bdi class="secno">2.6 </bdi>Collective Privacy</a></li><li class="tocline"><a class="tocxref" href="#guardians-and-owners"><bdi class="secno">2.7 </bdi>Guardians and Device Owners</a></li><li class="tocline"><a class="tocxref" href="#harassment"><bdi class="secno">2.8 </bdi>Harassment</a></li><li class="tocline"><a class="tocxref" href="#unwanted-information"><bdi class="secno">2.9 </bdi>Unwanted Information</a></li><li class="tocline"><a class="tocxref" href="#vulnerable-people"><bdi class="secno">2.10 </bdi>Vulnerable People</a></li><li class="tocline"><a class="tocxref" href="#consent-principles"><bdi class="secno">2.11 </bdi>Consent, Withdrawal of Consent, Opt-Outs, and Objections</a></li><li class="tocline"><a class="tocxref" href="#interruptions"><bdi class="secno">2.12 </bdi>Notifications and Interruptions</a></li><li class="tocline"><a class="tocxref" href="#non-retaliation"><bdi class="secno">2.13 </bdi>Non-Retaliation</a></li></ol></li><li class="tocline"><a class="tocxref" href="#boring-terminology"><bdi class="secno">A. </bdi>Common Concepts</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#people"><bdi class="secno">A.1 </bdi>People</a></li><li class="tocline"><a class="tocxref" href="#parties"><bdi class="secno">A.2 </bdi>Server-Side Parties</a></li><li class="tocline"><a class="tocxref" href="#acting-on-data"><bdi class="secno">A.3 </bdi>Acting on Data</a></li></ol></li><li class="tocline"><a class="tocxref" href="#threats"><bdi class="secno">B. </bdi>High-Level Threats</a></li><li class="tocline"><a class="tocxref" href="#bp-summary"><bdi class="secno">C. </bdi>Best Practices Summary</a></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">D. </bdi>Acknowledgements</a></li><li class="tocline"><a class="tocxref" href="#issue-summary"><bdi class="secno">E. </bdi>Issue summary</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">F. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">F.1 </bdi>Informative references</a></li></ol></li></ol></nav>
+<p>
+    This document was published by the <a href="https://www.w3.org/groups/other/tag">Technical Architecture Group</a> as
+    a Group Draft Note using the
+        <a href="https://www.w3.org/2021/Process-20211102/#recs-and-notes">Note track</a>. 
+  </p><p>Group Draft Notes are not endorsed by
+        <abbr title="World Wide Web Consortium">W3C</abbr> nor its Members. </p><p>
+    This is a draft document and may be updated, replaced or obsoleted by other
+    documents at any time. It is inappropriate to cite this document as other
+    than work in progress.
+    
+  </p><p data-deliverer="34270">
+    
+        The
+        <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent
+          Policy</a>
+        does not carry any licensing requirements or commitments on this
+        document.
+      
+    
+  </p><p>
+                  This document is governed by the
+                  <a id="w3c_process_revision" href="https://www.w3.org/2021/Process-20211102/">2 November 2021 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#how-this-document-fits-in">How This Document Fits In</a></li><li class="tocline"><a class="tocxref" href="#intro"><bdi class="secno">1. </bdi>An Introduction to Privacy on the Web</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#autonomy"><bdi class="secno">1.1 </bdi>Individual Autonomy</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#opt-in-out"><bdi class="secno">1.1.1 </bdi>Opt-in, Consent, Opt-out, Global Controls</a></li><li class="tocline"><a class="tocxref" href="#privacy-labour"><bdi class="secno">1.1.2 </bdi>Privacy Labour</a></li></ol></li><li class="tocline"><a class="tocxref" href="#collective"><bdi class="secno">1.2 </bdi>Collective Governance</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#group-privacy"><bdi class="secno">1.2.1 </bdi>Group Privacy</a></li><li class="tocline"><a class="tocxref" href="#transparency"><bdi class="secno">1.2.2 </bdi>Transparency and Research</a></li></ol></li><li class="tocline"><a class="tocxref" href="#user-agents"><bdi class="secno">1.3 </bdi>People's Agents</a></li><li class="tocline"><a class="tocxref" href="#balancing"><bdi class="secno">1.4 </bdi>Incorporating Different Privacy Principles</a></li></ol></li><li class="tocline"><a class="tocxref" href="#principles-for-privacy-on-the-web"><bdi class="secno">2. </bdi>Principles for Privacy on the Web</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#identity"><bdi class="secno">2.1 </bdi>Identity on the Web</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#hl-recognition-cross-context"><bdi class="secno">2.1.1 </bdi>Unwanted cross-context recognition</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#hl-recognition-same-site"><bdi class="secno">2.1.1.1 </bdi>Same-site recognition</a></li><li class="tocline"><a class="tocxref" href="#hl-recognition-cross-site"><bdi class="secno">2.1.1.2 </bdi>Unwanted cross-site recognition</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#data"><bdi class="secno">2.2 </bdi>Personal Data</a></li><li class="tocline"><a class="tocxref" href="#hl-sensitive-information"><bdi class="secno">2.3 </bdi>Sensitive Information</a></li><li class="tocline"><a class="tocxref" href="#data-rights"><bdi class="secno">2.4 </bdi>Data Rights</a></li><li class="tocline"><a class="tocxref" href="#deidentified-data"><bdi class="secno">2.5 </bdi>De-identified Data</a></li><li class="tocline"><a class="tocxref" href="#collective-privacy"><bdi class="secno">2.6 </bdi>Collective Privacy</a></li><li class="tocline"><a class="tocxref" href="#guardians-and-owners"><bdi class="secno">2.7 </bdi>Guardians and Device Owners</a></li><li class="tocline"><a class="tocxref" href="#harassment"><bdi class="secno">2.8 </bdi>Harassment</a></li><li class="tocline"><a class="tocxref" href="#unwanted-information"><bdi class="secno">2.9 </bdi>Unwanted Information</a></li><li class="tocline"><a class="tocxref" href="#vulnerable-people"><bdi class="secno">2.10 </bdi>Vulnerable People</a></li><li class="tocline"><a class="tocxref" href="#consent-principles"><bdi class="secno">2.11 </bdi>Consent, Withdrawal of Consent, Opt-Outs, and Objections</a></li><li class="tocline"><a class="tocxref" href="#interruptions"><bdi class="secno">2.12 </bdi>Notifications and Interruptions</a></li><li class="tocline"><a class="tocxref" href="#non-retaliation"><bdi class="secno">2.13 </bdi>Non-Retaliation</a></li></ol></li><li class="tocline"><a class="tocxref" href="#boring-terminology"><bdi class="secno">A. </bdi>Common Concepts</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#people"><bdi class="secno">A.1 </bdi>People</a></li><li class="tocline"><a class="tocxref" href="#parties"><bdi class="secno">A.2 </bdi>Server-Side Parties</a></li><li class="tocline"><a class="tocxref" href="#acting-on-data"><bdi class="secno">A.3 </bdi>Acting on Data</a></li></ol></li><li class="tocline"><a class="tocxref" href="#threats"><bdi class="secno">B. </bdi>High-Level Threats</a></li><li class="tocline"><a class="tocxref" href="#bp-summary"><bdi class="secno">C. </bdi>Best Practices Summary</a></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">D. </bdi>Acknowledgements</a></li><li class="tocline"><a class="tocxref" href="#issue-summary"><bdi class="secno">E. </bdi>Issue summary</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">F. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">F.1 </bdi>Informative references</a></li></ol></li></ol></nav>
 
 <section class="introductory" id="how-this-document-fits-in"><div class="header-wrapper"><h2 id="how-this-document-fits-in-0">How This Document Fits In</h2><a class="self-link" href="#how-this-document-fits-in" aria-label="Permalink for this Section"></a></div>
 
@@ -897,9 +935,8 @@ collective decision-making about privacy <a data-link-type="dfn" href="#dfn-prin
 TAG's resolution on a <a href="https://www.w3.org/blog/2015/11/strong-web-platform-statement/">Strong and Secure Web Platform</a>
 to ensure that "<i>broad testing and audit continues to be possible</i>" where
 <a data-link-type="dfn" href="#dfn-information" class="internalDFN" id="ref-for-dfn-information-7">information flows</a> and automated decisions are involved.</p>
-<p>Such transparency can only function if there are strong</p>
- rights
-<p>of access to data (including data
+<p>Such transparency can only function if there are strong rights
+of access to data (including data
 derived from one's personal data) as well as mechanisms to explain the outcomes of automated
 decisions.</p>
 </section></section><section id="people-s-agents"><div class="header-wrapper"><h3 id="user-agents"><bdi class="secno">1.3 </bdi>People's Agents</h3><a class="self-link" href="#user-agents" aria-label="Permalink for Section 1.3"></a></div><p>The <dfn data-plurals="user agents" id="dfn-user-agent" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">user agent</dfn> acts as an intermediary between a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-32">person</a> (its <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-33">user</a>) and the web.
@@ -1252,7 +1289,7 @@ of an event that occurs nearly-simultaneously on both sites.</p>
 <div class="issue" id="issue-container-generatedID-4"><div role="heading" class="issue-title marker" id="h-issue-5" aria-level="2"><span>Issue</span></div><aside class="">
 
 
-<p>  There is not currnetly consensus among the authors and contributors to this
+<p>  There is not currently consensus among the authors and contributors to this
   document about the below principles.
   Please see <a href="https://github.com/w3ctag/privacy-principles/issues/150">this issue</a>
   for more details.</p>
