@@ -7,21 +7,27 @@
   <script class="remove">
     // All config options at https://respec.org/docs/
     var respecConfig = {
-      specStatus: 'editor-draft-finding',
+      specStatus: 'DNOTE',
       group: 'tag',
+      publishDate: '2022-04-27',
       format: 'markdown',
       editors: [{
         name: 'Robin Berjon',
         company: 'The New York Times',
         companyURL: 'https://nytimes.com/',
         url: 'https://berjon.com/',
+        w3cid: 34327,
       }, {
         name: 'Jeffrey Yasskin',
         company: 'Google',
         companyURL: 'https://google.com/',
+        w3cid: 75192,
       }],
       github: 'w3ctag/privacy-principles',
       shortName: 'privacy-principles',
+      lint: {
+        'required-sections': false,
+      },
       postProcess: [
         () => {
           // relabel each principle, and lose the numbering, delabel principle summary
@@ -357,10 +363,11 @@ document is written to work with both.
 
 <section id="sotd">
 
-This document is a Draft Finding of the [Technical Architecture Group (TAG)](https://www.w3.org/2001/tag/).
+This document is a Draft Finding of the [Technical Architecture Group (TAG)](https://www.w3.org/2001/tag/)
+which we are releasing as a Draft Note. The intent is for this document to become a W3C Statement.
 It was prepared by the [Web Privacy Principles Task Force](https://github.com/w3ctag/privacy-principles),
-which was convened by the TAG. Publication as a Draft Finding does not imply endorsement by the TAG
-or by the W3C Membership.
+which was convened by the TAG. Publication as a Draft Finding or Draft Note does not imply
+endorsement by the TAG or by the W3C Membership.
 
 This draft <strong>does not yet</strong> reflect the consensus of the TAG or the task force and may
 be updated, replaced, or obsoleted by other documents at any time. It is inappropriate to cite this
@@ -640,8 +647,7 @@ TAG's resolution on a [Strong and Secure Web Platform](https://www.w3.org/blog/2
 to ensure that "<i>broad testing and audit continues to be possible</i>" where
 [=information flows=] and automated decisions are involved.
 
-Such transparency can only function if there are strong
-<!-- [rights](#data-rights) --> rights
+Such transparency can only function if there are strong rights
 of access to data (including data
 derived from one's personal data) as well as mechanisms to explain the outcomes of automated
 decisions.
@@ -1035,7 +1041,7 @@ of an event that occurs nearly-simultaneously on both sites.
 </aside>
 
 <aside class="issue">
-  There is not currnetly consensus among the authors and contributors to this
+  There is not currently consensus among the authors and contributors to this
   document about the below principles.
   Please see <a href="https://github.com/w3ctag/privacy-principles/issues/150">this issue</a>
   for more details.
