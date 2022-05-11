@@ -953,22 +953,21 @@ suspicious login actually comes from the real account owner.
 
 <aside class="example" id="example-preventing-profiling" title="Preventing Profiling">
 
-Merchants want to advertise to the people most likely to buy their products, and being
-able to do so is worth money and engineering time. Historically, the merchants have done
-that by (hiring a company to) track people across websites in order to build up a profile
-of those people.
+Some actors on the web place a high value on building a detailed profile of each user's
+behavior, across websites. User agents are trying to enforce the principles in
+[[[#identity]]] by blocking this profiling, but because the profiles are valuable, there's
+a large incentive to work around user agent measures, sometimes by using techniques that
+are very expensive or impossible to block. If user agent behavior causes websites to adopt
+these alternate tracking methods, the web as a whole won't respect the [[[#identity]]]
+principles.
 
-User agents have started to block the simpler tracking methods in order to enforce the
-principles in [[[#identity]]]. Since targeting is valuable, it can fund development of
-more complex tracking methods, including methods that are impossible for user agents to
-block.
-
-However, user agents can also limit the funding for the development of alternate tracking
-methods by directly helping merchants target their ads. This targeting information is
-personal data, which the principles in [[[#data]]] advise against sharing.
-
-Proposals in this space need to incorporate both groups of principles in order to protect
-privacy.
+User agents can reduce the incentive to develop these alternate tracking methods by
+building APIs to facilitate the most common and least harmful uses of user profiles.
+However, those APIs usually still reveal some information about a user's behavior. For
+example, [[[IPA]]] reveals a limited amount of information about each user in order to
+replace the use of profiles to measure the success of advertising campaigns. However, even
+a small amount of information is still personal data, which the principles in [[[#data]]]
+advise against sharing.
 
 </aside>
 
