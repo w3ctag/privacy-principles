@@ -864,9 +864,12 @@ if the same data were shared between unrelated [=parties=].
 </aside>
 
 A [=person=]'s <dfn>identity</dfn> is the set of characteristics that define them. Their identity
-*in a [=context=]* is the set of characteristics they present to that context. People
-frequently present different identities to different contexts, and also frequently share an identity
-among several contexts.
+*in a [=context=]* is the set of characteristics that can be identified about
+them either through direct presentation or other means. People frequently
+present different identities to different contexts, and also frequently share an
+identity among several contexts. In certain cases, people may also choose to present no
+characteristics or false characteristics about themselves to maintain a more
+private identity in certain [=context=].
 
 <dfn>Cross-context recognition</dfn> is the act of recognising that an [=identity=] in one
 [=context=] is the same [=person=] as an [=identity=] in another [=context=]. [=Cross-context
@@ -918,6 +921,10 @@ default, [=user agents=] define a <dfn>machine-enforceable context</dfn> or <dfn
 Even though this is the default, [=user agents=] are free to restrict this context as
 people need. For example, some user agents may help people present different
 [=identities=] to subdivisions of a single [=site=].
+
+In each of these [=contexts=] the UA should assume by default that the user
+wishes to present an [=identity=] without any identifiable characteristics to
+remain as private as possible unless configured or constented to explicitly by the user.
 
 <div class="issue" data-number="1">
 
