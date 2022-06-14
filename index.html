@@ -1047,47 +1047,55 @@ of an event that occurs nearly-simultaneously on both sites.
   for more details.
 </aside>
 
-<div class="practice">
+<span class="practicelab">Sites, user agents and other parties should minimize the amount of data
+about people that is shared with or transferred between parties on the Web.</span>
 
-<p><span class="practicelab" id="user-agent-data-sharing">
-User agents should only share and present information about the user that
-the user can reasonably anticipate being shared, and which directly relate to the users overt, immediate goals.
-User agents and sites should be conservative when deciding if information is related to a users goals; the
-longer the chain of reasoning used to justify data collection, the less likely for that data
-collection to be ethical and principled.
-</span></p>
+Data minimization limits the risks of data being disclosed or misused and also makes it possible to
+more meaningfully provide people with understandable decisions about data about them.
 
-</div>
+<span class="practicelab">APIs should be designed to minimize the amount of data that is requested
+and provide granularity and user controls over personal data that is communicated to sites.</span>
 
-Examples:
+<aside class="note">
+This principle is further detailed in the TAG finding on <a
+href="https://www.w3.org/2001/tag/doc/APIMinimization-20100605.html">Data Minimization in Web
+APIs</a>.
+</aside>
 
-* Sharing geo-location data with a map website after a user has clicked a "share my location" button has
-  a small number of "hops" between intent and data.
-* Sharing information about the user's selected DNS resolver with a site, so that the site authors can debug
-  possible issues around tail/uncommon resolvers, has a large number of "hops" between user intent (to do
-  a thing on the website) and collection motivation (users like our site, so users will want to share information
-  with us to help us improve the site).
+In maintaining duties of <a href="#dfn-duty-of-protection">protection</a>, <a
+href="#dfn-duty-of-discretion">discretion</a> and <a href="#dfn-duty-of-loyalty">loyalty</a>, user
+agents should be cautious about sharing data not necessary to satisfy a user's immediate goals.
 
-<div class="practice">
+Data is often shared by user agents even outside the need to load and display a page for uses
+including: 
 
-<p><span class="practicelab" id="sensitive-vs-non-sensitive-data">
-User agents should generally not attempt to distinguish between sensitive and nonsensitive personal data; all
-data and personal information is likely to be sensitive to some users, often in ways unanticipated by
-browser vendors and site operators.
-</span></p>
+* usage reporting of sites or browser features; 
+* debugging site issues; 
+* measuring performance; 
+* detecting security problems or attacks; 
+* software updates; 
+* prefetching content. 
 
-</div>
+In some cases, mechanisms for sharing data are provided in order to minimize some other data
+collection mechanism identified as more intrusive or costly.
 
-<div class="practice">
+For some uses, some people would reasonably anticipate sharing such data and some people would be
+willing to participate (for example, might have explicitly decided to contribute if they had the
+time and understanding to consider details about such a use) and some people would identify those
+uses as supporting their own goals. 
 
-<p><span class="practicelab" id="minimal-data-sharing">
-User agents should always aim to share the minimal amount of information with a site
-that is needed for the user to achieve a user's goals. Data collected today can often be used in
-unanticipated ways in the future to enact privacy harms, even data that seems unlikely to
-be identifying, sensitive or otherwise privacy-harming.
-</span></p>
+Aggregated or <a href="#dfn-de-identified">de-identified</a> data is often more likely to be
+acceptable in these senses and often still contributes to the collective benefit while minimizing
+privacy threats to a particular individual (see <a href="#principle-collective-privacy">collective
+privacy</a>). But some users might also object, in particular instances or in general. In order to
+distinguish these cases, asking people about their goals and preferences is best.
 
-</div>
+<span class="practicelab">Sites and user agents should directly ask people about their goals and
+their preferences about use of data about them.</span>
+
+Because personal data may be sensitive in unexpected ways, or have risks of future uses that could
+be unexpected or harmful, minimization as a principle applies to personal data that is not currently
+known to be identifying, sensitive or otherwise potentially harmful.
 
 ## Sensitive Information {#hl-sensitive-information}
 
