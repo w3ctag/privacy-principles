@@ -196,6 +196,12 @@
           href: 'https://www.cambridge.org/core/books/industry-unbound/787989F90DBFC08E47546178A7AB04F7',
           publisher: 'Cambridge University Press',
         },
+        'IPA': {
+          title: 'Interoperable Private Attribution (IPA)',
+          authors: ['Erik Taubeneck', 'Ben Savage', 'Martin Thomson'],
+          href: 'https://github.com/patcg/private-measurement/issues/9',
+          publisher: 'W3C PATCG',
+        },
         'NIST-800-63A': {
           title: 'Digital Identity Guidelines: Enrollment and Identity Proofing Requirements',
           href: 'https://pages.nist.gov/800-63-3/sp800-63a.html',
@@ -834,6 +840,26 @@ historical locations and machine characteristics that have accessed an account, 
 to make it harder to log in from an unusual place or type of machine. They might also
 store other personal data, like a phone number or address, in order to check that a
 suspicious login actually comes from the real account owner.
+
+</aside>
+
+<aside class="example" id="example-preventing-profiling" title="Preventing Profiling">
+
+Some actors on the web place a high value on building a detailed profile of each user's
+behavior, across websites. User agents are trying to enforce the principles in
+[[[#identity]]] by blocking this profiling, but because the profiles are valuable, there's
+a large incentive to work around user agent measures, sometimes by using techniques that
+are very expensive or impossible to block. If user agent behavior causes websites to adopt
+these alternate tracking methods, the web as a whole won't respect the [[[#identity]]]
+principles.
+
+User agents can reduce the incentive to develop these alternate tracking methods by
+building APIs to facilitate the most common and least harmful uses of user profiles.
+However, those APIs usually still reveal some information about a user's behavior. For
+example, [[[IPA]]] reveals a limited amount of information about each user in order to
+replace the use of profiles to measure the success of advertising campaigns. However, even
+a small amount of information is still personal data, which the principles in [[[#data]]]
+advise against sharing.
 
 </aside>
 
