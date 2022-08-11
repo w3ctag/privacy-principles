@@ -942,13 +942,16 @@ recognition|recognizing=] [=identities=] any less [=inappropriate=].
  
 The user agent and identity related web features should:
 * help users present the identity that they want to present to a given website.
-* disclose the least amount of identifying information, examples:
-  * ability to not unconditionally share the user's profile data with the website.
-  * if the website needs a minimum age, then share that the user is older than 21, 
-  as opposed to specific age or date of birth.
-* support the user's intent to present a site-specific identity. If the website requires an email, 
-then the user may choose a directed identifier without disclosing their real email.
-
+  * should not reveal user's profile information without user consent.
+  * should not leak user's profiles, including which types of profiles the user has, before user consent.
+  * it should be clear to the user which identity is being used on a given website
+* disclose the least amount of identifying information.
+  * only share the parts of the user's profile information that is needed by the website
+  * minimize the shared data, for example if a website requires age for verification, then share that the
+  user is older than 21, as opposed to specific age or date of birth.
+* support the user's intent to present a directed identity or a site-specific identity.
+  * If the website requires an email, then the user may choose a directed identifier without disclosing
+  their real email.
 
 ### Unwanted cross-context recognition {#hl-recognition-cross-context}
 
