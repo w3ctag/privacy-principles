@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en" dir="ltr"><head>
 <meta charset="utf-8">
-<meta name="generator" content="ReSpec 32.2.1">
+<meta name="generator" content="ReSpec 32.2.3">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 span.example-title{text-transform:none}
@@ -90,8 +90,6 @@ a.bibref{text-decoration:none}
 }
 #references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}
 cite .bibref{font-style:normal}
-code{color:#c63501}
-th code{color:inherit}
 a[href].orcid{padding-left:4px;padding-right:4px}
 a[href].orcid>svg{margin-bottom:-2px}
 .toc a,.tof a{text-decoration:none}
@@ -1206,6 +1204,26 @@ behaving <a data-link-type="dfn" href="#dfn-inappropriately" class="internalDFN"
 <p>If a <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/origin.html#site">site</a> includes multiple <a data-link-type="dfn" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-17">contexts</a> whose <a data-link-type="dfn" href="#dfn-principles" class="internalDFN" id="ref-for-dfn-principles-20">principles</a> indicate that it's <a data-link-type="dfn" href="#dfn-inappropriately" class="internalDFN" id="ref-for-dfn-inappropriately-6">inappropriate</a> to
 share data between the contexts, the fact that those distinct <a data-link-type="dfn" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-18">contexts</a> fall inside a single
 <a data-link-type="dfn" href="#dfn-machine-enforceable-context" class="internalDFN" id="ref-for-dfn-machine-enforceable-context-3">machine-enforceable context</a> doesn't make sharing data or <a data-link-type="dfn" data-lt="cross-context recognition" href="#dfn-cross-context-recognition" class="internalDFN" id="ref-for-dfn-cross-context-recognition-3">recognizing</a> <a data-link-type="dfn" href="#dfn-identity" class="internalDFN" id="ref-for-dfn-identity-9">identities</a> any less <a data-link-type="dfn" href="#dfn-inappropriately" class="internalDFN" id="ref-for-dfn-inappropriately-7">inappropriate</a>.</p>
+<p>The user agent and identity related web features should:</p>
+<ul>
+<li>help users present the identity that they want to present to a given website.<ul>
+<li>should not reveal user's profile information without user consent.</li>
+<li>should not leak user's profiles, including which types of profiles the user has, before user consent.</li>
+<li>it should be clear to the user which identity is being used on a given website</li>
+</ul>
+</li>
+<li>disclose the least amount of identifying information.<ul>
+<li>only share the parts of the user's profile information that is needed by the website</li>
+<li>minimize the shared data, for example if a website requires age for verification, then share that the
+user is older than 21, as opposed to specific age or date of birth.</li>
+</ul>
+</li>
+<li>support the user's intent to present a directed identity or a site-specific identity.<ul>
+<li>If the website requires an email, then the user may choose a directed identifier without disclosing
+their real email.</li>
+</ul>
+</li>
+</ul>
 <section id="unwanted-cross-context-recognition"><div class="header-wrapper"><h4 id="hl-recognition-cross-context"><bdi class="secno">2.1.1 </bdi>Unwanted cross-context recognition</h4><a class="self-link" href="#hl-recognition-cross-context" aria-label="Permalink for Section 2.1.1"></a></div><div class="issue" id="issue-container-generatedID-2"><div role="heading" class="issue-title marker" id="h-issue-3" aria-level="2"><span>Issue</span></div><aside class="">
 
 <p>Merge this into its parent section on identity.</p>
@@ -1249,7 +1267,7 @@ example between different browser profiles or at the point someone clears their 
 storage, that leads to <a href="#hl-recognition-same-site" class="sec-ref"><bdi class="secno">2.1.1.1 </bdi>Same-site recognition</a>.</p>
 <section id="same-site-recognition"><div class="header-wrapper"><h5 id="hl-recognition-same-site"><bdi class="secno">2.1.1.1 </bdi>Same-site recognition</h5><a class="self-link" href="#hl-recognition-same-site" aria-label="Permalink for Section 2.1.1.1"></a></div><p>The web platform offers many ways for a website to recognize that a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-61">person</a> is using the same
 <a data-link-type="dfn" href="#dfn-identity" class="internalDFN" id="ref-for-dfn-identity-12">identity</a> over time, including <cite><a class="bibref" data-link-type="biblio" href="#bib-rfc6265" title="HTTP State Management Mechanism">cookies</a></cite>, <a data-link-type="idl" data-type="attribute" href="https://html.spec.whatwg.org/multipage/webstorage.html#dom-localstorage"><code>localStorage</code></a>,
-<a data-link-type="idl" data-type="attribute" href="https://www.w3.org/TR/IndexedDB/#dom-windoworworkerglobalscope-indexeddb"><code>indexedDB</code></a>, <a data-link-type="idl" data-lt="CacheStorage" data-type="interface" href="https://www.w3.org/TR/service-workers-1/#cachestorage"><code>CacheStorage</code></a>, and other forms of storage. This allows
+<a data-link-type="idl" data-type="attribute" href="https://www.w3.org/TR/IndexedDB/#dom-windoworworkerglobalscope-indexeddb"><code>indexedDB</code></a>, <a data-link-type="idl" data-lt="CacheStorage" data-type="interface" href="https://www.w3.org/TR/service-workers/#cachestorage"><code>CacheStorage</code></a>, and other forms of storage. This allows
 sites to save the <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-62">person</a>'s preferences, shopping carts, etc., and people have come to expect this
 behavior in some contexts.</p>
 <p>A privacy harm occurs if a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-63">person</a> reasonably expects that they'll be using a different <a data-link-type="dfn" href="#dfn-identity" class="internalDFN" id="ref-for-dfn-identity-13">identity</a>
@@ -2012,7 +2030,7 @@ Wendy Seltzer.</p>
     </dd><dt id="bib-seeing-like-a-state">[Seeing-Like-A-State]</dt><dd>
       <a href="https://bookshop.org/books/seeing-like-a-state-how-certain-schemes-to-improve-the-human-condition-have-failed/9780300246759"><cite>Seeing Like a State: How Certain Schemes to Improve the Human Condition Have Failed</cite></a>. James C. Scott. URL: <a href="https://bookshop.org/books/seeing-like-a-state-how-certain-schemes-to-improve-the-human-condition-have-failed/9780300246759">https://bookshop.org/books/seeing-like-a-state-how-certain-schemes-to-improve-the-human-condition-have-failed/9780300246759</a>
     </dd><dt id="bib-service-workers">[service-workers]</dt><dd>
-      <a href="https://www.w3.org/TR/service-workers-1/"><cite>Service Workers 1</cite></a>. Alex Russell; Jungkee Song; Jake Archibald; Marijn Kruisselbrink.  W3C. 19 November 2019. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/service-workers-1/">https://www.w3.org/TR/service-workers-1/</a>
+      <a href="https://www.w3.org/TR/service-workers/"><cite>Service Workers</cite></a>. Jake Archibald; Marijn Kruisselbrink.  W3C. 12 July 2022. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/service-workers/">https://www.w3.org/TR/service-workers/</a>
     </dd><dt id="bib-strava-debacle">[Strava-Debacle]</dt><dd>
       <a href="https://www.nytimes.com/2018/01/30/opinion/strava-privacy.html"><cite>The Latest Data Privacy Debacle</cite></a>. Zeynep Tufekci.  The New York Times. URL: <a href="https://www.nytimes.com/2018/01/30/opinion/strava-privacy.html">https://www.nytimes.com/2018/01/30/opinion/strava-privacy.html</a>
     </dd><dt id="bib-strava-reveal-military">[Strava-Reveal-Military]</dt><dd>
