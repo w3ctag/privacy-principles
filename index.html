@@ -888,41 +888,23 @@ if the same data were shared between unrelated [=parties=].
 
 ## Identity on the Web {#identity}
 
-<aside class="issue">
-  This section has not been edited for narrative.
-</aside>
-
 <div class="practice">
 
 <span class="practicelab" id="principle-identity-per-context">A [=user agent=] should help
 its user present the [=identity=] they want in each [=context=] they are in.</span>
 
-Sometimes this means the UA should ensure that one site can't learn anything about its
-user's behavior on another site. At other times, the UA should help its user prove to
-one site that they have a particular identity on another site.
-
-If a [=person=] visits two or more web pages from different [=partitions=], and does not
-explicitly express the same identity on each visit, the UA should
-ensure that the pages cannot quickly determine that the visits probably came from the same
-person.
-
 </div>
+
+A [=user agent=] which upholds this principle will sometimes ensure that *one* site can't learn anything about its
+user's behavior on *another* site. At other times, the UA will help its user *prove* to
+one site that they have a particular identity on another site. Similarly, a UA will help its user to separate or communicate identity across *repeat* visits to the *same* site.
 
 A [=person=]'s <dfn>identity</dfn> is the set of characteristics that define them. Their identity
 *in a [=context=]* is the set of characteristics they present to that context. People
 frequently present different identities to different contexts, and also frequently share an identity
 among several contexts.
 
-<dfn>Cross-context recognition</dfn> is the act of recognising that an [=identity=] in one
-[=context=] is the same [=person=] as an [=identity=] in another [=context=]. [=Cross-context
-recognition=] can at times be [=appropriate=] but anyone who does it needs to be careful not to
-apply the [=principles=] of one [=context=] in ways that violate the [=principles=] around use of information
-acquired in a different [=context=]. (For example, if you meet your therapist at a cocktail party,
-you expect them to have rather different discussion topics with you than they usually would, and
-possibly even to pretend they do not know you.) This is particularly true for [=vulnerable=] people
-as recognising them in different [=contexts=] may force their vulnerability into the open.
-
-In computer systems and on the Web, an [=identity=] seen by a particular website is typically
+In computer systems and on the web, an [=identity=] seen by a particular website is typically
 assigned an <dfn>identifier</dfn> of some type, which makes it easier for an automated system to
 store data about that [=person=]. Examples of [=identifiers=] for a [=person=] can be:
 * their name,
@@ -930,16 +912,41 @@ store data about that [=person=]. Examples of [=identifiers=] for a [=person=] c
 * their phone number,
 * their location data,
 * an online identifier such as email or IP addresses,
-* browser fingerprints (based on a combination of configuration characteristics), or
+* browser [=fingerprinting|fingerprints=] (based on a combination of configuration characteristics), or
 * factors specific to their physical, physiological, genetic, mental, economic,
-cultural, social, or behavioral [=identity=].
+cultural, social, or behavioral [=identity=],
+* strings derived from [=identifiers=], for instance through hashing.
 
-Strings derived from [=identifiers=], for instance through hashing, are still
-[=identifiers=] so long as they may identify a [=person=].
+<dfn>Cross-context recognition</dfn> is the act of recognising that an [=identity=] in one
+[=context=] is the same [=person=] as an [=identity=] in another [=context=]. This contributes to [=surveillance=], [=correlation=], and [=identification=].
 
+[=Cross-context recognition=] can at times be [=appropriate=] but web users need to be able to control when websites do it as much as possible. Systems which [=cross-context recognition|recognize=] people across [=contexts=] need to be careful not to
+apply the [=principles=] of one [=context=] in ways that violate the [=principles=] around use of information
+acquired in a different [=context=]. This is particularly true for [=vulnerable=] people,
+as recognising them in different [=contexts=] may force traits that reveal their vulnerability into the open. 
+For example, if you meet your therapist at a cocktail party,
+you expect them to have different discussion topics with you than they usually would, and
+possibly even to pretend they don't know you.
 
+Note that a UA may not always be powerful enough to prevent [=cross-context recognition=]. For example, if two or more services [=inappropriately=] require an identifying piece of information in order to use the services.
 
-To do this, [=user agents=] have to make some assumptions about the borders between [=contexts=]. By
+<dfn>Cross-site recognition</dfn> is when a site determines with high probability that a visit to the site comes from the same person as another visit to a *different* site.
+
+Traditionally, sites have accomplished this using <a
+href="https://tess.oconnor.cx/2020/10/parties#environment-cross-site">cross-site</a> cookies, but it
+can also be done by having someone navigate to a link that has been decorated with an identifier,
+collecting the same piece of identifying information on both sites, or by correlating the timestamps
+of an event that occurs nearly-simultaneously on both sites. A privacy harm occurs through [=cross-site recognition=], unless the person could reasonably expect the sites to discover this.
+
+<dfn>Same-site recognition</dfn> is when a single site discovers and uses the fact that two or more visits probably came from the same [=person=].
+
+This is generally accomplished by either "supercookies" or browser
+[=fingerprinting=]. A privacy harm occurs if a [=person=] reasonably expects that they'll be using a different [=identity=] for different visits to a single site, but the site engages in [=same-site recognition=].
+
+[=User agents=] can't, in general, determine exactly where [=context=] boundaries are within a site, or know
+how a site allows a [=person=] to express that they intend to change [=identities=], so the UA can't enforce that sites actually separate [=identities=] at these boundaries.
+
+Instead, [=user agents=] may have to make some assumptions about the borders between [=contexts=]. By
 default, [=user agents=] define a <dfn>machine-enforceable context</dfn> or <dfn>partition</dfn> as:
 
 * A set of [=environments=] (roughly iframes (including cross-site iframes), workers, and top-level
@@ -950,79 +957,37 @@ default, [=user agents=] define a <dfn>machine-enforceable context</dfn> or <dfn
 * between points in time that the person or user agent clears that [=site=]'s cookies and other
   storage (which is sometimes automatic at the end of each session).
 
-Even though this is the default, [=user agents=] are free to restrict this context as
-people need. For example, some user agents may help people present different
+Even though this is the default, [=user agents=] can further restrict their definition of [=machine-enforceable context=] to better aid their users.
+
+Where possible, [=user agents=] should prevent people from being [=cross-context recognition|recognized=] across
+[=partitions=] unless they intend to be recognized.
+
+If a [=person=] visits two or more web pages from different [=partitions=], and does not
+explicitly express the same identity on each visit, the UA should take steps to prevent
+[=same-site recognition=]. Note that sites can do harm even if they can't be *completely* certain that visits come from the same person. The UA may even help people to explicitly present different
 [=identities=] to subdivisions of a single [=site=].
 
-<div class="issue" data-number="1">
+The user agent and identity-related web features should:
 
-There is disagreement about whether [=user agents=] may also widen their [=machine-enforceable
-contexts=]. For example, some user agents might want to help their users present a single
-[=identity=] to multiple [=sites=] that the user understands represent a single [=party=], or to a
-[=site=] across multiple installations.
-
-</div>
-
-[=User agents=] should prevent people from being [=cross-context recognition|recognized=] across
-[=machine-enforceable contexts=] unless they intend to be recognized. This is a "should" rather
-than a "must" because there are many cases where the user agent isn't powerful enough to prevent
-recognition. For example if two or more services that a person needs to use insist that they share
-a difficult-to-forge piece of their identity in order to use the services, it's the services
-behaving [=inappropriately=] rather than the [=user agent=].
-
-If a [=site=] includes multiple [=contexts=] whose [=principles=] indicate that it's [=inappropriate=] to
-share data between the contexts, the fact that those distinct [=contexts=] fall inside a single
-[=machine-enforceable context=] doesn't make sharing data or [=cross-context
-recognition|recognizing=] [=identities=] any less [=inappropriate=].
-
-The user agent and identity related web features should:
-* help users present the identity that they want to present to a given website.
-  * should not reveal user's profile information without user consent.
-  * should not leak user's profiles, including which types of profiles the user has, before user consent.
-  * it should be clear to the user which identity is being used on a given website
+* help people present the identity that they want to present to a given website.
+  * should not reveal someone's profile information without their consent.
+  * should not leak someone's profiles, including which types of profiles they have, without their consent.
+  * make it clear to the user which identity is being presented on a given website.
 * disclose the least amount of identifying information.
-  * only share the parts of the user's profile information that is needed by the website
+  * only share the parts of someone's profile information that is needed by the website.
   * minimize the shared data, for example if a website requires age for verification, then share that the
   user is older than 21, as opposed to specific age or date of birth.
 * support the user's intent to present a directed identity or a site-specific identity.
   * If the website requires an email, then the user may choose a directed identifier without disclosing
   their real email.
 
-### Unwanted cross-context recognition {#hl-recognition-cross-context}
+This principle is limited in cases where preventing [=cross-context recognition|recognition=]
+would break fundamental
+aspects of the web. In many cases it's possible to change the design in a way that avoids the
+violation without breaking valid use cases, but for cases where that's not possible
+we refer you to [[[Privacy-Threat]]] which discusses tradeoffs in detail.
 
-<aside class="issue">Merge this into its parent section on identity.</aside>
-
-Contributes to [=surveillance=], [=correlation=], and [=identification=].
-
-As described in [[[#identity]]], [=cross-context recognition=] can sometimes be [=appropriate=], but
-users need to be able to control when websites do it as much as possible.
-
-(principle was here)
-
-* This principle uses "probably" because websites can do harm even if they can't be completely
-  certain that visits come from the same person.
-* This principle uses "quickly" because it currently appears impossible to prevent some forms of
-  fingerprinting that take a long time or many visits within each [=partition=].
-* This principle is limited in cases that only affect a small fraction of people who use the web
-  because people may configure their systems in unique ways, for example by using
-  a browser with a very small number of users. As long as a tracker can't track a significant number
-  of people, it's likely to be unviable to maintain the tracker. However, this doesn't excuse making
-  small groups of people trackable when those people didn't choose to be in the group.
-* This principle is also limited in cases where preventing recognition would break fundamental
-  aspects of the web. In many cases it's possible to change the design in a way that avoids the
-  violation without breaking valid use cases, but for cases where that's not possible this document
-  delegates to other documents, for example the [[[Privacy-Threat]]], to discuss what detailed
-  tradeoffs to make.
-* This principle may not be able to be applied in situations where a [=person=] has shared [=identity=]
-  information in a medium that is not accessible to the [=user agent=].
-
-[=Partitions=] are separated in two ways that lead to distinct kinds of user-visible recognition.
-When their divisions between different sites are violated, that leads to <a
-href="#hl-recognition-cross-site"></a>. When a violation occurs at their other divisions, for
-example between different browser profiles or at the point someone clears their cookies and site
-storage, that leads to <a href="#hl-recognition-same-site"></a>.
-
-#### Same-site recognition {#hl-recognition-same-site}
+### Fingerprinting {#fingerprinting}
 
 The web platform offers many ways for a website to recognize that a [=person=] is using the same
 [=identity=] over time, including [[RFC6265|cookies]], {{WindowLocalStorage/localStorage}},
@@ -1030,48 +995,30 @@ The web platform offers many ways for a website to recognize that a [=person=] i
 sites to save the [=person=]'s preferences, shopping carts, etc., and people have come to expect this
 behavior in some contexts.
 
-A privacy harm occurs if a [=person=] reasonably expects that they'll be using a different [=identity=]
-on a site, but the site discovers and uses the fact that the two or more visits probably came from
-the same [=person=] anyway.
-
-[=User agents=] can't, in general, determine exactly where intra-site [=context=] boundaries are, or
-how a site allows a [=person=] to express that they intend to change [=identities=], so they're not
-responsible to enforce that sites actually separate [=identities=] at those boundaries. The <a
-href="#principle-prevent-cross-partition-recognition">principle</a> here instead requires separation
-at [=partition=] boundaries.
-
-Cross-[=partition=] recognition is generally accomplished by either "supercookies" or <a>browser
-fingerprinting</a>.
-
-Supercookies occur when a browser stores data for a site but makes that data
-more difficult to clear than other cookies or storage.
-<a data-cite="fingerprinting-guidance#clearing-all-local-state">Fingerprinting
-Guidance § Clearing all local state</a> discusses how specifications can help
-browsers avoid this mistake.
-
-Fingerprinting consists of using attributes of the [=person=]'s browser and platform
+<dfn>Fingerprinting</dfn> consists of using attributes of the [=person=]'s browser and platform
 that are consistent between two or more visits and probably unique to the
 person.
 
 The attributes can be exposed as information about the [=person=]'s device that is
 otherwise benign (as opposed to [[[#hl-sensitive-information]]]). For example:
 
-* What are the person's language and time zone?
-* What size is the window?
-* What system preferences have been set? Dark mode, serif font, etc...
-* ...
+* language and time zone;
+* window size;
+* system preferences (such as dark mode, serif font, etc.).
 
-See [[fingerprinting-guidance]] for how to mitigate this threat.
+Supercookies occur when a UA stores data for a site but makes that data
+more difficult to clear than other cookies or storage.
+<a data-cite="fingerprinting-guidance#clearing-all-local-state">Fingerprinting
+Guidance § Clearing all local state</a> discusses how specifications can help
+UAs avoid this mistake.
 
-#### Unwanted cross-site recognition {#hl-recognition-cross-site}
+Preventing [=fingerprinting=] can be particularly challenging in cases that only affect a small group of people who use the web. For example, people who configure their systems in unique ways, such as by using
+a browser with a very small number of users. As long as a tracker can't track a significant number
+of people, it's likely to be unviable to maintain the tracker. However, this doesn't excuse making
+small groups of people trackable when those people didn't choose to be in the group.
 
-A privacy harm occurs if a site determines with high probability and uses the fact that a visit to
-that site comes from the same person as another visit to a *different* site, unless the person could
-reasonably expect the sites to discover this. Traditionally, sites have accomplished this using <a
-href="https://tess.oconnor.cx/2020/10/parties#environment-cross-site">cross-site</a> cookies, but it
-can also be done by having someone navigate to a link that has been decorated with an identifier,
-collecting the same piece of identifying information on both sites, or by correlating the timestamps
-of an event that occurs nearly-simultaneously on both sites.
+See [[fingerprinting-guidance]] for how to mitigate threats that result from [=fingerprinting=].
+
 
 ## Data minimization {#data-minimization}
 
