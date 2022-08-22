@@ -967,19 +967,17 @@ explicitly express the same identity on each visit, the UA should take steps to 
 [=same-site recognition=]. Note that sites can do harm even if they can't be *completely* certain that visits come from the same person. The UA may even help people to explicitly present different
 [=identities=] to subdivisions of a single [=site=].
 
-The user agent and identity-related web features should:
+[=User agents=] and identity-related web features can do the following
+to help people present the [=identity=] that they want to present to a given website:
 
-* help people present the identity that they want to present to a given website.
-  * should not reveal someone's profile information without their consent.
-  * should not leak someone's profiles, including which types of profiles they have, without their consent.
-  * make it clear to the user which identity is being presented on a given website.
-* disclose the least amount of identifying information.
+* do not reveal someone's profile information without their consent.
+* do not leak someone's profiles, including which types of profiles they have, without their consent.
+* make it clear to the user which identity is being presented on a given website.
+* disclose the least amount of identifying information, e.g.:
   * only share the parts of someone's profile information that is needed by the website.
-  * minimize the shared data, for example if a website requires age for verification, then share that the
-  user is older than 21, as opposed to specific age or date of birth.
-* support the user's intent to present a directed identity or a site-specific identity.
-  * If the website requires an email, then the user may choose a directed identifier without disclosing
-  their real email.
+  * minimize the shared data; for example if a website requires age for verification, then share that the
+  user is older than the minimum age, as opposed to specific age or date of birth.
+* support the user's intent to present a directed identity or a site-specific identity. E.g., if the website requires an email, then the user may choose a directed identifier without disclosing their real email.
 
 This principle is limited in cases where preventing [=cross-context recognition|recognition=]
 would break fundamental
