@@ -892,6 +892,22 @@ if the same data were shared between unrelated [=parties=].
   This section has not been edited for narrative.
 </aside>
 
+<div class="practice">
+
+<span class="practicelab" id="principle-identity-per-context">A [=user agent=] should help
+its user present the [=identity=] they want in each [=context=] they are in.</span>
+
+Sometimes this means the UA should ensure that one site can't learn anything about its
+user's behavior on another site. At other times, the UA should help its user prove to
+one site that they have a particular identity on another site.
+
+If a [=person=] visits two or more web pages from different [=partitions=], and does not
+explicitly express the same identity on each visit, the UA should
+ensure that the pages cannot quickly determine that the visits probably came from the same
+person.
+
+</div>
+
 A [=person=]'s <dfn>identity</dfn> is the set of characteristics that define them. Their identity
 *in a [=context=]* is the set of characteristics they present to that context. People
 frequently present different identities to different contexts, and also frequently share an identity
@@ -921,17 +937,7 @@ cultural, social, or behavioral [=identity=].
 Strings derived from [=identifiers=], for instance through hashing, are still
 [=identifiers=] so long as they may identify a [=person=].
 
-<div class="practice">
 
-<span class="practicelab" id="principle-identity-per-context">A [=user agent=] should help
-its user present the [=identity=] they want in each [=context=] they find themself
-in.</span>
-
-Sometimes this means the UA should ensure that one site can't learn anything about their
-user's behavior on another site, while at other times the UA should help their user prove to
-one site that they have a particular identity on another site.
-
-</div>
 
 To do this, [=user agents=] have to make some assumptions about the borders between [=contexts=]. By
 default, [=user agents=] define a <dfn>machine-enforceable context</dfn> or <dfn>partition</dfn> as:
@@ -991,16 +997,7 @@ Contributes to [=surveillance=], [=correlation=], and [=identification=].
 As described in [[[#identity]]], [=cross-context recognition=] can sometimes be [=appropriate=], but
 users need to be able to control when websites do it as much as possible.
 
-<div class="practice">
-
-<p><span class="practicelab" id="principle-prevent-cross-partition-recognition">[=User agents=]
-should ensure that, if a [=person=] visits two or more web pages from different [=partitions=], that
-the pages cannot quickly determine that the visits probably came from the same person, for any
-significant or involuntary fraction of the people who use the web, unless the person explicitly
-expresses the same [=identity=] to the visits, or preventing this correlation would break a
-technical feature that is fundamental to the Web.</span></p>
-
-</div>
+(principle was here)
 
 * This principle uses "probably" because websites can do harm even if they can't be completely
   certain that visits come from the same person.
