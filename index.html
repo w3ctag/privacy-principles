@@ -1051,10 +1051,6 @@ of an event that occurs nearly-simultaneously on both sites.
 ## Personal Data {#data}
 
 <aside class="issue">
-  This section has not been edited for narrative.
-</aside>
-
-<aside class="issue">
   There is not currently consensus among the authors and contributors to this
   document about the below principles.
   Please see <a href="https://github.com/w3ctag/privacy-principles/issues/150">this issue</a>
@@ -1063,45 +1059,54 @@ of an event that occurs nearly-simultaneously on both sites.
 
 <div class="practice">
 
-<p><span class="practicelab" id="user-agent-data-sharing">
-User agents should only share and present information about the user that
-the user can reasonably anticipate being shared, and which directly relate to the users overt, immediate goals.
-User agents and sites should be conservative when deciding if information is related to a users goals; the
-longer the chain of reasoning used to justify data collection, the less likely for that data
-collection to be ethical and principled.
-</span></p>
+<span class="practicelab" id="user-agent-data-sharing">
+User agents should only share and present information about someone that the
+person can reasonably anticipate being shared, and which directly relate to
+their overt, immediate goals.
+</span>
 
 </div>
 
-Examples:
+User agents and sites should be conservative when deciding if information is
+related to a person's goals. The longer the chain of reasoning used to justify
+data collection, the less likely for that data collection to be ethical and
+principled.
 
-* Sharing geo-location data with a map website after a user has clicked a "share my location" button has
-  a small number of "hops" between intent and data.
-* Sharing information about the user's selected DNS resolver with a site, so that the site authors can debug
-  possible issues around tail/uncommon resolvers, has a large number of "hops" between user intent (to do
-  a thing on the website) and collection motivation (users like our site, so users will want to share information
-  with us to help us improve the site).
+For example, sharing geo-location data with a map website after a user has
+clicked a "share my location" is appropriate as it is directly related to
+the activity of the person on the website.
+
+On the other hand, sharing information about the user's selected DNS resolver
+with a site, so that the site authors can debug possible issues around
+tail/uncommon resolvers, is far removed from the person's intent to do a thing
+on the website, and the collection motivation - that people like our site, so
+this person will want to share any information with us to help us improve the
+site - involves making subjective assumptions about the user.
 
 <div class="practice">
 
-<p><span class="practicelab" id="sensitive-vs-non-sensitive-data">
-User agents should generally not attempt to distinguish between sensitive and nonsensitive personal data; all
-data and personal information is likely to be sensitive to some users, often in ways unanticipated by
-browser vendors and site operators.
-</span></p>
+<span class="practicelab" id="sensitive-vs-non-sensitive-data">
+User agents should treat all personal data as sensitive, and should not
+attempt to distinguish sensitive from nonsensitive information.
+</span>
 
 </div>
+
+All data and personal information is likely to be sensitive to someone, often
+in ways unanticipated by browser vendors and site operators.
 
 <div class="practice">
 
-<p><span class="practicelab" id="minimal-data-sharing">
-User agents should always aim to share the minimal amount of information with a site
-that is needed for the user to achieve a user's goals. Data collected today can often be used in
-unanticipated ways in the future to enact privacy harms, even data that seems unlikely to
-be identifying, sensitive or otherwise privacy-harming.
-</span></p>
+<span class="practicelab" id="minimal-data-sharing">
+User agents should only share the minimal amount of information with a site
+that is needed to achieve the user's goals.
+</span>
 
 </div>
+
+Data collected today can often be used in unanticipated ways in the future to
+enact privacy harms; even data that seems unlikely to be identifying,
+sensitive or otherwise privacy-harming.
 
 ## Sensitive Information {#hl-sensitive-information}
 
