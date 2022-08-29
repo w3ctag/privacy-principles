@@ -196,6 +196,12 @@
           href: 'https://www.cambridge.org/core/books/industry-unbound/787989F90DBFC08E47546178A7AB04F7',
           publisher: 'Cambridge University Press',
         },
+        'Lost-In-Crowd': {
+          title: 'Why You Can No Longer Get Lost in the Crowd',
+          authors: ['Woodrow Hartzog', 'Evan Selinger'],
+          href: 'https://www.nytimes.com/2019/04/17/opinion/data-privacy.html',
+          publisher: 'The New York Times',
+        },
         'NIST-800-63A': {
           title: 'Digital Identity Guidelines: Enrollment and Identity Proofing Requirements',
           href: 'https://pages.nist.gov/800-63-3/sp800-63a.html',
@@ -208,6 +214,17 @@
           author: ['Robin Berjon'],
           href: 'https://open.nytimes.com/how-the-new-york-times-thinks-about-your-privacy-bc07d2171531',
           publisher: 'NYT Open',
+        },
+        'Obfuscation': {
+          title: 'Obfuscation: A User\'s Guide for Privacy and Protest',
+          authors: ['Finn Brunton', 'Helen Nissenbaum'],
+          href: 'https://www.penguinrandomhouse.com/books/657301/obfuscation-by-finn-brunton-and-helen-nissenbaum/',
+          publisher: 'Penguin Random House',
+        },
+        'Obscurity-By-Design': {
+          title: 'Obscurity by Design',
+          authors: ['Woodrow Hartzog', 'Frederic Stutzman'],
+          href: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2284583',
         },
         'OECD-Guidelines': {
           title: 'OECD Guidelines on the Protection of Privacy and Transborder Flows of Personal Data',
@@ -939,7 +956,7 @@ If a [=site=] includes multiple [=contexts=] whose [=principles=] indicate that 
 share data between the contexts, the fact that those distinct [=contexts=] fall inside a single
 [=machine-enforceable context=] doesn't make sharing data or [=cross-context
 recognition|recognizing=] [=identities=] any less [=inappropriate=].
- 
+
 The user agent and identity related web features should:
 * help users present the identity that they want to present to a given website.
   * should not reveal user's profile information without user consent.
@@ -1497,6 +1514,32 @@ unrelated feature, by decreasing the quality of the service, or by trying to caj
 trick the [=person=] into opting back into the [=processing=].
 
 <aside class="issue">Some services have the user pay for their use in data. These services aren't necessarily retaliating by denying their services to users who refuse to pay with data, but the details are more complex than we've had time to write.</aside>
+
+## Support Deception {#support-deception}
+
+<div class="practice">
+  <span class="practicelab" id="principle-support-deception">
+    [=User agents=] should support [=people=] in providing false or incorrect information to [=parties=]
+    that request it.
+  </span>
+</div>
+
+[=Parties=] can invest time and energy into automating ways of gathering [=data=] from [=people=] and can
+design their products in ways that make it a lot easier for [=people=] to disclose information than not, whereas
+[=people=] typically have to manually wade through options, repeated prompts, and deceptive patterns. In many
+cases, the absence of data — when a [=person=] refuses to provide some information — can also be identifying
+or revealing. [=User agents=] should make it simple for [=people=] to evade such tactics and to live in
+obscurity ([[?Lost-In-Crowd]], [[?Obscurity-By-Design]]) by rendering the provision of incorrect information as easy as
+possible ([[?Obfuscation]]).
+
+Examples of ways in which a [=user agent=] may support its [=user=]'s obscurity include:
+* Generating domain-specific email addresses so that [=people=] can log into the site without becoming recognisable
+  across contexts.
+* Offering the option to produce fake geolocation and accelerometry data, with parameters specified by the [=user=].
+* Making it easy to upload a picture while pretending to have it taken by the camera.
+* Faking the acceptance of notification prompts (or pretending that notifications have already been accepted).
+* Filtering outbound network traffic so as to replace specific strings (TCF, hashed email, navigation identifiers).
+* Randomly swapping third-party cookies with the browsers of other [=people=].
 
 <!--
 # EVERYTHING BELOW THIS LINE IS MATERIAL
