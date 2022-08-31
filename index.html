@@ -282,14 +282,14 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "href": "https://foundation.mozilla.org/en/data-futures-lab/data-for-empowerment/data-futures-lab-glossary/",
       "publisher": "Mozilla Foundation"
     },
-    "Relational-Governance": {
-      "title": "A Relational Theory of Data Governance",
+    "De-identification-Privacy-Act": {
+      "title": "De-identification and the Privacy Act",
       "authors": [
-        "Salomé Viljoen"
+        "Office of the Australian Information Commissioner"
       ],
-      "href": "https://www.yalelawjournal.org/feature/a-relational-theory-of-data-governance",
-      "publisher": "Yale Law Journal",
-      "id": "relational-governance"
+      "href": "https://www.oaic.gov.au/privacy/guidance-and-advice/de-identification-and-the-privacy-act",
+      "publisher": "Australian Government",
+      "id": "de-identification-privacy-act"
     },
     "Digital-Assistant-Trust": {
       "title": "Facebook's new digital assistant 'M' will need to earn your trust",
@@ -602,6 +602,15 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "publisher": "U.S. Department of Health, Education & Welfare",
       "href": "https://archive.epic.org/privacy/hew1973report/",
       "id": "records-computers-rights"
+    },
+    "Relational-Governance": {
+      "title": "A Relational Theory of Data Governance",
+      "authors": [
+        "Salomé Viljoen"
+      ],
+      "href": "https://www.yalelawjournal.org/feature/a-relational-theory-of-data-governance",
+      "publisher": "Yale Law Journal",
+      "id": "relational-governance"
     }
   },
   "publishISODate": "2022-04-27T00:00:00.000Z",
@@ -1463,8 +1472,13 @@ that no <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="r
 combination with other available information. Note
 that further considerations relating to groups are covered in the
 <a href="#collective">Collective Issues in Privacy</a> section.</p>
-<p>We talk of <dfn id="dfn-controlled-de-identified-data" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">controlled de-identified data</dfn> when there are strict controls that prevent the
-re-identification of <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-74">people</a> described by the data except for a well-defined set of <a data-link-type="dfn" href="#dfn-purpose" class="internalDFN" id="ref-for-dfn-purpose-8">purposes</a>.</p>
+<p>We talk of <dfn id="dfn-controlled-de-identified-data" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">controlled de-identified data</dfn> when:</p>
+<ol>
+<li>The <em>state</em> of the data is such that the information that could be used to re-identify an
+individual has been removed or altered, and</li>
+<li>the there is a <em>process</em> in place to prevent attempts to re-identify <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-74">people</a> and the inadvertent
+release of the de-identified data. [<cite><a class="bibref" data-link-type="biblio" href="#bib-de-identification-privacy-act" title="De-identification and the Privacy Act">De-identification-Privacy-Act</a></cite>]</li>
+</ol>
 <p>Different situations involving <a data-link-type="dfn" href="#dfn-controlled-de-identified-data" class="internalDFN" id="ref-for-dfn-controlled-de-identified-data-1">controlled de-identified data</a> will require different controls.
 For instance, if the <a data-link-type="dfn" href="#dfn-controlled-de-identified-data" class="internalDFN" id="ref-for-dfn-controlled-de-identified-data-2">controlled de-identified data</a> is <em>only</em> being processed by one
 <a data-link-type="dfn" href="#dfn-party" class="internalDFN" id="ref-for-dfn-party-16">party</a>, typical controls include making sure that the <a data-link-type="dfn" href="#dfn-identifier" class="internalDFN" id="ref-for-dfn-identifier-6">identifiers</a> used in the data are unique
@@ -1498,7 +1512,7 @@ different data sets involving this <a data-link-type="dfn" href="#dfn-data" clas
 k-anonymity attacks; and</p>
 </li>
 <li><p>there exist contractual terms between the <a data-link-type="dfn" href="#dfn-first-party-0" class="internalDFN" id="ref-for-dfn-first-party-0-4">first party</a> and <a data-link-type="dfn" href="#dfn-third-parties" class="internalDFN" id="ref-for-dfn-third-parties-6">third party</a>
-describing the limited <a data-link-type="dfn" href="#dfn-purpose" class="internalDFN" id="ref-for-dfn-purpose-9">purpose</a> for which the data is being shared.</p>
+describing the limited <a data-link-type="dfn" href="#dfn-purpose" class="internalDFN" id="ref-for-dfn-purpose-8">purpose</a> for which the data is being shared.</p>
 </li>
 </ul>
 <p>Note that <a data-link-type="dfn" href="#dfn-controlled-de-identified-data" class="internalDFN" id="ref-for-dfn-controlled-de-identified-data-5">controlled de-identified data</a>, on its own, is not sufficient to render
@@ -1724,7 +1738,7 @@ are employees with respect to their employers, are facing a steep asymmetry of p
 are people in some situations of intellectual or psychological impairment, are
 refugees, etc.</p>
 <p>A <dfn data-plurals="contexts" id="dfn-context" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">context</dfn> is a physical or digital environment that a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-100">person</a> interacts with
-for a set of <a data-link-type="dfn" href="#dfn-purpose" class="internalDFN" id="ref-for-dfn-purpose-10">purposes</a> (that they typically share with other <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-101">people</a> who interact with the
+for a set of <a data-link-type="dfn" href="#dfn-purpose" class="internalDFN" id="ref-for-dfn-purpose-9">purposes</a> (that they typically share with other <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-101">people</a> who interact with the
 same environment).</p>
 </section><section id="server-side-parties"><div class="header-wrapper"><h3 id="parties"><bdi class="secno">A.2 </bdi>Server-Side Parties</h3><a class="self-link" href="#parties" aria-label="Permalink for Appendix A.2"></a></div><p>A <dfn data-plurals="parties" id="dfn-party" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">party</dfn> is an entity that a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-102">person</a> can reasonably understand as a single "thing"
 they're interacting with. Uses of this document in a particular domain are expected to describe how
@@ -1782,28 +1796,28 @@ destruction.</p>
 for consideration, monetary or otherwise.</p>
 <p>The <dfn data-plurals="purposes" id="dfn-purpose" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">purpose</dfn> of a given <a data-link-type="dfn" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-33">processing</a> of data is an anticipated, intended, or
 planned outcome of this <a data-link-type="dfn" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-34">processing</a> which is achieved or aimed for within a given
-<a data-link-type="dfn" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-24">context</a>. A <a data-link-type="dfn" href="#dfn-purpose" class="internalDFN" id="ref-for-dfn-purpose-11">purpose</a>, when described, should be specific enough to be actionable by
+<a data-link-type="dfn" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-24">context</a>. A <a data-link-type="dfn" href="#dfn-purpose" class="internalDFN" id="ref-for-dfn-purpose-10">purpose</a>, when described, should be specific enough to be actionable by
 someone familiar with the relevant <a data-link-type="dfn" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-25">context</a> (ie. they could independently determine
-<a data-link-type="dfn" href="#dfn-means" class="internalDFN" id="ref-for-dfn-means-1">means</a> that reasonably correspond to an implementation of the <a data-link-type="dfn" href="#dfn-purpose" class="internalDFN" id="ref-for-dfn-purpose-12">purpose</a>).</p>
+<a data-link-type="dfn" href="#dfn-means" class="internalDFN" id="ref-for-dfn-means-1">means</a> that reasonably correspond to an implementation of the <a data-link-type="dfn" href="#dfn-purpose" class="internalDFN" id="ref-for-dfn-purpose-11">purpose</a>).</p>
 
 
 <p>The <dfn id="dfn-means" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">means</dfn> are the general method of <a data-link-type="dfn" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-35">data processing</a> through which a given
-<a data-link-type="dfn" href="#dfn-purpose" class="internalDFN" id="ref-for-dfn-purpose-13">purpose</a> is implemented, in a given <a data-link-type="dfn" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-26">context</a>, considered at a relatively abstract
+<a data-link-type="dfn" href="#dfn-purpose" class="internalDFN" id="ref-for-dfn-purpose-12">purpose</a> is implemented, in a given <a data-link-type="dfn" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-26">context</a>, considered at a relatively abstract
 level and not necessarily all the way down to implementation details. Example:
 <em>a person will have their preferences restored (purpose) by looking up their identifier
 in a preferences store (means)</em>.</p>
-<p>A <dfn id="dfn-data-controller" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">data controller</dfn> is a <a data-link-type="dfn" href="#dfn-party" class="internalDFN" id="ref-for-dfn-party-34">party</a> that determines the <a data-link-type="dfn" href="#dfn-means" class="internalDFN" id="ref-for-dfn-means-2">means</a> and <a data-link-type="dfn" href="#dfn-purpose" class="internalDFN" id="ref-for-dfn-purpose-14">purposes</a>
+<p>A <dfn id="dfn-data-controller" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">data controller</dfn> is a <a data-link-type="dfn" href="#dfn-party" class="internalDFN" id="ref-for-dfn-party-34">party</a> that determines the <a data-link-type="dfn" href="#dfn-means" class="internalDFN" id="ref-for-dfn-means-2">means</a> and <a data-link-type="dfn" href="#dfn-purpose" class="internalDFN" id="ref-for-dfn-purpose-13">purposes</a>
 of data processing. Any <a data-link-type="dfn" href="#dfn-party" class="internalDFN" id="ref-for-dfn-party-35">party</a> that is not a <a data-link-type="dfn" href="#dfn-data-processor" class="internalDFN" id="ref-for-dfn-data-processor-2">service provider</a> is a <a data-link-type="dfn" href="#dfn-data-controller" class="internalDFN" id="ref-for-dfn-data-controller-2">data controller</a>.</p>
 <p>A <dfn data-lt="data processor|service provider" data-plurals="service providers" id="dfn-data-processor" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">service provider</dfn> or <a data-link-type="dfn" href="#dfn-data-processor" class="internalDFN" id="ref-for-dfn-data-processor-3">data processor</a> is considered to be the
 same <a data-link-type="dfn" href="#dfn-party" class="internalDFN" id="ref-for-dfn-party-36">party</a> as the <a data-link-type="dfn" href="#dfn-actors" class="internalDFN" id="ref-for-dfn-actors-13">actor</a> contracting it to perform the relevant <a data-link-type="dfn" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-36">processing</a> if it:</p>
 <ul>
 <li>is processing the data on behalf of that <a data-link-type="dfn" href="#dfn-party" class="internalDFN" id="ref-for-dfn-party-37">party</a>;</li>
 <li>ensures that the data is only retained, accessed, and used as directed by that
-<a data-link-type="dfn" href="#dfn-party" class="internalDFN" id="ref-for-dfn-party-38">party</a> and solely for the list of explicitly-specified <a data-link-type="dfn" href="#dfn-purpose" class="internalDFN" id="ref-for-dfn-purpose-15">purposes</a>
+<a data-link-type="dfn" href="#dfn-party" class="internalDFN" id="ref-for-dfn-party-38">party</a> and solely for the list of explicitly-specified <a data-link-type="dfn" href="#dfn-purpose" class="internalDFN" id="ref-for-dfn-purpose-14">purposes</a>
 detailed by the directing <a data-link-type="dfn" href="#dfn-party" class="internalDFN" id="ref-for-dfn-party-39">party</a> or <a data-link-type="dfn" href="#dfn-data-controller" class="internalDFN" id="ref-for-dfn-data-controller-3">data controller</a>;</li>
 <li>may determine implementation details of the data processing in question but
-does not determine the <a data-link-type="dfn" href="#dfn-purpose" class="internalDFN" id="ref-for-dfn-purpose-16">purpose</a> for which the data is being <a data-link-type="dfn" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-37">processed</a>
-nor the overarching <a data-link-type="dfn" href="#dfn-means" class="internalDFN" id="ref-for-dfn-means-3">means</a> through which the <a data-link-type="dfn" href="#dfn-purpose" class="internalDFN" id="ref-for-dfn-purpose-17">purpose</a> is carried out;</li>
+does not determine the <a data-link-type="dfn" href="#dfn-purpose" class="internalDFN" id="ref-for-dfn-purpose-15">purpose</a> for which the data is being <a data-link-type="dfn" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-37">processed</a>
+nor the overarching <a data-link-type="dfn" href="#dfn-means" class="internalDFN" id="ref-for-dfn-means-3">means</a> through which the <a data-link-type="dfn" href="#dfn-purpose" class="internalDFN" id="ref-for-dfn-purpose-16">purpose</a> is carried out;</li>
 <li>has no independent right to use the data other than in a <a data-link-type="dfn" href="#dfn-de-identified" class="internalDFN" id="ref-for-dfn-de-identified-4">de-identified</a> form (e.g., for
 monitoring service integrity, load balancing, capacity planning, or billing); and,</li>
 <li>has a contract in place with the <a data-link-type="dfn" href="#dfn-party" class="internalDFN" id="ref-for-dfn-party-40">party</a> which is consistent with the above limitations.</li>
@@ -1971,6 +1985,8 @@ Wendy Seltzer.</p>
       <a href="https://arxiv.org/abs/2101.04843v1"><cite>What Makes a Dark Pattern… Dark? Design Attributes, Normative Considerations, and Measurement Methods</cite></a>. Arunesh Mathur; Jonathan Mayer; Mihir Kshirsagar. URL: <a href="https://arxiv.org/abs/2101.04843v1">https://arxiv.org/abs/2101.04843v1</a>
     </dd><dt id="bib-dark-patterns">[Dark-Patterns]</dt><dd>
       <a href="https://dl.acm.org/doi/10.1145/3397884"><cite>Dark patterns: past, present, and future</cite></a>. Arvind Narayanan; Arunesh Mathur; Marshini Chetty; Mihir Kshirsagar.  ACM. URL: <a href="https://dl.acm.org/doi/10.1145/3397884">https://dl.acm.org/doi/10.1145/3397884</a>
+    </dd><dt id="bib-de-identification-privacy-act">[De-identification-Privacy-Act]</dt><dd>
+      <a href="https://www.oaic.gov.au/privacy/guidance-and-advice/de-identification-and-the-privacy-act"><cite>De-identification and the Privacy Act</cite></a>. Office of the Australian Information Commissioner.  Australian Government. URL: <a href="https://www.oaic.gov.au/privacy/guidance-and-advice/de-identification-and-the-privacy-act">https://www.oaic.gov.au/privacy/guidance-and-advice/de-identification-and-the-privacy-act</a>
     </dd><dt id="bib-design-principles">[design-principles]</dt><dd>
       <a href="https://www.w3.org/TR/design-principles/"><cite>Web Platform Design Principles</cite></a>. Sangwhan Moon.  W3C. 24 August 2022. W3C Working Group Note. URL: <a href="https://www.w3.org/TR/design-principles/">https://www.w3.org/TR/design-principles/</a>
     </dd><dt id="bib-digital-market-manipulation">[Digital-Market-Manipulation]</dt><dd>
@@ -2921,11 +2937,11 @@ Wendy Seltzer.</p>
   </li><li>
     <a href="#ref-for-dfn-purpose-7" title="§ 1.4 Incorporating Different Privacy Principles">§ 1.4 Incorporating Different Privacy Principles</a> 
   </li><li>
-    <a href="#ref-for-dfn-purpose-8" title="§ 2.5 De-identified Data">§ 2.5 De-identified Data</a> <a href="#ref-for-dfn-purpose-9" title="Reference 2">(2)</a> 
+    <a href="#ref-for-dfn-purpose-8" title="§ 2.5 De-identified Data">§ 2.5 De-identified Data</a> 
   </li><li>
-    <a href="#ref-for-dfn-purpose-10" title="§ A.1 People">§ A.1 People</a> 
+    <a href="#ref-for-dfn-purpose-9" title="§ A.1 People">§ A.1 People</a> 
   </li><li>
-    <a href="#ref-for-dfn-purpose-11" title="§ A.3 Acting on Data">§ A.3 Acting on Data</a> <a href="#ref-for-dfn-purpose-12" title="Reference 2">(2)</a> <a href="#ref-for-dfn-purpose-13" title="Reference 3">(3)</a> <a href="#ref-for-dfn-purpose-14" title="Reference 4">(4)</a> <a href="#ref-for-dfn-purpose-15" title="Reference 5">(5)</a> <a href="#ref-for-dfn-purpose-16" title="Reference 6">(6)</a> <a href="#ref-for-dfn-purpose-17" title="Reference 7">(7)</a> 
+    <a href="#ref-for-dfn-purpose-10" title="§ A.3 Acting on Data">§ A.3 Acting on Data</a> <a href="#ref-for-dfn-purpose-11" title="Reference 2">(2)</a> <a href="#ref-for-dfn-purpose-12" title="Reference 3">(3)</a> <a href="#ref-for-dfn-purpose-13" title="Reference 4">(4)</a> <a href="#ref-for-dfn-purpose-14" title="Reference 5">(5)</a> <a href="#ref-for-dfn-purpose-15" title="Reference 6">(6)</a> <a href="#ref-for-dfn-purpose-16" title="Reference 7">(7)</a> 
   </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-means" aria-label="Links in this document to definition: means">
