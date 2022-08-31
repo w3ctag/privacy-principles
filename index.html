@@ -121,11 +121,11 @@
           href: 'https://foundation.mozilla.org/en/data-futures-lab/data-for-empowerment/data-futures-lab-glossary/',
           publisher: 'Mozilla Foundation',
         },
-        'Relational-Governance': {
-          title: 'A Relational Theory of Data Governance',
-          authors: ['Salomé Viljoen'],
-          href: 'https://www.yalelawjournal.org/feature/a-relational-theory-of-data-governance',
-          publisher: 'Yale Law Journal',
+        'De-identification-Privacy-Act': {
+          title: 'De-identification and the Privacy Act',
+          authors: ['Office of the Australian Information Commissioner'],
+          href: 'https://www.oaic.gov.au/privacy/guidance-and-advice/de-identification-and-the-privacy-act',
+          publisher: 'Australian Government',
         },
         'Digital-Assistant-Trust': {
           title: "Facebook's new digital assistant 'M' will need to earn your trust",
@@ -326,6 +326,12 @@
           title: 'Records, Computers and the Rights of Citizens',
           publisher: 'U.S. Department of Health, Education & Welfare',
           href: 'https://archive.epic.org/privacy/hew1973report/'
+        },
+        'Relational-Governance': {
+          title: 'A Relational Theory of Data Governance',
+          authors: ['Salomé Viljoen'],
+          href: 'https://www.yalelawjournal.org/feature/a-relational-theory-of-data-governance',
+          publisher: 'Yale Law Journal',
         }
       },
     };
@@ -1221,8 +1227,11 @@ combination with other available information. Note
 that further considerations relating to groups are covered in the
 <a href="#collective">Collective Issues in Privacy</a> section.
 
-We talk of <dfn>controlled de-identified data</dfn> when there are strict controls that prevent the
-re-identification of [=people=] described by the data except for a well-defined set of [=purposes=].
+We talk of <dfn>controlled de-identified data</dfn> when:
+1. The _state_ of the data is such that the information that could be used to re-identify an
+   individual has been removed or altered, and
+2. the there is a _process_ in place to prevent attempts to re-identify [=people=] and the inadvertent
+   release of the de-identified data. [[?De-identification-Privacy-Act]]
 
 Different situations involving [=controlled de-identified data=] will require different controls.
 For instance, if the [=controlled de-identified data=] is <em>only</em> being processed by one
