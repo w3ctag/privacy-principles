@@ -1302,6 +1302,79 @@ used as part of <a>browser fingerprinting</a> to identify users across sites. Re
 preferences or other heuristics in providing or disabling functionality could also contribute to a
 browser fingerprint.
 
+## Information access {#information}
+
+The many APIs available to websites expose lots of data that can be combined into
+information about people, web servers, and other things. We can divide that
+information into three categories:
+
+1. Information that's fine to expose, for example because a person or group with
+    sufficient authority intended to expose that information or to do something that
+    necessarily exposes the information, or because it's not about people at all. For
+    example:
+
+    * The geolocation and camera APIs ask whether a person wants to expose their data.
+    * The URL a person is visiting must be sent to a server in order to navigate to that
+       URL, and known private-information-retrieval methods are too expensive to avoid that
+       exposure.
+    * The [[[largest-contentful-paint]]] distribution for a website is about a website
+       rather than about the people browsing it, even if the data that informs that
+       measure can also reveal information about people.
+
+1. Information that we don't want to expose and have a plausible plan for removing access
+    to. For example, browsers are gradually removing the ability to join identities
+    between different [=partitions=].
+
+1. Information that we'd rather not expose, but that we don't have a plausible plan for
+    removing access to. For example:
+
+    * We can't block the information that a user has clicked a particular link because
+        that information can be gathered using <a
+        data-cite="RFC9110#status.3xx">HTTP redirects</a>, and redirection is a
+        core feature of the web.
+
+The following subsections discuss how to review an API proposal that exposes data that
+provides a new way to infer each of the above categories of information.
+
+### Handling acceptable information {#acceptable-information}
+
+Acceptable information exposure is always qualified by the (possibly empty) set of
+user-controlled settings or permissions that guard access to it. For example, the URLs of
+resources, the timing of link clicks, and the referrer chain within a single origin are
+not guarded by anything; the scroll position is guarded by the setting to turn off
+javascript; and access to the camera or geolocation are guarded by permission prompts.
+
+Information that would be acceptable to expose under one set of guards might be
+unacceptable under another set, so when an API designer intends to explain that their API
+is acceptable because an existing acceptable API already exposes the same information,
+they must be careful to ensure that their new API is only available under a set of guards
+that's at least as strict. Without those guards, they need to make the argument from
+scratch, without relying on the existing API.
+
+### Handling information that's being removed {#unacceptable-information}
+
+If some existing APIs provide access to some information, but we have a plan to change
+those APIs to prevent that access, new APIs must not be added that provide that same
+information without extra guards that make the information acceptable.
+
+### Handling information we can't completely block {#sketchy-information}
+
+Exposing undesirable information in a new way is sometimes acceptable, and the decision
+will depend on the details of the new API. In the other two cases, we could think in terms
+of a threat model, using designs familiar from security to make information either
+available or unavailable. In this case, however, we have to think more economically, about
+the cost to a website of inferring the relevant information from whatever data the web's
+APIs expose. If the cost of inferring the undesirable information is high, fewer websites
+will gather it, and privacy will be generally better. If a new API makes the cost go down,
+more websites will start inferring the information, and overall privacy will worsen.
+
+Usually, acceptable APIs in this category will be designed to expose data that makes some
+acceptable information easier to discover. For example, they might reveal a performance
+metric for a website directly instead of requiring it to be computed from the timing of
+{{GlobalEventHandlers/onload}} events. The challenge for the new API's designer is to
+ensure that the data it exposes doesn't make it cheaper to compute information about
+people than it would have been through other methods.
+
 ## Sensitive Information {#hl-sensitive-information}
 
 Contributes to [=correlation=], [=identification=], [=secondary use=], and
