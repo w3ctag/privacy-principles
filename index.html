@@ -1084,60 +1084,104 @@ Because <a>personal data</a> may be sensitive in unexpected ways, or have risks 
 unexpected or harmful, minimization as a principle applies to personal data that is not currently
 known to be identifying, sensitive or otherwise potentially harmful.
 
-## Personal Data {#data}
+### Ancillary uses
 
 <aside class="issue">
-  This section has not been edited for narrative.
+  See <a href="https://github.com/w3ctag/privacy-principles/issues/150">the issue on ancillary
+  uses</a> for ongoing discussion and iteration on this principle.
 </aside>
 
-<aside class="issue">
-  There is not currently consensus among the authors and contributors to this
-  document about the below principles.
-  Please see <a href="https://github.com/w3ctag/privacy-principles/issues/150">this issue</a>
-  for more details.
+In maintaining duties of <a href="#dfn-duty-of-protection">protection</a>, <a
+href="#dfn-duty-of-discretion">discretion</a> and <a href="#dfn-duty-of-loyalty">loyalty</a>, user
+agents should be conservative when sharing data not necessary to satisfy a user's immediate goals.
+
+On the Web, user agents and sites often communicate data even outside the need to load and display a
+page for <dfn>ancillary uses</dfn> including: 
+
+* browser telemetry, including: 
+  * performance measurements, 
+  * measuring feature usage, 
+  * debugging site, browser and networking issues, and, 
+  * detecting security problems or attacks; 
+* site telemetry, including: 
+  * performance measurements, 
+  * analytics about usage and visitors, 
+  * debugging site issues, and, 
+  * detecting security problems or attacks; 
+* advertising and social media sharing, including: 
+  * measurement, targeting, ad auctions, personalization, fraud prevention; 
+* performance, including caching and prefetching content; 
+* software updates.
+
+<dfn>Telemetry and analytics</dfn>, including browser telemetry and site telemetry, are a common
+cluster of ancillary uses.
+
+In some cases, mechanisms for sharing data are provided in order to minimize some other data
+collection mechanism identified as more intrusive or costly.
+
+Different users will want to share different kinds and amounts of data with websites. For some uses,
+some people would reasonably anticipate sharing such data or identify that use as a
+commonly-accepted contextual norm and some people would be willing to participate (for example,
+might have explicitly decided to contribute if they had the time and understanding to consider
+details about such a use) and some people would identify those uses as supporting their own goals. 
+
+Aggregated or <a href="#dfn-de-identified">de-identified</a> data is often more likely to be
+acceptable in these senses and often still contributes to the collective benefit while minimizing
+privacy threats to a particular individual (see <a href="#principle-collective-privacy">collective
+privacy</a>). But some people might also object, in particular instances or in general.
+
+<aside class="example">
+  Privacy-preserving measurement techniques may be used for aggregate calculations while minimizing
+  the parties that have access to personal data about many individual people. Encryption and
+  privacy-preserving proxies may be used to minimize the parties that have access to personal data or
+  to hide the contents of personal data used for telemetry or other kinds of measurement. But even
+  with those protections, some people may prefer not to participate in some kinds of measurement.
+
+  Ongoing work on privacy-preserving technologies in the <abbr title="Internet Engineering Task
+  Force">IETF</abbr> <a href="https://datatracker.ietf.org/wg/ppm/about/"><abbr
+  title="privacy-preserving measurement">ppm</abbr></a>, <abbr title="Internet Research Task
+  Force">IRTF</abbr> <a href="https://datatracker.ietf.org/rg/pearg/about/"><abbr title="Privacy
+  Enhancements and Assessments Research Group">pearg</abbr></a> and W3C <a
+  href="https://patcg.github.io/"><abbr title="Private Advertising Technology Community
+  Group">PATCG</abbr></a> groups may be relevant. 
 </aside>
 
 <div class="practice">
-
-<p><span class="practicelab" id="user-agent-data-sharing">
-User agents should only share and present information about the user that
-the user can reasonably anticipate being shared, and which directly relate to the users overt, immediate goals.
-User agents and sites should be conservative when deciding if information is related to a users goals; the
-longer the chain of reasoning used to justify data collection, the less likely for that data
-collection to be ethical and principled.
-</span></p>
-
+  <span class="practicelab">Sites and user agents should seek to understand and respect people's
+  goals and preferences about use of data about them.</span>
 </div>
 
-Examples:
-
-* Sharing geo-location data with a map website after a user has clicked a "share my location" button has
-  a small number of "hops" between intent and data.
-* Sharing information about the user's selected DNS resolver with a site, so that the site authors can debug
-  possible issues around tail/uncommon resolvers, has a large number of "hops" between user intent (to do
-  a thing on the website) and collection motivation (users like our site, so users will want to share information
-  with us to help us improve the site).
+Agents should both be careful, cautious and conservative in applying data minimization to any <a
+href="#dfn-ancillary-uses">ancillary use</a> and also not burden the user with additional [=privacy
+labor=]. To that end, user agents may employ user research, solicitation of general preferences, and
+heuristics about sensitivity of data or trust in a particular context. To facilitate site
+understanding of user preferences, user agents can provide browser-configurable signals to directly
+communicate common user preferences.
 
 <div class="practice">
-
-<p><span class="practicelab" id="sensitive-vs-non-sensitive-data">
-User agents should generally not attempt to distinguish between sensitive and nonsensitive personal data; all
-data and personal information is likely to be sensitive to some users, often in ways unanticipated by
-browser vendors and site operators.
-</span></p>
-
+  <span class="practicelab">Specifications that define functionality for telemetry and analytics
+  should explicitly note the <a href="#dfn-telemetry-and-analytics">analytics</a> use to facilitate modal or general user
+  choices.</span>
 </div>
 
-<div class="practice">
+<aside class="example">
+  Sites and browsers wish to collect telemetry data to determine how frequently features are used or
+  to debug breakages, but the user agent does not want to burden the user with frequent consent
+  requests. A browser could use a first-run dialog to ask the user whether they generally support
+  sharing data to find bugs and improve the Web software they use, and then enable or disable
+  telemetry and reporting APIs based on the user's choice.
+</aside>
 
-<p><span class="practicelab" id="minimal-data-sharing">
-User agents should always aim to share the minimal amount of information with a site
-that is needed for the user to achieve a user's goals. Data collected today can often be used in
-unanticipated ways in the future to enact privacy harms, even data that seems unlikely to
-be identifying, sensitive or otherwise privacy-harming.
-</span></p>
+<aside class="example">
+  A user visits a mapping website that they regularly visit and clicks a locator icon; although
+  precise geolocation can be very sensitive, the user agent can readily determine the user's intent.
+</aside>
 
-</div>
+Data exposed for ancillary uses including <a href="#dfn-telemetry-and-analytics">telemetry</a> may
+often reveal characteristics of user configuration, device, environment or behavior that could be
+used as part of <a>browser fingerprinting</a> to identify users across sites. Revealing user
+preferences or other heuristics in providing or disabling functionality could also contribute to a
+browser fingerprint.
 
 ## Sensitive Information {#hl-sensitive-information}
 
