@@ -918,12 +918,12 @@ Examples of [=identifiers=] for a [=person=] can be:
 * their phone number,
 * their location data,
 * an online identifier such as email or IP addresses,
-* browser [=fingerprinting|fingerprints=] (based on a combination of
+* browser [=fingerprints=] (based on a combination of
 configuration characteristics), or
 * factors specific to their physical, physiological, genetic, mental,
 economic,
 cultural, social, or behavioral [=identity=],
-* strings derived from [=identifiers=], for instance through hashing.
+* strings derived from other [=identifiers=], for instance through hashing.
 
 <dfn>Cross-context recognition</dfn> is the act of recognising that an
 [=identity=] in one [=context=] is the same [=person=] as an [=identity=] in
@@ -936,8 +936,8 @@ which [=cross-context recognition|recognize=] people across [=contexts=] need
 to be careful not to apply the [=principles=] of one [=context=] in ways that
 violate the [=principles=] around use of information acquired in a different
 [=context=]. This is particularly true for [=vulnerable=] people, as
-recognising them in different [=contexts=] may force traits that reveal their
-vulnerability into the open. For example, if you meet your therapist at a
+recognising them in different [=contexts=] may force traits into the open
+that reveal their vulnerability. For example, if you meet your therapist at a
 party, you expect them to have different discussion topics with you than they
 usually would, and possibly even to pretend they don't know you.
 
@@ -980,7 +980,7 @@ workers, and top-level pages)
 * whose [=environment/top-level origins=] are in the [=same site=] (but see
 [[PSL-Problems]])
 * being visited within the same user agent installation (and browser profile,
-container, or   container tab for user agents that support those features)
+container, or container tab for user agents that support those features)
 * between points in time that the person or user agent clears that [=site=]'s
 cookies and other storage (which is sometimes automatic at the end of each
 session).
@@ -1034,7 +1034,7 @@ is using the same [=identity=] over time, including [[RFC6265|cookies]],
 [=person=]'s preferences, shopping carts, etc., and people have come to expect
 this behavior in some contexts.
 
-<dfn>Fingerprinting</dfn> ([[?UNSANCTIONED-TRACKING]]) consists of using attributes of the [=person=]'s
+<dfn data-lt="fingerprint">Fingerprinting</dfn> ([[?UNSANCTIONED-TRACKING]]) consists of using attributes of the [=person=]'s
 browser and platform that are consistent between two or more visits and
 probably unique to the person.
 
