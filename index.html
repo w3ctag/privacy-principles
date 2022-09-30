@@ -1328,15 +1328,26 @@ information into three categories:
 1. Information that we'd rather not expose, but that we don't have a plausible plan for
     removing access to. For example:
 
-    * We can't block the information that a user has clicked a particular link because
-        that information can be gathered using <a
-        data-cite="RFC9110#status.3xx">HTTP redirects</a>, and redirection is a
-        core feature of the web.
+    * Some users are disappointed that the page they're visiting can discover which link
+        they clicked to leave that page. We can't block that information that information
+        because the page can use <a data-cite="RFC9110#status.3xx">HTTP redirects</a> to
+        learn it, and redirection is a core feature of the web.
+    * Some users are disappointed that a page with permission to run Javascript can record
+        their pattern of interaction with that page. However, the page does this by using
+        the same events it would use to make the page interactive, so we can't block this
+        information access either.
 
 The following subsections discuss how to review an API proposal that exposes data that
-provides a new way to infer each of the above categories of information.
+provides a new way to infer each of the above categories of information. They explain how
+to <a data-cite="design-principles#leave-the-web-better">leave the web better than you
+found it</a>.
 
 ### Handling acceptable information {#acceptable-information}
+
+<div class="practice">
+  <span class="practicelab">New APIs can add additional ways of getting acceptable
+  information that are guarded at least as strongly as the old ways.</span>
+</div>
 
 Acceptable information exposure is always qualified by the (possibly empty) set of
 user-controlled settings or permissions that guard access to it. For example, the URLs of
@@ -1345,28 +1356,48 @@ not guarded by anything; the scroll position is guarded by the setting to turn o
 javascript; and access to the camera or geolocation are guarded by permission prompts.
 
 Information that would be acceptable to expose under one set of guards might be
-unacceptable under another set, so when an API designer intends to explain that their API
-is acceptable because an existing acceptable API already exposes the same information,
+unacceptable under another set, so when an API designer intends to explain that their new
+API is acceptable because an existing acceptable API already exposes the same information,
 they must be careful to ensure that their new API is only available under a set of guards
 that's at least as strict. Without those guards, they need to make the argument from
 scratch, without relying on the existing API.
 
 ### Handling information that's being removed {#unacceptable-information}
 
-If some existing APIs provide access to some information, but we have a plan to change
-those APIs to prevent that access, new APIs must not be added that provide that same
-information without extra guards that make the information acceptable.
+<div class="practice">
+  <span class="practicelab">If existing APIs provide access to some information, but
+  we have a plan to change those APIs to prevent that access, new APIs must not be added
+  that provide that same information without extra guards that make the information
+  acceptable.</span>
+</div>
 
 ### Handling information we can't completely block {#sketchy-information}
 
-Exposing undesirable information in a new way is sometimes acceptable, and the decision
-will depend on the details of the new API. In the other two cases, we could think in terms
-of a threat model, using designs familiar from security to make information either
-available or unavailable. In this case, however, we have to think more economically, about
-the cost to a website of inferring the relevant information from whatever data the web's
-APIs expose. If the cost of inferring the undesirable information is high, fewer websites
-will gather it, and privacy will be generally better. If a new API makes the cost go down,
-more websites will start inferring the information, and overall privacy will worsen.
+<div class="practice">
+  <span class="practicelab">New APIs that provide access to undesirable information should
+  not make that information easier to access.</span>
+</div>
+
+
+1. If future web platform changes make it possible to remove other access to the
+   undesirable information, it should be clear how to extend those changes to the proposed
+   API.
+
+1. If an existing browser does block access to the undesirable information, perhaps by
+   breaking some experiences on the Web that other browsers don't wish to break, it should
+   be clear how the more-private browser can also prevent the new API from exposing that
+   information.
+
+1. A new API should be harder to use to discover undesirable information than the existing
+   APIs, for example by requiring more code, more maintenance, and/or more runtime cost.
+
+The third consideration can be surprising. In many other cases, we can think in terms of a
+threat model, using designs familiar from security to make information either available or
+unavailable. In this third case, however, we have to think more economically, about the
+cost to a website of inferring the relevant information from whatever data the web's APIs
+expose. If the cost of inferring the undesirable information is high, fewer websites will
+gather it, and privacy will be generally better. If a new API makes the cost go down, more
+websites will start inferring the information, and overall privacy will worsen.
 
 Usually, acceptable APIs in this category will be designed to expose data that makes some
 acceptable information easier to discover. For example, they might reveal a performance
