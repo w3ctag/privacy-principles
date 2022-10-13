@@ -40,7 +40,7 @@ e.g.
 ## Privacy Task Force Members
 
 * Daniel Appelquist (Samsung, TAG)
-* Robin Berjon (The New York Times, TAG alum)
+* Robin Berjon (Invited Expert, formerly The New York Times, TAG alum)
 * Nick Doty (Center for Democracy & Technology, PING)
 * Amy Guy (Digital Bazaar, TAG)
 * Don Marti (CafeMedia, PING)
