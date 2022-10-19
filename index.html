@@ -1515,12 +1515,13 @@ trick the [=person=] into opting back into the [=processing=].
 
 <aside class="issue">Some services have the user pay for their use in data. These services aren't necessarily retaliating by denying their services to users who refuse to pay with data, but the details are more complex than we've had time to write.</aside>
 
-## Support Deception {#support-deception}
+## Support Choosing Which Information to Present {#support-choosing-info}
 
 <div class="practice">
-  <span class="practicelab" id="principle-support-deception">
-    [=User agents=] should support [=people=] in providing false or incorrect information to [=parties=]
-    that request it.
+  <span class="practicelab" id="principle-support-choosing-info">
+    [=User agents=] should support [=people=] in choosing which information they provide to [=parties=] that
+    request it, up to and including allowing for the provision of information that may not be factually
+    correct.
   </span>
 </div>
 
@@ -1528,13 +1529,30 @@ trick the [=person=] into opting back into the [=processing=].
 design their products in ways that make it a lot easier for [=people=] to disclose information than not, whereas
 [=people=] typically have to manually wade through options, repeated prompts, and deceptive patterns. In many
 cases, the absence of data — when a [=person=] refuses to provide some information — can also be identifying
-or revealing. [=User agents=] should make it simple for [=people=] to evade such tactics and to live in
-obscurity ([[?Lost-In-Crowd]], [[?Obscurity-By-Design]]) by rendering the provision of incorrect information as easy as
-possible ([[?Obfuscation]]).
+or revealing. Additionally, APIs can be defined or implemented in rigid ways that can prevent people from
+accessing useful functionality (eg. if my geolocation is forcefully set to match my GPS, a restaurant-finding
+site might restrict me to my current location when I want to look for restaurants in a city I will be visiting
+this weekend).
 
-Examples of ways in which a [=user agent=] may support its [=user=]'s obscurity include:
-* Generating domain-specific email addresses so that [=people=] can log into the site without becoming recognisable
-  across contexts.
+[=User agents=] should make it simple for [=people=] to present the identity they wish to and to provide information
+about themselves or their devices in ways that they control. This empowers [=people=] to live in obscurity
+([[?Lost-In-Crowd]], [[?Obscurity-By-Design]]) by rendering the provision of information according to their own
+preferences as easy as possible ([[?Obfuscation]]).
+
+APIs should be designed such that they do not expect to provide the truth about a [=person=] as provided for
+instance by a sensor or recorded data. Instead, the API could indicate a [=person=]'s preference, a [=person=]'s
+chosen identity, a [=person=]'s query or interest, or a [=person=]'s selected communication style. Directing APIs
+to respond with information that may differ from the truth can be essential in protecting [=people=], is a key
+component of fingerprinting mitigation, and can be required for auditing purposes such that an auditor may
+pretend to be someone else in order for instance to detect discrimination.
+
+It is worth noting that this principle deliberately empowers [=people=] to provide deceptive information. In the
+general case, the ability for people to present as they wish is more important than the ability of computers to
+prevent them from doing so. Sites should include deception in their threat modelling.
+
+Examples of ways in which a [=user agent=] may support this principle include:
+* Generating domain-specific email addresses or other directed identifiers so that [=people=] can log into the
+  site without becoming recognisable across contexts.
 * Offering the option to produce fake geolocation and accelerometry data, with parameters specified by the [=user=].
 * Making it easy to upload a picture while pretending to have it taken by the camera.
 * Faking the acceptance of notification prompts (or pretending that notifications have already been accepted).
