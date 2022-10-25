@@ -285,6 +285,12 @@
           href: 'https://bookshop.org/books/seeing-like-a-state-how-certain-schemes-to-improve-the-human-condition-have-failed/9780300246759',
           authors: ['James C. Scott'],
         },
+        'SILVERPUSH': {
+          title: 'How TV ads silently ping commands to phones: Sneaky SilverPush code reverse-engineered',
+          href: 'https://www.theregister.com/2015/11/20/silverpush_soundwave_ad_tracker/',
+          publisher: 'The Register',
+          authors: ['Iain Thomson']
+        },
         'Strava-Debacle': {
           title: 'The Latest Data Privacy Debacle',
           authors: ['Zeynep Tufekci'],
@@ -1043,8 +1049,8 @@ responsible to enforce that sites actually separate [=identities=] at those boun
 href="#principle-prevent-cross-partition-recognition">principle</a> here instead requires separation
 at [=partition=] boundaries.
 
-Cross-[=partition=] recognition is generally accomplished by either "supercookies" or <a>browser
-fingerprinting</a>.
+Cross-[=partition=] recognition is often accomplished by: "supercookies", <a>browser
+fingerprinting</a>, or <a>cross-device communication</a>.
 
 Supercookies occur when a browser stores data for a site but makes that data
 more difficult to clear than other cookies or storage.
@@ -1065,6 +1071,12 @@ otherwise benign (as opposed to [[[#hl-sensitive-information]]]). For example:
 * ...
 
 See [[fingerprinting-guidance]] for how to mitigate this threat.
+
+<dfn>Cross-device communication</dfn> is communication between one device (or a site running
+client-side code on that device) and a site running on another device. For example, sounds or light
+emitted from one device could be detected by a microphone or light sensor on another device
+[[?SILVERPUSH]]. Cross-device communication enables cross-device tracking, a form of cross-partition
+recognition, but can also be used for other inappropriate information flows.
 
 #### Unwanted cross-site recognition {#hl-recognition-cross-site}
 
