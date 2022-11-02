@@ -204,6 +204,12 @@
           href: 'https://www.cambridge.org/core/books/industry-unbound/787989F90DBFC08E47546178A7AB04F7',
           publisher: 'Cambridge University Press',
         },
+        'Lost-In-Crowd': {
+          title: 'Why You Can No Longer Get Lost in the Crowd',
+          authors: ['Woodrow Hartzog', 'Evan Selinger'],
+          href: 'https://www.nytimes.com/2019/04/17/opinion/data-privacy.html',
+          publisher: 'The New York Times',
+        },
         'NIST-800-63A': {
           title: 'Digital Identity Guidelines: Enrollment and Identity Proofing Requirements',
           href: 'https://pages.nist.gov/800-63-3/sp800-63a.html',
@@ -216,6 +222,17 @@
           author: ['Robin Berjon'],
           href: 'https://open.nytimes.com/how-the-new-york-times-thinks-about-your-privacy-bc07d2171531',
           publisher: 'NYT Open',
+        },
+        'Obfuscation': {
+          title: 'Obfuscation: A User\'s Guide for Privacy and Protest',
+          authors: ['Finn Brunton', 'Helen Nissenbaum'],
+          href: 'https://www.penguinrandomhouse.com/books/657301/obfuscation-by-finn-brunton-and-helen-nissenbaum/',
+          publisher: 'Penguin Random House',
+        },
+        'Obscurity-By-Design': {
+          title: 'Obscurity by Design',
+          authors: ['Woodrow Hartzog', 'Frederic Stutzman'],
+          href: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2284583',
         },
         'OECD-Guidelines': {
           title: 'OECD Guidelines on the Protection of Privacy and Transborder Flows of Personal Data',
@@ -1571,6 +1588,60 @@ unrelated feature, by decreasing the quality of the service, or by trying to caj
 trick the [=person=] into opting back into the [=processing=].
 
 <aside class="issue">Some services have the user pay for their use in data. These services aren't necessarily retaliating by denying their services to users who refuse to pay with data, but the details are more complex than we've had time to write.</aside>
+
+## Support Choosing Which Information to Present {#support-choosing-info}
+
+<div class="practice">
+  <span class="practicelab" id="principle-support-choosing-info">
+    [=User agents=] should support [=people=] in choosing which information they provide to [=parties=] that
+    request it, up to and including allowing for the provision of information that may not be factually
+    correct.
+  </span>
+</div>
+
+[=Parties=] can invest time and energy into automating ways of gathering [=data=] from [=people=] and can
+design their products in ways that make it a lot easier for [=people=] to disclose information than not, whereas
+[=people=] typically have to manually wade through options, repeated prompts, and deceptive patterns. In many
+cases, the absence of data — when a [=person=] refuses to provide some information — can also be identifying
+or revealing. Additionally, APIs can be defined or implemented in rigid ways that can prevent people from
+accessing useful functionality (eg. if my geolocation is forcefully set to match my GPS, a restaurant-finding
+site might restrict me to my current location when I want to look for restaurants in a city I will be visiting
+this weekend).
+
+[=User agents=] should make it simple for [=people=] to present the identity they wish to and to provide information
+about themselves or their devices in ways that they control. This empowers [=people=] to live in obscurity
+([[?Lost-In-Crowd]], [[?Obscurity-By-Design]]) by rendering the provision of information according to their own
+preferences as easy as possible ([[?Obfuscation]]).
+
+<div class="practice">
+  <span class="practicelab" id="principle-support-choosing-info">
+    APIs should be designed such that data returned through an API does not assert a fact or make a
+    promise on the user's behalf about the user or their environment.
+  </span>
+</div>
+
+Instead, the API could indicate a [=person=]'s preference, a [=person=]'s chosen identity, a
+[=person=]'s query or interest, or a [=person=]'s selected communication style.
+
+In any rare instances when an API must be defined as returning true current values, users may still
+configure their agents to respond with other information, for reasons including testing, auditing or
+mitigating forms of data collection, including <a>browser fingerprinting</a>. In some cases, sites
+do not abide by data minimisation principles and request more information than they require. This
+principle supports [=people=] in defending under such cases.
+
+Sites should include deception in their threat modeling and not assume that Web platform APIs
+provide any guarantees of consistency, currency or correctness about the user. People often have
+control of the devices and software they use to interact with web sites. In response to site
+requests, people may provide information that may be deceptive for a variety of reasons, including
+both malice and self-protection.
+
+Examples of ways in which a [=user agent=] may support this principle include:
+* Generating domain-specific email addresses or other directed identifiers so that [=people=] can log into the
+  site without becoming recognisable across contexts.
+* Offering the option to generate geolocation and accelerometry data with parameters specified by the [=user=].
+* Uploading a stored video stream in response to a camera prompt.
+* Automatically granting or denying permission prompts based on user configuration.
+* Filtering outbound network traffic so as to replace specific strings (hashed email, navigation identifiers, consent strings).
 
 <!--
 # EVERYTHING BELOW THIS LINE IS MATERIAL
