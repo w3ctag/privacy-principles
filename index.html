@@ -1594,8 +1594,7 @@ trick the [=person=] into opting back into the [=processing=].
 <div class="practice">
   <span class="practicelab" id="principle-support-choosing-info">
     [=User agents=] should support [=people=] in choosing which information they provide to [=parties=] that
-    request it, up to and including allowing for the provision of information that may not be factually
-    correct.
+    request it, up to and including allowing users to provide arbitrary information.
   </span>
 </div>
 
@@ -1604,11 +1603,11 @@ design their products in ways that make it a lot easier for [=people=] to disclo
 [=people=] typically have to manually wade through options, repeated prompts, and deceptive patterns. In many
 cases, the absence of data — when a [=person=] refuses to provide some information — can also be identifying
 or revealing. Additionally, APIs can be defined or implemented in rigid ways that can prevent people from
-accessing useful functionality (eg. if my geolocation is forcefully set to match my GPS, a restaurant-finding
-site might restrict me to my current location when I want to look for restaurants in a city I will be visiting
-this weekend).
+accessing useful functionality. For example, I might want to look for restaurants in a city I will be visiting
+this weekend, but if my geolocation is forcefully set to match my GPS, a restaurant-finding
+site might only allow searches in my current location.
 
-[=User agents=] should make it simple for [=people=] to present the identity they wish to and to provide information
+[=User agents=] should make it simple for [=people=] to [present the identity they wish to](#principle-identity-per-context) and to provide information
 about themselves or their devices in ways that they control. This empowers [=people=] to live in obscurity
 ([[?Lost-In-Crowd]], [[?Obscurity-By-Design]]) by rendering the provision of information according to their own
 preferences as easy as possible ([[?Obfuscation]]).
