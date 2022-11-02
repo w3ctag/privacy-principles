@@ -1228,11 +1228,11 @@ between <a data-link-type="dfn" href="#dfn-context" class="internalDFN" id="ref-
 <ul>
 <li>A set of <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/webappapis.html#environment">environments</a> (roughly iframes (including cross-site iframes),
 workers, and top-level pages)</li>
-<li>whose <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/webappapis.html#concept-environment-top-level-origin">top-level origins</a> are in the <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/origin.html#same-site">same site</a> (but see
+<li>whose <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/webappapis.html#concept-environment-top-level-origin">top-level origins</a> are in the <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#same-site">same site</a> (but see
 [<cite><a class="bibref" data-link-type="biblio" href="#bib-psl-problems" title="Public Suffix List Problems">PSL-Problems</a></cite>])</li>
 <li>being visited within the same user agent installation (and browser profile,
 container, or container tab for user agents that support those features)</li>
-<li>between points in time that the person or user agent clears that <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/origin.html#site">site</a>'s
+<li>between points in time that the person or user agent clears that <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">site</a>'s
 cookies and other storage (which is sometimes automatic at the end of each
 session).</li>
 </ul>
@@ -1748,19 +1748,19 @@ or even used to manipulate behaviour and thus reduce <a data-link-type="dfn" hre
     users control notifications and other interruptive UI that can be used to manipulate behavior.</span>
 
 
-<p>  <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-32">User agents</a> should provide UI that allows their users to audit which web <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/origin.html#site">sites</a> have been granted
+<p>  <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-32">User agents</a> should provide UI that allows their users to audit which web <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">sites</a> have been granted
   permission to display alerts and to revoke these permissions.
   <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-33">User agents</a> should also apply some quality metric to the initial request for permissions to receive
   notifications (for example, disallowing sites from requesting permission on first visit).</p>
 </div>
-<div class="practice principle"><a class="marker self-link" href="#principle-notifications-context"><bdi lang="en">Principle</bdi></a>: <span class="practicelab" id="principle-notifications-context">Web <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/origin.html#site">sites</a> should use notifications
+<div class="practice principle"><a class="marker self-link" href="#principle-notifications-context"><bdi lang="en">Principle</bdi></a>: <span class="practicelab" id="principle-notifications-context">Web <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">sites</a> should use notifications
     only for information that their users have specifically requested.
   </span>
 
 
-<p>  Web <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/origin.html#site">sites</a> should tell their users what specific kind of information people can expect to
+<p>  Web <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">sites</a> should tell their users what specific kind of information people can expect to
   receive, and how notifications can be turned off,  when requesting permission to send interruptive
-  notifications.  Web <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/origin.html#site">sites</a> should not request permission to send notifications when
+  notifications.  Web <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">sites</a> should not request permission to send notifications when
   the user is unlikely to have sufficient knowledge (e.g. information about what kinds of
   notifications they are signing up for) to make an informed response. If it's unlikely
   that such information could have been provided then the <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-34">user agent</a> should apply
@@ -1809,8 +1809,8 @@ same environment).</p>
 they're interacting with. Uses of this document in a particular domain are expected to describe how
 the core concepts of that domain combine into a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-98">user</a>-comprehensible <a data-link-type="dfn" href="#dfn-party" class="internalDFN" id="ref-for-dfn-party-23">party</a>, and those refined
 definitions are likely to differ between domains.</p>
-<p><a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-35">User agents</a> tend to explain to <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-99">people</a> which <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/origin.html#concept-origin">origin</a> or <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/origin.html#site">site</a> provided the
-web page they're looking at. The <a data-link-type="dfn" href="#dfn-party" class="internalDFN" id="ref-for-dfn-party-24">party</a> that controls this <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/origin.html#concept-origin">origin</a> or <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/origin.html#site">site</a> is
+<p><a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-35">User agents</a> tend to explain to <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-99">people</a> which <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#concept-origin">origin</a> or <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">site</a> provided the
+web page they're looking at. The <a data-link-type="dfn" href="#dfn-party" class="internalDFN" id="ref-for-dfn-party-24">party</a> that controls this <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#concept-origin">origin</a> or <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">site</a> is
 known as the web page's <dfn data-dfn-for="page" data-plurals="first parties" id="dfn-first-party" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">first party</dfn>. When a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-100">person</a>
 interacts with a UI element on a web page, the <dfn data-plurals="first parties" id="dfn-first-party-0" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">first party</dfn> of that interaction
 is usually the web page's <a data-link-type="dfn" href="#dfn-first-party" class="internalDFN" id="ref-for-dfn-first-party-1">first party</a>. However, if a different <a data-link-type="dfn" href="#dfn-party" class="internalDFN" id="ref-for-dfn-party-25">party</a> controls
@@ -2013,7 +2013,7 @@ data</a> that is communicated to sites.</span></li><li><a class="marker self-lin
     to withdraw consent, or to opt out or object,
     as to give consent.
   </span></li><li><a class="marker self-link" href="#principle-notifications-control"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">A <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-39">user agent</a> should help
-    users control notifications and other interruptive UI that can be used to manipulate behavior.</span></li><li><a class="marker self-link" href="#principle-notifications-context"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">Web <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/origin.html#site">sites</a> should use notifications
+    users control notifications and other interruptive UI that can be used to manipulate behavior.</span></li><li><a class="marker self-link" href="#principle-notifications-context"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">Web <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">sites</a> should use notifications
     only for information that their users have specifically requested.
   </span></li><li><a class="marker self-link" href="#principle-do-not-retaliate"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
     <a data-link-type="dfn" href="#dfn-party" class="internalDFN" id="ref-for-dfn-party-42">Parties</a> must not retaliate against <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-112">people</a> who protect their <a data-link-type="dfn" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-51">data</a> against
