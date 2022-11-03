@@ -1605,7 +1605,9 @@ cases, the absence of data — when a [=person=] refuses to provide some informa
 or revealing. Additionally, APIs can be defined or implemented in rigid ways that can prevent people from
 accessing useful functionality. For example, I might want to look for restaurants in a city I will be visiting
 this weekend, but if my geolocation is forcefully set to match my GPS, a restaurant-finding
-site might only allow searches in my current location.
+site might only allow searches in my current location. In other cases, sites do not abide by data
+minimisation principles and request more information than they require. This principle supports
+[=people=] in minimising their own data.
 
 [=User agents=] should make it simple for [=people=] to [present the identity they wish
 to](#principle-identity-per-context) and to provide information about themselves or their devices in
@@ -1642,9 +1644,7 @@ variety of reasons, including both malice and self-protection.
 
 In any rare instances when an API must be defined as returning true current values, users may still
 configure their agents to respond with other information, for reasons including testing, auditing or
-mitigating forms of data collection, including <a>browser fingerprinting</a>. In some cases, sites
-do not abide by data minimisation principles and request more information than they require. This
-principle supports [=people=] in defending against that behavior.
+mitigating forms of data collection, including <a>browser fingerprinting</a>.
 
 <!--
 # EVERYTHING BELOW THIS LINE IS MATERIAL
