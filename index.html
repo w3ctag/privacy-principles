@@ -1607,9 +1607,10 @@ accessing useful functionality. For example, I might want to look for restaurant
 this weekend, but if my geolocation is forcefully set to match my GPS, a restaurant-finding
 site might only allow searches in my current location.
 
-[=User agents=] should make it simple for [=people=] to [present the identity they wish to](#principle-identity-per-context) and to provide information
-about themselves or their devices in ways that they control. This empowers [=people=] to live in obscurity
-([[?Lost-In-Crowd]], [[?Obscurity-By-Design]]) by rendering the provision of information according to their own
+[=User agents=] should make it simple for [=people=] to [present the identity they wish
+to](#principle-identity-per-context) and to provide information about themselves or their devices in
+ways that they control. This empowers [=people=] to live in obscurity ([[?Lost-In-Crowd]],
+[[?Obscurity-By-Design]]) by rendering the provision of information according to their own
 preferences as easy as possible ([[?Obfuscation]]).
 
 <div class="practice">
@@ -1622,25 +1623,31 @@ preferences as easy as possible ([[?Obfuscation]]).
 Instead, the API could indicate a [=person=]'s preference, a [=person=]'s chosen identity, a
 [=person=]'s query or interest, or a [=person=]'s selected communication style.
 
+<div class="example">
+For example, a [=user agent=] might support this principle by:
+
+* Generating domain-specific email addresses or other directed identifiers so that [=people=] can
+  log into the site without becoming recognisable across contexts.
+* Offering the option to generate geolocation and accelerometry data with parameters specified by
+  the [=user=].
+* Uploading a stored video stream in response to a camera prompt.
+* Automatically granting or denying permission prompts based on user configuration.
+* Filtering outbound network traffic so as to replace specific strings (hashed email, navigation
+  identifiers, consent strings).
+
+</div>
+
+Sites should include deception in their threat modeling and not assume that Web platform APIs
+provide any guarantees of consistency, currency, or correctness about the user. People often have
+control of the devices and software they use to interact with web sites. In response to site
+requests, people may people may arbitrarily modify or select the information they provide for a
+variety of reasons, including both malice and self-protection.
+
 In any rare instances when an API must be defined as returning true current values, users may still
 configure their agents to respond with other information, for reasons including testing, auditing or
 mitigating forms of data collection, including <a>browser fingerprinting</a>. In some cases, sites
 do not abide by data minimisation principles and request more information than they require. This
 principle supports [=people=] in defending against that behavior.
-
-Sites should include deception in their threat modeling and not assume that Web platform APIs
-provide any guarantees of consistency, currency or correctness about the user. People often have
-control of the devices and software they use to interact with web sites. In response to site
-requests, people may people may arbitrarily modify or select the information they provide for a variety of reasons, including
-both malice and self-protection.
-
-Examples of ways in which a [=user agent=] may support this principle include:
-* Generating domain-specific email addresses or other directed identifiers so that [=people=] can log into the
-  site without becoming recognisable across contexts.
-* Offering the option to generate geolocation and accelerometry data with parameters specified by the [=user=].
-* Uploading a stored video stream in response to a camera prompt.
-* Automatically granting or denying permission prompts based on user configuration.
-* Filtering outbound network traffic so as to replace specific strings (hashed email, navigation identifiers, consent strings).
 
 <!--
 # EVERYTHING BELOW THIS LINE IS MATERIAL
