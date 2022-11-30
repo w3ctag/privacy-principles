@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en" dir="ltr"><head>
 <meta charset="utf-8">
-<meta name="generator" content="ReSpec 32.3.0">
+<meta name="generator" content="ReSpec 32.4.0">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 span.example-title{text-transform:none}
@@ -1672,21 +1672,21 @@ organisations, worker bargaining units, or civil society fora.</p>
 collective arrangements it is important to keep in mind the principles that are likely to support
 viable and effective institutions at any level of complexity ([<cite><a class="bibref" data-link-type="biblio" href="#bib-iad" title="Understanding Institutional Diversity">IAD</a></cite>]).</p>
 <p>A good example of a failure in collective privacy decisions was the standardisation of the
-<code><a data-type="element-attr" href="https://html.spec.whatwg.org/multipage/links.html#ping">ping</a></code> attribute. Search engines, social sites, and other algorithmic media in the same vein
+<code><a data-link-type="element-attr" data-type="element-attr" href="https://html.spec.whatwg.org/multipage/links.html#ping">ping</a></code> attribute. Search engines, social sites, and other algorithmic media in the same vein
 have an interest in knowing which sites that they link to <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-71">people</a> choose to visit (which in turn
 could improve the service for everyone). But <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-72">people</a> may have an interest in keeping that
 information private from algorithmic media companies (as do the sites being linked to, as that
 facilitates timing attacks to recognise <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-73">people</a> there). A <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-74">person</a>'s exit through a specific
 link can either be tracked with JavaScript tricks or through bounce tracking, both of which are slow
-and difficult for user agents to defend against. The value proposition of the <code><a data-type="element-attr" href="https://html.spec.whatwg.org/multipage/links.html#ping">ping</a></code> attribute
+and difficult for user agents to defend against. The value proposition of the <code><a data-link-type="element-attr" data-type="element-attr" href="https://html.spec.whatwg.org/multipage/links.html#ping">ping</a></code> attribute
 in this context is therefore straightforward: by providing declarative support for this
 functionality it can be made fast (the browser sends an asynchronous notification to a ping
 endpoint after the <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-75">person</a> exits through a link) and the user agent can provide its <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-76">user</a> with
 the option to opt out of such tracking — or disable it by default.</p>
 <p>Unfortunately, this arrangement proved to be unworkable on the privacy side (the performance gains,
-however, are real). What prevents a site from using <code><a data-type="element-attr" href="https://html.spec.whatwg.org/multipage/links.html#ping">ping</a></code> for <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-77">people</a> who have it activated
+however, are real). What prevents a site from using <code><a data-link-type="element-attr" data-type="element-attr" href="https://html.spec.whatwg.org/multipage/links.html#ping">ping</a></code> for <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-77">people</a> who have it activated
 and bounce tracking for others? What prevents a browsers from opting everyone out because it wishes
-to offer better protection by default? Given the contested nature of the <code><a data-type="element-attr" href="https://html.spec.whatwg.org/multipage/links.html#ping">ping</a></code> attribute and
+to offer better protection by default? Given the contested nature of the <code><a data-link-type="element-attr" data-type="element-attr" href="https://html.spec.whatwg.org/multipage/links.html#ping">ping</a></code> attribute and
 the absence of a forcing function to support collective enforcement, the scheme failed to deliver
 improved privacy.</p>
 </section><section id="guardians-and-device-owners"><div class="header-wrapper"><h3 id="guardians-and-owners"><bdi class="secno">2.7 </bdi>Guardians and Device Owners</h3><a class="self-link" href="#guardians-and-owners" aria-label="Permalink for Section 2.7"></a></div><div class="issue" id="issue-container-number-2"><div role="heading" class="issue-title marker" id="h-issue-2" aria-level="2"><a href="https://github.com/w3ctag/privacy-principles/issues/2"><span class="issue-number">Issue 2</span></a><span class="issue-label">: Address device owners <a class="respec-gh-label" href="https://github.com/w3ctag/privacy-principles/issues/?q=is%3Aissue+is%3Aopen+label%3A%22write+me%22" style="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);" aria-label="GitHub label: write me">write me</a></span></div><p dir="auto">Most of our thinking about stakeholders on the web follows the <a href="https://www.w3.org/TR/html-design-principles/#priority-of-constituencies" rel="nofollow">priority of constituencies</a>: we consider users, authors, implementors, and specifiers. Sometimes we also consider <a href="https://w3ctag.github.io/ethical-web-principles/#noharm" rel="nofollow">society</a> or national governments. In <a class="issue-link js-issue-link" data-error-text="Failed to load title" data-id="802499101" data-permission-text="Title is private" data-url="https://github.com/w3ctag/design-reviews/issues/606" data-hovercard-type="issue" data-hovercard-url="/w3ctag/design-reviews/issues/606/hovercard" href="https://github.com/w3ctag/design-reviews/issues/606">w3ctag/design-reviews#606</a> and other enterprise-focused designs we need to address device owners or administrators, and I haven't been able to find any W3C discussion of how to consider them.</p>
