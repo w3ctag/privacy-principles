@@ -1317,7 +1317,7 @@ information into three categories:
     * The URL a person is visiting must be sent to a server in order to navigate to that
        URL, and known private-information-retrieval methods are too expensive to avoid that
        exposure.
-    * The [[[largest-contentful-paint]]] distribution for a website is about a website
+    * The distribution of [[[largest-contentful-paint]]] timings for a website is about a website
        rather than about the people browsing it, even if the data that informs that
        measure can also reveal information about people.
 
@@ -1357,12 +1357,12 @@ found it</a>.
 </div>
 
 Acceptable information exposure is always qualified by the (possibly empty) set of
-user-controlled settings or permissions that guard access to it. For example, the URLs of
-resources, the timing of link clicks, and the referrer chain within a single origin are
-not guarded by anything; the scroll position is guarded by the setting to turn off
+user-controlled settings or permissions that <dfn data-lt="access guard">guard</dfn> access to it.
+For example, the URLs of resources, the timing of link clicks, and the referrer chain within a
+single origin are not guarded by anything; the scroll position is guarded by the setting to turn off
 javascript; and access to the camera or geolocation are guarded by permission prompts.
 
-Information that would be acceptable to expose under one set of guards might be
+Information that would be acceptable to expose under one set of [=access guards=] might be
 unacceptable under another set, so when an API designer intends to explain that their new
 API is acceptable because an existing acceptable API already exposes the same information,
 they must be careful to ensure that their new API is only available under a set of guards
@@ -1374,7 +1374,7 @@ scratch, without relying on the existing API.
 <div class="practice">
   <span class="practicelab">If existing APIs provide access to some information, but
   we have a plan to change those APIs to prevent that access, new APIs must not be added
-  that provide that same information without extra guards that make the information
+  that provide that same information without extra [=access guards=] that make the information
   acceptable.</span>
 </div>
 
@@ -1382,7 +1382,8 @@ scratch, without relying on the existing API.
 
 <div class="practice">
   <span class="practicelab">New APIs that provide access to undesirable information should
-  not make that information easier to access.</span>
+  not make that information easier to access, unless they add [=access guards=] that make the
+  information acceptable.</span>
 </div>
 
 
@@ -1395,8 +1396,9 @@ scratch, without relying on the existing API.
    be clear how the more-private browser can also prevent the new API from exposing that
    information without breaking additional sites or user experiences.
 
-1. A new API should be harder to use to discover undesirable information than the existing
-   APIs, for example by requiring more code, more maintenance, and/or more runtime cost.
+1. When a developer is trying to access the undesirable information, a new API should be at least as
+   difficult to use as the existing APIs. For example, it shouldn't require less code, less
+   maintenance, or less runtime cost.
 
 The third consideration can be surprising. In many other cases, we can think in terms of a
 threat model, using designs familiar from security to make information either available or
