@@ -469,6 +469,19 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "publisher": "OECD",
       "id": "oecd-guidelines"
     },
+    "PEN-Harassment": {
+      "href": "https://onlineharassmentfieldmanual.pen.org/defining-online-harassment-a-glossary-of-terms/",
+      "title": "Online Harassment Field Manual",
+      "publisher": "PEN America",
+      "id": "pen-harassment"
+    },
+    "PEW-Harassment": {
+      "title": "The State of Online Harassment",
+      "publisher": "Pew Research Center",
+      "date": "January 2021",
+      "href": "https://www.pewresearch.org/internet/2021/01/13/the-state-of-online-harassment/",
+      "id": "pew-harassment"
+    },
     "Phone-On-Feminism": {
       "title": "This is your phone on feminism",
       "href": "https://conversationalist.org/2019/09/13/feminism-explains-our-toxic-relationships-with-our-smartphones/",
@@ -1693,11 +1706,53 @@ improved privacy.</p>
 <p dir="auto">This is a broader question than just the privacy principles we're working on here, but some of the answer belongs here. We should say something about the power dynamics of employees, children, romantic partners, etc. who have to use devices owned by other people who might not always have their best interests in mind, and how the UA is responsible to protect the user while also respecting whatever rights the device owner ought to have.</p></div>
 
 </section><section id="harassment"><div class="header-wrapper"><h3 id="x2-8-harassment"><bdi class="secno">2.8 </bdi>Harassment</h3><a class="self-link" href="#harassment" aria-label="Permalink for Section 2.8"></a></div>
-<div class="issue" id="issue-container-generatedID-3"><div role="heading" class="issue-title marker" id="h-issue-3" aria-level="2"><span>Issue</span></div><aside class="">
+<p>Online <dfn id="dfn-harassment" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">harassment</dfn> is the "pervasive or severe targeting of an individual or group online
+through harmful behavior" [<cite><a class="bibref" data-link-type="biblio" href="#bib-pen-harassment" title="Online Harassment Field Manual">PEN-Harassment</a></cite>]. Harassment is a prevalent problem on the Web,
+particularly via social media. While harassment may affect any person using the Web, it may be more
+severe and its consequences more impactful for LGBTQ people, women, people in racial or ethnic
+minorities, people with disabilities, <a data-link-type="dfn" href="#dfn-vulnerable" class="internalDFN" id="ref-for-dfn-vulnerable-3">vulnerable people</a> and other marginalized groups.</p>
+<div class="note" role="note" id="issue-container-generatedID-3"><div role="heading" class="note-title marker" id="h-note-0" aria-level="2"><span>Note</span></div><aside class="">
 
 
-<p>  This section has not been written.</p>
+<p>  Some useful research overviews of online harassment include: [<cite><a class="bibref" data-link-type="biblio" href="#bib-pew-harassment" title="The State of Online Harassment">PEW-Harassment</a></cite>],
+  [<cite><a class="bibref respec-offending-element" data-link-type="biblio" href="#bib-addressing-cyber-harassment" title="Reference &quot;[Addressing-Cyber-Harassment]&quot; not found." id="respec-offender-reference-addressing-cyber-harassment-not-found">Addressing-Cyber-Harassment</a></cite>] and [<cite><a class="bibref respec-offending-element" data-link-type="biblio" href="#bib-internet-of-garbage" title="Reference &quot;[Internet-of-Garbage]&quot; not found." id="respec-offender-reference-internet-of-garbage-not-found">Internet-of-Garbage</a></cite>].</p>
 </aside></div>
+
+<p><a data-link-type="dfn" href="#dfn-harassment" class="internalDFN" id="ref-for-dfn-harassment-1">Harassment</a> is both a violation of privacy itself and can be magnified or facilitated by other
+violations of privacy. </p>
+<p>Abusive online behavior may include: sending <a data-link-type="dfn" href="#dfn-unwanted-information" class="internalDFN" id="ref-for-dfn-unwanted-information-1">unwanted information</a>; directing others to contact
+or bother a person ("dogpiling"); disclosing sensitive information about a person; posting false
+information about a person; impersonating a person; insults; threats; and hateful or demeaning
+speech.</p>
+<p>Disclosure of identifying or contact information (including "doxxing") can be used, including by
+additional attackers, to send often persistent unwanted information that amounts to harassment.
+Disclosure of location information can be used, including by additional attackers, to intrude on a
+person's physical safety or space.</p>
+<p>Mitigations for harassment include but extend beyond mitigations for unwanted information and other
+privacy principles. Harassment can include harmful activity with a wider distribution than just the
+target of harassment.</p>
+<div class="practice principle"><a class="marker self-link" href="#abuse-reporting"><bdi lang="en">Principle</bdi></a>: <span class="practicelab" id="abuse-reporting">
+      Systems that allow for communicating on the Web must provide an effective capability to report
+      abuse.
+    </span>
+  
+</div>
+
+<p>Reporting mechanisms are mitigations, but may not prevent harassment, particularly in cases where
+hosts or intermediaries are supportive of or complicit in the abuse.</p>
+<div class="note" role="note" id="issue-container-generatedID-4"><div role="heading" class="note-title marker" id="h-note-1" aria-level="2"><span>Note</span></div><div class="">
+
+
+<p>  Effective reporting is likely to require:</p>
+<ul>
+<li>standardized mechanisms to identify abuse reporting contacts </li>
+<li>visible, usable ways provided by sites and user agents to report abuse </li>
+<li>identifiers to refer to senders and content </li>
+<li>the ability to provide context and explanation of harms </li>
+<li>people responsible for promptly responding to reports </li>
+<li>tools for pooling mitigation information (see Unwanted information, below)</li>
+</ul>
+</div></div>
 
 </section><section id="unwanted-information-0"><div class="header-wrapper"><h3 id="unwanted-information"><bdi class="secno">2.9 </bdi>Unwanted Information</h3><a class="self-link" href="#unwanted-information" aria-label="Permalink for Section 2.9"></a></div><p>Receiving unsolicited information that either may cause distress or waste the recipient's
 time or resources is a violation of privacy.</p>
@@ -1711,10 +1766,10 @@ time or resources is a violation of privacy.</p>
 
 </div>
 
-<p>Unwanted information covers a broad range of unsolicited communication, from messages that are
-typically harmless individually but that become a nuisance in aggregate (spam) to the sending of
-images that will cause shock or disgust due to their graphic, violent, or explicit nature (eg.
-pictures of one's genitals). While it is impossible, in a communication system involving many
+<p><dfn id="dfn-unwanted-information" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Unwanted information</dfn> covers a broad range of unsolicited communication, from messages
+that are typically harmless individually but that become a nuisance in aggregate (spam) to the
+sending of images that will cause shock or disgust due to their graphic, violent, or explicit nature
+(eg. pictures of one's genitals). While it is impossible, in a communication system involving many
 <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-79">people</a>, to offer perfect protection against all kinds of unwanted information, steps can be
 taken to make the sending of such messages more difficult or more costly, and to render the senders
 more accountable. Examples of mitigations include:</p>
@@ -1735,7 +1790,7 @@ information, or public information about misbehaving <a data-link-type="dfn" hre
 sharing of <a data-link-type="dfn" href="#dfn-information" class="internalDFN" id="ref-for-dfn-information-10">information</a> for safety purposes should be limited and placed under collective
 governance.</li>
 </ul>
-</section><section id="vulnerability-0"><div class="header-wrapper"><h3 id="vulnerability"><bdi class="secno">2.10 </bdi>Vulnerability</h3><a class="self-link" href="#vulnerability" aria-label="Permalink for Section 2.10"></a></div><div class="issue" id="issue-container-generatedID-4"><div role="heading" class="issue-title marker" id="h-issue-4" aria-level="2"><span>Issue</span></div><div class="">
+</section><section id="vulnerability-0"><div class="header-wrapper"><h3 id="vulnerability"><bdi class="secno">2.10 </bdi>Vulnerability</h3><a class="self-link" href="#vulnerability" aria-label="Permalink for Section 2.10"></a></div><div class="issue" id="issue-container-generatedID-5"><div role="heading" class="issue-title marker" id="h-issue-3" aria-level="2"><span>Issue</span></div><div class="">
 
 <p>This section is still being refined. We expect additional principles to be added.</p>
 </div></div>
@@ -1817,7 +1872,7 @@ people's expectations for how data is processed.</p>
 </div>
 
 
-</section><section id="notifications-and-interruptions"><div class="header-wrapper"><h3 id="interruptions"><bdi class="secno">2.12 </bdi>Notifications and Interruptions</h3><a class="self-link" href="#interruptions" aria-label="Permalink for Section 2.12"></a></div><div class="issue" id="issue-container-generatedID-5"><div role="heading" class="issue-title marker" id="h-issue-5" aria-level="2"><span>Issue</span></div><aside class="">
+</section><section id="notifications-and-interruptions"><div class="header-wrapper"><h3 id="interruptions"><bdi class="secno">2.12 </bdi>Notifications and Interruptions</h3><a class="self-link" href="#interruptions" aria-label="Permalink for Section 2.12"></a></div><div class="issue" id="issue-container-generatedID-6"><div role="heading" class="issue-title marker" id="h-issue-4" aria-level="2"><span>Issue</span></div><aside class="">
 
 <p>This is related to <a data-link-type="dfn" href="#dfn-autonomous" class="internalDFN" id="ref-for-dfn-autonomous-15">autonomy</a>.</p>
 </aside></div>
@@ -1865,7 +1920,7 @@ carrying out some given set of data processing that is not essential to the serv
 allowed to do so without the <a data-link-type="dfn" href="#dfn-party" class="internalDFN" id="ref-for-dfn-party-22">party</a> retaliating, for instance by artificially removing an
 unrelated feature, by decreasing the quality of the service, or by trying to cajole, badger, or
 trick the <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-87">person</a> into opting back into the <a data-link-type="dfn" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-30">processing</a>.</p>
-<div class="issue" id="issue-container-generatedID-6"><div role="heading" class="issue-title marker" id="h-issue-6" aria-level="2"><span>Issue</span></div><aside class="">
+<div class="issue" id="issue-container-generatedID-7"><div role="heading" class="issue-title marker" id="h-issue-5" aria-level="2"><span>Issue</span></div><aside class="">
 
 <p>Some services have the user pay for their use in data. These services aren't necessarily retaliating by denying their services to users who refuse to pay with data, but the details are more complex than we've had time to write.</p>
 </aside></div>
@@ -1930,7 +1985,7 @@ mitigating forms of data collection, including <a data-type="dfn" href="https://
 <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-103">data subject</a>) is any natural person. Throughout this document, we primarily use <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-104">person</a> or
 <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-105">people</a> to refer to human beings, as a reminder of their humanity. When we use the term <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-106">user</a>,
 it is to talk about the specific <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-107">person</a> who happens to be using a given system at that time.</p>
-<p>A <dfn data-lt="vulnerable|vulnerable person" id="dfn-vulnerable" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">vulnerable person</dfn> is a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-108">person</a> who may be unable to
+<p>A <dfn data-lt="vulnerable|vulnerable person" data-plurals="vulnerable people" id="dfn-vulnerable" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">vulnerable person</dfn> is a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-108">person</a> who may be unable to
 exercise sufficient self-determination in a <a data-link-type="dfn" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-19">context</a>. Amongst other things, they should
 be treated with greater default privacy protections and may be considered unable to
 <a data-link-type="dfn" href="#dfn-opt-in" class="internalDFN" id="ref-for-dfn-opt-in-14">consent</a> to various interactions with a system.
@@ -1954,7 +2009,7 @@ how data collected with
 the UI element is used, and a reasonable person with a realistic cognitive budget would realize
 that this other <a data-link-type="dfn" href="#dfn-party" class="internalDFN" id="ref-for-dfn-party-28">party</a> has this control, this other
 <a data-link-type="dfn" href="#dfn-party" class="internalDFN" id="ref-for-dfn-party-29">party</a> is the <a data-link-type="dfn" href="#dfn-first-party-0" class="internalDFN" id="ref-for-dfn-first-party-0-5">first party</a> for the interaction instead.</p>
-<div class="issue" id="issue-container-generatedID-7"><div role="heading" class="issue-title marker" id="h-issue-7" aria-level="3"><span>Issue</span></div><aside class="">
+<div class="issue" id="issue-container-generatedID-8"><div role="heading" class="issue-title marker" id="h-issue-6" aria-level="3"><span>Issue</span></div><aside class="">
 
 
 <p>  The group believes that the definition of <a data-link-type="dfn" href="#dfn-first-party-0" class="internalDFN" id="ref-for-dfn-first-party-0-6">first party</a> provided above needs further refinement.
@@ -2132,7 +2187,10 @@ data</a> that is communicated to sites.</span></li><li><a class="marker self-lin
     Groups and various forms of institutions should best protect and support autonomy by making
     decisions collectively rather than individually to either prevent or enable data
     sharing, and to set defaults for data processing rules.
-  </span></li><li><a class="marker self-link" href="#principle-protect-unwanted-information"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
+  </span></li><li><a class="marker self-link" href="#abuse-reporting"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
+      Systems that allow for communicating on the Web must provide an effective capability to report
+      abuse.
+    </span></li><li><a class="marker self-link" href="#principle-protect-unwanted-information"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
     <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-42">User agents</a> and other <a data-link-type="dfn" href="#dfn-actors" class="internalDFN" id="ref-for-dfn-actors-14">actors</a> should take
     steps to ensure that their <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-123">user</a> is not exposed to unwanted information. Technical standards
     must consider the delivery of unwanted information as part of their architecture and must
@@ -2186,9 +2244,11 @@ Tess O'Connor, and
 Wendy Seltzer.</p>
 </section>
 
-<section class="appendix" id="issue-summary"><div class="header-wrapper"><h2 id="e-issue-summary"><bdi class="secno">E. </bdi>Issue summary</h2><a class="self-link" href="#issue-summary" aria-label="Permalink for Appendix E."></a></div><ul><li><a href="#issue-container-generatedID">Issue</a></li><li><a href="#issue-container-generatedID-0">Issue</a></li><li><a href="#issue-container-generatedID-2">Issue</a></li><li><a href="#issue-container-number-2">Issue 2</a><span style="text-transform: none">: Address device owners</span></li><li><a href="#issue-container-generatedID-3">Issue</a></li><li><a href="#issue-container-generatedID-4">Issue</a></li><li><a href="#issue-container-generatedID-5">Issue</a></li><li><a href="#issue-container-generatedID-6">Issue</a></li><li><a href="#issue-container-generatedID-7">Issue</a></li></ul></section><section id="references" class="appendix"><div class="header-wrapper"><h2 id="f-references"><bdi class="secno">F. </bdi>References</h2><a class="self-link" href="#references" aria-label="Permalink for Appendix F."></a></div><section id="informative-references"><div class="header-wrapper"><h3 id="f-1-informative-references"><bdi class="secno">F.1 </bdi>Informative references</h3><a class="self-link" href="#informative-references" aria-label="Permalink for Appendix F.1"></a></div>
+<section class="appendix" id="issue-summary"><div class="header-wrapper"><h2 id="e-issue-summary"><bdi class="secno">E. </bdi>Issue summary</h2><a class="self-link" href="#issue-summary" aria-label="Permalink for Appendix E."></a></div><ul><li><a href="#issue-container-generatedID">Issue</a></li><li><a href="#issue-container-generatedID-0">Issue</a></li><li><a href="#issue-container-generatedID-2">Issue</a></li><li><a href="#issue-container-number-2">Issue 2</a><span style="text-transform: none">: Address device owners</span></li><li><a href="#issue-container-generatedID-5">Issue</a></li><li><a href="#issue-container-generatedID-6">Issue</a></li><li><a href="#issue-container-generatedID-7">Issue</a></li><li><a href="#issue-container-generatedID-8">Issue</a></li></ul></section><section id="references" class="appendix"><div class="header-wrapper"><h2 id="f-references"><bdi class="secno">F. </bdi>References</h2><a class="self-link" href="#references" aria-label="Permalink for Appendix F."></a></div><section id="informative-references"><div class="header-wrapper"><h3 id="f-1-informative-references"><bdi class="secno">F.1 </bdi>Informative references</h3><a class="self-link" href="#informative-references" aria-label="Permalink for Appendix F.1"></a></div>
     
-    <dl class="bibliography"><dt id="bib-beyond-individual">[Beyond-Individual]</dt><dd>
+    <dl class="bibliography"><dt id="bib-addressing-cyber-harassment">[Addressing-Cyber-Harassment]</dt><dd>
+      <em class="respec-offending-element">Reference not found.</em>
+    </dd><dt id="bib-beyond-individual">[Beyond-Individual]</dt><dd>
       <a href="https://doi.org/10.1007/978-3-030-82786-1_6"><cite>Privacy Beyond the Individual Level (in Modern Socio-Technical Perspectives on Privacy)</cite></a>. J.J. Suh; M.J. Metzger.  Springer. URL: <a href="https://doi.org/10.1007/978-3-030-82786-1_6">https://doi.org/10.1007/978-3-030-82786-1_6</a>
     </dd><dt id="bib-cat">[CAT]</dt><dd>
       <a href="https://nytimes.github.io/std-cat/"><cite>Content Aggregation Technology (CAT)</cite></a>. Robin Berjon; Justin Heideman. URL: <a href="https://nytimes.github.io/std-cat/">https://nytimes.github.io/std-cat/</a>
@@ -2232,6 +2292,8 @@ Wendy Seltzer.</p>
       <a href="https://www.w3.org/TR/IndexedDB/"><cite>Indexed Database API</cite></a>. Nikunj Mehta; Jonas Sicking; Eliot Graff; Andrei Popescu; Jeremy Orlow; Joshua Bell.  W3C. 8 January 2015. W3C Recommendation. URL: <a href="https://www.w3.org/TR/IndexedDB/">https://www.w3.org/TR/IndexedDB/</a>
     </dd><dt id="bib-individual-group-privacy">[Individual-Group-Privacy]</dt><dd>
       <a href="https://link.springer.com/article/10.1007/s13347-017-0253-7"><cite>From Individual to Group Privacy in Big Data Analytics</cite></a>. Brent Mittelstadt.  Philosophy &amp; Technology. URL: <a href="https://link.springer.com/article/10.1007/s13347-017-0253-7">https://link.springer.com/article/10.1007/s13347-017-0253-7</a>
+    </dd><dt id="bib-internet-of-garbage">[Internet-of-Garbage]</dt><dd>
+      <em class="respec-offending-element">Reference not found.</em>
     </dd><dt id="bib-lost-in-crowd">[Lost-In-Crowd]</dt><dd>
       <a href="https://www.nytimes.com/2019/04/17/opinion/data-privacy.html"><cite>Why You Can No Longer Get Lost in the Crowd</cite></a>. Woodrow Hartzog; Evan Selinger.  The New York Times. URL: <a href="https://www.nytimes.com/2019/04/17/opinion/data-privacy.html">https://www.nytimes.com/2019/04/17/opinion/data-privacy.html</a>
     </dd><dt id="bib-nist-800-63a">[NIST-800-63A]</dt><dd>
@@ -2242,6 +2304,10 @@ Wendy Seltzer.</p>
       <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2284583"><cite>Obscurity by Design</cite></a>. Woodrow Hartzog; Frederic Stutzman. URL: <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2284583">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2284583</a>
     </dd><dt id="bib-oecd-guidelines">[OECD-Guidelines]</dt><dd>
       <a href="https://www.oecd.org/sti/ieconomy/oecdguidelinesontheprotectionofprivacyandtransborderflowsofpersonaldata.htm"><cite>OECD Guidelines on the Protection of Privacy and Transborder Flows of Personal Data</cite></a>.  OECD. URL: <a href="https://www.oecd.org/sti/ieconomy/oecdguidelinesontheprotectionofprivacyandtransborderflowsofpersonaldata.htm">https://www.oecd.org/sti/ieconomy/oecdguidelinesontheprotectionofprivacyandtransborderflowsofpersonaldata.htm</a>
+    </dd><dt id="bib-pen-harassment">[PEN-Harassment]</dt><dd>
+      <a href="https://onlineharassmentfieldmanual.pen.org/defining-online-harassment-a-glossary-of-terms/"><cite>Online Harassment Field Manual</cite></a>.  PEN America. URL: <a href="https://onlineharassmentfieldmanual.pen.org/defining-online-harassment-a-glossary-of-terms/">https://onlineharassmentfieldmanual.pen.org/defining-online-harassment-a-glossary-of-terms/</a>
+    </dd><dt id="bib-pew-harassment">[PEW-Harassment]</dt><dd>
+      <a href="https://www.pewresearch.org/internet/2021/01/13/the-state-of-online-harassment/"><cite>The State of Online Harassment</cite></a>.  Pew Research Center. January 2021. URL: <a href="https://www.pewresearch.org/internet/2021/01/13/the-state-of-online-harassment/">https://www.pewresearch.org/internet/2021/01/13/the-state-of-online-harassment/</a>
     </dd><dt id="bib-privacy-behavior">[Privacy-Behavior]</dt><dd>
       <a href="https://www.heinz.cmu.edu/~acquisti/papers/AcquistiBrandimarteLoewenstein-S-2015.pdf"><cite>Privacy and Human Behavior in the Age of Information</cite></a>. Alessandro Acquisti; Laura Brandimarte; George Loewenstein.  Science. URL: <a href="https://www.heinz.cmu.edu/~acquisti/papers/AcquistiBrandimarteLoewenstein-S-2015.pdf">https://www.heinz.cmu.edu/~acquisti/papers/AcquistiBrandimarteLoewenstein-S-2015.pdf</a>
     </dd><dt id="bib-privacy-concerned">[Privacy-Concerned]</dt><dd>
@@ -2837,6 +2903,30 @@ Wendy Seltzer.</p>
     <a href="#ref-for-dfn-controlled-de-identified-data-1" title="§ 2.5 De-identified Data">§ 2.5 De-identified Data</a> <a href="#ref-for-dfn-controlled-de-identified-data-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-de-identified-data-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-controlled-de-identified-data-4" title="Reference 4">(4)</a> <a href="#ref-for-dfn-controlled-de-identified-data-5" title="Reference 5">(5)</a> 
   </li>
   </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-harassment" aria-label="Links in this document to definition: harassment">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-harassment" aria-label="Permalink for definition: harassment. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-harassment-1" title="§ 2.8 Harassment">§ 2.8 Harassment</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-unwanted-information" aria-label="Links in this document to definition: Unwanted information">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-unwanted-information" aria-label="Permalink for definition: Unwanted information. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-unwanted-information-1" title="§ 2.8 Harassment">§ 2.8 Harassment</a> 
+  </li>
+  </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-individual" aria-label="Links in this document to definition: person">
       <span class="caret"></span>
       <div>
@@ -2901,6 +2991,8 @@ Wendy Seltzer.</p>
     <a href="#ref-for-dfn-vulnerable-1" title="§ 1. An Introduction to Privacy on the Web">§ 1. An Introduction to Privacy on the Web</a> 
   </li><li>
     <a href="#ref-for-dfn-vulnerable-2" title="§ 2.1 Identity on the Web">§ 2.1 Identity on the Web</a> 
+  </li><li>
+    <a href="#ref-for-dfn-vulnerable-3" title="§ 2.8 Harassment">§ 2.8 Harassment</a> 
   </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-context" aria-label="Links in this document to definition: context">
