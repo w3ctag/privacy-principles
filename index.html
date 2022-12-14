@@ -1137,7 +1137,8 @@ See [[fingerprinting-guidance]] for how to mitigate threats that result from
 [=fingerprinting=].
 
 Supercookies occur when a UA stores data for a site but makes that data more
-difficult to clear than other cookies or storage, typically because of a bug or
+difficult to clear than other cookies or storage, typically because of a bug, of features
+relating to cache storage and network state (eg. ETag, HSTS), or
 because the browser restores the browser vendor's cookies when local state is cleared.
 <a data-cite="fingerprinting-guidance#clearing-all-local-state">Fingerprinting
 Guidance § Clearing all local state</a> discusses how specifications can help
