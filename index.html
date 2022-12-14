@@ -1616,6 +1616,57 @@ installed software or connected devices).
 </p>
 </div>
 
+### Guardians {#guardians}
+
+<div class="practice">
+<span class="practicelab" id="principle-guardians-have-responsibilities">
+A [=user agent=] may only provide information about a [=ward=] to a [=guardian=] for the purpose of
+helping that [=guardian=] uphold their responsibilities to their [=ward=]. This system must include
+measures to help [=wards=] who realize that their [=guardian=] isn't acting in the [=ward=]'s
+interest.</span>
+</div>
+
+
+Some classes of vulnerable people tend to be unable to make good decisions about their own web use,
+and need a <dfn>guardian</dfn> to help them. Children are a widely recognized example of this class,
+with their parents often acting as their [=guardians=]. A person with a [=guardian=] is known as
+a <dfn>ward</dfn>.
+
+Many legal systems treat these guardianship relationships as a set of rights that the [=guardian=]
+possesses. We prefer to instead think of the [=ward=] having a right to make informed decisions and
+exercise their autonomy. Their [=guardian=] then has an _obligation_ to help their [=ward=] do so
+when the [=ward=]'s abilities aren't sufficient, even if that conflicts with the [=guardian=]'s
+desires. In practice, many [=wards=] discover that their [=guardian=] is not making decisions in the
+[=ward=]'s best interest, and it's critical that such [=wards=] have a way to escape their
+misbehaving guardian.
+
+Historically, the Web has provided exactly this escape route, and [=user agents=] should preserve
+that feature by correctly balancing a benevolent [=guardian=]'s need to protect their [=ward=] from
+dangers against other [=wards=]' need to protect themselves from their misbehaving [=guardians=].
+
+<aside class="example" id="example-protective-parent" title="Protective parents">
+
+A parent might configure a small child's [=user agent=] to block access to violent content until the
+child is old enough to make their own decisions about it.
+
+</aside>
+
+<aside class="example" id="example-lgbt-kid" title="An LGBT child">
+
+A child may discover that they're LGBT and need to find supportive resources online. If they have a
+homophobic or transphobic parent, that parent might have configured their [=user agent=] to either
+block or inform the parent when the child visits web pages about LGBT-related subjects. The [=user
+agent=] needs to warn the child about how it's configured so that the child can know to ask a better
+[=guardian=] for access to the help they need.
+
+</aside>
+
+<aside class="issue">
+
+Add crosslinks to the <a href="https://github.com/w3ctag/privacy-principles/pull/202">upcoming
+device owners section</a>.
+
+</aside>
 
 ## Consent, Withdrawal of Consent, Opt-Outs, and Objections {#consent-principles}
 
