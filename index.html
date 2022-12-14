@@ -84,6 +84,11 @@
           publisher: 'Princeton University Press',
           status: 'You can read this book free of charge, but Matt is an outstanding author and I encourage you to support him by buying his book!',
         },
+        'Browser-Parties': {
+          title: 'Parties and browsers',
+          href: 'https://tess.oconnor.cx/2020/10/parties',
+          authors: ["Tess O'Connor"],
+        },
         'CAT': {
           title: 'Content Aggregation Technology (CAT)',
           authors: ['Robin Berjon', 'Justin Heideman'],
@@ -223,6 +228,12 @@
           href: 'https://www.nytimes.com/2019/04/17/opinion/data-privacy.html',
           publisher: 'The New York Times',
         },
+        'Nav-Tracking': {
+          title: 'Navigational-Tracking Mitigations',
+          authors: ['Pete Snyder', 'Jeffrey Yasskin'],
+          href: 'https://privacycg.github.io/nav-tracking-mitigations/',
+          publisher: 'W3C',
+        },
         'NIST-800-63A': {
           title: 'Digital Identity Guidelines: Enrollment and Identity Proofing Requirements',
           href: 'https://pages.nist.gov/800-63-3/sp800-63a.html',
@@ -325,6 +336,12 @@
           title: 'Seeing Like a State: How Certain Schemes to Improve the Human Condition Have Failed',
           href: 'https://bookshop.org/books/seeing-like-a-state-how-certain-schemes-to-improve-the-human-condition-have-failed/9780300246759',
           authors: ['James C. Scott'],
+        },
+        'SILVERPUSH': {
+          title: 'How TV ads silently ping commands to phones: Sneaky SilverPush code reverse-engineered',
+          href: 'https://www.theregister.com/2015/11/20/silverpush_soundwave_ad_tracker/',
+          publisher: 'The Register',
+          authors: ['Iain Thomson']
         },
         'Strava-Debacle': {
           title: 'The Latest Data Privacy Debacle',
@@ -963,22 +980,34 @@ they are in.</span>
 
 </div>
 
-In order to uphold this principle, a [=user agent=] sometimes needs to ensure
-that *one* site can't learn anything about its user's behavior on *another*
-site, and sometimes the UA needs to help its user *prove* to one site that
-they have a particular identity on another site. Similarly, a UA can help its
-user to separate or communicate identity across *repeat* visits to the *same*
-site.
-
 A [=person=]'s <dfn>identity</dfn> is the set of characteristics that define
 them. Their identity *in a [=context=]* is the set of characteristics they
 present in that context. People frequently present different identities to
 different contexts, and also frequently share an identity among several
-contexts. People may also wish to present an ephemeral or anonymous identity.
+contexts. People may also wish to present an ephemeral or anonymous identity,
+which is just a set of characteristics that is too small or unstable to be useful
+for following them through time.
 
-<dfn>Cross-context recognition</dfn> is the act of recognising that an
-[=identity=] in one [=context=] is the same [=person=] as an [=identity=] in
-another [=context=]. This contributes to [=surveillance=], [=correlation=],
+<dfn data-lt="recognize|recognized">Recognition</dfn> is the act of realising that a given [=identity=]
+corresponds to the same [=person=] as another [=identity=] which may have been
+observed either in another [=context=] or in the same [=context=] but at a
+different time.
+
+In order to uphold this principle, sometimes a [=user agent=] needs to *prevent*
+[=recognition=], for instance so that a [=site=] can't learn anything about its
+[=user=]'s behavior on *another* site, and sometimes the [=user agent=] needs to *support* [=recognition=],
+for instance to help its [=user=] *prove* to one [=site=] that they have a
+particular identity on another [=site=]. Similarly, a [=user agent=] can help its
+[=user=] to separate or communicate [=identity=] across *repeat* visits to the *same*
+[=site=].
+
+### Recognition Types {#recognition-types}
+
+There are different types of [=recognition=] that may take place. These rely on
+different methods and present different challenges.
+
+<dfn>Cross-context recognition</dfn> is [=recognition=] between different
+[=contexts=]. It contributes to [=surveillance=], [=correlation=],
 and [=identification=].
 
 [=Cross-context recognition=] can at times be [=appropriate=] but web users
@@ -994,31 +1023,29 @@ usually would, and possibly even to pretend they don't know you.
 
 Note that a UA may not always be powerful enough to prevent [=cross-context
 recognition=]. For example, if two or more services [=inappropriately=]
-require an identifying piece of information in order to use the services.
+require an identifying piece of information (eg. an email address) in order
+to use the services.
 
 <dfn>Cross-site recognition</dfn> is when a site determines with high
 probability that a visit to the site comes from the same person as another
-visit to a *different* site.
+visit to a *different* site. It is [=cross-context recognition=] between [=sites=].
+[=Cross-site recognition=] is almost always a privacy harm, unless the person could
+reasonably expect to be [=recognized=] and has effective means to mitigate the issue.
 
-Traditionally, sites have accomplished this using
-<a href="https://tess.oconnor.cx/2020/10/parties#environment-cross-site">
-cross-site</a> cookies, but it can also be done by having someone navigate to
-a link that has been decorated with an identifier, collecting the same piece
-of identifying information on both sites, or by correlating the timestamps of
-an event that occurs nearly-simultaneously on both sites (this is an example
-of a <a
-href="https://github.com/asankah/ephemeral-fingerprinting/blob/2395a35aac260d4d2f880eeb05c2617b0fd642ea/README.md">timing
-attack</a>). A privacy harm occurs through [=cross-site recognition=], unless
-the person could reasonably expect the sites to discover this and has
-effective means to mitigate the issue.
-
-<dfn>Same-site recognition</dfn> is when a single site discovers and uses the
+<dfn>Same-site recognition</dfn> is when a single [=site=] discovers and uses the
 fact that two or more visits probably came from the same [=person=].
 
 A privacy harm occurs if a [=person=] reasonably expects that they'll be using
 a different [=identity=] for different visits to a single site, but the site
-engages in [=same-site recognition=]. This harm is generally accomplished by
-either "supercookies" or browser [=fingerprinting=].
+[=recognizes=] them anyway. This harm can be accomplished through a
+variety of means detailed in [[[#recognition-methods]]].
+
+Note that these categories overlap: [=cross-site recognition=] is usually
+[=cross-context recognition=] (and always [=recognizes=] across [=partitions=]); and
+[=same-site recognition=] is sometimes [=cross-context recognition=] (and may or may not
+involved multiple [=partitions=]).
+
+### User agent awareness of recognition {#user-agent-recognition}
 
 [=User agents=] can't, in general, determine exactly where [=context=]
 boundaries are within a site, or know how a site allows a [=person=] to
@@ -1029,7 +1056,7 @@ Instead, [=user agents=] may have to make some assumptions about the borders
 between [=contexts=]. By default, [=user agents=] define a
 <dfn>machine-enforceable context</dfn> or <dfn>partition</dfn> as:
 
-* A set of [=environments=] (roughly iframes (including cross-site iframes),
+* A set of [=environments=] (roughly [^iframe^]s (including cross-site [^iframe^]s),
 workers, and top-level pages)
 * whose [=environment/top-level origins=] are in the [=same site=] (but see
 [[PSL-Problems]])
@@ -1052,24 +1079,27 @@ If a [=person=] visits two or more web pages from different [=partitions=],
 and does not explicitly express the same identity on each visit, the UA should
 take steps to prevent [=same-site recognition=]. Note that sites can do harm
 even if they can't be *completely* certain that visits come from the same
-person.
+person. Further, note that sites must not assume that a person intends to be
+recognised across different sites simply because they are using the same
+identifier (such as an email address) with both or are relying on the same
+single sign-on identity.
 
 [=User agents=] and identity-related web features can do the following to help
 people present the [=identity=] that they want to present to a given website:
 
-* do not reveal someone's profile information without their consent.
-* do not leak someone's profiles, including which types of profiles they have,
+* Do not reveal someone's profile information without their consent.
+* Do not leak someone's profiles, including which types of profiles they have,
 without their consent.
-* make it clear to the user which identity is being presented on a given
+* Make it clear to the user which identity is being presented on a given
 website.
-* disclose the least amount of identifying information, e.g.:
-  * only share the parts of someone's profile information that is needed by
+* Disclose the least amount of identifying information, e.g.:
+  * Only share the parts of someone's profile information that is needed by
   the website.
-  * minimize the shared data; for example if a website requires age for
+  * Minimize the shared data; for example if a website requires age for
   verification, then share that the
   user is older than the minimum age, as opposed to specific age or date of
   birth.
-* support the user's intent to present a directed identity or a site-specific
+* Support the user's intent to present a directed identity or a site-specific
 identity. E.g., if the website requires an email, then the user may choose a
 directed identifier without disclosing their real email.
 
@@ -1080,7 +1110,7 @@ the violation without breaking valid use cases, but for cases where that's not
 possible we refer you to [[[Privacy-Threat]]] which discusses tradeoffs in
 detail.
 
-### Fingerprinting {#fingerprinting}
+### Recognition Methods {#recognition-methods}
 
 The web platform offers many ways for a website to recognize that a [=person=]
 is using the same [=identity=] over time, including [[RFC6265|cookies]],
@@ -1089,7 +1119,25 @@ is using the same [=identity=] over time, including [[RFC6265|cookies]],
 [=person=]'s preferences, shopping carts, etc., and people have come to expect
 this behavior in some contexts.
 
-<dfn data-lt="fingerprint">Fingerprinting</dfn> ([[?UNSANCTIONED-TRACKING]]) consists of using attributes of the [=person=]'s
+People are unlikely to expect the recognition and will find it difficult to
+mitigate when it is automated, which can happen in different ways:
+
+* through the use of <a data-cite="Browser-Parties#environment-cross-site">cross-site</a> cookies,
+* by having someone navigate to a link that has been decorated with an identifier
+  ([[?Nav-Tracking]]),
+* collecting the same piece of identifying information on both sites, or
+* by correlating the timestamps of an event that occurs nearly-simultaneously
+on both sites (this is an example of a <a
+href="https://github.com/asankah/ephemeral-fingerprinting/blob/2395a35aac260d4d2f880eeb05c2617b0fd642ea/README.md">timing
+attack</a>).
+
+In addition to recognition methods that can operate automatically across
+contexts, recognition can also be made *persistent* such that it will
+defeat potential mitigations like [=partitions=] or clearing one's cookies.
+This constitutes unsanctioned tracking ([[?UNSANCTIONED-TRACKING]]) and can
+take multiple forms.
+
+<dfn data-lt="fingerprint">Fingerprinting</dfn> consists of using attributes of the [=person=]'s
 browser and platform that are consistent between two or more visits and
 probably unique to the person.
 
@@ -1101,12 +1149,6 @@ For example:
 * window size;
 * system preferences (such as dark mode, serif font, etc.).
 
-Supercookies occur when a UA stores data for a site but makes that data more
-difficult to clear than other cookies or storage.
-<a data-cite="fingerprinting-guidance#clearing-all-local-state">Fingerprinting
-Guidance § Clearing all local state</a> discusses how specifications can help
-UAs avoid this mistake.
-
 Preventing [=fingerprinting=] can be particularly challenging in cases that
 only affect a small group of people who use the web. For example, people who
 configure their systems in unique ways, such as by using a browser with a very
@@ -1117,6 +1159,25 @@ didn't choose to be in the group.
 
 See [[fingerprinting-guidance]] for how to mitigate threats that result from
 [=fingerprinting=].
+
+Supercookies occur when a UA stores data for a site but makes that data more
+difficult to clear than other cookies or storage, typically because of a bug, of features
+relating to cache storage and network state (eg. ETag, HSTS), or
+because the browser restores the browser vendor's cookies when local state is cleared.
+<a data-cite="fingerprinting-guidance#clearing-all-local-state">Fingerprinting
+Guidance § Clearing all local state</a> discusses how specifications can help
+UAs avoid this mistake.
+
+<dfn>Header enrichment</dfn> happens when a network operator adds HTTP request headers
+to identify their customers to sites that they visit. It is unfortunately
+difficult for a [=user agent=] to mitigate against [=header enrichment=].
+
+<dfn>Cross-device communication</dfn> is communication
+between code on one device and code running on another device. For example, sounds or
+light emitted from one device could be detected by a microphone or light sensor on
+another device [[?SILVERPUSH]]. [=Cross-device communication=] enables cross-device
+tracking, a form of [=cross-context recognition=], but it can also be used for other
+inappropriate information flows.
 
 ## Data minimization {#data-minimization}
 
