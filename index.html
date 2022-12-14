@@ -1003,16 +1003,16 @@ particular identity on another [=site=]. Similarly, a [=user agent=] can help it
 
 ### Recognition Types {#recognition-types}
 
-There are different types of [=recognition=] that may take place. These rely on
+There are several types of [=recognition=] that may take place. These rely on
 different methods and present different challenges.
 
 <dfn>Cross-context recognition</dfn> is [=recognition=] between different
 [=contexts=]. It contributes to [=surveillance=], [=correlation=],
 and [=identification=].
 
-[=Cross-context recognition=] can at times be [=appropriate=] but web users
-need to be able to control when websites do it as much as possible. Systems
-which [=cross-context recognition|recognize=] people across [=contexts=] need
+[=Cross-context recognition=] is only [=appropriate=] when the person being [=recognized=]
+can reasonably expect that recognition to happen and can control whether it does.
+Systems which [=recognize=] people across [=contexts=] need
 to be careful not to apply the [=principles=] of one [=context=] in ways that
 violate the [=principles=] around use of information acquired in a different
 [=context=]. This is particularly true for [=vulnerable=] people, as
@@ -1028,9 +1028,8 @@ to use the services.
 
 <dfn>Cross-site recognition</dfn> is when a site determines with high
 probability that a visit to the site comes from the same person as another
-visit to a *different* site. It is [=cross-context recognition=] between [=sites=].
-[=Cross-site recognition=] is almost always a privacy harm, unless the person could
-reasonably expect to be [=recognized=] and has effective means to mitigate the issue.
+visit to a *different* site. In the usual case that the sites are different [=contexts=],
+[=cross-site recognition=] is a privacy harm in the same cases as [=cross-context recognition=].
 
 <dfn>Same-site recognition</dfn> is when a single [=site=] discovers and uses the
 fact that two or more visits probably came from the same [=person=].
@@ -1043,7 +1042,7 @@ variety of means detailed in [[[#recognition-methods]]].
 Note that these categories overlap: [=cross-site recognition=] is usually
 [=cross-context recognition=] (and always [=recognizes=] across [=partitions=]); and
 [=same-site recognition=] is sometimes [=cross-context recognition=] (and may or may not
-involved multiple [=partitions=]).
+involve multiple [=partitions=]).
 
 ### User agent awareness of recognition {#user-agent-recognition}
 
