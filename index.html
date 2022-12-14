@@ -1005,6 +1005,8 @@ to use the services.
 <dfn>Cross-site recognition</dfn> is when a site determines with high
 probability that a visit to the site comes from the same person as another
 visit to a *different* site. It is [=cross-context recognition=] between [=sites=].
+[=Cross-site recognition=] is almost always a privacy harm, unless the person could
+reasonably expect to be [=recognized=] and has effective means to mitigate the issue.
 
 <dfn>Same-site recognition</dfn> is when a single [=site=] discovers and uses the
 fact that two or more visits probably came from the same [=person=].
@@ -1088,11 +1090,8 @@ is using the same [=identity=] over time, including [[RFC6265|cookies]],
 [=person=]'s preferences, shopping carts, etc., and people have come to expect
 this behavior in some contexts.
 
-[=Cross-site recognition=] is almost always a privacy harm, unless
-the person could reasonably expect to be [=recognition|recognised=] and has
-effective means to mitigate the issue. People are unlikely to expect the
-recognition and will find it difficult to mitigate when it is automated,
-which can happen in different ways:
+People are unlikely to expect the recognition and will find it difficult to
+mitigate when it is automated, which can happen in different ways:
 
 * through the use of <a data-cite="Browser-Parties#environment-cross-site">cross-site</a> cookies,
 * by having someone navigate to a link that has been decorated with an identifier
