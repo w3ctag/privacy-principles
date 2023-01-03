@@ -1013,7 +1013,7 @@ that reveal their vulnerability. For example, if you meet your therapist at a
 party, you expect them to have different discussion topics with you than they
 usually would, and possibly even to pretend they don't know you.
 
-Note that a UA may not always be powerful enough to prevent [=cross-context
+Note that a user agent may not always be powerful enough to prevent [=cross-context
 recognition=]. For example, if two or more services [=inappropriately=]
 require an identifying piece of information (eg. an email address) in order
 to use the services.
@@ -1040,7 +1040,7 @@ involve multiple [=partitions=]).
 
 [=User agents=] can't, in general, determine exactly where [=context=]
 boundaries are within a site, or know how a site allows a [=person=] to
-express that they intend to change [=identities=], so the UA can't enforce
+express that they intend to change [=identities=], so the user agent can't enforce
 that sites actually separate [=identities=] at these boundaries.
 
 Instead, [=user agents=] may have to make some assumptions about the borders
@@ -1067,7 +1067,7 @@ Where possible, [=user agents=] should prevent people from being
 intend to be recognized.
 
 If a [=person=] visits two or more web pages from different [=partitions=],
-and does not explicitly express the same identity on each visit, the UA should
+and does not explicitly express the same identity on each visit, the user agent should
 take steps to prevent [=same-site recognition=]. Note that sites can do harm
 even if they can't be *completely* certain that visits come from the same
 person. Further, note that sites must not assume that a person intends to be
@@ -1151,13 +1151,13 @@ didn't choose to be in the group.
 See [[fingerprinting-guidance]] for how to mitigate threats that result from
 [=fingerprinting=].
 
-Supercookies occur when a UA stores data for a site but makes that data more
+Supercookies occur when a user agent stores data for a site but makes that data more
 difficult to clear than other cookies or storage, typically because of a bug, of features
 relating to cache storage and network state (eg. ETag, HSTS), or
 because the browser restores the browser vendor's cookies when local state is cleared.
 <a data-cite="fingerprinting-guidance#clearing-all-local-state">Fingerprinting
 Guidance § Clearing all local state</a> discusses how specifications can help
-UAs avoid this mistake.
+user agents avoid this mistake.
 
 <dfn>Header enrichment</dfn> happens when a network operator adds HTTP request headers
 to identify their customers to sites that they visit. It is unfortunately
