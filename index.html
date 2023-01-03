@@ -1344,8 +1344,8 @@ found it</a>.
 ### Handling acceptable information {#acceptable-information}
 
 <div class="practice">
-  <span class="practicelab">New APIs can add additional ways of getting acceptable
-  information that are guarded at least as strongly as the old ways.</span>
+  <span class="practicelab">New APIs can add ways of getting acceptable
+  information that are guarded at least as strongly as the existing ways.</span>
 </div>
 
 Acceptable information exposure is always qualified by the (possibly empty) set of
@@ -1393,8 +1393,8 @@ scratch, without relying on the existing API.
    maintenance, or less runtime cost.
 
 The third consideration can be surprising. In many other cases, we can think in terms of a
-threat model, using designs familiar from security to make information either available or
-unavailable. In this third case, however, we have to think more economically, about the
+threat model and use designs familiar from security to make information either available or
+unavailable. In this third case, however, we have to think more economically and consider the
 cost to a website of inferring the relevant information from whatever data the web's APIs
 expose. If the cost of inferring the undesirable information is high, fewer websites will
 gather it, and privacy will be generally better. If a new API makes the cost go down, more
@@ -1422,7 +1422,6 @@ For example:
 * Contacts.
 * Calendar entries.
 * [Whether they are using assistive technology.](https://w3ctag.github.io/design-principles/#do-not-expose-use-of-assistive-tech)
-* ...
 
 A particular piece of information may have different sensitivity for different
 people. Language preferences, for example, might typically seem innocent, but
@@ -1437,15 +1436,12 @@ When considering whether a class of information is likely to be sensitive to
 a person, consider at least these factors:
 
 * whether it serves as a persistent [=identifier=] (see severity in Mitigating
-    browser fingerprinting);
+  browser fingerprinting);
 * whether it discloses substantial (including intimate details or inferences)
-    information about the the person using the system or other people;
+  information about the person using the system or other people;
 * whether it can be revoked (as in determining whether a permission is
-    necessary);
+  necessary);
 * whether it enables other threats, like intrusion.
-
-Issue(16): This description of what makes information sensitive still needs to
-be refined.
 
 ## Data Rights {#data-rights}
 
