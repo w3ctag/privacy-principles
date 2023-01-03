@@ -591,7 +591,7 @@ have decided given arbitrary amounts of time and relatively unlimited intellectu
 and [=autonomy=] is decreased when a similar shortcut goes against decisions made under such
 ideal conditions.
 
-Affordances and interactions that decrease [=autonomy=] are known as <dfn>deceptive patterns</dfn> or <dfn>dark patterns</dfn>.
+Affordances and interactions that decrease [=autonomy=] are known as <dfn data-lt="dark pattern|dark patterns">deceptive patterns</dfn> (or dark patterns).
 A [=deceptive pattern=] does not have to be intentional ([[?Dark-Patterns]], [[?Dark-Pattern-Dark]]).
 
 Because we are all subject to motivated reasoning, the design of defaults and affordances
@@ -1170,29 +1170,27 @@ another device [[?SILVERPUSH]]. [=Cross-device communication=] enables cross-dev
 tracking, a form of [=cross-context recognition=], but it can also be used for other
 inappropriate information flows.
 
-## Data minimization {#data-minimization}
+## Data Minimization {#data-minimization}
 
 <div class="practice">
-<span class="practicelab">Sites, user agents and other parties should minimize the amount of
+<span class="practicelab">Sites, user agents, and other parties should minimize the amount of
 <a>personal data</a> they transfer between parties on the Web.</span>
 </div>
 
-Data minimization limits the risks of data being disclosed or misused and also makes it possible to
+Data minimization limits the risks of data being disclosed or misused, and also makes it possible to
 more meaningfully provide people with understandable decisions about data about them.
 
 <div class="practice">
 <span class="practicelab">Web APIs should be designed to minimize the amount of data that sites need
-to request to carry out their users' goals and provide granularity and user controls over <a>personal
+to obtain to carry out their users' goals and provide granularity and user controls over <a>personal
 data</a> that is communicated to sites.</span>
 </div>
 
-<aside class="note">
-This principle was further explored in an earlier TAG draft on [[[Data-Minimization]]].
-</aside>
-
 Because <a>personal data</a> may be sensitive in unexpected ways, or have risks of future uses that could be
 unexpected or harmful, minimization as a principle applies to personal data that is not currently
-known to be identifying, sensitive or otherwise potentially harmful.
+known to be identifying, sensitive, or otherwise potentially harmful.
+
+Note that this principle was further explored in an earlier TAG draft on [[[Data-Minimization]]].
 
 ### Ancillary uses
 
@@ -1201,26 +1199,29 @@ known to be identifying, sensitive or otherwise potentially harmful.
   uses</a> for ongoing discussion and iteration on this principle.
 </aside>
 
-In maintaining duties of <a href="#dfn-duty-of-protection">protection</a>, <a
-href="#dfn-duty-of-discretion">discretion</a> and <a href="#dfn-duty-of-loyalty">loyalty</a>, user
-agents should be conservative when sharing data not necessary to satisfy a user's immediate goals.
+In maintaining duties of [=duty of protection|protection=], [=duty of discretion|discretion=] and [=duty of loyalty|loyalty=], user
+agents should be conservative when sharing data that isn't needed to satisfy a user's immediate goals.
 
-On the Web, user agents and sites often communicate data even outside the need to load and display a
-page for <dfn>ancillary uses</dfn> including:
+On the Web, user agents and sites often communicate data outside what is needed to load and display a
+page. These <dfn data-lt="ancillary use">ancillary uses</dfn> include:
 
 * browser telemetry, including:
   * performance measurements,
   * measuring feature usage,
-  * debugging site, browser and networking issues, and,
+  * debugging site, browser and networking issues, and
   * detecting security problems or attacks;
 * site telemetry, including:
   * performance measurements,
   * analytics about usage and visitors,
-  * debugging site issues, and,
+  * debugging site issues, and
   * detecting security problems or attacks;
 * advertising and social media sharing, including:
-  * measurement, targeting, ad auctions, personalization, fraud prevention;
-* performance, including caching and prefetching content;
+  * measurement,
+  * targeting,
+  * operating ad auctions,
+  * personalization, or
+  * fraud prevention;
+* performance, including caching and prefetching content; or
 * software updates.
 
 <dfn>Telemetry and analytics</dfn>, including browser telemetry and site telemetry, are a common
@@ -1235,10 +1236,10 @@ commonly-accepted contextual norm and some people would be willing to participat
 might have explicitly decided to contribute if they had the time and understanding to consider
 details about such a use) and some people would identify those uses as supporting their own goals.
 
-Aggregated or <a href="#dfn-de-identified">de-identified</a> data is often more likely to be
+Aggregated or [=de-identified=] data is often more likely to be
 acceptable in these senses and often still contributes to the collective benefit while minimizing
 privacy threats to a particular individual (see <a href="#principle-collective-privacy">collective
-privacy</a>). But some people might also object, in particular instances or in general.
+privacy</a>). But some people might nevertheless object, in particular instances or in general.
 
 <aside class="example">
   Privacy-preserving measurement techniques may be used for aggregate calculations while minimizing
@@ -1251,9 +1252,9 @@ privacy</a>). But some people might also object, in particular instances or in g
   Force">IETF</abbr> <a href="https://datatracker.ietf.org/wg/ppm/about/"><abbr
   title="privacy-preserving measurement">ppm</abbr></a>, <abbr title="Internet Research Task
   Force">IRTF</abbr> <a href="https://datatracker.ietf.org/rg/pearg/about/"><abbr title="Privacy
-  Enhancements and Assessments Research Group">pearg</abbr></a> and W3C <a
+  Enhancements and Assessments Research Group">pearg</abbr></a>, and W3C <a
   href="https://patcg.github.io/"><abbr title="Private Advertising Technology Community
-  Group">PATCG</abbr></a> groups may be relevant.
+  Group">PATCG</abbr></a> groups tackles relevant questions.
 </aside>
 
 <div class="practice">
@@ -1261,16 +1262,16 @@ privacy</a>). But some people might also object, in particular instances or in g
   goals and preferences about use of data about them.</span>
 </div>
 
-Agents should both be careful, cautious and conservative in applying data minimization to any <a
-href="#dfn-ancillary-uses">ancillary use</a> and also not burden the user with additional [=privacy
+Agents should both be careful, cautious, and conservative in applying data minimization to any
+[=ancillary use=] and also not burden the user with additional [=privacy
 labor=]. To that end, user agents may employ user research, solicitation of general preferences, and
 heuristics about sensitivity of data or trust in a particular context. To facilitate site
 understanding of user preferences, user agents can provide browser-configurable signals to directly
-communicate common user preferences.
+communicate common user preferences (such as a [=global opt-out=]).
 
 <div class="practice">
   <span class="practicelab">Specifications that define functionality for telemetry and analytics
-  should explicitly note the <a href="#dfn-telemetry-and-analytics">analytics</a> use to facilitate modal or general user
+  should explicitly note the [=telemetry and analytics|analytics=] use to facilitate modal or general user
   choices.</span>
 </div>
 
@@ -1283,12 +1284,12 @@ communicate common user preferences.
 </aside>
 
 <aside class="example">
-  A user visits a mapping website that they regularly visit and clicks a locator icon; although
+  A user loads a mapping website that they regularly visit and clicks a locator icon; although
   precise geolocation can be very sensitive, the user agent can readily determine the user's intent.
 </aside>
 
-Data exposed for ancillary uses including <a href="#dfn-telemetry-and-analytics">telemetry</a> may
-often reveal characteristics of user configuration, device, environment or behavior that could be
+Data exposed for [=ancillary uses=] including [=telemetry and analytics|telemetry=] may
+often reveal characteristics of user configuration, device, environment, or behavior that could be
 used as part of <a>browser fingerprinting</a> to identify users across sites. Revealing user
 preferences or other heuristics in providing or disabling functionality could also contribute to a
 browser fingerprint.
