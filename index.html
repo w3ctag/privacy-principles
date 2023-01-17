@@ -951,6 +951,26 @@ suspicious login actually comes from the real account owner.
 
 </aside>
 
+<aside class="example" id="example-preventing-profiling" title="Preventing Profiling">
+
+Some actors on the web place a high value on building a detailed profile of each user's
+behavior, across websites. User agents are trying to enforce the principles in
+[[[#identity]]] by blocking this profiling, but because the profiles are valuable, there's
+a large incentive to work around user agent measures, sometimes by using techniques that
+are very expensive or impossible to block. If user agent behavior causes websites to adopt
+these alternate tracking methods, the web as a whole won't respect the [[[#identity]]]
+principles.
+
+User agents can reduce the incentive to develop these alternate tracking methods by
+building APIs to facilitate the most common and least harmful uses of user profiles.
+However, those APIs usually still reveal some information about a user's behavior. For
+example, even the most privacy-respecting conversion attribution API will reveal a limited
+amount of information about each user in order to replace the use of profiles to measure
+the success of advertising campaigns. Even this small amount of information is still
+[=personal data=].
+
+</aside>
+
 # Principles for Privacy on the Web
 
 As indicated above, different [=contexts=] require different [=principles=]. This section describes a set
