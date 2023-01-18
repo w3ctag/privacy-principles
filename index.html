@@ -239,6 +239,17 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "href": "https://nytimes.github.io/std-cat/",
       "id": "cat"
     },
+    "CODE": {
+      "title": "Code and other laws of cyberspace",
+      "authors": [
+        "Lawrence Lessig"
+      ],
+      "publisher": "Basic Books",
+      "date": "1999",
+      "href": "https://lessig.org/product/code/",
+      "isbn": "9780465039128",
+      "id": "code"
+    },
     "Contextual-Integrity": {
       "title": "Privacy As Contextual Integrity",
       "authors": [
@@ -836,12 +847,17 @@ conclusion of the task force, the TAG intends to adopt this document as a Findin
 from the <cite><a data-matched-text="[[[Ethical-Web]]]" href="https://www.w3.org/2001/tag/doc/ethical-web-principles/">W3C TAG Ethical Web Principles</a></cite>: "Security and privacy are essential." While it focuses on privacy, this should
 not be taken as an indication that privacy is always more important than other ethical web principles, and
 this document doesn't address how to balance the different ethical web principles if they come into conflict.</p>
-<p>Privacy is covered by legal frameworks and this document recognises that existing data
-protection laws take precedence on legal matters. However, because the Web is global, we
-benefit from having shared concepts to guide its evolution as a system built for the people who use it
-([<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc8890" title="The Internet is for End Users">RFC8890</a></cite>]). A clear and well-defined view of privacy on the Web, informed by research,
-can hopefully help all the Web's participants in different legal regimes. Our shared
-understanding is that the law is a floor, not a ceiling.</p>
+<p>Privacy on the Web is primarily regulated by two forces: the architectural capabilities that the Web
+platform exposes (or does not), and laws in the various jurisdictions where the Web is used
+([<cite><a class="bibref" data-link-type="biblio" href="#bib-code" title="Code and other laws of cyberspace">CODE</a></cite>]). These regulatory mechanisms are separate; a law in one country does not (and should not)
+change the whole Web's architecture, and likewise Web specifications cannot override any given law
+(although they can affect how easy it is to create and enforce law). The Web is not merely an
+implementation of a particular legal privacy regime; it has distinct features and guarantees driven
+by shared values that often exceed legal requirements for privacy.</p>
+<p>However, the overall goal of privacy on the Web is served best when technology and law complement
+each other. This document seeks to establish shared concepts as an aid to technical efforts to
+regulate privacy on the web. It may also be useful in pursuing alignment with and between legal
+regulatory regimes.</p>
 </section>
 
 <section class="introductory" id="audiences-for-this-document"><div class="header-wrapper"><h2 id="audience">Audiences for this Document</h2><a class="self-link" href="#audience" aria-label="Permalink for this Section"></a></div>
@@ -2552,6 +2568,8 @@ Wendy Seltzer.</p>
       <a href="https://tess.oconnor.cx/2020/10/parties"><cite>Parties and browsers</cite></a>. Tess O'Connor. URL: <a href="https://tess.oconnor.cx/2020/10/parties">https://tess.oconnor.cx/2020/10/parties</a>
     </dd><dt id="bib-cat">[CAT]</dt><dd>
       <a href="https://nytimes.github.io/std-cat/"><cite>Content Aggregation Technology (CAT)</cite></a>. Robin Berjon; Justin Heideman. URL: <a href="https://nytimes.github.io/std-cat/">https://nytimes.github.io/std-cat/</a>
+    </dd><dt id="bib-code">[CODE]</dt><dd>
+      <a href="https://lessig.org/product/code/"><cite>Code and other laws of cyberspace</cite></a>. Lawrence Lessig.  Basic Books. 1999. URL: <a href="https://lessig.org/product/code/">https://lessig.org/product/code/</a>
     </dd><dt id="bib-consent-lackeys">[Consent-Lackeys]</dt><dd>
       <a href="https://www.theregister.com/2018/05/01/publishers_slam_google_ad_policy_gdpr_consent/"><cite>Publishers tell Google: We're not your consent lackeys</cite></a>. Rebecca Hill.  The Register. URL: <a href="https://www.theregister.com/2018/05/01/publishers_slam_google_ad_policy_gdpr_consent/">https://www.theregister.com/2018/05/01/publishers_slam_google_ad_policy_gdpr_consent/</a>
     </dd><dt id="bib-contextual-integrity">[Contextual-Integrity]</dt><dd>
@@ -2636,8 +2654,6 @@ Wendy Seltzer.</p>
       <a href="https://www.rfc-editor.org/rfc/rfc7258"><cite>Pervasive Monitoring Is an Attack</cite></a>. S. Farrell; H. Tschofenig.  IETF. May 2014. Best Current Practice. URL: <a href="https://www.rfc-editor.org/rfc/rfc7258">https://www.rfc-editor.org/rfc/rfc7258</a>
     </dd><dt id="bib-rfc7687">[RFC7687]</dt><dd>
       <a href="https://www.rfc-editor.org/rfc/rfc7687"><cite>Report from the Strengthening the Internet (STRINT) Workshop</cite></a>. S. Farrell; R. Wenning; B. Bos; M. Blanchet; H. Tschofenig.  IETF. December 2015. Informational. URL: <a href="https://www.rfc-editor.org/rfc/rfc7687">https://www.rfc-editor.org/rfc/rfc7687</a>
-    </dd><dt id="bib-rfc8890">[RFC8890]</dt><dd>
-      <a href="https://www.rfc-editor.org/rfc/rfc8890"><cite>The Internet is for End Users</cite></a>. M. Nottingham.  IETF. August 2020. Informational. URL: <a href="https://www.rfc-editor.org/rfc/rfc8890">https://www.rfc-editor.org/rfc/rfc8890</a>
     </dd><dt id="bib-rfc9110">[RFC9110]</dt><dd>
       <a href="https://www.rfc-editor.org/rfc/rfc9110"><cite>HTTP Semantics</cite></a>. R. Fielding, Ed.; M. Nottingham, Ed.; J. Reschke, Ed..  IETF. June 2022. Internet Standard. URL: <a href="https://www.rfc-editor.org/rfc/rfc9110">https://www.rfc-editor.org/rfc/rfc9110</a>
     </dd><dt id="bib-seeing-like-a-state">[Seeing-Like-A-State]</dt><dd>
