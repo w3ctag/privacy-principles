@@ -1235,53 +1235,36 @@ Note that this principle was further explored in an earlier TAG draft on [[[Data
   uses</a> for ongoing discussion and iteration on this principle.
 </aside>
 
-In maintaining duties of [=duty of protection|protection=], [=duty of discretion|discretion=] and [=duty of loyalty|loyalty=], user
-agents should be conservative when sharing data that isn't needed to satisfy a user's immediate goals.
+<div class="practice">
+<span class="practicelab">In maintaining duties of [=duty of protection|protection=], [=duty of discretion|discretion=] and [=duty of loyalty|loyalty=], user
+agents should take care that, when sharing data that isn't needed to satisfy a user's immediate goals, such information sharing
+aligns with the user's wishes and interests.</span>
+</div>
 
 On the Web, user agents and sites often communicate data outside what is needed to load and display a
-page. These <dfn data-lt="ancillary use">ancillary uses</dfn> include:
+page. These include:
 
-* browser telemetry, including:
-  * performance measurements,
-  * measuring feature usage,
-  * debugging site, browser and networking issues, and
-  * detecting security problems or attacks;
-* site telemetry, including:
-  * performance measurements,
-  * analytics about usage and visitors,
-  * debugging site issues, and
-  * detecting security problems or attacks;
-* advertising and social media sharing, including:
-  * measurement,
-  * targeting,
-  * operating ad auctions,
-  * personalization, and
-  * fraud prevention;
-* performance, including caching and prefetching content; or
-* software updates.
+<dfn>Telemetry and analytics</dfn>, including browser telemetry and site telemetry, are common
+categories of <dfn data-lt="ancillary use">ancillary uses</dfn> of data.
 
-<dfn>Telemetry and analytics</dfn>, including browser telemetry and site telemetry, are a common
-cluster of ancillary uses.
+In some cases, aggregate data collection mechanisms
+can be used in place of other
+more intrusive or costly data collection mechanisms.
 
-In some cases, mechanisms for sharing data are provided in order to minimize some other data
-collection mechanism identified as more intrusive or costly.
+Different users will want to share different kinds and amounts of data with websites.
+In some case, users might reasonably anticipate of some data being collected
+for an [=ancillary uses=] because of a contextual norm the user approves of. In such cases,
+users are identifying such ancillary uses as aligned with their own goals.
 
-Different users will want to share different kinds and amounts of data with websites. For some uses,
-some people would reasonably anticipate sharing such data or identify that use as a
-commonly-accepted contextual norm and some people would be willing to participate (for example,
-might have explicitly decided to contribute if they had the time and understanding to consider
-details about such a use) and some people would identify those uses as supporting their own goals.
-
-Aggregated or [=de-identified=] data is often more likely to be
-acceptable in these senses and often still contributes to the collective benefit while minimizing
-privacy threats to a particular individual (see <a href="#principle-collective-privacy">collective
-privacy</a>). But some people might object anyway, in particular instances or in general.
+Aggregated or [=de-identified=] data may contribute to a collective benefit in a way
+that reduces privacy threats to individuals (see <a href="#principle-collective-privacy">collective
+privacy</a>). This may make users more interested in contributing their data to aggregates.
 
 <aside class="example">
   Privacy-preserving measurement techniques may be used for aggregate calculations while minimizing
   the number of actors that have access to personal data about many individual people. Encryption and
-  privacy-preserving proxies may be used to minimize the number of actors that have access to personal data or
-  to hide the contents of personal data used for telemetry or other kinds of measurement. But even
+  privacy-preserving proxies may minimize the number of actors that have access to personal data or
+  to hide the contents of personal data. But even
   with those protections, some people may prefer not to participate in some kinds of measurement.
 
   Ongoing work on privacy-preserving technologies in the <abbr title="Internet Engineering Task
@@ -1298,10 +1281,8 @@ privacy</a>). But some people might object anyway, in particular instances or in
   goals and preferences about use of data about them.</span>
 </div>
 
-Agents should be careful, cautious, and conservative in applying data minimization to any
-[=ancillary use=], but also not burden the user with additional [=privacy
-labor=]. To that end, user agents may employ user research, solicitation of general preferences, and
-heuristics about sensitivity of data or trust in a particular context. To facilitate site
+Agents should be particularly careful, cautious, and aggresive in applying data
+minimization to data intended for [=ancillary uses=]. To facilitate site
 understanding of user preferences, user agents can provide browser-configurable signals to directly
 communicate common user preferences (such as a [=global opt-out=]).
 
@@ -1310,19 +1291,6 @@ communicate common user preferences (such as a [=global opt-out=]).
   should explicitly note the [=telemetry and analytics|analytics=] use to facilitate modal or general user
   choices.</span>
 </div>
-
-<aside class="example">
-  Sites and browsers wish to collect telemetry data to determine how frequently features are used or
-  to debug breakages, but the user agent does not want to burden the user with frequent consent
-  requests. A browser could use a first-run dialog to ask the user whether they generally support
-  sharing data to find bugs and improve the Web software they use, and then enable or disable
-  telemetry and reporting APIs based on the user's choice.
-</aside>
-
-<aside class="example">
-  A user visits a mapping website that they use regularly and clicks a locator icon; although
-  precise geolocation can be very sensitive, the user agent can readily determine the user's intent.
-</aside>
 
 Data exposed for [=ancillary uses=] including [=telemetry and analytics|telemetry=] may
 often reveal characteristics of user configuration, device, environment, or behavior that could be
