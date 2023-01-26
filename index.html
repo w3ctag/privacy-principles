@@ -1021,9 +1021,11 @@ corresponds to the same [=person=] as another [=identity=] which may have been
 observed either in another [=context=] or in the same [=context=] but at a
 different time.
 
-In order to uphold this principle, sometimes a [=user agent=] needs to *prevent*
-[=recognition=], for instance so that a [=site=] can't learn anything about its
-[=user=]'s behavior on *another* site, and sometimes the [=user agent=] needs to *support* [=recognition=],
+In order to uphold the above <a
+href="#principle-identity-per-context">principle</a>, sometimes a [=user agent=]
+needs to *prevent* [=recognition=], for instance so that one [=site=] can't
+learn anything about its [=user=]'s behavior on *another* site. Other times, the
+[=user agent=] needs to *support* [=recognition=],
 for instance to help its [=user=] *prove* to one [=site=] that they have a
 particular identity on another [=site=]. Similarly, a [=user agent=] can help its
 [=user=] to separate or communicate [=identity=] across *repeat* visits to the *same*
@@ -1040,6 +1042,12 @@ and [=identification=].
 
 [=Cross-context recognition=] is only [=appropriate=] when the person being [=recognized=]
 can reasonably expect that recognition to happen and can control whether it does.
+Note that a person can use a piece of identifying information in two different
+contexts (e.g. their email or phone number) without that implying that they're
+using the same identity in both contexts. Unless there's some other indication
+that they intended to use a single identity, it is [=inappropriate=] to
+[=recognize=] them using that information.
+
 Systems which [=recognize=] people across [=contexts=] need
 to be careful not to apply the [=principles=] of one [=context=] in ways that
 violate the [=principles=] around use of information acquired in a different
@@ -1048,11 +1056,6 @@ recognising them in different [=contexts=] may force traits into the open
 that reveal their vulnerability. For example, if you meet your therapist at a
 party, you expect them to have different discussion topics with you than they
 usually would, and possibly even to pretend they don't know you.
-
-Note that a user agent may not always be powerful enough to prevent [=cross-context
-recognition=]. For example, if two or more services [=inappropriately=]
-require an identifying piece of information (eg. an email address) in order
-to use the services.
 
 <dfn>Cross-site recognition</dfn> is when a site determines with high
 probability that a visit to the site comes from the same person as another
@@ -1074,14 +1077,12 @@ involve multiple [=partitions=]).
 
 ### User agent awareness of recognition {#user-agent-recognition}
 
-[=User agents=] can't, in general, determine exactly where [=context=]
-boundaries are within a site, or know how a site allows a [=person=] to
-express that they intend to change [=identities=], so the user agent can't enforce
-that sites actually separate [=identities=] at these boundaries.
-
-Instead, [=user agents=] may have to make some assumptions about the borders
-between [=contexts=]. By default, [=user agents=] define a
-<dfn>machine-enforceable context</dfn> or <dfn>partition</dfn> as:
+A <dfn>partition</dfn> is the [=user agent=]'s attempt to match how its user
+would understand a [=context=]. [=User agents=] don't have a perfect
+understanding of how their users experience the sites they visit, so they're
+often forced to approximate the boundaries between [=contexts=] when building
+[=partitions=]. In the absence of better information, a [=partition=] can be
+defined as:
 
 * A set of [=environments=] (roughly [^iframe^]s (including cross-site [^iframe^]s),
 workers, and top-level pages)
@@ -1093,49 +1094,16 @@ container, or container tab for user agents that support those features)
 cookies and other storage (which is sometimes automatic at the end of each
 session).
 
-Even though this is the default, [=user agents=] can further restrict their
-definition of [=machine-enforceable context=] to better aid their users for
-instance by partitioning identities per subdomain or site path when the
-structure of a given site is known.
+When a [=user agent=] does have better information, it should adjust its
+[=partitions=] accordingly, for instance by partitioning identities per
+subdomain or site path when the structure of a given site is known.
 
-Where possible, [=user agents=] should prevent people from being
-[=cross-context recognition|recognized=] across [=partitions=] unless they
-intend to be recognized.
-
-If a [=person=] visits two or more web pages from different [=partitions=],
-and does not explicitly express the same identity on each visit, the user agent should
-take steps to prevent [=same-site recognition=]. Note that sites can do harm
-even if they can't be *completely* certain that visits come from the same
-person. Further, note that sites must not assume that a person intends to be
-recognised across different sites simply because they are using the same
-identifier (such as an email address) with both or are relying on the same
-single sign-on identity.
-
-[=User agents=] and identity-related web features can do the following to help
-people present the [=identity=] that they want to present to a given website:
-
-* Do not reveal someone's profile information without their consent.
-* Do not leak someone's profiles, including which types of profiles they have,
-without their consent.
-* Make it clear to the user which identity is being presented on a given
-website.
-* Disclose the least amount of identifying information, e.g.:
-  * Only share the parts of someone's profile information that is needed by
-  the website.
-  * Minimize the shared data; for example if a website requires age for
-  verification, then share that the
-  user is older than the minimum age, as opposed to specific age or date of
-  birth.
-* Support the user's intent to present a directed identity or a site-specific
-identity. E.g., if the website requires an email, then the user may choose a
-directed identifier without disclosing their real email.
-
-This principle is limited in cases where preventing
-[=cross-context recognition|recognition=] would break fundamental aspects of
-the web. In many cases it's possible to change the design in a way that avoids
-the violation without breaking valid use cases, but for cases where that's not
-possible we refer you to [[[Privacy-Threat]]] which discusses tradeoffs in
-detail.
+Where possible, [=user agents=] should prevent people from being [=cross-context
+recognition|recognized=] across [=partitions=] unless they intend to be
+recognized. Note that sites can do harm even if they can't be completely certain
+that visits come from the same person, so [=user agents=] should also take steps
+to prevent such probabilistic recognition. The [[[Privacy-Threat]]] discusses
+the tradeoffs involved.
 
 ### Recognition Methods {#recognition-methods}
 
