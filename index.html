@@ -1046,7 +1046,8 @@ Note that a person can use a piece of identifying information in two different
 contexts (e.g. their email or phone number) without that implying that they're
 using the same identity in both contexts. Unless there's some other indication
 that they intended to use a single identity, it is [=inappropriate=] to
-[=recognize=] them using that information.
+[=recognize=] them using that information, or to seek extra identifying
+information to help with cross-context recognition.
 
 Systems which [=recognize=] people across [=contexts=] need
 to be careful not to apply the [=principles=] of one [=context=] in ways that
@@ -1104,6 +1105,11 @@ recognized. Note that sites can do harm even if they can't be completely certain
 that visits come from the same person, so [=user agents=] should also take steps
 to prevent such probabilistic recognition. The [[[Privacy-Threat]]] discusses
 the tradeoffs involved.
+
+If a [=user agent=] can tell that its user is using a particular identity on a
+website, for example because the user used an API like
+[[[credential-management-1]]] to log into the site, it should make that active
+identity clear to the user.
 
 ### Recognition Methods {#recognition-methods}
 
@@ -1195,6 +1201,17 @@ unexpected or harmful, minimization as a principle applies to personal data that
 known to be identifying, sensitive, or otherwise potentially harmful.
 
 Note that this principle was further explored in an earlier TAG draft on [[[Data-Minimization]]].
+
+<aside class="example" id="example-per-site-email">
+
+A simple `<input type="email">` element tends to provide two pieces of data.
+First, that its user can receive messages sent to that email address, but also
+that this is one of only a few email addresses associated with the user. The
+second piece of data makes the address useful for [=recognize|recognizing=]
+people across contexts. One way to remove that second piece of data, minimizing
+the data exposed, is to autogenerate a new email address for each context.
+
+</aside>
 
 ### Ancillary uses
 
