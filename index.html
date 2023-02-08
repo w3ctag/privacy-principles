@@ -1238,27 +1238,26 @@ Note that this principle was further explored in an earlier TAG draft on [[[Data
 <div class="practice">
 <span class="practicelab">In maintaining duties of [=duty of protection|protection=], [=duty of discretion|discretion=] and [=duty of loyalty|loyalty=], user
 agents should take care that, when sharing data that isn't needed to satisfy a user's immediate goals, such information sharing
-aligns with the user's wishes and interests.</span>
+aligns with the user's intents and interests.</span>
 </div>
 
-On the Web, user agents and sites often communicate data outside what is needed to load and display a
-page. These include:
+On the Web, user agents and sites can communicate data outside what is needed
+to load and display a page, data not needed to accomplish the user's intent on a site.
+This category of data is called <dfn data-lt="ancillary data">ancillary data</dfn>,
+and these uses are <dfn data-lt="ancillary use">ancillary uses</dfn> of data.
 
-<dfn>Telemetry and analytics</dfn>, including browser telemetry and site telemetry, are common
-categories of <dfn data-lt="ancillary use">ancillary uses</dfn> of data.
-
-In some cases, aggregate data collection mechanisms
-can be used in place of other
-more intrusive or costly data collection mechanisms.
-
-Different users will want to share different kinds and amounts of data with websites.
-In some case, users might reasonably anticipate of some data being collected
-for an [=ancillary uses=] because of a contextual norm the user approves of. In such cases,
+Different users will want to share different kinds and amounts of ancillary data
+with websites, including possibly no ancillary data.
+In some case, users might reasonably anticipate some data being collected
+for an [=ancillary uses=], possibly because of a contextual norm the user approves of. In such cases,
 users are identifying such ancillary uses as aligned with their own goals.
 
-Aggregated or [=de-identified=] data may contribute to a collective benefit in a way
+Aggregating or [=de-identification|de-identified=] of data may make users
+interested in sharing ancillary data in cases were the user was
+otherwise not interested. These techniques may be especially useful and important
+when ancillary data contributes to a collective benefit in a way
 that reduces privacy threats to individuals (see <a href="#principle-collective-privacy">collective
-privacy</a>). This may make users more interested in contributing their data to aggregates.
+privacy</a>).
 
 <aside class="example">
   Privacy-preserving measurement techniques may be used for aggregate calculations while minimizing
