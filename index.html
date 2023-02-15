@@ -1241,10 +1241,9 @@ agents should take care that, when sharing data that isn't needed to satisfy a u
 aligns with the user's intents and interests.</span>
 </div>
 
-On the Web, user agents and sites can communicate data outside what is needed
-to load and display a page, data not needed to accomplish the user's intent on a site.
-This category of data is called <dfn data-lt="ancillary data">ancillary data</dfn>,
-and these uses are <dfn data-lt="ancillary use">ancillary uses</dfn> of data.
+Websites sometimes use data in ways that aren't needed for the user's immediate
+goals. These uses are known as <dfn data-lt="ancillary use">ancillary uses</dfn>,
+and data that is primarily useful for [=ancillary uses=] is <dfn>ancillary data</dfn>.
 
 <aside class="example">
   Some examples of ancillary data include browser telemetry, site telemetry,
@@ -1253,11 +1252,8 @@ and these uses are <dfn data-lt="ancillary use">ancillary uses</dfn> of data.
 
 Different users will want to share different kinds and amounts of ancillary data
 with websites, including possibly no ancillary data.
-In some case, users might reasonably anticipate some data being collected
-for an [=ancillary uses=], possibly because of a contextual norm the user approves of. In such cases,
-users are identifying such ancillary uses as aligned with their own goals.
 
-Aggregating or [=de-identification|de-identified=] of data may make users
+Aggregation or [=de-identified|de-identification=] of data may make users
 interested in sharing ancillary data in cases were the user was
 otherwise not interested. These techniques may be especially useful and important
 when ancillary data contributes to a collective benefit in a way
@@ -1285,8 +1281,8 @@ privacy</a>).
   goals and preferences about use of data about them.</span>
 </div>
 
-Agents should be particularly careful, cautious, and aggresive in applying data
-minimization to data intended for [=ancillary uses=]. To facilitate site
+Agents should aggressively <a href="#data-minimization">minimize</a> [=ancillary data=].
+To facilitate site
 understanding of user preferences, user agents can provide browser-configurable signals to directly
 communicate common user preferences (such as a [=global opt-out=]).
 
