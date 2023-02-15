@@ -1080,8 +1080,8 @@ involve multiple [=partitions=]).
 
 A <dfn>partition</dfn> is the [=user agent=]'s attempt to match how its user
 would understand a [=context=]. [=User agents=] don't have a perfect
-understanding of how their users experience the sites they visit, so they're
-often forced to approximate the boundaries between [=contexts=] when building
+understanding of how their users experience the sites they visit, so they
+often need to approximate the boundaries between [=contexts=] when building
 [=partitions=]. In the absence of better information, a [=partition=] can be
 defined as:
 
@@ -1095,9 +1095,9 @@ container, or container tab for user agents that support those features)
 cookies and other storage (which is sometimes automatic at the end of each
 session).
 
-When a [=user agent=] does have better information, it should adjust its
-[=partitions=] accordingly, for instance by partitioning identities per
-subdomain or site path when the structure of a given site is known.
+When a [=user agent=] knows that a site includes multiple contexts, it
+should adjust its [=partitions=] accordingly, for instance by partitioning
+identities per subdomain or site path.
 
 Where possible, [=user agents=] should prevent people from being [=cross-context
 recognition|recognized=] across [=partitions=] unless they intend to be
