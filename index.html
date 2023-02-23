@@ -723,15 +723,15 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "id": "relational-governance"
     }
   },
-  "publishISODate": "2023-02-15T00:00:00.000Z",
-  "generatedSubtitle": "W3C Editor's Draft 15 February 2023"
+  "publishISODate": "2023-02-23T00:00:00.000Z",
+  "generatedSubtitle": "W3C Editor's Draft 23 February 2023"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED"></head>
 <body data-cite="html indexedDB service-workers fingerprinting-guidance url" class="h-entry informative"><div class="head">
     <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a></p>
     <h1 id="title" class="title">Privacy Principles</h1> 
-    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2023-02-15">15 February 2023</time></p>
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2023-02-23">23 February 2023</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
@@ -1489,58 +1489,41 @@ the data exposed, is to autogenerate a new email address for each context.</p>
   uses</a> for ongoing discussion and iteration on this principle.</p>
 </aside></div>
 
-<p>In maintaining duties of <a data-link-type="dfn" data-lt="duty of protection" href="#dfn-duty-of-protection" class="internalDFN" id="ref-for-dfn-duty-of-protection-1">protection</a>, <a data-link-type="dfn" data-lt="duty of discretion" href="#dfn-duty-of-discretion" class="internalDFN" id="ref-for-dfn-duty-of-discretion-1">discretion</a> and <a data-link-type="dfn" data-lt="duty of loyalty" href="#dfn-duty-of-loyalty" class="internalDFN" id="ref-for-dfn-duty-of-loyalty-1">loyalty</a>, user
-agents should be conservative when sharing data that isn't needed to satisfy a user's immediate goals.</p>
-<p>On the Web, user agents and sites often communicate data outside what is needed to load and display a
-page. These <dfn data-lt="ancillary use|ancillary uses" id="dfn-ancillary-use" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">ancillary uses</dfn> include:</p>
-<ul>
-<li>browser telemetry, including:<ul>
-<li>performance measurements,</li>
-<li>measuring feature usage,</li>
-<li>debugging site, browser and networking issues, and</li>
-<li>detecting security problems or attacks;</li>
-</ul>
-</li>
-<li>site telemetry, including:<ul>
-<li>performance measurements,</li>
-<li>analytics about usage and visitors,</li>
-<li>debugging site issues, and</li>
-<li>detecting security problems or attacks;</li>
-</ul>
-</li>
-<li>advertising and social media sharing, including:<ul>
-<li>measurement,</li>
-<li>targeting,</li>
-<li>operating ad auctions,</li>
-<li>personalization, and</li>
-<li>fraud prevention;</li>
-</ul>
-</li>
-<li>performance, including caching and prefetching content; or</li>
-<li>software updates.</li>
-</ul>
-<p><dfn id="dfn-telemetry-and-analytics" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Telemetry and analytics</dfn>, including browser telemetry and site telemetry, are a common
-cluster of ancillary uses.</p>
-<p>In some cases, mechanisms for sharing data are provided in order to minimize some other data
-collection mechanism identified as more intrusive or costly.</p>
-<p>Different users will want to share different kinds and amounts of data with websites. For some uses,
-some people would reasonably anticipate sharing such data or identify that use as a
-commonly-accepted contextual norm and some people would be willing to participate (for example,
-might have explicitly decided to contribute if they had the time and understanding to consider
-details about such a use) and some people would identify those uses as supporting their own goals.</p>
-<p>Aggregated or <a data-link-type="dfn" href="#dfn-de-identified" class="internalDFN" id="ref-for-dfn-de-identified-3">de-identified</a> data is often more likely to be
-acceptable in these senses and often still contributes to the collective benefit while minimizing
-privacy threats to a particular individual (see <a href="#principle-collective-privacy">collective
-privacy</a>). But some people might object anyway, in particular instances or in general.</p>
+<div class="practice principle"><a class="marker self-link" href="#bp-in-maintaining-duties-of-protection-discretion-and-loyalty-user-agents-should-share-data-only-when-it-either-is-needed-to-satisfy-a-user-s-immediate-goals-or-aligns-with-the-user-s-wishes-and-interests"><bdi lang="en">Principle</bdi></a>: <span class="practicelab" id="bp-in-maintaining-duties-of-protection-discretion-and-loyalty-user-agents-should-share-data-only-when-it-either-is-needed-to-satisfy-a-user-s-immediate-goals-or-aligns-with-the-user-s-wishes-and-interests">In maintaining duties of <a data-link-type="dfn" data-lt="duty of protection" href="#dfn-duty-of-protection" class="internalDFN" id="ref-for-dfn-duty-of-protection-1">protection</a>, <a data-link-type="dfn" data-lt="duty of discretion" href="#dfn-duty-of-discretion" class="internalDFN" id="ref-for-dfn-duty-of-discretion-1">discretion</a> and <a data-link-type="dfn" data-lt="duty of loyalty" href="#dfn-duty-of-loyalty" class="internalDFN" id="ref-for-dfn-duty-of-loyalty-1">loyalty</a>, user agents should share data only when it either is needed
+to satisfy a user's immediate goals or aligns with the user's wishes and
+interests.</span>
+
+</div>
+
+<p>Websites sometimes use data in ways that aren't needed for the user's immediate
+goals. These uses are known as <dfn data-lt="ancillary use|ancillary uses" id="dfn-ancillary-use" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">ancillary uses</dfn>,
+and data that is primarily useful for <a data-link-type="dfn" href="#dfn-ancillary-use" class="internalDFN" id="ref-for-dfn-ancillary-use-1">ancillary uses</a> is <dfn id="dfn-ancillary-data" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">ancillary data</dfn>.</p>
 <aside class="example" id="example-7"><div class="marker">
     <a class="self-link" href="#example-7">Example<bdi> 7</bdi></a>
   </div>
 
 
+<p>  Some examples of <a data-link-type="dfn" href="#dfn-ancillary-data" class="internalDFN" id="ref-for-dfn-ancillary-data-1">ancillary data</a> include data used for browser telemetry, site telemetry,
+  performance measurements, and software updates.</p>
+</aside>
+
+<p>Different users will want to share different kinds and amounts of <a data-link-type="dfn" href="#dfn-ancillary-data" class="internalDFN" id="ref-for-dfn-ancillary-data-2">ancillary data</a>
+with websites, including possibly no <a data-link-type="dfn" href="#dfn-ancillary-data" class="internalDFN" id="ref-for-dfn-ancillary-data-3">ancillary data</a>.</p>
+<p>Aggregation or <a data-link-type="dfn" data-lt="de-identified" href="#dfn-de-identified" class="internalDFN" id="ref-for-dfn-de-identified-3">de-identification</a> of data may make users
+interested in sharing <a data-link-type="dfn" href="#dfn-ancillary-data" class="internalDFN" id="ref-for-dfn-ancillary-data-4">ancillary data</a> in cases were the user was
+otherwise not interested. These techniques may be especially useful and important
+when <a data-link-type="dfn" href="#dfn-ancillary-data" class="internalDFN" id="ref-for-dfn-ancillary-data-5">ancillary data</a> contributes to a collective benefit in a way
+that reduces privacy threats to individuals (see <a href="#principle-collective-privacy">collective
+privacy</a>).</p>
+<aside class="example" id="example-8"><div class="marker">
+    <a class="self-link" href="#example-8">Example<bdi> 8</bdi></a>
+  </div>
+
+
 <p>  Privacy-preserving measurement techniques may be used for aggregate calculations while minimizing
   the number of actors that have access to personal data about many individual people. Encryption and
-  privacy-preserving proxies may be used to minimize the number of actors that have access to personal data or
-  to hide the contents of personal data used for telemetry or other kinds of measurement. But even
+  privacy-preserving proxies may minimize the number of actors that have access to personal data or
+  hide the contents of personal data. But even
   with those protections, some people may prefer not to participate in some kinds of measurement.</p>
 <p>  Ongoing work on privacy-preserving technologies in the <abbr title="Internet Engineering Task
   Force">IETF</abbr> <a href="https://datatracker.ietf.org/wg/ppm/about/"><abbr title="privacy-preserving measurement">ppm</abbr></a>, <abbr title="Internet Research Task
@@ -1554,19 +1537,20 @@ privacy</a>). But some people might object anyway, in particular instances or in
   
 </div>
 
-<p>Agents should be careful, cautious, and conservative in applying data minimization to any
-<a data-link-type="dfn" href="#dfn-ancillary-use" class="internalDFN" id="ref-for-dfn-ancillary-use-1">ancillary use</a>, but also not burden the user with additional <a data-link-type="dfn" href="#dfn-privacy-labor" class="internalDFN" id="ref-for-dfn-privacy-labor-5">privacy labor</a>. To that end, user agents may employ user research, solicitation of general preferences, and
-heuristics about sensitivity of data or trust in a particular context. To facilitate site
-understanding of user preferences, user agents can provide browser-configurable signals to directly
-communicate common user preferences (such as a <a data-link-type="dfn" href="#dfn-global-opt-out" class="internalDFN" id="ref-for-dfn-global-opt-out-5">global opt-out</a>).</p>
-<div class="practice principle"><a class="marker self-link" href="#bp-specifications-that-define-functionality-for-telemetry-and-analytics-should-explicitly-note-the-analytics-use-to-facilitate-modal-or-general-user-choices"><bdi lang="en">Principle</bdi></a>: <span class="practicelab" id="bp-specifications-that-define-functionality-for-telemetry-and-analytics-should-explicitly-note-the-analytics-use-to-facilitate-modal-or-general-user-choices">Specifications that define functionality for telemetry and analytics
-  should explicitly note the <a data-link-type="dfn" data-lt="telemetry and analytics" href="#dfn-telemetry-and-analytics" class="internalDFN" id="ref-for-dfn-telemetry-and-analytics-1">analytics</a> use to facilitate modal or general user
+<p>Agents should aggressively <a href="#data-minimization">minimize</a> <a data-link-type="dfn" href="#dfn-ancillary-data" class="internalDFN" id="ref-for-dfn-ancillary-data-6">ancillary data</a> and should avoid burdening the user with additional <a data-link-type="dfn" href="#dfn-privacy-labor" class="internalDFN" id="ref-for-dfn-privacy-labor-5">privacy labor</a>
+when deciding what <a data-link-type="dfn" href="#dfn-ancillary-data" class="internalDFN" id="ref-for-dfn-ancillary-data-7">ancillary data</a> to send. To that end, user agents may
+employ user research, solicitation of general preferences, and heuristics about
+sensitivity of data or trust in a particular context. To facilitate site
+understanding of user preferences, user agents can provide browser-configurable
+signals to directly communicate common user preferences (such as a <a data-link-type="dfn" href="#dfn-global-opt-out" class="internalDFN" id="ref-for-dfn-global-opt-out-5">global opt-out</a>).</p>
+<div class="practice principle"><a class="marker self-link" href="#bp-specifications-that-define-functionality-for-telemetry-and-analytics-should-explicitly-note-the-telemetry-and-analytics-use-to-facilitate-modal-or-general-user-choices"><bdi lang="en">Principle</bdi></a>: <span class="practicelab" id="bp-specifications-that-define-functionality-for-telemetry-and-analytics-should-explicitly-note-the-telemetry-and-analytics-use-to-facilitate-modal-or-general-user-choices">Specifications that define functionality for telemetry and analytics
+  should explicitly note the telemetry and analytics use to facilitate modal or general user
   choices.</span>
   
 </div>
 
-<aside class="example" id="example-8"><div class="marker">
-    <a class="self-link" href="#example-8">Example<bdi> 8</bdi></a>
+<aside class="example" id="example-9"><div class="marker">
+    <a class="self-link" href="#example-9">Example<bdi> 9</bdi></a>
   </div>
 
 
@@ -1577,16 +1561,7 @@ communicate common user preferences (such as a <a data-link-type="dfn" href="#df
   telemetry and reporting APIs based on the user's choice.</p>
 </aside>
 
-<aside class="example" id="example-9"><div class="marker">
-    <a class="self-link" href="#example-9">Example<bdi> 9</bdi></a>
-  </div>
-
-
-<p>  A user visits a mapping website that they use regularly and clicks a locator icon; although
-  precise geolocation can be very sensitive, the user agent can readily determine the user's intent.</p>
-</aside>
-
-<p>Data exposed for <a data-link-type="dfn" href="#dfn-ancillary-use" class="internalDFN" id="ref-for-dfn-ancillary-use-2">ancillary uses</a> including <a data-link-type="dfn" data-lt="telemetry and analytics" href="#dfn-telemetry-and-analytics" class="internalDFN" id="ref-for-dfn-telemetry-and-analytics-2">telemetry</a> may
+<p>Data exposed for <a data-link-type="dfn" href="#dfn-ancillary-use" class="internalDFN" id="ref-for-dfn-ancillary-use-2">ancillary uses</a> including telemetry and analytics may
 often reveal characteristics of user configuration, device, environment, or behavior that could be
 used as part of <a data-type="dfn" href="https://www.w3.org/TR/fingerprinting-guidance/#dfn-browser-fingerprinting">browser fingerprinting</a> to identify users across sites. Revealing user
 preferences or other heuristics in providing or disabling functionality could also contribute to a
@@ -2458,9 +2433,11 @@ should help its user present the <a data-link-type="dfn" href="#dfn-identity" cl
 they are in.</span></li><li><a class="marker self-link" href="#bp-sites-user-agents-and-other-actors-should-minimize-the-amount-of-personal-data-they-transfer-between-actors-on-the-web"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">Sites, user agents, and other actors should minimize the amount of
 <a href="#dfn-data" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-data-48">personal data</a> they transfer between actors on the Web.</span></li><li><a class="marker self-link" href="#bp-web-apis-should-be-designed-to-minimize-the-amount-of-data-that-sites-need-to-request-to-carry-out-their-users-goals-and-provide-granularity-and-user-controls-over-personal-data-that-is-communicated-to-sites"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">Web APIs should be designed to minimize the amount of data that sites need
 to request to carry out their users' goals and provide granularity and user controls over <a href="#dfn-data" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-data-49">personal
-data</a> that is communicated to sites.</span></li><li><a class="marker self-link" href="#bp-sites-and-user-agents-should-seek-to-understand-and-respect-people-s-goals-and-preferences-about-use-of-data-about-them"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">Sites and user agents should seek to understand and respect people's
-  goals and preferences about use of data about them.</span></li><li><a class="marker self-link" href="#bp-specifications-that-define-functionality-for-telemetry-and-analytics-should-explicitly-note-the-analytics-use-to-facilitate-modal-or-general-user-choices"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">Specifications that define functionality for telemetry and analytics
-  should explicitly note the <a data-link-type="dfn" data-lt="telemetry and analytics" href="#dfn-telemetry-and-analytics" class="internalDFN" id="ref-for-dfn-telemetry-and-analytics-3">analytics</a> use to facilitate modal or general user
+data</a> that is communicated to sites.</span></li><li><a class="marker self-link" href="#bp-in-maintaining-duties-of-protection-discretion-and-loyalty-user-agents-should-share-data-only-when-it-either-is-needed-to-satisfy-a-user-s-immediate-goals-or-aligns-with-the-user-s-wishes-and-interests"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">In maintaining duties of <a data-link-type="dfn" data-lt="duty of protection" href="#dfn-duty-of-protection" class="internalDFN" id="ref-for-dfn-duty-of-protection-2">protection</a>, <a data-link-type="dfn" data-lt="duty of discretion" href="#dfn-duty-of-discretion" class="internalDFN" id="ref-for-dfn-duty-of-discretion-2">discretion</a> and <a data-link-type="dfn" data-lt="duty of loyalty" href="#dfn-duty-of-loyalty" class="internalDFN" id="ref-for-dfn-duty-of-loyalty-2">loyalty</a>, user agents should share data only when it either is needed
+to satisfy a user's immediate goals or aligns with the user's wishes and
+interests.</span></li><li><a class="marker self-link" href="#bp-sites-and-user-agents-should-seek-to-understand-and-respect-people-s-goals-and-preferences-about-use-of-data-about-them"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">Sites and user agents should seek to understand and respect people's
+  goals and preferences about use of data about them.</span></li><li><a class="marker self-link" href="#bp-specifications-that-define-functionality-for-telemetry-and-analytics-should-explicitly-note-the-telemetry-and-analytics-use-to-facilitate-modal-or-general-user-choices"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">Specifications that define functionality for telemetry and analytics
+  should explicitly note the telemetry and analytics use to facilitate modal or general user
   choices.</span></li><li><a class="marker self-link" href="#bp-new-apis-can-add-ways-of-getting-acceptable-information-that-are-guarded-at-least-as-strongly-as-the-existing-ways"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">New APIs can add ways of getting acceptable
   information that are guarded at least as strongly as the existing ways.</span></li><li><a class="marker self-link" href="#bp-if-existing-apis-provide-access-to-some-information-but-we-have-a-plan-to-change-those-apis-to-prevent-that-access-new-apis-must-not-be-added-that-provide-that-same-information-without-extra-access-guards-that-make-the-access-to-the-information-acceptable"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">If existing APIs provide access to some information, but
   we have a plan to change those APIs to prevent that access, new APIs must not be added
@@ -2935,6 +2912,8 @@ Wendy Seltzer.</p>
       <ul>
     <li>
     <a href="#ref-for-dfn-duty-of-protection-1" title="§ 2.2.1 Ancillary uses">§ 2.2.1 Ancillary uses</a> 
+  </li><li>
+    <a href="#ref-for-dfn-duty-of-protection-2" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> 
   </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-duty-of-discretion" aria-label="Links in this document to definition: Duty of Discretion">
@@ -2947,6 +2926,8 @@ Wendy Seltzer.</p>
       <ul>
     <li>
     <a href="#ref-for-dfn-duty-of-discretion-1" title="§ 2.2.1 Ancillary uses">§ 2.2.1 Ancillary uses</a> 
+  </li><li>
+    <a href="#ref-for-dfn-duty-of-discretion-2" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> 
   </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-duty-of-honesty" aria-label="Links in this document to definition: Duty of Honesty">
@@ -2969,6 +2950,8 @@ Wendy Seltzer.</p>
       <ul>
     <li>
     <a href="#ref-for-dfn-duty-of-loyalty-1" title="§ 2.2.1 Ancillary uses">§ 2.2.1 Ancillary uses</a> 
+  </li><li>
+    <a href="#ref-for-dfn-duty-of-loyalty-2" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> 
   </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-self-dealing" aria-label="Links in this document to definition: self-dealing">
@@ -3133,18 +3116,16 @@ Wendy Seltzer.</p>
     <a href="#ref-for-dfn-ancillary-use-1" title="§ 2.2.1 Ancillary uses">§ 2.2.1 Ancillary uses</a> <a href="#ref-for-dfn-ancillary-use-2" title="Reference 2">(2)</a> 
   </li>
   </ul>
-    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-telemetry-and-analytics" aria-label="Links in this document to definition: Telemetry and analytics">
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-ancillary-data" aria-label="Links in this document to definition: ancillary data">
       <span class="caret"></span>
       <div>
-        <a class="self-link" href="#dfn-telemetry-and-analytics" aria-label="Permalink for definition: Telemetry and analytics. Activate to close this dialog.">Permalink</a>
+        <a class="self-link" href="#dfn-ancillary-data" aria-label="Permalink for definition: ancillary data. Activate to close this dialog.">Permalink</a>
          
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-telemetry-and-analytics-1" title="§ 2.2.1 Ancillary uses">§ 2.2.1 Ancillary uses</a> <a href="#ref-for-dfn-telemetry-and-analytics-2" title="Reference 2">(2)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-telemetry-and-analytics-3" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> 
+    <a href="#ref-for-dfn-ancillary-data-1" title="§ 2.2.1 Ancillary uses">§ 2.2.1 Ancillary uses</a> <a href="#ref-for-dfn-ancillary-data-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-ancillary-data-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-ancillary-data-4" title="Reference 4">(4)</a> <a href="#ref-for-dfn-ancillary-data-5" title="Reference 5">(5)</a> <a href="#ref-for-dfn-ancillary-data-6" title="Reference 6">(6)</a> <a href="#ref-for-dfn-ancillary-data-7" title="Reference 7">(7)</a> 
   </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-access-guard" aria-label="Links in this document to definition: guard">
