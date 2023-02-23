@@ -1294,6 +1294,14 @@ communicate common user preferences (such as a [=global opt-out=]).
   choices.</span>
 </div>
 
+<aside class="example">
+  Sites and browsers wish to collect telemetry data to determine how frequently features are used or
+  to debug breakages, but the user agent does not want to burden the user with frequent consent
+  requests. A browser could use a first-run dialog to ask the user whether they generally support
+  sharing data to find bugs and improve the Web software they use, and then enable or disable
+  telemetry and reporting APIs based on the user's choice.
+</aside>
+
 Data exposed for [=ancillary uses=] including telemetry and analytics may
 often reveal characteristics of user configuration, device, environment, or behavior that could be
 used as part of <a>browser fingerprinting</a> to identify users across sites. Revealing user
