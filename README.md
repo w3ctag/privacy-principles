@@ -47,7 +47,9 @@ e.g.
 * Jonathan Kingston (DuckDuckGo)
 * Theresa O'Connor (Apple, TAG, PrivacyCG)
 * Christine Runnegar (W3C Invited Expert, PING)
+* Wendy Seltzer (Invited Expert)
 * Pete Snyder (Brave, PING)
+* Sam Weiler (Invited Expert)
 * Jeffrey Yasskin (Google, PING)
 
 …with support from W3C Team.
