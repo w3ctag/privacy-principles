@@ -1101,15 +1101,20 @@ identities per subdomain or site path.
 
 Where possible, [=user agents=] should prevent people from being [=cross-context
 recognition|recognized=] across [=partitions=] unless they intend to be
-recognized. Note that sites can do harm even if they can't be completely certain
-that visits come from the same person, so [=user agents=] should also take steps
-to prevent such probabilistic recognition. The [[[Privacy-Threat]]] discusses
-the tradeoffs involved. Note that if a [=user agent=] blocks [=recognition=]
-between different sites but doesn't notice when a single site contains multiple
-[=contexts=], this can encourage [=actors=] to bundle multiple contexts into a
-single site and privilege the [=actors=] who can do so. These are both harmful,
-but that harm is likely less than the harm from allowing [=cross-site
-recognition=].
+recognized. Note that:
+
+* Sites can do harm even if they can't be completely certain
+  that visits come from the same person, so [=user agents=] should also take steps
+  to prevent such probabilistic recognition. The [[[Privacy-Threat]]] discusses
+  the tradeoffs involved.
+* If a [=user agent=] blocks [=recognition=] between different sites but doesn't
+  notice when a single site contains multiple [=contexts=], this can encourage
+  [=actors=] to bundle multiple contexts into a single site and privilege the
+  [=actors=] who can do so. Despite these harms, even if a [=user agent=] can't
+  always block [=cross-context recognition=] within a single site, it should
+  still prevent [=cross-site recognition=] when it can. By having [=user
+  agents=] solve the problems that technical measures can solve, we let actors
+  using other approaches focus on the problems they're best at.
 
 If a [=user agent=] can tell that its user is using a particular identity on a
 website, for example because the user used an API like
