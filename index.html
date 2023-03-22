@@ -1095,16 +1095,27 @@ container, or container tab for user agents that support those features)
 cookies and other storage (which is sometimes automatic at the end of each
 session).
 
-When a [=user agent=] knows that a site includes multiple contexts, it
-should adjust its [=partitions=] accordingly, for instance by partitioning
-identities per subdomain or site path.
+When a [=user agent=] knows that a site includes multiple contexts, it should
+adjust its [=partitions=] accordingly, for instance by partitioning identities
+per subdomain or site path. User agents should work to improve their ability to
+distinguish contexts within a site.
 
 Where possible, [=user agents=] should prevent people from being [=cross-context
 recognition|recognized=] across [=partitions=] unless they intend to be
-recognized. Note that sites can do harm even if they can't be completely certain
-that visits come from the same person, so [=user agents=] should also take steps
-to prevent such probabilistic recognition. The [[[Privacy-Threat]]] discusses
-the tradeoffs involved.
+recognized. Note that:
+
+* Sites can do harm even if they can't be completely certain
+  that visits come from the same person, so [=user agents=] should also take steps
+  to prevent such probabilistic recognition. The [[[Privacy-Threat]]] discusses
+  the tradeoffs involved.
+* If a [=user agent=] blocks [=recognition=] between different sites but doesn't
+  notice when a single site contains multiple [=contexts=], this can encourage
+  [=actors=] to bundle multiple contexts into a single site and privilege the
+  [=actors=] who can do so. Despite these harms, even if a [=user agent=] can't
+  always block [=cross-context recognition=] within a single site, it should
+  still prevent the [=cross-context recognition=] it can detect. By having
+  [=user agents=] solve the problems that technical measures can solve, we let
+  actors using other approaches focus on the problems they're best at.
 
 If a [=user agent=] can tell that its user is using a particular identity on a
 website, for example because the user used an API like
