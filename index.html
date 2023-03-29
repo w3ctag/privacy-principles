@@ -727,7 +727,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   "generatedSubtitle": "W3C Editor's Draft 29 March 2023"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED"></head>
-<body data-cite="html indexedDB service-workers fingerprinting-guidance url" class="h-entry informative"><div class="head">
+<body data-cite="html indexedDB service-workers fingerprinting-guidance url infra" class="h-entry informative"><div class="head">
     <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a></p>
     <h1 id="title" class="title">Privacy Principles</h1> 
@@ -1000,7 +1000,7 @@ rectify the <dfn class="export" data-export="" data-plurals="automation asymmetr
 <a data-link-type="dfn" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-7">data processing</a> but <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-11">people</a> have to take manual action to prevent it. A good example of a
 <a data-link-type="dfn" href="#dfn-global-opt-out" class="internalDFN" id="ref-for-dfn-global-opt-out-2">global opt-out</a> mechanism is the <em>Global Privacy Control</em> [<cite><a class="bibref" data-link-type="biblio" href="#bib-gpc" title="Global Privacy Control (GPC)">GPC</a></cite>].</p>
 <p>Conceptually, a <a data-link-type="dfn" href="#dfn-global-opt-out" class="internalDFN" id="ref-for-dfn-global-opt-out-3">global opt-out</a> mechanism is an automaton operating as part of the
-<a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-1">user agent</a>, which is to say that it is equivalent to a robot that would carry out a
+<a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a>, which is to say that it is equivalent to a robot that would carry out a
 <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-12">person</a>'s bidding by pressing an <a data-link-type="dfn" href="#dfn-opt-out" class="internalDFN" id="ref-for-dfn-opt-out-2">opt-out</a> button with every interaction that the
 <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-13">person</a> has with a site, or more generally conveys an expression of the <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-14">person</a>'s
 rights in a relevant jurisdiction. (For instance, under the [<cite><a class="bibref" data-link-type="biblio" href="#bib-gdpr" title="General Data Protection Regulations (GDPR) / Regulation (EU) 2016/679">GDPR</a></cite>], the <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-15">person</a> may be
@@ -1056,7 +1056,7 @@ This can produce self-reinforcing loops that can damage both individuals and
 groups ([<cite><a class="bibref" data-link-type="biblio" href="#bib-seeing-like-a-state" title="Seeing Like a State: How Certain Schemes to Improve the Human Condition Have Failed">Seeing-Like-A-State</a></cite>]).</p>
 <p>In general, collective issues in <a data-link-type="dfn" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-8">data</a> require collective solutions. Web standards help with
 <a data-link-type="dfn" href="#dfn-governance" class="internalDFN" id="ref-for-dfn-governance-2">data governance</a> by defining structural controls
-in <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-2">user agents</a> and establishing or delegating to institutions that can handle issues of <a data-link-type="dfn" href="#dfn-privacy" class="internalDFN" id="ref-for-dfn-privacy-5">privacy</a>.
+in <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agents</a> and establishing or delegating to institutions that can handle issues of <a data-link-type="dfn" href="#dfn-privacy" class="internalDFN" id="ref-for-dfn-privacy-5">privacy</a>.
 <a data-link-type="dfn" href="#dfn-governance" class="internalDFN" id="ref-for-dfn-governance-3">Governance</a> will often struggle to achieve its goals if it works primarily by
 increasing <em>individual</em> control instead of by collective action.</p>
 <p>Collecting data at large scales can have significant pro-social outcomes. Problems tend to
@@ -1101,19 +1101,19 @@ to ensure that "<i>broad testing and audit continues to be possible</i>" where
 of access to data (including data
 derived from one's personal data) as well as mechanisms to explain the outcomes of automated
 decisions.</p>
-</section></section><section id="people-s-agents"><div class="header-wrapper"><h3 id="user-agents"><bdi class="secno">1.3 </bdi>People's Agents</h3><a class="self-link" href="#user-agents" aria-label="Permalink for Section 1.3"></a></div><p>The <dfn data-plurals="user agents" id="dfn-user-agent" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">user agent</dfn> acts as an intermediary between a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-31">person</a> (its <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-32">user</a>) and the web.
-<a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-3">User agents</a> implement, to the extent possible, the <a data-link-type="dfn" href="#dfn-principles" class="internalDFN" id="ref-for-dfn-principles-11">principles</a> that collective governance
+</section></section><section id="people-s-agents"><div class="header-wrapper"><h3 id="user-agents"><bdi class="secno">1.3 </bdi>People's Agents</h3><a class="self-link" href="#user-agents" aria-label="Permalink for Section 1.3"></a></div><p>A <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> acts as an intermediary between a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-31">person</a> (its <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-32">user</a>) and the web.
+<a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">User agents</a> implement, to the extent possible, the <a data-link-type="dfn" href="#dfn-principles" class="internalDFN" id="ref-for-dfn-principles-11">principles</a> that collective governance
 establishes in favour of individuals. They seek to prevent the creation of asymmetries of
 information, and serve their <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-33">user</a> by providing them with automation to rectify
 <a data-link-type="dfn" href="#dfn-automation-asymmetry" class="internalDFN" id="ref-for-dfn-automation-asymmetry-1">automation asymmetries</a>. Where possible, they protect their <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-34">user</a> from receiving
 intrusive messages.</p>
-<p>The <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-4">user agent</a> is expected to align fully with the <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-35">person</a> using it and to operate exclusively
-in that <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-36">person</a>'s interest. It is <em>not</em> the <a data-link-type="dfn" href="#dfn-first-party-0" class="internalDFN" id="ref-for-dfn-first-party-0-1">first party</a>. The <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-5">user agent</a> serves the
+<p>The <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> is expected to align fully with the <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-35">person</a> using it and to operate exclusively
+in that <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-36">person</a>'s interest. It is <em>not</em> the <a data-link-type="dfn" href="#dfn-first-party-0" class="internalDFN" id="ref-for-dfn-first-party-0-1">first party</a>. The <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> serves the
 <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-37">person</a> as a <dfn id="dfn-trustworthy-agent" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">trustworthy agent</dfn>:
 it always puts that <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-38">person</a>'s interest first. In some occasions, this can mean protecting
 that <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-39">person</a> from themselves by preventing them from carrying out a dangerous decision,
 or by slowing down the person in their decision. For example, the
-<a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-6">user agent</a> will make it difficult for someone to connect to a site if it can't verify
+<a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> will make it difficult for someone to connect to a site if it can't verify
 that the site is authentic. It will check that that <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-40">person</a> really intends to expose a
 sensitive device to a page. It will prevent that <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-41">person</a> from consenting to the permanent
 monitoring of their behaviour. Its <dfn class="export" data-export="" id="dfn-user-agent-duties" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">user agent duties</dfn> include
@@ -1121,25 +1121,25 @@ monitoring of their behaviour. Its <dfn class="export" data-export="" id="dfn-us
 <dl>
   <dt><dfn class="export" data-export="" id="dfn-duty-of-protection" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Duty of Protection</dfn></dt>
   <dd>
-    Protection requires <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-7">user agents</a> to actively protect their <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-42">user</a>'s data, beyond
+    Protection requires <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agents</a> to actively protect their <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-42">user</a>'s data, beyond
     simple security measures. It is insufficient to just encrypt at rest and in transit,
-    but the <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-8">user agent</a> must also limit retention, help ensure that only strictly
+    but the <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> must also limit retention, help ensure that only strictly
     necessary data is collected, and require guarantees from any <a data-link-type="dfn" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-17">actor</a> that the user agent can
     reasonably be aware that data is shared to.
   </dd>
   <dt><dfn class="export" data-export="" id="dfn-duty-of-discretion" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Duty of Discretion</dfn></dt>
   <dd>
-    Discretion requires the <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-9">user agent</a> to make best efforts to enforce
+    Discretion requires the <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> to make best efforts to enforce
     <a data-link-type="dfn" href="#dfn-principles" class="internalDFN" id="ref-for-dfn-principles-12">principles</a> by taking care in the ways it discloses the <a data-link-type="dfn" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-10">personal data</a>
     that it manages. Discretion is not
     confidentiality or secrecy: trust
-    can be preserved even when the <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-10">user agent</a> shares some <a data-link-type="dfn" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-11">personal data</a>, so long as
+    can be preserved even when the <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> shares some <a data-link-type="dfn" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-11">personal data</a>, so long as
     it is done in an <a data-link-type="dfn" href="#dfn-appropriately" class="internalDFN" id="ref-for-dfn-appropriately-5">appropriately</a> discreet manner.
   </dd>
   <dt><dfn class="export" data-export="" id="dfn-duty-of-honesty" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Duty of Honesty</dfn></dt>
   <dd>
-    Honesty requires that the <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-11">user agent</a> try to give its <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-43">user</a>
-    information of which the <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-12">user agent</a> can reasonably be aware, that is relevant to
+    Honesty requires that the <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> try to give its <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-43">user</a>
+    information of which the <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> can reasonably be aware, that is relevant to
     them and that will increase their
     autonomy, as long as they can understand it and there's an appropriate
     time to do so. This is almost never when the <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-44">person</a> is trying to do something else such as
@@ -1148,14 +1148,14 @@ monitoring of their behaviour. Its <dfn class="export" data-export="" id="dfn-us
     can't hide relevant information in complex legal notices and it can't rely on
     very short summaries provided in a consent dialog.
     If the person has provided <a data-link-type="dfn" href="#dfn-opt-in" class="internalDFN" id="ref-for-dfn-opt-in-12">consent</a> to <a data-link-type="dfn" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-15">processing</a> of their <a data-link-type="dfn" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-12">personal data</a>,
-    the <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-13">user agent</a> should inform the <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-45">person</a> of ongoing <a data-link-type="dfn" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-16">processing</a>, with a
+    the <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> should inform the <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-45">person</a> of ongoing <a data-link-type="dfn" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-16">processing</a>, with a
     level of obviousness that is proportional to the reasonably foreseeable impact of the processing.
   </dd>
   <dt><dfn class="export" data-export="" id="dfn-duty-of-loyalty" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Duty of Loyalty</dfn></dt>
   <dd>
-    Because the <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-14">user agent</a> is a <a data-link-type="dfn" href="#dfn-trustworthy-agent" class="internalDFN" id="ref-for-dfn-trustworthy-agent-1">trustworthy agent</a>, it is held to be loyal to the
-    <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-46">person</a> using it in all situations, including in preference to the <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-15">user agent</a>'s implementer.
-    When a <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-16">user agent</a> carries out <a data-link-type="dfn" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-17">processing</a> that is not in the <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-47">person</a>'s
+    Because the <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> is a <a data-link-type="dfn" href="#dfn-trustworthy-agent" class="internalDFN" id="ref-for-dfn-trustworthy-agent-1">trustworthy agent</a>, it is held to be loyal to the
+    <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-46">person</a> using it in all situations, including in preference to the <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a>'s implementer.
+    When a <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> carries out <a data-link-type="dfn" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-17">processing</a> that is not in the <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-47">person</a>'s
     interest but instead benefits another <a data-link-type="dfn" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-18">actor</a> (such as the user agent's implementer) that behaviour is
     known as <dfn id="dfn-self-dealing" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">self-dealing</dfn>. Behaviour can be <a data-link-type="dfn" href="#dfn-self-dealing" class="internalDFN" id="ref-for-dfn-self-dealing-3">self-dealing</a> even if it is done at the
     same time as <a data-link-type="dfn" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-18">processing</a> that is in the <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-48">person</a>'s interest, what matters is that it
@@ -1164,10 +1164,10 @@ monitoring of their behaviour. Its <dfn class="export" data-export="" id="dfn-us
   </dd>
 </dl>
 
-<p>These duties ensure the <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-17">user agent</a> will <em>care</em> for its <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-50">user</a>. In academic
+<p>These duties ensure the <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> will <em>care</em> for its <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-50">user</a>. In academic
 research, this relationship with a <a data-link-type="dfn" href="#dfn-trustworthy-agent" class="internalDFN" id="ref-for-dfn-trustworthy-agent-2">trustworthy agent</a> is often described as "fiduciary"
 [<cite><a class="bibref" data-link-type="biblio" href="#bib-fiduciary-ua" title="The Fiduciary Duties of User Agents">Fiduciary-UA</a></cite>]. Some jurisdictions may have a distinct legal meaning for "fiduciary."</p>
-<p>Many of the <a data-link-type="dfn" href="#dfn-principles" class="internalDFN" id="ref-for-dfn-principles-13">principles</a> described in the rest of this document extend the <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-18">user agent</a>'s duties and
+<p>Many of the <a data-link-type="dfn" href="#dfn-principles" class="internalDFN" id="ref-for-dfn-principles-13">principles</a> described in the rest of this document extend the <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a>'s duties and
 make them more precise.</p>
 </section><section id="incorporating-different-privacy-principles"><div class="header-wrapper"><h3 id="balancing"><bdi class="secno">1.4 </bdi>Incorporating Different Privacy Principles</h3><a class="self-link" href="#balancing" aria-label="Permalink for Section 1.4"></a></div><p>While privacy principles are designed to work together and support each other,
 occasionally a proposal to improve how a system follows one privacy principle may reduce
@@ -1299,12 +1299,12 @@ the success of advertising campaigns. Even this small amount of information is s
 of <a data-link-type="dfn" href="#dfn-principles" class="internalDFN" id="ref-for-dfn-principles-15">principles</a> designed to apply to the Web <a data-link-type="dfn" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-5">context</a> in general. The Web is a big place, and we
 fully expect more specific <a data-link-type="dfn" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-6">contexts</a> of the Web to add their own <a data-link-type="dfn" href="#dfn-principles" class="internalDFN" id="ref-for-dfn-principles-16">principles</a> to further constrain
 <a data-link-type="dfn" href="#dfn-information" class="internalDFN" id="ref-for-dfn-information-9">information flows</a>.</p>
-<p>To the extent possible, <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-19">user agents</a> are expected to enforce these <a data-link-type="dfn" href="#dfn-principles" class="internalDFN" id="ref-for-dfn-principles-17">principles</a>. However, this is not
+<p>To the extent possible, <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agents</a> are expected to enforce these <a data-link-type="dfn" href="#dfn-principles" class="internalDFN" id="ref-for-dfn-principles-17">principles</a>. However, this is not
 always possible and additional enforcement mechanisms are needed. One particularly salient issue
 is that a <a data-link-type="dfn" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-7">context</a> is not defined in terms of who owns or controls it. Sharing
 <a data-link-type="dfn" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-14">data</a> between different <a data-link-type="dfn" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-8">contexts</a> of a single company is just as much a <a data-link-type="dfn" href="#dfn-privacy-violation" class="internalDFN" id="ref-for-dfn-privacy-violation-2">privacy violation</a> as
 if the same data were shared between unrelated <a data-link-type="dfn" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-19">actors</a>.</p>
-<section id="identity-on-the-web"><div class="header-wrapper"><h3 id="identity"><bdi class="secno">2.1 </bdi>Identity on the Web</h3><a class="self-link" href="#identity" aria-label="Permalink for Section 2.1"></a></div><div class="practice principle"><a class="marker self-link" href="#principle-identity-per-context"><bdi lang="en">Principle</bdi></a>: <span class="practicelab" id="principle-identity-per-context">A <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-20">user agent</a>
+<section id="identity-on-the-web"><div class="header-wrapper"><h3 id="identity"><bdi class="secno">2.1 </bdi>Identity on the Web</h3><a class="self-link" href="#identity" aria-label="Permalink for Section 2.1"></a></div><div class="practice principle"><a class="marker self-link" href="#principle-identity-per-context"><bdi lang="en">Principle</bdi></a>: <span class="practicelab" id="principle-identity-per-context">A <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a>
 should help its user present the <a data-link-type="dfn" href="#dfn-identity" class="internalDFN" id="ref-for-dfn-identity-2">identity</a> they want in each <a data-link-type="dfn" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-9">context</a>
 they are in.</span>
 
@@ -1322,12 +1322,12 @@ for following them through time.</p>
 corresponds to the same <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-52">person</a> as another <a data-link-type="dfn" href="#dfn-identity" class="internalDFN" id="ref-for-dfn-identity-4">identity</a> which may have been
 observed either in another <a data-link-type="dfn" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-11">context</a> or in the same <a data-link-type="dfn" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-12">context</a> but at a
 different time.</p>
-<p>In order to uphold the above <a href="#principle-identity-per-context">principle</a>, sometimes a <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-21">user agent</a>
+<p>In order to uphold the above <a href="#principle-identity-per-context">principle</a>, sometimes a <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a>
 needs to <em>prevent</em> <a data-link-type="dfn" href="#dfn-recognize" class="internalDFN" id="ref-for-dfn-recognize-1">recognition</a>, for instance so that one <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">site</a> can't
 learn anything about its <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-53">user</a>'s behavior on <em>another</em> site. Other times, the
-<a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-22">user agent</a> needs to <em>support</em> <a data-link-type="dfn" href="#dfn-recognize" class="internalDFN" id="ref-for-dfn-recognize-2">recognition</a>,
+<a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> needs to <em>support</em> <a data-link-type="dfn" href="#dfn-recognize" class="internalDFN" id="ref-for-dfn-recognize-2">recognition</a>,
 for instance to help its <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-54">user</a> <em>prove</em> to one <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">site</a> that they have a
-particular identity on another <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">site</a>. Similarly, a <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-23">user agent</a> can help its
+particular identity on another <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">site</a>. Similarly, a <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> can help its
 <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-55">user</a> to separate or communicate <a data-link-type="dfn" href="#dfn-identity" class="internalDFN" id="ref-for-dfn-identity-5">identity</a> across <em>repeat</em> visits to the <em>same</em>
 <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">site</a>.</p>
 <section id="recognition-types-0"><div class="header-wrapper"><h4 id="recognition-types"><bdi class="secno">2.1.1 </bdi>Recognition Types</h4><a class="self-link" href="#recognition-types" aria-label="Permalink for Section 2.1.1"></a></div><p>There are several types of <a data-link-type="dfn" href="#dfn-recognize" class="internalDFN" id="ref-for-dfn-recognize-3">recognition</a> that may take place. These rely on
@@ -1365,8 +1365,8 @@ variety of means detailed in <a href="#recognition-methods" data-matched-text="[
 <a data-link-type="dfn" href="#dfn-cross-context-recognition" class="internalDFN" id="ref-for-dfn-cross-context-recognition-3">cross-context recognition</a> (and always <a data-link-type="dfn" href="#dfn-recognize" class="internalDFN" id="ref-for-dfn-recognize-9">recognizes</a> across <a data-link-type="dfn" href="#dfn-partition" class="internalDFN" id="ref-for-dfn-partition-1">partitions</a>); and
 <a data-link-type="dfn" href="#dfn-same-site-recognition" class="internalDFN" id="ref-for-dfn-same-site-recognition-1">same-site recognition</a> is sometimes <a data-link-type="dfn" href="#dfn-cross-context-recognition" class="internalDFN" id="ref-for-dfn-cross-context-recognition-4">cross-context recognition</a> (and may or may not
 involve multiple <a data-link-type="dfn" href="#dfn-partition" class="internalDFN" id="ref-for-dfn-partition-2">partitions</a>).</p>
-</section><section id="user-agent-awareness-of-recognition"><div class="header-wrapper"><h4 id="user-agent-recognition"><bdi class="secno">2.1.2 </bdi>User agent awareness of recognition</h4><a class="self-link" href="#user-agent-recognition" aria-label="Permalink for Section 2.1.2"></a></div><p>A <dfn data-plurals="partitions" id="dfn-partition" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">partition</dfn> is the <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-24">user agent</a>'s attempt to match how its user
-would understand a <a data-link-type="dfn" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-19">context</a>. <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-25">User agents</a> don't have a perfect
+</section><section id="user-agent-awareness-of-recognition"><div class="header-wrapper"><h4 id="user-agent-recognition"><bdi class="secno">2.1.2 </bdi>User agent awareness of recognition</h4><a class="self-link" href="#user-agent-recognition" aria-label="Permalink for Section 2.1.2"></a></div><p>A <dfn data-plurals="partitions" id="dfn-partition" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">partition</dfn> is the <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a>'s attempt to match how its user
+would understand a <a data-link-type="dfn" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-19">context</a>. <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">User agents</a> don't have a perfect
 understanding of how their users experience the sites they visit, so they
 often need to approximate the boundaries between <a data-link-type="dfn" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-20">contexts</a> when building
 <a data-link-type="dfn" href="#dfn-partition" class="internalDFN" id="ref-for-dfn-partition-3">partitions</a>. In the absence of better information, a <a data-link-type="dfn" href="#dfn-partition" class="internalDFN" id="ref-for-dfn-partition-4">partition</a> can be
@@ -1382,27 +1382,27 @@ container, or container tab for user agents that support those features)</li>
 cookies and other storage (which is sometimes automatic at the end of each
 session).</li>
 </ul>
-<p>When a <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-26">user agent</a> knows that a site includes multiple contexts, it should
+<p>When a <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> knows that a site includes multiple contexts, it should
 adjust its <a data-link-type="dfn" href="#dfn-partition" class="internalDFN" id="ref-for-dfn-partition-5">partitions</a> accordingly, for instance by partitioning identities
 per subdomain or site path. User agents should work to improve their ability to
 distinguish contexts within a site.</p>
-<p>Where possible, <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-27">user agents</a> should prevent people from being <a data-link-type="dfn" data-lt="cross-context recognition" href="#dfn-cross-context-recognition" class="internalDFN" id="ref-for-dfn-cross-context-recognition-5">recognized</a> across <a data-link-type="dfn" href="#dfn-partition" class="internalDFN" id="ref-for-dfn-partition-6">partitions</a> unless they intend to be
+<p>Where possible, <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agents</a> should prevent people from being <a data-link-type="dfn" data-lt="cross-context recognition" href="#dfn-cross-context-recognition" class="internalDFN" id="ref-for-dfn-cross-context-recognition-5">recognized</a> across <a data-link-type="dfn" href="#dfn-partition" class="internalDFN" id="ref-for-dfn-partition-6">partitions</a> unless they intend to be
 recognized. Note that:</p>
 <ul>
 <li>Sites can do harm even if they can't be completely certain
-that visits come from the same person, so <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-28">user agents</a> should also take steps
+that visits come from the same person, so <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agents</a> should also take steps
 to prevent such probabilistic recognition. The <cite><a data-matched-text="[[[Privacy-Threat]]]" href="https://w3cping.github.io/privacy-threat-model/">Target Privacy Threat Model</a></cite> discusses
 the tradeoffs involved.</li>
-<li>If a <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-29">user agent</a> blocks <a data-link-type="dfn" href="#dfn-recognize" class="internalDFN" id="ref-for-dfn-recognize-10">recognition</a> between different sites but doesn't
+<li>If a <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> blocks <a data-link-type="dfn" href="#dfn-recognize" class="internalDFN" id="ref-for-dfn-recognize-10">recognition</a> between different sites but doesn't
 notice when a single site contains multiple <a data-link-type="dfn" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-21">contexts</a>, this can encourage
 <a data-link-type="dfn" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-20">actors</a> to bundle multiple contexts into a single site and privilege the
-<a data-link-type="dfn" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-21">actors</a> who can do so. Despite these harms, even if a <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-30">user agent</a> can't
+<a data-link-type="dfn" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-21">actors</a> who can do so. Despite these harms, even if a <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> can't
 always block <a data-link-type="dfn" href="#dfn-cross-context-recognition" class="internalDFN" id="ref-for-dfn-cross-context-recognition-6">cross-context recognition</a> within a single site, it should
 still prevent the <a data-link-type="dfn" href="#dfn-cross-context-recognition" class="internalDFN" id="ref-for-dfn-cross-context-recognition-7">cross-context recognition</a> it can detect. By having
-<a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-31">user agents</a> solve the problems that technical measures can solve, we let
+<a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agents</a> solve the problems that technical measures can solve, we let
 actors using other approaches focus on the problems they're best at.</li>
 </ul>
-<p>If a <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-32">user agent</a> can tell that its user is using a particular identity on a
+<p>If a <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> can tell that its user is using a particular identity on a
 website, for example because the user used an API like
 <cite><a data-matched-text="[[[credential-management-1]]]" href="https://www.w3.org/TR/credential-management-1/">Credential Management Level 1</a></cite> to log into the site, it should make that active
 identity clear to the user.</p>
@@ -1457,7 +1457,7 @@ Guidance § Clearing all local state</a> discusses how specifications can help
 user agents avoid this mistake.</p>
 <p><dfn id="dfn-header-enrichment" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Header enrichment</dfn> happens when a network operator adds HTTP request headers
 to identify their customers to sites that they visit. It is unfortunately
-difficult for a <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-33">user agent</a> to mitigate against <a data-link-type="dfn" href="#dfn-header-enrichment" class="internalDFN" id="ref-for-dfn-header-enrichment-1">header enrichment</a>.</p>
+difficult for a <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> to mitigate against <a data-link-type="dfn" href="#dfn-header-enrichment" class="internalDFN" id="ref-for-dfn-header-enrichment-1">header enrichment</a>.</p>
 <p><dfn id="dfn-cross-device-communication" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Cross-device communication</dfn> is communication
 between code on one device and code running on another device. For example, sounds or
 light emitted from one device could be detected by a microphone or light sensor on
@@ -1542,7 +1542,7 @@ privacy</a>).</p>
   
 </div>
 
-<p><a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-34">User agents</a> should aggressively <a href="#data-minimization">minimize</a> <a data-link-type="dfn" href="#dfn-ancillary-data" class="internalDFN" id="ref-for-dfn-ancillary-data-6">ancillary data</a> and should avoid burdening the user with additional <a data-link-type="dfn" href="#dfn-privacy-labor" class="internalDFN" id="ref-for-dfn-privacy-labor-5">privacy labor</a>
+<p><a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">User agents</a> should aggressively <a href="#data-minimization">minimize</a> <a data-link-type="dfn" href="#dfn-ancillary-data" class="internalDFN" id="ref-for-dfn-ancillary-data-6">ancillary data</a> and should avoid burdening the user with additional <a data-link-type="dfn" href="#dfn-privacy-labor" class="internalDFN" id="ref-for-dfn-privacy-labor-5">privacy labor</a>
 when deciding what <a data-link-type="dfn" href="#dfn-ancillary-data" class="internalDFN" id="ref-for-dfn-ancillary-data-7">ancillary data</a> to expose. To that end, user agents may
 employ user research, solicitation of general preferences, and heuristics about
 sensitivity of data or trust in a particular context. To facilitate site
@@ -1710,7 +1710,7 @@ necessary);</li>
 </ul>
 </section><section id="data-rights-0"><div class="header-wrapper"><h3 id="data-rights"><bdi class="secno">2.5 </bdi>Data Rights</h3><a class="self-link" href="#data-rights" aria-label="Permalink for Section 2.5"></a></div><div class="practice principle"><a class="marker self-link" href="#respect-data-rights"><bdi lang="en">Principle</bdi></a>: <span class="practicelab" id="respect-data-rights">
     <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-62">People</a> have certain rights over <a data-link-type="dfn" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-18">data</a> that is about themselves, and these rights should
-    be facilitated by their <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-35">user agent</a> and the <a data-link-type="dfn" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-22">actors</a> that are <a data-link-type="dfn" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-19">processing</a> their
+    be facilitated by their <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> and the <a data-link-type="dfn" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-22">actors</a> that are <a data-link-type="dfn" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-19">processing</a> their
     <a data-link-type="dfn" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-19">data</a>.
   </span>
   
@@ -1878,14 +1878,14 @@ to offer better protection by default? Given the contested nature of the <code><
 the absence of a forcing function to support collective enforcement, the scheme failed to deliver
 improved privacy.</p>
 </section><section id="device-owners-and-administrators"><div class="header-wrapper"><h3 id="device-administrators"><bdi class="secno">2.8 </bdi>Device Owners and Administrators</h3><a class="self-link" href="#device-administrators" aria-label="Permalink for Section 2.8"></a></div><div class="practice principle"><a class="marker self-link" href="#principle-owned-devices-disclose-surveillance"><bdi lang="en">Principle</bdi></a>: <span class="practicelab" id="principle-owned-devices-disclose-surveillance">
-<a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-36">User agents</a> must not help a device <a data-link-type="dfn" href="#dfn-administrator" class="internalDFN" id="ref-for-dfn-administrator-1">administrator</a> surveil the people using the devices they
+<a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">User agents</a> must not help a device <a data-link-type="dfn" href="#dfn-administrator" class="internalDFN" id="ref-for-dfn-administrator-1">administrator</a> surveil the people using the devices they
 administrate without those people's knowledge.
 </span>
 
 </div>
 
 <div class="practice principle"><a class="marker self-link" href="#principle-reasonable-disclosure-on-owned-devices"><bdi lang="en">Principle</bdi></a>: <span class="practicelab" id="principle-reasonable-disclosure-on-owned-devices">
-<a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-37">User agents</a> should only tell a device <a data-link-type="dfn" href="#dfn-administrator" class="internalDFN" id="ref-for-dfn-administrator-2">administrator</a> about user behavior when that disclosure
+<a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">User agents</a> should only tell a device <a data-link-type="dfn" href="#dfn-administrator" class="internalDFN" id="ref-for-dfn-administrator-2">administrator</a> about user behavior when that disclosure
 is necessary to enforce reasonable constraints on use of the device.
 </span>
 
@@ -1894,12 +1894,12 @@ is necessary to enforce reasonable constraints on use of the device.
 
 <p>Computing devices have <dfn data-lt="device owner|owners" data-plurals="device owners" id="dfn-device-owner" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">owners</dfn>, and those owners have
 <dfn data-plurals="administrators" id="dfn-administrator" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">administrator</dfn> access to the devices in order to install and configure the programs,
-including <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-38">user agents</a>, that run on them. Sometimes, as in the cases of an employer providing a
+including <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agents</a>, that run on them. Sometimes, as in the cases of an employer providing a
 device to an employee, a friend loaning a device to their visitor, or a parent providing a device to
 their small child, the <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-78">person</a> using a device doesn't own the device or have <a data-link-type="dfn" href="#dfn-administrator" class="internalDFN" id="ref-for-dfn-administrator-3">administrator</a>
 access to it. Other times, as in the cases of intimate partners or one relative helping another
 relative with their device, the owner and primary user of a device might not be the only person with
-<a data-link-type="dfn" href="#dfn-administrator" class="internalDFN" id="ref-for-dfn-administrator-4">administrator</a> access. As a program running on a device, a <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-39">user agent</a> generally can't tell
+<a data-link-type="dfn" href="#dfn-administrator" class="internalDFN" id="ref-for-dfn-administrator-4">administrator</a> access. As a program running on a device, a <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> generally can't tell
 whether the <a data-link-type="dfn" href="#dfn-administrator" class="internalDFN" id="ref-for-dfn-administrator-5">administrator</a> who has installed and configured it was authorized by the device's
 actual owner.</p>
 <p>These relationships can involve power imbalances. A child may have difficulty accessing any
@@ -1910,7 +1910,7 @@ to agree to use their employer's devices in order to keep their job.</p>
 used in the ways they intended, the <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-79">person</a> <em>using</em> the device still has a right to privacy while
 using it. The above principles enforce this right to privacy in two ways:</p>
 <ol>
-<li><a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-40">User agent</a> developers need to consider whether requests from <a data-link-type="dfn" href="#dfn-device-owner" class="internalDFN" id="ref-for-dfn-device-owner-2">device owners</a> and
+<li><a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">User agent</a> developers need to consider whether requests from <a data-link-type="dfn" href="#dfn-device-owner" class="internalDFN" id="ref-for-dfn-device-owner-2">device owners</a> and
 <a data-link-type="dfn" href="#dfn-administrator" class="internalDFN" id="ref-for-dfn-administrator-7">administrators</a> are reasonable, and refuse to implement unreasonable requests, even if that
 means fewer sales. Owner/administrator needs must not simply trump user needs in the <a href="https://www.w3.org/TR/design-principles/#priority-of-constituencies">priority of constituencies</a>.</li>
 <li>Even when information disclosure is reasonable, the <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-80">person</a> whose data is being disclosed
@@ -1919,7 +1919,7 @@ consequences.</li>
 </ol>
 <p>Some <a data-link-type="dfn" href="#dfn-administrator" class="internalDFN" id="ref-for-dfn-administrator-8">administrator</a> requests might be reasonable for some sorts of users, like employees or
 especially children, but not be reasonable for other sorts, like friends or intimate partners. In
-those cases, the <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-41">user agent</a> can explain what the administrator is going to learn in a way that
+those cases, the <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> can explain what the administrator is going to learn in a way that
 also says what sort of user is expected to agree. Users in other classes can then react
 appropriately.</p>
 <div class="issue" id="issue-container-number-1"><div role="heading" class="issue-title marker" id="h-issue" aria-level="2"><span>Issue 1</span></div><aside class="">
@@ -1980,7 +1980,7 @@ hosts or intermediaries are supportive of or complicit in the abuse.</p>
 </section><section id="unwanted-information-0"><div class="header-wrapper"><h3 id="unwanted-information"><bdi class="secno">2.10 </bdi>Unwanted Information</h3><a class="self-link" href="#unwanted-information" aria-label="Permalink for Section 2.10"></a></div><p>Receiving unsolicited information that either may cause distress or waste the recipient's
 time or resources is a violation of privacy.</p>
 <div class="practice principle"><a class="marker self-link" href="#principle-protect-unwanted-information"><bdi lang="en">Principle</bdi></a>: <span class="practicelab" id="principle-protect-unwanted-information">
-    <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-42">User agents</a> and other <a data-link-type="dfn" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-29">actors</a> should take
+    <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">User agents</a> and other <a data-link-type="dfn" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-29">actors</a> should take
     steps to ensure that their <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-81">user</a> is not exposed to unwanted information. Technical standards
     must consider the delivery of unwanted information as part of their architecture and must
     mitigate it accordingly.
@@ -2042,7 +2042,7 @@ individuals assess privacy risks and make decisions about privacy
 (such as parents, guardians and peers), everyone has their own
 right to privacy.</p>
 <div class="practice principle"><a class="marker self-link" href="#principle-vulnerability"><bdi lang="en">Principle</bdi></a>: <span class="practicelab" id="principle-vulnerability">
-<a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-43">User agents</a> and <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">sites</a> should allow for gracefully degraded
+<a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">User agents</a> and <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">sites</a> should allow for gracefully degraded
 user experience where some features or functionality may not be
 available because users have chosen stronger privacy protections
 (e.g., blocking tracking elements, sensor data or information about
@@ -2052,7 +2052,7 @@ installed software or connected devices).
 </div>
 
 <section id="guardians-0"><div class="header-wrapper"><h4 id="guardians"><bdi class="secno">2.11.1 </bdi>Guardians</h4><a class="self-link" href="#guardians" aria-label="Permalink for Section 2.11.1"></a></div><div class="practice principle"><a class="marker self-link" href="#principle-guardians-have-responsibilities"><bdi lang="en">Principle</bdi></a>: <span class="practicelab" id="principle-guardians-have-responsibilities">
-A <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-44">user agent</a> may only provide information about a <a data-link-type="dfn" href="#dfn-ward" class="internalDFN" id="ref-for-dfn-ward-1">ward</a> to a <a data-link-type="dfn" href="#dfn-guardian" class="internalDFN" id="ref-for-dfn-guardian-1">guardian</a> for the purpose of
+A <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> may only provide information about a <a data-link-type="dfn" href="#dfn-ward" class="internalDFN" id="ref-for-dfn-ward-1">ward</a> to a <a data-link-type="dfn" href="#dfn-guardian" class="internalDFN" id="ref-for-dfn-guardian-1">guardian</a> for the purpose of
 helping that <a data-link-type="dfn" href="#dfn-guardian" class="internalDFN" id="ref-for-dfn-guardian-2">guardian</a> uphold their responsibilities to their <a data-link-type="dfn" href="#dfn-ward" class="internalDFN" id="ref-for-dfn-ward-2">ward</a>. This system must include
 measures to help <a data-link-type="dfn" href="#dfn-ward" class="internalDFN" id="ref-for-dfn-ward-3">wards</a> who realize that their <a data-link-type="dfn" href="#dfn-guardian" class="internalDFN" id="ref-for-dfn-guardian-3">guardian</a> isn't acting in the <a data-link-type="dfn" href="#dfn-ward" class="internalDFN" id="ref-for-dfn-ward-4">ward</a>'s
 interest.</span>
@@ -2071,14 +2071,14 @@ when the <a data-link-type="dfn" href="#dfn-ward" class="internalDFN" id="ref-fo
 desires. In practice, many <a data-link-type="dfn" href="#dfn-ward" class="internalDFN" id="ref-for-dfn-ward-8">wards</a> discover that their <a data-link-type="dfn" href="#dfn-guardian" class="internalDFN" id="ref-for-dfn-guardian-9">guardian</a> is not making decisions in the
 <a data-link-type="dfn" href="#dfn-ward" class="internalDFN" id="ref-for-dfn-ward-9">ward</a>'s best interest, and it's critical that such <a data-link-type="dfn" href="#dfn-ward" class="internalDFN" id="ref-for-dfn-ward-10">wards</a> have a way to escape their
 misbehaving guardian.</p>
-<p>Historically, the Web has provided exactly this escape route, and <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-45">user agents</a> should preserve
+<p>Historically, the Web has provided exactly this escape route, and <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agents</a> should preserve
 that feature by correctly balancing a benevolent <a data-link-type="dfn" href="#dfn-guardian" class="internalDFN" id="ref-for-dfn-guardian-10">guardian</a>'s need to protect their <a data-link-type="dfn" href="#dfn-ward" class="internalDFN" id="ref-for-dfn-ward-11">ward</a> from
 dangers against other <a data-link-type="dfn" href="#dfn-ward" class="internalDFN" id="ref-for-dfn-ward-12">wards</a>' need to protect themselves from their misbehaving <a data-link-type="dfn" href="#dfn-guardian" class="internalDFN" id="ref-for-dfn-guardian-11">guardians</a>.</p>
 <aside class="example" id="example-protective-parent"><div class="marker">
     <a class="self-link" href="#example-protective-parent">Example<bdi> 10</bdi></a><span class="example-title">: Protective parents</span>
   </div>
 
-<p>A parent might configure a small child's <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-46">user agent</a> to block access to violent content until the
+<p>A parent might configure a small child's <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> to block access to violent content until the
 child is old enough to make their own decisions about it.</p>
 </aside>
 
@@ -2087,8 +2087,8 @@ child is old enough to make their own decisions about it.</p>
   </div>
 
 <p>A child may discover that they're LGBT and need to find supportive resources online. If they have a
-homophobic or transphobic parent, that parent might have configured their <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-47">user agent</a> to either
-block or inform the parent when the child visits web pages about LGBT-related subjects. The <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-48">user agent</a> needs to warn the child about how it's configured so that the child can know to ask a better
+homophobic or transphobic parent, that parent might have configured their <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> to either
+block or inform the parent when the child visits web pages about LGBT-related subjects. The <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> needs to warn the child about how it's configured so that the child can know to ask a better
 <a data-link-type="dfn" href="#dfn-guardian" class="internalDFN" id="ref-for-dfn-guardian-12">guardian</a> for access to the help they need.</p>
 </aside>
 
@@ -2124,7 +2124,7 @@ users might expect to be prompted for consent to share their
 uploaded work.)  Sites should consider conducting user research on
 people's expectations for how data is processed.</p>
 </li>
-<li><p>Relying on a <a data-link-type="dfn" href="#dfn-global-opt-out" class="internalDFN" id="ref-for-dfn-global-opt-out-6">global opt-out</a> signal from the <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-49">user agent</a>.</p>
+<li><p>Relying on a <a data-link-type="dfn" href="#dfn-global-opt-out" class="internalDFN" id="ref-for-dfn-global-opt-out-6">global opt-out</a> signal from the <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a>.</p>
 </li>
 <li><p>Delaying a prompt for consent until a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-88">user</a> does something that puts the request in context,
  which will also help them give an informed response.</p>
@@ -2150,13 +2150,13 @@ browser context (for example, in a general notifications tray) or even cause a d
 buzz or play an alert tone.
 Like all powerful features, notifications can be misused and can become an annoyance
 or even used to manipulate behaviour and thus reduce <a data-link-type="dfn" href="#dfn-autonomous" class="internalDFN" id="ref-for-dfn-autonomous-15">autonomy</a>.</p>
-<div class="practice principle"><a class="marker self-link" href="#principle-notifications-control"><bdi lang="en">Principle</bdi></a>: <span class="practicelab" id="principle-notifications-control">A <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-50">user agent</a> should help
+<div class="practice principle"><a class="marker self-link" href="#principle-notifications-control"><bdi lang="en">Principle</bdi></a>: <span class="practicelab" id="principle-notifications-control">A <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> should help
     users control notifications and other interruptive UI that can be used to manipulate behavior.</span>
 
 
-<p>  <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-51">User agents</a> should provide UI that allows their users to audit which web <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">sites</a> have been granted
+<p>  <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">User agents</a> should provide UI that allows their users to audit which web <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">sites</a> have been granted
   permission to display alerts and to revoke these permissions.
-  <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-52">User agents</a> should also apply some quality metric to the initial request for permissions to receive
+  <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">User agents</a> should also apply some quality metric to the initial request for permissions to receive
   notifications (for example, disallowing sites from requesting permission on first visit).</p>
 </div>
 <div class="practice principle"><a class="marker self-link" href="#principle-notifications-context"><bdi lang="en">Principle</bdi></a>: <span class="practicelab" id="principle-notifications-context">Web <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">sites</a> should use notifications
@@ -2169,7 +2169,7 @@ or even used to manipulate behaviour and thus reduce <a data-link-type="dfn" hre
   notifications.  Web <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">sites</a> should not request permission to send notifications when
   the user is unlikely to have sufficient knowledge (e.g. information about what kinds of
   notifications they are signing up for) to make an informed response. If it's unlikely
-  that such information could have been provided then the <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-53">user agent</a> should apply
+  that such information could have been provided then the <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> should apply
   mitigations (for example, warning about potential malicious use of the notifications
   API).
   Permissions should be requested in context.</p>
@@ -2193,7 +2193,7 @@ trick the <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id=
 </aside></div>
 
 </section><section id="support-choosing-which-information-to-present"><div class="header-wrapper"><h3 id="support-choosing-info"><bdi class="secno">2.15 </bdi>Support Choosing Which Information to Present</h3><a class="self-link" href="#support-choosing-info" aria-label="Permalink for Section 2.15"></a></div><div class="practice principle"><a class="marker self-link" href="#principle-support-choosing-info"><bdi lang="en">Principle</bdi></a>: <span class="practicelab" id="principle-support-choosing-info">
-    <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-54">User agents</a> should support <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-91">people</a> in choosing which information they provide to <a data-link-type="dfn" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-37">actors</a> that
+    <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">User agents</a> should support <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-91">people</a> in choosing which information they provide to <a data-link-type="dfn" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-37">actors</a> that
     request it, up to and including allowing users to provide arbitrary information.
   </span>
   
@@ -2209,7 +2209,7 @@ this weekend, but if my geolocation is forcefully set to match my GPS, a restaur
 site might only allow searches in my current location. In other cases, sites do not abide by data
 minimisation principles and request more information than they require. This principle supports
 <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-96">people</a> in minimising their own data.</p>
-<p><a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-55">User agents</a> should make it simple for <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-97">people</a> to <a href="#principle-identity-per-context">present the identity they wish
+<p><a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">User agents</a> should make it simple for <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-97">people</a> to <a href="#principle-identity-per-context">present the identity they wish
 to</a> and to provide information about themselves or their devices in
 ways that they control. This helps <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-98">people</a> to live in obscurity ([<cite><a class="bibref" data-link-type="biblio" href="#bib-lost-in-crowd" title="Why You Can No Longer Get Lost in the Crowd">Lost-In-Crowd</a></cite>],
 [<cite><a class="bibref" data-link-type="biblio" href="#bib-obscurity-by-design" title="Obscurity by Design">Obscurity-By-Design</a></cite>]), including by obfuscating information about themselves ([<cite><a class="bibref" data-link-type="biblio" href="#bib-obfuscation" title="Obfuscation: A User's Guide for Privacy and Protest">Obfuscation</a></cite>]).</p>
@@ -2225,7 +2225,7 @@ ways that they control. This helps <a data-link-type="dfn" href="#dfn-individual
 <div class="example">
 
 
-<p>For example, a <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-56">user agent</a> might support this principle by:</p>
+<p>For example, a <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> might support this principle by:</p>
 <ul>
 <li>Generating domain-specific email addresses or other directed identifiers so that <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-103">people</a> can
 log into the site without becoming recognisable across contexts.</li>
@@ -2265,7 +2265,7 @@ they're interacting with. <a data-link-type="dfn" href="#dfn-actor" class="inter
 associations, or governmental bodies. Uses of this document in a particular domain are expected to
 describe how the core concepts of that domain combine into a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-116">user</a>-comprehensible <a data-link-type="dfn" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-41">actor</a>, and
 those refined definitions are likely to differ between domains.</p>
-<p><a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-57">User agents</a> tend to explain to <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-117">people</a> which <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#concept-origin">origin</a> or <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">site</a> provided the
+<p><a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">User agents</a> tend to explain to <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-117">people</a> which <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#concept-origin">origin</a> or <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">site</a> provided the
 web page they're looking at. The <a data-link-type="dfn" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-42">actor</a> that controls this <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#concept-origin">origin</a> or <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">site</a> is
 known as the web page's <dfn data-dfn-for="page" data-plurals="first parties" id="dfn-first-party" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">first party</dfn>. When a <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-118">person</a>
 interacts with a UI element on a web page, the <dfn data-plurals="first parties" id="dfn-first-party-0" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">first party</dfn> of that interaction
@@ -2433,7 +2433,7 @@ specifications to defend against, described in the sections that follow.</p>
 apparent tradeoff, first look for ways to improve all principles at once.</span></li><li><a class="marker self-link" href="#principle-limited-collection-for-safety"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">If a service
 needs to collect extra data from its users in order to protect those or other users, it
 must take extra technical and legal measures to ensure that this data can't be then used
-for other purposes, like to grow the service.</span></li><li><a class="marker self-link" href="#principle-identity-per-context"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">A <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-58">user agent</a>
+for other purposes, like to grow the service.</span></li><li><a class="marker self-link" href="#principle-identity-per-context"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">A <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a>
 should help its user present the <a data-link-type="dfn" href="#dfn-identity" class="internalDFN" id="ref-for-dfn-identity-11">identity</a> they want in each <a data-link-type="dfn" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-31">context</a>
 they are in.</span></li><li><a class="marker self-link" href="#bp-sites-user-agents-and-other-actors-should-minimize-the-amount-of-personal-data-they-transfer-between-actors-on-the-web"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">Sites, user agents, and other actors should minimize the amount of
 <a href="#dfn-data" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-data-48">personal data</a> they transfer between actors on the Web.</span></li><li><a class="marker self-link" href="#bp-web-apis-should-be-designed-to-minimize-the-amount-of-data-that-sites-need-to-request-to-carry-out-their-users-goals-and-provide-granularity-and-user-controls-over-personal-data-that-is-communicated-to-sites"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">Web APIs should be designed to minimize the amount of data that sites need
@@ -2451,7 +2451,7 @@ interests.</span></li><li><a class="marker self-link" href="#bp-sites-and-user-a
   not make that information easier to access, unless they add <a data-link-type="dfn" href="#dfn-access-guard" class="internalDFN" id="ref-for-dfn-access-guard-5">access guards</a> that make the
   information acceptable.</span></li><li><a class="marker self-link" href="#respect-data-rights"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
     <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-126">People</a> have certain rights over <a data-link-type="dfn" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-50">data</a> that is about themselves, and these rights should
-    be facilitated by their <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-59">user agent</a> and the <a data-link-type="dfn" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-59">actors</a> that are <a data-link-type="dfn" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-37">processing</a> their
+    be facilitated by their <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> and the <a data-link-type="dfn" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-59">actors</a> that are <a data-link-type="dfn" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-37">processing</a> their
     <a data-link-type="dfn" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-51">data</a>.
   </span></li><li><a class="marker self-link" href="#de-identify-data"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
     Whenever possible, processors should work with <a data-link-type="dfn" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-52">data</a> that has been <a data-link-type="dfn" href="#dfn-de-identified" class="internalDFN" id="ref-for-dfn-de-identified-6">de-identified</a>.
@@ -2460,27 +2460,27 @@ interests.</span></li><li><a class="marker self-link" href="#bp-sites-and-user-a
     decisions collectively rather than individually to either prevent or enable data
     sharing, and to set defaults for data processing rules.
   </span></li><li><a class="marker self-link" href="#principle-owned-devices-disclose-surveillance"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
-<a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-60">User agents</a> must not help a device <a data-link-type="dfn" href="#dfn-administrator" class="internalDFN" id="ref-for-dfn-administrator-9">administrator</a> surveil the people using the devices they
+<a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">User agents</a> must not help a device <a data-link-type="dfn" href="#dfn-administrator" class="internalDFN" id="ref-for-dfn-administrator-9">administrator</a> surveil the people using the devices they
 administrate without those people's knowledge.
 </span></li><li><a class="marker self-link" href="#principle-reasonable-disclosure-on-owned-devices"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
-<a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-61">User agents</a> should only tell a device <a data-link-type="dfn" href="#dfn-administrator" class="internalDFN" id="ref-for-dfn-administrator-10">administrator</a> about user behavior when that disclosure
+<a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">User agents</a> should only tell a device <a data-link-type="dfn" href="#dfn-administrator" class="internalDFN" id="ref-for-dfn-administrator-10">administrator</a> about user behavior when that disclosure
 is necessary to enforce reasonable constraints on use of the device.
 </span></li><li><a class="marker self-link" href="#abuse-reporting"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
       Systems that allow for communicating on the Web must provide an effective capability to report
       abuse.
     </span></li><li><a class="marker self-link" href="#principle-protect-unwanted-information"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
-    <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-62">User agents</a> and other <a data-link-type="dfn" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-60">actors</a> should take
+    <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">User agents</a> and other <a data-link-type="dfn" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-60">actors</a> should take
     steps to ensure that their <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-127">user</a> is not exposed to unwanted information. Technical standards
     must consider the delivery of unwanted information as part of their architecture and must
     mitigate it accordingly.
   </span></li><li><a class="marker self-link" href="#principle-vulnerability"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
-<a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-63">User agents</a> and <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">sites</a> should allow for gracefully degraded
+<a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">User agents</a> and <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">sites</a> should allow for gracefully degraded
 user experience where some features or functionality may not be
 available because users have chosen stronger privacy protections
 (e.g., blocking tracking elements, sensor data or information about
 installed software or connected devices).
   </span></li><li><a class="marker self-link" href="#principle-guardians-have-responsibilities"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
-A <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-64">user agent</a> may only provide information about a <a data-link-type="dfn" href="#dfn-ward" class="internalDFN" id="ref-for-dfn-ward-13">ward</a> to a <a data-link-type="dfn" href="#dfn-guardian" class="internalDFN" id="ref-for-dfn-guardian-13">guardian</a> for the purpose of
+A <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> may only provide information about a <a data-link-type="dfn" href="#dfn-ward" class="internalDFN" id="ref-for-dfn-ward-13">ward</a> to a <a data-link-type="dfn" href="#dfn-guardian" class="internalDFN" id="ref-for-dfn-guardian-13">guardian</a> for the purpose of
 helping that <a data-link-type="dfn" href="#dfn-guardian" class="internalDFN" id="ref-for-dfn-guardian-14">guardian</a> uphold their responsibilities to their <a data-link-type="dfn" href="#dfn-ward" class="internalDFN" id="ref-for-dfn-ward-14">ward</a>. This system must include
 measures to help <a data-link-type="dfn" href="#dfn-ward" class="internalDFN" id="ref-for-dfn-ward-15">wards</a> who realize that their <a data-link-type="dfn" href="#dfn-guardian" class="internalDFN" id="ref-for-dfn-guardian-15">guardian</a> isn't acting in the <a data-link-type="dfn" href="#dfn-ward" class="internalDFN" id="ref-for-dfn-ward-16">ward</a>'s
 interest.</span></li><li><a class="marker self-link" href="#principle-consent-user-preference"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
@@ -2494,14 +2494,14 @@ interest.</span></li><li><a class="marker self-link" href="#principle-consent-us
     It should be as easy for a user to check what consent they have given,
     to withdraw consent, or to opt out or object,
     as to give consent.
-  </span></li><li><a class="marker self-link" href="#principle-notifications-control"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">A <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-65">user agent</a> should help
+  </span></li><li><a class="marker self-link" href="#principle-notifications-control"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">A <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> should help
     users control notifications and other interruptive UI that can be used to manipulate behavior.</span></li><li><a class="marker self-link" href="#principle-notifications-context"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">Web <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">sites</a> should use notifications
     only for information that their users have specifically requested.
   </span></li><li><a class="marker self-link" href="#principle-do-not-retaliate"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
     <a data-link-type="dfn" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-63">Actors</a> must not retaliate against <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-130">people</a> who protect their <a data-link-type="dfn" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-53">data</a> against
     non-essential <a data-link-type="dfn" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-38">processing</a> or exercise rights over their <a data-link-type="dfn" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-54">data</a>.
   </span></li><li><a class="marker self-link" href="#principle-support-choosing-info"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
-    <a data-link-type="dfn" href="#dfn-user-agent" class="internalDFN" id="ref-for-dfn-user-agent-66">User agents</a> should support <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-131">people</a> in choosing which information they provide to <a data-link-type="dfn" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-64">actors</a> that
+    <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">User agents</a> should support <a data-link-type="dfn" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-131">people</a> in choosing which information they provide to <a data-link-type="dfn" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-64">actors</a> that
     request it, up to and including allowing users to provide arbitrary information.
   </span></li><li><a class="marker self-link" href="#principle-no-facts-or-promises"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
     APIs should be designed such that data returned through an API does not assert a fact or make a
@@ -2578,6 +2578,8 @@ Wendy Seltzer.</p>
       <a href="https://www.w3.org/TR/IndexedDB/"><cite>Indexed Database API</cite></a>. Nikunj Mehta; Jonas Sicking; Eliot Graff; Andrei Popescu; Jeremy Orlow; Joshua Bell.  W3C. 8 January 2015. W3C Recommendation. URL: <a href="https://www.w3.org/TR/IndexedDB/">https://www.w3.org/TR/IndexedDB/</a>
     </dd><dt id="bib-individual-group-privacy">[Individual-Group-Privacy]</dt><dd>
       <a href="https://link.springer.com/article/10.1007/s13347-017-0253-7"><cite>From Individual to Group Privacy in Big Data Analytics</cite></a>. Brent Mittelstadt.  Philosophy &amp; Technology. URL: <a href="https://link.springer.com/article/10.1007/s13347-017-0253-7">https://link.springer.com/article/10.1007/s13347-017-0253-7</a>
+    </dd><dt id="bib-infra">[infra]</dt><dd>
+      <a href="https://infra.spec.whatwg.org/"><cite>Infra Standard</cite></a>. Anne van Kesteren; Domenic Denicola.  WHATWG. Living Standard. URL: <a href="https://infra.spec.whatwg.org/">https://infra.spec.whatwg.org/</a>
     </dd><dt id="bib-internet-of-garbage">[Internet-of-Garbage]</dt><dd>
       <a href="https://www.theverge.com/2018/8/28/17777330/internet-of-garbage-book-sarah-jeong-online-harassment"><cite>The Internet of Garbage</cite></a>. Sarah Jeong.  The Verge. 2018. URL: <a href="https://www.theverge.com/2018/8/28/17777330/internet-of-garbage-book-sarah-jeong-online-harassment">https://www.theverge.com/2018/8/28/17777330/internet-of-garbage-book-sarah-jeong-online-harassment</a>
     </dd><dt id="bib-largest-contentful-paint">[largest-contentful-paint]</dt><dd>
@@ -2839,52 +2841,6 @@ Wendy Seltzer.</p>
       <ul>
     <li>
     <a href="#ref-for-dfn-fips-1" title="§ 1.1.2 Privacy Labour">§ 1.1.2 Privacy Labour</a> <a href="#ref-for-dfn-fips-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-fips-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-fips-4" title="Reference 4">(4)</a> 
-  </li>
-  </ul>
-    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-user-agent" aria-label="Links in this document to definition: user agent">
-      <span class="caret"></span>
-      <div>
-        <a class="self-link" href="#dfn-user-agent" aria-label="Permalink for definition: user agent. Activate to close this dialog.">Permalink</a>
-         
-      </div>
-      <p><b>Referenced in:</b></p>
-      <ul>
-    <li>
-    <a href="#ref-for-dfn-user-agent-1" title="§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls">§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls</a> 
-  </li><li>
-    <a href="#ref-for-dfn-user-agent-2" title="§ 1.2 Collective Governance">§ 1.2 Collective Governance</a> 
-  </li><li>
-    <a href="#ref-for-dfn-user-agent-3" title="§ 1.3 People's Agents">§ 1.3 People's Agents</a> <a href="#ref-for-dfn-user-agent-4" title="Reference 2">(2)</a> <a href="#ref-for-dfn-user-agent-5" title="Reference 3">(3)</a> <a href="#ref-for-dfn-user-agent-6" title="Reference 4">(4)</a> <a href="#ref-for-dfn-user-agent-7" title="Reference 5">(5)</a> <a href="#ref-for-dfn-user-agent-8" title="Reference 6">(6)</a> <a href="#ref-for-dfn-user-agent-9" title="Reference 7">(7)</a> <a href="#ref-for-dfn-user-agent-10" title="Reference 8">(8)</a> <a href="#ref-for-dfn-user-agent-11" title="Reference 9">(9)</a> <a href="#ref-for-dfn-user-agent-12" title="Reference 10">(10)</a> <a href="#ref-for-dfn-user-agent-13" title="Reference 11">(11)</a> <a href="#ref-for-dfn-user-agent-14" title="Reference 12">(12)</a> <a href="#ref-for-dfn-user-agent-15" title="Reference 13">(13)</a> <a href="#ref-for-dfn-user-agent-16" title="Reference 14">(14)</a> <a href="#ref-for-dfn-user-agent-17" title="Reference 15">(15)</a> <a href="#ref-for-dfn-user-agent-18" title="Reference 16">(16)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-user-agent-19" title="§ 2. Principles for Privacy on the Web">§ 2. Principles for Privacy on the Web</a> 
-  </li><li>
-    <a href="#ref-for-dfn-user-agent-20" title="§ 2.1 Identity on the Web">§ 2.1 Identity on the Web</a> <a href="#ref-for-dfn-user-agent-21" title="Reference 2">(2)</a> <a href="#ref-for-dfn-user-agent-22" title="Reference 3">(3)</a> <a href="#ref-for-dfn-user-agent-23" title="Reference 4">(4)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-user-agent-24" title="§ 2.1.2 User agent awareness of recognition">§ 2.1.2 User agent awareness of recognition</a> <a href="#ref-for-dfn-user-agent-25" title="Reference 2">(2)</a> <a href="#ref-for-dfn-user-agent-26" title="Reference 3">(3)</a> <a href="#ref-for-dfn-user-agent-27" title="Reference 4">(4)</a> <a href="#ref-for-dfn-user-agent-28" title="Reference 5">(5)</a> <a href="#ref-for-dfn-user-agent-29" title="Reference 6">(6)</a> <a href="#ref-for-dfn-user-agent-30" title="Reference 7">(7)</a> <a href="#ref-for-dfn-user-agent-31" title="Reference 8">(8)</a> <a href="#ref-for-dfn-user-agent-32" title="Reference 9">(9)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-user-agent-33" title="§ 2.1.3 Recognition Methods">§ 2.1.3 Recognition Methods</a> 
-  </li><li>
-    <a href="#ref-for-dfn-user-agent-34" title="§ 2.2.1 Ancillary uses">§ 2.2.1 Ancillary uses</a> 
-  </li><li>
-    <a href="#ref-for-dfn-user-agent-35" title="§ 2.5 Data Rights">§ 2.5 Data Rights</a> 
-  </li><li>
-    <a href="#ref-for-dfn-user-agent-36" title="§ 2.8 Device Owners and Administrators">§ 2.8 Device Owners and Administrators</a> <a href="#ref-for-dfn-user-agent-37" title="Reference 2">(2)</a> <a href="#ref-for-dfn-user-agent-38" title="Reference 3">(3)</a> <a href="#ref-for-dfn-user-agent-39" title="Reference 4">(4)</a> <a href="#ref-for-dfn-user-agent-40" title="Reference 5">(5)</a> <a href="#ref-for-dfn-user-agent-41" title="Reference 6">(6)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-user-agent-42" title="§ 2.10 Unwanted Information">§ 2.10 Unwanted Information</a> 
-  </li><li>
-    <a href="#ref-for-dfn-user-agent-43" title="§ 2.11 Vulnerability">§ 2.11 Vulnerability</a> 
-  </li><li>
-    <a href="#ref-for-dfn-user-agent-44" title="§ 2.11.1 Guardians">§ 2.11.1 Guardians</a> <a href="#ref-for-dfn-user-agent-45" title="Reference 2">(2)</a> <a href="#ref-for-dfn-user-agent-46" title="Reference 3">(3)</a> <a href="#ref-for-dfn-user-agent-47" title="Reference 4">(4)</a> <a href="#ref-for-dfn-user-agent-48" title="Reference 5">(5)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-user-agent-49" title="§ 2.12 Consent, Withdrawal of Consent, Opt-Outs, and Objections">§ 2.12 Consent, Withdrawal of Consent, Opt-Outs, and Objections</a> 
-  </li><li>
-    <a href="#ref-for-dfn-user-agent-50" title="§ 2.13 Notifications and Interruptions">§ 2.13 Notifications and Interruptions</a> <a href="#ref-for-dfn-user-agent-51" title="Reference 2">(2)</a> <a href="#ref-for-dfn-user-agent-52" title="Reference 3">(3)</a> <a href="#ref-for-dfn-user-agent-53" title="Reference 4">(4)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-user-agent-54" title="§ 2.15 Support Choosing Which Information to Present">§ 2.15 Support Choosing Which Information to Present</a> <a href="#ref-for-dfn-user-agent-55" title="Reference 2">(2)</a> <a href="#ref-for-dfn-user-agent-56" title="Reference 3">(3)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-user-agent-57" title="§ A.2 Server-Side Actors">§ A.2 Server-Side Actors</a> 
-  </li><li>
-    <a href="#ref-for-dfn-user-agent-58" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> <a href="#ref-for-dfn-user-agent-59" title="Reference 2">(2)</a> <a href="#ref-for-dfn-user-agent-60" title="Reference 3">(3)</a> <a href="#ref-for-dfn-user-agent-61" title="Reference 4">(4)</a> <a href="#ref-for-dfn-user-agent-62" title="Reference 5">(5)</a> <a href="#ref-for-dfn-user-agent-63" title="Reference 6">(6)</a> <a href="#ref-for-dfn-user-agent-64" title="Reference 7">(7)</a> <a href="#ref-for-dfn-user-agent-65" title="Reference 8">(8)</a> <a href="#ref-for-dfn-user-agent-66" title="Reference 9">(9)</a> 
   </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-trustworthy-agent" aria-label="Links in this document to definition: trustworthy agent">
