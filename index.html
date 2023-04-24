@@ -1346,7 +1346,7 @@ information into three categories:
         they clicked to leave that page. We can't block that information
         because the page can use <a data-cite="RFC9110#status.3xx">HTTP redirects</a> to
         learn it, and redirection is a core feature of the web.
-    * Some users are disappointed that a page with permission to run Javascript can record
+    * Some users are disappointed that a page with permission to run JavaScript can record
         their pattern of interaction with that page. However, the page does this by using
         the same events it would use to make the page interactive, so we can't block this
         information access either.
@@ -1374,7 +1374,7 @@ Acceptable information exposure is always qualified by the (possibly empty) set 
 user-controlled settings or permissions that <dfn data-lt="access guard">guard</dfn> access to it.
 For example, the URLs of resources, the timing of link clicks, and the referrer chain within a
 single origin are not guarded by anything; the scroll position is guarded by the setting to turn off
-javascript; and access to the camera or geolocation are guarded by permission prompts.
+JavaScript; and access to the camera or geolocation are guarded by permission prompts.
 
 Information that would be acceptable to expose under one set of [=access guards=] might be
 unacceptable under another set, so when an API designer intends to explain that their new
