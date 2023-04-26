@@ -1619,7 +1619,7 @@ information into three categories:</p>
   they clicked to leave that page. We can't block that information
   because the page can use <a href="https://www.rfc-editor.org/rfc/rfc9110#status.3xx">HTTP redirects</a> to
   learn it, and redirection is a core feature of the web.</li>
-<li>Some users are disappointed that a page with permission to run Javascript can record
+<li>Some users are disappointed that a page with permission to run JavaScript can record
   their pattern of interaction with that page. However, the page does this by using
   the same events it would use to make the page interactive, so we can't block this
   information access either.</li>
@@ -1645,7 +1645,7 @@ found it</a>.</p>
 user-controlled settings or permissions that <dfn data-lt="access guard|guard" data-plurals="access guards" id="dfn-access-guard" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">guard</dfn> access to it.
 For example, the URLs of resources, the timing of link clicks, and the referrer chain within a
 single origin are not guarded by anything; the scroll position is guarded by the setting to turn off
-javascript; and access to the camera or geolocation are guarded by permission prompts.</p>
+JavaScript; and access to the camera or geolocation are guarded by permission prompts.</p>
 <p>Information that would be acceptable to expose under one set of <a data-link-type="dfn" href="#dfn-access-guard" class="internalDFN" id="ref-for-dfn-access-guard-1">access guards</a> might be
 unacceptable under another set, so when an API designer intends to explain that their new
 API is acceptable because an existing acceptable API already exposes the same information,
