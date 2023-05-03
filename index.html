@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en" dir="ltr"><head>
 <meta charset="utf-8">
-<meta name="generator" content="ReSpec 34.1.0">
+<meta name="generator" content="ReSpec 34.1.1">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 span.example-title{text-transform:none}
@@ -743,15 +743,15 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "id": "relational-governance"
     }
   },
-  "publishISODate": "2023-05-02T00:00:00.000Z",
-  "generatedSubtitle": "W3C Editor's Draft 02 May 2023"
+  "publishISODate": "2023-05-03T00:00:00.000Z",
+  "generatedSubtitle": "W3C Editor's Draft 03 May 2023"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED"></head>
 <body data-cite="html indexedDB service-workers fingerprinting-guidance url infra" class="h-entry informative"><div class="head">
     <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a></p>
     <h1 id="title" class="title">Privacy Principles</h1> 
-    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2023-05-02">02 May 2023</time></p>
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2023-05-03">03 May 2023</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
@@ -878,6 +878,12 @@ guarantees driven by shared values that often exceed legal requirements for priv
 each other. This document seeks to establish shared concepts as an aid to technical efforts to
 regulate privacy on the web. It may also be useful in pursuing alignment with and between legal
 regulatory regimes.</p>
+<p>Our goal for this document is not to cover all possible privacy issues, but rather to provide enough
+background to support the Web community in making informed decisions about privacy and in weaving
+privacy into the architecture of the Web.</p>
+<p>Few architectural principles are absolute, and privacy is no exception: privacy can come into tension
+with other desirable properties of an ethical architecture, and when that happens the Web community
+will have to work together to strike the right balance.</p>
 </section>
 
 <section class="introductory" id="audiences-for-this-document"><div class="header-wrapper"><h2 id="audience">Audiences for this Document</h2><a class="self-link" href="#audience" aria-label="Permalink for this Section"></a></div>
@@ -901,7 +907,6 @@ to build systems that turn out to be unacceptable to users.</p>
 <p>Because this document guides privacy reviews of new standards, designers should consult it early in the design to make sure their feature passes the review smoothly.</p>
 </section>
 
-
 <section id="an-introduction-to-privacy-on-the-web"><div class="header-wrapper"><h2 id="intro"><bdi class="secno">1. </bdi>An Introduction to Privacy on the Web</h2><a class="self-link" href="#intro" aria-label="Permalink for Section 1."></a></div><p>This is a document containing technical guidelines. However, in order to put those guidelines in context we
 must first define some terms and explain what we mean by privacy.</p>
 <p>The Web is for everyone ([<cite><a class="bibref" data-link-type="biblio" href="#bib-for-everyone" title="This Is For Everyone">For-Everyone</a></cite>]). It is "<i>a platform that helps people and provides a
@@ -910,18 +915,13 @@ Web serves people is by protecting them in the face of asymmetries of power, and
 establishing and enforcing rules to govern the power of data.</p>
 <p>The Web is a social and technical system made up of <a data-link-type="dfn|abstract-op" href="#dfn-information" class="internalDFN" id="ref-for-dfn-information-1">information flows</a>. Because this document
 is specifically about <a data-link-type="dfn|abstract-op" href="#dfn-privacy" class="internalDFN" id="ref-for-dfn-privacy-1">privacy</a> as it applies to the Web, it focuses on privacy with respect to
-information flows. Our goal is not to cover all possible privacy issues, but rather to provide enough
-background to support the Web community in making informed decisions about privacy and in weaving
-privacy into the architecture of the Web.</p>
-<p>Few architectural principles are absolute, and privacy is no exception: privacy can come into tension
-with other desirable properties of an ethical architecture, and when that happens the Web community
-will have to work together to strike the right balance.</p>
+information flows.</p>
 <p>Information is power. It can be used to predict and to influence people, as well as to design online
 spaces that control people's behaviour. The collection and <a data-link-type="dfn|abstract-op" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-1">processing</a> of information in greater
 volume, with greater precision and reliability, with increasing interoperability across a growing
-variety of data types, and at intensifying speed is leading to a concentration of power
-that threatens private and public liberties. What's more, automation and the increasing computerisation
-of all aspects of our lives both increase the power of information and decrease the cost of a number of intrusive
+variety of data types, and at intensifying speed is leading to a concentration of power that threatens
+private and public liberties. What's more, automation and the increasing computerisation of all aspects
+of our lives both increase the power of information and decrease the cost of a number of intrusive
 behaviours that would be more easily kept in check if the perpetrator had to be in the same room as
 the victim.</p>
 <p>These asymmetries of information and of automation create significant asymmetries of power.</p>
