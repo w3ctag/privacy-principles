@@ -1211,7 +1211,7 @@ particular situation. Note that people's privacy can also be in tension
 with non-privacy concerns. As discussed in the <cite><a data-matched-text="[[[Ethical-Web]]]" href="https://www.w3.org/2001/tag/doc/ethical-web-principles/">W3C TAG Ethical Web Principles</a></cite>, "it is important to
 consider the context in which a particular technology is being applied, the expected
 audience(s) for the technology, who the technology benefits and who it may disadvantage,
-and any power dynamics involved". Despite this complexity, there is a basic ground
+and any power dynamics involved" ([<cite><a class="bibref" data-link-type="biblio" href="#bib-ethical-web" title="W3C TAG Ethical Web Principles">Ethical-Web</a></cite>]). Despite this complexity, there is a basic ground
 rule to follow:</p>
 <div class="practice principle"><a class="marker self-link" href="#principle-limited-collection-for-safety"><bdi lang="en">Principle</bdi></a>: <span class="practicelab" id="principle-limited-collection-for-safety">If a service
 needs to collect extra data from its users in order to protect those or other users, it
@@ -1225,7 +1225,7 @@ for other purposes, like to grow the service.</span>
 <p>Services sometimes use people's data in order to protect those or other people.
 A service that does this should explain what data it's
 using for this purpose. It should also say how it might use or share a person's
-data if it believes that person has broken the rules.</p>
+data if it believes that person has violated the service's rules.</p>
 </div>
 
 <aside class="example" id="example-technical-legal-measures"><div class="marker">
@@ -1245,14 +1245,14 @@ compliance measure.)</li>
 </ol>
 </aside>
 
-<p>It is attractive to say that if someone violates the norms of a service they're using,
+<p>It is attractive to say that if someone violates the rules of a service they're using,
 then they sacrifice a proportionate amount of their privacy protections, but</p>
 <ol>
-<li>Often the service can only prevent the norm violation by also collecting data from
+<li>Often the service can only prevent the rule violation by also collecting data from
 innocent users. This extra collection is not always <a data-link-type="dfn|abstract-op" href="#dfn-appropriately" class="internalDFN" id="ref-for-dfn-appropriately-6">appropriate</a>, especially if it
 allows pervasive monitoring ([<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc7258" title="Pervasive Monitoring Is an Attack">RFC7258</a></cite>], [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc7687" title="Report from the Strengthening the Internet (STRINT) Workshop">RFC7687</a></cite>]).</li>
 <li>If a service operator wants to collect some extra data, it can be tempting for them to
-define norms and proportionality that allow them to do so.</li>
+define rules and proportionality that allow them to do so.</li>
 </ol>
 <p>The following examples illustrate some of the tensions:</p>
 <aside class="example" id="example-sockpuppets"><div class="marker">
@@ -1413,7 +1413,7 @@ recognized. Note that:</p>
 <li>Sites can do harm even if they can't be completely certain
 that visits come from the same person, so <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agents</a> should also take steps
 to prevent such probabilistic recognition. The <cite><a data-matched-text="[[[Privacy-Threat]]]" href="https://w3cping.github.io/privacy-threat-model/">Target Privacy Threat Model</a></cite> discusses
-the tradeoffs involved.</li>
+the tradeoffs involved. ([<cite><a class="bibref" data-link-type="biblio" href="#bib-privacy-threat" title="Target Privacy Threat Model">Privacy-Threat</a></cite>])</li>
 <li>If a <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> blocks <a data-link-type="dfn|abstract-op" href="#dfn-recognize" class="internalDFN" id="ref-for-dfn-recognize-10">recognition</a> between different sites but doesn't
 notice when a single site contains multiple <a data-link-type="dfn|abstract-op" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-21">contexts</a>, this can encourage
 <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-20">actors</a> to bundle multiple contexts into a single site and privilege the
