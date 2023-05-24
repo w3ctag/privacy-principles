@@ -49,7 +49,7 @@ e.g.
 * Christine Runnegar (W3C Invited Expert, PING)
 * Wendy Seltzer (Invited Expert)
 * Pete Snyder (Brave, PING)
-* Sam Weiler (Invited Expert)
+* Sam Weiler (W3C)
 * Jeffrey Yasskin (Google, PING)
 
 …with support from W3C Team.
