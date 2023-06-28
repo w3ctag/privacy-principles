@@ -2077,6 +2077,20 @@ In any rare instances when an API must be defined as returning true current valu
 configure their agents to respond with other information, for reasons including testing, auditing or
 mitigating forms of data collection, including <a>browser fingerprinting</a>.
 
+## Centralization
+
+Specification authors, browser vendors, and other relevant parties should be careful to avoid designing or
+implementing systems that would increase centralization when implementing the privacy principals listed in
+this document. While privacy does not inherently, or necessarily, promote centralization, <em>some</em>
+privacy enhancing systems do. Privacy enhancing systems that achieve their goals without causing or
+incentivizing centralization should be preferred over systems that do promote centralization.
+
+There are many different ways a privacy enhancing system could incentivize or promote centralization.
+For example, a system might <em>explicitly</em> promote centralization by relying on a single (or small
+number) of "trusted parties" to collect or pre-process data. Such systems create centralized points of
+control and failure. A privacy enhancing system might incentivize centralization in more subtle ways too,
+such as being very expensive to run (and so being economically infeasible for smaller entities to run),
+or providing more utility as the number of participants increase.
 
 <section class="appendix">
 
