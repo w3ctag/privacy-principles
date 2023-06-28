@@ -743,15 +743,15 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "id": "relational-governance"
     }
   },
-  "publishISODate": "2023-06-27T00:00:00.000Z",
-  "generatedSubtitle": "W3C Editor's Draft 27 June 2023"
+  "publishISODate": "2023-06-28T00:00:00.000Z",
+  "generatedSubtitle": "W3C Editor's Draft 28 June 2023"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED"></head>
 <body data-cite="html indexedDB service-workers fingerprinting-guidance url infra" class="h-entry informative"><div class="head">
     <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a></p>
     <h1 id="title" class="title">Privacy Principles</h1> 
-    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2023-06-27">27 June 2023</time></p>
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2023-06-28">28 June 2023</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
@@ -1460,7 +1460,9 @@ take multiple forms.</p>
 browser and platform that are consistent between two or more visits and
 probably unique to the person.</p>
 <p>The attributes can be exposed as information about the <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-61">person</a>'s device
-that is otherwise benign (as opposed to <a href="#hl-sensitive-information" data-matched-text="[[[#hl-sensitive-information]]]" class="sec-ref"><bdi class="secno">2.4 </bdi>Sensitive Information</a>).
+that on their own are benign (as opposed to <a href="#hl-sensitive-information" data-matched-text="[[[#hl-sensitive-information]]]" class="sec-ref"><bdi class="secno">2.4 </bdi>Sensitive Information</a>).
+Taken in the aggregate these attributes could uniquely identify the device, or
+contribute to possible <a data-link-type="dfn|abstract-op" href="#dfn-cross-context-recognition" class="internalDFN" id="ref-for-dfn-cross-context-recognition-8">cross-context recognition</a>.
 For example:</p>
 <ul>
 <li>language and time zone;</li>
@@ -1470,11 +1472,8 @@ For example:</p>
 <p>Preventing <a data-link-type="dfn|abstract-op" href="#dfn-fingerprint" class="internalDFN" id="ref-for-dfn-fingerprint-1">fingerprinting</a> can be particularly challenging in cases that
 only affect a small group of people who use the web. For example, people who
 configure their systems in unique ways, such as by using a browser with a very
-small number of users. As long as a tracker can't track a significant number
-of people, it's likely to be unviable to maintain the tracker. However, this
-doesn't excuse making small groups of people trackable when those people
-didn't choose to be in the group.</p>
-<p>See [<cite><a class="bibref" data-link-type="biblio" href="#bib-fingerprinting-guidance" title="Mitigating Browser Fingerprinting in Web Specifications">fingerprinting-guidance</a></cite>] for how to mitigate threats that result from
+small number of users.
+See [<cite><a class="bibref" data-link-type="biblio" href="#bib-fingerprinting-guidance" title="Mitigating Browser Fingerprinting in Web Specifications">fingerprinting-guidance</a></cite>] for how to mitigate threats that result from
 <a data-link-type="dfn|abstract-op" href="#dfn-fingerprint" class="internalDFN" id="ref-for-dfn-fingerprint-2">fingerprinting</a>.</p>
 <p>Supercookies occur when a user agent stores data for a site but makes that data more
 difficult to clear than other cookies or storage, typically because of a bug, of features
@@ -1490,7 +1489,7 @@ difficult for a <a data-link-type="dfn|abstract-op" data-type="dfn" href="https:
 between code on one device and code running on another device. For example, sounds or
 light emitted from one device could be detected by a microphone or light sensor on
 another device [<cite><a class="bibref" data-link-type="biblio" href="#bib-silverpush" title="How TV ads silently ping commands to phones: Sneaky SilverPush code reverse-engineered">SILVERPUSH</a></cite>]. <a data-link-type="dfn|abstract-op" href="#dfn-cross-device-communication" class="internalDFN" id="ref-for-dfn-cross-device-communication-1">Cross-device communication</a> enables cross-device
-tracking, a form of <a data-link-type="dfn|abstract-op" href="#dfn-cross-context-recognition" class="internalDFN" id="ref-for-dfn-cross-context-recognition-8">cross-context recognition</a>, but it can also be used for other
+tracking, a form of <a data-link-type="dfn|abstract-op" href="#dfn-cross-context-recognition" class="internalDFN" id="ref-for-dfn-cross-context-recognition-9">cross-context recognition</a>, but it can also be used for other
 inappropriate information flows.</p>
 </section></section><section id="data-minimization-0"><div class="header-wrapper"><h3 id="data-minimization"><bdi class="secno">2.2 </bdi>Data Minimization</h3><a class="self-link" href="#data-minimization" aria-label="Permalink for Section 2.2"></a></div><div class="practice principle"><a class="marker self-link" href="#bp-sites-user-agents-and-other-actors-should-minimize-the-amount-of-personal-data-they-transfer-between-actors-on-the-web"><bdi lang="en">Principle</bdi></a>: <span class="practicelab" id="bp-sites-user-agents-and-other-actors-should-minimize-the-amount-of-personal-data-they-transfer-between-actors-on-the-web">Sites, user agents, and other actors should minimize the amount of
 <a href="#dfn-data" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-data-15">personal data</a> they transfer between actors on the Web.</span>
@@ -2995,7 +2994,7 @@ Wendy Seltzer.</p>
   </li><li>
     <a href="#ref-for-dfn-cross-context-recognition-5" title="§ 2.1.2 User agent awareness of recognition">§ 2.1.2 User agent awareness of recognition</a> <a href="#ref-for-dfn-cross-context-recognition-6" title="Reference 2">(2)</a> <a href="#ref-for-dfn-cross-context-recognition-7" title="Reference 3">(3)</a> 
   </li><li>
-    <a href="#ref-for-dfn-cross-context-recognition-8" title="§ 2.1.3 Recognition Methods">§ 2.1.3 Recognition Methods</a> 
+    <a href="#ref-for-dfn-cross-context-recognition-8" title="§ 2.1.3 Recognition Methods">§ 2.1.3 Recognition Methods</a> <a href="#ref-for-dfn-cross-context-recognition-9" title="Reference 2">(2)</a> 
   </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-cross-site-recognition" aria-label="Links in this document to definition: Cross-site recognition">
