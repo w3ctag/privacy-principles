@@ -421,7 +421,13 @@
           authors: ['Salomé Viljoen'],
           href: 'https://www.yalelawjournal.org/feature/a-relational-theory-of-data-governance',
           publisher: 'Yale Law Journal',
-        }
+        },
+        'web-without-3p-cookies': {
+          title: 'Improving the web without third-party cookies',
+          authors: ['Amy Guy'],
+          href: 'https://www.w3.org/2001/tag/doc/web-without-3p-cookies/',
+          publisher: 'W3C',
+        },
       },
     };
   </script>
@@ -1370,12 +1376,11 @@ information into three categories:
         the same events it would use to make the page interactive, so we can't block this
         information access either.
 
-    These principles don't describe exactly how to distinguish acceptable
-    information from information we'd rather not expose. API designers instead
-    need to balance the harm to users from exposing information against the harm
-    to users from blocking that exposure. When in doubt, designers should ensure
-    that different user agents can help their users balance the costs in
-    different ways.
+Some functionality of the web has historically been provided using functional primitives (e.g.
+third-party cookies) that can undermine people's privacy. As explained in <em>Improving the web
+without third-party cookies</em> ([[?web-without-3p-cookies]]), "<em>It is better to approach [these
+use cases] with replacement technologies that are designed-for-purpose and built to respect user
+privacy.</em>"
 
 The following subsections discuss how to review an API proposal that exposes data that
 provides a new way to infer each of the above categories of information. They explain how
