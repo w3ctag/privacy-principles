@@ -683,6 +683,17 @@ in terms of specificity over any general obtention of [=consent=] by a site,
 and only superseded by specific [=consent=] obtained through a deliberate action taken by
 the user with the intent of overriding their global opt-out.
 
+One implementation strategy for [=opt-outs=] and other <a href="#data-rights">data rights</a> is
+to assign [=people=] stable [=identifiers=] and to maintain a central registry to map these
+[=identifiers=] to [=people=]'s preferences. [=Actors=] that wish to process a given person's
+data are then expected to fetch that person's preferences from the central registry and to
+configure their processing accordingly. This approach has notably been deployed to capture
+[=opt-outs=] of marketing uses of people's phone numbers or residential addresses. This
+approach is not recommended, for multiple reasons: it offers no technical protection against
+bad actors, it creates one central point of failure, it is hard to meaningfully audit (particularly
+for the scale of processing implied by web systems), and experience with existing systems
+shows that they make it hard for [=people=] to exercise their rights.
+
 ### Privacy Labour {#privacy-labour}
 
 <dfn data-lt="privacy labor|labour|labor">Privacy labour</dfn> is the practice of having a [=person=] carry out
