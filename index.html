@@ -741,6 +741,15 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "href": "https://www.yalelawjournal.org/feature/a-relational-theory-of-data-governance",
       "publisher": "Yale Law Journal",
       "id": "relational-governance"
+    },
+    "web-without-3p-cookies": {
+      "title": "Improving the web without third-party cookies",
+      "authors": [
+        "Amy Guy"
+      ],
+      "href": "https://www.w3.org/2001/tag/doc/web-without-3p-cookies/",
+      "publisher": "W3C",
+      "id": "web-without-3p-cookies"
     }
   },
   "publishISODate": "2023-06-28T00:00:00.000Z",
@@ -1642,14 +1651,13 @@ information into three categories:</p>
   the same events it would use to make the page interactive, so we can't block this
   information access either.</li>
 </ul>
-<p> These principles don't describe exactly how to distinguish acceptable
- information from information we'd rather not expose. API designers instead
- need to balance the harm to users from exposing information against the harm
- to users from blocking that exposure. When in doubt, designers should ensure
- that different user agents can help their users balance the costs in
- different ways.</p>
 </li>
 </ol>
+<p>Some functionality of the web has historically been provided using functional primitives (e.g.
+third-party cookies) that can undermine people's privacy. As explained in <em>Improving the web
+without third-party cookies</em> ([<cite><a class="bibref" data-link-type="biblio" href="#bib-web-without-3p-cookies" title="Improving the web without third-party cookies">web-without-3p-cookies</a></cite>]), "<em>It is better to approach [these
+use cases] with replacement technologies that are designed-for-purpose and built to respect user
+privacy.</em>"</p>
 <p>The following subsections discuss how to review an API proposal that exposes data that
 provides a new way to infer each of the above categories of information. They explain how
 to <a href="https://www.w3.org/TR/design-principles/#leave-the-web-better">leave the web better than you
@@ -2688,6 +2696,8 @@ Wendy Seltzer.</p>
       <a href="https://www.hup.harvard.edu/catalog.php?isbn=9780674035072"><cite>Understanding Privacy</cite></a>. Daniel Solove.  Harvard University Press. URL: <a href="https://www.hup.harvard.edu/catalog.php?isbn=9780674035072">https://www.hup.harvard.edu/catalog.php?isbn=9780674035072</a>
     </dd><dt id="bib-unsanctioned-tracking">[UNSANCTIONED-TRACKING]</dt><dd>
       <a href="http://www.w3.org/2001/tag/doc/unsanctioned-tracking/"><cite>Unsanctioned Web Tracking</cite></a>. Mark Nottingham.  W3C. 17 July 2015. TAG Finding. URL: <a href="http://www.w3.org/2001/tag/doc/unsanctioned-tracking/">http://www.w3.org/2001/tag/doc/unsanctioned-tracking/</a>
+    </dd><dt id="bib-web-without-3p-cookies">[web-without-3p-cookies]</dt><dd>
+      <a href="https://www.w3.org/2001/tag/doc/web-without-3p-cookies/"><cite>Improving the web without third-party cookies</cite></a>. Amy Guy.  W3C. URL: <a href="https://www.w3.org/2001/tag/doc/web-without-3p-cookies/">https://www.w3.org/2001/tag/doc/web-without-3p-cookies/</a>
     </dd><dt id="bib-why-privacy">[Why-Privacy]</dt><dd>
       <a href="https://global.oup.com/academic/product/why-privacy-matters-9780190939045?cc=us&amp;lang=en&amp;"><cite>Why Privacy Matter</cite></a>. Neil Richards.  Oxford University Press. URL: <a href="https://global.oup.com/academic/product/why-privacy-matters-9780190939045?cc=us&amp;lang=en&amp;">https://global.oup.com/academic/product/why-privacy-matters-9780190939045?cc=us&amp;lang=en&amp;</a>
     </dd></dl>
