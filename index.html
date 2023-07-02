@@ -1041,194 +1041,36 @@ if the same data were shared between unrelated [=actors=].
 
 <span class="practicelab" id="principle-identity-per-context">A [=user agent=]
 should help its user present the [=identity=] they want in each [=context=]
-they are in.</span>
+they are in, and to prevent or support [=recognition=] as appropriate.</span>
 
 </div>
 
 A [=person=]'s <dfn>identity</dfn> is the set of characteristics that define
 them. Their identity *in a [=context=]* is the set of characteristics they
-present in that context. People frequently present different identities to
-different contexts, and also frequently share an identity among several
-contexts. People may also wish to present an ephemeral or anonymous identity,
-which is just a set of characteristics that is too small or unstable to be useful
+present under particular circumstances.
+
+People can present different identities to different contexts, and can
+also use a single identity in several different contexts.
+
+People may wish to present an ephemeral or anonymous identity. This is
+a set of characteristics that is too small or unstable to be useful
 for following them through time.
 
-It is important to keep in mind that a person's [=identities=] may often be distinct
-from whatever legal identity or identities they may hold.
+A person's [=identities=] may often be distinct from whatever legal identity
+or identities they may hold.
 
-<dfn data-lt="recognize|recognized">Recognition</dfn> is the act of realising that a given [=identity=]
-corresponds to the same [=person=] as another [=identity=] which may have been
-observed either in another [=context=] or in the same [=context=] but at a
-different time. A [=person=] can be [=recognized=] whether or not their legal identity or
-characteristics of their legal identity are included in the recognition.
+In some circumstances, the best way for a [=user agent=] to uphold this
+principle is to prevent [=recognition=] (i.e. so that one [=site=] can't
+learn anything about its [=user=]'s behavior on *another* site).
 
-In order to uphold the above <a
-href="#principle-identity-per-context">principle</a>, sometimes a [=user agent=]
-needs to *prevent* [=recognition=], for instance so that one [=site=] can't
-learn anything about its [=user=]'s behavior on *another* site. Other times, the
-[=user agent=] needs to *support* [=recognition=],
-for instance to help its [=user=] *prove* to one [=site=] that they have a
-particular identity on another [=site=]. Similarly, a [=user agent=] can help its
-[=user=] to separate or communicate [=identity=] across *repeat* visits to the *same*
-[=site=].
+In other circumstances, the best way for a [=user agent=] to uphold this
+principle is to *support* [=recognition=] (i.e. to help its [=user=] prove
+to one [=site=] that they have a particular identity on another [=site=]).
 
-### Recognition Types {#recognition-types}
+Similarly, a [=user agent=] can help its [=user=] by preventing or supporting
+[=recognition=] across *repeat* visits to the *same* [=site=].
 
-There are several types of [=recognition=] that may take place. These rely on
-different methods and present different challenges.
 
-<dfn>Cross-context recognition</dfn> is [=recognition=] between different
-[=contexts=]. It contributes to [=surveillance=], [=correlation=],
-and [=identification=].
-
-[=Cross-context recognition=] is only [=appropriate=] when the person being [=recognized=]
-can reasonably expect that recognition to happen and can control whether it does.
-Note that a person can use a piece of identifying information in two different
-contexts (e.g. their email or phone number) without that implying that they're
-using the same identity in both contexts. Unless there's some other indication
-that they intended to use a single identity, it is [=inappropriate=] to
-[=recognize=] them using that information, or to seek extra identifying
-information to help with cross-context recognition.
-
-Systems which [=recognize=] people across [=contexts=] need
-to be careful not to apply the principles of one [=context=] in ways that
-violate the principles around use of information acquired in a different
-[=context=]. This is particularly true for [=vulnerable=] people, as
-recognising them in different [=contexts=] may force traits into the open
-that reveal their vulnerability. For example, if you meet your therapist at a
-party, you expect them to have different discussion topics with you than they
-usually would, and possibly even to pretend they don't know you.
-
-<dfn>Cross-site recognition</dfn> is when a [=site=] determines with high
-probability that a visit to the site comes from the same person as another
-visit to a *different* site. In the usual case that the sites are different [=contexts=],
-[=cross-site recognition=] is a privacy harm in the same cases as [=cross-context recognition=].
-
-<dfn>Same-site recognition</dfn> is when a single [=site=] discovers and uses the
-fact that two or more visits probably came from the same [=person=].
-
-A privacy harm occurs if a [=person=] reasonably expects that they'll be using
-a different [=identity=] for different visits to a single site, but the site
-[=recognizes=] them anyway. This harm can be accomplished through a
-variety of means detailed in [[[#recognition-methods]]].
-
-Note that these categories overlap: [=cross-site recognition=] is usually
-[=cross-context recognition=] (and always [=recognizes=] across [=partitions=]); and
-[=same-site recognition=] is sometimes [=cross-context recognition=] (and may or may not
-involve multiple [=partitions=]).
-
-### User agent awareness of recognition {#user-agent-recognition}
-
-A <dfn>partition</dfn> is the [=user agent=]'s attempt to match how its user
-would understand a [=context=]. [=User agents=] don't have a perfect
-understanding of how their users experience the sites they visit, so they
-often need to approximate the boundaries between [=contexts=] when building
-[=partitions=]. In the absence of better information, a [=partition=] can be
-defined as:
-
-* a set of [=environments=] (roughly same-site and cross-site [^iframe^]s,
-workers, and top-level pages)
-* whose [=environment/top-level origins=] are in the [=same site=] (but see
-[[PSL-Problems]])
-* being visited within the same user agent installation (and browser profile,
-container, or container tab for user agents that support those features)
-* between points in time that the person or user agent clears that [=site=]'s
-cookies and other storage (which is sometimes automatic at the end of each
-session).
-
-When a [=user agent=] knows that a site includes multiple contexts, it should
-adjust its [=partitions=] accordingly, for instance by partitioning identities
-per subdomain or site path. User agents should work to improve their ability to
-distinguish contexts within a site.
-
-Where possible, [=user agents=] should prevent people from being [=cross-context
-recognition|recognized=] across [=partitions=] unless they intend to be
-recognized. Note that:
-
-* Sites can do harm even if they can't be completely certain
-  that visits come from the same person, so [=user agents=] should also take steps
-  to prevent such probabilistic recognition. The [[[Privacy-Threat]]] discusses
-  the tradeoffs involved. ([[Privacy-Threat]])
-* If a [=user agent=] blocks [=recognition=] between different sites but doesn't
-  notice when a single site contains multiple [=contexts=], this can encourage
-  [=actors=] to bundle multiple contexts into a single site and privilege the
-  [=actors=] who can do so. Despite these harms, even if a [=user agent=] can't
-  always block [=cross-context recognition=] within a single site, it should
-  still prevent the [=cross-context recognition=] it can detect. By having
-  [=user agents=] solve the problems that technical measures can solve, we let
-  actors using other approaches focus on the problems they're best at.
-
-If a [=user agent=] can tell that its user is using a particular identity on a
-website, for example because the user used an API like
-[[[credential-management-1]]] to log into the site, it should make that active
-identity clear to the user.
-
-### Recognition Methods {#recognition-methods}
-
-The web platform offers many ways for a website to recognize that a [=person=]
-is using the same [=identity=] over time, including [[RFC6265|cookies]],
-{{WindowLocalStorage/localStorage}}, {{WindowOrWorkerGlobalScope/indexedDB}},
-{{CacheStorage}}, and other forms of storage. This allows sites to save the
-[=person=]'s preferences, shopping carts, etc., and people have come to expect
-this behavior in some contexts.
-
-People are unlikely to expect the recognition and will find it difficult to
-mitigate when it is automated, which can happen in different ways:
-
-* through the use of <a data-cite="Browser-Parties#environment-cross-site">cross-site</a> cookies,
-* by having someone navigate to a link that has been decorated with an identifier
-  ([[?Nav-Tracking]]),
-* collecting the same piece of identifying information on both sites, or
-* by correlating the timestamps of an event that occurs nearly-simultaneously
-on both sites (this is an example of a <a
-href="https://github.com/asankah/ephemeral-fingerprinting/blob/2395a35aac260d4d2f880eeb05c2617b0fd642ea/README.md">timing
-attack</a>).
-
-In addition to recognition methods that can operate automatically across
-contexts, recognition can also be made *persistent* such that it will
-defeat potential mitigations like [=partitions=] or clearing one's cookies.
-This constitutes unsanctioned tracking ([[?UNSANCTIONED-TRACKING]]) and can
-take multiple forms.
-
-<dfn data-lt="fingerprint">Fingerprinting</dfn> consists of using attributes of the [=person=]'s
-browser and platform that are consistent between two or more visits and
-probably unique to the person.
-
-The attributes can be exposed as information about the [=person=]'s device
-that on their own are benign (as opposed to [[[#hl-sensitive-information]]]).
-Taken in the aggregate these attributes could uniquely identify the device, or
-contribute to possible [=cross-context recognition=].
-For example:
-
-* language and time zone;
-* window size;
-* system preferences (such as dark mode, serif font, etc.).
-
-Preventing [=fingerprinting=] can be particularly challenging in cases that
-only affect a small group of people who use the web. For example, people who
-configure their systems in unique ways, such as by using a browser with a very
-small number of users.
-See [[fingerprinting-guidance]] for how to mitigate threats that result from
-[=fingerprinting=].
-
-Supercookies occur when a user agent stores data for a site but makes that data more
-difficult to clear than other cookies or storage, typically because of a bug, of features
-relating to cache storage and network state (e.g. ETag, HSTS), or
-because the browser restores the browser vendor's cookies when local state is cleared.
-<a data-cite="fingerprinting-guidance#clearing-all-local-state">Fingerprinting
-Guidance § Clearing all local state</a> discusses how specifications can help
-user agents avoid this mistake.
-
-<dfn>Header enrichment</dfn> happens when a network operator adds HTTP request headers
-to identify their customers to sites that they visit. It is unfortunately
-difficult for a [=user agent=] to mitigate against [=header enrichment=].
-
-<dfn>Cross-device communication</dfn> is communication
-between code on one device and code running on another device. For example, sounds or
-light emitted from one device could be detected by a microphone or light sensor on
-another device [[?SILVERPUSH]]. [=Cross-device communication=] enables cross-device
-tracking, a form of [=cross-context recognition=], but it can also be used for other
-inappropriate information flows.
 
 ## Data Minimization {#data-minimization}
 
@@ -2246,6 +2088,172 @@ perform the relevant [=processing=] if it:
 * has no independent right to use the data other than in a [=de-identified=] form (e.g., for
   monitoring service integrity, load balancing, capacity planning, or billing); and,
 * has a contract in place with the [=actor=] which is consistent with the above limitations.
+
+## Recognition {#recognition}
+
+<dfn data-lt="recognize|recognized">Recognition</dfn> is the act of realising that a given [=identity=]
+corresponds to the same [=person=] as another [=identity=] which may have been
+observed either in another [=context=] or in the same [=context=] but at a
+different time. A [=person=] can be [=recognized=] whether or not their legal identity or
+characteristics of their legal identity are included in the recognition.
+
+### Recognition Types {#recognition-types}
+
+There are several types of [=recognition=] that may take place. These rely on
+different methods and present different challenges.
+
+<dfn>Cross-context recognition</dfn> is [=recognition=] between different
+[=contexts=]. It contributes to [=surveillance=], [=correlation=],
+and [=identification=].
+
+[=Cross-context recognition=] is only [=appropriate=] when the person being [=recognized=]
+can reasonably expect that recognition to happen and can control whether it does.
+Note that a person can use a piece of identifying information in two different
+contexts (e.g. their email or phone number) without that implying that they're
+using the same identity in both contexts. Unless there's some other indication
+that they intended to use a single identity, it is [=inappropriate=] to
+[=recognize=] them using that information, or to seek extra identifying
+information to help with cross-context recognition.
+
+Systems which [=recognize=] people across [=contexts=] need
+to be careful not to apply the principles of one [=context=] in ways that
+violate the principles around use of information acquired in a different
+[=context=]. This is particularly true for [=vulnerable=] people, as
+recognising them in different [=contexts=] may force traits into the open
+that reveal their vulnerability. For example, if you meet your therapist at a
+party, you expect them to have different discussion topics with you than they
+usually would, and possibly even to pretend they don't know you.
+
+<dfn>Cross-site recognition</dfn> is when a [=site=] determines with high
+probability that a visit to the site comes from the same person as another
+visit to a *different* site. In the usual case that the sites are different [=contexts=],
+[=cross-site recognition=] is a privacy harm in the same cases as [=cross-context recognition=].
+
+<dfn>Same-site recognition</dfn> is when a single [=site=] discovers and uses the
+fact that two or more visits probably came from the same [=person=].
+
+A privacy harm occurs if a [=person=] reasonably expects that they'll be using
+a different [=identity=] for different visits to a single site, but the site
+[=recognizes=] them anyway. This harm can be accomplished through a
+variety of means detailed in [[[#recognition-methods]]].
+
+Note that these categories overlap: [=cross-site recognition=] is usually
+[=cross-context recognition=] (and always [=recognizes=] across [=partitions=]); and
+[=same-site recognition=] is sometimes [=cross-context recognition=] (and may or may not
+involve multiple [=partitions=]).
+
+### User agent awareness of recognition {#user-agent-recognition}
+
+A <dfn>partition</dfn> is the [=user agent=]'s attempt to match how its user
+would understand a [=context=]. [=User agents=] don't have a perfect
+understanding of how their users experience the sites they visit, so they
+often need to approximate the boundaries between [=contexts=] when building
+[=partitions=]. In the absence of better information, a [=partition=] can be
+defined as:
+
+* a set of [=environments=] (roughly same-site and cross-site [^iframe^]s,
+workers, and top-level pages)
+* whose [=environment/top-level origins=] are in the [=same site=] (but see
+[[PSL-Problems]])
+* being visited within the same user agent installation (and browser profile,
+container, or container tab for user agents that support those features)
+* between points in time that the person or user agent clears that [=site=]'s
+cookies and other storage (which is sometimes automatic at the end of each
+session).
+
+When a [=user agent=] knows that a site includes multiple contexts, it should
+adjust its [=partitions=] accordingly, for instance by partitioning identities
+per subdomain or site path. User agents should work to improve their ability to
+distinguish contexts within a site.
+
+Where possible, [=user agents=] should prevent people from being [=cross-context
+recognition|recognized=] across [=partitions=] unless they intend to be
+recognized. Note that:
+
+* Sites can do harm even if they can't be completely certain
+  that visits come from the same person, so [=user agents=] should also take steps
+  to prevent such probabilistic recognition. The [[[Privacy-Threat]]] discusses
+  the tradeoffs involved. ([[Privacy-Threat]])
+* If a [=user agent=] blocks [=recognition=] between different sites but doesn't
+  notice when a single site contains multiple [=contexts=], this can encourage
+  [=actors=] to bundle multiple contexts into a single site and privilege the
+  [=actors=] who can do so. Despite these harms, even if a [=user agent=] can't
+  always block [=cross-context recognition=] within a single site, it should
+  still prevent the [=cross-context recognition=] it can detect. By having
+  [=user agents=] solve the problems that technical measures can solve, we let
+  actors using other approaches focus on the problems they're best at.
+
+If a [=user agent=] can tell that its user is using a particular identity on a
+website, for example because the user used an API like
+[[[credential-management-1]]] to log into the site, it should make that active
+identity clear to the user.
+
+### Recognition Methods {#recognition-methods}
+
+The web platform offers many ways for a website to recognize that a [=person=]
+is using the same [=identity=] over time, including [[RFC6265|cookies]],
+{{WindowLocalStorage/localStorage}}, {{WindowOrWorkerGlobalScope/indexedDB}},
+{{CacheStorage}}, and other forms of storage. This allows sites to save the
+[=person=]'s preferences, shopping carts, etc., and people have come to expect
+this behavior in some contexts.
+
+People are unlikely to expect the recognition and will find it difficult to
+mitigate when it is automated, which can happen in different ways:
+
+* through the use of <a data-cite="Browser-Parties#environment-cross-site">cross-site</a> cookies,
+* by having someone navigate to a link that has been decorated with an identifier
+  ([[?Nav-Tracking]]),
+* collecting the same piece of identifying information on both sites, or
+* by correlating the timestamps of an event that occurs nearly-simultaneously
+on both sites (this is an example of a <a
+href="https://github.com/asankah/ephemeral-fingerprinting/blob/2395a35aac260d4d2f880eeb05c2617b0fd642ea/README.md">timing
+attack</a>).
+
+In addition to recognition methods that can operate automatically across
+contexts, recognition can also be made *persistent* such that it will
+defeat potential mitigations like [=partitions=] or clearing one's cookies.
+This constitutes unsanctioned tracking ([[?UNSANCTIONED-TRACKING]]) and can
+take multiple forms.
+
+<dfn data-lt="fingerprint">Fingerprinting</dfn> consists of using attributes of the [=person=]'s
+browser and platform that are consistent between two or more visits and
+probably unique to the person.
+
+The attributes can be exposed as information about the [=person=]'s device
+that on their own are benign (as opposed to [[[#hl-sensitive-information]]]).
+Taken in the aggregate these attributes could uniquely identify the device, or
+contribute to possible [=cross-context recognition=].
+For example:
+
+* language and time zone;
+* window size;
+* system preferences (such as dark mode, serif font, etc.).
+
+Preventing [=fingerprinting=] can be particularly challenging in cases that
+only affect a small group of people who use the web. For example, people who
+configure their systems in unique ways, such as by using a browser with a very
+small number of users.
+See [[fingerprinting-guidance]] for how to mitigate threats that result from
+[=fingerprinting=].
+
+Supercookies occur when a user agent stores data for a site but makes that data more
+difficult to clear than other cookies or storage, typically because of a bug, of features
+relating to cache storage and network state (e.g. ETag, HSTS), or
+because the browser restores the browser vendor's cookies when local state is cleared.
+<a data-cite="fingerprinting-guidance#clearing-all-local-state">Fingerprinting
+Guidance § Clearing all local state</a> discusses how specifications can help
+user agents avoid this mistake.
+
+<dfn>Header enrichment</dfn> happens when a network operator adds HTTP request headers
+to identify their customers to sites that they visit. It is unfortunately
+difficult for a [=user agent=] to mitigate against [=header enrichment=].
+
+<dfn>Cross-device communication</dfn> is communication
+between code on one device and code running on another device. For example, sounds or
+light emitted from one device could be detected by a microphone or light sensor on
+another device [[?SILVERPUSH]]. [=Cross-device communication=] enables cross-device
+tracking, a form of [=cross-context recognition=], but it can also be used for other
+inappropriate information flows.
 
 </section>
 
