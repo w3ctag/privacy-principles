@@ -1265,13 +1265,21 @@ These APIs should also:
 
 ## Sensitive Information {#hl-sensitive-information}
 
-Contributes to [=correlation=], [=identification=], [=secondary use=], and
-[=disclosure=].
+<div class="practice">
+<p>
+  <span class="practicelab" id="principle-vulnerability">
+    Whether information is considered sensitive can vary depending on a
+    [=person=]'s circumstances, the [=context=] of an interaction, and can
+    change over time.
+  </span>
+</p>
+</div>
 
 Many pieces of information about someone could cause privacy harms if disclosed.
 For example:
 
 * Their location.
+* Language preferences.
 * Video or audio from the their camera or microphone.
 * The content of certain files on their filesystem.
 * Financial data.
@@ -1280,13 +1288,16 @@ For example:
 * [Whether they are using assistive technology.](https://w3ctag.github.io/design-principles/#do-not-expose-use-of-assistive-tech)
 
 A particular piece of information may have different sensitivity for different
-people. Language preferences, for example, might typically seem innocent, but
-also can be an indicator of belonging to an ethnic minority. Precise location
-information can be extremely sensitive (because it's identifying, because it
-allows for in-person intrusions, because it can reveal detailed information
-about a person's life) but it might also be public and not sensitive at all, or
-it might be low-enough granularity that it is much less sensitive for many
-people.
+people. People can become vulnerable if sensitive information about them is,
+or is likely to be, exposed; see [[[#vulnerability]]].
+
+<aside class="example">
+Precise location information can be extremely sensitive because it's
+identifying, because it allows for in-person intrusions, because it can reveal
+detailed information about a person's life; but it might also be public and
+not sensitive at all, or it might be low-enough granularity that it is much
+less sensitive for many people.
+</aside>
 
 When considering whether a class of information is likely to be sensitive to
 a person, consider at least these factors:
@@ -1296,9 +1307,10 @@ a person, consider at least these factors:
   [[[fingerprinting-guidance]]]);
 * whether it discloses substantial (including intimate details or inferences)
   information about the person using the system or other people;
-* whether it can be revoked (as in determining whether a permission is
-  necessary);
+* whether it can be used to infer particular characteristics that put the person at risk of greater harm;
+* whether it can be revoked (see also: [[[#consent-principles]]]);
 * whether it enables other threats, like intrusion.
+
 
 ## Data Rights {#data-rights}
 
@@ -1647,7 +1659,21 @@ more accountable. Examples of mitigations include:
 
 <div class="issue">This section is still being refined. We expect additional principles to be added.</div>
 
-An individual may not realise when they disclose personal data that
+<div class="practice">
+<p>
+  <span class="practicelab" id="principle-vulnerability">
+[=User agents=] and [=sites=] should not penalize users who have chosen
+stronger privacy protections. If disabling some features or functionality
+affects user experience, it should degrade gracefully.
+  </span>
+</p>
+</div>
+
+(e.g., blocking tracking elements, sensor data or information about
+installed software or connected devices)
+
+
+A [=person=] may not realise when they disclose personal data that
 they are vulnerable or could become vulnerable. Some individuals
 may be more vulnerable to privacy risks or harm as a result of
 collection, misuse, loss or theft of personal data because of
@@ -1674,17 +1700,9 @@ individuals assess privacy risks and make decisions about privacy
 (such as parents, guardians and peers), everyone has their own
 right to privacy.
 
-<div class="practice">
-<p>
-  <span class="practicelab" id="principle-vulnerability">
-[=User agents=] and [=sites=] should allow for gracefully degraded
-user experience where some features or functionality may not be
-available because users have chosen stronger privacy protections
-(e.g., blocking tracking elements, sensor data or information about
-installed software or connected devices).
-  </span>
-</p>
-</div>
+
+
+
 
 ### Guardians {#guardians}
 
