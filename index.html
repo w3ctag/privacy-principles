@@ -1509,29 +1509,25 @@ improved privacy.
 
 <div class="practice">
 <span class="practicelab" id="principle-owned-devices-disclose-surveillance">
-[=User agents=] must not help a device [=administrator=] surveil the people using the devices they
-administrate without those people's knowledge.
+[=User agents=] must not help a device [=administrator=] surveil the people
+using the devices they administrate without those people's knowledge. [=User
+agents=] should not tell a device [=administrator=] about user behavior except
+when that disclosure is necessary to enforce reasonable constraints on use of
+the device.
 </span>
 </div>
 
-<div class="practice">
-<span class="practicelab" id="principle-reasonable-disclosure-on-owned-devices">
-[=User agents=] should only tell a device [=administrator=] about user behavior when that disclosure
-is necessary to enforce reasonable constraints on use of the device.
-</span>
-</div>
+Computing devices have <dfn data-lt="device owner">owners</dfn>, who have
+<dfn>administrator</dfn> access to the devices in order to install and
+configure the programs that run on them. As a program running on a device,
+a [=user agent=] generally can't tell whether the [=administrator=] who has
+installed and configured it was authorized by the device's actual owner.
 
-
-Computing devices have <dfn data-lt="device owner">owners</dfn>, and those owners have
-<dfn>administrator</dfn> access to the devices in order to install and configure the programs,
-including [=user agents=], that run on them. Sometimes, as in the cases of an employer providing a
-device to an employee, a friend loaning a device to their visitor, or a parent providing a device to
-their small child, the [=person=] using a device doesn't own the device or have [=administrator=]
-access to it. Other times, as in the cases of intimate partners or one relative helping another
-relative with their device, the owner and primary user of a device might not be the only person with
-[=administrator=] access. As a program running on a device, a [=user agent=] generally can't tell
-whether the [=administrator=] who has installed and configured it was authorized by the device's
-actual owner.
+Sometimes the [=person=] using a device doesn't own the device or have
+[=administrator=] access to it (e.g. an employer providing a device to an
+employee; a friend loaning a device to their guest; or a parent providing a
+device to their young child). Other times, the owner and primary user of a
+device might not be the only person with [=administrator=] access.
 
 These relationships can involve power imbalances. A child may have difficulty accessing any
 computing devices other than the ones their parent provides. A victim of abuse might not be able to
@@ -1540,25 +1536,23 @@ to agree to use their employer's devices in order to keep their job.
 
 While a [=device owner=] has an interest and sometimes a responsibility to make sure their device is
 used in the ways they intended, the [=person=] _using_ the device still has a right to privacy while
-using it. The above principles enforce this right to privacy in two ways:
+using it. This principle enforces this right to privacy in two ways:
 
 1. [=User agent=] developers need to consider whether requests from [=device owners=] and
    [=administrators=] are reasonable, and refuse to implement unreasonable requests, even if that
-   means fewer sales. Owner/administrator needs must not simply trump user needs in the <a
+   means fewer sales. Owner/administrator needs do not supersede user needs in the <a
    data-cite="design-principles#priority-of-constituencies">priority of constituencies</a>.
 1. Even when information disclosure is reasonable, the [=person=] whose data is being disclosed
    needs to know about it so that they can avoid doing things that would lead to unwanted
    consequences.
 
 Some [=administrator=] requests might be reasonable for some sorts of users, like employees or
-especially children, but not be reasonable for other sorts, like friends or intimate partners. In
-those cases, the [=user agent=] can explain what the administrator is going to learn in a way that
-also says what sort of user is expected to agree. Users in other classes can then react
-appropriately.
+children, but not be reasonable for other sorts, like friends or intimate partners.
+The [=user agent=] should explain what the [=administrator=] is going to learn in a way that
+helps different users to react appropriately.
 
-<aside class="issue">
-Link this to [[[#guardians]]].
-</aside>
+See [[[#guardians]]] for more detail on how this principle applies to
+vulnerable people with [=guardians=].
 
 ## Harassment
 
