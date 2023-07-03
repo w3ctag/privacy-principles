@@ -43,8 +43,9 @@
             prac.classList.remove('advisement');
             prac.classList.add('principle');
           }
-          let h2 = document.querySelector('#bp-summary h2');
-          h2.innerHTML = h2.innerHTML.replace('Best Practices Summary', 'Principles Summary');
+          for (let el of document.querySelectorAll('#bp-summary h2, #toc a[href="#bp-summary"]')) {
+            el.innerHTML = el.innerHTML.replace('Best Practices Summary', 'Principles Summary');
+          }
         }
       ],
       localBiblio: {
