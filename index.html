@@ -1041,7 +1041,7 @@ if the same data were shared between unrelated [=actors=].
 
 <span class="practicelab" id="principle-identity-per-context">A [=user agent=]
 should help its user present the [=identity=] they want in each [=context=]
-they are in, and to prevent or support [=recognition=] as appropriate.
+they are in, and should prevent or support [=recognition=] as appropriate.
 </span>
 
 </div>
@@ -1051,21 +1051,21 @@ them. Their identity *in a [=context=]* is the set of characteristics they
 present under particular circumstances.
 
 People can present different identities to different contexts, and can
-also use a single identity in several different contexts.
+also share a single identity across several different contexts.
 
 People may wish to present an ephemeral or anonymous identity. This is
 a set of characteristics that is too small or unstable to be useful
 for following them through time.
 
 A person's [=identities=] may often be distinct from whatever legal identity
-or identities they may hold.
+or identities they hold.
 
 In some circumstances, the best way for a [=user agent=] to uphold this
-principle is to prevent [=recognition=] (i.e. so that one [=site=] can't
+principle is to prevent [=recognition=] (e.g. so that one [=site=] can't
 learn anything about its [=user=]'s behavior on *another* site).
 
 In other circumstances, the best way for a [=user agent=] to uphold this
-principle is to *support* [=recognition=] (i.e. to help its [=user=] prove
+principle is to *support* [=recognition=] (e.g. to help its [=user=] prove
 to one [=site=] that they have a particular identity on another [=site=]).
 
 Similarly, a [=user agent=] can help its [=user=] by preventing or supporting
@@ -2096,7 +2096,9 @@ perform the relevant [=processing=] if it:
 <dfn data-lt="recognize|recognized">Recognition</dfn> is the act of realising that a given [=identity=]
 corresponds to the same [=person=] as another [=identity=] which may have been
 observed either in another [=context=], or in the same [=context=] but at a
-different time.
+different time. [=Recognition=] can be probabilistic, if someone realises there's
+a high probability that two [=identities=] correspond to the same [=person=],
+even if they aren't certain.
 
 A [=person=] can be [=recognized=] whether or not their legal identity or
 characteristics of their legal identity are included in the recognition.
@@ -2106,15 +2108,14 @@ characteristics of their legal identity are included in the recognition.
 There are several types of [=recognition=] that may take place.
 
 <dfn>Cross-context recognition</dfn> is [=recognition=] between different
-[=contexts=]. It contributes to [=surveillance=], [=correlation=],
-and [=identification=].
+[=contexts=].
 
 [=Cross-context recognition=] is only [=appropriate=] when the person being [=recognized=]
 can reasonably expect recognition to happen, and can control whether it does.
 
-If a person can uses a piece of identifying information in two different
+If a person uses a piece of identifying information in two different
 contexts (e.g. their email or phone number), this *does not* automatically
-mean that they're using the same identity in both contexts. It is
+mean that they intend to use the same identity in both contexts. It is
 [=inappropriate=] to [=recognize=] them using that information, unless there's
 some other indication that they intended to use a single identity. It is also
 [=inappropriate=] to seek extra identifying information to help with
@@ -2129,13 +2130,13 @@ that reveal their vulnerability. For example, if you meet your therapist at a
 party, you expect them to have different discussion topics with you than they
 usually would, and possibly even to pretend they don't know you.
 
-<dfn>Cross-site recognition</dfn> is when a [=site=] determines with high
-probability that a visit to the site comes from the same person as another
-visit to a *different* site. In the usual case that the sites are different [=contexts=],
+<dfn>Cross-site recognition</dfn> is [=recognition=] when the identities
+are observed on different [=sites=]. In the usual case that the sites are
+different [=contexts=],
 [=cross-site recognition=] is a privacy harm in the same cases as [=cross-context recognition=].
 
-<dfn>Same-site recognition</dfn> is when a single [=site=] discovers and uses the
-fact that two or more visits probably came from the same [=person=].
+<dfn>Same-site recognition</dfn> is when a single [=site=] [=recognizes=] a
+[=person=] across two or more visits.
 
 A privacy harm occurs if a [=person=] reasonably expects that they'll be using
 a different [=identity=] for different visits to a single site, but the site
@@ -2173,8 +2174,8 @@ its [=partitions=] accordingly, for instance by partitioning identities
 per subdomain or site path. User agents should work to improve their ability to
 distinguish contexts within a site.
 
-[=User agents=] should prevent people from being [=cross-context
-recognition|recognized=] across [=partitions=] unless they intend to be
+[=User agents=] should prevent people from being
+[=recognized=] across [=partitions=] unless they intend to be
 recognized.
 
 Note that sites can do harm even if they can't be completely certain
