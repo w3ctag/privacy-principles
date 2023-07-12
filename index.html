@@ -1374,15 +1374,17 @@ scratch, without relying on the existing API.
 
 If existing APIs provide access to some information, but there is a plan to
 change those APIs to prevent that access, new APIs must not be added that
-provide that same information, unless it is possible to put additional
-[=appropriate=] [=access guards=] in place.
+provide that same information, unless they include additional
+[=access guards=] that ensure access is [=appropriate=].
 
 For example, browsers are gradually removing the ability to join identities
 between different [=partitions=]. It is important that new APIs do not add
 features which re-enable [=cross-context recognition=].
 
+### Unavoidable information exposure {#unavoidable-information-exposure}
+
 Some functionality of the web has historically been provided using features
-that can be used to undermine people's privacy (e.g. third-party cookies). It
+that can be used to undermine people's privacy. It
 is not yet possible to remove access to all of the information that it would be
 better not to expose.
 
@@ -1408,13 +1410,16 @@ These APIs should also:
   platform changes make it possible to remove other access to the same
   information.
 * make it clear how any [=user agent=] which blocks access to this kind of
-  information in general (perhaps by breaking some experiences on the web that
+  information (perhaps by breaking some experiences on the web that
   other browsers don't wish to break) can prevent the new API from exposing that
   information without breaking additional sites or user experiences.
 
 <aside class="example">
   Usually, these APIs will be designed to expose data that enables some
-  [=appropriate=] information discovery.
+  [=appropriate=] information discovery, as recommended by [[[web-without-3p-cookies]]]:
+  
+  > It is better to approach [these use cases] with replacement technologies
+  that are designed-for-purpose and built to respect user privacy.
 
   For example, they might reveal a performance metric for a website directly
   instead of requiring it to be computed from the timing of
