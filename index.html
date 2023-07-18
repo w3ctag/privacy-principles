@@ -546,14 +546,14 @@ must first define some terms and explain what we mean by privacy.
 
 The Web is for everyone ([[?For-Everyone]]). It is "<i>a platform that helps people and provides a
 net positive social benefit</i>" ([[?ETHICAL-WEB]], [[?design-principles]]). One of the ways in which the
-Web serves people is by protecting them in the face of asymmetries of power, and this includes
-establishing and enforcing rules to govern the power of data.
+Web serves people is by protecting them from surveillance and the types of manipulation that data can
+enable.
 
 The Web is a social and technical system made up of [=information flows=]. Because this document
 is specifically about [=privacy=] as it applies to the Web, it focuses on privacy with respect to
 information flows.
 
-Information is power. It can be used to predict and to influence people, as well as to design online
+Information can be used to predict and to influence people, as well as to design online
 spaces that control people's behaviour. The collection and [=processing=] of information in greater
 volume, with greater precision and reliability, with increasing interoperability across a growing
 variety of data types, and at intensifying speed is leading to a concentration of power that threatens
@@ -562,22 +562,23 @@ of our lives both increase the power of information and decrease the cost of a n
 behaviours that would be more easily kept in check if the perpetrator had to be in the same room as
 the victim.
 
-These asymmetries of information and of automation create significant asymmetries of power.
+When an [=actor=] can collect [=data=] about a [=person=] and process it automatically, and that
+[=person=] cannot automatically protect their [=data=] and prevent its processing ([=automation asymmetry=])
+this creates an imbalance of power that favors that [=actor=] and decreases the [=persons=]'s agency.
+
+It is important to keep in mind that not all people are equal in how they can resist
+an imbalance of power: some [=people=] are more [=vulnerable=] and therefore in greater
+need of protection. This document focuses on the impact that [=data=] [=processing=] can
+have on people, but it can also impact other [=actors=], such as companies or governments.
 
 <dfn data-lt="governance">Data governance</dfn> is the system of principles that regulate [=information flows=]. When
 [=people=] are involved in [=information flows=], [=data governance=] determines how
-these principles constrain and distribute the power of information between different [=actors=].
-Such principles describe the ways in which different [=actors=] may, must,
-or must not produce or [=process=] flows of information from, to, or about other [=actors=]
-([[?GKC-Privacy]], [[?IAD]]).
+which [=actors=] can collect which [=data=] and how they may, must, or must not [=process=] it
+([[?GKC-Privacy]], [[?IAD]]). This document provides building blocks for [=data governance=]
+that puts the interests of [=people=] first.
 
-It is important to keep in mind that not all people are equal in how they can resist
-the imposition of unfair principles: some [=people=] are more [=vulnerable=] and therefore in greater
-need of protection. This document focuses on the impact that differences in information power can
-have on people, but those differences can also impact other [=actors=], such as companies or governments.
-
-Principles vary from [=context=] to [=context=] ([[?Understanding-Privacy]], [[?Contextual-Integrity]]): people
-have different expectations of [=privacy=] at work, at a café, or at home for instance. Understanding and
+Principles vary from [=context=] to [=context=] ([[?Understanding-Privacy]], [[?Contextual-Integrity]]).
+For instance, people have different expectations of [=privacy=] at work, at a café, or at home. Understanding and
 evaluating a privacy situation is best done by clearly identifying:
 
 * Its [=actors=], which include the subject of the information as well as the sender and the recipient
@@ -585,24 +586,23 @@ evaluating a privacy situation is best done by clearly identifying:
 * The type of data involved in the [=information flow=].
 * The principles that are in use in this context.
 
-It is important to keep in mind that there are <em>always</em> privacy principles and that all
-of them imply different power dynamics. Some sets of principles may be more permissive, but that does
-not make them neutral — it means that they support the power dynamic that
-comes with permissive [=processing=]. We must therefore determine which principles
-best align with ethical Web values in Web [=contexts=] ([[?ETHICAL-WEB]], [[?Why-Privacy]]).
+There are <em>always</em> privacy principles at work. Some sets of principles may be more
+permissive, but that does not make them neutral. All privacy principles have an impact on
+[=people=] and we must therefore determine which principles best align with ethical Web values in
+Web [=contexts=] ([[?ETHICAL-WEB]], [[?Why-Privacy]]).
 
-<dfn data-lt='information'>Information flows</dfn> as used in this document refer to information
-exchanged or processed by [=actors=]. Information flows need to be understood from more than one
-perspective: there is the flow of information <em>about</em> a person (the subject) being processed
-or transmitted to any other actor, and there is the flow of information <em>towards</em> a person
-(the recipient). Recipients can have their privacy violated in multiple ways such as unexpected
-shocking images, loud noises while they intend to sleep, manipulative information, interruptive
+<dfn data-lt='information'>Information flows</dfn> are information exchanged or processed by
+[=actors=]. Information flows can be seen from different perspectives: there is the flow of
+information <em>about</em> a person (the subject) being processed or transmitted to any other
+actor, and there is the flow of information <em>towards</em> a person (the recipient).
+Recipients can have their privacy violated in multiple ways such as unexpected shocking images,
+loud noises while they intend to sleep, manipulative information, interruptive
 messages when their focus is on something else, or harassment when they seek social interactions.
 (In some of these cases, the information may not be [=personal data=].)
 
 On the Web, [=information flows=] may involve a wide variety of [=actors=] that are not always
 recognizable or obvious to a user within a particular interaction. Visiting a website may involve
-the actors that operate that site and its functionality, but also actors with network access,
+the actors that contribute to operating that site, but also actors with network access,
 which may include: Internet service providers; other network operators; local institutions providing
 a network connection including schools, libraries or universities; government intelligence services;
 malicious hackers who have gained access to the network or the systems of any of the other actors.
@@ -670,7 +670,7 @@ and temporary.
 
 When an [=opt-out=] mechanism exists, it should preferably be complemented by a
 <dfn>global opt-out</dfn> mechanism. The function of a [=global opt-out=] mechanism is to
-rectify the <dfn class="export">automation asymmetry</dfn> whereby service providers can automate
+rectify the <dfn>automation asymmetry</dfn> whereby service providers can automate
 [=data processing=] but [=people=] have to take manual action to prevent it. A good example of a
 [=global opt-out=] mechanism is the <em>Global Privacy Control</em> [[?GPC]].
 
