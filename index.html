@@ -592,17 +592,13 @@ comes with permissive [=processing=]. We must therefore determine which principl
 best align with ethical Web values in Web [=contexts=] ([[?ETHICAL-WEB]], [[?Why-Privacy]]).
 
 <dfn data-lt='information'>Information flows</dfn> as used in this document refer to information
-exchanged or processed by [=actors=]. The information itself need not necessarily be
-[=personal data=]. Disruptive or interruptive information flowing <em>to</em> a
-person is in scope, as is [=de-identified=] [=data=] that can be used to manipulate people or that
-was extracted by observing people's behaviour on a website.
-
-[=Information flows=] need to be understood from more than one perspective: there is the flow of information
-<em>about</em> a person (the subject) being processed or transmitted to any other [=actor=], and there is
-the flow of information <em>towards</em> a person (the recipient). Recipients can have their privacy violated in multiple ways such as
-unexpected shocking images, loud noises while they intend to sleep, manipulative information,
-interruptive messages when their focus is on something else, or harassment when they seek
-social interactions.
+exchanged or processed by [=actors=]. Information flows need to be understood from more than one
+perspective: there is the flow of information <em>about</em> a person (the subject) being processed
+or transmitted to any other actor, and there is the flow of information <em>towards</em> a person
+(the recipient). Recipients can have their privacy violated in multiple ways such as unexpected
+shocking images, loud noises while they intend to sleep, manipulative information, interruptive
+messages when their focus is on something else, or harassment when they seek social interactions.
+(In some of these cases, the information may not be [=personal data=].)
 
 On the Web, [=information flows=] may involve a wide variety of [=actors=] that are not always
 recognizable or obvious to a user within a particular interaction. Visiting a website may involve
@@ -633,9 +629,9 @@ ideal conditions.
 
 Affordances and interactions that decrease [=autonomy=] are known as <dfn data-lt="dark pattern|dark patterns">deceptive patterns</dfn> (or dark patterns).
 A [=deceptive pattern=] does not have to be intentional ([[?Dark-Patterns]], [[?Dark-Pattern-Dark]]).
-
-Because we are all subject to motivated reasoning, the design of defaults and affordances
-that may impact [=autonomy=] should be the subject of independent scrutiny.
+When building something that may impact [=autonomy=], it is important to review the product from
+multiple independent perspectives to make sure that it does not introduce [=deceptive patterns=]
+that may not be obvious to its creator.
 
 Given the large volume of potential [=data=]-related decisions in today's data economy,
 complete informational self-determination is impossible. This fact, however, should not be
@@ -649,9 +645,9 @@ defaults and choice architectures.
 
 Several kinds of mechanisms exist to enable [=people=] to control how they interact
 with systems in the world. Mechanisms that increase the number of [=purposes=] for which
-their [=data=] is being [=processed=] or the amount their [=data=] is [=processed=]
+their [=data=] is being [=processed=] or the amount of their [=data=] that is [=processed=]
 are referred to as [=opt-in=] or <dfn data-lt="opt in|opt-in">consent</dfn>. Mechanisms
-that decrease this number of [=purposes=] or amount of [=processing=] are known as
+that decrease this number of [=purposes=] or amount of [=data=] being [=processed=] are known as
 <dfn data-lt="opt out">opt-out</dfn>.
 
 When deployed thoughtfully, these mechanisms can enhance [=people=]'s [=autonomy=]. Often,
@@ -659,13 +655,13 @@ however, they are used as a way to avoid putting in the difficult work of decidi
 types of [=processing=] are [=appropriate=] and which are not, offloading [=privacy labour=]
 to the people using a system.
 
-In specific cases, [=people=] should be able to [=consent=] to data sharing that would otherwise be restricted,
-such as having their [=identity=] or reading history shared across contexts.
-[=Actors=] need to take care that their users are *informed* when granting this [=consent=] and
-*aware* enough about what's going on that they can know to revoke their consent
-when they want to.
-[=Consent=] is comparable to the general problem of permissions on the Web
-platform. Both consent and permissions should be requested in a way that lets
+In specific cases, [=people=] should be able to [=consent=] to data sharing that would
+otherwise be restricted, such as granting access to their pictures or geolocation.
+[=Actors=] need to take care that their users are [*informed*](#consent-principles) when
+granting this [=consent=] and *aware* enough about what's going on that they can know to
+revoke their consent when they want to.
+[=Consent=] to data processing and granting permissions to access APIs on the Web
+platform are similar problems. Both consent and permissions should be requested in a way that lets
 people delay or avoid answering if they're trying to do something else. If
 either results in persistent data access, there should be an indicator that lets
 people notice and that lets them turn off the access if it has lasted longer
@@ -741,7 +737,11 @@ Privacy principles are defined through social processes and, because of that, th
 of [=privacy=] in a given context can be
 contested ([[?Privacy-Contested]]). This makes privacy a problem of collective action ([[?GKC-Privacy]]).
 Group-level [=data processing=] may impact populations or individuals, including in
-ways that [=people=] could not control even under the optimistic assumptions of [=consent=].
+ways that [=people=] could not control even under the optimistic assumptions of [=consent=]. For instance,
+it's possible that the only thing that a person is willing to reveal to a particular actor is that they
+are part of a given group. However, other members of the same group may be interacting with the same
+actor and revealing a lot more information, which can enable effective statistical inferences about
+people who refrain from providing information about themselves.
 
 What we consider is therefore not just the relation between the [=people=] who share data
 and the [=actors=] that invite that sharing ([[?Relational-Turn]]), but also between the [=people=]
@@ -807,8 +807,7 @@ TAG's resolution on a [Strong and Secure Web Platform](https://www.w3.org/blog/2
 to ensure that "<i>broad testing and audit continues to be possible</i>" where
 [=information flows=] and automated decisions are involved.
 
-Such transparency can only function if there are strong rights
-of access to data (including data
+Such transparency can only function if there are strong rights of access to data (including data
 derived from one's personal data) as well as mechanisms to explain the outcomes of automated
 decisions.
 
