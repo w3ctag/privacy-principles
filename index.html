@@ -643,13 +643,13 @@ architectures.
 ### Opt-in, Consent, Opt-out, Global Controls {#opt-in-out}
 
 Several kinds of mechanisms exist to enable [=people=] to control how they interact
-with systems in the world. Mechanisms that increase the number of [=purposes=] for which
+with data-processing systems. Mechanisms that increase the number of [=purposes=] for which
 their [=data=] is being [=processed=] or the amount of their [=data=] that is [=processed=]
 are referred to as [=opt-in=] or <dfn data-lt="opt in|opt-in">consent</dfn>. Mechanisms
 that decrease this number of [=purposes=] or amount of [=data=] being [=processed=] are known as
 <dfn data-lt="opt out">opt-out</dfn>.
 
-When deployed thoughtfully, these mechanisms can enhance [=people=]'s [=autonomy=]. Often,
+When deployed thoughtfully, these mechanisms can improve [=people=]'s [=autonomy=]. Often,
 however, they are used as a way to avoid putting in the difficult work of deciding which
 types of [=processing=] are [=appropriate=] and which are not, offloading [=privacy labour=]
 to the people using a system.
@@ -659,33 +659,31 @@ otherwise be restricted, such as granting access to their pictures or geolocatio
 [=Actors=] need to take care that their users are [*informed*](#consent-principles) when
 granting this [=consent=] and *aware* enough about what's going on that they can know to
 revoke their consent when they want to.
-[=Consent=] to data processing and granting permissions to access APIs on the Web
-platform are similar problems. Both consent and permissions should be requested in a way that lets
-people delay or avoid answering if they're trying to do something else. If
-either results in persistent data access, there should be an indicator that lets
-people notice and that lets them turn off the access if it has lasted longer
-than they want. In general, providing [=consent=] should be rare, intentional,
-and temporary.
+[=Consent=] to data processing and granting permissions to access Web platform APIs are
+similar problems. Both consent and permissions should be requested in a way that lets
+people delay or avoid answering if they're trying to do something else. If the user
+grants some form of persistent access to data, there should be an indicator that lets
+people notice this ongoing access and that lets them turn it off whenever they wish to.
+In general, providing [=consent=] should be rare, intentional, and temporary.
 
-When an [=opt-out=] mechanism exists, it should preferably be complemented by a
+When an [=opt-out=] mechanism exists, it should preferably work with a
 <dfn>global opt-out</dfn> mechanism. The function of a [=global opt-out=] mechanism is to
 rectify the <dfn>automation asymmetry</dfn> whereby service providers can automate
 [=data processing=] but [=people=] have to take manual action to prevent it. A good example of a
 [=global opt-out=] mechanism is the <em>Global Privacy Control</em> [[?GPC]].
 
 Conceptually, a [=global opt-out=] mechanism is an automaton operating as part of the
-[=user agent=], which is to say that it is equivalent to a robot that would carry out a
-[=person=]'s bidding by pressing an [=opt-out=] button with every interaction that the
-[=person=] has with a site, or more generally conveys an expression of the [=person=]'s
-rights in a relevant jurisdiction. (For instance, the [=person=] may be objecting to [=processing=]
+[=user agent=]. It is equivalent to a robot that would carry out a [=person=]'s instructions
+by pressing an [=opt-out=] button (or a similar expression of the [=person=]'s rights) with every
+interaction that the [=person=] has with a site. (For instance, the [=person=] may be objecting to [=processing=]
 based on legitimate interest, withdrawing [=consent=] to specific [=purposes=], or requesting that
-their data not be sold or shared.) It should be noted that, since a
-[=global opt-out=] signal is reaffirmed automatically with every interaction, it will take precedence
-in terms of specificity over any general obtention of [=consent=] by a site,
-and only superseded by specific [=consent=] obtained through a deliberate action taken by
-the user with the intent of overriding their global opt-out.
+their data not be sold or shared.) It should be noted that, since a [=global opt-out=] signal is
+reaffirmed automatically with every interaction, it will take precedence in terms of specificity
+over any general [=consent=] given to a site's processing, and will only be superseded by specific
+[=consent=] obtained through a deliberate action taken by the user with the intent of overriding
+their global opt-out.
 
-One implementation strategy for [=opt-outs=] and other <a href="#data-rights">data rights</a> is
+One implementation strategy for [=opt-outs=] or other <a href="#data-rights">data rights</a> is
 to assign [=people=] stable [=identifiers=] and to maintain a central registry to map these
 [=identifiers=] to [=people=]'s preferences. [=Actors=] that wish to process a given person's
 data are then expected to fetch that person's preferences from the central registry and to
