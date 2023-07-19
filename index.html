@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en" dir="ltr"><head>
 <meta charset="utf-8">
-<meta name="generator" content="ReSpec 34.1.4">
+<meta name="generator" content="ReSpec 34.1.5">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 span.example-title{text-transform:none}
@@ -752,15 +752,15 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "id": "web-without-3p-cookies"
     }
   },
-  "publishISODate": "2023-07-16T00:00:00.000Z",
-  "generatedSubtitle": "W3C Editor's Draft 16 July 2023"
+  "publishISODate": "2023-07-19T00:00:00.000Z",
+  "generatedSubtitle": "W3C Editor's Draft 19 July 2023"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED"></head>
 <body data-cite="html indexedDB service-workers fingerprinting-guidance url infra" class="h-entry informative"><div class="head">
     <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a></p>
     <h1 id="title" class="title">Privacy Principles</h1> 
-    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2023-07-16">16 July 2023</time></p>
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2023-07-19">19 July 2023</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
@@ -866,7 +866,7 @@ conclusion of the task force, the TAG intends to adopt this document as a Findin
         
   </p><p>
                   This document is governed by the
-                  <a id="w3c_process_revision" href="https://www.w3.org/2021/Process-20211102/">2 November 2021 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                  <a id="w3c_process_revision" href="https://www.w3.org/2023/Process-20230612/">12 June 2023 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
                 </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#how-this-document-fits-in">How This Document Fits In</a></li><li class="tocline"><a class="tocxref" href="#audience">Audiences for this Document</a></li><li class="tocline"><a class="tocxref" href="#intro"><bdi class="secno">1. </bdi>An Introduction to Privacy on the Web</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#autonomy"><bdi class="secno">1.1 </bdi>Individual Autonomy</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#opt-in-out"><bdi class="secno">1.1.1 </bdi>Opt-in, Consent, Opt-out, Global Controls</a></li><li class="tocline"><a class="tocxref" href="#privacy-labour"><bdi class="secno">1.1.2 </bdi>Privacy Labour</a></li></ol></li><li class="tocline"><a class="tocxref" href="#collective"><bdi class="secno">1.2 </bdi>Collective Governance</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#group-privacy"><bdi class="secno">1.2.1 </bdi>Group Privacy</a></li><li class="tocline"><a class="tocxref" href="#transparency"><bdi class="secno">1.2.2 </bdi>Transparency and Research</a></li></ol></li><li class="tocline"><a class="tocxref" href="#user-agents"><bdi class="secno">1.3 </bdi>User Agents</a></li><li class="tocline"><a class="tocxref" href="#balancing"><bdi class="secno">1.4 </bdi>Incorporating Different Privacy Principles</a></li></ol></li><li class="tocline"><a class="tocxref" href="#principles-for-privacy-on-the-web"><bdi class="secno">2. </bdi>Principles for Privacy on the Web</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#identity"><bdi class="secno">2.1 </bdi>Identity on the Web</a></li><li class="tocline"><a class="tocxref" href="#data-minimization"><bdi class="secno">2.2 </bdi>Data Minimization</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ancillary-uses"><bdi class="secno">2.2.1 </bdi>Ancillary uses</a></li></ol></li><li class="tocline"><a class="tocxref" href="#information"><bdi class="secno">2.3 </bdi>Information access</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#acceptable-information"><bdi class="secno">2.3.1 </bdi>Handling acceptable information</a></li><li class="tocline"><a class="tocxref" href="#unacceptable-information"><bdi class="secno">2.3.2 </bdi>Handling information that's being removed</a></li><li class="tocline"><a class="tocxref" href="#sketchy-information"><bdi class="secno">2.3.3 </bdi>Handling information we can't completely block</a></li></ol></li><li class="tocline"><a class="tocxref" href="#hl-sensitive-information"><bdi class="secno">2.4 </bdi>Sensitive Information</a></li><li class="tocline"><a class="tocxref" href="#data-rights"><bdi class="secno">2.5 </bdi>Data Rights</a></li><li class="tocline"><a class="tocxref" href="#deidentified-data"><bdi class="secno">2.6 </bdi>De-identified Data</a></li><li class="tocline"><a class="tocxref" href="#collective-privacy"><bdi class="secno">2.7 </bdi>Collective Privacy</a></li><li class="tocline"><a class="tocxref" href="#device-administrators"><bdi class="secno">2.8 </bdi>Device Owners and Administrators</a></li><li class="tocline"><a class="tocxref" href="#harassment"><bdi class="secno">2.9 </bdi>Harassment</a></li><li class="tocline"><a class="tocxref" href="#unwanted-information"><bdi class="secno">2.10 </bdi>Unwanted Information</a></li><li class="tocline"><a class="tocxref" href="#vulnerability"><bdi class="secno">2.11 </bdi>Vulnerability</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#guardians"><bdi class="secno">2.11.1 </bdi>Guardians</a></li></ol></li><li class="tocline"><a class="tocxref" href="#consent-principles"><bdi class="secno">2.12 </bdi>Consent, Withdrawal of Consent, Opt-Outs, and Objections</a></li><li class="tocline"><a class="tocxref" href="#interruptions"><bdi class="secno">2.13 </bdi>Notifications and Interruptions</a></li><li class="tocline"><a class="tocxref" href="#non-retaliation"><bdi class="secno">2.14 </bdi>Non-Retaliation</a></li><li class="tocline"><a class="tocxref" href="#support-choosing-info"><bdi class="secno">2.15 </bdi>Support Choosing Which Information to Present</a></li></ol></li><li class="tocline"><a class="tocxref" href="#boring-terminology"><bdi class="secno">A. </bdi>Common Concepts</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#people"><bdi class="secno">A.1 </bdi>People</a></li><li class="tocline"><a class="tocxref" href="#context"><bdi class="secno">A.2 </bdi>Contexts</a></li><li class="tocline"><a class="tocxref" href="#parties"><bdi class="secno">A.3 </bdi>Server-Side Actors</a></li><li class="tocline"><a class="tocxref" href="#acting-on-data"><bdi class="secno">A.4 </bdi>Acting on Data</a></li><li class="tocline"><a class="tocxref" href="#recognition"><bdi class="secno">A.5 </bdi>Recognition</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#recognition-types"><bdi class="secno">A.5.1 </bdi>Recognition Types</a></li><li class="tocline"><a class="tocxref" href="#user-agent-recognition"><bdi class="secno">A.5.2 </bdi>User agent awareness of recognition</a></li><li class="tocline"><a class="tocxref" href="#recognition-methods"><bdi class="secno">A.5.3 </bdi>Recognition Methods</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#threats"><bdi class="secno">B. </bdi>High-Level Threats</a></li><li class="tocline"><a class="tocxref" href="#bp-summary"><bdi class="secno">C. </bdi>Principles Summary</a></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">D. </bdi>Acknowledgements</a></li><li class="tocline"><a class="tocxref" href="#issue-summary"><bdi class="secno">E. </bdi>Issue summary</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">F. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">F.1 </bdi>Informative references</a></li></ol></li></ol></nav>
 
 <section class="introductory" id="how-this-document-fits-in"><div class="header-wrapper"><h2 id="how-this-document-fits-in-0">How This Document Fits In</h2><a class="self-link" href="#how-this-document-fits-in" aria-label="Permalink for this Section"></a></div>
@@ -1118,6 +1118,12 @@ may be well known (e.g. membership in a dissidents movement under authoritarian 
 is the fitness app Strava that did not reveal individual behaviour or legal identity but published heat
 maps of popular running routes. In doing so, it revealed secret US bases around which military
 personnel took frequent runs ([<cite><a class="bibref" data-link-type="biblio" href="#bib-strava-debacle" title="The Latest Data Privacy Debacle">Strava-Debacle</a></cite>], [<cite><a class="bibref" data-link-type="biblio" href="#bib-strava-reveal-military" title="Strava Fitness App Can Reveal Military Sites, Analysts Say">Strava-Reveal-Military</a></cite>]).</p>
+<p>People's privacy interests may also be affected when information about a small group of people is
+processed, even if no individualized data is exposed. For example, browsing activity of the students
+in a classroom may be sensitive even if their teacher doesn't learn exactly which student accessed a
+particular resource about a health issue. Targeting presentation of information to a small group may
+also be inappropriate: for example, targeting messages to people who visited a particular clinic or
+are empaneled on a particular jury may be invasive even without uniquely individual data.</p>
 <p>When <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-30">people</a> do not know that they are members of a group, when they cannot easily find other
 members of the group so as to advocate for their rights together, or when they cannot easily
 understand why they are being categorised into a given group, their ability to protect themselves
@@ -2737,12 +2743,12 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-governance-1" title="§ 1. An Introduction to Privacy on the Web">§ 1. An Introduction to Privacy on the Web</a> 
-  </li><li>
-    <a href="#ref-for-dfn-governance-2" title="§ 1.2 Collective Governance">§ 1.2 Collective Governance</a> <a href="#ref-for-dfn-governance-3" title="Reference 2">(2)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-governance-4" title="§ 2.7 Collective Privacy">§ 2.7 Collective Privacy</a> 
-  </li>
+      <a href="#ref-for-dfn-governance-1" title="§ 1. An Introduction to Privacy on the Web">§ 1. An Introduction to Privacy on the Web</a> 
+    </li><li>
+      <a href="#ref-for-dfn-governance-2" title="§ 1.2 Collective Governance">§ 1.2 Collective Governance</a> <a href="#ref-for-dfn-governance-3" title="Reference 2">(2)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-governance-4" title="§ 2.7 Collective Privacy">§ 2.7 Collective Privacy</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-information" aria-label="Links in this document to definition: Information flows">
       <span class="caret"></span>
@@ -2753,12 +2759,12 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-information-1" title="§ 1. An Introduction to Privacy on the Web">§ 1. An Introduction to Privacy on the Web</a> <a href="#ref-for-dfn-information-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-information-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-information-4" title="Reference 4">(4)</a> <a href="#ref-for-dfn-information-5" title="Reference 5">(5)</a> <a href="#ref-for-dfn-information-6" title="Reference 6">(6)</a> <a href="#ref-for-dfn-information-7" title="Reference 7">(7)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-information-8" title="§ 1.2.2 Transparency and Research">§ 1.2.2 Transparency and Research</a> 
-  </li><li>
-    <a href="#ref-for-dfn-information-9" title="§ 2.10 Unwanted Information">§ 2.10 Unwanted Information</a> 
-  </li>
+      <a href="#ref-for-dfn-information-1" title="§ 1. An Introduction to Privacy on the Web">§ 1. An Introduction to Privacy on the Web</a> <a href="#ref-for-dfn-information-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-information-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-information-4" title="Reference 4">(4)</a> <a href="#ref-for-dfn-information-5" title="Reference 5">(5)</a> <a href="#ref-for-dfn-information-6" title="Reference 6">(6)</a> <a href="#ref-for-dfn-information-7" title="Reference 7">(7)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-information-8" title="§ 1.2.2 Transparency and Research">§ 1.2.2 Transparency and Research</a> 
+    </li><li>
+      <a href="#ref-for-dfn-information-9" title="§ 2.10 Unwanted Information">§ 2.10 Unwanted Information</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-autonomous" aria-label="Links in this document to definition: autonomy">
       <span class="caret"></span>
@@ -2769,18 +2775,18 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-autonomous-1" title="§ 1.1 Individual Autonomy">§ 1.1 Individual Autonomy</a> <a href="#ref-for-dfn-autonomous-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-autonomous-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-autonomous-4" title="Reference 4">(4)</a> <a href="#ref-for-dfn-autonomous-5" title="Reference 5">(5)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-autonomous-6" title="§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls">§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls</a> 
-  </li><li>
-    <a href="#ref-for-dfn-autonomous-7" title="§ 1.1.2 Privacy Labour">§ 1.1.2 Privacy Labour</a> <a href="#ref-for-dfn-autonomous-8" title="Reference 2">(2)</a> <a href="#ref-for-dfn-autonomous-9" title="Reference 3">(3)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-autonomous-10" title="§ 2.5 Data Rights">§ 2.5 Data Rights</a> 
-  </li><li>
-    <a href="#ref-for-dfn-autonomous-11" title="§ 2.7 Collective Privacy">§ 2.7 Collective Privacy</a> <a href="#ref-for-dfn-autonomous-12" title="Reference 2">(2)</a> <a href="#ref-for-dfn-autonomous-13" title="Reference 3">(3)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-autonomous-14" title="§ 2.13 Notifications and Interruptions">§ 2.13 Notifications and Interruptions</a> <a href="#ref-for-dfn-autonomous-15" title="Reference 2">(2)</a> 
-  </li>
+      <a href="#ref-for-dfn-autonomous-1" title="§ 1.1 Individual Autonomy">§ 1.1 Individual Autonomy</a> <a href="#ref-for-dfn-autonomous-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-autonomous-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-autonomous-4" title="Reference 4">(4)</a> <a href="#ref-for-dfn-autonomous-5" title="Reference 5">(5)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-autonomous-6" title="§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls">§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls</a> 
+    </li><li>
+      <a href="#ref-for-dfn-autonomous-7" title="§ 1.1.2 Privacy Labour">§ 1.1.2 Privacy Labour</a> <a href="#ref-for-dfn-autonomous-8" title="Reference 2">(2)</a> <a href="#ref-for-dfn-autonomous-9" title="Reference 3">(3)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-autonomous-10" title="§ 2.5 Data Rights">§ 2.5 Data Rights</a> 
+    </li><li>
+      <a href="#ref-for-dfn-autonomous-11" title="§ 2.7 Collective Privacy">§ 2.7 Collective Privacy</a> <a href="#ref-for-dfn-autonomous-12" title="Reference 2">(2)</a> <a href="#ref-for-dfn-autonomous-13" title="Reference 3">(3)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-autonomous-14" title="§ 2.13 Notifications and Interruptions">§ 2.13 Notifications and Interruptions</a> <a href="#ref-for-dfn-autonomous-15" title="Reference 2">(2)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-dark-pattern" aria-label="Links in this document to definition: deceptive patterns">
       <span class="caret"></span>
@@ -2791,12 +2797,12 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-dark-pattern-1" title="§ 1.1 Individual Autonomy">§ 1.1 Individual Autonomy</a> 
-  </li><li>
-    <a href="#ref-for-dfn-dark-pattern-2" title="§ 2.11 Vulnerability">§ 2.11 Vulnerability</a> 
-  </li><li>
-    <a href="#ref-for-dfn-dark-pattern-3" title="§ 2.15 Support Choosing Which Information to Present">§ 2.15 Support Choosing Which Information to Present</a> 
-  </li>
+      <a href="#ref-for-dfn-dark-pattern-1" title="§ 1.1 Individual Autonomy">§ 1.1 Individual Autonomy</a> 
+    </li><li>
+      <a href="#ref-for-dfn-dark-pattern-2" title="§ 2.11 Vulnerability">§ 2.11 Vulnerability</a> 
+    </li><li>
+      <a href="#ref-for-dfn-dark-pattern-3" title="§ 2.15 Support Choosing Which Information to Present">§ 2.15 Support Choosing Which Information to Present</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-opt-in" aria-label="Links in this document to definition: consent">
       <span class="caret"></span>
@@ -2807,20 +2813,20 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-opt-in-1" title="§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls">§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls</a> <a href="#ref-for-dfn-opt-in-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-opt-in-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-opt-in-4" title="Reference 4">(4)</a> <a href="#ref-for-dfn-opt-in-5" title="Reference 5">(5)</a> <a href="#ref-for-dfn-opt-in-6" title="Reference 6">(6)</a> <a href="#ref-for-dfn-opt-in-7" title="Reference 7">(7)</a> <a href="#ref-for-dfn-opt-in-8" title="Reference 8">(8)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-opt-in-9" title="§ 1.1.2 Privacy Labour">§ 1.1.2 Privacy Labour</a> 
-  </li><li>
-    <a href="#ref-for-dfn-opt-in-10" title="§ 1.2 Collective Governance">§ 1.2 Collective Governance</a> 
-  </li><li>
-    <a href="#ref-for-dfn-opt-in-11" title="§ 1.3 User Agents">§ 1.3 User Agents</a> 
-  </li><li>
-    <a href="#ref-for-dfn-opt-in-12" title="§ 2.12 Consent, Withdrawal of Consent, Opt-Outs, and Objections">§ 2.12 Consent, Withdrawal of Consent, Opt-Outs, and Objections</a> 
-  </li><li>
-    <a href="#ref-for-dfn-opt-in-13" title="§ A.1 People">§ A.1 People</a> 
-  </li><li>
-    <a href="#ref-for-dfn-opt-in-14" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> 
-  </li>
+      <a href="#ref-for-dfn-opt-in-1" title="§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls">§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls</a> <a href="#ref-for-dfn-opt-in-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-opt-in-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-opt-in-4" title="Reference 4">(4)</a> <a href="#ref-for-dfn-opt-in-5" title="Reference 5">(5)</a> <a href="#ref-for-dfn-opt-in-6" title="Reference 6">(6)</a> <a href="#ref-for-dfn-opt-in-7" title="Reference 7">(7)</a> <a href="#ref-for-dfn-opt-in-8" title="Reference 8">(8)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-opt-in-9" title="§ 1.1.2 Privacy Labour">§ 1.1.2 Privacy Labour</a> 
+    </li><li>
+      <a href="#ref-for-dfn-opt-in-10" title="§ 1.2 Collective Governance">§ 1.2 Collective Governance</a> 
+    </li><li>
+      <a href="#ref-for-dfn-opt-in-11" title="§ 1.3 User Agents">§ 1.3 User Agents</a> 
+    </li><li>
+      <a href="#ref-for-dfn-opt-in-12" title="§ 2.12 Consent, Withdrawal of Consent, Opt-Outs, and Objections">§ 2.12 Consent, Withdrawal of Consent, Opt-Outs, and Objections</a> 
+    </li><li>
+      <a href="#ref-for-dfn-opt-in-13" title="§ A.1 People">§ A.1 People</a> 
+    </li><li>
+      <a href="#ref-for-dfn-opt-in-14" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-opt-out" aria-label="Links in this document to definition: opt-out">
       <span class="caret"></span>
@@ -2831,8 +2837,8 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-opt-out-1" title="§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls">§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls</a> <a href="#ref-for-dfn-opt-out-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-opt-out-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-opt-out-4" title="Reference 4">(4)</a> 
-  </li>
+      <a href="#ref-for-dfn-opt-out-1" title="§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls">§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls</a> <a href="#ref-for-dfn-opt-out-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-opt-out-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-opt-out-4" title="Reference 4">(4)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-global-opt-out" aria-label="Links in this document to definition: global opt-out">
       <span class="caret"></span>
@@ -2843,12 +2849,12 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-global-opt-out-1" title="§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls">§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls</a> <a href="#ref-for-dfn-global-opt-out-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-global-opt-out-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-global-opt-out-4" title="Reference 4">(4)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-global-opt-out-5" title="§ 2.2.1 Ancillary uses">§ 2.2.1 Ancillary uses</a> 
-  </li><li>
-    <a href="#ref-for-dfn-global-opt-out-6" title="§ 2.12 Consent, Withdrawal of Consent, Opt-Outs, and Objections">§ 2.12 Consent, Withdrawal of Consent, Opt-Outs, and Objections</a> 
-  </li>
+      <a href="#ref-for-dfn-global-opt-out-1" title="§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls">§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls</a> <a href="#ref-for-dfn-global-opt-out-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-global-opt-out-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-global-opt-out-4" title="Reference 4">(4)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-global-opt-out-5" title="§ 2.2.1 Ancillary uses">§ 2.2.1 Ancillary uses</a> 
+    </li><li>
+      <a href="#ref-for-dfn-global-opt-out-6" title="§ 2.12 Consent, Withdrawal of Consent, Opt-Outs, and Objections">§ 2.12 Consent, Withdrawal of Consent, Opt-Outs, and Objections</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-automation-asymmetry" aria-label="Links in this document to definition: automation asymmetry">
       <span class="caret"></span>
@@ -2859,8 +2865,8 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-automation-asymmetry-1" title="§ 1.3 User Agents">§ 1.3 User Agents</a> 
-  </li>
+      <a href="#ref-for-dfn-automation-asymmetry-1" title="§ 1.3 User Agents">§ 1.3 User Agents</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-privacy-labor" aria-label="Links in this document to definition: Privacy labour">
       <span class="caret"></span>
@@ -2871,16 +2877,16 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-privacy-labor-1" title="§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls">§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls</a> 
-  </li><li>
-    <a href="#ref-for-dfn-privacy-labor-2" title="§ 1.1.2 Privacy Labour">§ 1.1.2 Privacy Labour</a> <a href="#ref-for-dfn-privacy-labor-3" title="Reference 2">(2)</a> <a href="#ref-for-dfn-privacy-labor-4" title="Reference 3">(3)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-privacy-labor-5" title="§ 2.2.1 Ancillary uses">§ 2.2.1 Ancillary uses</a> 
-  </li><li>
-    <a href="#ref-for-dfn-privacy-labor-6" title="§ 2.7 Collective Privacy">§ 2.7 Collective Privacy</a> 
-  </li><li>
-    <a href="#ref-for-dfn-privacy-labor-7" title="§ 2.12 Consent, Withdrawal of Consent, Opt-Outs, and Objections">§ 2.12 Consent, Withdrawal of Consent, Opt-Outs, and Objections</a> 
-  </li>
+      <a href="#ref-for-dfn-privacy-labor-1" title="§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls">§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls</a> 
+    </li><li>
+      <a href="#ref-for-dfn-privacy-labor-2" title="§ 1.1.2 Privacy Labour">§ 1.1.2 Privacy Labour</a> <a href="#ref-for-dfn-privacy-labor-3" title="Reference 2">(2)</a> <a href="#ref-for-dfn-privacy-labor-4" title="Reference 3">(3)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-privacy-labor-5" title="§ 2.2.1 Ancillary uses">§ 2.2.1 Ancillary uses</a> 
+    </li><li>
+      <a href="#ref-for-dfn-privacy-labor-6" title="§ 2.7 Collective Privacy">§ 2.7 Collective Privacy</a> 
+    </li><li>
+      <a href="#ref-for-dfn-privacy-labor-7" title="§ 2.12 Consent, Withdrawal of Consent, Opt-Outs, and Objections">§ 2.12 Consent, Withdrawal of Consent, Opt-Outs, and Objections</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-fips" aria-label="Links in this document to definition: Fair Information Practices">
       <span class="caret"></span>
@@ -2891,8 +2897,8 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-fips-1" title="§ 1.1.2 Privacy Labour">§ 1.1.2 Privacy Labour</a> <a href="#ref-for-dfn-fips-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-fips-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-fips-4" title="Reference 4">(4)</a> 
-  </li>
+      <a href="#ref-for-dfn-fips-1" title="§ 1.1.2 Privacy Labour">§ 1.1.2 Privacy Labour</a> <a href="#ref-for-dfn-fips-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-fips-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-fips-4" title="Reference 4">(4)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-trustworthy-agent" aria-label="Links in this document to definition: trustworthy agent">
       <span class="caret"></span>
@@ -2903,8 +2909,8 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-trustworthy-agent-1" title="§ 1.3 User Agents">§ 1.3 User Agents</a> <a href="#ref-for-dfn-trustworthy-agent-2" title="Reference 2">(2)</a> 
-  </li>
+      <a href="#ref-for-dfn-trustworthy-agent-1" title="§ 1.3 User Agents">§ 1.3 User Agents</a> <a href="#ref-for-dfn-trustworthy-agent-2" title="Reference 2">(2)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-user-agent-duties" aria-label="Links in this document to definition: user agent duties">
       <span class="caret"></span>
@@ -2925,10 +2931,10 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-duty-of-protection-1" title="§ 2.2.1 Ancillary uses">§ 2.2.1 Ancillary uses</a> 
-  </li><li>
-    <a href="#ref-for-dfn-duty-of-protection-2" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> 
-  </li>
+      <a href="#ref-for-dfn-duty-of-protection-1" title="§ 2.2.1 Ancillary uses">§ 2.2.1 Ancillary uses</a> 
+    </li><li>
+      <a href="#ref-for-dfn-duty-of-protection-2" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-duty-of-discretion" aria-label="Links in this document to definition: Duty of Discretion">
       <span class="caret"></span>
@@ -2939,10 +2945,10 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-duty-of-discretion-1" title="§ 2.2.1 Ancillary uses">§ 2.2.1 Ancillary uses</a> 
-  </li><li>
-    <a href="#ref-for-dfn-duty-of-discretion-2" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> 
-  </li>
+      <a href="#ref-for-dfn-duty-of-discretion-1" title="§ 2.2.1 Ancillary uses">§ 2.2.1 Ancillary uses</a> 
+    </li><li>
+      <a href="#ref-for-dfn-duty-of-discretion-2" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-duty-of-honesty" aria-label="Links in this document to definition: Duty of Honesty">
       <span class="caret"></span>
@@ -2963,10 +2969,10 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-duty-of-loyalty-1" title="§ 2.2.1 Ancillary uses">§ 2.2.1 Ancillary uses</a> 
-  </li><li>
-    <a href="#ref-for-dfn-duty-of-loyalty-2" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> 
-  </li>
+      <a href="#ref-for-dfn-duty-of-loyalty-1" title="§ 2.2.1 Ancillary uses">§ 2.2.1 Ancillary uses</a> 
+    </li><li>
+      <a href="#ref-for-dfn-duty-of-loyalty-2" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-disloyalty" aria-label="Links in this document to definition: disloyal">
       <span class="caret"></span>
@@ -2977,10 +2983,10 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-disloyalty-1" title="§ 1.2 Collective Governance">§ 1.2 Collective Governance</a> <a href="#ref-for-dfn-disloyalty-2" title="Reference 2">(2)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-disloyalty-3" title="§ 1.3 User Agents">§ 1.3 User Agents</a> <a href="#ref-for-dfn-disloyalty-4" title="Reference 2">(2)</a> 
-  </li>
+      <a href="#ref-for-dfn-disloyalty-1" title="§ 1.2 Collective Governance">§ 1.2 Collective Governance</a> <a href="#ref-for-dfn-disloyalty-2" title="Reference 2">(2)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-disloyalty-3" title="§ 1.3 User Agents">§ 1.3 User Agents</a> <a href="#ref-for-dfn-disloyalty-4" title="Reference 2">(2)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-identity" aria-label="Links in this document to definition: identity">
       <span class="caret"></span>
@@ -2991,22 +2997,22 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-identity-1" title="§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls">§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls</a> 
-  </li><li>
-    <a href="#ref-for-dfn-identity-2" title="§ 2.1 Identity on the Web">§ 2.1 Identity on the Web</a> <a href="#ref-for-dfn-identity-3" title="Reference 2">(2)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-identity-4" title="§ 2.5 Data Rights">§ 2.5 Data Rights</a> 
-  </li><li>
-    <a href="#ref-for-dfn-identity-5" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> <a href="#ref-for-dfn-identity-6" title="Reference 2">(2)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-identity-7" title="§ A.5 Recognition">§ A.5 Recognition</a> <a href="#ref-for-dfn-identity-8" title="Reference 2">(2)</a> <a href="#ref-for-dfn-identity-9" title="Reference 3">(3)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-identity-10" title="§ A.5.1 Recognition Types">§ A.5.1 Recognition Types</a> 
-  </li><li>
-    <a href="#ref-for-dfn-identity-11" title="§ A.5.3 Recognition Methods">§ A.5.3 Recognition Methods</a> 
-  </li><li>
-    <a href="#ref-for-dfn-identity-12" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> 
-  </li>
+      <a href="#ref-for-dfn-identity-1" title="§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls">§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls</a> 
+    </li><li>
+      <a href="#ref-for-dfn-identity-2" title="§ 2.1 Identity on the Web">§ 2.1 Identity on the Web</a> <a href="#ref-for-dfn-identity-3" title="Reference 2">(2)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-identity-4" title="§ 2.5 Data Rights">§ 2.5 Data Rights</a> 
+    </li><li>
+      <a href="#ref-for-dfn-identity-5" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> <a href="#ref-for-dfn-identity-6" title="Reference 2">(2)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-identity-7" title="§ A.5 Recognition">§ A.5 Recognition</a> <a href="#ref-for-dfn-identity-8" title="Reference 2">(2)</a> <a href="#ref-for-dfn-identity-9" title="Reference 3">(3)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-identity-10" title="§ A.5.1 Recognition Types">§ A.5.1 Recognition Types</a> 
+    </li><li>
+      <a href="#ref-for-dfn-identity-11" title="§ A.5.3 Recognition Methods">§ A.5.3 Recognition Methods</a> 
+    </li><li>
+      <a href="#ref-for-dfn-identity-12" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-ancillary-use" aria-label="Links in this document to definition: ancillary uses">
       <span class="caret"></span>
@@ -3017,8 +3023,8 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-ancillary-use-1" title="§ 2.2.1 Ancillary uses">§ 2.2.1 Ancillary uses</a> <a href="#ref-for-dfn-ancillary-use-2" title="Reference 2">(2)</a> 
-  </li>
+      <a href="#ref-for-dfn-ancillary-use-1" title="§ 2.2.1 Ancillary uses">§ 2.2.1 Ancillary uses</a> <a href="#ref-for-dfn-ancillary-use-2" title="Reference 2">(2)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-ancillary-data" aria-label="Links in this document to definition: ancillary data">
       <span class="caret"></span>
@@ -3029,8 +3035,8 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-ancillary-data-1" title="§ 2.2.1 Ancillary uses">§ 2.2.1 Ancillary uses</a> <a href="#ref-for-dfn-ancillary-data-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-ancillary-data-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-ancillary-data-4" title="Reference 4">(4)</a> <a href="#ref-for-dfn-ancillary-data-5" title="Reference 5">(5)</a> <a href="#ref-for-dfn-ancillary-data-6" title="Reference 6">(6)</a> <a href="#ref-for-dfn-ancillary-data-7" title="Reference 7">(7)</a> 
-  </li>
+      <a href="#ref-for-dfn-ancillary-data-1" title="§ 2.2.1 Ancillary uses">§ 2.2.1 Ancillary uses</a> <a href="#ref-for-dfn-ancillary-data-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-ancillary-data-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-ancillary-data-4" title="Reference 4">(4)</a> <a href="#ref-for-dfn-ancillary-data-5" title="Reference 5">(5)</a> <a href="#ref-for-dfn-ancillary-data-6" title="Reference 6">(6)</a> <a href="#ref-for-dfn-ancillary-data-7" title="Reference 7">(7)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-access-guard" aria-label="Links in this document to definition: guard">
       <span class="caret"></span>
@@ -3041,14 +3047,14 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-access-guard-1" title="§ 2.3.1 Handling acceptable information">§ 2.3.1 Handling acceptable information</a> 
-  </li><li>
-    <a href="#ref-for-dfn-access-guard-2" title="§ 2.3.2 Handling information that's being removed">§ 2.3.2 Handling information that's being removed</a> 
-  </li><li>
-    <a href="#ref-for-dfn-access-guard-3" title="§ 2.3.3 Handling information we can't completely block">§ 2.3.3 Handling information we can't completely block</a> 
-  </li><li>
-    <a href="#ref-for-dfn-access-guard-4" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> <a href="#ref-for-dfn-access-guard-5" title="Reference 2">(2)</a> 
-  </li>
+      <a href="#ref-for-dfn-access-guard-1" title="§ 2.3.1 Handling acceptable information">§ 2.3.1 Handling acceptable information</a> 
+    </li><li>
+      <a href="#ref-for-dfn-access-guard-2" title="§ 2.3.2 Handling information that's being removed">§ 2.3.2 Handling information that's being removed</a> 
+    </li><li>
+      <a href="#ref-for-dfn-access-guard-3" title="§ 2.3.3 Handling information we can't completely block">§ 2.3.3 Handling information we can't completely block</a> 
+    </li><li>
+      <a href="#ref-for-dfn-access-guard-4" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> <a href="#ref-for-dfn-access-guard-5" title="Reference 2">(2)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-right-to-access" aria-label="Links in this document to definition: right to access">
       <span class="caret"></span>
@@ -3119,18 +3125,18 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-de-identified-1" title="§ 1. An Introduction to Privacy on the Web">§ 1. An Introduction to Privacy on the Web</a> 
-  </li><li>
-    <a href="#ref-for-dfn-de-identified-2" title="§ 1.2 Collective Governance">§ 1.2 Collective Governance</a> 
-  </li><li>
-    <a href="#ref-for-dfn-de-identified-3" title="§ 2.2.1 Ancillary uses">§ 2.2.1 Ancillary uses</a> 
-  </li><li>
-    <a href="#ref-for-dfn-de-identified-4" title="§ 2.6 De-identified Data">§ 2.6 De-identified Data</a> 
-  </li><li>
-    <a href="#ref-for-dfn-de-identified-5" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> 
-  </li><li>
-    <a href="#ref-for-dfn-de-identified-6" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> 
-  </li>
+      <a href="#ref-for-dfn-de-identified-1" title="§ 1. An Introduction to Privacy on the Web">§ 1. An Introduction to Privacy on the Web</a> 
+    </li><li>
+      <a href="#ref-for-dfn-de-identified-2" title="§ 1.2 Collective Governance">§ 1.2 Collective Governance</a> 
+    </li><li>
+      <a href="#ref-for-dfn-de-identified-3" title="§ 2.2.1 Ancillary uses">§ 2.2.1 Ancillary uses</a> 
+    </li><li>
+      <a href="#ref-for-dfn-de-identified-4" title="§ 2.6 De-identified Data">§ 2.6 De-identified Data</a> 
+    </li><li>
+      <a href="#ref-for-dfn-de-identified-5" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> 
+    </li><li>
+      <a href="#ref-for-dfn-de-identified-6" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-controlled-de-identified-data" aria-label="Links in this document to definition: controlled de-identified data">
       <span class="caret"></span>
@@ -3141,8 +3147,8 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-controlled-de-identified-data-1" title="§ 2.6 De-identified Data">§ 2.6 De-identified Data</a> <a href="#ref-for-dfn-controlled-de-identified-data-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-de-identified-data-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-controlled-de-identified-data-4" title="Reference 4">(4)</a> <a href="#ref-for-dfn-controlled-de-identified-data-5" title="Reference 5">(5)</a> 
-  </li>
+      <a href="#ref-for-dfn-controlled-de-identified-data-1" title="§ 2.6 De-identified Data">§ 2.6 De-identified Data</a> <a href="#ref-for-dfn-controlled-de-identified-data-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-de-identified-data-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-controlled-de-identified-data-4" title="Reference 4">(4)</a> <a href="#ref-for-dfn-controlled-de-identified-data-5" title="Reference 5">(5)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-device-owner" aria-label="Links in this document to definition: owners">
       <span class="caret"></span>
@@ -3153,8 +3159,8 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-device-owner-1" title="§ 2.8 Device Owners and Administrators">§ 2.8 Device Owners and Administrators</a> <a href="#ref-for-dfn-device-owner-2" title="Reference 2">(2)</a> 
-  </li>
+      <a href="#ref-for-dfn-device-owner-1" title="§ 2.8 Device Owners and Administrators">§ 2.8 Device Owners and Administrators</a> <a href="#ref-for-dfn-device-owner-2" title="Reference 2">(2)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-administrator" aria-label="Links in this document to definition: administrator">
       <span class="caret"></span>
@@ -3165,10 +3171,10 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-administrator-1" title="§ 2.8 Device Owners and Administrators">§ 2.8 Device Owners and Administrators</a> <a href="#ref-for-dfn-administrator-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-administrator-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-administrator-4" title="Reference 4">(4)</a> <a href="#ref-for-dfn-administrator-5" title="Reference 5">(5)</a> <a href="#ref-for-dfn-administrator-6" title="Reference 6">(6)</a> <a href="#ref-for-dfn-administrator-7" title="Reference 7">(7)</a> <a href="#ref-for-dfn-administrator-8" title="Reference 8">(8)</a> <a href="#ref-for-dfn-administrator-9" title="Reference 9">(9)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-administrator-10" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> <a href="#ref-for-dfn-administrator-11" title="Reference 2">(2)</a> 
-  </li>
+      <a href="#ref-for-dfn-administrator-1" title="§ 2.8 Device Owners and Administrators">§ 2.8 Device Owners and Administrators</a> <a href="#ref-for-dfn-administrator-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-administrator-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-administrator-4" title="Reference 4">(4)</a> <a href="#ref-for-dfn-administrator-5" title="Reference 5">(5)</a> <a href="#ref-for-dfn-administrator-6" title="Reference 6">(6)</a> <a href="#ref-for-dfn-administrator-7" title="Reference 7">(7)</a> <a href="#ref-for-dfn-administrator-8" title="Reference 8">(8)</a> <a href="#ref-for-dfn-administrator-9" title="Reference 9">(9)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-administrator-10" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> <a href="#ref-for-dfn-administrator-11" title="Reference 2">(2)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-harassment" aria-label="Links in this document to definition: harassment">
       <span class="caret"></span>
@@ -3179,8 +3185,8 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-harassment-1" title="§ 2.9 Harassment">§ 2.9 Harassment</a> 
-  </li>
+      <a href="#ref-for-dfn-harassment-1" title="§ 2.9 Harassment">§ 2.9 Harassment</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-unwanted-information" aria-label="Links in this document to definition: Unwanted information">
       <span class="caret"></span>
@@ -3191,8 +3197,8 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-unwanted-information-1" title="§ 2.9 Harassment">§ 2.9 Harassment</a> 
-  </li>
+      <a href="#ref-for-dfn-unwanted-information-1" title="§ 2.9 Harassment">§ 2.9 Harassment</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-guardian" aria-label="Links in this document to definition: guardian">
       <span class="caret"></span>
@@ -3203,12 +3209,12 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-guardian-1" title="§ 2.8 Device Owners and Administrators">§ 2.8 Device Owners and Administrators</a> 
-  </li><li>
-    <a href="#ref-for-dfn-guardian-2" title="§ 2.11.1 Guardians">§ 2.11.1 Guardians</a> <a href="#ref-for-dfn-guardian-3" title="Reference 2">(2)</a> <a href="#ref-for-dfn-guardian-4" title="Reference 3">(3)</a> <a href="#ref-for-dfn-guardian-5" title="Reference 4">(4)</a> <a href="#ref-for-dfn-guardian-6" title="Reference 5">(5)</a> <a href="#ref-for-dfn-guardian-7" title="Reference 6">(6)</a> <a href="#ref-for-dfn-guardian-8" title="Reference 7">(7)</a> <a href="#ref-for-dfn-guardian-9" title="Reference 8">(8)</a> <a href="#ref-for-dfn-guardian-10" title="Reference 9">(9)</a> <a href="#ref-for-dfn-guardian-11" title="Reference 10">(10)</a> <a href="#ref-for-dfn-guardian-12" title="Reference 11">(11)</a> <a href="#ref-for-dfn-guardian-13" title="Reference 12">(12)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-guardian-14" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> <a href="#ref-for-dfn-guardian-15" title="Reference 2">(2)</a> <a href="#ref-for-dfn-guardian-16" title="Reference 3">(3)</a> 
-  </li>
+      <a href="#ref-for-dfn-guardian-1" title="§ 2.8 Device Owners and Administrators">§ 2.8 Device Owners and Administrators</a> 
+    </li><li>
+      <a href="#ref-for-dfn-guardian-2" title="§ 2.11.1 Guardians">§ 2.11.1 Guardians</a> <a href="#ref-for-dfn-guardian-3" title="Reference 2">(2)</a> <a href="#ref-for-dfn-guardian-4" title="Reference 3">(3)</a> <a href="#ref-for-dfn-guardian-5" title="Reference 4">(4)</a> <a href="#ref-for-dfn-guardian-6" title="Reference 5">(5)</a> <a href="#ref-for-dfn-guardian-7" title="Reference 6">(6)</a> <a href="#ref-for-dfn-guardian-8" title="Reference 7">(7)</a> <a href="#ref-for-dfn-guardian-9" title="Reference 8">(8)</a> <a href="#ref-for-dfn-guardian-10" title="Reference 9">(9)</a> <a href="#ref-for-dfn-guardian-11" title="Reference 10">(10)</a> <a href="#ref-for-dfn-guardian-12" title="Reference 11">(11)</a> <a href="#ref-for-dfn-guardian-13" title="Reference 12">(12)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-guardian-14" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> <a href="#ref-for-dfn-guardian-15" title="Reference 2">(2)</a> <a href="#ref-for-dfn-guardian-16" title="Reference 3">(3)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-ward" aria-label="Links in this document to definition: ward">
       <span class="caret"></span>
@@ -3219,10 +3225,10 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-ward-1" title="§ 2.11.1 Guardians">§ 2.11.1 Guardians</a> <a href="#ref-for-dfn-ward-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-ward-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-ward-4" title="Reference 4">(4)</a> <a href="#ref-for-dfn-ward-5" title="Reference 5">(5)</a> <a href="#ref-for-dfn-ward-6" title="Reference 6">(6)</a> <a href="#ref-for-dfn-ward-7" title="Reference 7">(7)</a> <a href="#ref-for-dfn-ward-8" title="Reference 8">(8)</a> <a href="#ref-for-dfn-ward-9" title="Reference 9">(9)</a> <a href="#ref-for-dfn-ward-10" title="Reference 10">(10)</a> <a href="#ref-for-dfn-ward-11" title="Reference 11">(11)</a> <a href="#ref-for-dfn-ward-12" title="Reference 12">(12)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-ward-13" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> <a href="#ref-for-dfn-ward-14" title="Reference 2">(2)</a> <a href="#ref-for-dfn-ward-15" title="Reference 3">(3)</a> <a href="#ref-for-dfn-ward-16" title="Reference 4">(4)</a> 
-  </li>
+      <a href="#ref-for-dfn-ward-1" title="§ 2.11.1 Guardians">§ 2.11.1 Guardians</a> <a href="#ref-for-dfn-ward-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-ward-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-ward-4" title="Reference 4">(4)</a> <a href="#ref-for-dfn-ward-5" title="Reference 5">(5)</a> <a href="#ref-for-dfn-ward-6" title="Reference 6">(6)</a> <a href="#ref-for-dfn-ward-7" title="Reference 7">(7)</a> <a href="#ref-for-dfn-ward-8" title="Reference 8">(8)</a> <a href="#ref-for-dfn-ward-9" title="Reference 9">(9)</a> <a href="#ref-for-dfn-ward-10" title="Reference 10">(10)</a> <a href="#ref-for-dfn-ward-11" title="Reference 11">(11)</a> <a href="#ref-for-dfn-ward-12" title="Reference 12">(12)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-ward-13" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> <a href="#ref-for-dfn-ward-14" title="Reference 2">(2)</a> <a href="#ref-for-dfn-ward-15" title="Reference 3">(3)</a> <a href="#ref-for-dfn-ward-16" title="Reference 4">(4)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-individual" aria-label="Links in this document to definition: person">
       <span class="caret"></span>
@@ -3233,56 +3239,56 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-individual-1" title="§ 1. An Introduction to Privacy on the Web">§ 1. An Introduction to Privacy on the Web</a> <a href="#ref-for-dfn-individual-2" title="Reference 2">(2)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-individual-3" title="§ 1.1 Individual Autonomy">§ 1.1 Individual Autonomy</a> <a href="#ref-for-dfn-individual-4" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-5" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-6" title="Reference 4">(4)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-individual-7" title="§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls">§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls</a> <a href="#ref-for-dfn-individual-8" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-9" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-10" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-11" title="Reference 5">(5)</a> <a href="#ref-for-dfn-individual-12" title="Reference 6">(6)</a> <a href="#ref-for-dfn-individual-13" title="Reference 7">(7)</a> <a href="#ref-for-dfn-individual-14" title="Reference 8">(8)</a> <a href="#ref-for-dfn-individual-15" title="Reference 9">(9)</a> <a href="#ref-for-dfn-individual-16" title="Reference 10">(10)</a> <a href="#ref-for-dfn-individual-17" title="Reference 11">(11)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-individual-18" title="§ 1.1.2 Privacy Labour">§ 1.1.2 Privacy Labour</a> <a href="#ref-for-dfn-individual-19" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-20" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-21" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-22" title="Reference 5">(5)</a> <a href="#ref-for-dfn-individual-23" title="Reference 6">(6)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-individual-24" title="§ 1.2 Collective Governance">§ 1.2 Collective Governance</a> <a href="#ref-for-dfn-individual-25" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-26" title="Reference 3">(3)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-individual-27" title="§ 1.2.1 Group Privacy">§ 1.2.1 Group Privacy</a> <a href="#ref-for-dfn-individual-28" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-29" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-30" title="Reference 4">(4)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-individual-31" title="§ 1.2.2 Transparency and Research">§ 1.2.2 Transparency and Research</a> 
-  </li><li>
-    <a href="#ref-for-dfn-individual-32" title="§ 1.3 User Agents">§ 1.3 User Agents</a> <a href="#ref-for-dfn-individual-33" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-34" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-35" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-36" title="Reference 5">(5)</a> <a href="#ref-for-dfn-individual-37" title="Reference 6">(6)</a> <a href="#ref-for-dfn-individual-38" title="Reference 7">(7)</a> <a href="#ref-for-dfn-individual-39" title="Reference 8">(8)</a> <a href="#ref-for-dfn-individual-40" title="Reference 9">(9)</a> <a href="#ref-for-dfn-individual-41" title="Reference 10">(10)</a> <a href="#ref-for-dfn-individual-42" title="Reference 11">(11)</a> <a href="#ref-for-dfn-individual-43" title="Reference 12">(12)</a> <a href="#ref-for-dfn-individual-44" title="Reference 13">(13)</a> <a href="#ref-for-dfn-individual-45" title="Reference 14">(14)</a> <a href="#ref-for-dfn-individual-46" title="Reference 15">(15)</a> <a href="#ref-for-dfn-individual-47" title="Reference 16">(16)</a> <a href="#ref-for-dfn-individual-48" title="Reference 17">(17)</a> <a href="#ref-for-dfn-individual-49" title="Reference 18">(18)</a> <a href="#ref-for-dfn-individual-50" title="Reference 19">(19)</a> <a href="#ref-for-dfn-individual-51" title="Reference 20">(20)</a> <a href="#ref-for-dfn-individual-52" title="Reference 21">(21)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-individual-53" title="§ 2.1 Identity on the Web">§ 2.1 Identity on the Web</a> <a href="#ref-for-dfn-individual-54" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-55" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-56" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-57" title="Reference 5">(5)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-individual-58" title="§ 2.5 Data Rights">§ 2.5 Data Rights</a> <a href="#ref-for-dfn-individual-59" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-60" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-61" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-62" title="Reference 5">(5)</a> <a href="#ref-for-dfn-individual-63" title="Reference 6">(6)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-individual-64" title="§ 2.6 De-identified Data">§ 2.6 De-identified Data</a> <a href="#ref-for-dfn-individual-65" title="Reference 2">(2)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-individual-66" title="§ 2.7 Collective Privacy">§ 2.7 Collective Privacy</a> <a href="#ref-for-dfn-individual-67" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-68" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-69" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-70" title="Reference 5">(5)</a> <a href="#ref-for-dfn-individual-71" title="Reference 6">(6)</a> <a href="#ref-for-dfn-individual-72" title="Reference 7">(7)</a> <a href="#ref-for-dfn-individual-73" title="Reference 8">(8)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-individual-74" title="§ 2.8 Device Owners and Administrators">§ 2.8 Device Owners and Administrators</a> <a href="#ref-for-dfn-individual-75" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-76" title="Reference 3">(3)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-individual-77" title="§ 2.10 Unwanted Information">§ 2.10 Unwanted Information</a> <a href="#ref-for-dfn-individual-78" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-79" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-80" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-81" title="Reference 5">(5)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-individual-82" title="§ 2.12 Consent, Withdrawal of Consent, Opt-Outs, and Objections">§ 2.12 Consent, Withdrawal of Consent, Opt-Outs, and Objections</a> <a href="#ref-for-dfn-individual-83" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-84" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-85" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-86" title="Reference 5">(5)</a> <a href="#ref-for-dfn-individual-87" title="Reference 6">(6)</a> <a href="#ref-for-dfn-individual-88" title="Reference 7">(7)</a> <a href="#ref-for-dfn-individual-89" title="Reference 8">(8)</a> <a href="#ref-for-dfn-individual-90" title="Reference 9">(9)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-individual-91" title="§ 2.14 Non-Retaliation">§ 2.14 Non-Retaliation</a> <a href="#ref-for-dfn-individual-92" title="Reference 2">(2)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-individual-93" title="§ 2.15 Support Choosing Which Information to Present">§ 2.15 Support Choosing Which Information to Present</a> <a href="#ref-for-dfn-individual-94" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-95" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-96" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-97" title="Reference 5">(5)</a> <a href="#ref-for-dfn-individual-98" title="Reference 6">(6)</a> <a href="#ref-for-dfn-individual-99" title="Reference 7">(7)</a> <a href="#ref-for-dfn-individual-100" title="Reference 8">(8)</a> <a href="#ref-for-dfn-individual-101" title="Reference 9">(9)</a> <a href="#ref-for-dfn-individual-102" title="Reference 10">(10)</a> <a href="#ref-for-dfn-individual-103" title="Reference 11">(11)</a> <a href="#ref-for-dfn-individual-104" title="Reference 12">(12)</a> <a href="#ref-for-dfn-individual-105" title="Reference 13">(13)</a> <a href="#ref-for-dfn-individual-106" title="Reference 14">(14)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-individual-107" title="§ A.1 People">§ A.1 People</a> <a href="#ref-for-dfn-individual-108" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-109" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-110" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-111" title="Reference 5">(5)</a> <a href="#ref-for-dfn-individual-112" title="Reference 6">(6)</a> <a href="#ref-for-dfn-individual-113" title="Reference 7">(7)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-individual-114" title="§ A.2 Contexts">§ A.2 Contexts</a> <a href="#ref-for-dfn-individual-115" title="Reference 2">(2)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-individual-116" title="§ A.3 Server-Side Actors">§ A.3 Server-Side Actors</a> <a href="#ref-for-dfn-individual-117" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-118" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-119" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-120" title="Reference 5">(5)</a> <a href="#ref-for-dfn-individual-121" title="Reference 6">(6)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-individual-122" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> <a href="#ref-for-dfn-individual-123" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-124" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-125" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-126" title="Reference 5">(5)</a> <a href="#ref-for-dfn-individual-127" title="Reference 6">(6)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-individual-128" title="§ A.5 Recognition">§ A.5 Recognition</a> <a href="#ref-for-dfn-individual-129" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-130" title="Reference 3">(3)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-individual-131" title="§ A.5.1 Recognition Types">§ A.5.1 Recognition Types</a> <a href="#ref-for-dfn-individual-132" title="Reference 2">(2)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-individual-133" title="§ A.5.3 Recognition Methods">§ A.5.3 Recognition Methods</a> <a href="#ref-for-dfn-individual-134" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-135" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-136" title="Reference 4">(4)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-individual-137" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> <a href="#ref-for-dfn-individual-138" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-139" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-140" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-141" title="Reference 5">(5)</a> <a href="#ref-for-dfn-individual-142" title="Reference 6">(6)</a> <a href="#ref-for-dfn-individual-143" title="Reference 7">(7)</a> <a href="#ref-for-dfn-individual-144" title="Reference 8">(8)</a> <a href="#ref-for-dfn-individual-145" title="Reference 9">(9)</a> 
-  </li>
+      <a href="#ref-for-dfn-individual-1" title="§ 1. An Introduction to Privacy on the Web">§ 1. An Introduction to Privacy on the Web</a> <a href="#ref-for-dfn-individual-2" title="Reference 2">(2)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-individual-3" title="§ 1.1 Individual Autonomy">§ 1.1 Individual Autonomy</a> <a href="#ref-for-dfn-individual-4" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-5" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-6" title="Reference 4">(4)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-individual-7" title="§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls">§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls</a> <a href="#ref-for-dfn-individual-8" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-9" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-10" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-11" title="Reference 5">(5)</a> <a href="#ref-for-dfn-individual-12" title="Reference 6">(6)</a> <a href="#ref-for-dfn-individual-13" title="Reference 7">(7)</a> <a href="#ref-for-dfn-individual-14" title="Reference 8">(8)</a> <a href="#ref-for-dfn-individual-15" title="Reference 9">(9)</a> <a href="#ref-for-dfn-individual-16" title="Reference 10">(10)</a> <a href="#ref-for-dfn-individual-17" title="Reference 11">(11)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-individual-18" title="§ 1.1.2 Privacy Labour">§ 1.1.2 Privacy Labour</a> <a href="#ref-for-dfn-individual-19" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-20" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-21" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-22" title="Reference 5">(5)</a> <a href="#ref-for-dfn-individual-23" title="Reference 6">(6)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-individual-24" title="§ 1.2 Collective Governance">§ 1.2 Collective Governance</a> <a href="#ref-for-dfn-individual-25" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-26" title="Reference 3">(3)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-individual-27" title="§ 1.2.1 Group Privacy">§ 1.2.1 Group Privacy</a> <a href="#ref-for-dfn-individual-28" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-29" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-30" title="Reference 4">(4)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-individual-31" title="§ 1.2.2 Transparency and Research">§ 1.2.2 Transparency and Research</a> 
+    </li><li>
+      <a href="#ref-for-dfn-individual-32" title="§ 1.3 User Agents">§ 1.3 User Agents</a> <a href="#ref-for-dfn-individual-33" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-34" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-35" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-36" title="Reference 5">(5)</a> <a href="#ref-for-dfn-individual-37" title="Reference 6">(6)</a> <a href="#ref-for-dfn-individual-38" title="Reference 7">(7)</a> <a href="#ref-for-dfn-individual-39" title="Reference 8">(8)</a> <a href="#ref-for-dfn-individual-40" title="Reference 9">(9)</a> <a href="#ref-for-dfn-individual-41" title="Reference 10">(10)</a> <a href="#ref-for-dfn-individual-42" title="Reference 11">(11)</a> <a href="#ref-for-dfn-individual-43" title="Reference 12">(12)</a> <a href="#ref-for-dfn-individual-44" title="Reference 13">(13)</a> <a href="#ref-for-dfn-individual-45" title="Reference 14">(14)</a> <a href="#ref-for-dfn-individual-46" title="Reference 15">(15)</a> <a href="#ref-for-dfn-individual-47" title="Reference 16">(16)</a> <a href="#ref-for-dfn-individual-48" title="Reference 17">(17)</a> <a href="#ref-for-dfn-individual-49" title="Reference 18">(18)</a> <a href="#ref-for-dfn-individual-50" title="Reference 19">(19)</a> <a href="#ref-for-dfn-individual-51" title="Reference 20">(20)</a> <a href="#ref-for-dfn-individual-52" title="Reference 21">(21)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-individual-53" title="§ 2.1 Identity on the Web">§ 2.1 Identity on the Web</a> <a href="#ref-for-dfn-individual-54" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-55" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-56" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-57" title="Reference 5">(5)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-individual-58" title="§ 2.5 Data Rights">§ 2.5 Data Rights</a> <a href="#ref-for-dfn-individual-59" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-60" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-61" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-62" title="Reference 5">(5)</a> <a href="#ref-for-dfn-individual-63" title="Reference 6">(6)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-individual-64" title="§ 2.6 De-identified Data">§ 2.6 De-identified Data</a> <a href="#ref-for-dfn-individual-65" title="Reference 2">(2)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-individual-66" title="§ 2.7 Collective Privacy">§ 2.7 Collective Privacy</a> <a href="#ref-for-dfn-individual-67" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-68" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-69" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-70" title="Reference 5">(5)</a> <a href="#ref-for-dfn-individual-71" title="Reference 6">(6)</a> <a href="#ref-for-dfn-individual-72" title="Reference 7">(7)</a> <a href="#ref-for-dfn-individual-73" title="Reference 8">(8)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-individual-74" title="§ 2.8 Device Owners and Administrators">§ 2.8 Device Owners and Administrators</a> <a href="#ref-for-dfn-individual-75" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-76" title="Reference 3">(3)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-individual-77" title="§ 2.10 Unwanted Information">§ 2.10 Unwanted Information</a> <a href="#ref-for-dfn-individual-78" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-79" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-80" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-81" title="Reference 5">(5)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-individual-82" title="§ 2.12 Consent, Withdrawal of Consent, Opt-Outs, and Objections">§ 2.12 Consent, Withdrawal of Consent, Opt-Outs, and Objections</a> <a href="#ref-for-dfn-individual-83" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-84" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-85" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-86" title="Reference 5">(5)</a> <a href="#ref-for-dfn-individual-87" title="Reference 6">(6)</a> <a href="#ref-for-dfn-individual-88" title="Reference 7">(7)</a> <a href="#ref-for-dfn-individual-89" title="Reference 8">(8)</a> <a href="#ref-for-dfn-individual-90" title="Reference 9">(9)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-individual-91" title="§ 2.14 Non-Retaliation">§ 2.14 Non-Retaliation</a> <a href="#ref-for-dfn-individual-92" title="Reference 2">(2)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-individual-93" title="§ 2.15 Support Choosing Which Information to Present">§ 2.15 Support Choosing Which Information to Present</a> <a href="#ref-for-dfn-individual-94" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-95" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-96" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-97" title="Reference 5">(5)</a> <a href="#ref-for-dfn-individual-98" title="Reference 6">(6)</a> <a href="#ref-for-dfn-individual-99" title="Reference 7">(7)</a> <a href="#ref-for-dfn-individual-100" title="Reference 8">(8)</a> <a href="#ref-for-dfn-individual-101" title="Reference 9">(9)</a> <a href="#ref-for-dfn-individual-102" title="Reference 10">(10)</a> <a href="#ref-for-dfn-individual-103" title="Reference 11">(11)</a> <a href="#ref-for-dfn-individual-104" title="Reference 12">(12)</a> <a href="#ref-for-dfn-individual-105" title="Reference 13">(13)</a> <a href="#ref-for-dfn-individual-106" title="Reference 14">(14)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-individual-107" title="§ A.1 People">§ A.1 People</a> <a href="#ref-for-dfn-individual-108" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-109" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-110" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-111" title="Reference 5">(5)</a> <a href="#ref-for-dfn-individual-112" title="Reference 6">(6)</a> <a href="#ref-for-dfn-individual-113" title="Reference 7">(7)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-individual-114" title="§ A.2 Contexts">§ A.2 Contexts</a> <a href="#ref-for-dfn-individual-115" title="Reference 2">(2)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-individual-116" title="§ A.3 Server-Side Actors">§ A.3 Server-Side Actors</a> <a href="#ref-for-dfn-individual-117" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-118" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-119" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-120" title="Reference 5">(5)</a> <a href="#ref-for-dfn-individual-121" title="Reference 6">(6)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-individual-122" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> <a href="#ref-for-dfn-individual-123" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-124" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-125" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-126" title="Reference 5">(5)</a> <a href="#ref-for-dfn-individual-127" title="Reference 6">(6)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-individual-128" title="§ A.5 Recognition">§ A.5 Recognition</a> <a href="#ref-for-dfn-individual-129" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-130" title="Reference 3">(3)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-individual-131" title="§ A.5.1 Recognition Types">§ A.5.1 Recognition Types</a> <a href="#ref-for-dfn-individual-132" title="Reference 2">(2)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-individual-133" title="§ A.5.3 Recognition Methods">§ A.5.3 Recognition Methods</a> <a href="#ref-for-dfn-individual-134" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-135" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-136" title="Reference 4">(4)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-individual-137" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> <a href="#ref-for-dfn-individual-138" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-139" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-140" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-141" title="Reference 5">(5)</a> <a href="#ref-for-dfn-individual-142" title="Reference 6">(6)</a> <a href="#ref-for-dfn-individual-143" title="Reference 7">(7)</a> <a href="#ref-for-dfn-individual-144" title="Reference 8">(8)</a> <a href="#ref-for-dfn-individual-145" title="Reference 9">(9)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-vulnerable" aria-label="Links in this document to definition: vulnerable person">
       <span class="caret"></span>
@@ -3293,12 +3299,12 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-vulnerable-1" title="§ 1. An Introduction to Privacy on the Web">§ 1. An Introduction to Privacy on the Web</a> 
-  </li><li>
-    <a href="#ref-for-dfn-vulnerable-2" title="§ 2.9 Harassment">§ 2.9 Harassment</a> 
-  </li><li>
-    <a href="#ref-for-dfn-vulnerable-3" title="§ A.5.1 Recognition Types">§ A.5.1 Recognition Types</a> 
-  </li>
+      <a href="#ref-for-dfn-vulnerable-1" title="§ 1. An Introduction to Privacy on the Web">§ 1. An Introduction to Privacy on the Web</a> 
+    </li><li>
+      <a href="#ref-for-dfn-vulnerable-2" title="§ 2.9 Harassment">§ 2.9 Harassment</a> 
+    </li><li>
+      <a href="#ref-for-dfn-vulnerable-3" title="§ A.5.1 Recognition Types">§ A.5.1 Recognition Types</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-context" aria-label="Links in this document to definition: context">
       <span class="caret"></span>
@@ -3309,30 +3315,30 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-context-1" title="§ 1. An Introduction to Privacy on the Web">§ 1. An Introduction to Privacy on the Web</a> <a href="#ref-for-dfn-context-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-context-3" title="Reference 3">(3)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-context-4" title="§ 2. Principles for Privacy on the Web">§ 2. Principles for Privacy on the Web</a> <a href="#ref-for-dfn-context-5" title="Reference 2">(2)</a> <a href="#ref-for-dfn-context-6" title="Reference 3">(3)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-context-7" title="§ 2.1 Identity on the Web">§ 2.1 Identity on the Web</a> <a href="#ref-for-dfn-context-8" title="Reference 2">(2)</a> <a href="#ref-for-dfn-context-9" title="Reference 3">(3)</a> <a href="#ref-for-dfn-context-10" title="Reference 4">(4)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-context-11" title="§ A.1 People">§ A.1 People</a> 
-  </li><li>
-    <a href="#ref-for-dfn-context-12" title="§ A.2 Contexts">§ A.2 Contexts</a> <a href="#ref-for-dfn-context-13" title="Reference 2">(2)</a> <a href="#ref-for-dfn-context-14" title="Reference 3">(3)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-context-15" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> <a href="#ref-for-dfn-context-16" title="Reference 2">(2)</a> <a href="#ref-for-dfn-context-17" title="Reference 3">(3)</a> <a href="#ref-for-dfn-context-18" title="Reference 4">(4)</a> <a href="#ref-for-dfn-context-19" title="Reference 5">(5)</a> <a href="#ref-for-dfn-context-20" title="Reference 6">(6)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-context-21" title="§ A.5 Recognition">§ A.5 Recognition</a> <a href="#ref-for-dfn-context-22" title="Reference 2">(2)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-context-23" title="§ A.5.1 Recognition Types">§ A.5.1 Recognition Types</a> <a href="#ref-for-dfn-context-24" title="Reference 2">(2)</a> <a href="#ref-for-dfn-context-25" title="Reference 3">(3)</a> <a href="#ref-for-dfn-context-26" title="Reference 4">(4)</a> <a href="#ref-for-dfn-context-27" title="Reference 5">(5)</a> <a href="#ref-for-dfn-context-28" title="Reference 6">(6)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-context-29" title="§ A.5.2 User agent awareness of recognition">§ A.5.2 User agent awareness of recognition</a> <a href="#ref-for-dfn-context-30" title="Reference 2">(2)</a> <a href="#ref-for-dfn-context-31" title="Reference 3">(3)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-context-32" title="§ A.5.3 Recognition Methods">§ A.5.3 Recognition Methods</a> 
-  </li><li>
-    <a href="#ref-for-dfn-context-33" title="§ B. High-Level Threats">§ B. High-Level Threats</a> 
-  </li><li>
-    <a href="#ref-for-dfn-context-34" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> 
-  </li>
+      <a href="#ref-for-dfn-context-1" title="§ 1. An Introduction to Privacy on the Web">§ 1. An Introduction to Privacy on the Web</a> <a href="#ref-for-dfn-context-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-context-3" title="Reference 3">(3)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-context-4" title="§ 2. Principles for Privacy on the Web">§ 2. Principles for Privacy on the Web</a> <a href="#ref-for-dfn-context-5" title="Reference 2">(2)</a> <a href="#ref-for-dfn-context-6" title="Reference 3">(3)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-context-7" title="§ 2.1 Identity on the Web">§ 2.1 Identity on the Web</a> <a href="#ref-for-dfn-context-8" title="Reference 2">(2)</a> <a href="#ref-for-dfn-context-9" title="Reference 3">(3)</a> <a href="#ref-for-dfn-context-10" title="Reference 4">(4)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-context-11" title="§ A.1 People">§ A.1 People</a> 
+    </li><li>
+      <a href="#ref-for-dfn-context-12" title="§ A.2 Contexts">§ A.2 Contexts</a> <a href="#ref-for-dfn-context-13" title="Reference 2">(2)</a> <a href="#ref-for-dfn-context-14" title="Reference 3">(3)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-context-15" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> <a href="#ref-for-dfn-context-16" title="Reference 2">(2)</a> <a href="#ref-for-dfn-context-17" title="Reference 3">(3)</a> <a href="#ref-for-dfn-context-18" title="Reference 4">(4)</a> <a href="#ref-for-dfn-context-19" title="Reference 5">(5)</a> <a href="#ref-for-dfn-context-20" title="Reference 6">(6)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-context-21" title="§ A.5 Recognition">§ A.5 Recognition</a> <a href="#ref-for-dfn-context-22" title="Reference 2">(2)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-context-23" title="§ A.5.1 Recognition Types">§ A.5.1 Recognition Types</a> <a href="#ref-for-dfn-context-24" title="Reference 2">(2)</a> <a href="#ref-for-dfn-context-25" title="Reference 3">(3)</a> <a href="#ref-for-dfn-context-26" title="Reference 4">(4)</a> <a href="#ref-for-dfn-context-27" title="Reference 5">(5)</a> <a href="#ref-for-dfn-context-28" title="Reference 6">(6)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-context-29" title="§ A.5.2 User agent awareness of recognition">§ A.5.2 User agent awareness of recognition</a> <a href="#ref-for-dfn-context-30" title="Reference 2">(2)</a> <a href="#ref-for-dfn-context-31" title="Reference 3">(3)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-context-32" title="§ A.5.3 Recognition Methods">§ A.5.3 Recognition Methods</a> 
+    </li><li>
+      <a href="#ref-for-dfn-context-33" title="§ B. High-Level Threats">§ B. High-Level Threats</a> 
+    </li><li>
+      <a href="#ref-for-dfn-context-34" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-actor" aria-label="Links in this document to definition: actor">
       <span class="caret"></span>
@@ -3343,38 +3349,38 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-actor-1" title="§ 1. An Introduction to Privacy on the Web">§ 1. An Introduction to Privacy on the Web</a> <a href="#ref-for-dfn-actor-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-actor-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-actor-4" title="Reference 4">(4)</a> <a href="#ref-for-dfn-actor-5" title="Reference 5">(5)</a> <a href="#ref-for-dfn-actor-6" title="Reference 6">(6)</a> <a href="#ref-for-dfn-actor-7" title="Reference 7">(7)</a> <a href="#ref-for-dfn-actor-8" title="Reference 8">(8)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-actor-9" title="§ 1.1 Individual Autonomy">§ 1.1 Individual Autonomy</a> 
-  </li><li>
-    <a href="#ref-for-dfn-actor-10" title="§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls">§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls</a> <a href="#ref-for-dfn-actor-11" title="Reference 2">(2)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-actor-12" title="§ 1.1.2 Privacy Labour">§ 1.1.2 Privacy Labour</a> <a href="#ref-for-dfn-actor-13" title="Reference 2">(2)</a> <a href="#ref-for-dfn-actor-14" title="Reference 3">(3)</a> <a href="#ref-for-dfn-actor-15" title="Reference 4">(4)</a> <a href="#ref-for-dfn-actor-16" title="Reference 5">(5)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-actor-17" title="§ 1.2 Collective Governance">§ 1.2 Collective Governance</a> <a href="#ref-for-dfn-actor-18" title="Reference 2">(2)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-actor-19" title="§ 1.3 User Agents">§ 1.3 User Agents</a> <a href="#ref-for-dfn-actor-20" title="Reference 2">(2)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-actor-21" title="§ 2.5 Data Rights">§ 2.5 Data Rights</a> <a href="#ref-for-dfn-actor-22" title="Reference 2">(2)</a> <a href="#ref-for-dfn-actor-23" title="Reference 3">(3)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-actor-24" title="§ 2.6 De-identified Data">§ 2.6 De-identified Data</a> <a href="#ref-for-dfn-actor-25" title="Reference 2">(2)</a> <a href="#ref-for-dfn-actor-26" title="Reference 3">(3)</a> <a href="#ref-for-dfn-actor-27" title="Reference 4">(4)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-actor-28" title="§ 2.10 Unwanted Information">§ 2.10 Unwanted Information</a> <a href="#ref-for-dfn-actor-29" title="Reference 2">(2)</a> <a href="#ref-for-dfn-actor-30" title="Reference 3">(3)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-actor-31" title="§ 2.12 Consent, Withdrawal of Consent, Opt-Outs, and Objections">§ 2.12 Consent, Withdrawal of Consent, Opt-Outs, and Objections</a> <a href="#ref-for-dfn-actor-32" title="Reference 2">(2)</a> <a href="#ref-for-dfn-actor-33" title="Reference 3">(3)</a> <a href="#ref-for-dfn-actor-34" title="Reference 4">(4)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-actor-35" title="§ 2.14 Non-Retaliation">§ 2.14 Non-Retaliation</a> <a href="#ref-for-dfn-actor-36" title="Reference 2">(2)</a> <a href="#ref-for-dfn-actor-37" title="Reference 3">(3)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-actor-38" title="§ 2.15 Support Choosing Which Information to Present">§ 2.15 Support Choosing Which Information to Present</a> <a href="#ref-for-dfn-actor-39" title="Reference 2">(2)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-actor-40" title="§ A.2 Contexts">§ A.2 Contexts</a> <a href="#ref-for-dfn-actor-41" title="Reference 2">(2)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-actor-42" title="§ A.3 Server-Side Actors">§ A.3 Server-Side Actors</a> <a href="#ref-for-dfn-actor-43" title="Reference 2">(2)</a> <a href="#ref-for-dfn-actor-44" title="Reference 3">(3)</a> <a href="#ref-for-dfn-actor-45" title="Reference 4">(4)</a> <a href="#ref-for-dfn-actor-46" title="Reference 5">(5)</a> <a href="#ref-for-dfn-actor-47" title="Reference 6">(6)</a> <a href="#ref-for-dfn-actor-48" title="Reference 7">(7)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-actor-49" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> <a href="#ref-for-dfn-actor-50" title="Reference 2">(2)</a> <a href="#ref-for-dfn-actor-51" title="Reference 3">(3)</a> <a href="#ref-for-dfn-actor-52" title="Reference 4">(4)</a> <a href="#ref-for-dfn-actor-53" title="Reference 5">(5)</a> <a href="#ref-for-dfn-actor-54" title="Reference 6">(6)</a> <a href="#ref-for-dfn-actor-55" title="Reference 7">(7)</a> <a href="#ref-for-dfn-actor-56" title="Reference 8">(8)</a> <a href="#ref-for-dfn-actor-57" title="Reference 9">(9)</a> <a href="#ref-for-dfn-actor-58" title="Reference 10">(10)</a> <a href="#ref-for-dfn-actor-59" title="Reference 11">(11)</a> <a href="#ref-for-dfn-actor-60" title="Reference 12">(12)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-actor-61" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> <a href="#ref-for-dfn-actor-62" title="Reference 2">(2)</a> <a href="#ref-for-dfn-actor-63" title="Reference 3">(3)</a> <a href="#ref-for-dfn-actor-64" title="Reference 4">(4)</a> <a href="#ref-for-dfn-actor-65" title="Reference 5">(5)</a> <a href="#ref-for-dfn-actor-66" title="Reference 6">(6)</a> <a href="#ref-for-dfn-actor-67" title="Reference 7">(7)</a> 
-  </li>
+      <a href="#ref-for-dfn-actor-1" title="§ 1. An Introduction to Privacy on the Web">§ 1. An Introduction to Privacy on the Web</a> <a href="#ref-for-dfn-actor-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-actor-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-actor-4" title="Reference 4">(4)</a> <a href="#ref-for-dfn-actor-5" title="Reference 5">(5)</a> <a href="#ref-for-dfn-actor-6" title="Reference 6">(6)</a> <a href="#ref-for-dfn-actor-7" title="Reference 7">(7)</a> <a href="#ref-for-dfn-actor-8" title="Reference 8">(8)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-actor-9" title="§ 1.1 Individual Autonomy">§ 1.1 Individual Autonomy</a> 
+    </li><li>
+      <a href="#ref-for-dfn-actor-10" title="§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls">§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls</a> <a href="#ref-for-dfn-actor-11" title="Reference 2">(2)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-actor-12" title="§ 1.1.2 Privacy Labour">§ 1.1.2 Privacy Labour</a> <a href="#ref-for-dfn-actor-13" title="Reference 2">(2)</a> <a href="#ref-for-dfn-actor-14" title="Reference 3">(3)</a> <a href="#ref-for-dfn-actor-15" title="Reference 4">(4)</a> <a href="#ref-for-dfn-actor-16" title="Reference 5">(5)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-actor-17" title="§ 1.2 Collective Governance">§ 1.2 Collective Governance</a> <a href="#ref-for-dfn-actor-18" title="Reference 2">(2)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-actor-19" title="§ 1.3 User Agents">§ 1.3 User Agents</a> <a href="#ref-for-dfn-actor-20" title="Reference 2">(2)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-actor-21" title="§ 2.5 Data Rights">§ 2.5 Data Rights</a> <a href="#ref-for-dfn-actor-22" title="Reference 2">(2)</a> <a href="#ref-for-dfn-actor-23" title="Reference 3">(3)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-actor-24" title="§ 2.6 De-identified Data">§ 2.6 De-identified Data</a> <a href="#ref-for-dfn-actor-25" title="Reference 2">(2)</a> <a href="#ref-for-dfn-actor-26" title="Reference 3">(3)</a> <a href="#ref-for-dfn-actor-27" title="Reference 4">(4)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-actor-28" title="§ 2.10 Unwanted Information">§ 2.10 Unwanted Information</a> <a href="#ref-for-dfn-actor-29" title="Reference 2">(2)</a> <a href="#ref-for-dfn-actor-30" title="Reference 3">(3)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-actor-31" title="§ 2.12 Consent, Withdrawal of Consent, Opt-Outs, and Objections">§ 2.12 Consent, Withdrawal of Consent, Opt-Outs, and Objections</a> <a href="#ref-for-dfn-actor-32" title="Reference 2">(2)</a> <a href="#ref-for-dfn-actor-33" title="Reference 3">(3)</a> <a href="#ref-for-dfn-actor-34" title="Reference 4">(4)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-actor-35" title="§ 2.14 Non-Retaliation">§ 2.14 Non-Retaliation</a> <a href="#ref-for-dfn-actor-36" title="Reference 2">(2)</a> <a href="#ref-for-dfn-actor-37" title="Reference 3">(3)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-actor-38" title="§ 2.15 Support Choosing Which Information to Present">§ 2.15 Support Choosing Which Information to Present</a> <a href="#ref-for-dfn-actor-39" title="Reference 2">(2)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-actor-40" title="§ A.2 Contexts">§ A.2 Contexts</a> <a href="#ref-for-dfn-actor-41" title="Reference 2">(2)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-actor-42" title="§ A.3 Server-Side Actors">§ A.3 Server-Side Actors</a> <a href="#ref-for-dfn-actor-43" title="Reference 2">(2)</a> <a href="#ref-for-dfn-actor-44" title="Reference 3">(3)</a> <a href="#ref-for-dfn-actor-45" title="Reference 4">(4)</a> <a href="#ref-for-dfn-actor-46" title="Reference 5">(5)</a> <a href="#ref-for-dfn-actor-47" title="Reference 6">(6)</a> <a href="#ref-for-dfn-actor-48" title="Reference 7">(7)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-actor-49" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> <a href="#ref-for-dfn-actor-50" title="Reference 2">(2)</a> <a href="#ref-for-dfn-actor-51" title="Reference 3">(3)</a> <a href="#ref-for-dfn-actor-52" title="Reference 4">(4)</a> <a href="#ref-for-dfn-actor-53" title="Reference 5">(5)</a> <a href="#ref-for-dfn-actor-54" title="Reference 6">(6)</a> <a href="#ref-for-dfn-actor-55" title="Reference 7">(7)</a> <a href="#ref-for-dfn-actor-56" title="Reference 8">(8)</a> <a href="#ref-for-dfn-actor-57" title="Reference 9">(9)</a> <a href="#ref-for-dfn-actor-58" title="Reference 10">(10)</a> <a href="#ref-for-dfn-actor-59" title="Reference 11">(11)</a> <a href="#ref-for-dfn-actor-60" title="Reference 12">(12)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-actor-61" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> <a href="#ref-for-dfn-actor-62" title="Reference 2">(2)</a> <a href="#ref-for-dfn-actor-63" title="Reference 3">(3)</a> <a href="#ref-for-dfn-actor-64" title="Reference 4">(4)</a> <a href="#ref-for-dfn-actor-65" title="Reference 5">(5)</a> <a href="#ref-for-dfn-actor-66" title="Reference 6">(6)</a> <a href="#ref-for-dfn-actor-67" title="Reference 7">(7)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-first-party" aria-label="Links in this document to definition: first party">
       <span class="caret"></span>
@@ -3385,8 +3391,8 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-first-party-1" title="§ A.3 Server-Side Actors">§ A.3 Server-Side Actors</a> 
-  </li>
+      <a href="#ref-for-dfn-first-party-1" title="§ A.3 Server-Side Actors">§ A.3 Server-Side Actors</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-first-party-0" aria-label="Links in this document to definition: first party">
       <span class="caret"></span>
@@ -3397,14 +3403,14 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-first-party-0-1" title="§ 1.3 User Agents">§ 1.3 User Agents</a> 
-  </li><li>
-    <a href="#ref-for-dfn-first-party-0-2" title="§ 2.6 De-identified Data">§ 2.6 De-identified Data</a> <a href="#ref-for-dfn-first-party-0-3" title="Reference 2">(2)</a> <a href="#ref-for-dfn-first-party-0-4" title="Reference 3">(3)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-first-party-0-5" title="§ A.3 Server-Side Actors">§ A.3 Server-Side Actors</a> <a href="#ref-for-dfn-first-party-0-6" title="Reference 2">(2)</a> <a href="#ref-for-dfn-first-party-0-7" title="Reference 3">(3)</a> <a href="#ref-for-dfn-first-party-0-8" title="Reference 4">(4)</a> <a href="#ref-for-dfn-first-party-0-9" title="Reference 5">(5)</a> <a href="#ref-for-dfn-first-party-0-10" title="Reference 6">(6)</a> <a href="#ref-for-dfn-first-party-0-11" title="Reference 7">(7)</a> <a href="#ref-for-dfn-first-party-0-12" title="Reference 8">(8)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-first-party-0-13" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> 
-  </li>
+      <a href="#ref-for-dfn-first-party-0-1" title="§ 1.3 User Agents">§ 1.3 User Agents</a> 
+    </li><li>
+      <a href="#ref-for-dfn-first-party-0-2" title="§ 2.6 De-identified Data">§ 2.6 De-identified Data</a> <a href="#ref-for-dfn-first-party-0-3" title="Reference 2">(2)</a> <a href="#ref-for-dfn-first-party-0-4" title="Reference 3">(3)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-first-party-0-5" title="§ A.3 Server-Side Actors">§ A.3 Server-Side Actors</a> <a href="#ref-for-dfn-first-party-0-6" title="Reference 2">(2)</a> <a href="#ref-for-dfn-first-party-0-7" title="Reference 3">(3)</a> <a href="#ref-for-dfn-first-party-0-8" title="Reference 4">(4)</a> <a href="#ref-for-dfn-first-party-0-9" title="Reference 5">(5)</a> <a href="#ref-for-dfn-first-party-0-10" title="Reference 6">(6)</a> <a href="#ref-for-dfn-first-party-0-11" title="Reference 7">(7)</a> <a href="#ref-for-dfn-first-party-0-12" title="Reference 8">(8)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-first-party-0-13" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-third-parties" aria-label="Links in this document to definition: third party">
       <span class="caret"></span>
@@ -3415,10 +3421,10 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-third-parties-1" title="§ 2.6 De-identified Data">§ 2.6 De-identified Data</a> <a href="#ref-for-dfn-third-parties-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-third-parties-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-third-parties-4" title="Reference 4">(4)</a> <a href="#ref-for-dfn-third-parties-5" title="Reference 5">(5)</a> <a href="#ref-for-dfn-third-parties-6" title="Reference 6">(6)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-third-parties-7" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> 
-  </li>
+      <a href="#ref-for-dfn-third-parties-1" title="§ 2.6 De-identified Data">§ 2.6 De-identified Data</a> <a href="#ref-for-dfn-third-parties-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-third-parties-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-third-parties-4" title="Reference 4">(4)</a> <a href="#ref-for-dfn-third-parties-5" title="Reference 5">(5)</a> <a href="#ref-for-dfn-third-parties-6" title="Reference 6">(6)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-third-parties-7" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-vegas-rule" aria-label="Links in this document to definition: Vegas Rule">
       <span class="caret"></span>
@@ -3429,8 +3435,8 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-vegas-rule-1" title="§ A.3 Server-Side Actors">§ A.3 Server-Side Actors</a> <a href="#ref-for-dfn-vegas-rule-2" title="Reference 2">(2)</a> 
-  </li>
+      <a href="#ref-for-dfn-vegas-rule-1" title="§ A.3 Server-Side Actors">§ A.3 Server-Side Actors</a> <a href="#ref-for-dfn-vegas-rule-2" title="Reference 2">(2)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-data" aria-label="Links in this document to definition: personal data">
       <span class="caret"></span>
@@ -3441,36 +3447,36 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-data-1" title="§ 1. An Introduction to Privacy on the Web">§ 1. An Introduction to Privacy on the Web</a> <a href="#ref-for-dfn-data-2" title="Reference 2">(2)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-data-3" title="§ 1.1 Individual Autonomy">§ 1.1 Individual Autonomy</a> <a href="#ref-for-dfn-data-4" title="Reference 2">(2)</a> <a href="#ref-for-dfn-data-5" title="Reference 3">(3)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-data-6" title="§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls">§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls</a> <a href="#ref-for-dfn-data-7" title="Reference 2">(2)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-data-8" title="§ 1.2 Collective Governance">§ 1.2 Collective Governance</a> <a href="#ref-for-dfn-data-9" title="Reference 2">(2)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-data-10" title="§ 1.3 User Agents">§ 1.3 User Agents</a> <a href="#ref-for-dfn-data-11" title="Reference 2">(2)</a> <a href="#ref-for-dfn-data-12" title="Reference 3">(3)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-data-13" title="§ 1.4 Incorporating Different Privacy Principles">§ 1.4 Incorporating Different Privacy Principles</a> 
-  </li><li>
-    <a href="#ref-for-dfn-data-14" title="§ 2.2 Data Minimization">§ 2.2 Data Minimization</a> <a href="#ref-for-dfn-data-15" title="Reference 2">(2)</a> <a href="#ref-for-dfn-data-16" title="Reference 3">(3)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-data-17" title="§ 2.5 Data Rights">§ 2.5 Data Rights</a> <a href="#ref-for-dfn-data-18" title="Reference 2">(2)</a> <a href="#ref-for-dfn-data-19" title="Reference 3">(3)</a> <a href="#ref-for-dfn-data-20" title="Reference 4">(4)</a> <a href="#ref-for-dfn-data-21" title="Reference 5">(5)</a> <a href="#ref-for-dfn-data-22" title="Reference 6">(6)</a> <a href="#ref-for-dfn-data-23" title="Reference 7">(7)</a> <a href="#ref-for-dfn-data-24" title="Reference 8">(8)</a> <a href="#ref-for-dfn-data-25" title="Reference 9">(9)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-data-26" title="§ 2.6 De-identified Data">§ 2.6 De-identified Data</a> <a href="#ref-for-dfn-data-27" title="Reference 2">(2)</a> <a href="#ref-for-dfn-data-28" title="Reference 3">(3)</a> <a href="#ref-for-dfn-data-29" title="Reference 4">(4)</a> <a href="#ref-for-dfn-data-30" title="Reference 5">(5)</a> <a href="#ref-for-dfn-data-31" title="Reference 6">(6)</a> <a href="#ref-for-dfn-data-32" title="Reference 7">(7)</a> <a href="#ref-for-dfn-data-33" title="Reference 8">(8)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-data-34" title="§ 2.7 Collective Privacy">§ 2.7 Collective Privacy</a> <a href="#ref-for-dfn-data-35" title="Reference 2">(2)</a> <a href="#ref-for-dfn-data-36" title="Reference 3">(3)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-data-37" title="§ 2.14 Non-Retaliation">§ 2.14 Non-Retaliation</a> <a href="#ref-for-dfn-data-38" title="Reference 2">(2)</a> <a href="#ref-for-dfn-data-39" title="Reference 3">(3)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-data-40" title="§ 2.15 Support Choosing Which Information to Present">§ 2.15 Support Choosing Which Information to Present</a> 
-  </li><li>
-    <a href="#ref-for-dfn-data-41" title="§ A.2 Contexts">§ A.2 Contexts</a> 
-  </li><li>
-    <a href="#ref-for-dfn-data-42" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> <a href="#ref-for-dfn-data-43" title="Reference 2">(2)</a> <a href="#ref-for-dfn-data-44" title="Reference 3">(3)</a> <a href="#ref-for-dfn-data-45" title="Reference 4">(4)</a> <a href="#ref-for-dfn-data-46" title="Reference 5">(5)</a> <a href="#ref-for-dfn-data-47" title="Reference 6">(6)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-data-48" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> <a href="#ref-for-dfn-data-49" title="Reference 2">(2)</a> <a href="#ref-for-dfn-data-50" title="Reference 3">(3)</a> <a href="#ref-for-dfn-data-51" title="Reference 4">(4)</a> <a href="#ref-for-dfn-data-52" title="Reference 5">(5)</a> <a href="#ref-for-dfn-data-53" title="Reference 6">(6)</a> <a href="#ref-for-dfn-data-54" title="Reference 7">(7)</a> 
-  </li>
+      <a href="#ref-for-dfn-data-1" title="§ 1. An Introduction to Privacy on the Web">§ 1. An Introduction to Privacy on the Web</a> <a href="#ref-for-dfn-data-2" title="Reference 2">(2)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-data-3" title="§ 1.1 Individual Autonomy">§ 1.1 Individual Autonomy</a> <a href="#ref-for-dfn-data-4" title="Reference 2">(2)</a> <a href="#ref-for-dfn-data-5" title="Reference 3">(3)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-data-6" title="§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls">§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls</a> <a href="#ref-for-dfn-data-7" title="Reference 2">(2)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-data-8" title="§ 1.2 Collective Governance">§ 1.2 Collective Governance</a> <a href="#ref-for-dfn-data-9" title="Reference 2">(2)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-data-10" title="§ 1.3 User Agents">§ 1.3 User Agents</a> <a href="#ref-for-dfn-data-11" title="Reference 2">(2)</a> <a href="#ref-for-dfn-data-12" title="Reference 3">(3)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-data-13" title="§ 1.4 Incorporating Different Privacy Principles">§ 1.4 Incorporating Different Privacy Principles</a> 
+    </li><li>
+      <a href="#ref-for-dfn-data-14" title="§ 2.2 Data Minimization">§ 2.2 Data Minimization</a> <a href="#ref-for-dfn-data-15" title="Reference 2">(2)</a> <a href="#ref-for-dfn-data-16" title="Reference 3">(3)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-data-17" title="§ 2.5 Data Rights">§ 2.5 Data Rights</a> <a href="#ref-for-dfn-data-18" title="Reference 2">(2)</a> <a href="#ref-for-dfn-data-19" title="Reference 3">(3)</a> <a href="#ref-for-dfn-data-20" title="Reference 4">(4)</a> <a href="#ref-for-dfn-data-21" title="Reference 5">(5)</a> <a href="#ref-for-dfn-data-22" title="Reference 6">(6)</a> <a href="#ref-for-dfn-data-23" title="Reference 7">(7)</a> <a href="#ref-for-dfn-data-24" title="Reference 8">(8)</a> <a href="#ref-for-dfn-data-25" title="Reference 9">(9)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-data-26" title="§ 2.6 De-identified Data">§ 2.6 De-identified Data</a> <a href="#ref-for-dfn-data-27" title="Reference 2">(2)</a> <a href="#ref-for-dfn-data-28" title="Reference 3">(3)</a> <a href="#ref-for-dfn-data-29" title="Reference 4">(4)</a> <a href="#ref-for-dfn-data-30" title="Reference 5">(5)</a> <a href="#ref-for-dfn-data-31" title="Reference 6">(6)</a> <a href="#ref-for-dfn-data-32" title="Reference 7">(7)</a> <a href="#ref-for-dfn-data-33" title="Reference 8">(8)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-data-34" title="§ 2.7 Collective Privacy">§ 2.7 Collective Privacy</a> <a href="#ref-for-dfn-data-35" title="Reference 2">(2)</a> <a href="#ref-for-dfn-data-36" title="Reference 3">(3)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-data-37" title="§ 2.14 Non-Retaliation">§ 2.14 Non-Retaliation</a> <a href="#ref-for-dfn-data-38" title="Reference 2">(2)</a> <a href="#ref-for-dfn-data-39" title="Reference 3">(3)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-data-40" title="§ 2.15 Support Choosing Which Information to Present">§ 2.15 Support Choosing Which Information to Present</a> 
+    </li><li>
+      <a href="#ref-for-dfn-data-41" title="§ A.2 Contexts">§ A.2 Contexts</a> 
+    </li><li>
+      <a href="#ref-for-dfn-data-42" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> <a href="#ref-for-dfn-data-43" title="Reference 2">(2)</a> <a href="#ref-for-dfn-data-44" title="Reference 3">(3)</a> <a href="#ref-for-dfn-data-45" title="Reference 4">(4)</a> <a href="#ref-for-dfn-data-46" title="Reference 5">(5)</a> <a href="#ref-for-dfn-data-47" title="Reference 6">(6)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-data-48" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> <a href="#ref-for-dfn-data-49" title="Reference 2">(2)</a> <a href="#ref-for-dfn-data-50" title="Reference 3">(3)</a> <a href="#ref-for-dfn-data-51" title="Reference 4">(4)</a> <a href="#ref-for-dfn-data-52" title="Reference 5">(5)</a> <a href="#ref-for-dfn-data-53" title="Reference 6">(6)</a> <a href="#ref-for-dfn-data-54" title="Reference 7">(7)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-identifier" aria-label="Links in this document to definition: identifier">
       <span class="caret"></span>
@@ -3481,14 +3487,14 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-identifier-1" title="§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls">§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls</a> <a href="#ref-for-dfn-identifier-2" title="Reference 2">(2)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-identifier-3" title="§ 2.4 Sensitive Information">§ 2.4 Sensitive Information</a> 
-  </li><li>
-    <a href="#ref-for-dfn-identifier-4" title="§ 2.6 De-identified Data">§ 2.6 De-identified Data</a> <a href="#ref-for-dfn-identifier-5" title="Reference 2">(2)</a> <a href="#ref-for-dfn-identifier-6" title="Reference 3">(3)</a> <a href="#ref-for-dfn-identifier-7" title="Reference 4">(4)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-identifier-8" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> <a href="#ref-for-dfn-identifier-9" title="Reference 2">(2)</a> <a href="#ref-for-dfn-identifier-10" title="Reference 3">(3)</a> 
-  </li>
+      <a href="#ref-for-dfn-identifier-1" title="§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls">§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls</a> <a href="#ref-for-dfn-identifier-2" title="Reference 2">(2)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-identifier-3" title="§ 2.4 Sensitive Information">§ 2.4 Sensitive Information</a> 
+    </li><li>
+      <a href="#ref-for-dfn-identifier-4" title="§ 2.6 De-identified Data">§ 2.6 De-identified Data</a> <a href="#ref-for-dfn-identifier-5" title="Reference 2">(2)</a> <a href="#ref-for-dfn-identifier-6" title="Reference 3">(3)</a> <a href="#ref-for-dfn-identifier-7" title="Reference 4">(4)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-identifier-8" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> <a href="#ref-for-dfn-identifier-9" title="Reference 2">(2)</a> <a href="#ref-for-dfn-identifier-10" title="Reference 3">(3)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-privacy" aria-label="Links in this document to definition: Privacy">
       <span class="caret"></span>
@@ -3499,14 +3505,14 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-privacy-1" title="§ 1. An Introduction to Privacy on the Web">§ 1. An Introduction to Privacy on the Web</a> <a href="#ref-for-dfn-privacy-2" title="Reference 2">(2)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-privacy-3" title="§ 1.1.2 Privacy Labour">§ 1.1.2 Privacy Labour</a> 
-  </li><li>
-    <a href="#ref-for-dfn-privacy-4" title="§ 1.2 Collective Governance">§ 1.2 Collective Governance</a> <a href="#ref-for-dfn-privacy-5" title="Reference 2">(2)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-privacy-6" title="§ 2.5 Data Rights">§ 2.5 Data Rights</a> 
-  </li>
+      <a href="#ref-for-dfn-privacy-1" title="§ 1. An Introduction to Privacy on the Web">§ 1. An Introduction to Privacy on the Web</a> <a href="#ref-for-dfn-privacy-2" title="Reference 2">(2)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-privacy-3" title="§ 1.1.2 Privacy Labour">§ 1.1.2 Privacy Labour</a> 
+    </li><li>
+      <a href="#ref-for-dfn-privacy-4" title="§ 1.2 Collective Governance">§ 1.2 Collective Governance</a> <a href="#ref-for-dfn-privacy-5" title="Reference 2">(2)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-privacy-6" title="§ 2.5 Data Rights">§ 2.5 Data Rights</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-privacy-violation" aria-label="Links in this document to definition: privacy violation">
       <span class="caret"></span>
@@ -3517,10 +3523,10 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-privacy-violation-1" title="§ 1.2.1 Group Privacy">§ 1.2.1 Group Privacy</a> 
-  </li><li>
-    <a href="#ref-for-dfn-privacy-violation-2" title="§ A.2 Contexts">§ A.2 Contexts</a> 
-  </li>
+      <a href="#ref-for-dfn-privacy-violation-1" title="§ 1.2.1 Group Privacy">§ 1.2.1 Group Privacy</a> 
+    </li><li>
+      <a href="#ref-for-dfn-privacy-violation-2" title="§ A.2 Contexts">§ A.2 Contexts</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-appropriately" aria-label="Links in this document to definition: appropriate">
       <span class="caret"></span>
@@ -3531,26 +3537,26 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-appropriately-1" title="§ 1.1 Individual Autonomy">§ 1.1 Individual Autonomy</a> 
-  </li><li>
-    <a href="#ref-for-dfn-appropriately-2" title="§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls">§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls</a> 
-  </li><li>
-    <a href="#ref-for-dfn-appropriately-3" title="§ 1.1.2 Privacy Labour">§ 1.1.2 Privacy Labour</a> 
-  </li><li>
-    <a href="#ref-for-dfn-appropriately-4" title="§ 1.2 Collective Governance">§ 1.2 Collective Governance</a> 
-  </li><li>
-    <a href="#ref-for-dfn-appropriately-5" title="§ 1.3 User Agents">§ 1.3 User Agents</a> 
-  </li><li>
-    <a href="#ref-for-dfn-appropriately-6" title="§ 1.4 Incorporating Different Privacy Principles">§ 1.4 Incorporating Different Privacy Principles</a> 
-  </li><li>
-    <a href="#ref-for-dfn-appropriately-7" title="§ 2.6 De-identified Data">§ 2.6 De-identified Data</a> 
-  </li><li>
-    <a href="#ref-for-dfn-appropriately-8" title="§ 2.7 Collective Privacy">§ 2.7 Collective Privacy</a> 
-  </li><li>
-    <a href="#ref-for-dfn-appropriately-9" title="§ A.3 Server-Side Actors">§ A.3 Server-Side Actors</a> <a href="#ref-for-dfn-appropriately-10" title="Reference 2">(2)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-appropriately-11" title="§ A.5.1 Recognition Types">§ A.5.1 Recognition Types</a> 
-  </li>
+      <a href="#ref-for-dfn-appropriately-1" title="§ 1.1 Individual Autonomy">§ 1.1 Individual Autonomy</a> 
+    </li><li>
+      <a href="#ref-for-dfn-appropriately-2" title="§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls">§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls</a> 
+    </li><li>
+      <a href="#ref-for-dfn-appropriately-3" title="§ 1.1.2 Privacy Labour">§ 1.1.2 Privacy Labour</a> 
+    </li><li>
+      <a href="#ref-for-dfn-appropriately-4" title="§ 1.2 Collective Governance">§ 1.2 Collective Governance</a> 
+    </li><li>
+      <a href="#ref-for-dfn-appropriately-5" title="§ 1.3 User Agents">§ 1.3 User Agents</a> 
+    </li><li>
+      <a href="#ref-for-dfn-appropriately-6" title="§ 1.4 Incorporating Different Privacy Principles">§ 1.4 Incorporating Different Privacy Principles</a> 
+    </li><li>
+      <a href="#ref-for-dfn-appropriately-7" title="§ 2.6 De-identified Data">§ 2.6 De-identified Data</a> 
+    </li><li>
+      <a href="#ref-for-dfn-appropriately-8" title="§ 2.7 Collective Privacy">§ 2.7 Collective Privacy</a> 
+    </li><li>
+      <a href="#ref-for-dfn-appropriately-9" title="§ A.3 Server-Side Actors">§ A.3 Server-Side Actors</a> <a href="#ref-for-dfn-appropriately-10" title="Reference 2">(2)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-appropriately-11" title="§ A.5.1 Recognition Types">§ A.5.1 Recognition Types</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-inappropriately" aria-label="Links in this document to definition: inappropriate">
       <span class="caret"></span>
@@ -3561,18 +3567,18 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-inappropriately-1" title="§ 1.1.2 Privacy Labour">§ 1.1.2 Privacy Labour</a> <a href="#ref-for-dfn-inappropriately-2" title="Reference 2">(2)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-inappropriately-3" title="§ 1.3 User Agents">§ 1.3 User Agents</a> 
-  </li><li>
-    <a href="#ref-for-dfn-inappropriately-4" title="§ A.3 Server-Side Actors">§ A.3 Server-Side Actors</a> 
-  </li><li>
-    <a href="#ref-for-dfn-inappropriately-5" title="§ A.5.1 Recognition Types">§ A.5.1 Recognition Types</a> <a href="#ref-for-dfn-inappropriately-6" title="Reference 2">(2)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-inappropriately-7" title="§ A.5.3 Recognition Methods">§ A.5.3 Recognition Methods</a> 
-  </li><li>
-    <a href="#ref-for-dfn-inappropriately-8" title="§ B. High-Level Threats">§ B. High-Level Threats</a> 
-  </li>
+      <a href="#ref-for-dfn-inappropriately-1" title="§ 1.1.2 Privacy Labour">§ 1.1.2 Privacy Labour</a> <a href="#ref-for-dfn-inappropriately-2" title="Reference 2">(2)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-inappropriately-3" title="§ 1.3 User Agents">§ 1.3 User Agents</a> 
+    </li><li>
+      <a href="#ref-for-dfn-inappropriately-4" title="§ A.3 Server-Side Actors">§ A.3 Server-Side Actors</a> 
+    </li><li>
+      <a href="#ref-for-dfn-inappropriately-5" title="§ A.5.1 Recognition Types">§ A.5.1 Recognition Types</a> <a href="#ref-for-dfn-inappropriately-6" title="Reference 2">(2)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-inappropriately-7" title="§ A.5.3 Recognition Methods">§ A.5.3 Recognition Methods</a> 
+    </li><li>
+      <a href="#ref-for-dfn-inappropriately-8" title="§ B. High-Level Threats">§ B. High-Level Threats</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-process" aria-label="Links in this document to definition: processes">
       <span class="caret"></span>
@@ -3583,34 +3589,34 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-process-1" title="§ 1. An Introduction to Privacy on the Web">§ 1. An Introduction to Privacy on the Web</a> <a href="#ref-for-dfn-process-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-process-3" title="Reference 3">(3)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-process-4" title="§ 1.1 Individual Autonomy">§ 1.1 Individual Autonomy</a> 
-  </li><li>
-    <a href="#ref-for-dfn-process-5" title="§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls">§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls</a> <a href="#ref-for-dfn-process-6" title="Reference 2">(2)</a> <a href="#ref-for-dfn-process-7" title="Reference 3">(3)</a> <a href="#ref-for-dfn-process-8" title="Reference 4">(4)</a> <a href="#ref-for-dfn-process-9" title="Reference 5">(5)</a> <a href="#ref-for-dfn-process-10" title="Reference 6">(6)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-process-11" title="§ 1.1.2 Privacy Labour">§ 1.1.2 Privacy Labour</a> <a href="#ref-for-dfn-process-12" title="Reference 2">(2)</a> <a href="#ref-for-dfn-process-13" title="Reference 3">(3)</a> <a href="#ref-for-dfn-process-14" title="Reference 4">(4)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-process-15" title="§ 1.2 Collective Governance">§ 1.2 Collective Governance</a> <a href="#ref-for-dfn-process-16" title="Reference 2">(2)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-process-17" title="§ 1.3 User Agents">§ 1.3 User Agents</a> <a href="#ref-for-dfn-process-18" title="Reference 2">(2)</a> <a href="#ref-for-dfn-process-19" title="Reference 3">(3)</a> <a href="#ref-for-dfn-process-20" title="Reference 4">(4)</a> <a href="#ref-for-dfn-process-21" title="Reference 5">(5)</a> <a href="#ref-for-dfn-process-22" title="Reference 6">(6)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-process-23" title="§ 2.5 Data Rights">§ 2.5 Data Rights</a> 
-  </li><li>
-    <a href="#ref-for-dfn-process-24" title="§ 2.6 De-identified Data">§ 2.6 De-identified Data</a> 
-  </li><li>
-    <a href="#ref-for-dfn-process-25" title="§ 2.7 Collective Privacy">§ 2.7 Collective Privacy</a> <a href="#ref-for-dfn-process-26" title="Reference 2">(2)</a> <a href="#ref-for-dfn-process-27" title="Reference 3">(3)</a> <a href="#ref-for-dfn-process-28" title="Reference 4">(4)</a> <a href="#ref-for-dfn-process-29" title="Reference 5">(5)</a> <a href="#ref-for-dfn-process-30" title="Reference 6">(6)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-process-31" title="§ 2.12 Consent, Withdrawal of Consent, Opt-Outs, and Objections">§ 2.12 Consent, Withdrawal of Consent, Opt-Outs, and Objections</a> 
-  </li><li>
-    <a href="#ref-for-dfn-process-32" title="§ 2.14 Non-Retaliation">§ 2.14 Non-Retaliation</a> <a href="#ref-for-dfn-process-33" title="Reference 2">(2)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-process-34" title="§ A.3 Server-Side Actors">§ A.3 Server-Side Actors</a> <a href="#ref-for-dfn-process-35" title="Reference 2">(2)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-process-36" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> <a href="#ref-for-dfn-process-37" title="Reference 2">(2)</a> <a href="#ref-for-dfn-process-38" title="Reference 3">(3)</a> <a href="#ref-for-dfn-process-39" title="Reference 4">(4)</a> <a href="#ref-for-dfn-process-40" title="Reference 5">(5)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-process-41" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> <a href="#ref-for-dfn-process-42" title="Reference 2">(2)</a> 
-  </li>
+      <a href="#ref-for-dfn-process-1" title="§ 1. An Introduction to Privacy on the Web">§ 1. An Introduction to Privacy on the Web</a> <a href="#ref-for-dfn-process-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-process-3" title="Reference 3">(3)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-process-4" title="§ 1.1 Individual Autonomy">§ 1.1 Individual Autonomy</a> 
+    </li><li>
+      <a href="#ref-for-dfn-process-5" title="§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls">§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls</a> <a href="#ref-for-dfn-process-6" title="Reference 2">(2)</a> <a href="#ref-for-dfn-process-7" title="Reference 3">(3)</a> <a href="#ref-for-dfn-process-8" title="Reference 4">(4)</a> <a href="#ref-for-dfn-process-9" title="Reference 5">(5)</a> <a href="#ref-for-dfn-process-10" title="Reference 6">(6)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-process-11" title="§ 1.1.2 Privacy Labour">§ 1.1.2 Privacy Labour</a> <a href="#ref-for-dfn-process-12" title="Reference 2">(2)</a> <a href="#ref-for-dfn-process-13" title="Reference 3">(3)</a> <a href="#ref-for-dfn-process-14" title="Reference 4">(4)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-process-15" title="§ 1.2 Collective Governance">§ 1.2 Collective Governance</a> <a href="#ref-for-dfn-process-16" title="Reference 2">(2)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-process-17" title="§ 1.3 User Agents">§ 1.3 User Agents</a> <a href="#ref-for-dfn-process-18" title="Reference 2">(2)</a> <a href="#ref-for-dfn-process-19" title="Reference 3">(3)</a> <a href="#ref-for-dfn-process-20" title="Reference 4">(4)</a> <a href="#ref-for-dfn-process-21" title="Reference 5">(5)</a> <a href="#ref-for-dfn-process-22" title="Reference 6">(6)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-process-23" title="§ 2.5 Data Rights">§ 2.5 Data Rights</a> 
+    </li><li>
+      <a href="#ref-for-dfn-process-24" title="§ 2.6 De-identified Data">§ 2.6 De-identified Data</a> 
+    </li><li>
+      <a href="#ref-for-dfn-process-25" title="§ 2.7 Collective Privacy">§ 2.7 Collective Privacy</a> <a href="#ref-for-dfn-process-26" title="Reference 2">(2)</a> <a href="#ref-for-dfn-process-27" title="Reference 3">(3)</a> <a href="#ref-for-dfn-process-28" title="Reference 4">(4)</a> <a href="#ref-for-dfn-process-29" title="Reference 5">(5)</a> <a href="#ref-for-dfn-process-30" title="Reference 6">(6)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-process-31" title="§ 2.12 Consent, Withdrawal of Consent, Opt-Outs, and Objections">§ 2.12 Consent, Withdrawal of Consent, Opt-Outs, and Objections</a> 
+    </li><li>
+      <a href="#ref-for-dfn-process-32" title="§ 2.14 Non-Retaliation">§ 2.14 Non-Retaliation</a> <a href="#ref-for-dfn-process-33" title="Reference 2">(2)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-process-34" title="§ A.3 Server-Side Actors">§ A.3 Server-Side Actors</a> <a href="#ref-for-dfn-process-35" title="Reference 2">(2)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-process-36" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> <a href="#ref-for-dfn-process-37" title="Reference 2">(2)</a> <a href="#ref-for-dfn-process-38" title="Reference 3">(3)</a> <a href="#ref-for-dfn-process-39" title="Reference 4">(4)</a> <a href="#ref-for-dfn-process-40" title="Reference 5">(5)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-process-41" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> <a href="#ref-for-dfn-process-42" title="Reference 2">(2)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-share" aria-label="Links in this document to definition: shares">
       <span class="caret"></span>
@@ -3621,8 +3627,8 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-share-1" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> <a href="#ref-for-dfn-share-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-share-3" title="Reference 3">(3)</a> 
-  </li>
+      <a href="#ref-for-dfn-share-1" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> <a href="#ref-for-dfn-share-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-share-3" title="Reference 3">(3)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-sell" aria-label="Links in this document to definition: sells">
       <span class="caret"></span>
@@ -3633,8 +3639,8 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-sell-1" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> 
-  </li>
+      <a href="#ref-for-dfn-sell-1" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-purpose" aria-label="Links in this document to definition: purpose">
       <span class="caret"></span>
@@ -3645,16 +3651,16 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-purpose-1" title="§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls">§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls</a> <a href="#ref-for-dfn-purpose-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-purpose-3" title="Reference 3">(3)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-purpose-4" title="§ 1.2 Collective Governance">§ 1.2 Collective Governance</a> <a href="#ref-for-dfn-purpose-5" title="Reference 2">(2)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-purpose-6" title="§ 1.4 Incorporating Different Privacy Principles">§ 1.4 Incorporating Different Privacy Principles</a> 
-  </li><li>
-    <a href="#ref-for-dfn-purpose-7" title="§ 2.6 De-identified Data">§ 2.6 De-identified Data</a> 
-  </li><li>
-    <a href="#ref-for-dfn-purpose-8" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> <a href="#ref-for-dfn-purpose-9" title="Reference 2">(2)</a> <a href="#ref-for-dfn-purpose-10" title="Reference 3">(3)</a> <a href="#ref-for-dfn-purpose-11" title="Reference 4">(4)</a> <a href="#ref-for-dfn-purpose-12" title="Reference 5">(5)</a> <a href="#ref-for-dfn-purpose-13" title="Reference 6">(6)</a> <a href="#ref-for-dfn-purpose-14" title="Reference 7">(7)</a> 
-  </li>
+      <a href="#ref-for-dfn-purpose-1" title="§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls">§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls</a> <a href="#ref-for-dfn-purpose-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-purpose-3" title="Reference 3">(3)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-purpose-4" title="§ 1.2 Collective Governance">§ 1.2 Collective Governance</a> <a href="#ref-for-dfn-purpose-5" title="Reference 2">(2)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-purpose-6" title="§ 1.4 Incorporating Different Privacy Principles">§ 1.4 Incorporating Different Privacy Principles</a> 
+    </li><li>
+      <a href="#ref-for-dfn-purpose-7" title="§ 2.6 De-identified Data">§ 2.6 De-identified Data</a> 
+    </li><li>
+      <a href="#ref-for-dfn-purpose-8" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> <a href="#ref-for-dfn-purpose-9" title="Reference 2">(2)</a> <a href="#ref-for-dfn-purpose-10" title="Reference 3">(3)</a> <a href="#ref-for-dfn-purpose-11" title="Reference 4">(4)</a> <a href="#ref-for-dfn-purpose-12" title="Reference 5">(5)</a> <a href="#ref-for-dfn-purpose-13" title="Reference 6">(6)</a> <a href="#ref-for-dfn-purpose-14" title="Reference 7">(7)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-means" aria-label="Links in this document to definition: means">
       <span class="caret"></span>
@@ -3665,8 +3671,8 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-means-1" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> <a href="#ref-for-dfn-means-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-means-3" title="Reference 3">(3)</a> 
-  </li>
+      <a href="#ref-for-dfn-means-1" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> <a href="#ref-for-dfn-means-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-means-3" title="Reference 3">(3)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-data-controller" aria-label="Links in this document to definition: data controller">
       <span class="caret"></span>
@@ -3677,10 +3683,10 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-data-controller-1" title="§ A.3 Server-Side Actors">§ A.3 Server-Side Actors</a> 
-  </li><li>
-    <a href="#ref-for-dfn-data-controller-2" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> <a href="#ref-for-dfn-data-controller-3" title="Reference 2">(2)</a> 
-  </li>
+      <a href="#ref-for-dfn-data-controller-1" title="§ A.3 Server-Side Actors">§ A.3 Server-Side Actors</a> 
+    </li><li>
+      <a href="#ref-for-dfn-data-controller-2" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> <a href="#ref-for-dfn-data-controller-3" title="Reference 2">(2)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-data-processor" aria-label="Links in this document to definition: service provider">
       <span class="caret"></span>
@@ -3691,8 +3697,8 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-data-processor-1" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> <a href="#ref-for-dfn-data-processor-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-data-processor-3" title="Reference 3">(3)</a> 
-  </li>
+      <a href="#ref-for-dfn-data-processor-1" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> <a href="#ref-for-dfn-data-processor-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-data-processor-3" title="Reference 3">(3)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-recognize" aria-label="Links in this document to definition: Recognition">
       <span class="caret"></span>
@@ -3703,20 +3709,20 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-recognize-1" title="§ 2.1 Identity on the Web">§ 2.1 Identity on the Web</a> <a href="#ref-for-dfn-recognize-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-recognize-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-recognize-4" title="Reference 4">(4)</a> <a href="#ref-for-dfn-recognize-5" title="Reference 5">(5)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-recognize-6" title="§ 2.2 Data Minimization">§ 2.2 Data Minimization</a> 
-  </li><li>
-    <a href="#ref-for-dfn-recognize-7" title="§ A.5 Recognition">§ A.5 Recognition</a> <a href="#ref-for-dfn-recognize-8" title="Reference 2">(2)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-recognize-9" title="§ A.5.1 Recognition Types">§ A.5.1 Recognition Types</a> <a href="#ref-for-dfn-recognize-10" title="Reference 2">(2)</a> <a href="#ref-for-dfn-recognize-11" title="Reference 3">(3)</a> <a href="#ref-for-dfn-recognize-12" title="Reference 4">(4)</a> <a href="#ref-for-dfn-recognize-13" title="Reference 5">(5)</a> <a href="#ref-for-dfn-recognize-14" title="Reference 6">(6)</a> <a href="#ref-for-dfn-recognize-15" title="Reference 7">(7)</a> <a href="#ref-for-dfn-recognize-16" title="Reference 8">(8)</a> <a href="#ref-for-dfn-recognize-17" title="Reference 9">(9)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-recognize-18" title="§ A.5.2 User agent awareness of recognition">§ A.5.2 User agent awareness of recognition</a> 
-  </li><li>
-    <a href="#ref-for-dfn-recognize-19" title="§ A.5.3 Recognition Methods">§ A.5.3 Recognition Methods</a> <a href="#ref-for-dfn-recognize-20" title="Reference 2">(2)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-recognize-21" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> 
-  </li>
+      <a href="#ref-for-dfn-recognize-1" title="§ 2.1 Identity on the Web">§ 2.1 Identity on the Web</a> <a href="#ref-for-dfn-recognize-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-recognize-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-recognize-4" title="Reference 4">(4)</a> <a href="#ref-for-dfn-recognize-5" title="Reference 5">(5)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-recognize-6" title="§ 2.2 Data Minimization">§ 2.2 Data Minimization</a> 
+    </li><li>
+      <a href="#ref-for-dfn-recognize-7" title="§ A.5 Recognition">§ A.5 Recognition</a> <a href="#ref-for-dfn-recognize-8" title="Reference 2">(2)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-recognize-9" title="§ A.5.1 Recognition Types">§ A.5.1 Recognition Types</a> <a href="#ref-for-dfn-recognize-10" title="Reference 2">(2)</a> <a href="#ref-for-dfn-recognize-11" title="Reference 3">(3)</a> <a href="#ref-for-dfn-recognize-12" title="Reference 4">(4)</a> <a href="#ref-for-dfn-recognize-13" title="Reference 5">(5)</a> <a href="#ref-for-dfn-recognize-14" title="Reference 6">(6)</a> <a href="#ref-for-dfn-recognize-15" title="Reference 7">(7)</a> <a href="#ref-for-dfn-recognize-16" title="Reference 8">(8)</a> <a href="#ref-for-dfn-recognize-17" title="Reference 9">(9)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-recognize-18" title="§ A.5.2 User agent awareness of recognition">§ A.5.2 User agent awareness of recognition</a> 
+    </li><li>
+      <a href="#ref-for-dfn-recognize-19" title="§ A.5.3 Recognition Methods">§ A.5.3 Recognition Methods</a> <a href="#ref-for-dfn-recognize-20" title="Reference 2">(2)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-recognize-21" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-cross-context-recognition" aria-label="Links in this document to definition: Cross-context recognition">
       <span class="caret"></span>
@@ -3727,10 +3733,10 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-cross-context-recognition-1" title="§ A.5.1 Recognition Types">§ A.5.1 Recognition Types</a> <a href="#ref-for-dfn-cross-context-recognition-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-cross-context-recognition-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-cross-context-recognition-4" title="Reference 4">(4)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-cross-context-recognition-5" title="§ A.5.3 Recognition Methods">§ A.5.3 Recognition Methods</a> <a href="#ref-for-dfn-cross-context-recognition-6" title="Reference 2">(2)</a> 
-  </li>
+      <a href="#ref-for-dfn-cross-context-recognition-1" title="§ A.5.1 Recognition Types">§ A.5.1 Recognition Types</a> <a href="#ref-for-dfn-cross-context-recognition-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-cross-context-recognition-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-cross-context-recognition-4" title="Reference 4">(4)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-cross-context-recognition-5" title="§ A.5.3 Recognition Methods">§ A.5.3 Recognition Methods</a> <a href="#ref-for-dfn-cross-context-recognition-6" title="Reference 2">(2)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-cross-site-recognition" aria-label="Links in this document to definition: Cross-site recognition">
       <span class="caret"></span>
@@ -3741,8 +3747,8 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-cross-site-recognition-1" title="§ A.5.1 Recognition Types">§ A.5.1 Recognition Types</a> <a href="#ref-for-dfn-cross-site-recognition-2" title="Reference 2">(2)</a> 
-  </li>
+      <a href="#ref-for-dfn-cross-site-recognition-1" title="§ A.5.1 Recognition Types">§ A.5.1 Recognition Types</a> <a href="#ref-for-dfn-cross-site-recognition-2" title="Reference 2">(2)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-same-site-recognition" aria-label="Links in this document to definition: Same-site recognition">
       <span class="caret"></span>
@@ -3753,8 +3759,8 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-same-site-recognition-1" title="§ A.5.1 Recognition Types">§ A.5.1 Recognition Types</a> 
-  </li>
+      <a href="#ref-for-dfn-same-site-recognition-1" title="§ A.5.1 Recognition Types">§ A.5.1 Recognition Types</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-partition" aria-label="Links in this document to definition: partition">
       <span class="caret"></span>
@@ -3765,16 +3771,16 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-partition-1" title="§ 2.1 Identity on the Web">§ 2.1 Identity on the Web</a> 
-  </li><li>
-    <a href="#ref-for-dfn-partition-2" title="§ 2.3 Information access">§ 2.3 Information access</a> 
-  </li><li>
-    <a href="#ref-for-dfn-partition-3" title="§ A.5.1 Recognition Types">§ A.5.1 Recognition Types</a> <a href="#ref-for-dfn-partition-4" title="Reference 2">(2)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-partition-5" title="§ A.5.2 User agent awareness of recognition">§ A.5.2 User agent awareness of recognition</a> <a href="#ref-for-dfn-partition-6" title="Reference 2">(2)</a> <a href="#ref-for-dfn-partition-7" title="Reference 3">(3)</a> <a href="#ref-for-dfn-partition-8" title="Reference 4">(4)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-partition-9" title="§ A.5.3 Recognition Methods">§ A.5.3 Recognition Methods</a> 
-  </li>
+      <a href="#ref-for-dfn-partition-1" title="§ 2.1 Identity on the Web">§ 2.1 Identity on the Web</a> 
+    </li><li>
+      <a href="#ref-for-dfn-partition-2" title="§ 2.3 Information access">§ 2.3 Information access</a> 
+    </li><li>
+      <a href="#ref-for-dfn-partition-3" title="§ A.5.1 Recognition Types">§ A.5.1 Recognition Types</a> <a href="#ref-for-dfn-partition-4" title="Reference 2">(2)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-partition-5" title="§ A.5.2 User agent awareness of recognition">§ A.5.2 User agent awareness of recognition</a> <a href="#ref-for-dfn-partition-6" title="Reference 2">(2)</a> <a href="#ref-for-dfn-partition-7" title="Reference 3">(3)</a> <a href="#ref-for-dfn-partition-8" title="Reference 4">(4)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-partition-9" title="§ A.5.3 Recognition Methods">§ A.5.3 Recognition Methods</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-fingerprint" aria-label="Links in this document to definition: Fingerprinting">
       <span class="caret"></span>
@@ -3785,10 +3791,10 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-fingerprint-1" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> 
-  </li><li>
-    <a href="#ref-for-dfn-fingerprint-2" title="§ A.5.3 Recognition Methods">§ A.5.3 Recognition Methods</a> <a href="#ref-for-dfn-fingerprint-3" title="Reference 2">(2)</a> <a href="#ref-for-dfn-fingerprint-4" title="Reference 3">(3)</a> 
-  </li>
+      <a href="#ref-for-dfn-fingerprint-1" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> 
+    </li><li>
+      <a href="#ref-for-dfn-fingerprint-2" title="§ A.5.3 Recognition Methods">§ A.5.3 Recognition Methods</a> <a href="#ref-for-dfn-fingerprint-3" title="Reference 2">(2)</a> <a href="#ref-for-dfn-fingerprint-4" title="Reference 3">(3)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-header-enrichment" aria-label="Links in this document to definition: Header enrichment">
       <span class="caret"></span>
@@ -3799,8 +3805,8 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-header-enrichment-1" title="§ A.5.3 Recognition Methods">§ A.5.3 Recognition Methods</a> <a href="#ref-for-dfn-header-enrichment-2" title="Reference 2">(2)</a> 
-  </li>
+      <a href="#ref-for-dfn-header-enrichment-1" title="§ A.5.3 Recognition Methods">§ A.5.3 Recognition Methods</a> <a href="#ref-for-dfn-header-enrichment-2" title="Reference 2">(2)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-cross-device-communication" aria-label="Links in this document to definition: Cross-device communication">
       <span class="caret"></span>
@@ -3811,8 +3817,8 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-cross-device-communication-1" title="§ A.5.3 Recognition Methods">§ A.5.3 Recognition Methods</a> <a href="#ref-for-dfn-cross-device-communication-2" title="Reference 2">(2)</a> 
-  </li>
+      <a href="#ref-for-dfn-cross-device-communication-1" title="§ A.5.3 Recognition Methods">§ A.5.3 Recognition Methods</a> <a href="#ref-for-dfn-cross-device-communication-2" title="Reference 2">(2)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-correlation" aria-label="Links in this document to definition: Correlation">
       <span class="caret"></span>
@@ -3823,10 +3829,10 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-correlation-1" title="§ 1.4 Incorporating Different Privacy Principles">§ 1.4 Incorporating Different Privacy Principles</a> 
-  </li><li>
-    <a href="#ref-for-dfn-correlation-2" title="§ 2.4 Sensitive Information">§ 2.4 Sensitive Information</a> 
-  </li>
+      <a href="#ref-for-dfn-correlation-1" title="§ 1.4 Incorporating Different Privacy Principles">§ 1.4 Incorporating Different Privacy Principles</a> 
+    </li><li>
+      <a href="#ref-for-dfn-correlation-2" title="§ 2.4 Sensitive Information">§ 2.4 Sensitive Information</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-disclosure" aria-label="Links in this document to definition: Disclosure">
       <span class="caret"></span>
@@ -3837,10 +3843,10 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-disclosure-1" title="§ 1. An Introduction to Privacy on the Web">§ 1. An Introduction to Privacy on the Web</a> 
-  </li><li>
-    <a href="#ref-for-dfn-disclosure-2" title="§ 2.4 Sensitive Information">§ 2.4 Sensitive Information</a> 
-  </li>
+      <a href="#ref-for-dfn-disclosure-1" title="§ 1. An Introduction to Privacy on the Web">§ 1. An Introduction to Privacy on the Web</a> 
+    </li><li>
+      <a href="#ref-for-dfn-disclosure-2" title="§ 2.4 Sensitive Information">§ 2.4 Sensitive Information</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-identification" aria-label="Links in this document to definition: Identification">
       <span class="caret"></span>
@@ -3851,8 +3857,8 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-identification-1" title="§ 2.4 Sensitive Information">§ 2.4 Sensitive Information</a> 
-  </li>
+      <a href="#ref-for-dfn-identification-1" title="§ 2.4 Sensitive Information">§ 2.4 Sensitive Information</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-intrusion" aria-label="Links in this document to definition: Intrusion">
       <span class="caret"></span>
@@ -3863,8 +3869,8 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-intrusion-1" title="§ B. High-Level Threats">§ B. High-Level Threats</a> 
-  </li>
+      <a href="#ref-for-dfn-intrusion-1" title="§ B. High-Level Threats">§ B. High-Level Threats</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-secondary-use" aria-label="Links in this document to definition: Secondary Use">
       <span class="caret"></span>
@@ -3875,8 +3881,8 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-secondary-use-1" title="§ 2.4 Sensitive Information">§ 2.4 Sensitive Information</a> 
-  </li>
+      <a href="#ref-for-dfn-secondary-use-1" title="§ 2.4 Sensitive Information">§ 2.4 Sensitive Information</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-surveillance" aria-label="Links in this document to definition: Surveillance">
       <span class="caret"></span>
@@ -3887,10 +3893,10 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-surveillance-1" title="§ 1. An Introduction to Privacy on the Web">§ 1. An Introduction to Privacy on the Web</a> 
-  </li><li>
-    <a href="#ref-for-dfn-surveillance-2" title="§ 1.4 Incorporating Different Privacy Principles">§ 1.4 Incorporating Different Privacy Principles</a> 
-  </li>
+      <a href="#ref-for-dfn-surveillance-1" title="§ 1. An Introduction to Privacy on the Web">§ 1. An Introduction to Privacy on the Web</a> 
+    </li><li>
+      <a href="#ref-for-dfn-surveillance-2" title="§ 1.4 Incorporating Different Privacy Principles">§ 1.4 Incorporating Different Privacy Principles</a> 
+    </li>
   </ul>
     </div><script id="respec-dfn-panel">(() => {
 // @ts-check
