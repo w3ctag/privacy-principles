@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en" dir="ltr"><head>
 <meta charset="utf-8">
-<meta name="generator" content="ReSpec 34.1.5">
+<meta name="generator" content="ReSpec 34.1.6">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 span.example-title{text-transform:none}
@@ -752,15 +752,15 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "id": "web-without-3p-cookies"
     }
   },
-  "publishISODate": "2023-07-23T00:00:00.000Z",
-  "generatedSubtitle": "W3C Editor's Draft 23 July 2023"
+  "publishISODate": "2023-07-26T00:00:00.000Z",
+  "generatedSubtitle": "W3C Editor's Draft 26 July 2023"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED"></head>
 <body data-cite="html indexedDB service-workers fingerprinting-guidance url infra" class="h-entry informative"><div class="head">
     <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a></p>
     <h1 id="title" class="title">Privacy Principles</h1> 
-    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2023-07-23">23 July 2023</time></p>
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2023-07-26">26 July 2023</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
@@ -1597,6 +1597,7 @@ people than it would have been through other methods.</p>
 For example:</p>
 <ul>
 <li>Their location.</li>
+<li>Any <a data-link-type="dfn|abstract-op" href="#dfn-identifier" class="internalDFN" id="ref-for-dfn-identifier-3">identifiers</a> associated with them.</li>
 <li>Video or audio from the their camera or microphone.</li>
 <li>The content of certain files on their filesystem.</li>
 <li>Financial data.</li>
@@ -1615,7 +1616,7 @@ people.</p>
 <p>When considering whether a class of information is likely to be sensitive to
 a person, consider at least these factors:</p>
 <ul>
-<li>whether it serves as a persistent <a data-link-type="dfn|abstract-op" href="#dfn-identifier" class="internalDFN" id="ref-for-dfn-identifier-3">identifier</a> (see
+<li>whether it serves as a persistent <a data-link-type="dfn|abstract-op" href="#dfn-identifier" class="internalDFN" id="ref-for-dfn-identifier-4">identifier</a> (see
 <a href="https://www.w3.org/TR/fingerprinting-guidance/#identifying-fingerprinting-surface-and-evaluating-severity">severity</a> in
 <cite><a data-matched-text="[[[fingerprinting-guidance]]]" href="https://www.w3.org/TR/fingerprinting-guidance/">Mitigating Browser Fingerprinting in Web Specifications</a></cite>);</li>
 <li>whether it discloses substantial (including intimate details or inferences)
@@ -1688,7 +1689,7 @@ rights by people over data about themselves are inherent to <a data-link-type="d
 
 <p>Data is <dfn id="dfn-de-identified" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">de-identified</dfn> when there exists a high level of confidence
 that no <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-66">person</a> described by the data can be identified, directly or indirectly
-(e.g. via association with an <a data-link-type="dfn|abstract-op" href="#dfn-identifier" class="internalDFN" id="ref-for-dfn-identifier-4">identifier</a>, user agent, or device), by that data alone or in
+(e.g. via association with an <a data-link-type="dfn|abstract-op" href="#dfn-identifier" class="internalDFN" id="ref-for-dfn-identifier-5">identifier</a>, user agent, or device), by that data alone or in
 combination with other available information. Note
 that further considerations relating to groups are covered in the
 <a href="#collective">Collective Issues in Privacy</a> section.</p>
@@ -1701,7 +1702,7 @@ release of the de-identified data. ([<cite><a class="bibref" data-link-type="bib
 </ol>
 <p>Different situations involving <a data-link-type="dfn|abstract-op" href="#dfn-controlled-de-identified-data" class="internalDFN" id="ref-for-dfn-controlled-de-identified-data-1">controlled de-identified data</a> will require different controls.
 For instance, if the <a data-link-type="dfn|abstract-op" href="#dfn-controlled-de-identified-data" class="internalDFN" id="ref-for-dfn-controlled-de-identified-data-2">controlled de-identified data</a> is <em>only</em> being processed by one
-<a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-24">actor</a>, typical controls include making sure that the <a data-link-type="dfn|abstract-op" href="#dfn-identifier" class="internalDFN" id="ref-for-dfn-identifier-5">identifiers</a> used in the data are unique
+<a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-24">actor</a>, typical controls include making sure that the <a data-link-type="dfn|abstract-op" href="#dfn-identifier" class="internalDFN" id="ref-for-dfn-identifier-6">identifiers</a> used in the data are unique
 to that dataset, that any person (e.g. an employee of the <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-25">actor</a>) with access to the <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-27">data</a> is
 barred (e.g. based on legal terms) from sharing the <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-28">data</a> further, and that technical measures
 exist to prevent re-identification or the joining of different data sets involving this <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-29">data</a>,
@@ -1713,10 +1714,10 @@ guarantee the maintenance of pseudonymity are preserved.</p>
 <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-26">actors</a>. In such cases, good examples of typical controls that are representative of best
 practices would include making sure that:</p>
 <ul>
-<li><p>the <a data-link-type="dfn|abstract-op" href="#dfn-identifier" class="internalDFN" id="ref-for-dfn-identifier-6">identifiers</a> used in the <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-30">data</a> are under the direct and exclusive control of the <a data-link-type="dfn|abstract-op" href="#dfn-first-party-0" class="internalDFN" id="ref-for-dfn-first-party-0-2">first party</a> (the <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-27">actor</a> a person is directly interacting with) who is prevented by strict controls
+<li><p>the <a data-link-type="dfn|abstract-op" href="#dfn-identifier" class="internalDFN" id="ref-for-dfn-identifier-7">identifiers</a> used in the <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-30">data</a> are under the direct and exclusive control of the <a data-link-type="dfn|abstract-op" href="#dfn-first-party-0" class="internalDFN" id="ref-for-dfn-first-party-0-2">first party</a> (the <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-27">actor</a> a person is directly interacting with) who is prevented by strict controls
 from matching the identifiers with the data;</p>
 </li>
-<li><p>when these <a data-link-type="dfn|abstract-op" href="#dfn-identifier" class="internalDFN" id="ref-for-dfn-identifier-7">identifiers</a> are shared with a <a data-link-type="dfn|abstract-op" href="#dfn-third-parties" class="internalDFN" id="ref-for-dfn-third-parties-1">third party</a>, they are made unique
+<li><p>when these <a data-link-type="dfn|abstract-op" href="#dfn-identifier" class="internalDFN" id="ref-for-dfn-identifier-8">identifiers</a> are shared with a <a data-link-type="dfn|abstract-op" href="#dfn-third-parties" class="internalDFN" id="ref-for-dfn-third-parties-1">third party</a>, they are made unique
 to that <a data-link-type="dfn|abstract-op" href="#dfn-third-parties" class="internalDFN" id="ref-for-dfn-third-parties-2">third party</a> such that if they are shared with more than one
 <a data-link-type="dfn|abstract-op" href="#dfn-third-parties" class="internalDFN" id="ref-for-dfn-third-parties-3">third party</a> these cannot then match them up with one another;</p>
 </li>
@@ -2223,11 +2224,11 @@ guideline, it's neither necessary nor sufficient for <a data-link-type="dfn|abst
 but still treat it <a data-link-type="dfn|abstract-op" href="#dfn-appropriately" class="internalDFN" id="ref-for-dfn-appropriately-10">appropriately</a>.</p>
 </section><section id="acting-on-data-0"><div class="header-wrapper"><h3 id="acting-on-data"><bdi class="secno">A.4 </bdi>Acting on Data</h3><a class="self-link" href="#acting-on-data" aria-label="Permalink for Appendix A.4"></a></div><p>We define <dfn data-lt="data|personal data" id="dfn-data" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">personal data</dfn> as any information that is directly or
 indirectly related to an identified or identifiable <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-124">person</a>, such as by reference to an
-<a data-link-type="dfn|abstract-op" href="#dfn-identifier" class="internalDFN" id="ref-for-dfn-identifier-8">identifier</a> ([<cite><a class="bibref" data-link-type="biblio" href="#bib-gdpr" title="General Data Protection Regulations (GDPR) / Regulation (EU) 2016/679">GDPR</a></cite>], [<cite><a class="bibref" data-link-type="biblio" href="#bib-oecd-guidelines" title="OECD Guidelines on the Protection of Privacy and Transborder Flows of Personal Data">OECD-Guidelines</a></cite>], [<cite><a class="bibref" data-link-type="biblio" href="#bib-convention-108" title="Convention for the Protection of Individuals with regard to Automatic Processing of Personal Data">Convention-108</a></cite>]).</p>
+<a data-link-type="dfn|abstract-op" href="#dfn-identifier" class="internalDFN" id="ref-for-dfn-identifier-9">identifier</a> ([<cite><a class="bibref" data-link-type="biblio" href="#bib-gdpr" title="General Data Protection Regulations (GDPR) / Regulation (EU) 2016/679">GDPR</a></cite>], [<cite><a class="bibref" data-link-type="biblio" href="#bib-oecd-guidelines" title="OECD Guidelines on the Protection of Privacy and Transborder Flows of Personal Data">OECD-Guidelines</a></cite>], [<cite><a class="bibref" data-link-type="biblio" href="#bib-convention-108" title="Convention for the Protection of Individuals with regard to Automatic Processing of Personal Data">Convention-108</a></cite>]).</p>
 <p>On the web, an <dfn data-plurals="identifiers" id="dfn-identifier" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">identifier</dfn> of some type is typically assigned for an
 <a data-link-type="dfn|abstract-op" href="#dfn-identity" class="internalDFN" id="ref-for-dfn-identity-5">identity</a> as seen by a website, which makes it easier for an automated
 system to store data about that <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-125">person</a>.</p>
-<p>Examples of <a data-link-type="dfn|abstract-op" href="#dfn-identifier" class="internalDFN" id="ref-for-dfn-identifier-9">identifiers</a> for a <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-126">person</a> can be:</p>
+<p>Examples of <a data-link-type="dfn|abstract-op" href="#dfn-identifier" class="internalDFN" id="ref-for-dfn-identifier-10">identifiers</a> for a <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-126">person</a> can be:</p>
 <ul>
 <li>their name,</li>
 <li>an identification number including those mapping to a device that this
@@ -2240,7 +2241,7 @@ configuration characteristics), or</li>
 <li>factors specific to their physical, physiological, genetic, mental,
 economic,
 cultural, social, or behavioral <a data-link-type="dfn|abstract-op" href="#dfn-identity" class="internalDFN" id="ref-for-dfn-identity-6">identity</a>,</li>
-<li>strings derived from other <a data-link-type="dfn|abstract-op" href="#dfn-identifier" class="internalDFN" id="ref-for-dfn-identifier-10">identifiers</a>, for instance through hashing.</li>
+<li>strings derived from other <a data-link-type="dfn|abstract-op" href="#dfn-identifier" class="internalDFN" id="ref-for-dfn-identifier-11">identifiers</a>, for instance through hashing.</li>
 </ul>
 <p>If a <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-128">person</a> could reasonably be identified or re-identified through the combination of <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-42">data</a> with other
 <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-43">data</a>, then that <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-44">data</a> is <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-45">personal data</a>.</p>
@@ -3490,11 +3491,11 @@ Wendy Seltzer.</p>
     <li>
       <a href="#ref-for-dfn-identifier-1" title="§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls">§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls</a> <a href="#ref-for-dfn-identifier-2" title="Reference 2">(2)</a> 
     </li><li>
-      <a href="#ref-for-dfn-identifier-3" title="§ 2.4 Sensitive Information">§ 2.4 Sensitive Information</a> 
+      <a href="#ref-for-dfn-identifier-3" title="§ 2.4 Sensitive Information">§ 2.4 Sensitive Information</a> <a href="#ref-for-dfn-identifier-4" title="Reference 2">(2)</a> 
     </li><li>
-      <a href="#ref-for-dfn-identifier-4" title="§ 2.6 De-identified Data">§ 2.6 De-identified Data</a> <a href="#ref-for-dfn-identifier-5" title="Reference 2">(2)</a> <a href="#ref-for-dfn-identifier-6" title="Reference 3">(3)</a> <a href="#ref-for-dfn-identifier-7" title="Reference 4">(4)</a> 
+      <a href="#ref-for-dfn-identifier-5" title="§ 2.6 De-identified Data">§ 2.6 De-identified Data</a> <a href="#ref-for-dfn-identifier-6" title="Reference 2">(2)</a> <a href="#ref-for-dfn-identifier-7" title="Reference 3">(3)</a> <a href="#ref-for-dfn-identifier-8" title="Reference 4">(4)</a> 
     </li><li>
-      <a href="#ref-for-dfn-identifier-8" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> <a href="#ref-for-dfn-identifier-9" title="Reference 2">(2)</a> <a href="#ref-for-dfn-identifier-10" title="Reference 3">(3)</a> 
+      <a href="#ref-for-dfn-identifier-9" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> <a href="#ref-for-dfn-identifier-10" title="Reference 2">(2)</a> <a href="#ref-for-dfn-identifier-11" title="Reference 3">(3)</a> 
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-privacy" aria-label="Links in this document to definition: Privacy">
