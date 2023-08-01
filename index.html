@@ -1753,15 +1753,16 @@ agent=] needs to warn the child about how it's configured so that the child can 
 
 <div class="practice">
   <span class="practicelab" id="transparency-when-requested">
-    [=People=] should be provided relevant information when data is accessed or when permission is
-    requested.
+    When accessing data or requesting permission, [=sites=] (and other [=actors=]) should provide
+    [=people=] with relevant information about its use and [=user agents=] should help present and
+    consume that information.
   </span>
 </div>
 
 Transparency is a necessary, but insufficient, condition for [=consent=]. Relevant information
-includes who may be accessing information, what information may be accessed (including the potential
-inferences or combinations of such data) and how information may be used. For transparency to be
-meaningful to people, it must be contextual.
+includes who is accessing information, what information is accessed (including the potential
+inferences or combinations of such data) and how information is used. For transparency to be
+meaningful to people, information must be provided in the relevant [=context=].
 
 <div class="note">
   In designing new Web features that may involve permissions, consider whether a permission is
@@ -1790,22 +1791,24 @@ able to help [=people=] make general decisions, rather than relying falsely on t
 [=people=] can or want to read documentation before every visit to a web site. Machine-readable
 presentation also facilitates <a href="#collective">collective governance</a> by making it more
 feasible for researchers and regulators to discover, document, and analyze data collection and
-processing in ways that may be harmful.
+processing to identify cases in which it may be harmful.
 
 Easily accessible, plain language presentation of privacy-relevant practices is necessary for
 [=people=] to be able to make informed decisions in specific cases when they choose to do so.
+[=Sites=], [=user agents=], and other [=actors=] all may need to present privacy-relevant practices
+to [=people=] in accessible forms.
 
 <div class="practice">
   <span class="practicelab" id="transparency-distinguishable">
-    Mechanisms that can be used for tracking or identifying [=people=] should be designed so that
+    Mechanisms that can be used for [=recognizing=] [=people=] should be designed so that
     their operation is visible and distinguishable, to [=user agents=], researchers and regulators.
   </span>
 </div>
 
-Unsanctioned tracking is harmful in part because it is not visible to the user, which undermines
-user control [[?UNSANCTIONED-TRACKING]]. Designing features that minimize data and make requests for
-data explicit can enable detectability, a kind of transparency that is an important mitigation for
-<a>browser fingerprinting</a>.
+Non-transparent methods of [=recognition=] are harmful in part because they are not visible to the
+user, which undermines user control [[?UNSANCTIONED-TRACKING]]. Designing features that minimize
+data and make requests for data explicit can enable detectability, a kind of transparency that is an
+important mitigation for <a>browser fingerprinting</a>.
 
 ## Consent, Withdrawal of Consent, Opt-Outs, and Objections {#consent-principles}
 
