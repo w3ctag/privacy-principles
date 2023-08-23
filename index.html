@@ -43,8 +43,9 @@
             prac.classList.remove('advisement');
             prac.classList.add('principle');
           }
-          let h2 = document.querySelector('#bp-summary h2');
-          h2.innerHTML = h2.innerHTML.replace('Best Practices Summary', 'Principles Summary');
+          for (let el of document.querySelectorAll('#bp-summary h2, #toc a[href="#bp-summary"]')) {
+            el.innerHTML = el.innerHTML.replace('Best Practices Summary', 'Principles Summary');
+          }
         }
       ],
       localBiblio: {
@@ -683,11 +684,13 @@ Conceptually, a [=global opt-out=] mechanism is an automaton operating as part o
 [=person=] has with a site, or more generally conveys an expression of the [=person=]'s
 rights in a relevant jurisdiction. (For instance, the [=person=] may be objecting to [=processing=]
 based on legitimate interest, withdrawing [=consent=] to specific [=purposes=], or requesting that
-their data not be sold or shared.) It should be noted that, since a
-[=global opt-out=] signal is reaffirmed automatically with every interaction, it will take precedence
-in terms of specificity over any general obtention of [=consent=] by a site,
-and only superseded by specific [=consent=] obtained through a deliberate action taken by
-the user with the intent of overriding their global opt-out.
+their data not be sold or shared.) The [=user=] is effectively delegating the expression
+of their [=opt-out=] to their [=user agent=], which helps rectify [=automation asymmetry=].
+
+Under this model, a [=global opt-out=] signal should not be understood as a decision that a
+[=person=] made a while ago when they flipped a setting or chose to use a specific
+[=user agent=] but rather as a preference that they have chosen to automatically reaffirm with
+every interaction with the site.
 
 One implementation strategy for [=opt-outs=] and other <a href="#data-rights">data rights</a> is
 to assign [=people=] stable [=identifiers=] and to maintain a central registry to map these
@@ -782,6 +785,13 @@ may be well known (e.g. membership in a dissidents movement under authoritarian 
 is the fitness app Strava that did not reveal individual behaviour or legal identity but published heat
 maps of popular running routes. In doing so, it revealed secret US bases around which military
 personnel took frequent runs ([[?Strava-Debacle]], [[?Strava-Reveal-Military]]).
+
+People's privacy interests may also be affected when information about a small group of people is
+processed, even if no individualized data is exposed. For example, browsing activity of the students
+in a classroom may be sensitive even if their teacher doesn't learn exactly which student accessed a
+particular resource about a health issue. Targeting presentation of information to a small group may
+also be inappropriate: for example, targeting messages to people who visited a particular clinic or
+are empaneled on a particular jury may be invasive even without uniquely individual data.
 
 When [=people=] do not know that they are members of a group, when they cannot easily find other
 members of the group so as to advocate for their rights together, or when they cannot easily
@@ -1023,17 +1033,13 @@ the success of advertising campaigns. Even this small amount of information is s
 
 # Principles for Privacy on the Web
 
-As indicated above, different [=contexts=] require different principles. This section describes a set
-of principles designed to apply to the Web [=context=] in general. The Web is a big place, and we
-fully expect more specific [=contexts=] of the Web to add their own principles to further constrain
-[=information flows=].
+This section describes a set of principles designed to apply to the web
+[=context=] in general. Specific [=contexts=] on the web may need more
+constraints or other considerations. In time, we expect to see more specialized
+privacy principles published, for more specific [=contexts=] on the web.
 
-To the extent possible, [=user agents=] are expected to enforce these principles. However, this is not
-always possible and additional enforcement mechanisms are needed. One particularly salient issue
-is that a [=context=] is not defined in terms of who owns or controls it. Sharing
-[=data=] between different [=contexts=] of a single company is just as much a [=privacy violation=] as
-if the same data were shared between unrelated [=actors=].
-
+These principles should be enforced by [=user agents=]. When this is not possible,
+additional enforcement mechanisms are needed.
 
 ## Identity on the Web {#identity}
 
@@ -1041,194 +1047,39 @@ if the same data were shared between unrelated [=actors=].
 
 <span class="practicelab" id="principle-identity-per-context">A [=user agent=]
 should help its user present the [=identity=] they want in each [=context=]
-they are in.</span>
+they are in, and should prevent or support [=recognition=] as appropriate.
+</span>
 
 </div>
 
 A [=person=]'s <dfn>identity</dfn> is the set of characteristics that define
 them. Their identity *in a [=context=]* is the set of characteristics they
-present in that context. People frequently present different identities to
-different contexts, and also frequently share an identity among several
-contexts. People may also wish to present an ephemeral or anonymous identity,
-which is just a set of characteristics that is too small or unstable to be useful
+present under particular circumstances.
+
+People can present different identities to different contexts, and can
+also share a single identity across several different contexts.
+
+People may wish to present an ephemeral or anonymous identity. This is
+a set of characteristics that is too small or unstable to be useful
 for following them through time.
 
-It is important to keep in mind that a person's [=identities=] may often be distinct
-from whatever legal identity or identities they may hold.
+A person's [=identities=] may often be distinct from whatever legal identity
+or identities they hold.
 
-<dfn data-lt="recognize|recognized">Recognition</dfn> is the act of realising that a given [=identity=]
-corresponds to the same [=person=] as another [=identity=] which may have been
-observed either in another [=context=] or in the same [=context=] but at a
-different time. A [=person=] can be [=recognized=] whether or not their legal identity or
-characteristics of their legal identity are included in the recognition.
+In some circumstances, the best way for a [=user agent=] to uphold this
+principle is to prevent [=recognition=] (e.g. so that one [=site=] can't
+learn anything about its [=user=]'s behavior on *another* site).
 
-In order to uphold the above <a
-href="#principle-identity-per-context">principle</a>, sometimes a [=user agent=]
-needs to *prevent* [=recognition=], for instance so that one [=site=] can't
-learn anything about its [=user=]'s behavior on *another* site. Other times, the
-[=user agent=] needs to *support* [=recognition=],
-for instance to help its [=user=] *prove* to one [=site=] that they have a
-particular identity on another [=site=]. Similarly, a [=user agent=] can help its
-[=user=] to separate or communicate [=identity=] across *repeat* visits to the *same*
-[=site=].
+In other circumstances, the best way for a [=user agent=] to uphold this
+principle is to *support* [=recognition=] (e.g. to help its [=user=] prove
+to one [=site=] that they have a particular identity on another [=site=]).
 
-### Recognition Types {#recognition-types}
+Similarly, a [=user agent=] can help its [=user=] by preventing or supporting
+[=recognition=] across *repeat* visits to the *same* [=site=].
 
-There are several types of [=recognition=] that may take place. These rely on
-different methods and present different challenges.
-
-<dfn>Cross-context recognition</dfn> is [=recognition=] between different
-[=contexts=]. It contributes to [=surveillance=], [=correlation=],
-and [=identification=].
-
-[=Cross-context recognition=] is only [=appropriate=] when the person being [=recognized=]
-can reasonably expect that recognition to happen and can control whether it does.
-Note that a person can use a piece of identifying information in two different
-contexts (e.g. their email or phone number) without that implying that they're
-using the same identity in both contexts. Unless there's some other indication
-that they intended to use a single identity, it is [=inappropriate=] to
-[=recognize=] them using that information, or to seek extra identifying
-information to help with cross-context recognition.
-
-Systems which [=recognize=] people across [=contexts=] need
-to be careful not to apply the principles of one [=context=] in ways that
-violate the principles around use of information acquired in a different
-[=context=]. This is particularly true for [=vulnerable=] people, as
-recognising them in different [=contexts=] may force traits into the open
-that reveal their vulnerability. For example, if you meet your therapist at a
-party, you expect them to have different discussion topics with you than they
-usually would, and possibly even to pretend they don't know you.
-
-<dfn>Cross-site recognition</dfn> is when a [=site=] determines with high
-probability that a visit to the site comes from the same person as another
-visit to a *different* site. In the usual case that the sites are different [=contexts=],
-[=cross-site recognition=] is a privacy harm in the same cases as [=cross-context recognition=].
-
-<dfn>Same-site recognition</dfn> is when a single [=site=] discovers and uses the
-fact that two or more visits probably came from the same [=person=].
-
-A privacy harm occurs if a [=person=] reasonably expects that they'll be using
-a different [=identity=] for different visits to a single site, but the site
-[=recognizes=] them anyway. This harm can be accomplished through a
-variety of means detailed in [[[#recognition-methods]]].
-
-Note that these categories overlap: [=cross-site recognition=] is usually
-[=cross-context recognition=] (and always [=recognizes=] across [=partitions=]); and
-[=same-site recognition=] is sometimes [=cross-context recognition=] (and may or may not
-involve multiple [=partitions=]).
-
-### User agent awareness of recognition {#user-agent-recognition}
-
-A <dfn>partition</dfn> is the [=user agent=]'s attempt to match how its user
-would understand a [=context=]. [=User agents=] don't have a perfect
-understanding of how their users experience the sites they visit, so they
-often need to approximate the boundaries between [=contexts=] when building
-[=partitions=]. In the absence of better information, a [=partition=] can be
-defined as:
-
-* a set of [=environments=] (roughly same-site and cross-site [^iframe^]s,
-workers, and top-level pages)
-* whose [=environment/top-level origins=] are in the [=same site=] (but see
-[[PSL-Problems]])
-* being visited within the same user agent installation (and browser profile,
-container, or container tab for user agents that support those features)
-* between points in time that the person or user agent clears that [=site=]'s
-cookies and other storage (which is sometimes automatic at the end of each
-session).
-
-When a [=user agent=] knows that a site includes multiple contexts, it should
-adjust its [=partitions=] accordingly, for instance by partitioning identities
-per subdomain or site path. User agents should work to improve their ability to
-distinguish contexts within a site.
-
-Where possible, [=user agents=] should prevent people from being [=cross-context
-recognition|recognized=] across [=partitions=] unless they intend to be
-recognized. Note that:
-
-* Sites can do harm even if they can't be completely certain
-  that visits come from the same person, so [=user agents=] should also take steps
-  to prevent such probabilistic recognition. The [[[Privacy-Threat]]] discusses
-  the tradeoffs involved. ([[Privacy-Threat]])
-* If a [=user agent=] blocks [=recognition=] between different sites but doesn't
-  notice when a single site contains multiple [=contexts=], this can encourage
-  [=actors=] to bundle multiple contexts into a single site and privilege the
-  [=actors=] who can do so. Despite these harms, even if a [=user agent=] can't
-  always block [=cross-context recognition=] within a single site, it should
-  still prevent the [=cross-context recognition=] it can detect. By having
-  [=user agents=] solve the problems that technical measures can solve, we let
-  actors using other approaches focus on the problems they're best at.
-
-If a [=user agent=] can tell that its user is using a particular identity on a
-website, for example because the user used an API like
-[[[credential-management-1]]] to log into the site, it should make that active
-identity clear to the user.
-
-### Recognition Methods {#recognition-methods}
-
-The web platform offers many ways for a website to recognize that a [=person=]
-is using the same [=identity=] over time, including [[RFC6265|cookies]],
-{{WindowLocalStorage/localStorage}}, {{WindowOrWorkerGlobalScope/indexedDB}},
-{{CacheStorage}}, and other forms of storage. This allows sites to save the
-[=person=]'s preferences, shopping carts, etc., and people have come to expect
-this behavior in some contexts.
-
-People are unlikely to expect the recognition and will find it difficult to
-mitigate when it is automated, which can happen in different ways:
-
-* through the use of <a data-cite="Browser-Parties#environment-cross-site">cross-site</a> cookies,
-* by having someone navigate to a link that has been decorated with an identifier
-  ([[?Nav-Tracking]]),
-* collecting the same piece of identifying information on both sites, or
-* by correlating the timestamps of an event that occurs nearly-simultaneously
-on both sites (this is an example of a <a
-href="https://github.com/asankah/ephemeral-fingerprinting/blob/2395a35aac260d4d2f880eeb05c2617b0fd642ea/README.md">timing
-attack</a>).
-
-In addition to recognition methods that can operate automatically across
-contexts, recognition can also be made *persistent* such that it will
-defeat potential mitigations like [=partitions=] or clearing one's cookies.
-This constitutes unsanctioned tracking ([[?UNSANCTIONED-TRACKING]]) and can
-take multiple forms.
-
-<dfn data-lt="fingerprint">Fingerprinting</dfn> consists of using attributes of the [=person=]'s
-browser and platform that are consistent between two or more visits and
-probably unique to the person.
-
-The attributes can be exposed as information about the [=person=]'s device
-that on their own are benign (as opposed to [[[#hl-sensitive-information]]]).
-Taken in the aggregate these attributes could uniquely identify the device, or
-contribute to possible [=cross-context recognition=].
-For example:
-
-* language and time zone;
-* window size;
-* system preferences (such as dark mode, serif font, etc.).
-
-Preventing [=fingerprinting=] can be particularly challenging in cases that
-only affect a small group of people who use the web. For example, people who
-configure their systems in unique ways, such as by using a browser with a very
-small number of users.
-See [[fingerprinting-guidance]] for how to mitigate threats that result from
-[=fingerprinting=].
-
-Supercookies occur when a user agent stores data for a site but makes that data more
-difficult to clear than other cookies or storage, typically because of a bug, of features
-relating to cache storage and network state (e.g. ETag, HSTS), or
-because the browser restores the browser vendor's cookies when local state is cleared.
-<a data-cite="fingerprinting-guidance#clearing-all-local-state">Fingerprinting
-Guidance § Clearing all local state</a> discusses how specifications can help
-user agents avoid this mistake.
-
-<dfn>Header enrichment</dfn> happens when a network operator adds HTTP request headers
-to identify their customers to sites that they visit. It is unfortunately
-difficult for a [=user agent=] to mitigate against [=header enrichment=].
-
-<dfn>Cross-device communication</dfn> is communication
-between code on one device and code running on another device. For example, sounds or
-light emitted from one device could be detected by a microphone or light sensor on
-another device [[?SILVERPUSH]]. [=Cross-device communication=] enables cross-device
-tracking, a form of [=cross-context recognition=], but it can also be used for other
-inappropriate information flows.
+[=User agents=] should do their best to distinguish [=contexts=] within a site
+and adjust their [=partitions=] to prevent or support [=recognition=] across those intra-site [=contexts=]
+according to their [=users=]' wishes.
 
 ## Data Minimization {#data-minimization}
 
@@ -1472,6 +1323,7 @@ For example:
 
 * Their location.
 * Language preferences.
+* Any [=identifiers=] associated with them.
 * Video or audio from the their camera or microphone.
 * The content of certain files on their filesystem.
 * Financial data.
@@ -1486,9 +1338,13 @@ or is likely to be, exposed; see [[[#vulnerability]]].
 <aside class="example">
 Precise location information can be extremely sensitive because it's
 identifying, because it allows for in-person intrusions, because it can reveal
-detailed information about a person's life; but it might also be public and
-not sensitive at all, or it might be low-enough granularity that it is much
-less sensitive for many people.
+detailed information about a person's life; but it might also be public and not
+sensitive at all, or it might be low-enough granularity that it is less
+sensitive for many people. Beware that reducing granularity of location
+information might not hide precise location information from an [=actor=],
+particularly if location information is repeatedly requested over time or if the
+[=actor=] has other relevant information about the [=person=] [<a
+data-cite="RFC6772#section-13.5">RFC6772</a>].
 </aside>
 
 When considering whether a class of information is likely to be sensitive to
@@ -1500,7 +1356,6 @@ a person, consider at least these factors:
 * whether it discloses substantial (including intimate details or inferences)
   information about the person using the system or other people;
 * whether it can be used to infer particular characteristics that put the person at risk of greater harm;
-* whether it can be revoked (see also: [[[#consent-principles]]]);
 * whether it enables other threats, like intrusion.
 
 
@@ -1594,8 +1449,7 @@ For instance, if the [=controlled de-identified data=] is <em>only</em> being pr
 [=actor=], typical controls include making sure that the [=identifiers=] used in the data are unique
 to that dataset, that any person (e.g. an employee of the [=actor=]) with access to the [=data=] is
 barred (e.g. based on legal terms) from sharing the [=data=] further, and that technical measures
-exist to prevent re-identification or the joining of different data sets involving this [=data=],
-notably against timing or k-anonymity attacks.
+exist to prevent re-identification or the joining of different data sets involving this [=data=].
 
 In general, the goal is to ensure that [=controlled de-identified data=] is used in a manner that
 provides a viable degree of oversight and accountability such that technical and procedural means to
@@ -1621,8 +1475,7 @@ practices would include making sure that:
   from sharing it further;
 
 * technical measures exist to prevent re-identification or the joining of
-  different data sets involving this [=data=], notably against timing or
-  k-anonymity attacks; and
+  different data sets involving this [=data=]; and
 
 * there exist contractual terms between the [=first party=] and [=third party=]
   describing the limited [=purpose=] for which the data is being shared.
@@ -1701,29 +1554,28 @@ improved privacy.
 
 <div class="practice">
 <span class="practicelab" id="principle-owned-devices-disclose-surveillance">
-[=User agents=] must not help a device [=administrator=] surveil the people using the devices they
-administrate without those people's knowledge.
+[=User agents=] must not help a device [=administrator=] surveil the people
+using the devices they administrate without those people's knowledge. [=User
+agents=] should not tell a device [=administrator=] about user behavior except
+when that disclosure is necessary to enforce reasonable constraints on use of
+the device.
 </span>
 </div>
-
-<div class="practice">
-<span class="practicelab" id="principle-reasonable-disclosure-on-owned-devices">
-[=User agents=] should only tell a device [=administrator=] about user behavior when that disclosure
-is necessary to enforce reasonable constraints on use of the device.
-</span>
+<div class="note">
+See [[[#guardians]]] for more detail on how this principle applies to vulnerable people with [=guardians=].
 </div>
 
+Computing devices have <dfn data-lt="device owner">owners</dfn>, who have
+<dfn>administrator</dfn> access to the devices in order to install and
+configure the programs that run on them. As a program running on a device,
+a [=user agent=] generally can't tell whether the [=administrator=] who has
+installed and configured it was authorized by the device's actual owner.
 
-Computing devices have <dfn data-lt="device owner">owners</dfn>, and those owners have
-<dfn>administrator</dfn> access to the devices in order to install and configure the programs,
-including [=user agents=], that run on them. Sometimes, as in the cases of an employer providing a
-device to an employee, a friend loaning a device to their visitor, or a parent providing a device to
-their small child, the [=person=] using a device doesn't own the device or have [=administrator=]
-access to it. Other times, as in the cases of intimate partners or one relative helping another
-relative with their device, the owner and primary user of a device might not be the only person with
-[=administrator=] access. As a program running on a device, a [=user agent=] generally can't tell
-whether the [=administrator=] who has installed and configured it was authorized by the device's
-actual owner.
+Sometimes the [=person=] using a device doesn't own the device or have
+[=administrator=] access to it (e.g. an employer providing a device to an
+employee; a friend loaning a device to their guest; or a parent providing a
+device to their young child). Other times, the owner and primary user of a
+device might not be the only person with [=administrator=] access.
 
 These relationships can involve power imbalances. A child may have difficulty accessing any
 computing devices other than the ones their parent provides. A victim of abuse might not be able to
@@ -1732,108 +1584,89 @@ to agree to use their employer's devices in order to keep their job.
 
 While a [=device owner=] has an interest and sometimes a responsibility to make sure their device is
 used in the ways they intended, the [=person=] _using_ the device still has a right to privacy while
-using it. The above principles enforce this right to privacy in two ways:
+using it. This principle enforces this right to privacy in two ways:
 
 1. [=User agent=] developers need to consider whether requests from [=device owners=] and
    [=administrators=] are reasonable, and refuse to implement unreasonable requests, even if that
-   means fewer sales. Owner/administrator needs must not simply trump user needs in the <a
+   means fewer sales. Owner/administrator needs do not supersede user needs in the <a
    data-cite="design-principles#priority-of-constituencies">priority of constituencies</a>.
 1. Even when information disclosure is reasonable, the [=person=] whose data is being disclosed
    needs to know about it so that they can avoid doing things that would lead to unwanted
    consequences.
 
 Some [=administrator=] requests might be reasonable for some sorts of users, like employees or
-especially children, but not be reasonable for other sorts, like friends or intimate partners. In
-those cases, the [=user agent=] can explain what the administrator is going to learn in a way that
-also says what sort of user is expected to agree. Users in other classes can then react
-appropriately.
+children, but not be reasonable for other sorts, like friends or intimate partners.
+The [=user agent=] should explain what the [=administrator=] is going to learn in a way that
+helps different users to react appropriately.
 
-<aside class="issue">
-Link this to [[[#guardians]]].
-</aside>
 
-## Harassment
+## Protecting web users from abusive behaviour
+
+<div class="practice">
+  <p>
+    <span class="practicelab" id="abuse-reporting">
+      Systems that allow for communicating on the Web must provide an
+      effective capability to report abuse. 
+        </span>
+  </p>
+</div>
+<div class="practice">
+  <p>
+    <span class="practicelab" id="abuse-protection">
+      [=User agents=] and [=sites=] must
+      take steps to protect their users from abusive behaviour, and abuse
+      mitigation must be considered when designing web platform features.
+    </span>
+  </p>
+</div>
 
 Online <dfn>harassment</dfn> is the "pervasive or severe targeting of an individual or group online
-through harmful behavior" [[PEN-Harassment]]. Harassment is a prevalent problem on the Web,
-particularly via social media. While harassment may affect any person using the Web, it may be more
+through harmful behavior" [[PEN-Harassment]]. Harassment is a prevalent problem on the web,
+particularly via social media. While harassment may affect any person using the web, it may be more
 severe and its consequences more impactful for LGBTQ people, women, people in racial or ethnic
 minorities, people with disabilities, [=vulnerable people=] and other marginalized groups.
+
+[=Harassment=] is both a violation of privacy itself and can be enabled or
+exacerbated by other violations of privacy.
+
+Harassment may include: sending [=unwanted information=]; directing others to contact
+or bother a person ("dogpiling"); disclosing [sensitive information](#sensitive-information) about a person; posting false information about a person; impersonating a person; insults; threats; and hateful or demeaning speech.
+
+Disclosure of identifying or contact information (including "doxxing") can often be used to cause additional attackers to send persistent [=unwanted information=] that amounts to harassment.
+Disclosure of location information can be used to intrude on a
+person's physical safety or space.
+
+Reporting mechanisms are mitigations, but may not prevent harassment, particularly in cases where
+hosts, moderators, or other intermediaries are supportive of or complicit in the abuse.
+
+Effective reporting is likely to require:
+
+* standardized mechanisms to identify abuse reporting contacts;
+* sites and user agents to provide visible and usable ways to report abuse;
+* identifiers to refer to senders and content;
+* the ability to provide context and explanation of harms;
+* people responsible for promptly responding to reports;
+* tools for pooling mitigation information (see [[[#example-reducing-unwanted-information]]]).
 
 <aside class="note">
   Some useful research overviews of online harassment include: [[?PEW-Harassment]],
   [[?Addressing-Cyber-Harassment]] and [[?Internet-of-Garbage]].
 </aside>
 
-[=Harassment=] is both a violation of privacy itself and can be magnified or facilitated by other
-violations of privacy.
-
-Abusive online behavior may include: sending [=unwanted information=]; directing others to contact
-or bother a person ("dogpiling"); disclosing sensitive information about a person; posting false
-information about a person; impersonating a person; insults; threats; and hateful or demeaning
-speech.
-
-Disclosure of identifying or contact information (including "doxxing") can be used, including by
-additional attackers, to send often persistent unwanted information that amounts to harassment.
-Disclosure of location information can be used, including by additional attackers, to intrude on a
-person's physical safety or space.
-
-Mitigations for harassment include but extend beyond mitigations for unwanted information and other
-privacy principles. Harassment can include harmful activity with a wider distribution than just the
-target of harassment.
-
-<div class="practice">
-  <p>
-    <span class="practicelab" id="abuse-reporting">
-      Systems that allow for communicating on the Web must provide an effective capability to report
-      abuse.
-    </span>
-  </p>
-</div>
-
-Reporting mechanisms are mitigations, but may not prevent harassment, particularly in cases where
-hosts or intermediaries are supportive of or complicit in the abuse.
-
-<div class="note">
-  Effective reporting is likely to require:
-
-  * standardized mechanisms to identify abuse reporting contacts
-  * visible, usable ways provided by sites and user agents to report abuse
-  * identifiers to refer to senders and content
-  * the ability to provide context and explanation of harms
-  * people responsible for promptly responding to reports
-  * tools for pooling mitigation information (see Unwanted information, below)
-</div>
-
-## Unwanted Information {#unwanted-information}
-
-Receiving unsolicited information that either may cause distress or waste the recipient's
-time or resources is a violation of privacy.
-
-<div class="practice">
-
-<p>
-  <span class="practicelab" id="principle-protect-unwanted-information">
-    [=User agents=] and other [=actors=] should take
-    steps to ensure that their [=user=] is not exposed to unwanted information. Technical standards
-    must consider the delivery of unwanted information as part of their architecture and must
-    mitigate it accordingly.
-  </span>
-</p>
-</div>
-
 <dfn>Unwanted information</dfn> covers a broad range of unsolicited communication, from messages
 that are typically harmless individually but that become a nuisance in aggregate (spam) to the
-sending of images that will cause shock or disgust due to their graphic, violent, or explicit nature
-(e.g. pictures of one's genitals). While it is impossible, in a communication system involving many
-[=people=], to offer perfect protection against all kinds of unwanted information, steps can be
-taken to make the sending of such messages more difficult or more costly, and to make the senders
-more accountable. Examples of mitigations include:
+sending of explicit, graphic, or violent images.
 
-* Restricting what new users of a service can post, notably limiting links and media until they have
+System designers should take steps to make the sending of unwanted information more difficult
+or more costly, and to make the senders more accountable.
+
+
+<aside class="example" id="example-reducing-unwanted-information">
+Examples of mitigations include:
+
+* Restricting what new users of a service can post, e.g. limiting links and media until a user has
   interacted a sufficient number of times over a given period with a larger group. This helps to
-  raise the cost of producing sockpuppet accounts and gives new users the occasion to understand
-  local norms before posting.
+  raise the cost of producing [sock puppet accounts](https://en.wikipedia.org/wiki/Sock_puppet_account) and gives new users time to understand local norms before posting.
 * Only accepting communication between [=people=] who have an established relationship of some kind,
   such as being part of a shared group. Protocols should consider requiring a handshake between
   [=people=] prior to enabling communication.
@@ -1842,10 +1675,9 @@ more accountable. Examples of mitigations include:
 * Supporting the ability for [=people=] to block another [=actor=] such that they cannot send information
   again.
 * Pooling mitigation information, for instance shared block lists, shared spam-detection
-  information, or public information about misbehaving [=actors=]. As always, the collection and
-  sharing of [=information=] for safety purposes should be limited and placed under collective
-  governance.
-
+  information, or public information about misbehaving [=actors=].
+* Enabling users to filter out or hide information or media based on tags or content warnings.
+</aside>
 
 ## Vulnerability {#vulnerability}
 
@@ -1949,6 +1781,13 @@ agent=] needs to warn the child about how it's configured so that the child can 
 Attempts to obtain consent to [=processing=] that is not in accordance with the person's
 true preferences result in imposing unwanted [=privacy labour=] on the person, and may
 result in people erroneously giving consent that they regret later.
+
+An [=actor=] should not prompt a [=person=] for consent if the
+person is unlikely to have sufficient information to make an informed decision to consent or not.
+In considering whether or not a person is sufficiently informed to be asked for consent,
+actors should be realistic in assessing how much time and effort would be required to understand the
+processing for which they are asking for consent.
+Simply providing a link to a complex policy is unlikely to mean that the person is informed.
 
 <div class="practice">
 <p>
@@ -2133,8 +1972,14 @@ are employees with respect to their employers, are facing a steep asymmetry of p
 are people in some situations of intellectual or psychological impairment, are
 refugees, etc.
 
+## Contexts {#context}
+
 A <dfn>context</dfn> is a physical or digital environment in which [=people=] interact with other
 [=actors=], and which the [=people=] understand as distinct from other [=contexts=].
+
+A [=context=] is not defined in terms of who owns or controls it. Sharing
+[=data=] between different [=contexts=] of a single company is
+a [=privacy violation=], just as if the same data were shared between unrelated [=actors=].
 
 ## Server-Side Actors {#parties}
 
@@ -2193,7 +2038,7 @@ Examples of [=identifiers=] for a [=person=] can be:
 * their phone number,
 * their location data,
 * an online identifier such as email or IP addresses,
-* browser [=fingerprints=] (based on a combination of
+* browser fingerprints (based on a combination of
 configuration characteristics), or
 * factors specific to their physical, physiological, genetic, mental,
 economic,
@@ -2253,6 +2098,101 @@ perform the relevant [=processing=] if it:
 * has no independent right to use the data other than in a [=de-identified=] form (e.g., for
   monitoring service integrity, load balancing, capacity planning, or billing); and,
 * has a contract in place with the [=actor=] which is consistent with the above limitations.
+
+## Recognition {#recognition}
+
+<dfn data-lt="recognize|recognized">Recognition</dfn> is the act of realising that a given [=identity=]
+corresponds to the same [=person=] as another [=identity=] which may have been
+observed either in another [=context=], or in the same [=context=] but at a
+different time. [=Recognition=] can be probabilistic, if someone realises there's
+a high probability that two [=identities=] correspond to the same [=person=],
+even if they aren't certain.
+
+A [=person=] can be [=recognized=] whether or not their legal identity or
+characteristics of their legal identity are included in the recognition.
+
+### Recognition Types {#recognition-types}
+
+There are several types of [=recognition=] that may take place.
+
+<dfn>Cross-context recognition</dfn> is [=recognition=] between different
+[=contexts=].
+
+[=Cross-context recognition=] is only [=appropriate=] when the person being [=recognized=]
+can reasonably expect recognition to happen, and can control whether it does.
+
+If a person uses a piece of identifying information in two different
+contexts (e.g. their email or phone number), this *does not* automatically
+mean that they intend to use the same identity in both contexts. It is
+[=inappropriate=] to [=recognize=] them using that information, unless there's
+some other indication that they intended to use a single identity. It is also
+[=inappropriate=] to seek extra identifying information to help with
+cross-context recognition.
+
+Systems which [=recognize=] people across [=contexts=] need
+to be careful not to apply the principles of one [=context=] in ways that
+violate the principles around use of information acquired in a different
+[=context=]. This is particularly true for [=vulnerable=] people, as
+recognising them in different [=contexts=] may force traits into the open
+that reveal their vulnerability. For example, if you meet your therapist at a
+party, you expect them to have different discussion topics with you than they
+usually would, and possibly even to pretend they don't know you.
+
+<dfn>Cross-site recognition</dfn> is [=recognition=] when the identities
+are observed on different [=sites=]. In the usual case that the sites are
+different [=contexts=],
+[=cross-site recognition=] is a privacy harm in the same cases as [=cross-context recognition=].
+
+<dfn>Same-site recognition</dfn> is when a single [=site=] [=recognizes=] a
+[=person=] across two or more visits.
+
+A privacy harm occurs if a [=person=] reasonably expects that they'll be using
+a different [=identity=] for different visits to a single site, but the site
+[=recognizes=] them anyway.
+
+Note that these categories overlap: [=cross-site recognition=] is usually
+[=cross-context recognition=] (and always [=recognizes=] across [=partitions=]); and
+[=same-site recognition=] is sometimes [=cross-context recognition=] (and may or may not
+involve multiple [=partitions=]).
+
+### User agent awareness of recognition {#user-agent-recognition}
+
+A <dfn>partition</dfn> is the [=user agent=]'s attempt to match how its user
+would understand a [=context=]. [=User agents=] don't have a perfect
+understanding of how their users experience the sites they visit, so they
+often need to approximate the boundaries between [=contexts=] when building
+[=partitions=].
+
+In the absence of better information, a [=partition=] can be defined as:
+
+* a set of [=environments=] (roughly: same-site and cross-site [^iframe^]s,
+workers, and top-level pages)
+* whose [=environment/top-level origins=] are in the [=same site=] (note: see
+[[PSL-Problems]])
+* being visited within the same user agent installation (and browser profile,
+container, or container tab for user agents that support those features)
+* between points in time that the person or user agent clears that [=site=]'s
+cookies and other storage (which is sometimes automatic at the end of each
+session).
+
+It can be difficult for a [=user agent=] to detect when a single site contains
+multiple [=contexts=]. When a [=user agent=] can detect this, it should adjust
+its [=partitions=] accordingly, for instance by partitioning identities
+per subdomain or site path. User agents should work to improve their ability to
+distinguish contexts within a site.
+
+[=User agents=] should prevent people from being
+[=recognized=] across [=partitions=] unless they intend to be
+recognized.
+
+Note that sites can do harm even if they can't be completely certain
+that visits come from the same person, so [=user agents=] should also take steps
+to prevent such probabilistic recognition. The [[[Privacy-Threat]]] discusses
+the tradeoffs involved ([[Privacy-Threat]]).
+
+If a [=user agent=] can tell that its user is using a particular identity on a
+website, it should make that active identity clear to the user (e.g. if the
+user logged into the site via an API like [[[credential-management-1]]]).
 
 </section>
 
@@ -2346,16 +2286,24 @@ Some of the definitions in this document build on top of the work in
 [[[tracking-dnt]]].
 
 The following people, in alphabetical order of their first name, were instrumental
-in producing this document:
+in producing this document and made invaluable contributions:
 Amy Guy,
+Ben Savage,
 Chris Needham,
 Christine Runnegar,
 Dan Appelquist,
 Don Marti,
+François Daoust,
+Ian Jacobs,
+Irene Knapp,
 Jonathan Kingston,
+Kyle Den Hartog,
+Mark Nottingham,
+Martin Thomson,
 Nick Doty,
 Peter Snyder,
 Sam Weiler,
+Shubhie Panicker,
 Tess O'Connor, and
 Wendy Seltzer.
 
