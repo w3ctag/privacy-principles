@@ -1306,13 +1306,23 @@ people than it would have been through other methods.
 
 ## Sensitive Information {#hl-sensitive-information}
 
-Contributes to [=correlation=], [=identification=], [=secondary use=], and
-[=disclosure=].
+<div class="practice">
+<p>
+  <span class="practicelab" id="principle-sensitive">
+    System designers
+    should not assume that particular information is or is not sensitive.
+    Whether information is considered sensitive can vary depending on a
+    [=person=]'s circumstances and the [=context=] of an interaction, and it can
+    change over time.
+  </span>
+</p>
+</div>
 
 Many pieces of information about someone could cause privacy harms if disclosed.
 For example:
 
 * Their location.
+* Language preferences.
 * Any [=identifiers=] associated with them.
 * Video or audio from the their camera or microphone.
 * The content of certain files on their filesystem.
@@ -1322,16 +1332,20 @@ For example:
 * [Whether they are using assistive technology.](https://w3ctag.github.io/design-principles/#do-not-expose-use-of-assistive-tech)
 
 A particular piece of information may have different sensitivity for different
-people. Language preferences, for example, might typically seem innocent, but
-also can be an indicator of belonging to an ethnic minority. Precise location
-information can be extremely sensitive (because it's identifying, because it
-allows for in-person intrusions, because it can reveal detailed information
-about a person's life) but it might also be public and not sensitive at all, or
-it might be low-enough granularity that it is less sensitive for many
-people. Beware that reducing granularity of location information might not hide precise location information from
-an [=actor=], particularly if location information is repeatedly requested over time or if
-the [=actor=] has other relevant information about the [=person=] [<a
+people. People can become vulnerable if sensitive information about them is,
+or is likely to be, exposed; see [[[#vulnerability]]].
+
+<aside class="example">
+Precise location information can be extremely sensitive because it's
+identifying, because it allows for in-person intrusions, because it can reveal
+detailed information about a person's life; but it might also be public and not
+sensitive at all, or it might be low-enough granularity that it is less
+sensitive for many people. Beware that reducing granularity of location
+information might not hide precise location information from an [=actor=],
+particularly if location information is repeatedly requested over time or if the
+[=actor=] has other relevant information about the [=person=] [<a
 data-cite="RFC6772#section-13.5">RFC6772</a>].
+</aside>
 
 When considering whether a class of information is likely to be sensitive to
 a person, consider at least these factors:
@@ -1341,7 +1355,9 @@ a person, consider at least these factors:
   [[[fingerprinting-guidance]]]);
 * whether it discloses substantial (including intimate details or inferences)
   information about the person using the system or other people;
+* whether it can be used to infer particular characteristics that put the person at risk of greater harm;
 * whether it enables other threats, like intrusion.
+
 
 ## Data Rights {#data-rights}
 
@@ -1590,7 +1606,7 @@ helps different users to react appropriately.
   <p>
     <span class="practicelab" id="abuse-reporting">
       Systems that allow for communicating on the Web must provide an
-      effective capability to report abuse. 
+      effective capability to report abuse.
         </span>
   </p>
 </div>
@@ -1667,72 +1683,71 @@ Examples of mitigations include:
 
 <div class="issue">This section is still being refined. We expect additional principles to be added.</div>
 
-An individual may not realise when they disclose personal data that
-they are vulnerable or could become vulnerable. Some individuals
-may be more vulnerable to privacy risks or harm as a result of
-collection, misuse, loss or theft of personal data because of
-their attributes, interests, opinions or behaviour. Others may be
-vulnerable because of the situation or setting (e.g., where there
-is information asymmetry or other power imbalances), or they lack
-the capacity to fully assess the risks, or because choices are
-not presented in an easy-to-understand meaningful way (e.g., [=deceptive
-patterns=]). Yet others may be vulnerable because they have not been
-consulted about their privacy needs and expectations, or considered
-in the decisions about the design of the product of service.
-
-Sometimes communities of individuals are classed as “vulnerable”,
-typically children and the elderly, but anyone could become privacy
-vulnerable in a given context. Additional privacy protections may
-be needed for personal data of vulnerable individuals or sensitive
-information which could cause someone to become vulnerable if their
-personal data is collected, used or shared.
-
-Even in populations of individuals classed as “vulnerable” (such
-as children), each individual is unique with their own desires and
-expectations for privacy. While sometimes others can help vulnerable
-individuals assess privacy risks and make decisions about privacy
-(such as parents, guardians and peers), everyone has their own
-right to privacy.
-
 <div class="practice">
 <p>
   <span class="practicelab" id="principle-vulnerability">
-[=User agents=] and [=sites=] should allow for gracefully degraded
-user experience where some features or functionality may not be
-available because users have chosen stronger privacy protections
-(e.g., blocking tracking elements, sensor data or information about
-installed software or connected devices).
+[=User agents=] and [=sites=] should continue working if a user chooses
+stronger privacy protections, to help to protect vulnerable people.
+Specifications, implementations, and sites should allow for graceful
+degradation of features which may be incompatible with stronger
+privacy protections.
   </span>
 </p>
 </div>
 
+Sometimes particular groups are classed as “vulnerable” (e.g. children, or the
+elderly), but anyone could become privacy vulnerable in a given context.
+A [=person=] may not realise when they disclose personal data that
+they are vulnerable or could become vulnerable.
+
+Some individuals may be more vulnerable to privacy risks or harm as a result of
+collection, misuse, loss or theft of personal data because:
+
+* of their attributes, interests, opinions or behaviour;
+* of the situation or setting (e.g. where there is information asymmetry or other
+power imbalances);
+* they lack the capacity to fully assess the risks;
+* choices are not presented in an easy-to-understand meaningful way (e.g. [=deceptive
+patterns=]);
+* they have not been consulted about their privacy needs and expectations;
+* they have not been considered in the decisions about the design of the
+product or service.
+
+Additional privacy protections may be needed for personal data of vulnerable
+people or [sensitive information](#hl-sensitive-information) which could cause
+someone to become vulnerable if their personal data is collected, used or
+shared (e.g. blocking tracking elements, sensor data or information about
+installed software or connected devices).
+
+While sometimes others can help vulnerable people assess privacy risks and
+make decisions about privacy (such as parents, [=guardians=] and peers), everyone
+has their own right to privacy.
+
 ### Guardians {#guardians}
 
-<div class="practice">
-<span class="practicelab" id="principle-guardians-have-responsibilities">
-A [=user agent=] may only provide information about a [=ward=] to a [=guardian=] for the purpose of
-helping that [=guardian=] uphold their responsibilities to their [=ward=]. This system must include
-measures to help [=wards=] who realize that their [=guardian=] isn't acting in the [=ward=]'s
-interest.</span>
-</div>
-
-
-Some classes of vulnerable people tend to be unable to make good decisions about their own web use,
-and need a <dfn>guardian</dfn> to help them. Children are a widely recognized example of this class,
-with their parents often acting as their [=guardians=]. A person with a [=guardian=] is known as
+Some [vulnerable people](#vulnerability) need a <dfn>guardian</dfn> to help them make good
+decisions about their own web use (e.g. children, with their parents often
+acting as their [=guardians=]). A person with a [=guardian=] is known as
 a <dfn>ward</dfn>.
 
-Many legal systems treat these guardianship relationships as a set of rights that the [=guardian=]
-possesses. We prefer to instead think of the [=ward=] having a right to make informed decisions and
-exercise their autonomy. Their [=guardian=] then has an _obligation_ to help their [=ward=] do so
-when the [=ward=]'s abilities aren't sufficient, even if that conflicts with the [=guardian=]'s
-desires. In practice, many [=wards=] discover that their [=guardian=] is not making decisions in the
-[=ward=]'s best interest, and it's critical that such [=wards=] have a way to escape their
-misbehaving guardian.
+The [=ward=] has a right to make informed decisions and exercise their
+autonomy regarding their right to privacy. Their [=guardian=] has an
+_obligation_ to help their [=ward=] do so when the [=ward=]'s abilities aren't
+sufficient, even if that conflicts with the [=guardian=]'s desires. In
+practice, many [=guardians=] do not make decisions in their [=ward=]'s best
+interest, and it's critical that web platform technologies do not exacerbate
+the risks inherant in this situation.
 
-Historically, the Web has provided exactly this escape route, and [=user agents=] should preserve
-that feature by correctly balancing a benevolent [=guardian=]'s need to protect their [=ward=] from
-dangers against other [=wards=]' need to protect themselves from their misbehaving [=guardians=].
+[=User agents=] should balance a benevolent [=guardian=]'s need to protect
+their [=ward=] from dangers, against a [=wards=]' need to protect themselves
+if they have a malicious [=guardian=].
+
+[=User agents=] can protect vulnerable [=wards=] by complying with the principles in
+[[[#device-administrators]]], and may only provide information about a [=ward=]
+to a [=guardian=] for the purpose of helping that [=guardian=] uphold their
+responsibilities to their [=ward=]. The mechanism for doing so must include
+measures to help [=wards=] who realize that their [=guardian=] isn't acting in
+the [=ward=]'s interest.
 
 <aside class="example" id="example-protective-parent" title="Protective parents">
 
@@ -1748,12 +1763,6 @@ homophobic or transphobic parent, that parent might have configured their [=user
 block or inform the parent when the child visits web pages about LGBT-related subjects. The [=user
 agent=] needs to warn the child about how it's configured so that the child can know to ask a better
 [=guardian=] for access to the help they need.
-
-</aside>
-
-<aside class="issue">
-
-Add crosslinks to [[[#device-administrators]]].
 
 </aside>
 
@@ -2223,7 +2232,7 @@ data-cite="RFC6973#section-5.2.4">RFC6973§5.2.4</a>.
     <a
 data-cite="RFC6973#section-5.2.5">RFC6973§5.2.5</a>.
 
-<dt><dfn>Identification</dfn>
+<dt>Identification
 
 <dd>Identification is the linking of information to a particular individual, even if the information
 isn't linked to that individual's real-world identity (e.g. their legal name, address, government ID
@@ -2248,7 +2257,7 @@ data-cite="RFC6973#section-5.1.4">RFC6973§5.1.4</a>.
 <dd>The inference, evaluation, or prediction of an individual's attributes, interests, or
 behaviours.</dd>
 
-<dt><dfn>Secondary Use</dfn>
+<dt>Secondary Use
 
 <dd> Secondary use is the use of collected information about an individual without
     the individual’s consent for a purpose different from that for which the
