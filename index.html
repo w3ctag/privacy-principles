@@ -1359,6 +1359,10 @@ to ensure the API exposes information in [=appropriate=] ways.
   For example, the URLs of resources, the timing of link clicks, and the referrer chain within a
   single origin are not guarded by anything; the scroll position is guarded by the setting to turn off
   JavaScript; and access to the camera or geolocation are guarded by permission prompts.
+  
+  When the `<img loading=lazy>` attribute was added, the designers realized
+  that it exposed the scroll position, so it's also guarded by the setting to turn
+  off JavaScript.
 </aside>
 
 New APIs which add new ways of getting information must be
