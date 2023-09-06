@@ -1192,115 +1192,100 @@ to their users.
 
 ## Information access {#information}
 
-The many APIs available to websites expose lots of data that can be combined into
-information about people, web servers, and other things. We can divide that
-information into three categories:
-
-1. Information that's fine to expose, for example because a person or group with
-    sufficient authority intended to expose that information or to do something that
-    necessarily exposes the information, or because it's not about people at all. For
-    example:
-
-    * The geolocation and camera APIs ask whether a person wants to expose their data.
-    * The URL a person is visiting must be sent to a server in order to navigate to that
-       URL, and known private-information-retrieval methods are too expensive to avoid that
-       exposure.
-    * The distribution of [[[largest-contentful-paint]]] timings for a website is about a website
-       rather than about the people browsing it, even if the data that informs that
-       measure can also reveal information about people.
-
-1. Information that we don't want to expose and have a plausible plan for removing access
-    to. For example, browsers are gradually removing the ability to join identities
-    between different [=partitions=].
-
-1. Information that we'd rather not expose, but that we don't have a plausible plan for
-    removing access to. For example:
-
-    * Some users are disappointed that the page they're visiting can discover which link
-        they clicked to leave that page. We can't block that information
-        because the page can use <a data-cite="RFC9110#status.3xx">HTTP redirects</a> to
-        learn it, and redirection is a core feature of the web.
-    * Some users are disappointed that a page with permission to run JavaScript can record
-        their pattern of interaction with that page. However, the page does this by using
-        the same events it would use to make the page interactive, so we can't block this
-        information access either.
-
-Some functionality of the web has historically been provided using functional primitives (e.g.
-third-party cookies) that can undermine people's privacy. As explained in <em>Improving the web
-without third-party cookies</em> ([[?web-without-3p-cookies]]), "<em>It is better to approach [these
-use cases] with replacement technologies that are designed-for-purpose and built to respect user
-privacy.</em>"
-
-The following subsections discuss how to review an API proposal that exposes data that
-provides a new way to infer each of the above categories of information. They explain how
-to <a data-cite="design-principles#leave-the-web-better">leave the web better than you
-found it</a>.
-
-### Handling acceptable information {#acceptable-information}
-
 <div class="practice">
-  <span class="practicelab">New APIs can add ways of getting acceptable
-  information that are guarded at least as strongly as the existing ways.</span>
+  <span class="practicelab">New Web APIs must guard users' information at least
+  as well as existing APIs that are expected to stay in the web platform.</span>
 </div>
 
-Acceptable information exposure is always qualified by the (possibly empty) set of
-user-controlled settings or permissions that <dfn data-lt="access guard">guard</dfn> access to it.
-For example, the URLs of resources, the timing of link clicks, and the referrer chain within a
-single origin are not guarded by anything; the scroll position is guarded by the setting to turn off
-JavaScript; and access to the camera or geolocation are guarded by permission prompts.
+The many APIs available to websites expose lots of data that can be combined
+into information about people, web servers, and other things.
+
+User-controlled settings or permissions can <dfn data-lt="access guard">guard
+access</dfn> to data on the web. When designing a Web API, use [=access guards=]
+to ensure the API exposes information in [=appropriate=] ways.
+
+<aside class="example">
+  For example, the URLs of resources, the timing of link clicks, and the referrer chain within a
+  single origin are not guarded by anything; the scroll position is guarded by the setting to turn off
+  JavaScript; and access to the camera or geolocation are guarded by permission prompts.
+  
+  When the `<img loading=lazy>` attribute was added, the designers realized
+  that it exposed the scroll position, so it's also guarded by the setting to turn
+  off JavaScript.
+</aside>
+
+New APIs which add new ways of getting information must be
+[=access guards|guarded=] at least as strongly as the existing ways.
 
 Information that would be acceptable to expose under one set of [=access guards=] might be
-unacceptable under another set, so when an API designer intends to explain that their new
+unacceptable under another set. When an API designer intends to explain that their new
 API is acceptable because an existing acceptable API already exposes the same information,
 they must be careful to ensure that their new API is only available under a set of guards
-that's at least as strict. Without those guards, they need to make the argument from
+that are at least as strict. Without those guards, they need to make the argument from
 scratch, without relying on the existing API.
 
-### Handling information that's being removed {#unacceptable-information}
+If existing APIs provide access to some information, but there is a plan to
+change those APIs to prevent that access, new APIs must not be added that
+provide that same information, unless they include additional
+[=access guards=] that ensure access is [=appropriate=].
 
-<div class="practice">
-  <span class="practicelab">If existing APIs provide access to some information, but
-  we have a plan to change those APIs to prevent that access, new APIs must not be added
-  that provide that same information without extra [=access guards=] that make the access to the
-  information acceptable.</span>
-</div>
+For example, browsers are gradually removing the ability to join identities
+between different [=partitions=]. It is important that new APIs do not add
+features which re-enable [=cross-context recognition=].
 
-### Handling information we can't completely block {#sketchy-information}
+### Unavoidable information exposure {#unavoidable-information-exposure}
 
-<div class="practice">
-  <span class="practicelab">New APIs that provide access to undesirable information should
-  not make that information easier to access, unless they add [=access guards=] that make the
-  information acceptable.</span>
-</div>
+Some functionality of the web has historically been provided using features
+that can be used to undermine people's privacy. It
+is not yet possible to remove access to all of the information that it would be
+better not to expose.
 
+<aside class="example">
+  Some users are disappointed that the page they're visiting can discover which link
+  they clicked to leave that page. We can't block that information
+  because the page can use <a data-cite="RFC9110#status.3xx">HTTP redirects</a> to
+  learn it, and redirection is a core feature of the web.
 
-1. If future web platform changes make it possible to remove other access to the
-   undesirable information, it should be clear how to extend those changes to the proposed
-   API.
+  Some users are disappointed that a page with permission to run JavaScript can record
+  their pattern of interaction with that page. However, the page does this by using
+  the same events it would use to make the page interactive, so we can't block this
+  information access either.
+</aside>
 
-1. If an existing browser does block access to the undesirable information, perhaps by
-   breaking some experiences on the Web that other browsers don't wish to break, it should
-   be clear how the more-private browser can also prevent the new API from exposing that
-   information without breaking additional sites or user experiences.
+New APIs that unavoidably provide access to this kind of information should
+not make that information easier to access compared to existing comparable
+web platform features.
 
-1. When a developer is trying to access the undesirable information, a new API should be at least as
-   difficult to use as the existing APIs. For example, it shouldn't require less code, less
-   maintenance, or less runtime cost.
+Specifications describing these APIs should also:
 
-The third consideration can be surprising. In many other cases, we can think in terms of a
-threat model and use designs familiar from security to make information either available or
-unavailable. In this third case, however, we have to think more economically and consider the
-cost to a website of inferring the relevant information from whatever data the web's APIs
-expose. If the cost of inferring the undesirable information is high, fewer websites will
-gather it, and privacy will be generally better. If a new API makes the cost go down, more
-websites will start inferring the information, and overall privacy will worsen.
+* make it clear how to remove this access in the event that future web
+  platform changes make it possible to remove other access to the same
+  information.
+* make it clear how any [=user agent=] which blocks access to this kind of
+  information (perhaps by breaking some experiences on the web that
+  other browsers don't wish to break) can prevent the new API from exposing that
+  information without breaking additional sites or user experiences.
 
-Usually, acceptable APIs in this category will be designed to expose data that makes some
-acceptable information easier to discover. For example, they might reveal a performance
-metric for a website directly instead of requiring it to be computed from the timing of
-{{GlobalEventHandlers/onload}} events. The challenge for the new API's designer is to
-ensure that the data it exposes doesn't make it cheaper to compute information about
-people than it would have been through other methods.
+<aside class="example">
+  Usually, these APIs will be designed to expose data that enables some
+  [=appropriate=] information discovery, as recommended by [[[web-without-3p-cookies]]]:
+  
+  > It is better to approach [these use cases] with replacement technologies
+  that are designed-for-purpose and built to respect user privacy.
+
+  For example, they might reveal a performance metric for a website directly
+  instead of requiring it to be computed from the timing of
+  {{GlobalEventHandlers/onload}} events.
+
+  When designing an API like this, aim to ensure that the data it exposes
+  doesn't make it cheaper to compute information about people than it would
+  have been through other methods.
+
+  > It is better to approach [these use cases] with replacement technologies
+  that are designed-for-purpose and built to respect user privacy.
+  [[?web-without-3p-cookies]]
+</aside>
+
 
 ## Sensitive Information {#hl-sensitive-information}
 
