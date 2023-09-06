@@ -1083,25 +1083,31 @@ according to their [=users=]' wishes.
 
 ## Data Minimization {#data-minimization}
 
-<div class="practice">
-<span class="practicelab">Sites, user agents, and other actors should minimize the amount of
-<a>personal data</a> they transfer between actors on the Web.</span>
-</div>
+<div class="practice"><span class="practicelab">[=Sites=], [=user agents=], and other [=actors=]
+should minimize the amount of [=personal data=] they transfer.</span></div>
 
-Data minimization limits the risks of data being disclosed or misused, and it also helps
-user agents more meaningfully explain the decisions their users need to make.
-
-<div class="practice">
-<span class="practicelab">Web APIs should be designed to minimize the amount of data that sites need
+<div class="practice"><span class="practicelab">Web APIs should be designed to minimize the amount of data that sites need
 to request to carry out their users' goals and provide granularity and user controls over <a>personal
-data</a> that is communicated to sites.</span>
+data</a> that is communicated to sites.</span></div>
+
+<div class="practice">
+<span class="practicelab">In maintaining duties of [=duty of
+protection|protection=], [=duty of discretion|discretion=] and [=duty of loyalty|loyalty=], user agents should share data only when it either is needed
+to satisfy a user's immediate goals or aligns with the user's wishes and
+interests.</span>
 </div>
 
-Because <a>personal data</a> may be sensitive in unexpected ways, or have risks of future uses that could be
-unexpected or harmful, minimization as a principle applies to personal data that is not currently
-known to be identifying, sensitive, or otherwise potentially harmful.
+Data minimization limits the risks of data being disclosed or misused. It also
+helps [=user agents=] and other [=actors=] more meaningfully explain the decisions their users need
+to make. For more information, see [[[Data-Minimization]]].
 
-Note that this principle was further explored in an earlier TAG draft on [[[Data-Minimization]]].
+Web APIs should be designed to minimize the amount of data that sites need to
+request to pursue their users' goals and interests. They should also provide granular
+user controls over [=personal data=] that is communicated to [=sites=].
+
+The principle of data minimization applies to all [=personal data=], even if it
+is not known to be identifying, sensitive, or otherwise harmful. See:
+[[[#hl-sensitive-information]]].
 
 <aside class="example" id="example-per-site-email">
 
@@ -1116,15 +1122,11 @@ the data exposed, is to autogenerate a new email address for each context.
 
 ### Ancillary uses
 
-<div class="practice">
-<span class="practicelab">In maintaining duties of [=duty of
-protection|protection=], [=duty of discretion|discretion=] and [=duty of
-loyalty|loyalty=], user agents should share data only when it either is needed
-to satisfy a user's immediate goals or aligns with the user's wishes and
-interests.</span>
-</div>
+In order to uphold the principle of [[[#data-minimization]]], [=sites=] and
+[=user agents=] should seek to understand and respect people's goals and preferences about
+use of data about them.
 
-Websites sometimes use data in ways that aren't needed for the user's immediate
+[=Sites=] sometimes use data in ways that aren't needed for the user's immediate
 goals. These uses are known as <dfn data-lt="ancillary use">ancillary uses</dfn>,
 and data that is primarily useful for [=ancillary uses=] is <dfn>ancillary data</dfn>.
 
@@ -1133,12 +1135,12 @@ and data that is primarily useful for [=ancillary uses=] is <dfn>ancillary data<
   performance measurements, and software updates.
 </aside>
 
-Different users will want to share different kinds and amounts of [=ancillary data=]
-with websites, including possibly no [=ancillary data=].
+Different [=users=] will want to share different kinds and amounts of
+[=ancillary data=] with [=sites=]. Some [=people=] will not want to share any
+[=ancillary data=] at all.
 
-Aggregation or [=de-identified|de-identification=] of data may make users
-interested in sharing [=ancillary data=] in cases where the user was
-otherwise not interested. These techniques may be especially useful and important
+Users may be willing to share [=ancillary data=] if it is aggregated with
+the data of other users, or [=de-identified=]. This can be useful
 when [=ancillary data=] contributes to a collective benefit in a way
 that reduces privacy threats to individuals (see <a href="#principle-collective-privacy">collective
 privacy</a>).
@@ -1150,33 +1152,34 @@ privacy</a>).
   hide the contents of personal data. But even
   with those protections, some people may prefer not to participate in some kinds of measurement.
 
-  Ongoing work on privacy-preserving technologies in the <abbr title="Internet Engineering Task
+  There is ongoing work on these kinds of technologies in the <abbr title="Internet Engineering Task
   Force">IETF</abbr> <a href="https://datatracker.ietf.org/wg/ppm/about/"><abbr
   title="privacy-preserving measurement">ppm</abbr></a>, <abbr title="Internet Research Task
   Force">IRTF</abbr> <a href="https://datatracker.ietf.org/rg/pearg/about/"><abbr title="Privacy
   Enhancements and Assessments Research Group">pearg</abbr></a>, and W3C <a
   href="https://patcg.github.io/"><abbr title="Private Advertising Technology Community
-  Group">PATCG</abbr></a> groups addresses relevant questions.
+  Group">PATCG</abbr></a> groups.
 </aside>
-
-<div class="practice">
-  <span class="practicelab">Sites and user agents should seek to understand and respect people's
-  goals and preferences about use of data about them.</span>
-</div>
 
 [=User agents=] should aggressively <a href="#data-minimization">minimize</a> [=ancillary
 data=] and should avoid burdening the user with additional [=privacy labor=]
 when deciding what [=ancillary data=] to expose. To that end, user agents may
 employ user research, solicitation of general preferences, and heuristics about
-sensitivity of data or trust in a particular context. To help sites understand
-user preferences, user agents can provide browser-configurable signals to
-directly communicate common user preferences (such as a [=global opt-out=]).
+sensitivity of data or trust in a particular [=context=].
 
-<div class="practice">
-  <span class="practicelab">Specifications that define functionality for telemetry and analytics
-  should explicitly note the telemetry and analytics use to facilitate modal or general user
-  choices.</span>
-</div>
+To help [=sites=] understand user preferences, user agents can provide
+browser-configurable signals to directly communicate common user preferences
+(such as a [=global opt-out=]).
+
+Data exposed for the [=ancillary uses=] of telemetry and analytics may reveal
+information about user configuration, device, environment, or behavior that
+could be used as part of <a>browser fingerprinting</a> to identify users across
+sites. Revealing user preferences or other heuristics in providing or disabling
+functionality could also contribute to a browser fingerprint.
+
+Functionality for telemetry and analytics should be explicitly noted by
+specification authors, to help [=user agents=] provide configuration options
+to their users.
 
 <aside class="example">
   Sites and browsers wish to collect telemetry data to determine how frequently features are used or
@@ -1186,11 +1189,6 @@ directly communicate common user preferences (such as a [=global opt-out=]).
   telemetry and reporting APIs based on the user's choice.
 </aside>
 
-Data exposed for [=ancillary uses=] including telemetry and analytics may
-often reveal characteristics of user configuration, device, environment, or behavior that could be
-used as part of <a>browser fingerprinting</a> to identify users across sites. Revealing user
-preferences or other heuristics in providing or disabling functionality could also contribute to a
-browser fingerprint.
 
 ## Information access {#information}
 
