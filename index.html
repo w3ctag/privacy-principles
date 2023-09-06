@@ -676,11 +676,13 @@ Conceptually, a [=global opt-out=] mechanism is an automaton operating as part o
 by pressing an [=opt-out=] button (or a similar expression of the [=person=]'s rights) with every
 interaction that the [=person=] has with a site. (For instance, the [=person=] may be objecting to [=processing=]
 based on legitimate interest, withdrawing [=consent=] to specific [=purposes=], or requesting that
-their data not be sold or shared.) It should be noted that, since a [=global opt-out=] signal is
-reaffirmed automatically with every interaction, it will take precedence in terms of specificity
-over any general [=consent=] given to a site's processing, and will only be superseded by specific
-[=consent=] obtained through a deliberate action taken by the user with the intent of overriding
-their global opt-out.
+their data not be sold or shared.) The [=user=] is effectively delegating the expression
+of their [=opt-out=] to their [=user agent=], which helps rectify [=automation asymmetry=].
+
+Under this model, a [=global opt-out=] signal should not be understood as a decision that a
+[=person=] made a while ago when they flipped a setting or chose to use a specific
+[=user agent=] but rather as a preference that they have chosen to automatically reaffirm with
+every interaction with the site.
 
 One implementation strategy for [=opt-outs=] or other <a href="#data-rights">data rights</a> is
 to assign [=people=] stable [=identifiers=] and to maintain a central registry to map these
@@ -778,6 +780,13 @@ may be well known (e.g. membership in a dissidents movement under authoritarian 
 is the fitness app Strava that did not reveal individual behaviour or legal identity but published heat
 maps of popular running routes. In doing so, it revealed secret US bases around which military
 personnel took frequent runs ([[?Strava-Debacle]], [[?Strava-Reveal-Military]]).
+
+People's privacy interests may also be affected when information about a small group of people is
+processed, even if no individualized data is exposed. For example, browsing activity of the students
+in a classroom may be sensitive even if their teacher doesn't learn exactly which student accessed a
+particular resource about a health issue. Targeting presentation of information to a small group may
+also be inappropriate: for example, targeting messages to people who visited a particular clinic or
+are empaneled on a particular jury may be invasive even without uniquely individual data.
 
 When [=people=] do not know that they are members of a group, when they cannot easily find other
 members of the group so as to advocate for their rights together, or when they cannot easily
@@ -1068,25 +1077,31 @@ according to their [=users=]' wishes.
 
 ## Data Minimization {#data-minimization}
 
-<div class="practice">
-<span class="practicelab">Sites, user agents, and other actors should minimize the amount of
-<a>personal data</a> they transfer between actors on the Web.</span>
-</div>
+<div class="practice"><span class="practicelab">[=Sites=], [=user agents=], and other [=actors=]
+should minimize the amount of [=personal data=] they transfer.</span></div>
 
-Data minimization limits the risks of data being disclosed or misused, and it also helps
-user agents more meaningfully explain the decisions their users need to make.
-
-<div class="practice">
-<span class="practicelab">Web APIs should be designed to minimize the amount of data that sites need
+<div class="practice"><span class="practicelab">Web APIs should be designed to minimize the amount of data that sites need
 to request to carry out their users' goals and provide granularity and user controls over <a>personal
-data</a> that is communicated to sites.</span>
+data</a> that is communicated to sites.</span></div>
+
+<div class="practice">
+<span class="practicelab">In maintaining duties of [=duty of
+protection|protection=], [=duty of discretion|discretion=] and [=duty of loyalty|loyalty=], user agents should share data only when it either is needed
+to satisfy a user's immediate goals or aligns with the user's wishes and
+interests.</span>
 </div>
 
-Because <a>personal data</a> may be sensitive in unexpected ways, or have risks of future uses that could be
-unexpected or harmful, minimization as a principle applies to personal data that is not currently
-known to be identifying, sensitive, or otherwise potentially harmful.
+Data minimization limits the risks of data being disclosed or misused. It also
+helps [=user agents=] and other [=actors=] more meaningfully explain the decisions their users need
+to make. For more information, see [[[Data-Minimization]]].
 
-Note that this principle was further explored in an earlier TAG draft on [[[Data-Minimization]]].
+Web APIs should be designed to minimize the amount of data that sites need to
+request to pursue their users' goals and interests. They should also provide granular
+user controls over [=personal data=] that is communicated to [=sites=].
+
+The principle of data minimization applies to all [=personal data=], even if it
+is not known to be identifying, sensitive, or otherwise harmful. See:
+[[[#hl-sensitive-information]]].
 
 <aside class="example" id="example-per-site-email">
 
@@ -1101,15 +1116,11 @@ the data exposed, is to autogenerate a new email address for each context.
 
 ### Ancillary uses
 
-<div class="practice">
-<span class="practicelab">In maintaining duties of [=duty of
-protection|protection=], [=duty of discretion|discretion=] and [=duty of
-loyalty|loyalty=], user agents should share data only when it either is needed
-to satisfy a user's immediate goals or aligns with the user's wishes and
-interests.</span>
-</div>
+In order to uphold the principle of [[[#data-minimization]]], [=sites=] and
+[=user agents=] should seek to understand and respect people's goals and preferences about
+use of data about them.
 
-Websites sometimes use data in ways that aren't needed for the user's immediate
+[=Sites=] sometimes use data in ways that aren't needed for the user's immediate
 goals. These uses are known as <dfn data-lt="ancillary use">ancillary uses</dfn>,
 and data that is primarily useful for [=ancillary uses=] is <dfn>ancillary data</dfn>.
 
@@ -1118,12 +1129,12 @@ and data that is primarily useful for [=ancillary uses=] is <dfn>ancillary data<
   performance measurements, and software updates.
 </aside>
 
-Different users will want to share different kinds and amounts of [=ancillary data=]
-with websites, including possibly no [=ancillary data=].
+Different [=users=] will want to share different kinds and amounts of
+[=ancillary data=] with [=sites=]. Some [=people=] will not want to share any
+[=ancillary data=] at all.
 
-Aggregation or [=de-identified|de-identification=] of data may make users
-interested in sharing [=ancillary data=] in cases where the user was
-otherwise not interested. These techniques may be especially useful and important
+Users may be willing to share [=ancillary data=] if it is aggregated with
+the data of other users, or [=de-identified=]. This can be useful
 when [=ancillary data=] contributes to a collective benefit in a way
 that reduces privacy threats to individuals (see <a href="#principle-collective-privacy">collective
 privacy</a>).
@@ -1135,33 +1146,34 @@ privacy</a>).
   hide the contents of personal data. But even
   with those protections, some people may prefer not to participate in some kinds of measurement.
 
-  Ongoing work on privacy-preserving technologies in the <abbr title="Internet Engineering Task
+  There is ongoing work on these kinds of technologies in the <abbr title="Internet Engineering Task
   Force">IETF</abbr> <a href="https://datatracker.ietf.org/wg/ppm/about/"><abbr
   title="privacy-preserving measurement">ppm</abbr></a>, <abbr title="Internet Research Task
   Force">IRTF</abbr> <a href="https://datatracker.ietf.org/rg/pearg/about/"><abbr title="Privacy
   Enhancements and Assessments Research Group">pearg</abbr></a>, and W3C <a
   href="https://patcg.github.io/"><abbr title="Private Advertising Technology Community
-  Group">PATCG</abbr></a> groups addresses relevant questions.
+  Group">PATCG</abbr></a> groups.
 </aside>
-
-<div class="practice">
-  <span class="practicelab">Sites and user agents should seek to understand and respect people's
-  goals and preferences about use of data about them.</span>
-</div>
 
 [=User agents=] should aggressively <a href="#data-minimization">minimize</a> [=ancillary
 data=] and should avoid burdening the user with additional [=privacy labor=]
 when deciding what [=ancillary data=] to expose. To that end, user agents may
 employ user research, solicitation of general preferences, and heuristics about
-sensitivity of data or trust in a particular context. To help sites understand
-user preferences, user agents can provide browser-configurable signals to
-directly communicate common user preferences (such as a [=global opt-out=]).
+sensitivity of data or trust in a particular [=context=].
 
-<div class="practice">
-  <span class="practicelab">Specifications that define functionality for telemetry and analytics
-  should explicitly note the telemetry and analytics use to facilitate modal or general user
-  choices.</span>
-</div>
+To help [=sites=] understand user preferences, user agents can provide
+browser-configurable signals to directly communicate common user preferences
+(such as a [=global opt-out=]).
+
+Data exposed for the [=ancillary uses=] of telemetry and analytics may reveal
+information about user configuration, device, environment, or behavior that
+could be used as part of <a>browser fingerprinting</a> to identify users across
+sites. Revealing user preferences or other heuristics in providing or disabling
+functionality could also contribute to a browser fingerprint.
+
+Functionality for telemetry and analytics should be explicitly noted by
+specification authors, to help [=user agents=] provide configuration options
+to their users.
 
 <aside class="example">
   Sites and browsers wish to collect telemetry data to determine how frequently features are used or
@@ -1171,133 +1183,124 @@ directly communicate common user preferences (such as a [=global opt-out=]).
   telemetry and reporting APIs based on the user's choice.
 </aside>
 
-Data exposed for [=ancillary uses=] including telemetry and analytics may
-often reveal characteristics of user configuration, device, environment, or behavior that could be
-used as part of <a>browser fingerprinting</a> to identify users across sites. Revealing user
-preferences or other heuristics in providing or disabling functionality could also contribute to a
-browser fingerprint.
 
 ## Information access {#information}
 
-The many APIs available to websites expose lots of data that can be combined into
-information about people, web servers, and other things. We can divide that
-information into three categories:
-
-1. Information that's fine to expose, for example because a person or group with
-    sufficient authority intended to expose that information or to do something that
-    necessarily exposes the information, or because it's not about people at all. For
-    example:
-
-    * The geolocation and camera APIs ask whether a person wants to expose their data.
-    * The URL a person is visiting must be sent to a server in order to navigate to that
-       URL, and known private-information-retrieval methods are too expensive to avoid that
-       exposure.
-    * The distribution of [[[largest-contentful-paint]]] timings for a website is about a website
-       rather than about the people browsing it, even if the data that informs that
-       measure can also reveal information about people.
-
-1. Information that we don't want to expose and have a plausible plan for removing access
-    to. For example, browsers are gradually removing the ability to join identities
-    between different [=partitions=].
-
-1. Information that we'd rather not expose, but that we don't have a plausible plan for
-    removing access to. For example:
-
-    * Some users are disappointed that the page they're visiting can discover which link
-        they clicked to leave that page. We can't block that information
-        because the page can use <a data-cite="RFC9110#status.3xx">HTTP redirects</a> to
-        learn it, and redirection is a core feature of the web.
-    * Some users are disappointed that a page with permission to run JavaScript can record
-        their pattern of interaction with that page. However, the page does this by using
-        the same events it would use to make the page interactive, so we can't block this
-        information access either.
-
-Some functionality of the web has historically been provided using functional primitives (e.g.
-third-party cookies) that can undermine people's privacy. As explained in <em>Improving the web
-without third-party cookies</em> ([[?web-without-3p-cookies]]), "<em>It is better to approach [these
-use cases] with replacement technologies that are designed-for-purpose and built to respect user
-privacy.</em>"
-
-The following subsections discuss how to review an API proposal that exposes data that
-provides a new way to infer each of the above categories of information. They explain how
-to <a data-cite="design-principles#leave-the-web-better">leave the web better than you
-found it</a>.
-
-### Handling acceptable information {#acceptable-information}
-
 <div class="practice">
-  <span class="practicelab">New APIs can add ways of getting acceptable
-  information that are guarded at least as strongly as the existing ways.</span>
+  <span class="practicelab">New Web APIs must guard users' information at least
+  as well as existing APIs that are expected to stay in the web platform.</span>
 </div>
 
-Acceptable information exposure is always qualified by the (possibly empty) set of
-user-controlled settings or permissions that <dfn data-lt="access guard">guard</dfn> access to it.
-For example, the URLs of resources, the timing of link clicks, and the referrer chain within a
-single origin are not guarded by anything; the scroll position is guarded by the setting to turn off
-JavaScript; and access to the camera or geolocation are guarded by permission prompts.
+The many APIs available to websites expose lots of data that can be combined
+into information about people, web servers, and other things.
+
+User-controlled settings or permissions can <dfn data-lt="access guard">guard
+access</dfn> to data on the web. When designing a Web API, use [=access guards=]
+to ensure the API exposes information in [=appropriate=] ways.
+
+<aside class="example">
+  For example, the URLs of resources, the timing of link clicks, and the referrer chain within a
+  single origin are not guarded by anything; the scroll position is guarded by the setting to turn off
+  JavaScript; and access to the camera or geolocation are guarded by permission prompts.
+
+  When the `<img loading=lazy>` attribute was added, the designers realized
+  that it exposed the scroll position, so it's also guarded by the setting to turn
+  off JavaScript.
+</aside>
+
+New APIs which add new ways of getting information must be
+[=access guards|guarded=] at least as strongly as the existing ways.
 
 Information that would be acceptable to expose under one set of [=access guards=] might be
-unacceptable under another set, so when an API designer intends to explain that their new
+unacceptable under another set. When an API designer intends to explain that their new
 API is acceptable because an existing acceptable API already exposes the same information,
 they must be careful to ensure that their new API is only available under a set of guards
-that's at least as strict. Without those guards, they need to make the argument from
+that are at least as strict. Without those guards, they need to make the argument from
 scratch, without relying on the existing API.
 
-### Handling information that's being removed {#unacceptable-information}
+If existing APIs provide access to some information, but there is a plan to
+change those APIs to prevent that access, new APIs must not be added that
+provide that same information, unless they include additional
+[=access guards=] that ensure access is [=appropriate=].
 
-<div class="practice">
-  <span class="practicelab">If existing APIs provide access to some information, but
-  we have a plan to change those APIs to prevent that access, new APIs must not be added
-  that provide that same information without extra [=access guards=] that make the access to the
-  information acceptable.</span>
-</div>
+For example, browsers are gradually removing the ability to join identities
+between different [=partitions=]. It is important that new APIs do not add
+features which re-enable [=cross-context recognition=].
 
-### Handling information we can't completely block {#sketchy-information}
+### Unavoidable information exposure {#unavoidable-information-exposure}
 
-<div class="practice">
-  <span class="practicelab">New APIs that provide access to undesirable information should
-  not make that information easier to access, unless they add [=access guards=] that make the
-  information acceptable.</span>
-</div>
+Some functionality of the web has historically been provided using features
+that can be used to undermine people's privacy. It
+is not yet possible to remove access to all of the information that it would be
+better not to expose.
 
+<aside class="example">
+  Some users are disappointed that the page they're visiting can discover which link
+  they clicked to leave that page. We can't block that information
+  because the page can use <a data-cite="RFC9110#status.3xx">HTTP redirects</a> to
+  learn it, and redirection is a core feature of the web.
 
-1. If future web platform changes make it possible to remove other access to the
-   undesirable information, it should be clear how to extend those changes to the proposed
-   API.
+  Some users are disappointed that a page with permission to run JavaScript can record
+  their pattern of interaction with that page. However, the page does this by using
+  the same events it would use to make the page interactive, so we can't block this
+  information access either.
+</aside>
 
-1. If an existing browser does block access to the undesirable information, perhaps by
-   breaking some experiences on the Web that other browsers don't wish to break, it should
-   be clear how the more-private browser can also prevent the new API from exposing that
-   information without breaking additional sites or user experiences.
+New APIs that unavoidably provide access to this kind of information should
+not make that information easier to access compared to existing comparable
+web platform features.
 
-1. When a developer is trying to access the undesirable information, a new API should be at least as
-   difficult to use as the existing APIs. For example, it shouldn't require less code, less
-   maintenance, or less runtime cost.
+Specifications describing these APIs should also:
 
-The third consideration can be surprising. In many other cases, we can think in terms of a
-threat model and use designs familiar from security to make information either available or
-unavailable. In this third case, however, we have to think more economically and consider the
-cost to a website of inferring the relevant information from whatever data the web's APIs
-expose. If the cost of inferring the undesirable information is high, fewer websites will
-gather it, and privacy will be generally better. If a new API makes the cost go down, more
-websites will start inferring the information, and overall privacy will worsen.
+* make it clear how to remove this access in the event that future web
+  platform changes make it possible to remove other access to the same
+  information.
+* make it clear how any [=user agent=] which blocks access to this kind of
+  information (perhaps by breaking some experiences on the web that
+  other browsers don't wish to break) can prevent the new API from exposing that
+  information without breaking additional sites or user experiences.
 
-Usually, acceptable APIs in this category will be designed to expose data that makes some
-acceptable information easier to discover. For example, they might reveal a performance
-metric for a website directly instead of requiring it to be computed from the timing of
-{{GlobalEventHandlers/onload}} events. The challenge for the new API's designer is to
-ensure that the data it exposes doesn't make it cheaper to compute information about
-people than it would have been through other methods.
+<aside class="example">
+  Usually, these APIs will be designed to expose data that enables some
+  [=appropriate=] information discovery, as recommended by [[[web-without-3p-cookies]]]:
+
+  > It is better to approach [these use cases] with replacement technologies
+  that are designed-for-purpose and built to respect user privacy.
+
+  For example, they might reveal a performance metric for a website directly
+  instead of requiring it to be computed from the timing of
+  {{GlobalEventHandlers/onload}} events.
+
+  When designing an API like this, aim to ensure that the data it exposes
+  doesn't make it cheaper to compute information about people than it would
+  have been through other methods.
+
+  > It is better to approach [these use cases] with replacement technologies
+  that are designed-for-purpose and built to respect user privacy.
+  [[?web-without-3p-cookies]]
+</aside>
+
 
 ## Sensitive Information {#hl-sensitive-information}
 
-Contributes to [=correlation=], [=identification=], [=secondary use=], and
-[=disclosure=].
+<div class="practice">
+<p>
+  <span class="practicelab" id="principle-sensitive">
+    System designers
+    should not assume that particular information is or is not sensitive.
+    Whether information is considered sensitive can vary depending on a
+    [=person=]'s circumstances and the [=context=] of an interaction, and it can
+    change over time.
+  </span>
+</p>
+</div>
 
 Many pieces of information about someone could cause privacy harms if disclosed.
 For example:
 
 * Their location.
+* Language preferences.
+* Any [=identifiers=] associated with them.
 * Video or audio from the their camera or microphone.
 * The content of certain files on their filesystem.
 * Financial data.
@@ -1306,13 +1309,20 @@ For example:
 * [Whether they are using assistive technology.](https://w3ctag.github.io/design-principles/#do-not-expose-use-of-assistive-tech)
 
 A particular piece of information may have different sensitivity for different
-people. Language preferences, for example, might typically seem innocent, but
-also can be an indicator of belonging to an ethnic minority. Precise location
-information can be extremely sensitive (because it's identifying, because it
-allows for in-person intrusions, because it can reveal detailed information
-about a person's life) but it might also be public and not sensitive at all, or
-it might be low-enough granularity that it is much less sensitive for many
-people.
+people. People can become vulnerable if sensitive information about them is,
+or is likely to be, exposed; see [[[#vulnerability]]].
+
+<aside class="example">
+Precise location information can be extremely sensitive because it's
+identifying, because it allows for in-person intrusions, because it can reveal
+detailed information about a person's life; but it might also be public and not
+sensitive at all, or it might be low-enough granularity that it is less
+sensitive for many people. Beware that reducing granularity of location
+information might not hide precise location information from an [=actor=],
+particularly if location information is repeatedly requested over time or if the
+[=actor=] has other relevant information about the [=person=] [<a
+data-cite="RFC6772#section-13.5">RFC6772</a>].
+</aside>
 
 When considering whether a class of information is likely to be sensitive to
 a person, consider at least these factors:
@@ -1322,9 +1332,9 @@ a person, consider at least these factors:
   [[[fingerprinting-guidance]]]);
 * whether it discloses substantial (including intimate details or inferences)
   information about the person using the system or other people;
-* whether it can be revoked (as in determining whether a permission is
-  necessary);
+* whether it can be used to infer particular characteristics that put the person at risk of greater harm;
 * whether it enables other threats, like intrusion.
+
 
 ## Data Rights {#data-rights}
 
@@ -1416,8 +1426,7 @@ For instance, if the [=controlled de-identified data=] is <em>only</em> being pr
 [=actor=], typical controls include making sure that the [=identifiers=] used in the data are unique
 to that dataset, that any person (e.g. an employee of the [=actor=]) with access to the [=data=] is
 barred (e.g. based on legal terms) from sharing the [=data=] further, and that technical measures
-exist to prevent re-identification or the joining of different data sets involving this [=data=],
-notably against timing or k-anonymity attacks.
+exist to prevent re-identification or the joining of different data sets involving this [=data=].
 
 In general, the goal is to ensure that [=controlled de-identified data=] is used in a manner that
 provides a viable degree of oversight and accountability such that technical and procedural means to
@@ -1443,8 +1452,7 @@ practices would include making sure that:
   from sharing it further;
 
 * technical measures exist to prevent re-identification or the joining of
-  different data sets involving this [=data=], notably against timing or
-  k-anonymity attacks; and
+  different data sets involving this [=data=]; and
 
 * there exist contractual terms between the [=first party=] and [=third party=]
   describing the limited [=purpose=] for which the data is being shared.
@@ -1569,88 +1577,73 @@ The [=user agent=] should explain what the [=administrator=] is going to learn i
 helps different users to react appropriately.
 
 
-## Harassment
+## Protecting web users from abusive behaviour
+
+<div class="practice">
+  <p>
+    <span class="practicelab" id="abuse-reporting">
+      Systems that allow for communicating on the Web must provide an
+      effective capability to report abuse.
+        </span>
+  </p>
+</div>
+<div class="practice">
+  <p>
+    <span class="practicelab" id="abuse-protection">
+      [=User agents=] and [=sites=] must
+      take steps to protect their users from abusive behaviour, and abuse
+      mitigation must be considered when designing web platform features.
+    </span>
+  </p>
+</div>
 
 Online <dfn>harassment</dfn> is the "pervasive or severe targeting of an individual or group online
-through harmful behavior" [[PEN-Harassment]]. Harassment is a prevalent problem on the Web,
-particularly via social media. While harassment may affect any person using the Web, it may be more
+through harmful behavior" [[PEN-Harassment]]. Harassment is a prevalent problem on the web,
+particularly via social media. While harassment may affect any person using the web, it may be more
 severe and its consequences more impactful for LGBTQ people, women, people in racial or ethnic
 minorities, people with disabilities, [=vulnerable people=] and other marginalized groups.
+
+[=Harassment=] is both a violation of privacy itself and can be enabled or
+exacerbated by other violations of privacy.
+
+Harassment may include: sending [=unwanted information=]; directing others to contact
+or bother a person ("dogpiling"); disclosing [sensitive information](#sensitive-information) about a person; posting false information about a person; impersonating a person; insults; threats; and hateful or demeaning speech.
+
+Disclosure of identifying or contact information (including "doxxing") can often be used to cause additional attackers to send persistent [=unwanted information=] that amounts to harassment.
+Disclosure of location information can be used to intrude on a
+person's physical safety or space.
+
+Reporting mechanisms are mitigations, but may not prevent harassment, particularly in cases where
+hosts, moderators, or other intermediaries are supportive of or complicit in the abuse.
+
+Effective reporting is likely to require:
+
+* standardized mechanisms to identify abuse reporting contacts;
+* sites and user agents to provide visible and usable ways to report abuse;
+* identifiers to refer to senders and content;
+* the ability to provide context and explanation of harms;
+* people responsible for promptly responding to reports;
+* tools for pooling mitigation information (see [[[#example-reducing-unwanted-information]]]).
 
 <aside class="note">
   Some useful research overviews of online harassment include: [[?PEW-Harassment]],
   [[?Addressing-Cyber-Harassment]] and [[?Internet-of-Garbage]].
 </aside>
 
-[=Harassment=] is both a violation of privacy itself and can be magnified or facilitated by other
-violations of privacy.
-
-Abusive online behavior may include: sending [=unwanted information=]; directing others to contact
-or bother a person ("dogpiling"); disclosing sensitive information about a person; posting false
-information about a person; impersonating a person; insults; threats; and hateful or demeaning
-speech.
-
-Disclosure of identifying or contact information (including "doxxing") can be used, including by
-additional attackers, to send often persistent unwanted information that amounts to harassment.
-Disclosure of location information can be used, including by additional attackers, to intrude on a
-person's physical safety or space.
-
-Mitigations for harassment include but extend beyond mitigations for unwanted information and other
-privacy principles. Harassment can include harmful activity with a wider distribution than just the
-target of harassment.
-
-<div class="practice">
-  <p>
-    <span class="practicelab" id="abuse-reporting">
-      Systems that allow for communicating on the Web must provide an effective capability to report
-      abuse.
-    </span>
-  </p>
-</div>
-
-Reporting mechanisms are mitigations, but may not prevent harassment, particularly in cases where
-hosts or intermediaries are supportive of or complicit in the abuse.
-
-<div class="note">
-  Effective reporting is likely to require:
-
-  * standardized mechanisms to identify abuse reporting contacts
-  * visible, usable ways provided by sites and user agents to report abuse
-  * identifiers to refer to senders and content
-  * the ability to provide context and explanation of harms
-  * people responsible for promptly responding to reports
-  * tools for pooling mitigation information (see Unwanted information, below)
-</div>
-
-## Unwanted Information {#unwanted-information}
-
-Receiving unsolicited information that either may cause distress or waste the recipient's
-time or resources is a violation of privacy.
-
-<div class="practice">
-
-<p>
-  <span class="practicelab" id="principle-protect-unwanted-information">
-    [=User agents=] and other [=actors=] should take
-    steps to ensure that their [=user=] is not exposed to unwanted information. Technical standards
-    must consider the delivery of unwanted information as part of their architecture and must
-    mitigate it accordingly.
-  </span>
-</p>
-</div>
-
 <dfn>Unwanted information</dfn> covers a broad range of unsolicited communication, from messages
 that are typically harmless individually but that become a nuisance in aggregate (spam) to the
-sending of images that will cause shock or disgust due to their graphic, violent, or explicit nature
-(e.g. pictures of one's genitals). While it is impossible, in a communication system involving many
-[=people=], to offer perfect protection against all kinds of unwanted information, steps can be
-taken to make the sending of such messages more difficult or more costly, and to make the senders
-more accountable. Examples of mitigations include:
+sending of explicit, graphic, or violent images.
 
-* Restricting what new users of a service can post, notably limiting links and media until they have
+System designers should take steps to make the sending of unwanted information more difficult
+or more costly, and to make the senders more accountable.
+
+
+<aside class="example" id="example-reducing-unwanted-information">
+Examples of mitigations include:
+
+* Restricting what new users of a service can post, e.g. limiting links and media until a user has
   interacted a sufficient number of times over a given period with a larger group. This helps to
-  raise the cost of producing sockpuppet accounts and gives new users the occasion to understand
-  local norms before posting.
+  raise the cost of producing [sock puppet accounts](https://en.wikipedia.org/wiki/Sock_puppet_account) and gives new users time to understand local norms before posting.
 * Only accepting communication between [=people=] who have an established relationship of some kind,
   such as being part of a shared group. Protocols should consider requiring a handshake between
   [=people=] prior to enabling communication.
@@ -1659,81 +1652,79 @@ more accountable. Examples of mitigations include:
 * Supporting the ability for [=people=] to block another [=actor=] such that they cannot send information
   again.
 * Pooling mitigation information, for instance shared block lists, shared spam-detection
-  information, or public information about misbehaving [=actors=]. As always, the collection and
-  sharing of [=information=] for safety purposes should be limited and placed under collective
-  governance.
-
+  information, or public information about misbehaving [=actors=].
+* Enabling users to filter out or hide information or media based on tags or content warnings.
+</aside>
 
 ## Vulnerability {#vulnerability}
 
 <div class="issue">This section is still being refined. We expect additional principles to be added.</div>
 
-An individual may not realise when they disclose personal data that
-they are vulnerable or could become vulnerable. Some individuals
-may be more vulnerable to privacy risks or harm as a result of
-collection, misuse, loss or theft of personal data because of
-their attributes, interests, opinions or behaviour. Others may be
-vulnerable because of the situation or setting (e.g., where there
-is information asymmetry or other power imbalances), or they lack
-the capacity to fully assess the risks, or because choices are
-not presented in an easy-to-understand meaningful way (e.g., [=deceptive
-patterns=]). Yet others may be vulnerable because they have not been
-consulted about their privacy needs and expectations, or considered
-in the decisions about the design of the product of service.
-
-Sometimes communities of individuals are classed as “vulnerable”,
-typically children and the elderly, but anyone could become privacy
-vulnerable in a given context. Additional privacy protections may
-be needed for personal data of vulnerable individuals or sensitive
-information which could cause someone to become vulnerable if their
-personal data is collected, used or shared.
-
-Even in populations of individuals classed as “vulnerable” (such
-as children), each individual is unique with their own desires and
-expectations for privacy. While sometimes others can help vulnerable
-individuals assess privacy risks and make decisions about privacy
-(such as parents, guardians and peers), everyone has their own
-right to privacy.
-
 <div class="practice">
 <p>
   <span class="practicelab" id="principle-vulnerability">
-[=User agents=] and [=sites=] should allow for gracefully degraded
-user experience where some features or functionality may not be
-available because users have chosen stronger privacy protections
-(e.g., blocking tracking elements, sensor data or information about
-installed software or connected devices).
+[=User agents=] and [=sites=] should continue working if a user chooses
+stronger privacy protections, to help to protect vulnerable people.
+Specifications, implementations, and sites should allow for graceful
+degradation of features which may be incompatible with stronger
+privacy protections.
   </span>
 </p>
 </div>
 
+Sometimes particular groups are classed as “vulnerable” (e.g. children, or the
+elderly), but anyone could become privacy vulnerable in a given context.
+A [=person=] may not realise when they disclose personal data that
+they are vulnerable or could become vulnerable.
+
+Some individuals may be more vulnerable to privacy risks or harm as a result of
+collection, misuse, loss or theft of personal data because:
+
+* of their attributes, interests, opinions or behaviour;
+* of the situation or setting (e.g. where there is information asymmetry or other
+power imbalances);
+* they lack the capacity to fully assess the risks;
+* choices are not presented in an easy-to-understand meaningful way (e.g. [=deceptive
+patterns=]);
+* they have not been consulted about their privacy needs and expectations;
+* they have not been considered in the decisions about the design of the
+product or service.
+
+Additional privacy protections may be needed for personal data of vulnerable
+people or [sensitive information](#hl-sensitive-information) which could cause
+someone to become vulnerable if their personal data is collected, used or
+shared (e.g. blocking tracking elements, sensor data or information about
+installed software or connected devices).
+
+While sometimes others can help vulnerable people assess privacy risks and
+make decisions about privacy (such as parents, [=guardians=] and peers), everyone
+has their own right to privacy.
+
 ### Guardians {#guardians}
 
-<div class="practice">
-<span class="practicelab" id="principle-guardians-have-responsibilities">
-A [=user agent=] may only provide information about a [=ward=] to a [=guardian=] for the purpose of
-helping that [=guardian=] uphold their responsibilities to their [=ward=]. This system must include
-measures to help [=wards=] who realize that their [=guardian=] isn't acting in the [=ward=]'s
-interest.</span>
-</div>
-
-
-Some classes of vulnerable people tend to be unable to make good decisions about their own web use,
-and need a <dfn>guardian</dfn> to help them. Children are a widely recognized example of this class,
-with their parents often acting as their [=guardians=]. A person with a [=guardian=] is known as
+Some [vulnerable people](#vulnerability) need a <dfn>guardian</dfn> to help them make good
+decisions about their own web use (e.g. children, with their parents often
+acting as their [=guardians=]). A person with a [=guardian=] is known as
 a <dfn>ward</dfn>.
 
-Many legal systems treat these guardianship relationships as a set of rights that the [=guardian=]
-possesses. We prefer to instead think of the [=ward=] having a right to make informed decisions and
-exercise their autonomy. Their [=guardian=] then has an _obligation_ to help their [=ward=] do so
-when the [=ward=]'s abilities aren't sufficient, even if that conflicts with the [=guardian=]'s
-desires. In practice, many [=wards=] discover that their [=guardian=] is not making decisions in the
-[=ward=]'s best interest, and it's critical that such [=wards=] have a way to escape their
-misbehaving guardian.
+The [=ward=] has a right to make informed decisions and exercise their
+autonomy regarding their right to privacy. Their [=guardian=] has an
+_obligation_ to help their [=ward=] do so when the [=ward=]'s abilities aren't
+sufficient, even if that conflicts with the [=guardian=]'s desires. In
+practice, many [=guardians=] do not make decisions in their [=ward=]'s best
+interest, and it's critical that web platform technologies do not exacerbate
+the risks inherant in this situation.
 
-Historically, the Web has provided exactly this escape route, and [=user agents=] should preserve
-that feature by correctly balancing a benevolent [=guardian=]'s need to protect their [=ward=] from
-dangers against other [=wards=]' need to protect themselves from their misbehaving [=guardians=].
+[=User agents=] should balance a benevolent [=guardian=]'s need to protect
+their [=ward=] from dangers, against a [=wards=]' need to protect themselves
+if they have a malicious [=guardian=].
+
+[=User agents=] can protect vulnerable [=wards=] by complying with the principles in
+[[[#device-administrators]]], and may only provide information about a [=ward=]
+to a [=guardian=] for the purpose of helping that [=guardian=] uphold their
+responsibilities to their [=ward=]. The mechanism for doing so must include
+measures to help [=wards=] who realize that their [=guardian=] isn't acting in
+the [=ward=]'s interest.
 
 <aside class="example" id="example-protective-parent" title="Protective parents">
 
@@ -1749,12 +1740,6 @@ homophobic or transphobic parent, that parent might have configured their [=user
 block or inform the parent when the child visits web pages about LGBT-related subjects. The [=user
 agent=] needs to warn the child about how it's configured so that the child can know to ask a better
 [=guardian=] for access to the help they need.
-
-</aside>
-
-<aside class="issue">
-
-Add crosslinks to [[[#device-administrators]]].
 
 </aside>
 
@@ -2030,7 +2015,7 @@ Examples of [=identifiers=] for a [=person=] can be:
 * their phone number,
 * their location data,
 * an online identifier such as email or IP addresses,
-* browser [=fingerprints=] (based on a combination of
+* browser fingerprints (based on a combination of
 configuration characteristics), or
 * factors specific to their physical, physiological, genetic, mental,
 economic,
@@ -2140,8 +2125,7 @@ different [=contexts=],
 
 A privacy harm occurs if a [=person=] reasonably expects that they'll be using
 a different [=identity=] for different visits to a single site, but the site
-[=recognizes=] them anyway. This harm can be accomplished through a
-variety of means detailed in [[[#recognition-methods]]].
+[=recognizes=] them anyway.
 
 Note that these categories overlap: [=cross-site recognition=] is usually
 [=cross-context recognition=] (and always [=recognizes=] across [=partitions=]); and
@@ -2187,80 +2171,6 @@ If a [=user agent=] can tell that its user is using a particular identity on a
 website, it should make that active identity clear to the user (e.g. if the
 user logged into the site via an API like [[[credential-management-1]]]).
 
-### Recognition Methods {#recognition-methods}
-
-The web platform offers many ways for a website to recognize that a [=person=]
-is using the same [=identity=] over time, including [[RFC6265|cookies]],
-{{WindowLocalStorage/localStorage}}, {{WindowOrWorkerGlobalScope/indexedDB}},
-{{CacheStorage}}, and other forms of storage.
-
-Sometimes sites use this to save the [=person=]'s preferences or ongoing activities
-(e.g. shopping carts), and people have come to expect this behavior in some
-[=contexts=].
-
-People are unlikely to expect [=recognition=] all the time, and can find it
-difficult to prevent or mitigate, especially if it is automated.
-
-[=Recognition=] can be automated in different ways:
-
-* through the use of <a data-cite="Browser-Parties#environment-cross-site">cross-site</a> cookies,
-* by having someone navigate to a link that has been decorated with an identifier
-  ([[?Nav-Tracking]]),
-* collecting the same piece of identifying information on both sites, or
-* by correlating the timestamps of an event that occurs nearly-simultaneously
-on both sites (this is an example of a <a
-href="https://github.com/asankah/ephemeral-fingerprinting/blob/2395a35aac260d4d2f880eeb05c2617b0fd642ea/README.md">timing
-attack</a>).
-
-Recognition can also be made *persistent* such that it will
-defeat potential mitigations like [=partitions=] or clearing one's cookies.
-This is unsanctioned tracking ([[?UNSANCTIONED-TRACKING]]) and can
-take multiple forms:
-
-* [=Fingerprinting=].
-* [=Header enrichment=].
-* [=Cross-device communication=].
-
-<dfn data-lt="fingerprint">Fingerprinting</dfn> consists of using attributes of the [=person=]'s
-browser and platform that are consistent between two or more visits and
-probably unique to the person.
-
-The attributes can be exposed as information about the [=person=]'s device
-that on their own are benign (as opposed to [[[#hl-sensitive-information]]]).
-Taken in the aggregate these attributes could uniquely identify the device, or
-contribute to possible [=cross-context recognition=].
-For example:
-
-* language and time zone;
-* window size;
-* system preferences (such as dark mode, serif font, etc.).
-
-Preventing [=fingerprinting=] can be particularly challenging in cases that
-only affect a small group of people who use the web. For example, people who
-configure their systems in unique ways, such as by using a browser with a very
-small number of users.
-See [[fingerprinting-guidance]] for how to mitigate threats that result from
-[=fingerprinting=].
-
-Supercookies occur when a user agent stores data for a site but makes that data more
-difficult to clear than other cookies or storage, typically because of a bug, of features
-relating to cache storage and network state (e.g. ETag, HSTS), or
-because the browser restores the browser vendor's cookies when local state is cleared.
-<a data-cite="fingerprinting-guidance#clearing-all-local-state">Fingerprinting
-Guidance § Clearing all local state</a> discusses how specifications can help
-user agents avoid this mistake.
-
-<dfn>Header enrichment</dfn> happens when a network operator adds HTTP request headers
-to identify their customers to sites that they visit. It is
-difficult for a [=user agent=] to mitigate against [=header enrichment=].
-
-<dfn>Cross-device communication</dfn> is communication
-between code on one device and code running on another device. For example, sounds or
-light emitted from one device could be detected by a microphone or light sensor on
-another device [[?SILVERPUSH]]. [=Cross-device communication=] enables cross-device
-tracking, a form of [=cross-context recognition=], and it can also be used for other
-[=inappropriate=] information flows.
-
 </section>
 
 <section class="appendix">
@@ -2299,7 +2209,7 @@ data-cite="RFC6973#section-5.2.4">RFC6973§5.2.4</a>.
     <a
 data-cite="RFC6973#section-5.2.5">RFC6973§5.2.5</a>.
 
-<dt><dfn>Identification</dfn>
+<dt>Identification
 
 <dd>Identification is the linking of information to a particular individual, even if the information
 isn't linked to that individual's real-world identity (e.g. their legal name, address, government ID
@@ -2324,7 +2234,7 @@ data-cite="RFC6973#section-5.1.4">RFC6973§5.1.4</a>.
 <dd>The inference, evaluation, or prediction of an individual's attributes, interests, or
 behaviours.</dd>
 
-<dt><dfn>Secondary Use</dfn>
+<dt>Secondary Use
 
 <dd> Secondary use is the use of collected information about an individual without
     the individual’s consent for a purpose different from that for which the
