@@ -31,6 +31,7 @@
   <section class="slide cover clear">
     <h1>Privacy Principles</h1>
     <address>Jeffrey Yasskin</address>
+    <p><a href="https://w3ctag.github.io/privacy-principles/">https://w3ctag.github.io/privacy-principles/</a></p>
     <p>★ W3C TPAC 2023, Seville, 11–15 September ★</p>
   </section>
 
@@ -99,7 +100,8 @@
   </section>
 
   <section class="slide">
-    <h2 title="The document is split into two main sections: background knowledge and beliefs, and the actual principles we want the web to follow.">
+    <h2
+      title="The document is split into two main sections: background knowledge and beliefs, and the actual principles we want the web to follow.">
       Structure
     </h2>
     <ol>
@@ -110,35 +112,80 @@
 
   <section class="slide">
     <h2>Background beliefs</h2>
-    <p title="... but what we currently have here are the ideas that:">It wasn't always clear what should go here vs the principles section.</p>
+    <p
+      title="It wasn't always clear what should go here vs the principles section, but what we currently have here are the ideas that:">
+      It wasn't always clear what should go here vs the principles section.
+    </p>
     <ul>
       <li>Information flows need to be governed collectively.</li>
-      <li>Support autonomy, with implications for consent.</li>
-      <li>User agent duties.</li>
-      <li>Apparent tradeoffs.</li>
+      <li
+        title="The web should support human autonomy, which has implications for how we set defaults and ask for consent.">
+        Support autonomy, with implications for consent.
+      </li>
+      <li title="User agents have duties to their users.">User agent duties.</li>
+      <li
+        title="Problem spaces often appear to present tradeoffs between different principles, but we can often find a design that improves all the principles at once.">
+        Apparent tradeoffs.
+      </li>
     </ul>
   </section>
 
   <section class="slide">
-    <h2>Principles</h2>
+    <h2 title="These are not direct quotes of the principles from the document.">Principles</h2>
     <div class="columns">
       <ul>
-        <li>Help users pick their identities.</li>
-        <li>Minimize data for user goals.</li>
-        <li>New APIs can expose some data.</li>
-        <li>Information can be sensitive.</li>
-        <li>People have data rights.</li>
-        <li>Try to de-identify data.</li>
-        <li>Groups have privacy interests.</li>
+        <li title="A user agent should help its user pick an identity to present to each site they visit.">
+          Help users pick their identities.
+        </li>
+        <li title="We should all send the minimal amount of data to achieve our users' goals.">
+          Minimize data for user goals.
+        </li>
+        <li
+          title="When we add a new API to the web, we have some principles about how to think about the data they expose based on how they expose it, and the data that existing APIs expose.">
+          New APIs can expose some data.
+        </li>
+        <li
+          title="Some classes of information are sensitive, but it's dangerous to assume that people won't find other information sensitive too.">
+          Information can be sensitive.
+        </li>
+        <li title="People have some rights to control their data.">
+          People have data rights.
+        </li>
+        <li title="De-identifying data is both good and difficult, and we talk about some aspects of doing it well.">
+          Try to de-identify data.
+        </li>
+        <li
+          title="Relying too much on individual choices about privacy can sacrifice the interests of other people based on their membership in groups.">
+          Groups have privacy interests.
+        </li>
       </ul>
       <ul>
-        <li>Balance device owners & users.</li>
-        <li>Protect users from abuse.</li>
-        <li>Support vulnerable people.</li>
-        <li>Don't retaliate.</li>
-        <li>Request consent respectfully.</li>
-        <li>Avoid unwanted interruptions.</li>
-        <li>Let users choose their data.</li>
+        <li
+          title="Even though browsers are chosen by a device's owner or administrator; browsers also have to protect their end-users against surveillance by those owners. Children are an especially complex case here.">
+          Balance device owners & users.
+        </li>
+        <li title="We need to design ways to prevent abuse into both websites and web APIs.">
+          Protect users from abuse.
+        </li>
+        <li
+          title="We need to support vulnerable people, including by making sure everything degrades gracefully if people opt for stronger privacy protections.">
+          Support vulnerable people.
+        </li>
+        <li
+          title="And in general, when people opt for more privacy, sites shouldn't retaliate by removing unrelated features.">
+          Don't retaliate.
+        </li>
+        <li
+          title="We need to ask for consent respectfully by avoiding interruptions, making sure that we learn people's actual intentions, and letting people change their minds.">
+          Request consent respectfully.
+        </li>
+        <li title="Notifications shouldn't interrupt people.">
+          Avoid unwanted interruptions.
+        </li>
+        <li
+          title="And when an API exposes information about a person, we should let that person choose what information is sent, and not just whether information is sent.">
+          Let users choose their data.
+        </li>
       </ul>
     </div>
   </section>
