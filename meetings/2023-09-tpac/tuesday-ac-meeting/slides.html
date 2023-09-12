@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+  <meta charset=UTF-8>
+  <meta content="width=device-width" name="viewport">
+  <title>Privacy Principles</title>
+  <link rel="stylesheet" href="https://www.w3.org/2023/Talks/TPAC/Templates/slides.css">
+  <!-- To use the b6+ framework, include this: -->
+  <script src="https://www.w3.org/2023/Talks/TPAC/Templates/b6plus.js"></script>
+  <!-- To use the Shower framework, remove b6plus above and add these two: -->
+  <!--   <script src="https://www.w3.org/2023/Talks/TPAC/Templates/shower.js"></script>         -->
+  <!--   <script src="https://www.w3.org/2023/Talks/TPAC/Templates/iframe-fixup.js"></script>   -->
+</head>
+
+<body class="shower duration=6">
+
+  <!-- Remove this element if you don't want a progress bar: -->
+  <div class=progress></div>
+
+  <!-- Remove this element if you don't want the remaining time in
+       index mode and on the 2nd screen. If you keep it, you may want
+       to add the class "duration=n" on BODY, where n is the initial
+       number of minutes on the clock. Default is 30. -->
+  <div class=clock></div>
+
+  <!-- Alternative: Show also real time and elapsed time. -->
+  <!-- <div class=fullclock></div> -->
+
+  <section class="slide cover clear">
+    <h1>Privacy Principles</h1>
+    <address>Jeffrey Yasskin</address>
+    <p><a href="https://w3ctag.github.io/privacy-principles/">https://w3ctag.github.io/privacy-principles/</a></p>
+    <p>★ W3C TPAC 2023, Seville, 11–15 September ★</p>
+  </section>
+
+  <section class="slide">
+    <h2 title="The Privacy Principles document elaborates on the TAG Ethical Web Principle about privacy.">TAG Ethical
+      Web Principles</h2>
+    <blockquote cite="https://www.w3.org/TR/ethical-web-principles/#privacy">
+      <h3><a href="https://www.w3.org/TR/ethical-web-principles/#privacy">2.5 Security and privacy are essential</a>
+      </h3>
+
+      <p>
+        When we add features to the web platform, we are making decisions that may
+        change the ability of people to protect their personal data. This data
+        includes their conversations, their financial transactions and how they live
+        their lives. We will start by creating web technologies that create as few
+        risks as possible, and will make sure people understand what risks they are
+        taking when they use the web.
+      </p>
+    </blockquote>
+  </section>
+
+  <section class="slide">
+    <h2 title="We had a couple goals when drafting the document.">Goals</h2>
+    <ul>
+      <li
+        title="Engineers work best when we have our design constraints up front, so this document describes those constraints.">
+        Define privacy constraints for <strong>Web API designers</strong>.
+      </li>
+      <li title="API reviewers also benefit from a list of things to check for.">
+        Help <strong>Web API reviewers</strong> check for privacy protections.
+      </li>
+      <li
+        title="Third, the web has norms around privacy that differ from other platforms. We're trying to explain those norms to site authors and groups in both civil society and government.">
+        Explain web-wide norms around privacy to <strong>site authors</strong> and <strong>regulators</strong>.
+      </li>
+      <li
+        title="Finally, we know that we'll keep discussing and arguing about privacy in the future. This document should give us some terminology and common ground on which to base those discussions.">
+        <strong>Define the grounds</strong> on which we'll have future discussions about privacy.
+      </li>
+    </ul>
+    <h3
+      title="We don't want to imply that this document overrides other ethical principles if there are conflicts, and the document says that in a couple places.">
+      Non-goal: override other ethical principles
+    </h3>
+  </section>
+
+  <section class="slide">
+    <h2>Status</h2>
+    <ul>
+      <li>Content complete</li>
+      <li>Fixing wide review comments</li>
+      <li>Copy-editing
+        <figure>
+          <blockquote style="text-wrap: balance;margin:0">
+            &ldquo;Perfection is attained not when there is no longer anything to add,
+            but when there is no longer anything to take away.&rdquo;
+          </blockquote>
+          <figcaption>― Antoine de Saint-Exupéry</figcaption>
+        </figure>
+      </li>
+      <li>Handoff to the TAG this year</li>
+      <li title="We're hoping that the whole W3C will eventually endorse the principles as a W3C Statement.">
+        W3C Statement
+      </li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2
+      title="The document is split into two main sections: background knowledge and beliefs, and the actual principles we want the web to follow.">
+      Structure
+    </h2>
+    <ol>
+      <li>Background knowledge and beliefs</li>
+      <li>Concrete principles</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>Background beliefs</h2>
+    <p
+      title="It wasn't always clear what should go here vs the principles section, but what we currently have here are the ideas that:">
+      It wasn't always clear what should go here vs the principles section.
+    </p>
+    <ul>
+      <li>Information flows need to be governed collectively.</li>
+      <li
+        title="The web should support human autonomy, which has implications for how we set defaults and ask for consent.">
+        Support autonomy, with implications for consent.
+      </li>
+      <li title="User agents have duties to their users.">User agent duties.</li>
+      <li
+        title="Problem spaces often appear to present tradeoffs between different principles, but we can often find a design that improves all the principles at once.">
+        Apparent tradeoffs.
+      </li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2 title="These are not direct quotes of the principles from the document.">Principles *</h2>
+    <div class="columns">
+      <ul>
+        <li title="A user agent should help its user pick an identity to present to each site they visit.">
+          Help users pick their identities.
+        </li>
+        <li title="We should all send the minimal amount of data to achieve our users' goals.">
+          Minimize data for user goals.
+        </li>
+        <li
+          title="When we add a new API to the web, it needs to protect the data it exposes at least as well as existing APIs and not make bad uses easier.">
+          New APIs can expose some data.
+        </li>
+        <li
+          title="Some classes of information are sensitive, but it's dangerous to assume that people won't find other information sensitive too.">
+          Information can be sensitive.
+        </li>
+        <li title="People have some rights to control their data.">
+          People have data rights.
+        </li>
+        <li title="De-identifying data is both good and difficult, and we talk about some aspects of doing it well.">
+          Try to de-identify data.
+        </li>
+        <li
+          title="Relying too much on individual choices about privacy can sacrifice the interests of other people based on their membership in groups.">
+          Groups have privacy interests.
+        </li>
+      </ul>
+      <ul>
+        <li
+          title="Even though browsers are chosen by a device's owner or administrator; browsers also have to protect their end-users against surveillance by those owners. Children are an especially complex case here.">
+          Balance device owners & users.
+        </li>
+        <li title="We need to design ways to prevent abuse into both websites and web APIs.">
+          Protect users from abuse.
+        </li>
+        <li
+          title="We need to support vulnerable people, including by making sure everything degrades gracefully if people opt for stronger privacy protections.">
+          Support vulnerable people.
+        </li>
+        <li
+          title="And in general, when people opt for more privacy, sites shouldn't retaliate by removing unrelated features.">
+          Don't retaliate.
+        </li>
+        <li
+          title="We need to ask for consent respectfully by avoiding interruptions, making sure that we learn people's actual intentions, and letting people change their minds.">
+          Request consent respectfully.
+        </li>
+        <li title="Notifications shouldn't interrupt people.">
+          Avoid unwanted interruptions.
+        </li>
+        <li
+          title="And when an API exposes information about a person, we should let that person choose what information is sent, and not just whether information is sent.">
+          Let users choose their data.
+        </li>
+      </ul>
+    </div>
+    <p class="note" style="text-align: right">* These highly compressed principles omit a lot of the document's nuance.</p>
+  </section>
+
+  <section class="slide final" id="end">
+    <h2>Help us</h2>
+    <ul>
+      <li>Read the document.</li>
+      <li>Propose text to fix problems.</li>
+      <li>File issues.</li>
+    </ul>
+  </section>
+
+</body>
+
+</html>
