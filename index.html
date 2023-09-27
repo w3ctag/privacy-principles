@@ -49,6 +49,12 @@
         }
       ],
       localBiblio: {
+        'ADDING-PERMISSIONS': {
+          title: 'Adding another permission? A guide',
+          authors: ['Nick Doty'],
+          date: '2018',
+          href: 'https://github.com/w3cping/adding-permissions'
+        },
         'Addressing-Cyber-Harassment': {
           title: 'Addressing cyber harassment: An overview of hate crimes in cyberspace',
           authors: ['Danielle Keats Citron'],
@@ -1742,6 +1748,67 @@ agent=] needs to warn the child about how it's configured so that the child can 
 [=guardian=] for access to the help they need.
 
 </aside>
+
+## Transparency
+
+<div class="practice">
+  <span class="practicelab" id="transparency-when-requested">
+    When accessing data or requesting permission, [=sites=] (and other [=actors=]) should provide
+    [=people=] with relevant explanatory information about the use of data, and [=user agents=]
+    should help present and consume that information.
+  </span>
+</div>
+
+Transparency is a necessary, but insufficient, condition for [=consent=]. Relevant explanatory
+information includes who is accessing data, what data is accessed (including the potential
+inferences or combinations of such data) and how data is used. For transparency to be meaningful to
+people, explanatory information must be provided in the relevant [=context=].
+
+<div class="note">
+  In designing new Web features that may involve permissions, consider whether a permission is
+  needed and how to make that permission meaningful [[?ADDING-PERMISSIONS]].
+
+  Past workshops have explored the needs for better permissions on the Web:
+  <ul>
+    <li><a href="https://www.w3.org/Privacy/permissions-ws-2022/report">2022 W3C Workshop on
+    Permissions</a></li>
+    <li><a href="https://www.w3.org/Privacy/permissions-ws-2018/report.html">2018 W3C Workshop on
+    Permissions and User Consent</a></li>
+    <li><a href="https://www.w3.org/2014/07/permissions/minutes.html">2014 Next steps on trust and
+    permissions for Web applications</a></li>
+  </ul>
+</div>
+
+<div class="practice">
+  <span class="practicelab" id="transparency-plain-language-machine-readable">
+    Information about privacy-relevant practices should be provided in both easily accessible plain
+    language form and in machine-readable form.
+  </span>
+</div>
+
+Machine-readable presentation of privacy-relevant practices is necessary for [=user agents=] to be
+able to help [=people=] make general decisions, rather than relying falsely on the idea that
+[=people=] can or want to read documentation before every visit to a web site. Machine-readable
+presentation also facilitates <a href="#collective">collective governance</a> by making it more
+feasible for researchers and regulators to discover, document, and analyze data collection and
+processing to identify cases in which it may be harmful.
+
+Easily accessible, plain language presentation of privacy-relevant practices is necessary for
+[=people=] to be able to make informed decisions in specific cases when they choose to do so.
+[=Sites=], [=user agents=], and other [=actors=] all may need to present privacy-relevant practices
+to [=people=] in accessible forms.
+
+<div class="practice">
+  <span class="practicelab" id="transparency-distinguishable">
+    Mechanisms that can be used for [=recognize|recognizing=] [=people=] should be designed so that
+    their operation is visible and distinguishable, to [=user agents=], researchers and regulators.
+  </span>
+</div>
+
+Non-transparent methods of [=recognition=] are harmful in part because they are not visible to the
+user, which undermines user control [[?UNSANCTIONED-TRACKING]]. Designing features that minimize
+data and make requests for data explicit can enable detectability, a kind of transparency that is an
+important mitigation for <a>browser fingerprinting</a>.
 
 ## Consent, Withdrawal of Consent, Opt-Outs, and Objections {#consent-principles}
 
