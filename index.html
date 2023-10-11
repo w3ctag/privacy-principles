@@ -29,6 +29,28 @@
       lint: {
         'required-sections': false,
       },
+      preProcess: [
+        function checkAudiences() {
+          // Ensure every principle has a data-audiences attribute with a
+          // space-separated list of the target audiences of that principle.
+          let errors = Array.from(document.querySelectorAll('div.practice')
+            ).flatMap(practice => {
+              const audiences = practice.dataset.audiences?.split(/\s+/) ?? [];
+              if (audiences.length === 0) {
+                return `Missing data-audiences attribute in principle "${practice.textContent}".`;
+              }
+              const unknownAudiences = audiences.filter(
+                audience => !['websites', 'user-agents', 'api-designers'].includes(audience));
+              if (unknownAudiences.length > 0) {
+                return `Unknown audience "${unknownAudiences.join(', ')}" in principle "${practice.textContent}".`;
+              }
+              return [];
+            });
+          if (errors.length !== 0) {
+            throw new Error(errors.join('\n'));
+          }
+        }
+      ],
       postProcess: [
         () => {
           // relabel each principle, and lose the numbering, delabel principle summary
@@ -905,7 +927,7 @@ While privacy principles are designed to work together and support each other,
 occasionally a proposal to improve how a system follows one privacy principle may reduce
 how well it follows another principle.
 
-<div class="practice">
+<div class="practice" data-audiences="websites user-agents api-designers">
 
 <p><span class="practicelab" id="principle-pareto-frontier">When confronted with an
 apparent tradeoff, first look for ways to improve all principles at once.</span></p>
@@ -929,7 +951,7 @@ audience(s) for the technology, who the technology benefits and who it may disad
 and any power dynamics involved" ([[Ethical-Web]]). Despite this complexity, there is a basic ground
 rule to follow:
 
-<div class="practice">
+<div class="practice" data-audiences="websites user-agents">
 
 <p><span class="practicelab" id="principle-limited-collection-for-safety">If a service
 needs to collect extra data from its users in order to protect those or other users, it
@@ -1043,7 +1065,7 @@ additional enforcement mechanisms are needed.
 
 ## Identity on the Web {#identity}
 
-<div class="practice">
+<div class="practice" data-audiences="user-agents">
 
 <span class="practicelab" id="principle-identity-per-context">A [=user agent=]
 should help its user present the [=identity=] they want in each [=context=]
@@ -1083,14 +1105,14 @@ according to their [=users=]' wishes.
 
 ## Data Minimization {#data-minimization}
 
-<div class="practice"><span class="practicelab">[=Sites=], [=user agents=], and other [=actors=]
+<div class="practice" data-audiences="websites user-agents"><span class="practicelab">[=Sites=], [=user agents=], and other [=actors=]
 should minimize the amount of [=personal data=] they transfer.</span></div>
 
-<div class="practice"><span class="practicelab">Web APIs should be designed to minimize the amount of data that sites need
+<div class="practice" data-audiences="api-designers"><span class="practicelab">Web APIs should be designed to minimize the amount of data that sites need
 to request to carry out their users' goals and provide granularity and user controls over <a>personal
 data</a> that is communicated to sites.</span></div>
 
-<div class="practice">
+<div class="practice" data-audiences="user-agents">
 <span class="practicelab">In maintaining duties of [=duty of
 protection|protection=], [=duty of discretion|discretion=] and [=duty of loyalty|loyalty=], user agents should share data only when it either is needed
 to satisfy a user's immediate goals or aligns with the user's wishes and
@@ -1192,7 +1214,7 @@ to their users.
 
 ## Information access {#information}
 
-<div class="practice">
+<div class="practice" data-audiences="api-designers user-agents">
   <span class="practicelab">New Web APIs must guard users' information at least
   as well as existing APIs that are expected to stay in the web platform.</span>
 </div>
@@ -1289,7 +1311,7 @@ Specifications describing these APIs should also:
 
 ## Sensitive Information {#hl-sensitive-information}
 
-<div class="practice">
+<div class="practice" data-audiences="websites user-agents api-designers">
 <p>
   <span class="practicelab" id="principle-sensitive">
     System designers
@@ -1344,7 +1366,7 @@ a person, consider at least these factors:
 
 ## Data Rights {#data-rights}
 
-<div class="practice">
+<div class="practice" data-audiences="websites user-agents api-designers">
   <span class="practicelab" id="respect-data-rights">
     [=People=] have certain rights over [=data=] that is about themselves, and these rights should
     be facilitated by their [=user agent=] and the [=actors=] that are [=processing=] their
@@ -1404,7 +1426,7 @@ rights by people over data about themselves are inherent to [=autonomy=].
 
 ## De-identified Data {#deidentified-data}
 
-<div class="practice">
+<div class="practice" data-audiences="websites">
 
 <p>
   <span class="practicelab" id="de-identify-data">
@@ -1468,7 +1490,7 @@ Note that [=controlled de-identified data=], on its own, is not sufficient to ma
 
 ## Collective Privacy {#collective-privacy}
 
-<div class="practice">
+<div class="practice" data-audiences="websites user-agents">
 
 <p>
   <span class="practicelab" id="principle-collective-privacy">
@@ -1535,7 +1557,7 @@ improved privacy.
 
 ## Device Owners and Administrators {#device-administrators}
 
-<div class="practice">
+<div class="practice" data-audiences="user-agents">
 <span class="practicelab" id="principle-owned-devices-disclose-surveillance">
 [=User agents=] must not help a device [=administrator=] surveil the people
 using the devices they administrate without those people's knowledge. [=User
@@ -1585,7 +1607,7 @@ helps different users to react appropriately.
 
 ## Protecting web users from abusive behaviour
 
-<div class="practice">
+<div class="practice" data-audiences="websites api-designers">
   <p>
     <span class="practicelab" id="abuse-reporting">
       Systems that allow for communicating on the Web must provide an
@@ -1593,7 +1615,7 @@ helps different users to react appropriately.
         </span>
   </p>
 </div>
-<div class="practice">
+<div class="practice" data-audiences="websites user-agents api-designers">
   <p>
     <span class="practicelab" id="abuse-protection">
       [=User agents=] and [=sites=] must
@@ -1666,7 +1688,7 @@ Examples of mitigations include:
 
 <div class="issue">This section is still being refined. We expect additional principles to be added.</div>
 
-<div class="practice">
+<div class="practice" data-audiences="websites user-agents api-designers">
 <p>
   <span class="practicelab" id="principle-vulnerability">
 [=User agents=] and [=sites=] should continue working if a user chooses
@@ -1751,7 +1773,7 @@ agent=] needs to warn the child about how it's configured so that the child can 
 
 ## Transparency {#transparency}
 
-<div class="practice">
+<div class="practice" data-audiences="websites user-agents">
   <span class="practicelab" id="transparency-when-requested">
     When accessing data or requesting permission, [=sites=] (and other [=actors=]) should provide
     [=people=] with relevant explanatory information about the use of data, and [=user agents=]
@@ -1779,7 +1801,7 @@ people, explanatory information must be provided in the relevant [=context=].
   </ul>
 </div>
 
-<div class="practice">
+<div class="practice" data-audiences="websites api-designers">
   <span class="practicelab" id="transparency-plain-language-machine-readable">
     Information about privacy-relevant practices should be provided in both easily accessible plain
     language form and in machine-readable form.
@@ -1798,7 +1820,7 @@ Easily accessible, plain language presentation of privacy-relevant practices is 
 [=Sites=], [=user agents=], and other [=actors=] all may need to present privacy-relevant practices
 to [=people=] in accessible forms.
 
-<div class="practice">
+<div class="practice" data-audiences="websites api-designers">
   <span class="practicelab" id="transparency-distinguishable">
     Mechanisms that can be used for [=recognize|recognizing=] [=people=] should be designed so that
     their operation is visible and distinguishable, to [=user agents=], researchers and regulators.
@@ -1812,7 +1834,7 @@ important mitigation for <a>browser fingerprinting</a>.
 
 ## Consent, Withdrawal of Consent, Opt-Outs, and Objections {#consent-principles}
 
-<div class="practice">
+<div class="practice" data-audiences="websites">
 <p>
   <span class="practicelab" id="principle-consent-user-preference">
     When any [=actor=] obtains [=consent=] for processing from a [=person=], the
@@ -1833,7 +1855,7 @@ actors should be realistic in assessing how much time and effort would be requir
 processing for which they are asking for consent.
 Simply providing a link to a complex policy is unlikely to mean that the person is informed.
 
-<div class="practice">
+<div class="practice" data-audiences="websites">
 <p>
   <span class="practicelab" id="principle-minimize-consent-requests">
     An [=actor=] should avoid interrupting a [=person=]'s use of a site for
@@ -1856,7 +1878,7 @@ Examples of alternatives to interrupting users with consent requests include:
  * Delaying a prompt for consent until a [=user=] does something that puts the request in context,
     which will also help them give an informed response.
 
-<div class="practice">
+<div class="practice" data-audiences="websites">
 <p>
   <span class="practicelab" id="principle-consent-withdraw">
   It should be as easy for a [=person=] to check what consent they have given, to withdraw consent,
@@ -1867,7 +1889,7 @@ Examples of alternatives to interrupting users with consent requests include:
 
 A [=person=] may share data about other [=people=] (e.g. a picture with both that person and others). If that person consents to the processing of that data, this does not imply that those other people have consented as well.
 
-<div class="practice">
+<div class="practice" data-audiences="websites">
   <p>
     <span class="practicelab" id="principle-consent-otherpeople">
       [=Actors=] should provide functionality to access, correct, and remove data about
@@ -1892,7 +1914,7 @@ buzz or play an alert tone.
 Like all powerful features, notifications can be misused and can become an annoyance
 or even used to manipulate behaviour and thus reduce [=autonomy=].
 
-<div class="practice">
+<div class="practice" data-audiences="user-agents">
 
   <span class="practicelab" id="principle-notifications-control">A [=user agent=] should help
     users control notifications and other interruptive UI that can be used to manipulate behavior.</span>
@@ -1903,7 +1925,7 @@ or even used to manipulate behaviour and thus reduce [=autonomy=].
   notifications (for example, disallowing sites from requesting permission on first visit).
 
 </div>
-<div class="practice">
+<div class="practice" data-audiences="websites">
 
   <span class="practicelab" id="principle-notifications-context">Web [=sites=] should use notifications
     only for information that their users have specifically requested.
@@ -1923,7 +1945,7 @@ or even used to manipulate behaviour and thus reduce [=autonomy=].
 
 ## Non-Retaliation {#non-retaliation}
 
-<div class="practice">
+<div class="practice" data-audiences="websites">
   <span class="practicelab" id="principle-do-not-retaliate">
     [=Actors=] must not retaliate against [=people=] who protect their [=data=] against
     non-essential [=processing=] or exercise rights over their [=data=].
@@ -1940,7 +1962,7 @@ trick the [=person=] into opting back into the [=processing=].
 
 ## Support Choosing Which Information to Present {#support-choosing-info}
 
-<div class="practice">
+<div class="practice" data-audiences="user-agents">
   <span class="practicelab" id="principle-support-choosing-info">
     [=User agents=] should support [=people=] in choosing which information they provide to [=actors=] that
     request it, up to and including allowing users to provide arbitrary information.
@@ -1963,7 +1985,7 @@ to](#principle-identity-per-context) and to provide information about themselves
 ways that they control. This helps [=people=] to live in obscurity ([[?Lost-In-Crowd]],
 [[?Obscurity-By-Design]]), including by obfuscating information about themselves ([[?Obfuscation]]).
 
-<div class="practice">
+<div class="practice" data-audiences="api-designers">
   <span class="practicelab" id="principle-no-facts-or-promises">
     APIs should be designed such that data returned through an API does not assert a fact or make a
     promise on the user's behalf about the user or their environment.
