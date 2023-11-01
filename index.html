@@ -1504,56 +1504,68 @@ Note that [=controlled de-identified data=], on its own, is not sufficient to ma
 
 Privacy principles are often defined in terms of extending rights to individuals. However, there are
 cases in which deciding which principles apply is best done collectively, on behalf of a group.
+Collective decision-making is likely preferable:
 
-One such case, which has become increasingly common with widespread profiling, is that of information
-relating to membership of a group or to a group's behaviour, as detailed in
-<a href="#group-privacy"></a>. As Brent Mittelstadt explains, “<em>Algorithmically grouped
-individuals have a collective interest in the creation of information about the group, and actions
-taken on its behalf.</em>” ([[?Individual-Group-Privacy]]) This justifies ensuring that grouped
-people can benefit from both individual and collective means to support their [=autonomy=] with respect
-to [=data=] [=processing=]. It should be noted that [=processing=] can be unjust even if individuals
-remain anonymous, not from the violation of individual [=autonomy=] but because it violates ideals
-of social equality ([[?Relational-Governance]]).
+<ul>
+  <li>
+    When information is about membership in a group or about a group's behaviour.
+    As Brent Mittelstadt explains, “<em>Algorithmically grouped
+    individuals have a collective interest in the creation of information about the group, and actions
+    taken on its behalf.</em>” ([[?Individual-Group-Privacy]])
+    As <a href="#group-privacy"></a> discusses,
+    an individual's permission isn't enough to support the [=autonomy=] of other members of the group.
+  </li>
 
-Another case in which collective decision-making is preferable is for [=processing=] for which
-informed individual decision-making is unrealistic (due to the complexity of the processing, the
-volume or frequency of processing, or both). Expecting laypeople (or even experts) to make informed
-decisions relating to complex [=data=] [=processing=] or to make decisions on a very frequent
-basis — even if the [=processing=] is relatively simple — is unrealistic if we also want them to have
-reasonable levels of [=autonomy=] in making these decisions.
+  <li>
+    When individuals can't realistically be expected to make informed decisions.
+    This can happen when [=data processing=] is complex
+    or requests to process data happen very frequently.
+  </li>
 
-The purpose of this principle is to require that [=data governance=] provide ways to distinguish
-[=appropriate=] [=data=] [=processing=] without relying on individual decisions whenever the latter
-are impossible, which is often ([[?Relational-Governance]], [[?Relational-Turn]]).
+  <li>
+    When individuals have systematically less power
+    than the organizations asking them to agree to [=data processing=] ([[?Relational-Turn]]).
+  </li>
 
-Which forms of collective governance are recognised as legitimate will depend on domains. These may
-take many forms, such as governmental bodies at various administrative levels, standards
+  <li>
+    When the [=data processing=] is justified or unjustified at a societal level,
+    even accounting for individual disagreements ([[?Relational-Governance]]).
+  </li>
+</ul>
+
+Different forms of collective decision-making are legitimate depending on what data is being processed.
+These forms might be governmental bodies at various administrative levels, standards
 organisations, worker bargaining units, or civil society fora.
+Even though collective decision-making can be better than offloading
+[=privacy labour=] to [=individuals=], it is not a panacea.
+Decision-making bodies need to be designed carefully,
+for example using the <a data-cite="IAD#">Institutional Analysis and Development framework</a>.
 
-It must be noted that, even though collective decision-making can be better than offloading
-[=privacy labour=] to [=individuals=], it is not necessarily a panacea. When considering such
-collective arrangements it is important to keep in mind the principles that are likely to support
-viable and effective institutions at any level of complexity ([[?IAD]]).
+<aside class="example" id="example-a-ping">
 
-A good example of a failure in collective privacy decisions was the standardisation of the
-[^a/ping^] attribute. Search engines, social sites, and other algorithmic media in the same vein
-have an interest in knowing which sites that they link to [=people=] choose to visit (which in turn
-could improve the service for everyone). But [=people=] may have an interest in keeping that
-information private from algorithmic media companies (as do the sites being linked to, as that
-facilitates timing attacks to recognise [=people=] there). A [=person=]'s exit through a specific
-link can either be tracked with JavaScript tricks or through bounce tracking, both of which are slow
-and difficult for user agents to defend against. The value proposition of the [^a/ping^] attribute
-in this context is therefore straightforward: by providing declarative support for this
-functionality it can be made fast (the browser sends an asynchronous notification to a ping
-endpoint after the [=person=] exits through a link) and the user agent can provide its [=user=] with
-the option to opt out of such tracking — or disable it by default.
+The standardisation of the [^a/ping^] attribute serves as a good example of a failure in collective privacy decisions.
+Search engines, social sites, and other algorithmic websites
+have an interest in knowing which of their links their visitors choose to click on.
+They can use this information to improve their service for everyone.
+But their visitors may have an interest in keeping that information private,
+for example because it can be used to [=recognize=] those visitors across [=partitions=].
 
-Unfortunately, this arrangement proved to be unworkable on the privacy side (the performance gains,
-however, are real). What prevents a site from using [^a/ping^] for [=people=] who have it activated
-and bounce tracking for others? What prevents a browsers from opting everyone out because it wishes
+A website can track a [=person=]'s click on a specific link
+using either JavaScript {{HTMLElement/onclick}} events or bounce tracking,
+both of which are slow and difficult for user agents to defend against.
+The [^a/ping^] attribute declares the site's intent,
+which lets a user agent either implement it quickly and asynchronously
+or ignore it for users who want to keep that information private.
+
+Unfortunately, while this arrangement did improve performance,
+it turned out not to help privacy.
+What prevents a site from using [^a/ping^] for [=people=] who have it activated
+and bounce tracking for others? What prevents a browser from opting everyone out because it wishes
 to offer better protection by default? Given the contested nature of the [^a/ping^] attribute and
 the absence of a forcing function to support collective enforcement, the scheme failed to deliver
 improved privacy.
+
+</aside>
 
 ## Device Owners and Administrators {#device-administrators}
 
