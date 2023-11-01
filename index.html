@@ -1540,32 +1540,6 @@ Even though collective decision-making can be better than offloading
 Decision-making bodies need to be designed carefully,
 for example using the <a data-cite="IAD#">Institutional Analysis and Development framework</a>.
 
-<aside class="example" id="example-a-ping">
-
-The standardisation of the [^a/ping^] attribute serves as a good example of a failure in collective privacy decisions.
-Search engines, social sites, and other algorithmic websites
-have an interest in knowing which of their links their visitors choose to click on.
-They can use this information to improve their service for everyone.
-But their visitors may have an interest in keeping that information private,
-for example because it can be used to [=recognize=] those visitors across [=partitions=].
-
-A website can track a [=person=]'s click on a specific link
-using either JavaScript {{HTMLElement/onclick}} events or bounce tracking,
-both of which are slow and difficult for user agents to defend against.
-The [^a/ping^] attribute declares the site's intent,
-which lets a user agent either implement it quickly and asynchronously
-or ignore it for users who want to keep that information private.
-
-Unfortunately, while this arrangement did improve performance,
-it turned out not to help privacy.
-What prevents a site from using [^a/ping^] for [=people=] who have it activated
-and bounce tracking for others? What prevents a browser from opting everyone out because it wishes
-to offer better protection by default? Given the contested nature of the [^a/ping^] attribute and
-the absence of a forcing function to support collective enforcement, the scheme failed to deliver
-improved privacy.
-
-</aside>
-
 ## Device Owners and Administrators {#device-administrators}
 
 <div class="practice" data-audiences="user-agents">
