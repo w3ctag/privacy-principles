@@ -958,8 +958,7 @@ needs to collect extra data from its users in order to protect those or other us
 must take extra technical and legal measures to ensure that this data can't be then used
 for other purposes, like to grow the service.</span></p>
 
-This is a special case of the more general principle that data should not be used for more
-[=purposes=] than the data's subjects understood it was being collected for.
+This is a special case of the <a href="#no-secondary-use">more general principle that data should not be used for more [=purposes=] than those specified when the data was collected</a>.
 
 Services sometimes use people's data in order to protect those or other people.
 A service that does this should explain what data it's
@@ -1771,6 +1770,29 @@ agent=] needs to warn the child about how it's configured so that the child can 
 
 </aside>
 
+## Purpose limitation
+
+<div class="practice" data-audiences="websites user-agents">
+  <span class="practicelab" id="purpose-specification">
+    When accessing personal data or requesting permission, [=sites=] and other [=actors=] should specify the [=purpose=]
+    for which the data will be used.
+  </span>
+</div>
+
+<div class="practice" data-audiences="websites user-agents">
+  <span class="practicelab" id="no-secondary-use">
+    [=Actors=] should not use personal data for purposes other than those specified. (Other uses are often called
+    [=secondary uses=].)
+  </span>
+</div>
+
+Features that are designed-for-purpose facilitate these principles by providing functionality that is only or primarily
+useful for a particular purpose. Designed-for-purpose features make it easier to explain the purpose to people, and may
+also limit the feasible secondary uses of data.
+
+[=Controlled de-identified data=] may be used for additional purposes in ways that are compatible with the specified
+purpose.
+
 ## Transparency {#transparency}
 
 <div class="practice" data-audiences="websites user-agents">
@@ -2323,7 +2345,7 @@ data-cite="RFC6973#section-5.1.4">RFC6973§5.1.4</a>.
 <dd>The inference, evaluation, or prediction of an individual's attributes, interests, or
 behaviours.</dd>
 
-<dt>Secondary Use
+<dt><dfn>Secondary Use</dfn>
 
 <dd> Secondary use is the use of collected information about an individual without
     the individual’s consent for a purpose different from that for which the
