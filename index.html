@@ -755,6 +755,78 @@ Reference to the [=FIPs=] survives to this day. They are often referenced as "<i
 and choice</i>", which, in today's digital environment, is often an indication that
 [=inappropriate=] [=processing=] is being described.
 
+## Vulnerability {#vulnerability}
+
+Sometimes particular groups are classed as “vulnerable” (e.g. children, or the
+elderly), but anyone could become privacy vulnerable in a given context.
+A [=person=] may not realise when they disclose personal data that
+they are vulnerable or could become vulnerable.
+
+Some individuals may be more vulnerable to privacy risks or harm as a result of
+collection, misuse, loss or theft of personal data because:
+
+* of their attributes, interests, opinions or behaviour;
+* of the situation or setting (e.g. where there is information asymmetry or other
+power imbalances);
+* they lack the capacity to fully assess the risks;
+* choices are not presented in an easy-to-understand meaningful way (e.g. [=deceptive
+patterns=]);
+* they have not been consulted about their privacy needs and expectations;
+* they have not been considered in the decisions about the design of the
+product or service.
+
+Additional privacy protections may be needed for personal data of vulnerable
+people or [sensitive information](#hl-sensitive-information) which could cause
+someone to become vulnerable if their personal data is collected, used or
+shared (e.g. blocking tracking elements, sensor data or information about
+installed software or connected devices).
+
+While sometimes others can help vulnerable people assess privacy risks and
+make decisions about privacy (such as parents, [=guardians=] and peers), everyone
+has their own right to privacy.
+
+### Guardians {#guardians}
+
+Some [vulnerable people](#vulnerability) need a <dfn>guardian</dfn> to help them make good
+decisions about their own web use (e.g. children, with their parents often
+acting as their [=guardians=]). A person with a [=guardian=] is known as
+a <dfn>ward</dfn>.
+
+The [=ward=] has a right to make informed decisions and exercise their
+autonomy regarding their right to privacy. Their [=guardian=] has an
+_obligation_ to help their [=ward=] do so when the [=ward=]'s abilities aren't
+sufficient, even if that conflicts with the [=guardian=]'s desires. In
+practice, many [=guardians=] do not make decisions in their [=ward=]'s best
+interest, and it's critical that web platform technologies do not exacerbate
+the risks inherant in this situation.
+
+[=User agents=] should balance a benevolent [=guardian=]'s need to protect
+their [=ward=] from dangers, against a [=ward=]'s need to protect themself
+if they have a malicious [=guardian=].
+
+[=User agents=] can protect vulnerable [=wards=] by complying with the principles in
+[[[#device-administrators]]], and may only provide information about a [=ward=]
+to a [=guardian=] for the purpose of helping that [=guardian=] uphold their
+responsibilities to their [=ward=]. The mechanism for doing so must include
+measures to help [=wards=] who realize that their [=guardian=] isn't acting in
+the [=ward=]'s interest.
+
+<aside class="example" id="example-protective-parent" title="Protective parents">
+
+A parent might configure a small child's [=user agent=] to block access to violent content until the
+child is old enough to make their own decisions about it.
+
+</aside>
+
+<aside class="example" id="example-lgbt-kid" title="An LGBT child">
+
+A child may discover that they're LGBT and need to find supportive resources online. If they have a
+homophobic or transphobic parent, that parent might have configured their [=user agent=] to either
+block or inform the parent when the child visits web pages about LGBT-related subjects. The [=user
+agent=] needs to warn the child about how it's configured so that the child can know to ask a better
+[=guardian=] for access to the help they need.
+
+</aside>
 
 ## Collective Governance {#collective}
 
@@ -1667,93 +1739,6 @@ Examples of mitigations include:
 * Pooling mitigation information, for instance shared block lists, shared spam-detection
   information, or public information about misbehaving [=actors=].
 * Enabling users to filter out or hide information or media based on tags or content warnings.
-</aside>
-
-## Vulnerability {#vulnerability}
-
-<div class="issue">This section is still being refined. We expect additional principles to be added.</div>
-
-<div class="practice" data-audiences="websites user-agents api-designers">
-<p>
-  <span class="practicelab" id="principle-vulnerability">
-[=User agents=] and [=sites=] should continue working if a user chooses
-stronger privacy protections, to help to protect vulnerable people.
-Specifications, implementations, and sites should allow for graceful
-degradation of features which may be incompatible with stronger
-privacy protections.
-  </span>
-</p>
-</div>
-
-Sometimes particular groups are classed as “vulnerable” (e.g. children, or the
-elderly), but anyone could become privacy vulnerable in a given context.
-A [=person=] may not realise when they disclose personal data that
-they are vulnerable or could become vulnerable.
-
-Some individuals may be more vulnerable to privacy risks or harm as a result of
-collection, misuse, loss or theft of personal data because:
-
-* of their attributes, interests, opinions or behaviour;
-* of the situation or setting (e.g. where there is information asymmetry or other
-power imbalances);
-* they lack the capacity to fully assess the risks;
-* choices are not presented in an easy-to-understand meaningful way (e.g. [=deceptive
-patterns=]);
-* they have not been consulted about their privacy needs and expectations;
-* they have not been considered in the decisions about the design of the
-product or service.
-
-Additional privacy protections may be needed for personal data of vulnerable
-people or [sensitive information](#hl-sensitive-information) which could cause
-someone to become vulnerable if their personal data is collected, used or
-shared (e.g. blocking tracking elements, sensor data or information about
-installed software or connected devices).
-
-While sometimes others can help vulnerable people assess privacy risks and
-make decisions about privacy (such as parents, [=guardians=] and peers), everyone
-has their own right to privacy.
-
-### Guardians {#guardians}
-
-Some [vulnerable people](#vulnerability) need a <dfn>guardian</dfn> to help them make good
-decisions about their own web use (e.g. children, with their parents often
-acting as their [=guardians=]). A person with a [=guardian=] is known as
-a <dfn>ward</dfn>.
-
-The [=ward=] has a right to make informed decisions and exercise their
-autonomy regarding their right to privacy. Their [=guardian=] has an
-_obligation_ to help their [=ward=] do so when the [=ward=]'s abilities aren't
-sufficient, even if that conflicts with the [=guardian=]'s desires. In
-practice, many [=guardians=] do not make decisions in their [=ward=]'s best
-interest, and it's critical that web platform technologies do not exacerbate
-the risks inherant in this situation.
-
-[=User agents=] should balance a benevolent [=guardian=]'s need to protect
-their [=ward=] from dangers, against a [=wards=]' need to protect themselves
-if they have a malicious [=guardian=].
-
-[=User agents=] can protect vulnerable [=wards=] by complying with the principles in
-[[[#device-administrators]]], and may only provide information about a [=ward=]
-to a [=guardian=] for the purpose of helping that [=guardian=] uphold their
-responsibilities to their [=ward=]. The mechanism for doing so must include
-measures to help [=wards=] who realize that their [=guardian=] isn't acting in
-the [=ward=]'s interest.
-
-<aside class="example" id="example-protective-parent" title="Protective parents">
-
-A parent might configure a small child's [=user agent=] to block access to violent content until the
-child is old enough to make their own decisions about it.
-
-</aside>
-
-<aside class="example" id="example-lgbt-kid" title="An LGBT child">
-
-A child may discover that they're LGBT and need to find supportive resources online. If they have a
-homophobic or transphobic parent, that parent might have configured their [=user agent=] to either
-block or inform the parent when the child visits web pages about LGBT-related subjects. The [=user
-agent=] needs to warn the child about how it's configured so that the child can know to ask a better
-[=guardian=] for access to the help they need.
-
 </aside>
 
 ## Purpose limitation
