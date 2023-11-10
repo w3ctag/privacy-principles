@@ -1232,14 +1232,16 @@ use">ancillary uses</dfn>.
     observers</a>.
   </dd>
 
-  <dt><dfn>Summarizing ancillary APIs</dfn></dt>
+  <dt><dfn>Ancillary APIs computed from existing information</dfn></dt>
   <dd>
     APIs that filter, summarize, or time-shift information available from
     [=non-ancillary APIs=], like the [[[event-timing]]] and <a
-    data-cite="intersection-observer#introduction">IntersectionObserver</a>.
+    data-cite="intersection-observer#introduction">IntersectionObserver</a>. See
+    [[#information]] for restrictions on how existing non-ancillary APIs can be
+    used to justify new ancillary APIs.
   </dd>
 
-  <dt><dfn>Novel ancillary APIs</dfn></dt>
+  <dt><dfn>Ancillary APIs that provide new information</dfn></dt>
   <dd>
     APIs that provide new information that's primarily useful to support the
     ancillary uses, like <a data-cite="element-timing#sec-intro">element paint
@@ -1261,34 +1263,36 @@ use of this data.
 [=User agents=] usually can't do much about data collection from the
 [=non-ancillary APIs=].
 
-There is disagreement about how [=user agents=] should handle [=summarizing
-ancillary APIs=]. Advocates of these APIs argue that they're hard to use to
+There is disagreement about how [=user agents=] should handle [=ancillary APIs
+computed from existing information=]. Advocates of these APIs argue that they're
+hard to use to
 extract [=personal data=], they're more efficient than collecting the same
 information though [=non-ancillary APIs=], sites are less likely to adopt these
 APIs if a significant number of people turn them off, and that the act of
-turning them off can ironically contribute to [=browser fingerprinting=].
+turning them off can contribute to [=browser fingerprinting=].
 Opponents argue that if data's easier or cheaper to collect, more sites will
-collect it, and because there's still some risk and cost, users should be able
+collect it, and because there's still some risk, users should be able
 to turn off this group of APIs that probably won't directly break a site's
 functionality.
 
-We do have consensus that [[[#information]]] governs [=summarizing ancillary
-APIs=] and that:
+We do have consensus that [[[#information]]] governs [=ancillary APIs computed
+from existing information=] and that:
 
 <div class="practice" data-audiences="api-designers">
 <span class="practicelab" id="principle-identify-ancillary-apis">Specifications
-for [=summarizing ancillary APIs=] and [=novel ancillary APIs=] should identify
-them as such, so that [=user agents=] can provide appropriate choices for their
-users.</span>
+for [=ancillary APIs computed from existing information=] and [=ancillary APIs
+that provide new information=] should identify them as such, so that [=user
+agents=] can provide appropriate choices for their users.</span>
 </div>
 
-#### Designing novel ancillary APIs {#designing-novel-ancillary-apis}
+#### Designing ancillary APIs that provide new information {#designing-ancillary-apis-with-new-information}
 
 <div class="practice" data-audiences="api-designers">
 <span class="practicelab"
-id="principle-novel-ancillary-apis-shouldnt-reveal-personal-data">[=Novel
-ancillary APIs=] should not reveal any [=personal data=] that isn't already
-available through other APIs, without permission.</span>
+id="principle-ancillary-apis-with-new-information-shouldnt-reveal-personal-data">
+[=Ancillary APIs that provide new information=] should not reveal any [=personal
+data=] that isn't already available through other APIs, without permission.
+</span>
 </div>
 
 Most [=ancillary uses=] don't require that a site learn any [=personal data=].
@@ -1319,7 +1323,8 @@ few choices in this situation:
 * API designers can check carefully that the API doesn't reveal _new_ [=personal
   data=], as described by [[[#information]]]. For example, the API might reveal
   that a person has a fast graphics card, that they click slowly, or that they
-  use a certain proxy, but the fact that they click slowly is already revealed
+  use a certain proxy, but the fact that they click slowly is already
+  <a href="#unavoidable-information-exposure">unavoidably</a> revealed
   by <a data-cite="dom#interface-event">DOM event</a> timing.
 * [=User agents=] can ask their users' permission to enable this class of API.
   To reduce [=privacy labor=], a [=user agent=] could use a first-run dialog to
@@ -1336,14 +1341,17 @@ from the developers while they fix the bug. This is an appropriate time to ask
 the person's permission.
 
 <div class="practice" data-audiences="user-agents">
-<span class="practicelab" id="principle-disabling-novel-ancillary-apis">User
-agents should provide a way to disable [=novel ancillary APIs=].</span>
+<span class="practicelab" id="principle-disabling-ancillary-apis-with-new-information">
+User agents should provide a way to disable [=ancillary APIs that provide new
+information=].
+</span>
 </div>
 
 Some people may want to save processing time or bandwidth that's not necessary
 to achieve their immediate goals, or they might know something about their
 specific situation that makes the API designers' general decisions inappropriate
-for them. Because the information provided by [=novel ancillary APIs=] isn't
+for them. Because the information provided by [=ancillary APIs that provide new
+information=] isn't
 available in any other way, [=user agents=] should let people turn them off,
 despite the additional risk of [=browser fingerprinting=].
 
