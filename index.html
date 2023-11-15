@@ -1260,12 +1260,9 @@ across contexts</a>. In order to uphold the principle of [[[#data-minimization]]
 [=user agents=] should seek to understand and respect people's goals and preferences about
 use of this data.
 
-[=User agents=] usually can't do much about data collection from the
-[=non-ancillary APIs=].
-
-There is disagreement about how [=user agents=] should handle [=ancillary APIs
-computed from existing information=]. Advocates of these APIs argue that they're
-hard to use to
+The task force does not have consensus about how [=user agents=] should handle
+[=ancillary APIs computed from existing information=].
+Advocates of these APIs argue that they're hard to use to
 extract [=personal data=], they're more efficient than collecting the same
 information though [=non-ancillary APIs=], sites are less likely to adopt these
 APIs if a significant number of people turn them off, and that the act of
@@ -1275,8 +1272,7 @@ collect it, and because there's still some risk, users should be able
 to turn off this group of APIs that probably won't directly break a site's
 functionality.
 
-We do have consensus that [[[#information]]] governs [=ancillary APIs computed
-from existing information=] and that:
+Because different users are likely to have different preferences:
 
 <div class="practice" data-audiences="api-designers">
 <span class="practicelab" id="principle-identify-ancillary-apis">Specifications
@@ -1291,7 +1287,8 @@ agents=] can provide appropriate choices for their users.</span>
 <span class="practicelab"
 id="principle-ancillary-apis-with-new-information-shouldnt-reveal-personal-data">
 [=Ancillary APIs that provide new information=] should not reveal any [=personal
-data=] that isn't already available through other APIs, without permission.
+data=] that isn't already available through other APIs, without an indication
+that doing so aligns with the user's wishes and interests.
 </span>
 </div>
 
@@ -1331,8 +1328,9 @@ few choices in this situation:
   ask the user whether they generally support sharing this data, rather than
   asking for each use of the APIs.
 
-API designers should maintain APIs that had to make one of these choices and
-should keep trying to evolve them toward aggregating the data instead.
+If an API had to make one of these choices, and then something else about the
+API needs to change, designers should consider replacing the whole API with one
+that avoids exposing [=personal data=].
 
 Some other [=ancillary uses=] do require that a person be connected to their
 data. For example, a person might want to file a bug report that a website
