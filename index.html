@@ -1216,37 +1216,92 @@ the data exposed, is to autogenerate a new email address for each context.
 
 ### Ancillary uses
 
-In order to uphold the principle of [[[#data-minimization]]], [=sites=] and
-[=user agents=] should seek to understand and respect people's goals and preferences about
-use of data about them.
-
 [=Sites=] sometimes use data in ways that aren't needed for the user's immediate
-goals. These uses are known as <dfn data-lt="ancillary use">ancillary uses</dfn>,
-and data that is primarily useful for [=ancillary uses=] is <dfn>ancillary data</dfn>.
+goals. For example, they might bill advertisers, measure site performance, or
+tell developers about bugs. These uses are known as <dfn data-lt="ancillary
+use">ancillary uses</dfn>.
 
-<aside class="example">
-  Some examples of [=ancillary data=] include data used for browser telemetry, site telemetry,
-  performance measurements, and software updates.
-</aside>
+[=Sites=] can get the data they want for [=ancillary uses=] from a variety of places:
 
-Different [=users=] will want to share different kinds and amounts of
-[=ancillary data=] with [=sites=]. Some [=people=] will not want to share any
-[=ancillary data=] at all.
+<dl>
+  <dt><dfn>Non-ancillary APIs</dfn></dt>
+  <dd>
+    Web APIs that were designed to support users' immediate goals, like <a
+    data-cite="dom#interface-event">DOM events</a> and <a
+    data-cite="cssom-view-1#extension-to-the-element-interface">element position
+    observers</a>.
+  </dd>
 
-Users may be willing to share [=ancillary data=] if it is aggregated with
-the data of other users, or [=de-identified=]. This can be useful
-when [=ancillary data=] contributes to a collective benefit in a way
-that reduces privacy threats to individuals (see <a href="#principle-collective-privacy">collective
-privacy</a>).
+  <dt><dfn>Ancillary APIs computed from existing information</dfn></dt>
+  <dd>
+    APIs that filter, summarize, or time-shift information available from
+    [=non-ancillary APIs=], like the [[[event-timing]]] and <a
+    data-cite="intersection-observer#introduction">IntersectionObserver</a>. See
+    [[[#information]]] for restrictions on how existing non-ancillary APIs can
+    be used to justify new ancillary APIs.
+  </dd>
 
-<aside class="example">
-  Privacy-preserving measurement techniques may be used for aggregate calculations while minimizing
-  the number of actors that have access to personal data about many individual people. Encryption and
-  privacy-preserving proxies may minimize the number of actors that have access to personal data or
-  hide the contents of personal data. But even
-  with those protections, some people may prefer not to participate in some kinds of measurement.
+  <dt><dfn>Ancillary APIs that provide new information</dfn></dt>
+  <dd>
+    APIs that provide new information that's primarily useful to support the
+    ancillary uses, like <a data-cite="element-timing#sec-intro">element paint
+    timing</a>, <a data-cite="performance-measure-memory#intro">memory usage
+    measurements</a>, and <a
+    data-cite="deprecation-reporting#deprecation-report">deprecation
+    reports</a>.
+  </dd>
+</dl>
 
-  There is ongoing work on these kinds of technologies in the <abbr title="Internet Engineering Task
+All of these sources of data can reveal [=personal data=] about a person's
+configuration, device, environment, or behavior that could be <a
+href="#hl-sensitive-information">sensitive</a> or be used as part of <a>browser
+fingerprinting</a> to <a data-lt="cross-context recognition">recognize people
+across contexts</a>. In order to uphold the principle of [[[#data-minimization]]], [=sites=] and
+[=user agents=] should seek to understand and respect people's goals and preferences about
+use of this data.
+
+The task force does not have consensus about how [=user agents=] should handle
+[=ancillary APIs computed from existing information=].
+Advocates of these APIs argue that they're hard to use to
+extract [=personal data=], they're more efficient than collecting the same
+information though [=non-ancillary APIs=], sites are less likely to adopt these
+APIs if a significant number of people turn them off, and that the act of
+turning them off can contribute to [=browser fingerprinting=].
+Opponents argue that if data's easier or cheaper to collect, more sites will
+collect it, and because there's still some risk, users should be able
+to turn off this group of APIs that probably won't directly break a site's
+functionality.
+
+Because different users are likely to have different preferences:
+
+<div class="practice" data-audiences="api-designers">
+<span class="practicelab" id="principle-identify-ancillary-apis">Specifications
+for [=ancillary APIs computed from existing information=] and [=ancillary APIs
+that provide new information=] should identify them as such, so that [=user
+agents=] can provide appropriate choices for their users.</span>
+</div>
+
+#### Designing ancillary APIs that provide new information {#designing-ancillary-apis-with-new-information}
+
+<div class="practice" data-audiences="api-designers">
+<span class="practicelab"
+id="principle-ancillary-apis-with-new-information-shouldnt-reveal-personal-data">
+[=Ancillary APIs that provide new information=] should not reveal any [=personal
+data=] that isn't already available through other APIs, without an indication
+that doing so aligns with the user's wishes and interests.
+</span>
+</div>
+
+Most [=ancillary uses=] don't require that a site learn any [=personal data=].
+For example, site performance measurements and ad billing involve averaging or
+summing data across many users such that any individual's contribution is
+obscured. Private aggregation techniques can often allow an API to serve its use
+case without exposing [=personal data=], by preventing any of the people
+involved from being identifiable.
+
+<aside class="note">
+  There is ongoing work on this sort of private aggregation in the
+  <abbr title="Internet Engineering Task
   Force">IETF</abbr> <a href="https://datatracker.ietf.org/wg/ppm/about/"><abbr
   title="privacy-preserving measurement">ppm</abbr></a>, <abbr title="Internet Research Task
   Force">IRTF</abbr> <a href="https://datatracker.ietf.org/rg/pearg/about/"><abbr title="Privacy
@@ -1255,34 +1310,48 @@ privacy</a>).
   Group">PATCG</abbr></a> groups.
 </aside>
 
-[=User agents=] should aggressively <a href="#data-minimization">minimize</a> [=ancillary
-data=] and should avoid burdening the user with additional [=privacy labor=]
-when deciding what [=ancillary data=] to expose. To that end, user agents may
-employ user research, solicitation of general preferences, and heuristics about
-sensitivity of data or trust in a particular [=context=].
+Some [=ancillary uses=] don't require their data to be related to a person, but
+the useful aggregations across many people are difficult to design into a web
+API, or they might require new technologies to be invented. API designers have a
+few choices in this situation:
 
-To help [=sites=] understand user preferences, user agents can provide
-browser-configurable signals to directly communicate common user preferences
-(such as a [=global opt-out=]).
+* Sometimes an API can [=de-identify=] the data instead, but this is difficult
+  if a web page has any input into the data that's collected.
+* API designers can check carefully that the API doesn't reveal _new_ [=personal
+  data=], as described by [[[#information]]]. For example, the API might reveal
+  that a person has a fast graphics card, that they click slowly, or that they
+  use a certain proxy, but the fact that they click slowly is already
+  <a href="#unavoidable-information-exposure">unavoidably</a> revealed
+  by <a data-cite="dom#interface-event">DOM event</a> timing.
+* [=User agents=] can ask their users' permission to enable this class of API.
+  To reduce [=privacy labor=], a [=user agent=] could use a first-run dialog to
+  ask the user whether they generally support sharing this data, rather than
+  asking for each use of the APIs.
 
-Data exposed for the [=ancillary uses=] of telemetry and analytics may reveal
-information about user configuration, device, environment, or behavior that
-could be used as part of <a>browser fingerprinting</a> to identify users across
-sites. Revealing user preferences or other heuristics in providing or disabling
-functionality could also contribute to a browser fingerprint.
+If an API had to make one of these choices, and then something else about the
+API needs to change, designers should consider replacing the whole API with one
+that avoids exposing [=personal data=].
 
-Functionality for telemetry and analytics should be explicitly noted by
-specification authors, to help [=user agents=] provide configuration options
-to their users.
+Some other [=ancillary uses=] do require that a person be connected to their
+data. For example, a person might want to file a bug report that a website
+breaks on their particular computer, and be able to get follow-up communication
+from the developers while they fix the bug. This is an appropriate time to ask
+the person's permission.
 
-<aside class="example">
-  Sites and browsers wish to collect telemetry data to determine how frequently features are used or
-  to debug breakages, but the user agent does not want to burden the user with frequent consent
-  requests. A browser could use a first-run dialog to ask the user whether they generally support
-  sharing data to find bugs and improve the Web software they use, and then enable or disable
-  telemetry and reporting APIs based on the user's choice.
-</aside>
+<div class="practice" data-audiences="user-agents">
+<span class="practicelab" id="principle-disabling-ancillary-apis-with-new-information">
+User agents should provide a way to disable [=ancillary APIs that provide new
+information=].
+</span>
+</div>
 
+Some people may want to save processing time or bandwidth that's not necessary
+to achieve their immediate goals, or they might know something about their
+specific situation that makes the API designers' general decisions inappropriate
+for them. Because the information provided by [=ancillary APIs that provide new
+information=] isn't
+available in any other way, [=user agents=] should let people turn them off,
+despite the additional risk of [=browser fingerprinting=].
 
 ## Information access {#information}
 
@@ -1508,7 +1577,7 @@ rights by people over data about themselves are inherent to [=autonomy=].
 
 </div>
 
-Data is <dfn>de-identified</dfn> when there exists a high level of confidence
+Data is <dfn data-lt="de-identify|de-identification">de-identified</dfn> when there exists a high level of confidence
 that no [=person=] described by the data can be identified, directly or indirectly
 (e.g. via association with an [=identifier=], user agent, or device), by that data alone or in
 combination with other available information. Note
