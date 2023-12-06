@@ -488,10 +488,10 @@
 
 <section id="abstract">
 
-Privacy is an essential part of the Web. This document provides definitions
+Privacy is an essential part of the web. This document provides definitions
 for privacy and related concepts that are applicable worldwide as well as a set of privacy
-principles that should guide the development of the Web as a trustworthy platform. People using
-the Web would benefit from a stronger relationship between technology and policy, and this
+principles that should guide the development of the web as a trustworthy platform. People using
+the web would benefit from a stronger relationship between technology and policy, and this
 document is written to work with both.
 
 </section>
@@ -522,25 +522,25 @@ from the [[[Ethical-Web]]]: "Security and privacy are essential." While it focus
 not be taken as an indication that privacy is always more important than other ethical web principles, and
 this document doesn't address how to balance the different ethical web principles if they come into conflict.
 
-Privacy on the Web is primarily regulated by two forces: the architectural capabilities that the Web
-platform exposes (or does not expose), and laws in the various jurisdictions where the Web is used
+Privacy on the web is primarily regulated by two forces: the architectural capabilities that the web
+platform exposes (or does not expose), and laws in the various jurisdictions where the web is used
 ([[New-Chicago-School]], [[Standard-Bodies-Regulators]]). These regulatory mechanisms are separate; a law in one country does not
-(and should not) change the architecture of the whole Web, and likewise Web specifications cannot
-override any given law (although they can affect how easy it is to create and enforce law). The Web
+(and should not) change the architecture of the whole web, and likewise web specifications cannot
+override any given law (although they can affect how easy it is to create and enforce law). The web
 is not merely an implementation of a particular legal privacy regime; it has distinct features and
 guarantees driven by shared values that often exceed legal requirements for privacy.
 
-However, the overall goal of privacy on the Web is served best when technology and law complement
+However, the overall goal of privacy on the web is served best when technology and law complement
 each other. This document seeks to establish shared concepts as an aid to technical efforts to
 regulate privacy on the web. It may also be useful in pursuing alignment with and between legal
 regulatory regimes.
 
 Our goal for this document is not to cover all possible privacy issues, but rather to provide enough
-background to support the Web community in making informed decisions about privacy and in weaving
-privacy into the architecture of the Web.
+background to support the web community in making informed decisions about privacy and in weaving
+privacy into the architecture of the web.
 
 Few architectural principles are absolute, and privacy is no exception: privacy can come into tension
-with other desirable properties of an ethical architecture, and when that happens the Web community
+with other desirable properties of an ethical architecture, and when that happens the web community
 will have to work together to strike the right balance.
 
 </section>
@@ -562,7 +562,7 @@ Additional audiences include:
  * operators of privacy-related services.
 
 This document is intended to help its audiences address privacy concerns as early as possible in the life
-cycle of a new Web standard or feature, or in the development of Web products. Beginning with privacy in mind will help avoid the need to
+cycle of a new web standard or feature, or in the development of web products. Beginning with privacy in mind will help avoid the need to
 add special cases later to address unforeseen but predictable issues or
 to build systems that turn out to be unacceptable to users.
 
@@ -577,13 +577,13 @@ passes the review smoothly.
 This is a document containing technical guidelines. However, in order to put those guidelines in context we
 must first define some terms and explain what we mean by privacy.
 
-The Web is a social and technical system made up of [=information flows=]. Because this document
-is specifically about [=privacy=] as it applies to the Web, it focuses on privacy with respect to
+The web is a social and technical system made up of [=information flows=]. Because this document
+is specifically about [=privacy=] as it applies to the web, it focuses on privacy with respect to
 information flows.
 
-The Web is for everyone ([[?For-Everyone]]). It should be "<i>a platform that helps people and provides a
+The web is for everyone ([[?For-Everyone]]). It should be "<i>a platform that helps people and provides a
 net positive social benefit</i>" ([[?ETHICAL-WEB]]). One of the ways in which the
-Web serves people is by seeking to protect them from surveillance and the types of manipulation that data can
+web serves people is by seeking to protect them from surveillance and the types of manipulation that data can
 enable.
 
 Information can be used to predict and to influence people, as well as to design online
@@ -622,8 +622,8 @@ evaluating a privacy situation is best done by clearly identifying:
 
 There are <em>always</em> privacy principles at work. Some sets of principles may be more
 permissive, but that does not make them neutral. All privacy principles have an impact on
-[=people=] and we must therefore determine which principles best align with ethical Web values in
-Web [=contexts=] ([[?ETHICAL-WEB]], [[?Why-Privacy]]).
+[=people=] and we must therefore determine which principles best align with ethical web values in
+web [=contexts=] ([[?ETHICAL-WEB]], [[?Why-Privacy]]).
 
 <dfn>Information flows</dfn> are information exchanged or processed by
 [=actors=]. A person's privacy can be harmed both by their information flowing from them to
@@ -633,7 +633,7 @@ loud noises while they intend to sleep, manipulative information, interruptive
 messages when their focus is on something else, or harassment when they seek social interactions.
 (In some of these cases, the information may not be [=personal data=].)
 
-On the Web, [=information flows=] may involve a wide variety of [=actors=] that are not always
+On the web, [=information flows=] may involve a wide variety of [=actors=] that are not always
 recognizable or obvious to a user within a particular interaction. Visiting a website may involve
 the actors that contribute to operating that site, but also actors with network access,
 which may include: Internet service providers; other network operators; local institutions providing
@@ -641,7 +641,7 @@ a network connection including schools, libraries or universities; government in
 malicious hackers who have gained access to the network or the systems of any of the other actors.
 High-level threats including [=surveillance=] may be pursued by these actors. Pervasive monitoring,
 a form of large-scale, indiscriminate surveillance, is a known attack on the privacy of users of the
-Internet and the Web [[RFC7258]].
+internet and the web [[RFC7258]].
 
 Information flows may also involve other people &mdash; for example, other users of a site &mdash;
 which could include friends, family members, teachers, strangers, or government officials. Some
@@ -691,7 +691,7 @@ otherwise be restricted, such as granting access to their pictures or geolocatio
 [=Actors=] need to take care that their users are [*informed*](#consent-principles) when
 granting this [=consent=] and *aware* enough about what's going on that they can know to
 revoke their consent when they want to.
-[=Consent=] to data processing and granting permissions to access Web platform APIs are
+[=Consent=] to data processing and granting permissions to access web platform APIs are
 similar problems. Both consent and permissions should be requested in a way that lets
 people delay or avoid answering if they're trying to do something else. If the user
 grants some form of persistent access to data, there should be an indicator that lets
@@ -699,13 +699,13 @@ people notice this ongoing access and that lets them turn it off whenever they w
 In general, providing [=consent=] should be rare, intentional, and temporary.
 
 When an [=opt-out=] mechanism exists, it should preferably work with a
-<dfn>global opt-out</dfn> mechanism. Conceptually, a [=global opt-out=] mechanism is an 
-automaton operating as part of the [=user agent=]. It is equivalent to a robot that would carry 
-out a [=person=]'s instructions by pressing an [=opt-out=] button (or a similar expression of 
-the [=person=]'s rights) with every interaction that the [=person=] has with a site. (For 
-instance, the [=person=] may be objecting to [=processing=] based on legitimate interest, 
-withdrawing [=consent=] to specific [=purposes=], or requesting that their data not be sold or 
-shared.) The [=user=] is effectively delegating the expression of their [=opt-out=] to their 
+<dfn>global opt-out</dfn> mechanism. Conceptually, a [=global opt-out=] mechanism is an
+automaton operating as part of the [=user agent=]. It is equivalent to a robot that would carry
+out a [=person=]'s instructions by pressing an [=opt-out=] button (or a similar expression of
+the [=person=]'s rights) with every interaction that the [=person=] has with a site. (For
+instance, the [=person=] may be objecting to [=processing=] based on legitimate interest,
+withdrawing [=consent=] to specific [=purposes=], or requesting that their data not be sold or
+shared.) The [=user=] is effectively delegating the expression of their [=opt-out=] to their
 [=user agent=], which helps rectify [=automation asymmetry=]. The <em>Global Privacy
 Control</em> [[?GPC]] is a good example of a [=global opt-out=] mechanism.
 
@@ -1353,7 +1353,7 @@ despite the additional risk of [=browser fingerprinting=].
 ## Information access {#information}
 
 <div class="practice" data-audiences="api-designers user-agents">
-  <span class="practicelab">New Web APIs must guard users' information at least
+  <span class="practicelab">New web APIs must guard users' information at least
   as well as existing APIs that are expected to stay in the web platform.</span>
 </div>
 
@@ -1361,7 +1361,7 @@ The many APIs available to websites expose lots of data that can be combined
 into information about people, web servers, and other things.
 
 User-controlled settings or permissions can <dfn data-lt="access guard">guard
-access</dfn> to data on the web. When designing a Web API, use [=access guards=]
+access</dfn> to data on the web. When designing a web API, use [=access guards=]
 to ensure the API exposes information in [=appropriate=] ways.
 
 <aside class="example">
@@ -1512,7 +1512,7 @@ a person, consider at least these factors:
   </span>
 </div>
 
-While data rights alone are not sufficient to satisfy all [=privacy=] principles for the Web, they
+While data rights alone are not sufficient to satisfy all [=privacy=] principles for the web, they
 do support self-determination and help improve accountability. Such rights include:
 
 * The <dfn data-export="">right to access</dfn> [=data=] about oneself.
@@ -1525,7 +1525,7 @@ discoverable by those people.
 * The <dfn data-export="" data-lt="right to erase">right to erase</dfn> [=data=] about oneself.
 
 A [=person=] has a right to erase information about themselves whether or not they are terminating use of a service altogether, though what
-[=data=] can be erased may differ between those two cases. On the Web, a [=person=] may wish to erase
+[=data=] can be erased may differ between those two cases. On the web, a [=person=] may wish to erase
 data on their device, on a server, or both, and the data's location may not always be clear to the person.
 
 * The <dfn data-export="" data-lt="right to portability" data-local-lt="portability">right to
@@ -1734,7 +1734,7 @@ helps different users to react appropriately.
 <div class="practice" data-audiences="websites api-designers">
   <p>
     <span class="practicelab" id="abuse-reporting">
-      Systems that allow for communicating on the Web must provide an
+      Systems that allow for communicating on the web must provide an
       effective capability to report abuse.
         </span>
   </p>
@@ -1847,17 +1847,17 @@ inferences or combinations of such data) and how data is used. For transparency 
 people, explanatory information must be provided in the relevant [=context=].
 
 <div class="note">
-  In designing new Web features that may involve permissions, consider whether a permission is
+  In designing new web features that may involve permissions, consider whether a permission is
   needed and how to make that permission meaningful [[?ADDING-PERMISSIONS]].
 
-  Past workshops have explored the needs for better permissions on the Web:
+  Past workshops have explored the needs for better permissions on the web:
   <ul>
     <li><a href="https://www.w3.org/Privacy/permissions-ws-2022/report">2022 W3C Workshop on
     Permissions</a></li>
     <li><a href="https://www.w3.org/Privacy/permissions-ws-2018/report.html">2018 W3C Workshop on
     Permissions and User Consent</a></li>
     <li><a href="https://www.w3.org/2014/07/permissions/minutes.html">2014 Next steps on trust and
-    permissions for Web applications</a></li>
+    permissions for web applications</a></li>
   </ul>
 </div>
 
@@ -2067,7 +2067,7 @@ For example, a [=user agent=] might support this principle by:
 
 </div>
 
-Sites should include deception in their threat modeling and not assume that Web platform APIs
+Sites should include deception in their threat modeling and not assume that web platform APIs
 provide any guarantees of consistency, currency, or correctness about the user. People often have
 control of the devices and software they use to interact with web sites. In response to site
 requests, people may arbitrarily modify or select the information they provide for a
