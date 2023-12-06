@@ -1454,19 +1454,14 @@ to one <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://html.sp
 <p><a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">User agents</a> should do their best to distinguish <a data-link-type="dfn|abstract-op" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-9">contexts</a> within a site
 and adjust their <a data-link-type="dfn|abstract-op" href="#dfn-partition" class="internalDFN" id="ref-for-dfn-partition-1">partitions</a> to prevent or support <a data-link-type="dfn|abstract-op" href="#dfn-recognize" class="internalDFN" id="ref-for-dfn-recognize-5">recognition</a> across those intra-site <a data-link-type="dfn|abstract-op" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-10">contexts</a>
 according to their <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-63">users</a>' wishes.</p>
-</section><section id="data-minimization-0"><div class="header-wrapper"><h3 id="data-minimization"><bdi class="secno">2.2 </bdi>Data Minimization</h3><a class="self-link" href="#data-minimization" aria-label="Permalink for Section 2.2"></a></div><div class="practice principle" data-audiences="websites user-agents"><a class="marker self-link" href="#bp-sites-user-agents-and-other-actors-should-minimize-the-amount-of-personal-data-they-transfer"><bdi lang="en">Principle</bdi></a>: <span class="practicelab" id="bp-sites-user-agents-and-other-actors-should-minimize-the-amount-of-personal-data-they-transfer"><a data-link-type="dfn|abstract-op" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">Sites</a>, <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agents</a>, and other <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-20">actors</a>
-should minimize the amount of <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-18">personal data</a> they transfer.</span></div>
+</section><section id="data-minimization-0"><div class="header-wrapper"><h3 id="data-minimization"><bdi class="secno">2.2 </bdi>Data Minimization</h3><a class="self-link" href="#data-minimization" aria-label="Permalink for Section 2.2"></a></div><div class="practice principle" data-audiences="websites user-agents"><a class="marker self-link" href="#bp-sites-user-agents-and-other-actors-should-restrict-the-data-they-transfer-to-what-s-either-necessary-to-achieve-their-users-goals-or-aligns-with-their-users-wishes-and-interests"><bdi lang="en">Principle</bdi></a>: <span class="practicelab" id="bp-sites-user-agents-and-other-actors-should-restrict-the-data-they-transfer-to-what-s-either-necessary-to-achieve-their-users-goals-or-aligns-with-their-users-wishes-and-interests"><a data-link-type="dfn|abstract-op" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">Sites</a>, <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agents</a>, and other <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-20">actors</a>
+should restrict the <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-18">data</a> they transfer to what's either necessary to achieve their users'
+goals or aligns with their users' wishes and interests.</span></div>
 
 <div class="practice principle" data-audiences="api-designers"><a class="marker self-link" href="#bp-web-apis-should-be-designed-to-minimize-the-amount-of-data-that-sites-need-to-request-to-carry-out-their-users-goals-web-apis-should-also-provide-granularity-and-user-controls-over-personal-data-that-is-communicated-to-sites"><bdi lang="en">Principle</bdi></a>: <span class="practicelab" id="bp-web-apis-should-be-designed-to-minimize-the-amount-of-data-that-sites-need-to-request-to-carry-out-their-users-goals-web-apis-should-also-provide-granularity-and-user-controls-over-personal-data-that-is-communicated-to-sites">Web APIs should be designed to minimize the amount of data that sites need
 to request to carry out their users' goals.
 Web APIs should also provide granularity and user controls over <a href="#dfn-data" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-data-19">personal
 data</a> that is communicated to sites.</span></div>
-
-<div class="practice principle" data-audiences="user-agents"><a class="marker self-link" href="#bp-in-maintaining-duties-of-protection-discretion-and-loyalty-user-agents-should-share-data-only-when-it-either-is-needed-to-satisfy-a-user-s-immediate-goals-or-aligns-with-the-user-s-wishes-and-interests"><bdi lang="en">Principle</bdi></a>: <span class="practicelab" id="bp-in-maintaining-duties-of-protection-discretion-and-loyalty-user-agents-should-share-data-only-when-it-either-is-needed-to-satisfy-a-user-s-immediate-goals-or-aligns-with-the-user-s-wishes-and-interests">In maintaining duties of <a data-link-type="dfn|abstract-op" data-lt="duty of protection" href="#dfn-duty-of-protection" class="internalDFN" id="ref-for-dfn-duty-of-protection-1">protection</a>, <a data-link-type="dfn|abstract-op" data-lt="duty of discretion" href="#dfn-duty-of-discretion" class="internalDFN" id="ref-for-dfn-duty-of-discretion-1">discretion</a> and <a data-link-type="dfn|abstract-op" data-lt="duty of loyalty" href="#dfn-duty-of-loyalty" class="internalDFN" id="ref-for-dfn-duty-of-loyalty-1">loyalty</a>, user agents should share data only when it either is needed
-to satisfy a user's immediate goals or aligns with the user's wishes and
-interests.</span>
-
-</div>
 
 <p>Data minimization limits the risks of data being disclosed or misused. It also
 helps <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agents</a> and other <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-21">actors</a> more meaningfully explain the decisions their users need
@@ -2527,13 +2522,12 @@ must take extra technical and legal measures to ensure that this data can't be t
 for other purposes, like to grow the service.</span></li><li><a class="marker self-link" href="#principle-identity-per-context"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">A <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a>
 should help its user present the <a data-link-type="dfn|abstract-op" href="#dfn-identity" class="internalDFN" id="ref-for-dfn-identity-10">identity</a> they want in each <a data-link-type="dfn|abstract-op" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-36">context</a>
 they are in, and should prevent or support <a data-link-type="dfn|abstract-op" href="#dfn-recognize" class="internalDFN" id="ref-for-dfn-recognize-21">recognition</a> as appropriate.
-</span></li><li><a class="marker self-link" href="#bp-sites-user-agents-and-other-actors-should-minimize-the-amount-of-personal-data-they-transfer"><bdi lang="en">Principle</bdi></a>: <span class="practicelab"><a data-link-type="dfn|abstract-op" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">Sites</a>, <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agents</a>, and other <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-66">actors</a>
-should minimize the amount of <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-57">personal data</a> they transfer.</span></li><li><a class="marker self-link" href="#bp-web-apis-should-be-designed-to-minimize-the-amount-of-data-that-sites-need-to-request-to-carry-out-their-users-goals-web-apis-should-also-provide-granularity-and-user-controls-over-personal-data-that-is-communicated-to-sites"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">Web APIs should be designed to minimize the amount of data that sites need
+</span></li><li><a class="marker self-link" href="#bp-sites-user-agents-and-other-actors-should-restrict-the-data-they-transfer-to-what-s-either-necessary-to-achieve-their-users-goals-or-aligns-with-their-users-wishes-and-interests"><bdi lang="en">Principle</bdi></a>: <span class="practicelab"><a data-link-type="dfn|abstract-op" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">Sites</a>, <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agents</a>, and other <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-66">actors</a>
+should restrict the <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-57">data</a> they transfer to what's either necessary to achieve their users'
+goals or aligns with their users' wishes and interests.</span></li><li><a class="marker self-link" href="#bp-web-apis-should-be-designed-to-minimize-the-amount-of-data-that-sites-need-to-request-to-carry-out-their-users-goals-web-apis-should-also-provide-granularity-and-user-controls-over-personal-data-that-is-communicated-to-sites"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">Web APIs should be designed to minimize the amount of data that sites need
 to request to carry out their users' goals.
 Web APIs should also provide granularity and user controls over <a href="#dfn-data" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-data-58">personal
-data</a> that is communicated to sites.</span></li><li><a class="marker self-link" href="#bp-in-maintaining-duties-of-protection-discretion-and-loyalty-user-agents-should-share-data-only-when-it-either-is-needed-to-satisfy-a-user-s-immediate-goals-or-aligns-with-the-user-s-wishes-and-interests"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">In maintaining duties of <a data-link-type="dfn|abstract-op" data-lt="duty of protection" href="#dfn-duty-of-protection" class="internalDFN" id="ref-for-dfn-duty-of-protection-2">protection</a>, <a data-link-type="dfn|abstract-op" data-lt="duty of discretion" href="#dfn-duty-of-discretion" class="internalDFN" id="ref-for-dfn-duty-of-discretion-2">discretion</a> and <a data-link-type="dfn|abstract-op" data-lt="duty of loyalty" href="#dfn-duty-of-loyalty" class="internalDFN" id="ref-for-dfn-duty-of-loyalty-2">loyalty</a>, user agents should share data only when it either is needed
-to satisfy a user's immediate goals or aligns with the user's wishes and
-interests.</span></li><li><a class="marker self-link" href="#principle-identify-ancillary-apis"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">Specifications
+data</a> that is communicated to sites.</span></li><li><a class="marker self-link" href="#principle-identify-ancillary-apis"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">Specifications
 for <a data-link-type="dfn|abstract-op" href="#dfn-ancillary-apis-computed-from-existing-information" class="internalDFN" id="ref-for-dfn-ancillary-apis-computed-from-existing-information-3">ancillary APIs computed from existing information</a> and <a data-link-type="dfn|abstract-op" href="#dfn-ancillary-apis-that-provide-new-information" class="internalDFN" id="ref-for-dfn-ancillary-apis-that-provide-new-information-5">ancillary APIs that provide new information</a> should identify them as such, so that <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agents</a> can provide appropriate choices for their users.</span></li><li><a class="marker self-link" href="#principle-ancillary-apis-with-new-information-shouldnt-reveal-personal-data"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
 <a data-link-type="dfn|abstract-op" href="#dfn-ancillary-apis-that-provide-new-information" class="internalDFN" id="ref-for-dfn-ancillary-apis-that-provide-new-information-6">Ancillary APIs that provide new information</a> should not reveal any <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-59">personal data</a> that isn't already available through other APIs, without an indication
 that doing so aligns with the user's wishes and interests.
@@ -3000,12 +2994,8 @@ Wendy Seltzer.</p>
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
-    <li>
-      <a href="#ref-for-dfn-duty-of-protection-1" title="§ 2.2 Data Minimization">§ 2.2 Data Minimization</a> 
-    </li><li>
-      <a href="#ref-for-dfn-duty-of-protection-2" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> 
-    </li>
-  </ul>
+      <li>Not referenced in this document.</li>
+    </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-duty-of-discretion" aria-label="Links in this document to definition: Duty of Discretion">
       <span class="caret"></span>
       <div>
@@ -3014,12 +3004,8 @@ Wendy Seltzer.</p>
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
-    <li>
-      <a href="#ref-for-dfn-duty-of-discretion-1" title="§ 2.2 Data Minimization">§ 2.2 Data Minimization</a> 
-    </li><li>
-      <a href="#ref-for-dfn-duty-of-discretion-2" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> 
-    </li>
-  </ul>
+      <li>Not referenced in this document.</li>
+    </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-duty-of-honesty" aria-label="Links in this document to definition: Duty of Honesty">
       <span class="caret"></span>
       <div>
@@ -3038,12 +3024,8 @@ Wendy Seltzer.</p>
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
-    <li>
-      <a href="#ref-for-dfn-duty-of-loyalty-1" title="§ 2.2 Data Minimization">§ 2.2 Data Minimization</a> 
-    </li><li>
-      <a href="#ref-for-dfn-duty-of-loyalty-2" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> 
-    </li>
-  </ul>
+      <li>Not referenced in this document.</li>
+    </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-disloyalty" aria-label="Links in this document to definition: disloyal">
       <span class="caret"></span>
       <div>
