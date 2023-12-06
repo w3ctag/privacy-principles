@@ -2092,14 +2092,15 @@ A <dfn data-lt="individual|people|user|data subject">person</dfn> (also [=user=]
 [=people=] to refer to human beings, as a reminder of their humanity. When we use the term [=user=],
 it is to talk about the specific [=person=] who happens to be using a given system at that time.
 
-A <dfn data-lt="vulnerable">vulnerable person</dfn> is a [=person=] who may be unable to
-exercise sufficient self-determination in a [=context=]. Amongst other things, they should
+A <dfn data-lt="vulnerable">vulnerable person</dfn> in a particular [=context=]
+is a [=person=] whose ability to make their own choices can be taken away more
+easily than usual. Among other things, they should
 be treated with greater default privacy protections and may be considered unable to
 [=consent=] to various interactions with a system.
 People can be vulnerable for different reasons, for example because they are children,
 are employees with respect to their employers, are facing a steep asymmetry of power,
 are people in some situations of intellectual or psychological impairment, are
-refugees, etc.
+refugees, etc. See [[[#vulnerability]]].
 
 ## Contexts {#context}
 
@@ -2107,47 +2108,33 @@ A <dfn>context</dfn> is a physical or digital environment in which [=people=] in
 [=actors=], and which the [=people=] understand as distinct from other [=contexts=].
 
 A [=context=] is not defined in terms of who owns or controls it. Sharing
-[=data=] between different [=contexts=] of a single company is
+[=data=] between different [=contexts=] of a single company can be
 a [=privacy violation=], just as if the same data were shared between unrelated [=actors=].
 
 ## Server-Side Actors {#parties}
 
 An <dfn>actor</dfn> is an entity that a [=person=] can reasonably understand as a single "thing"
 they're interacting with. [=Actors=] can be [=people=] or collective entities like companies,
-associations, or governmental bodies. Uses of this document in a particular domain are expected to
-describe how the core concepts of that domain combine into a [=user=]-comprehensible [=actor=], and
-those refined definitions are likely to differ between domains.
+associations, or governmental bodies.
 
 [=User agents=] tend to explain to [=people=] which [=origin=] or [=site=] provided the
-web page they're looking at. The [=actor=] that controls this [=origin=] or [=site=] is
+web page they're looking at. The [=actor=] that makes or delegates decisions
+about the content and [=data processing=] on this [=origin=] or [=site=] is
 known as the web page's <dfn data-dfn-for="page">first party</dfn>. When a [=person=]
-interacts with a UI element on a web page, the <dfn>first party</dfn> of that interaction
-is usually the web page's [=page/first party=]. However, if a different [=actor=] controls
-how data collected with
-the UI element is used, and a reasonable person with a realistic cognitive budget would realize
+interacts with a part of a web page, the <dfn>first party</dfn> of that interaction
+is usually the web page's [=page/first party=].
+However, if a different [=actor=] makes the decisions about how that part of the
+page works, and a reasonable person with a realistic amount of time and energy would realize
 that this other [=actor=] has this control, this other
 [=actor=] is the [=first party=] for the interaction instead.
 
-<aside class="issue">
-  The group believes that the definition of [=first party=] provided above needs further refinement.
-  Please see <a href="https://github.com/w3ctag/privacy-principles/issues/152">this issue</a>
-  for more details.
-</aside>
-
-The [=first party=] to an interaction is accountable for the processing of data produced
-by that interaction, even if another actor does the processing.
+If someone captures data about an interaction with a web page,
+the [=first party=] of that interaction is accountable for the way that data is [=processed=],
+even if another [=actor=] does the processing.
 
 A <dfn data-lt="third parties">third party</dfn> is any [=actor=] other than the
 [=person=] visiting the website or the [=first parties=] they expect to be interacting
 with.
-
-The <dfn>Vegas Rule</dfn> is a simple implementation of privacy in which "<i>what happens with the
-[=first party=] stays with the [=first party=]</i>." Put differently, the [=Vegas Rule=] is followed
-when the [=first party=] is the only [=data controller=]. While the [=Vegas Rule=] is a good
-guideline, it's neither necessary nor sufficient for [=appropriate=] [=data processing=]. A [=first
-party=] that maintains exclusive access to a person's data can still [=process=] it
-[=inappropriately=], and there are cases where a third party can learn information about a person
-but still treat it [=appropriately=].
 
 ## Acting on Data {#acting-on-data}
 
@@ -2159,6 +2146,8 @@ On the web, an <dfn>identifier</dfn> of some type is typically assigned for an
 [=identity=] as seen by a website, which makes it easier for an automated
 system to store data about that [=person=].
 
+<aside class="example" id="example-identifiers" title="Identifiers">
+
 Examples of [=identifiers=] for a [=person=] can be:
 
 * their name,
@@ -2168,21 +2157,23 @@ Examples of [=identifiers=] for a [=person=] can be:
 * their location data,
 * an online identifier such as email or IP addresses,
 * browser fingerprints (based on a combination of
-configuration characteristics), or
-* factors specific to their physical, physiological, genetic, mental,
-economic,
-cultural, social, or behavioral [=identity=],
+  configuration characteristics), or
+* factors specific to their physical, physiological, genetic, mental, economic,
+  cultural, social, or behavioral [=identity=],
 * strings derived from other [=identifiers=], for instance through hashing.
+
+</aside>
 
 If a [=person=] could reasonably be identified or re-identified through the combination of [=data=] with other
 [=data=], then that [=data=] is [=personal data=].
 
-<dfn>Privacy</dfn> is achieved in a given [=context=] that either involves [=personal data=] or
-involves information being presented to [=people=] when the principles of that [=context=] are
-followed appropriately. When the principles for that [=context=] are not followed, there is a
-<dfn>privacy violation</dfn>. Similarly, we say that a particular interaction is
-<dfn data-lt="appropriately">appropriate</dfn> when the principles are adhered
-to) or <dfn data-lt="inappropriately">inappropriate</dfn> otherwise.
+[=People=] have <dfn>privacy</dfn> in a given [=context=] when [=actors=] in
+that [=context=] follow that [=context=]'s principles when presenting
+information and using [=personal data=].
+When the principles for that [=context=] are not followed, there is a
+<dfn>privacy violation</dfn>. We say that a particular interaction is
+<dfn data-lt="appropriately">appropriate</dfn> when the principles are followed
+or <dfn data-lt="inappropriately">inappropriate</dfn> otherwise.
 
 An [=actor=] <dfn data-lt="process|processing|processed|data processing">processes</dfn> data if it
 carries out operations on [=personal data=], whether or not by automated means, such as
@@ -2192,35 +2183,33 @@ otherwise making available, [=selling=], alignment or combination, restriction, 
 destruction.
 
 An [=actor=] <dfn data-lt="share|sharing">shares</dfn> data if it provides it to any other
-[=actor=]. Note that, under this definition, an [=actor=] that provides data to its own
+[=data controller=]. Note that, under this definition, an [=actor=] that provides data to its own
 [=service providers=] is not [=sharing=] it.
 
-An [=actor=] <dfn data-lt="sell|selling">sells</dfn> data when it [=shares=] it in exchange
-for consideration, monetary or otherwise.
+An [=actor=] <dfn data-lt="sell|selling">sells</dfn> data when it [=shares=] the data in exchange
+for something of value, even if that value isn't monetary.
 
 The <dfn>purpose</dfn> of a given [=processing=] of data is an anticipated, intended, or
 planned outcome of this [=processing=] which is achieved or aimed for within a given
-[=context=]. A [=purpose=], when described, should be specific enough to be actionable by
-someone familiar with the relevant [=context=] (ie. they could independently determine
-[=means=] that reasonably correspond to an implementation of the [=purpose=]).
+[=context=]. A [=purpose=], when described, should be specific enough that
+someone familiar with the relevant [=context=] could pick some
+[=means=] that would achieve the [=purpose=].
 
-The <dfn>means</dfn> are the general method of [=data processing=] through which a given
-[=purpose=] is implemented, in a given [=context=], considered at a relatively abstract
-level and not necessarily all the way down to implementation details. Example:
-<em>a person will have their preferences restored (purpose) by looking up their identifier
-in a preferences store (means)</em>.
+The <dfn>means</dfn> is the general way that data is [=processed=] to achieve a particular
+[=purpose=], in a given [=context=]. [=Means=] are relatively abstract
+and don't specify all the way down to implementation details. For example, for
+the [=purpose=] of restoring a person's preferences, the [=means=] could be to
+look up their identifier in a preferences store.
 
 A <dfn>data controller</dfn> is an [=actor=] that determines the [=means=] and [=purposes=]
 of data processing. Any [=actor=] that is not a [=service provider=] is a [=data controller=].
 
-A <dfn data-lt="data processor">service provider</dfn> or [=data processor=] is considered to be in
-the same category of [=first party=] or [=third party=] as the [=actor=] contracting it to
-perform the relevant [=processing=] if it:
+A <dfn data-lt="data processor">service provider</dfn> or [=data processor=]:
 
-* is processing the data on behalf of that [=actor=];
+* [=processes=] data on behalf of another [=actor=];
 * ensures that the data is only retained, accessed, and used as directed by that
   [=actor=] and solely for the list of explicitly-specified [=purposes=]
-  detailed by the directing [=actor=] or [=data controller=];
+  detailed by the directing [=actor=];
 * may determine implementation details of the data processing in question but
   does not determine the [=purpose=] for which the data is being [=processed=]
   nor the overarching [=means=] through which the [=purpose=] is carried out;
@@ -2270,7 +2259,7 @@ usually would, and possibly even to pretend they don't know you.
 <dfn>Cross-site recognition</dfn> is [=recognition=] when the identities
 are observed on different [=sites=]. In the usual case that the sites are
 different [=contexts=],
-[=cross-site recognition=] is a privacy harm in the same cases as [=cross-context recognition=].
+[=cross-site recognition=] is [=inappropriate=] in the same cases as [=cross-context recognition=].
 
 <dfn>Same-site recognition</dfn> is when a single [=site=] [=recognizes=] a
 [=person=] across two or more visits.
