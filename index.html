@@ -129,10 +129,10 @@ dd{margin-left:0}
 .removeOnSave{display:none}
 }
 </style>
-<meta name="description" content="Privacy is an essential part of the Web. This document provides definitions
+<meta name="description" content="Privacy is an essential part of the web. This document provides definitions
 for privacy and related concepts that are applicable worldwide as well as a set of privacy
-principles that should guide the development of the Web as a trustworthy platform. People using
-the Web would benefit from a stronger relationship between technology and policy, and this
+principles that should guide the development of the web as a trustworthy platform. People using
+the web would benefit from a stronger relationship between technology and policy, and this
 document is written to work with both.">
 <style>
 var{position:relative;cursor:pointer}
@@ -831,10 +831,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     <hr title="Separator for header">
   </div><section id="abstract" class="introductory"><h2>Abstract</h2>
 
-<p>Privacy is an essential part of the Web. This document provides definitions
+<p>Privacy is an essential part of the web. This document provides definitions
 for privacy and related concepts that are applicable worldwide as well as a set of privacy
-principles that should guide the development of the Web as a trustworthy platform. People using
-the Web would benefit from a stronger relationship between technology and policy, and this
+principles that should guide the development of the web as a trustworthy platform. People using
+the web would benefit from a stronger relationship between technology and policy, and this
 document is written to work with both.</p>
 </section>
 
@@ -893,22 +893,22 @@ conclusion of the task force, the TAG intends to adopt this document as a Findin
 from the <cite><a data-matched-text="[[[Ethical-Web]]]" href="https://www.w3.org/2001/tag/doc/ethical-web-principles/">W3C TAG Ethical Web Principles</a></cite>: "Security and privacy are essential." While it focuses on privacy, this should
 not be taken as an indication that privacy is always more important than other ethical web principles, and
 this document doesn't address how to balance the different ethical web principles if they come into conflict.</p>
-<p>Privacy on the Web is primarily regulated by two forces: the architectural capabilities that the Web
-platform exposes (or does not expose), and laws in the various jurisdictions where the Web is used
+<p>Privacy on the web is primarily regulated by two forces: the architectural capabilities that the web
+platform exposes (or does not expose), and laws in the various jurisdictions where the web is used
 ([<cite><a class="bibref" data-link-type="biblio" href="#bib-new-chicago-school" title="The New Chicago School">New-Chicago-School</a></cite>], [<cite><a class="bibref" data-link-type="biblio" href="#bib-standard-bodies-regulators" title="Technical Standards Bodies are Regulators">Standard-Bodies-Regulators</a></cite>]). These regulatory mechanisms are separate; a law in one country does not
-(and should not) change the architecture of the whole Web, and likewise Web specifications cannot
-override any given law (although they can affect how easy it is to create and enforce law). The Web
+(and should not) change the architecture of the whole web, and likewise web specifications cannot
+override any given law (although they can affect how easy it is to create and enforce law). The web
 is not merely an implementation of a particular legal privacy regime; it has distinct features and
 guarantees driven by shared values that often exceed legal requirements for privacy.</p>
-<p>However, the overall goal of privacy on the Web is served best when technology and law complement
+<p>However, the overall goal of privacy on the web is served best when technology and law complement
 each other. This document seeks to establish shared concepts as an aid to technical efforts to
 regulate privacy on the web. It may also be useful in pursuing alignment with and between legal
 regulatory regimes.</p>
 <p>Our goal for this document is not to cover all possible privacy issues, but rather to provide enough
-background to support the Web community in making informed decisions about privacy and in weaving
-privacy into the architecture of the Web.</p>
+background to support the web community in making informed decisions about privacy and in weaving
+privacy into the architecture of the web.</p>
 <p>Few architectural principles are absolute, and privacy is no exception: privacy can come into tension
-with other desirable properties of an ethical architecture, and when that happens the Web community
+with other desirable properties of an ethical architecture, and when that happens the web community
 will have to work together to strike the right balance.</p>
 </section>
 
@@ -927,7 +927,7 @@ will have to work together to strike the right balance.</p>
 <li>operators of privacy-related services.</li>
 </ul>
 <p>This document is intended to help its audiences address privacy concerns as early as possible in the life
-cycle of a new Web standard or feature, or in the development of Web products. Beginning with privacy in mind will help avoid the need to
+cycle of a new web standard or feature, or in the development of web products. Beginning with privacy in mind will help avoid the need to
 add special cases later to address unforeseen but predictable issues or
 to build systems that turn out to be unacceptable to users.</p>
 <p>Because this document guides privacy reviews of new standards, authors of web
@@ -937,12 +937,12 @@ passes the review smoothly.</p>
 
 <section id="an-introduction-to-privacy-on-the-web"><div class="header-wrapper"><h2 id="intro"><bdi class="secno">1. </bdi>An Introduction to Privacy on the Web</h2><a class="self-link" href="#intro" aria-label="Permalink for Section 1."></a></div><p>This is a document containing technical guidelines. However, in order to put those guidelines in context we
 must first define some terms and explain what we mean by privacy.</p>
-<p>The Web is a social and technical system made up of <a data-link-type="dfn|abstract-op" href="#dfn-information-flows" class="internalDFN" id="ref-for-dfn-information-flows-1">information flows</a>. Because this document
-is specifically about <a data-link-type="dfn|abstract-op" href="#dfn-privacy" class="internalDFN" id="ref-for-dfn-privacy-1">privacy</a> as it applies to the Web, it focuses on privacy with respect to
+<p>The web is a social and technical system made up of <a data-link-type="dfn|abstract-op" href="#dfn-information-flows" class="internalDFN" id="ref-for-dfn-information-flows-1">information flows</a>. Because this document
+is specifically about <a data-link-type="dfn|abstract-op" href="#dfn-privacy" class="internalDFN" id="ref-for-dfn-privacy-1">privacy</a> as it applies to the web, it focuses on privacy with respect to
 information flows.</p>
-<p>The Web is for everyone ([<cite><a class="bibref" data-link-type="biblio" href="#bib-for-everyone" title="This Is For Everyone">For-Everyone</a></cite>]). It should be "<i>a platform that helps people and provides a
+<p>The web is for everyone ([<cite><a class="bibref" data-link-type="biblio" href="#bib-for-everyone" title="This Is For Everyone">For-Everyone</a></cite>]). It should be "<i>a platform that helps people and provides a
 net positive social benefit</i>" ([<cite><a class="bibref" data-link-type="biblio" href="#bib-ethical-web" title="W3C TAG Ethical Web Principles">ETHICAL-WEB</a></cite>]). One of the ways in which the
-Web serves people is by seeking to protect them from surveillance and the types of manipulation that data can
+web serves people is by seeking to protect them from surveillance and the types of manipulation that data can
 enable.</p>
 <p>Information can be used to predict and to influence people, as well as to design online
 spaces that control people's behaviour. The collection and <a data-link-type="dfn|abstract-op" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-1">processing</a> of information in greater
@@ -976,8 +976,8 @@ of the <a data-link-type="dfn|abstract-op" href="#dfn-information-flows" class="
 </ul>
 <p>There are <em>always</em> privacy principles at work. Some sets of principles may be more
 permissive, but that does not make them neutral. All privacy principles have an impact on
-<a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-6">people</a> and we must therefore determine which principles best align with ethical Web values in
-Web <a data-link-type="dfn|abstract-op" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-3">contexts</a> ([<cite><a class="bibref" data-link-type="biblio" href="#bib-ethical-web" title="W3C TAG Ethical Web Principles">ETHICAL-WEB</a></cite>], [<cite><a class="bibref" data-link-type="biblio" href="#bib-why-privacy" title="Why Privacy Matter">Why-Privacy</a></cite>]).</p>
+<a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-6">people</a> and we must therefore determine which principles best align with ethical web values in
+web <a data-link-type="dfn|abstract-op" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-3">contexts</a> ([<cite><a class="bibref" data-link-type="biblio" href="#bib-ethical-web" title="W3C TAG Ethical Web Principles">ETHICAL-WEB</a></cite>], [<cite><a class="bibref" data-link-type="biblio" href="#bib-why-privacy" title="Why Privacy Matter">Why-Privacy</a></cite>]).</p>
 <p><dfn data-plurals="information flow" id="dfn-information-flows" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Information flows</dfn> are information exchanged or processed by
 <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-6">actors</a>. A person's privacy can be harmed both by their information flowing from them to
 other actors and by information flowing toward them. Examples of the latter include:
@@ -985,7 +985,7 @@ unexpected shocking images,
 loud noises while they intend to sleep, manipulative information, interruptive
 messages when their focus is on something else, or harassment when they seek social interactions.
 (In some of these cases, the information may not be <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-5">personal data</a>.)</p>
-<p>On the Web, <a data-link-type="dfn|abstract-op" href="#dfn-information-flows" class="internalDFN" id="ref-for-dfn-information-flows-5">information flows</a> may involve a wide variety of <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-7">actors</a> that are not always
+<p>On the web, <a data-link-type="dfn|abstract-op" href="#dfn-information-flows" class="internalDFN" id="ref-for-dfn-information-flows-5">information flows</a> may involve a wide variety of <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-7">actors</a> that are not always
 recognizable or obvious to a user within a particular interaction. Visiting a website may involve
 the actors that contribute to operating that site, but also actors with network access,
 which may include: Internet service providers; other network operators; local institutions providing
@@ -993,7 +993,7 @@ a network connection including schools, libraries or universities; government in
 malicious hackers who have gained access to the network or the systems of any of the other actors.
 High-level threats including <a data-link-type="dfn|abstract-op" href="#dfn-surveillance" class="internalDFN" id="ref-for-dfn-surveillance-1">surveillance</a> may be pursued by these actors. Pervasive monitoring,
 a form of large-scale, indiscriminate surveillance, is a known attack on the privacy of users of the
-Internet and the Web [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc7258" title="Pervasive Monitoring Is an Attack">RFC7258</a></cite>].</p>
+internet and the web [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc7258" title="Pervasive Monitoring Is an Attack">RFC7258</a></cite>].</p>
 <p>Information flows may also involve other people — for example, other users of a site —
 which could include friends, family members, teachers, strangers, or government officials. Some
 threats to privacy, including both <a data-link-type="dfn|abstract-op" href="#dfn-disclosure" class="internalDFN" id="ref-for-dfn-disclosure-1">disclosure</a> and harassment, may be particular to the other
@@ -1032,20 +1032,20 @@ otherwise be restricted, such as granting access to their pictures or geolocatio
 <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-9">Actors</a> need to take care that their users are <a href="#consent-principles"><em>informed</em></a> when
 granting this <a data-link-type="dfn|abstract-op" href="#dfn-opt-in" class="internalDFN" id="ref-for-dfn-opt-in-3">consent</a> and <em>aware</em> enough about what's going on that they can know to
 revoke their consent when they want to.
-<a data-link-type="dfn|abstract-op" href="#dfn-opt-in" class="internalDFN" id="ref-for-dfn-opt-in-4">Consent</a> to data processing and granting permissions to access Web platform APIs are
+<a data-link-type="dfn|abstract-op" href="#dfn-opt-in" class="internalDFN" id="ref-for-dfn-opt-in-4">Consent</a> to data processing and granting permissions to access web platform APIs are
 similar problems. Both consent and permissions should be requested in a way that lets
 people delay or avoid answering if they're trying to do something else. If the user
 grants some form of persistent access to data, there should be an indicator that lets
 people notice this ongoing access and that lets them turn it off whenever they wish to.
 In general, providing <a data-link-type="dfn|abstract-op" href="#dfn-opt-in" class="internalDFN" id="ref-for-dfn-opt-in-5">consent</a> should be rare, intentional, and temporary.</p>
 <p>When an <a data-link-type="dfn|abstract-op" href="#dfn-opt-out" class="internalDFN" id="ref-for-dfn-opt-out-1">opt-out</a> mechanism exists, it should preferably work with a
-<dfn id="dfn-global-opt-out" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">global opt-out</dfn> mechanism. Conceptually, a <a data-link-type="dfn|abstract-op" href="#dfn-global-opt-out" class="internalDFN" id="ref-for-dfn-global-opt-out-1">global opt-out</a> mechanism is an 
-automaton operating as part of the <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a>. It is equivalent to a robot that would carry 
-out a <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-14">person</a>'s instructions by pressing an <a data-link-type="dfn|abstract-op" href="#dfn-opt-out" class="internalDFN" id="ref-for-dfn-opt-out-2">opt-out</a> button (or a similar expression of 
-the <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-15">person</a>'s rights) with every interaction that the <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-16">person</a> has with a site. (For 
-instance, the <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-17">person</a> may be objecting to <a data-link-type="dfn|abstract-op" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-9">processing</a> based on legitimate interest, 
-withdrawing <a data-link-type="dfn|abstract-op" href="#dfn-opt-in" class="internalDFN" id="ref-for-dfn-opt-in-6">consent</a> to specific <a data-link-type="dfn|abstract-op" href="#dfn-purpose" class="internalDFN" id="ref-for-dfn-purpose-3">purposes</a>, or requesting that their data not be sold or 
-shared.) The <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-18">user</a> is effectively delegating the expression of their <a data-link-type="dfn|abstract-op" href="#dfn-opt-out" class="internalDFN" id="ref-for-dfn-opt-out-3">opt-out</a> to their 
+<dfn id="dfn-global-opt-out" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">global opt-out</dfn> mechanism. Conceptually, a <a data-link-type="dfn|abstract-op" href="#dfn-global-opt-out" class="internalDFN" id="ref-for-dfn-global-opt-out-1">global opt-out</a> mechanism is an
+automaton operating as part of the <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a>. It is equivalent to a robot that would carry
+out a <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-14">person</a>'s instructions by pressing an <a data-link-type="dfn|abstract-op" href="#dfn-opt-out" class="internalDFN" id="ref-for-dfn-opt-out-2">opt-out</a> button (or a similar expression of
+the <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-15">person</a>'s rights) with every interaction that the <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-16">person</a> has with a site. (For
+instance, the <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-17">person</a> may be objecting to <a data-link-type="dfn|abstract-op" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-9">processing</a> based on legitimate interest,
+withdrawing <a data-link-type="dfn|abstract-op" href="#dfn-opt-in" class="internalDFN" id="ref-for-dfn-opt-in-6">consent</a> to specific <a data-link-type="dfn|abstract-op" href="#dfn-purpose" class="internalDFN" id="ref-for-dfn-purpose-3">purposes</a>, or requesting that their data not be sold or
+shared.) The <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-18">user</a> is effectively delegating the expression of their <a data-link-type="dfn|abstract-op" href="#dfn-opt-out" class="internalDFN" id="ref-for-dfn-opt-out-3">opt-out</a> to their
 <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a>, which helps rectify <a data-link-type="dfn|abstract-op" href="#dfn-automation-asymmetry" class="internalDFN" id="ref-for-dfn-automation-asymmetry-1">automation asymmetry</a>. The <em>Global Privacy
 Control</em> [<cite><a class="bibref" data-link-type="biblio" href="#bib-gpc" title="Global Privacy Control (GPC)">GPC</a></cite>] is a good example of a <a data-link-type="dfn|abstract-op" href="#dfn-global-opt-out" class="internalDFN" id="ref-for-dfn-global-opt-out-2">global opt-out</a> mechanism.</p>
 <p>Under this model, a <a data-link-type="dfn|abstract-op" href="#dfn-global-opt-out" class="internalDFN" id="ref-for-dfn-global-opt-out-3">global opt-out</a> signal should not be understood as a decision that a
@@ -1598,7 +1598,7 @@ specific situation that makes the API designers' general decisions inappropriate
 for them. Because the information provided by <a data-link-type="dfn|abstract-op" href="#dfn-ancillary-apis-that-provide-new-information" class="internalDFN" id="ref-for-dfn-ancillary-apis-that-provide-new-information-4">ancillary APIs that provide new information</a> isn't
 available in any other way, <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agents</a> should let people turn them off,
 despite the additional risk of <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://www.w3.org/TR/fingerprinting-guidance/#dfn-browser-fingerprinting">browser fingerprinting</a>.</p>
-</section></section></section><section id="information-access"><div class="header-wrapper"><h3 id="information"><bdi class="secno">2.3 </bdi>Information access</h3><a class="self-link" href="#information" aria-label="Permalink for Section 2.3"></a></div><div class="practice principle" data-audiences="api-designers user-agents"><a class="marker self-link" href="#bp-new-web-apis-must-guard-users-information-at-least-as-well-as-existing-apis-that-are-expected-to-stay-in-the-web-platform"><bdi lang="en">Principle</bdi></a>: <span class="practicelab" id="bp-new-web-apis-must-guard-users-information-at-least-as-well-as-existing-apis-that-are-expected-to-stay-in-the-web-platform">New Web APIs must guard users' information at least
+</section></section></section><section id="information-access"><div class="header-wrapper"><h3 id="information"><bdi class="secno">2.3 </bdi>Information access</h3><a class="self-link" href="#information" aria-label="Permalink for Section 2.3"></a></div><div class="practice principle" data-audiences="api-designers user-agents"><a class="marker self-link" href="#bp-new-web-apis-must-guard-users-information-at-least-as-well-as-existing-apis-that-are-expected-to-stay-in-the-web-platform"><bdi lang="en">Principle</bdi></a>: <span class="practicelab" id="bp-new-web-apis-must-guard-users-information-at-least-as-well-as-existing-apis-that-are-expected-to-stay-in-the-web-platform">New web APIs must guard users' information at least
   as well as existing APIs that are expected to stay in the web platform.</span>
   
 </div>
@@ -1606,7 +1606,7 @@ despite the additional risk of <a data-link-type="dfn|abstract-op" data-type="df
 <p>The many APIs available to websites expose lots of data that can be combined
 into information about people, web servers, and other things.</p>
 <p>User-controlled settings or permissions can <dfn data-lt="access guard|guard access" data-plurals="access guards" id="dfn-access-guard" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">guard
-access</dfn> to data on the web. When designing a Web API, use <a data-link-type="dfn|abstract-op" href="#dfn-access-guard" class="internalDFN" id="ref-for-dfn-access-guard-1">access guards</a>
+access</dfn> to data on the web. When designing a web API, use <a data-link-type="dfn|abstract-op" href="#dfn-access-guard" class="internalDFN" id="ref-for-dfn-access-guard-1">access guards</a>
 to ensure the API exposes information in <a data-link-type="dfn|abstract-op" href="#dfn-appropriately" class="internalDFN" id="ref-for-dfn-appropriately-8">appropriate</a> ways.</p>
 <aside class="example" id="example-9"><div class="marker">
     <a class="self-link" href="#example-9">Example<bdi> 9</bdi></a>
@@ -1753,7 +1753,7 @@ information about the person using the system or other people;</li>
   
 </div>
 
-<p>While data rights alone are not sufficient to satisfy all <a data-link-type="dfn|abstract-op" href="#dfn-privacy" class="internalDFN" id="ref-for-dfn-privacy-6">privacy</a> principles for the Web, they
+<p>While data rights alone are not sufficient to satisfy all <a data-link-type="dfn|abstract-op" href="#dfn-privacy" class="internalDFN" id="ref-for-dfn-privacy-6">privacy</a> principles for the web, they
 do support self-determination and help improve accountability. Such rights include:</p>
 <ul>
 <li>The <dfn data-export="" id="dfn-right-to-access" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">right to access</dfn> <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-31">data</a> about oneself.</li>
@@ -1766,7 +1766,7 @@ discoverable by those people.</p>
 <li>The <dfn data-export="" data-lt="right to erase" id="dfn-right-to-erase" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">right to erase</dfn> <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-32">data</a> about oneself.</li>
 </ul>
 <p>A <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-68">person</a> has a right to erase information about themselves whether or not they are terminating use of a service altogether, though what
-<a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-33">data</a> can be erased may differ between those two cases. On the Web, a <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-69">person</a> may wish to erase
+<a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-33">data</a> can be erased may differ between those two cases. On the web, a <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-69">person</a> may wish to erase
 data on their device, on a server, or both, and the data's location may not always be clear to the person.</p>
 <ul>
 <li>The <dfn data-export="" data-lt="right to portability|right to port|portability" data-local-lt="portability" id="dfn-right-to-portability" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">right to
@@ -1950,7 +1950,7 @@ The <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec
 helps different users to react appropriately.</p>
 </section><section id="protecting-web-users-from-abusive-behaviour"><div class="header-wrapper"><h3 id="x2-9-protecting-web-users-from-abusive-behaviour"><bdi class="secno">2.9 </bdi>Protecting web users from abusive behaviour</h3><a class="self-link" href="#protecting-web-users-from-abusive-behaviour" aria-label="Permalink for Section 2.9"></a></div>
 <div class="practice principle" data-audiences="websites api-designers"><a class="marker self-link" href="#abuse-reporting"><bdi lang="en">Principle</bdi></a>: <span class="practicelab" id="abuse-reporting">
-      Systems that allow for communicating on the Web must provide an
+      Systems that allow for communicating on the web must provide an
       effective capability to report abuse.
         </span>
   
@@ -2056,16 +2056,16 @@ people, explanatory information must be provided in the relevant <a data-link-ty
 <div class="note" role="note" id="issue-container-generatedID-2"><div role="heading" class="note-title marker" id="h-note-2" aria-level="2"><span>Note</span></div><div class="">
 
 
-<p>  In designing new Web features that may involve permissions, consider whether a permission is
+<p>  In designing new web features that may involve permissions, consider whether a permission is
   needed and how to make that permission meaningful [<cite><a class="bibref" data-link-type="biblio" href="#bib-adding-permissions" title="Adding another permission? A guide">ADDING-PERMISSIONS</a></cite>].</p>
-<p>  Past workshops have explored the needs for better permissions on the Web:
+<p>  Past workshops have explored the needs for better permissions on the web:
   </p><ul>
     <li><a href="https://www.w3.org/Privacy/permissions-ws-2022/report">2022 <abbr title="World Wide Web Consortium">W3C</abbr> Workshop on
     Permissions</a></li>
     <li><a href="https://www.w3.org/Privacy/permissions-ws-2018/report.html">2018 <abbr title="World Wide Web Consortium">W3C</abbr> Workshop on
     Permissions and User Consent</a></li>
     <li><a href="https://www.w3.org/2014/07/permissions/minutes.html">2014 Next steps on trust and
-    permissions for Web applications</a></li>
+    permissions for web applications</a></li>
   </ul><p></p>
 </div></div>
 
@@ -2255,7 +2255,7 @@ the <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDF
 </ul>
 </div>
 
-<p>Sites should include deception in their threat modeling and not assume that Web platform APIs
+<p>Sites should include deception in their threat modeling and not assume that web platform APIs
 provide any guarantees of consistency, currency, or correctness about the user. People often have
 control of the devices and software they use to interact with web sites. In response to site
 requests, people may arbitrarily modify or select the information they provide for a
@@ -2534,7 +2534,7 @@ that doing so aligns with the user's wishes and interests.
 </span></li><li><a class="marker self-link" href="#principle-disabling-ancillary-apis-with-new-information"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
 User agents should provide a way to enable or disable <a data-link-type="dfn|abstract-op" href="#dfn-ancillary-apis-that-provide-new-information" class="internalDFN" id="ref-for-dfn-ancillary-apis-that-provide-new-information-7">ancillary APIs that provide new information</a> and should set the default according to their users'
 needs.
-</span></li><li><a class="marker self-link" href="#bp-new-web-apis-must-guard-users-information-at-least-as-well-as-existing-apis-that-are-expected-to-stay-in-the-web-platform"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">New Web APIs must guard users' information at least
+</span></li><li><a class="marker self-link" href="#bp-new-web-apis-must-guard-users-information-at-least-as-well-as-existing-apis-that-are-expected-to-stay-in-the-web-platform"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">New web APIs must guard users' information at least
   as well as existing APIs that are expected to stay in the web platform.</span></li><li><a class="marker self-link" href="#principle-sensitive"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
     System designers
     should not assume that particular information is or is not sensitive.
@@ -2558,7 +2558,7 @@ the device or software.
 Even when a disclosure is reasonable, <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agents</a> must ensure their users
 know about this surveillance.
 </span></li><li><a class="marker self-link" href="#abuse-reporting"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
-      Systems that allow for communicating on the Web must provide an
+      Systems that allow for communicating on the web must provide an
       effective capability to report abuse.
         </span></li><li><a class="marker self-link" href="#abuse-protection"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
       <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">User agents</a> and <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">sites</a> must
