@@ -61,9 +61,24 @@
           for (let p of document.querySelectorAll('div.practice > p')) {
             if (/^\s*$/.test(p.textContent)) p.remove();
           }
+          const audienceNames = {
+            websites: 'websites',
+            'user-agents': 'user agents',
+            'api-designers': 'API designers',
+          };
           for (let prac of document.querySelectorAll('div.practice.advisement')) {
             prac.classList.remove('advisement');
             prac.classList.add('principle');
+            const audiences = prac.dataset.audiences?.split(/\s+/) ?? [];
+            const audDiv = document.createElement('div');
+            audDiv.setAttribute('class', 'audience-label');
+            audiences.forEach(lbl => {
+              const spn = document.createElement('span');
+              spn.setAttribute('class', `audience-${lbl}`);
+              spn.textContent = audienceNames[lbl];
+              audDiv.append(spn);
+            });
+            prac.append(audDiv);
           }
           for (let el of document.querySelectorAll('#bp-summary h2, #toc a[href="#bp-summary"]')) {
             el.innerHTML = el.innerHTML.replace('Best Practices Summary', 'Principles Summary');
@@ -482,6 +497,18 @@
     q {
       font-style: italic;
     }
+    .audience-label {
+      font-size: 0.9em;
+    }
+    .audience-label > span {
+      display: inline-block;
+      padding: 0.1em 0.4em;
+      margin: 0 0.2em;
+      border-radius: 4px;
+    }
+    .audience-websites { background-color: gold; }
+    .audience-user-agents { background-color: mediumspringgreen; }
+    .audience-api-designers { background-color: mistyrose; }
   </style>
 </head>
 <body data-cite="html indexedDB service-workers fingerprinting-guidance url infra">
