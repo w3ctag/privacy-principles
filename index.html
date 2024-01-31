@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en" dir="ltr"><head>
 <meta charset="utf-8">
-<meta name="generator" content="ReSpec 34.3.0">
+<meta name="generator" content="ReSpec 34.4.0">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 span.example-title{text-transform:none}
@@ -781,15 +781,15 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "id": "web-without-3p-cookies"
     }
   },
-  "publishISODate": "2024-01-17T00:00:00.000Z",
-  "generatedSubtitle": "W3C Editor's Draft 17 January 2024"
+  "publishISODate": "2024-01-31T00:00:00.000Z",
+  "generatedSubtitle": "W3C Editor's Draft 31 January 2024"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED"></head>
-<body data-cite="html indexedDB service-workers fingerprinting-guidance url infra" class="h-entry informative toc-inline"><div class="head">
+<body data-cite="html indexedDB service-workers fingerprinting-guidance url infra" class="h-entry informative"><div class="head">
     <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a></p>
     <h1 id="title" class="title">Privacy Principles</h1> 
-    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2024-01-17">17 January 2024</time></p>
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2024-01-31">31 January 2024</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
@@ -1473,15 +1473,12 @@ goals or aligns with their users' wishes and interests.</span><div class="audien
 <div class="practice principle" data-audiences="api-designers"><a class="marker self-link" href="#bp-web-apis-should-be-designed-to-minimize-the-amount-of-data-that-sites-need-to-request-to-carry-out-their-users-goals-web-apis-should-also-provide-granularity-and-user-controls-over-personal-data-that-is-communicated-to-sites"><bdi lang="en">Principle</bdi></a>: <span class="practicelab" id="bp-web-apis-should-be-designed-to-minimize-the-amount-of-data-that-sites-need-to-request-to-carry-out-their-users-goals-web-apis-should-also-provide-granularity-and-user-controls-over-personal-data-that-is-communicated-to-sites">Web APIs should be designed to minimize the amount of data that sites need
 to request to carry out their users' goals.
 Web APIs should also provide granularity and user controls over <a href="#dfn-data" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-data-19">personal
-data</a> that is communicated to sites.</span><div class="audience-label"><span class="audience-api-designers">API designers</span></div></div>
+data</a> that is communicated to <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">sites</a>.</span><div class="audience-label"><span class="audience-api-designers">API designers</span></div></div>
 
 <p>Data minimization limits the risks of data being disclosed or misused. It also
 helps <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agents</a> and other <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-21">actors</a> more meaningfully explain the decisions their users need
 to make. For more information, see <cite><a data-matched-text="[[[Data-Minimization]]]" href="https://www.w3.org/2001/tag/doc/APIMinimization-20100605.html">Data Minimization in Web APIs</a></cite>.</p>
-<p>Web APIs should be designed to minimize the amount of data that sites need to
-request to pursue their users' goals and interests. They should also provide granular
-user controls over <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-20">personal data</a> that is communicated to <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">sites</a>.</p>
-<p>The principle of data minimization applies to all <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-21">personal data</a>, even if it
+<p>The principle of data minimization applies to all <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-20">personal data</a>, even if it
 is not known to be identifying, sensitive, or otherwise harmful. See:
 <a href="#hl-sensitive-information" data-matched-text="[[[#hl-sensitive-information]]]" class="sec-ref"><bdi class="secno">2.4 </bdi>Sensitive Information</a>.</p>
 <aside class="example" id="example-per-site-email"><div class="marker">
@@ -1526,7 +1523,7 @@ tell developers about bugs. These uses are known as <dfn data-lt="ancillary use|
   </dd>
 </dl>
 
-<p>All of these sources of data can reveal <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-22">personal data</a> about a person's
+<p>All of these sources of data can reveal <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-21">personal data</a> about a person's
 configuration, device, environment, or behavior that could be <a href="#hl-sensitive-information">sensitive</a> or be used as part of <a data-type="dfn" href="https://www.w3.org/TR/fingerprinting-guidance/#dfn-browser-fingerprinting">browser
 fingerprinting</a> to <a data-lt="cross-context recognition" href="#dfn-cross-context-recognition" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-cross-context-recognition-1">recognize people
 across contexts</a>. In order to uphold the principle of <a href="#data-minimization" data-matched-text="[[[#data-minimization]]]" class="sec-ref"><bdi class="secno">2.2 </bdi>Data Minimization</a>, <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">sites</a> and
@@ -1535,7 +1532,7 @@ use of this data.</p>
 <p>The task force does not have consensus about how <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agents</a> should handle
 <a data-link-type="dfn|abstract-op" href="#dfn-ancillary-apis-computed-from-existing-information" class="internalDFN" id="ref-for-dfn-ancillary-apis-computed-from-existing-information-1">ancillary APIs computed from existing information</a>.
 Advocates of these APIs argue that they're hard to use to
-extract <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-23">personal data</a>, they're more efficient than collecting the same
+extract <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-22">personal data</a>, they're more efficient than collecting the same
 information though <a data-link-type="dfn|abstract-op" href="#dfn-non-ancillary-apis" class="internalDFN" id="ref-for-dfn-non-ancillary-apis-2">non-ancillary APIs</a>, sites are less likely to adopt these
 APIs if a significant number of people turn them off, and that the act of
 turning them off can contribute to <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://www.w3.org/TR/fingerprinting-guidance/#dfn-browser-fingerprinting">browser fingerprinting</a>.
@@ -1550,17 +1547,17 @@ for <a data-link-type="dfn|abstract-op" href="#dfn-ancillary-apis-computed-from-
 <div class="audience-label"><span class="audience-api-designers">API designers</span></div></div>
 
 <section id="designing-ancillary-apis-that-provide-new-information"><div class="header-wrapper"><h5 id="designing-ancillary-apis-with-new-information"><bdi class="secno">2.2.1.1 </bdi>Designing ancillary APIs that provide new information</h5><a class="self-link" href="#designing-ancillary-apis-with-new-information" aria-label="Permalink for Section 2.2.1.1"></a></div><div class="practice principle" data-audiences="api-designers"><a class="marker self-link" href="#principle-ancillary-apis-with-new-information-shouldnt-reveal-personal-data"><bdi lang="en">Principle</bdi></a>: <span class="practicelab" id="principle-ancillary-apis-with-new-information-shouldnt-reveal-personal-data">
-<a data-link-type="dfn|abstract-op" href="#dfn-ancillary-apis-that-provide-new-information" class="internalDFN" id="ref-for-dfn-ancillary-apis-that-provide-new-information-2">Ancillary APIs that provide new information</a> should not reveal any <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-24">personal data</a> that isn't already available through other APIs, without an indication
+<a data-link-type="dfn|abstract-op" href="#dfn-ancillary-apis-that-provide-new-information" class="internalDFN" id="ref-for-dfn-ancillary-apis-that-provide-new-information-2">Ancillary APIs that provide new information</a> should not reveal any <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-23">personal data</a> that isn't already available through other APIs, without an indication
 that doing so aligns with the user's wishes and interests.
 </span>
 
 <div class="audience-label"><span class="audience-api-designers">API designers</span></div></div>
 
-<p>Most <a data-link-type="dfn|abstract-op" href="#dfn-ancillary-use" class="internalDFN" id="ref-for-dfn-ancillary-use-2">ancillary uses</a> don't require that a site learn any <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-25">personal data</a>.
+<p>Most <a data-link-type="dfn|abstract-op" href="#dfn-ancillary-use" class="internalDFN" id="ref-for-dfn-ancillary-use-2">ancillary uses</a> don't require that a site learn any <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-24">personal data</a>.
 For example, site performance measurements and ad billing involve averaging or
 summing data across many users such that any individual's contribution is
 obscured. Private aggregation techniques can often allow an API to serve its use
-case without exposing <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-26">personal data</a>, by preventing any of the people
+case without exposing <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-25">personal data</a>, by preventing any of the people
 involved from being identifiable.</p>
 <div class="note" role="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note" aria-level="2"><span>Note</span></div><aside class="">
 
@@ -1580,7 +1577,7 @@ few choices in this situation:</p>
 <ul>
 <li>Sometimes an API can <a data-link-type="dfn|abstract-op" href="#dfn-de-identify" class="internalDFN" id="ref-for-dfn-de-identify-2">de-identify</a> the data instead, but this is difficult
 if a web page has any input into the data that's collected.</li>
-<li>API designers can check carefully that the API doesn't reveal <em>new</em> <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-27">personal data</a>, as described by <a href="#information" data-matched-text="[[[#information]]]" class="sec-ref"><bdi class="secno">2.3 </bdi>Information access</a>. For example, the API might reveal
+<li>API designers can check carefully that the API doesn't reveal <em>new</em> <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-26">personal data</a>, as described by <a href="#information" data-matched-text="[[[#information]]]" class="sec-ref"><bdi class="secno">2.3 </bdi>Information access</a>. For example, the API might reveal
 that a person has a fast graphics card, that they click slowly, or that they
 use a certain proxy, but the fact that they click slowly is already
 <a href="#unavoidable-information-exposure">unavoidably</a> revealed
@@ -1592,7 +1589,7 @@ asking for each use of the APIs.</li>
 </ul>
 <p>If an API had to make one of these choices, and then something else about the
 API needs to change, designers should consider replacing the whole API with one
-that avoids exposing <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-28">personal data</a>.</p>
+that avoids exposing <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-27">personal data</a>.</p>
 <p>Some other <a data-link-type="dfn|abstract-op" href="#dfn-ancillary-use" class="internalDFN" id="ref-for-dfn-ancillary-use-4">ancillary uses</a> do require that a person be connected to their
 data. For example, a person might want to file a bug report that a website
 breaks on their particular computer, and be able to get follow-up communication
@@ -1758,9 +1755,9 @@ information about the person using the system or other people;</li>
 <li>whether it enables other threats, like intrusion.</li>
 </ul>
 </section><section id="data-rights-0"><div class="header-wrapper"><h3 id="data-rights"><bdi class="secno">2.5 </bdi>Data Rights</h3><a class="self-link" href="#data-rights" aria-label="Permalink for Section 2.5"></a></div><div class="practice principle" data-audiences="websites user-agents api-designers"><a class="marker self-link" href="#respect-data-rights"><bdi lang="en">Principle</bdi></a>: <span class="practicelab" id="respect-data-rights">
-    <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-66">People</a> have certain rights over <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-29">data</a> that is about themselves, and these rights should
+    <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-66">People</a> have certain rights over <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-28">data</a> that is about themselves, and these rights should
     be facilitated by their <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> and the <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-24">actors</a> that are <a data-link-type="dfn|abstract-op" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-22">processing</a> their
-    <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-30">data</a>.
+    <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-29">data</a>.
   </span>
   
 <div class="audience-label"><span class="audience-websites">websites</span><span class="audience-user-agents">user agents</span><span class="audience-api-designers">API designers</span></div></div>
@@ -1768,36 +1765,36 @@ information about the person using the system or other people;</li>
 <p>While data rights alone are not sufficient to satisfy all <a data-link-type="dfn|abstract-op" href="#dfn-privacy" class="internalDFN" id="ref-for-dfn-privacy-6">privacy</a> principles for the web, they
 do support self-determination and help improve accountability. Such rights include:</p>
 <ul>
-<li>The <dfn data-export="" id="dfn-right-to-access" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">right to access</dfn> <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-31">data</a> about oneself.</li>
+<li>The <dfn data-export="" id="dfn-right-to-access" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">right to access</dfn> <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-30">data</a> about oneself.</li>
 </ul>
 <p>This right includes both being able to review what information has been collected or inferred about
 oneself and being able to discover what <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-25">actors</a> have collected information about oneself. As a
 result, databases containing information about <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-67">people</a> cannot be kept secret, and data collected about people needs to be meaningfully
 discoverable by those people.</p>
 <ul>
-<li>The <dfn data-export="" data-lt="right to erase" id="dfn-right-to-erase" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">right to erase</dfn> <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-32">data</a> about oneself.</li>
+<li>The <dfn data-export="" data-lt="right to erase" id="dfn-right-to-erase" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">right to erase</dfn> <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-31">data</a> about oneself.</li>
 </ul>
 <p>A <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-68">person</a> has a right to erase information about themselves whether or not they are terminating use of a service altogether, though what
-<a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-33">data</a> can be erased may differ between those two cases. On the web, a <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-69">person</a> may wish to erase
+<a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-32">data</a> can be erased may differ between those two cases. On the web, a <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-69">person</a> may wish to erase
 data on their device, on a server, or both, and the data's location may not always be clear to the person.</p>
 <ul>
 <li>The <dfn data-export="" data-lt="right to portability|right to port|portability" data-local-lt="portability" id="dfn-right-to-portability" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">right to
-port</dfn> <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-34">data</a>, including data one has stored with another <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-26">actor</a>, so it can easily be reused or
+port</dfn> <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-33">data</a>, including data one has stored with another <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-26">actor</a>, so it can easily be reused or
 transferred elsewhere.</li>
 </ul>
 <p>Portability is needed to support a <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-70">person</a>'s ability to make choices about services with
 different data practices. Standards for interoperability are essential for effective re-use.</p>
 <ul>
-<li><p>The <dfn data-export="" id="dfn-right-to-correct" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">right to correct</dfn> <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-35">data</a> about oneself, to ensure that one's
+<li><p>The <dfn data-export="" id="dfn-right-to-correct" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">right to correct</dfn> <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-34">data</a> about oneself, to ensure that one's
 <a data-link-type="dfn|abstract-op" href="#dfn-identity" class="internalDFN" id="ref-for-dfn-identity-3">identity</a> is properly reflected in a system.</p>
 </li>
-<li><p>The <dfn data-export="" id="dfn-right-to-be-free-from-automated-decision-making" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">right to be free from automated decision-making</dfn> based on <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-36">data</a>
+<li><p>The <dfn data-export="" id="dfn-right-to-be-free-from-automated-decision-making" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">right to be free from automated decision-making</dfn> based on <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-35">data</a>
 about oneself.</p>
 </li>
 </ul>
 <p>For some kinds of decision-making with substantial consequences, there is a privacy interest in
 being able to exclude oneself from automated profiling. For example, some services may alter the
-price of products (price discrimination) or offers for credit or insurance based on <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-37">data</a>
+price of products (price discrimination) or offers for credit or insurance based on <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-36">data</a>
 collected about a person. Those alterations may be consequential (financially, say) and
 objectionable to people who believe those decisions based on data about them are inaccurate or
 unjust. As another example, some services may draw inferences about a user's identity, humanity, or
@@ -1814,7 +1811,7 @@ themselves. Data rights mean that a person needs to have ongoing control, not ju
 among other places, describe many of the rights <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-72">people</a> have as data subjects. These participatory
 rights by people over data about themselves are inherent to <a data-link-type="dfn|abstract-op" href="#dfn-autonomous" class="internalDFN" id="ref-for-dfn-autonomous-10">autonomy</a>.</p>
 </section><section id="de-identified-data"><div class="header-wrapper"><h3 id="deidentified-data"><bdi class="secno">2.6 </bdi>De-identified Data</h3><a class="self-link" href="#deidentified-data" aria-label="Permalink for Section 2.6"></a></div><div class="practice principle" data-audiences="websites"><a class="marker self-link" href="#de-identify-data"><bdi lang="en">Principle</bdi></a>: <span class="practicelab" id="de-identify-data">
-    Whenever possible, processors should work with <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-38">data</a> that has been <a data-link-type="dfn|abstract-op" href="#dfn-de-identify" class="internalDFN" id="ref-for-dfn-de-identify-3">de-identified</a>.
+    Whenever possible, processors should work with <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-37">data</a> that has been <a data-link-type="dfn|abstract-op" href="#dfn-de-identify" class="internalDFN" id="ref-for-dfn-de-identify-3">de-identified</a>.
   </span>
 
 
@@ -1837,9 +1834,9 @@ release of the de-identified data. ([<cite><a class="bibref" data-link-type="bib
 <p>Different situations involving <a data-link-type="dfn|abstract-op" href="#dfn-controlled-de-identified-data" class="internalDFN" id="ref-for-dfn-controlled-de-identified-data-1">controlled de-identified data</a> will require different controls.
 For instance, if the <a data-link-type="dfn|abstract-op" href="#dfn-controlled-de-identified-data" class="internalDFN" id="ref-for-dfn-controlled-de-identified-data-2">controlled de-identified data</a> is <em>only</em> being processed by one
 <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-27">actor</a>, typical controls include making sure that the <a data-link-type="dfn|abstract-op" href="#dfn-identifier" class="internalDFN" id="ref-for-dfn-identifier-6">identifiers</a> used in the data are unique
-to that dataset, that any person (e.g. an employee of the <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-28">actor</a>) with access to the <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-39">data</a> is
-barred (e.g. based on legal terms) from sharing the <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-40">data</a> further, and that technical measures
-exist to prevent re-identification or the joining of different data sets involving this <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-41">data</a>.</p>
+to that dataset, that any person (e.g. an employee of the <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-28">actor</a>) with access to the <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-38">data</a> is
+barred (e.g. based on legal terms) from sharing the <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-39">data</a> further, and that technical measures
+exist to prevent re-identification or the joining of different data sets involving this <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-40">data</a>.</p>
 <p>In general, the goal is to ensure that <a data-link-type="dfn|abstract-op" href="#dfn-controlled-de-identified-data" class="internalDFN" id="ref-for-dfn-controlled-de-identified-data-3">controlled de-identified data</a> is used in a manner that
 provides a viable degree of oversight and accountability such that technical and procedural means to
 guarantee the maintenance of pseudonymity are preserved.</p>
@@ -1847,21 +1844,21 @@ guarantee the maintenance of pseudonymity are preserved.</p>
 <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-29">actors</a>. In such cases, good examples of typical controls that are representative of best
 practices would include making sure that:</p>
 <ul>
-<li><p>the <a data-link-type="dfn|abstract-op" href="#dfn-identifier" class="internalDFN" id="ref-for-dfn-identifier-7">identifiers</a> used in the <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-42">data</a> are under the direct and exclusive control of the <a data-link-type="dfn|abstract-op" href="#dfn-first-party-0" class="internalDFN" id="ref-for-dfn-first-party-0-2">first party</a> (the <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-30">actor</a> a person is directly interacting with) who is prevented by strict controls
+<li><p>the <a data-link-type="dfn|abstract-op" href="#dfn-identifier" class="internalDFN" id="ref-for-dfn-identifier-7">identifiers</a> used in the <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-41">data</a> are under the direct and exclusive control of the <a data-link-type="dfn|abstract-op" href="#dfn-first-party-0" class="internalDFN" id="ref-for-dfn-first-party-0-2">first party</a> (the <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-30">actor</a> a person is directly interacting with) who is prevented by strict controls
 from matching the identifiers with the data;</p>
 </li>
 <li><p>when these <a data-link-type="dfn|abstract-op" href="#dfn-identifier" class="internalDFN" id="ref-for-dfn-identifier-8">identifiers</a> are shared with a <a data-link-type="dfn|abstract-op" href="#dfn-third-parties" class="internalDFN" id="ref-for-dfn-third-parties-1">third party</a>, they are made unique
 to that <a data-link-type="dfn|abstract-op" href="#dfn-third-parties" class="internalDFN" id="ref-for-dfn-third-parties-2">third party</a> such that if they are shared with more than one
 <a data-link-type="dfn|abstract-op" href="#dfn-third-parties" class="internalDFN" id="ref-for-dfn-third-parties-3">third party</a> these cannot then match them up with one another;</p>
 </li>
-<li><p>there is a strong level of confidence that no <a data-link-type="dfn|abstract-op" href="#dfn-third-parties" class="internalDFN" id="ref-for-dfn-third-parties-4">third party</a> can match the <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-43">data</a>
+<li><p>there is a strong level of confidence that no <a data-link-type="dfn|abstract-op" href="#dfn-third-parties" class="internalDFN" id="ref-for-dfn-third-parties-4">third party</a> can match the <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-42">data</a>
 with any data other than that obtained through interactions with the <a data-link-type="dfn|abstract-op" href="#dfn-first-party-0" class="internalDFN" id="ref-for-dfn-first-party-0-3">first party</a>;</p>
 </li>
-<li><p>any <a data-link-type="dfn|abstract-op" href="#dfn-third-parties" class="internalDFN" id="ref-for-dfn-third-parties-5">third party</a> receiving such <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-44">data</a> is barred (e.g. based on legal terms)
+<li><p>any <a data-link-type="dfn|abstract-op" href="#dfn-third-parties" class="internalDFN" id="ref-for-dfn-third-parties-5">third party</a> receiving such <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-43">data</a> is barred (e.g. based on legal terms)
 from sharing it further;</p>
 </li>
 <li><p>technical measures exist to prevent re-identification or the joining of
-different data sets involving this <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-45">data</a>; and</p>
+different data sets involving this <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-44">data</a>; and</p>
 </li>
 <li><p>there exist contractual terms between the <a data-link-type="dfn|abstract-op" href="#dfn-first-party-0" class="internalDFN" id="ref-for-dfn-first-party-0-4">first party</a> and <a data-link-type="dfn|abstract-op" href="#dfn-third-parties" class="internalDFN" id="ref-for-dfn-third-parties-6">third party</a>
 describing the limited <a data-link-type="dfn|abstract-op" href="#dfn-purpose" class="internalDFN" id="ref-for-dfn-purpose-6">purpose</a> for which the data is being shared.</p>
@@ -2203,13 +2200,13 @@ or even used to manipulate behaviour and thus reduce <a data-link-type="dfn|abst
 <div class="audience-label"><span class="audience-websites">websites</span></div></div>
 
 </section><section id="non-retaliation-0"><div class="header-wrapper"><h3 id="non-retaliation"><bdi class="secno">2.14 </bdi>Non-Retaliation</h3><a class="self-link" href="#non-retaliation" aria-label="Permalink for Section 2.14"></a></div><div class="practice principle" data-audiences="websites"><a class="marker self-link" href="#principle-do-not-retaliate"><bdi lang="en">Principle</bdi></a>: <span class="practicelab" id="principle-do-not-retaliate">
-    <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-41">Actors</a> must not retaliate against <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-97">people</a> who protect their <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-46">data</a> against
-    non-essential <a data-link-type="dfn|abstract-op" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-28">processing</a> or exercise rights over their <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-47">data</a>.
+    <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-41">Actors</a> must not retaliate against <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-97">people</a> who protect their <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-45">data</a> against
+    non-essential <a data-link-type="dfn|abstract-op" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-28">processing</a> or exercise rights over their <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-46">data</a>.
   </span>
   
 <div class="audience-label"><span class="audience-websites">websites</span></div></div>
 
-<p>Whenever people have the ability to cause an <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-42">actor</a> to process less of their <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-48">data</a> or to stop
+<p>Whenever people have the ability to cause an <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-42">actor</a> to process less of their <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-47">data</a> or to stop
 carrying out some given set of data processing that is not essential to the service, they must be
 allowed to do so without the <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-43">actor</a> retaliating, for instance by artificially removing an
 unrelated feature, by decreasing the quality of the service, or by trying to cajole, badger, or
@@ -2221,7 +2218,7 @@ trick the <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="inte
   
 <div class="audience-label"><span class="audience-user-agents">user agents</span></div></div>
 
-<p><a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-45">Actors</a> can invest time and energy into automating ways of gathering <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-49">data</a> from <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-100">people</a> and can
+<p><a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-45">Actors</a> can invest time and energy into automating ways of gathering <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-48">data</a> from <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-100">people</a> and can
 design their products in ways that make it a lot easier for <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-101">people</a> to disclose information than not, whereas
 <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-102">people</a> typically have to manually wade through options, repeated prompts, and <a data-link-type="dfn|abstract-op" href="#dfn-dark-pattern" class="internalDFN" id="ref-for-dfn-dark-pattern-4">deceptive patterns</a>. In many
 cases, the absence of data — when a <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-103">person</a> refuses to provide some information — can also be identifying
@@ -2284,7 +2281,7 @@ refugees, etc. See <a href="#vulnerability" data-matched-text="[[[#vulnerability
 </section><section id="contexts"><div class="header-wrapper"><h3 id="context"><bdi class="secno">A.2 </bdi>Contexts</h3><a class="self-link" href="#context" aria-label="Permalink for Appendix A.2"></a></div><p>A <dfn data-plurals="contexts" id="dfn-context" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">context</dfn> is a physical or digital environment in which <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-120">people</a> interact with other
 <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-46">actors</a>, and which the <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-121">people</a> understand as distinct from other <a data-link-type="dfn|abstract-op" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-14">contexts</a>.</p>
 <p>A <a data-link-type="dfn|abstract-op" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-15">context</a> is not defined in terms of who owns or controls it. Sharing
-<a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-50">data</a> between different <a data-link-type="dfn|abstract-op" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-16">contexts</a> of a single company can be
+<a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-49">data</a> between different <a data-link-type="dfn|abstract-op" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-16">contexts</a> of a single company can be
 a <a data-link-type="dfn|abstract-op" href="#dfn-privacy-violation" class="internalDFN" id="ref-for-dfn-privacy-violation-2">privacy violation</a>, just as if the same data were shared between unrelated <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-47">actors</a>.</p>
 </section><section id="server-side-actors"><div class="header-wrapper"><h3 id="parties"><bdi class="secno">A.3 </bdi>Server-Side Actors</h3><a class="self-link" href="#parties" aria-label="Permalink for Appendix A.3"></a></div><p>An <dfn data-plurals="actors" id="dfn-actor" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">actor</dfn> is an entity that a <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-122">person</a> can reasonably understand as a single "thing"
 they're interacting with. <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-48">Actors</a> can be <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-123">people</a> or collective entities like companies,
@@ -2331,17 +2328,17 @@ cultural, social, or behavioral <a data-link-type="dfn|abstract-op" href="#dfn-i
 </ul>
 </aside>
 
-<p>If a <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-131">person</a> could reasonably be identified or re-identified through the combination of <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-51">data</a> with other
-<a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-52">data</a>, then that <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-53">data</a> is <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-54">personal data</a>.</p>
+<p>If a <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-131">person</a> could reasonably be identified or re-identified through the combination of <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-50">data</a> with other
+<a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-51">data</a>, then that <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-52">data</a> is <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-53">personal data</a>.</p>
 <p><a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-132">People</a> have <dfn id="dfn-privacy" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">privacy</dfn> in a given <a data-link-type="dfn|abstract-op" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-17">context</a> when <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-55">actors</a> in
 that <a data-link-type="dfn|abstract-op" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-18">context</a> follow that <a data-link-type="dfn|abstract-op" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-19">context</a>'s principles when presenting
-information and using <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-55">personal data</a>.
+information and using <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-54">personal data</a>.
 When the principles for that <a data-link-type="dfn|abstract-op" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-20">context</a> are not followed, there is a
 <dfn id="dfn-privacy-violation" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">privacy violation</dfn>. We say that a particular interaction is
 <dfn data-lt="appropriately|appropriate" id="dfn-appropriately" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">appropriate</dfn> when the principles are followed
 or <dfn data-lt="inappropriately|inappropriate" id="dfn-inappropriately" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">inappropriate</dfn> otherwise.</p>
 <p>An <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-56">actor</a> <dfn data-lt="process|processing|processed|data processing|processes" id="dfn-process" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">processes</dfn> data if it
-carries out operations on <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-56">personal data</a>, whether or not by automated means, such as
+carries out operations on <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-55">personal data</a>, whether or not by automated means, such as
 collection, recording, organisation, structuring, storage, adaptation or alteration,
 retrieval, consultation, use, disclosure by transmission, <a data-link-type="dfn|abstract-op" href="#dfn-share" class="internalDFN" id="ref-for-dfn-share-1">sharing</a>, dissemination or
 otherwise making available, <a data-link-type="dfn|abstract-op" href="#dfn-sell" class="internalDFN" id="ref-for-dfn-sell-1">selling</a>, alignment or combination, restriction, erasure or
@@ -2526,13 +2523,13 @@ for other purposes, like to grow the service.</span></li><li><a class="marker se
 should help its user present the <a data-link-type="dfn|abstract-op" href="#dfn-identity" class="internalDFN" id="ref-for-dfn-identity-10">identity</a> they want in each <a data-link-type="dfn|abstract-op" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-36">context</a>
 they are in, and should prevent or support <a data-link-type="dfn|abstract-op" href="#dfn-recognize" class="internalDFN" id="ref-for-dfn-recognize-21">recognition</a> as appropriate.
 </span></li><li><a class="marker self-link" href="#bp-sites-user-agents-and-other-actors-should-restrict-the-data-they-transfer-to-what-s-either-necessary-to-achieve-their-users-goals-or-aligns-with-their-users-wishes-and-interests"><bdi lang="en">Principle</bdi></a>: <span class="practicelab"><a data-link-type="dfn|abstract-op" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">Sites</a>, <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agents</a>, and other <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-66">actors</a>
-should restrict the <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-57">data</a> they transfer to what's either necessary to achieve their users'
+should restrict the <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-56">data</a> they transfer to what's either necessary to achieve their users'
 goals or aligns with their users' wishes and interests.</span></li><li><a class="marker self-link" href="#bp-web-apis-should-be-designed-to-minimize-the-amount-of-data-that-sites-need-to-request-to-carry-out-their-users-goals-web-apis-should-also-provide-granularity-and-user-controls-over-personal-data-that-is-communicated-to-sites"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">Web APIs should be designed to minimize the amount of data that sites need
 to request to carry out their users' goals.
-Web APIs should also provide granularity and user controls over <a href="#dfn-data" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-data-58">personal
-data</a> that is communicated to sites.</span></li><li><a class="marker self-link" href="#principle-identify-ancillary-apis"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">Specifications
+Web APIs should also provide granularity and user controls over <a href="#dfn-data" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-data-57">personal
+data</a> that is communicated to <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">sites</a>.</span></li><li><a class="marker self-link" href="#principle-identify-ancillary-apis"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">Specifications
 for <a data-link-type="dfn|abstract-op" href="#dfn-ancillary-apis-computed-from-existing-information" class="internalDFN" id="ref-for-dfn-ancillary-apis-computed-from-existing-information-3">ancillary APIs computed from existing information</a> and <a data-link-type="dfn|abstract-op" href="#dfn-ancillary-apis-that-provide-new-information" class="internalDFN" id="ref-for-dfn-ancillary-apis-that-provide-new-information-5">ancillary APIs that provide new information</a> should identify them as such, so that <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agents</a> can provide appropriate choices for their users.</span></li><li><a class="marker self-link" href="#principle-ancillary-apis-with-new-information-shouldnt-reveal-personal-data"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
-<a data-link-type="dfn|abstract-op" href="#dfn-ancillary-apis-that-provide-new-information" class="internalDFN" id="ref-for-dfn-ancillary-apis-that-provide-new-information-6">Ancillary APIs that provide new information</a> should not reveal any <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-59">personal data</a> that isn't already available through other APIs, without an indication
+<a data-link-type="dfn|abstract-op" href="#dfn-ancillary-apis-that-provide-new-information" class="internalDFN" id="ref-for-dfn-ancillary-apis-that-provide-new-information-6">Ancillary APIs that provide new information</a> should not reveal any <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-58">personal data</a> that isn't already available through other APIs, without an indication
 that doing so aligns with the user's wishes and interests.
 </span></li><li><a class="marker self-link" href="#principle-disabling-ancillary-apis-with-new-information"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
 User agents should provide a way to enable or disable <a data-link-type="dfn|abstract-op" href="#dfn-ancillary-apis-that-provide-new-information" class="internalDFN" id="ref-for-dfn-ancillary-apis-that-provide-new-information-7">ancillary APIs that provide new information</a> and should set the default according to their users'
@@ -2545,11 +2542,11 @@ needs.
     <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-138">person</a>'s circumstances and the <a data-link-type="dfn|abstract-op" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-37">context</a> of an interaction, and it can
     change over time.
   </span></li><li><a class="marker self-link" href="#respect-data-rights"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
-    <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-139">People</a> have certain rights over <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-60">data</a> that is about themselves, and these rights should
+    <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-139">People</a> have certain rights over <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-59">data</a> that is about themselves, and these rights should
     be facilitated by their <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> and the <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-67">actors</a> that are <a data-link-type="dfn|abstract-op" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-37">processing</a> their
-    <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-61">data</a>.
+    <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-60">data</a>.
   </span></li><li><a class="marker self-link" href="#de-identify-data"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
-    Whenever possible, processors should work with <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-62">data</a> that has been <a data-link-type="dfn|abstract-op" href="#dfn-de-identify" class="internalDFN" id="ref-for-dfn-de-identify-5">de-identified</a>.
+    Whenever possible, processors should work with <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-61">data</a> that has been <a data-link-type="dfn|abstract-op" href="#dfn-de-identify" class="internalDFN" id="ref-for-dfn-de-identify-5">de-identified</a>.
   </span></li><li><a class="marker self-link" href="#principle-collective-privacy"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
     Groups and institutions should support autonomy by making
     decisions collectively to either prevent or enable data
@@ -2600,8 +2597,8 @@ know about this surveillance.
     users control notifications and other interruptive UI that can be used to manipulate behavior.</span></li><li><a class="marker self-link" href="#principle-notifications-context"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">Web <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">sites</a> should use notifications
     only for information that their users have specifically requested.
   </span></li><li><a class="marker self-link" href="#principle-do-not-retaliate"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
-    <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-74">Actors</a> must not retaliate against <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-147">people</a> who protect their <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-63">data</a> against
-    non-essential <a data-link-type="dfn|abstract-op" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-38">processing</a> or exercise rights over their <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-64">data</a>.
+    <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-74">Actors</a> must not retaliate against <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-147">people</a> who protect their <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-62">data</a> against
+    non-essential <a data-link-type="dfn|abstract-op" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-38">processing</a> or exercise rights over their <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-63">data</a>.
   </span></li><li><a class="marker self-link" href="#principle-support-choosing-info"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
     <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">User agents</a> should support <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-148">people</a> in choosing which information they provide to <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-75">actors</a> that
     request it, up to and including allowing users to provide arbitrary information.
@@ -3535,25 +3532,25 @@ Wendy Seltzer.</p>
     </li><li>
       <a href="#ref-for-dfn-data-17" title="§ 1.5 Incorporating Different Privacy Principles">§ 1.5 Incorporating Different Privacy Principles</a> 
     </li><li>
-      <a href="#ref-for-dfn-data-18" title="§ 2.2 Data Minimization">§ 2.2 Data Minimization</a> <a href="#ref-for-dfn-data-19" title="Reference 2">(2)</a> <a href="#ref-for-dfn-data-20" title="Reference 3">(3)</a> <a href="#ref-for-dfn-data-21" title="Reference 4">(4)</a> 
+      <a href="#ref-for-dfn-data-18" title="§ 2.2 Data Minimization">§ 2.2 Data Minimization</a> <a href="#ref-for-dfn-data-19" title="Reference 2">(2)</a> <a href="#ref-for-dfn-data-20" title="Reference 3">(3)</a> 
     </li><li>
-      <a href="#ref-for-dfn-data-22" title="§ 2.2.1 Ancillary uses">§ 2.2.1 Ancillary uses</a> <a href="#ref-for-dfn-data-23" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-data-21" title="§ 2.2.1 Ancillary uses">§ 2.2.1 Ancillary uses</a> <a href="#ref-for-dfn-data-22" title="Reference 2">(2)</a> 
     </li><li>
-      <a href="#ref-for-dfn-data-24" title="§ 2.2.1.1 Designing ancillary APIs that provide new information">§ 2.2.1.1 Designing ancillary APIs that provide new information</a> <a href="#ref-for-dfn-data-25" title="Reference 2">(2)</a> <a href="#ref-for-dfn-data-26" title="Reference 3">(3)</a> <a href="#ref-for-dfn-data-27" title="Reference 4">(4)</a> <a href="#ref-for-dfn-data-28" title="Reference 5">(5)</a> 
+      <a href="#ref-for-dfn-data-23" title="§ 2.2.1.1 Designing ancillary APIs that provide new information">§ 2.2.1.1 Designing ancillary APIs that provide new information</a> <a href="#ref-for-dfn-data-24" title="Reference 2">(2)</a> <a href="#ref-for-dfn-data-25" title="Reference 3">(3)</a> <a href="#ref-for-dfn-data-26" title="Reference 4">(4)</a> <a href="#ref-for-dfn-data-27" title="Reference 5">(5)</a> 
     </li><li>
-      <a href="#ref-for-dfn-data-29" title="§ 2.5 Data Rights">§ 2.5 Data Rights</a> <a href="#ref-for-dfn-data-30" title="Reference 2">(2)</a> <a href="#ref-for-dfn-data-31" title="Reference 3">(3)</a> <a href="#ref-for-dfn-data-32" title="Reference 4">(4)</a> <a href="#ref-for-dfn-data-33" title="Reference 5">(5)</a> <a href="#ref-for-dfn-data-34" title="Reference 6">(6)</a> <a href="#ref-for-dfn-data-35" title="Reference 7">(7)</a> <a href="#ref-for-dfn-data-36" title="Reference 8">(8)</a> <a href="#ref-for-dfn-data-37" title="Reference 9">(9)</a> 
+      <a href="#ref-for-dfn-data-28" title="§ 2.5 Data Rights">§ 2.5 Data Rights</a> <a href="#ref-for-dfn-data-29" title="Reference 2">(2)</a> <a href="#ref-for-dfn-data-30" title="Reference 3">(3)</a> <a href="#ref-for-dfn-data-31" title="Reference 4">(4)</a> <a href="#ref-for-dfn-data-32" title="Reference 5">(5)</a> <a href="#ref-for-dfn-data-33" title="Reference 6">(6)</a> <a href="#ref-for-dfn-data-34" title="Reference 7">(7)</a> <a href="#ref-for-dfn-data-35" title="Reference 8">(8)</a> <a href="#ref-for-dfn-data-36" title="Reference 9">(9)</a> 
     </li><li>
-      <a href="#ref-for-dfn-data-38" title="§ 2.6 De-identified Data">§ 2.6 De-identified Data</a> <a href="#ref-for-dfn-data-39" title="Reference 2">(2)</a> <a href="#ref-for-dfn-data-40" title="Reference 3">(3)</a> <a href="#ref-for-dfn-data-41" title="Reference 4">(4)</a> <a href="#ref-for-dfn-data-42" title="Reference 5">(5)</a> <a href="#ref-for-dfn-data-43" title="Reference 6">(6)</a> <a href="#ref-for-dfn-data-44" title="Reference 7">(7)</a> <a href="#ref-for-dfn-data-45" title="Reference 8">(8)</a> 
+      <a href="#ref-for-dfn-data-37" title="§ 2.6 De-identified Data">§ 2.6 De-identified Data</a> <a href="#ref-for-dfn-data-38" title="Reference 2">(2)</a> <a href="#ref-for-dfn-data-39" title="Reference 3">(3)</a> <a href="#ref-for-dfn-data-40" title="Reference 4">(4)</a> <a href="#ref-for-dfn-data-41" title="Reference 5">(5)</a> <a href="#ref-for-dfn-data-42" title="Reference 6">(6)</a> <a href="#ref-for-dfn-data-43" title="Reference 7">(7)</a> <a href="#ref-for-dfn-data-44" title="Reference 8">(8)</a> 
     </li><li>
-      <a href="#ref-for-dfn-data-46" title="§ 2.14 Non-Retaliation">§ 2.14 Non-Retaliation</a> <a href="#ref-for-dfn-data-47" title="Reference 2">(2)</a> <a href="#ref-for-dfn-data-48" title="Reference 3">(3)</a> 
+      <a href="#ref-for-dfn-data-45" title="§ 2.14 Non-Retaliation">§ 2.14 Non-Retaliation</a> <a href="#ref-for-dfn-data-46" title="Reference 2">(2)</a> <a href="#ref-for-dfn-data-47" title="Reference 3">(3)</a> 
     </li><li>
-      <a href="#ref-for-dfn-data-49" title="§ 2.15 Support Choosing Which Information to Present">§ 2.15 Support Choosing Which Information to Present</a> 
+      <a href="#ref-for-dfn-data-48" title="§ 2.15 Support Choosing Which Information to Present">§ 2.15 Support Choosing Which Information to Present</a> 
     </li><li>
-      <a href="#ref-for-dfn-data-50" title="§ A.2 Contexts">§ A.2 Contexts</a> 
+      <a href="#ref-for-dfn-data-49" title="§ A.2 Contexts">§ A.2 Contexts</a> 
     </li><li>
-      <a href="#ref-for-dfn-data-51" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> <a href="#ref-for-dfn-data-52" title="Reference 2">(2)</a> <a href="#ref-for-dfn-data-53" title="Reference 3">(3)</a> <a href="#ref-for-dfn-data-54" title="Reference 4">(4)</a> <a href="#ref-for-dfn-data-55" title="Reference 5">(5)</a> <a href="#ref-for-dfn-data-56" title="Reference 6">(6)</a> 
+      <a href="#ref-for-dfn-data-50" title="§ A.4 Acting on Data">§ A.4 Acting on Data</a> <a href="#ref-for-dfn-data-51" title="Reference 2">(2)</a> <a href="#ref-for-dfn-data-52" title="Reference 3">(3)</a> <a href="#ref-for-dfn-data-53" title="Reference 4">(4)</a> <a href="#ref-for-dfn-data-54" title="Reference 5">(5)</a> <a href="#ref-for-dfn-data-55" title="Reference 6">(6)</a> 
     </li><li>
-      <a href="#ref-for-dfn-data-57" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> <a href="#ref-for-dfn-data-58" title="Reference 2">(2)</a> <a href="#ref-for-dfn-data-59" title="Reference 3">(3)</a> <a href="#ref-for-dfn-data-60" title="Reference 4">(4)</a> <a href="#ref-for-dfn-data-61" title="Reference 5">(5)</a> <a href="#ref-for-dfn-data-62" title="Reference 6">(6)</a> <a href="#ref-for-dfn-data-63" title="Reference 7">(7)</a> <a href="#ref-for-dfn-data-64" title="Reference 8">(8)</a> 
+      <a href="#ref-for-dfn-data-56" title="§ C. Best Practices Summary">§ C. Best Practices Summary</a> <a href="#ref-for-dfn-data-57" title="Reference 2">(2)</a> <a href="#ref-for-dfn-data-58" title="Reference 3">(3)</a> <a href="#ref-for-dfn-data-59" title="Reference 4">(4)</a> <a href="#ref-for-dfn-data-60" title="Reference 5">(5)</a> <a href="#ref-for-dfn-data-61" title="Reference 6">(6)</a> <a href="#ref-for-dfn-data-62" title="Reference 7">(7)</a> <a href="#ref-for-dfn-data-63" title="Reference 8">(8)</a> 
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-identifier" aria-label="Links in this document to definition: identifier">
