@@ -75,6 +75,11 @@ Experts we need input and review from:
 * TAG and PING chairs and team contacts
 * WhatWG steering board
 
+## Deliverables
+
+* [Privacy Principles](https://w3ctag.github.io/privacy-principles/)
+* [Privacy Principles for the Web at a Glance](glance.md)
+
 ## Input documents
 
 * https://w3cping.github.io/privacy-threat-model/
