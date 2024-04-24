@@ -71,7 +71,7 @@
             prac.classList.add('principle');
             const anchor = prac.querySelector('span.practicelab');
             const summary = document.querySelector(`#bp-summary a.marker.self-link[href="#${anchor.id}"]`);
-            if (!summary) console.error(`No summary from ${anchor.id}`);
+            if (!summary) console.error(`No summary for`, anchor);
             const audiences = prac.dataset.audiences?.split(/\s+/) ?? [];
             const audDiv = document.createElement('div');
             audDiv.setAttribute('class', 'audience-label');
