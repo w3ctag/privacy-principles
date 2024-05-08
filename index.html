@@ -69,14 +69,21 @@
           for (let prac of document.querySelectorAll('div.practice.advisement')) {
             prac.classList.remove('advisement');
             prac.classList.add('principle');
+            const anchor = prac.querySelector('span.practicelab');
+            const summary = document.querySelector(`#bp-summary a.marker.self-link[href="#${anchor.id}"]`);
+            if (!summary) console.error(`No summary for`, anchor);
             const audiences = prac.dataset.audiences?.split(/\s+/) ?? [];
             const audDiv = document.createElement('div');
             audDiv.setAttribute('class', 'audience-label');
+            const audSum = document.createElement('span');
+            audSum.setAttribute('class', 'audience-label');
             audiences.forEach(lbl => {
               const spn = document.createElement('span');
               spn.setAttribute('class', `audience-${lbl}`);
               spn.textContent = audienceNames[lbl];
               audDiv.append(spn);
+              audSum.append(spn.cloneNode(true));
+              if (summary) summary.parentNode.append(audSum);
             });
             prac.append(audDiv);
           }
@@ -505,6 +512,9 @@
       padding: 0.1em 0.4em;
       margin: 0 0.2em;
       border-radius: 4px;
+    }
+    #bp-summary .audience-label > span {
+      padding: 0 0.4em;
     }
     .audience-websites { background-color: gold; }
     .audience-user-agents { background-color: mediumspringgreen; }
