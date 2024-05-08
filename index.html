@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en" dir="ltr"><head>
 <meta charset="utf-8">
-<meta name="generator" content="ReSpec 35.0.0">
+<meta name="generator" content="ReSpec 35.0.2">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 span.example-title{text-transform:none}
@@ -75,6 +75,9 @@ dfn{cursor:pointer}
       margin: 0 0.2em;
       border-radius: 4px;
     }
+    #bp-summary .audience-label > span {
+      padding: 0 0.4em;
+    }
     .audience-websites { background-color: gold; }
     .audience-user-agents { background-color: mediumspringgreen; }
     .audience-api-designers { background-color: mistyrose; }
@@ -125,6 +128,7 @@ dd{margin-left:0}
 .removeOnSave{display:none}
 }
 </style>
+<meta name="color-scheme" content="light">
 <meta name="description" content="Privacy is an essential part of the web. This document provides definitions
 for privacy and related concepts that are applicable worldwide as well as a set of privacy
 principles that should guide the development of the web as a trustworthy platform. People using
@@ -765,15 +769,15 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "id": "web-without-3p-cookies"
     }
   },
-  "publishISODate": "2024-04-26T00:00:00.000Z",
-  "generatedSubtitle": "W3C Editor's Draft 26 April 2024"
+  "publishISODate": "2024-05-08T00:00:00.000Z",
+  "generatedSubtitle": "W3C Editor's Draft 08 May 2024"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED"></head>
 <body data-cite="html indexedDB service-workers fingerprinting-guidance url infra" class="h-entry informative"><div class="head">
     <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a></p>
     <h1 id="title" class="title">Privacy Principles</h1> 
-    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2024-04-26">26 April 2024</time></p>
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2024-05-08">08 May 2024</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
@@ -2502,96 +2506,96 @@ specifications to defend against, described in the sections that follow.</p>
 </section>
 
 <section class="appendix" id="bp-summary"><div class="header-wrapper"><h2 id="c-best-practices-summary"><bdi class="secno">C. </bdi>Principles Summary</h2><a class="self-link" href="#bp-summary" aria-label="Permalink for Appendix C."></a></div><ul><li><a class="marker self-link" href="#principle-pareto-frontier"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">When confronted with an
-apparent tradeoff, first look for ways to improve all principles at once.</span></li><li><a class="marker self-link" href="#principle-limited-collection-for-safety"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">If a service
+apparent tradeoff, first look for ways to improve all principles at once.</span><span class="audience-label"><span class="audience-websites">websites</span><span class="audience-user-agents">user agents</span><span class="audience-api-designers">API designers</span></span></li><li><a class="marker self-link" href="#principle-limited-collection-for-safety"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">If a service
 needs to collect extra data from its users in order to protect those or other users, it
 must take extra technical and legal measures to ensure that this data can't be then used
-for other purposes, like to grow the service.</span></li><li><a class="marker self-link" href="#principle-identity-per-context"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">A <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a>
+for other purposes, like to grow the service.</span><span class="audience-label"><span class="audience-websites">websites</span><span class="audience-user-agents">user agents</span></span></li><li><a class="marker self-link" href="#principle-identity-per-context"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">A <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a>
 should help its user present the <a data-link-type="dfn|abstract-op" href="#dfn-identity" class="internalDFN" id="ref-for-dfn-identity-10">identity</a> they want in each <a data-link-type="dfn|abstract-op" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-37">context</a>
 they are in, and should prevent or support <a data-link-type="dfn|abstract-op" href="#dfn-recognize" class="internalDFN" id="ref-for-dfn-recognize-21">recognition</a> as appropriate.
-</span></li><li><a class="marker self-link" href="#bp-sites-user-agents-and-other-actors-should-restrict-the-data-they-transfer-to-what-s-either-necessary-to-achieve-their-users-goals-or-aligns-with-their-users-wishes-and-interests"><bdi lang="en">Principle</bdi></a>: <span class="practicelab"><a data-link-type="dfn|abstract-op" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">Sites</a>, <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agents</a>, and other <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-68">actors</a>
+</span><span class="audience-label"><span class="audience-user-agents">user agents</span></span></li><li><a class="marker self-link" href="#bp-sites-user-agents-and-other-actors-should-restrict-the-data-they-transfer-to-what-s-either-necessary-to-achieve-their-users-goals-or-aligns-with-their-users-wishes-and-interests"><bdi lang="en">Principle</bdi></a>: <span class="practicelab"><a data-link-type="dfn|abstract-op" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">Sites</a>, <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agents</a>, and other <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-68">actors</a>
 should restrict the <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-56">data</a> they transfer to what's either necessary to achieve their users'
-goals or aligns with their users' wishes and interests.</span></li><li><a class="marker self-link" href="#bp-web-apis-should-be-designed-to-minimize-the-amount-of-data-that-sites-need-to-request-to-carry-out-their-users-goals-web-apis-should-also-provide-granularity-and-user-controls-over-personal-data-that-is-communicated-to-sites"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">Web APIs should be designed to minimize the amount of data that sites need
+goals or aligns with their users' wishes and interests.</span><span class="audience-label"><span class="audience-websites">websites</span><span class="audience-user-agents">user agents</span></span></li><li><a class="marker self-link" href="#bp-web-apis-should-be-designed-to-minimize-the-amount-of-data-that-sites-need-to-request-to-carry-out-their-users-goals-web-apis-should-also-provide-granularity-and-user-controls-over-personal-data-that-is-communicated-to-sites"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">Web APIs should be designed to minimize the amount of data that sites need
 to request to carry out their users' goals.
 Web APIs should also provide granularity and user controls over <a href="#dfn-data" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-data-57">personal
-data</a> that is communicated to <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">sites</a>.</span></li><li><a class="marker self-link" href="#principle-identify-ancillary-apis"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">Specifications
-for <a data-link-type="dfn|abstract-op" href="#dfn-ancillary-apis-computed-from-existing-information" class="internalDFN" id="ref-for-dfn-ancillary-apis-computed-from-existing-information-3">ancillary APIs computed from existing information</a> and <a data-link-type="dfn|abstract-op" href="#dfn-ancillary-apis-that-provide-new-information" class="internalDFN" id="ref-for-dfn-ancillary-apis-that-provide-new-information-5">ancillary APIs that provide new information</a> should identify them as such, so that <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agents</a> can provide appropriate choices for their users.</span></li><li><a class="marker self-link" href="#principle-ancillary-apis-with-new-information-shouldnt-reveal-personal-data"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
+data</a> that is communicated to <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">sites</a>.</span><span class="audience-label"><span class="audience-api-designers">API designers</span></span></li><li><a class="marker self-link" href="#principle-identify-ancillary-apis"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">Specifications
+for <a data-link-type="dfn|abstract-op" href="#dfn-ancillary-apis-computed-from-existing-information" class="internalDFN" id="ref-for-dfn-ancillary-apis-computed-from-existing-information-3">ancillary APIs computed from existing information</a> and <a data-link-type="dfn|abstract-op" href="#dfn-ancillary-apis-that-provide-new-information" class="internalDFN" id="ref-for-dfn-ancillary-apis-that-provide-new-information-5">ancillary APIs that provide new information</a> should identify them as such, so that <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agents</a> can provide appropriate choices for their users.</span><span class="audience-label"><span class="audience-api-designers">API designers</span></span></li><li><a class="marker self-link" href="#principle-ancillary-apis-with-new-information-shouldnt-reveal-personal-data"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
 <a data-link-type="dfn|abstract-op" href="#dfn-ancillary-apis-that-provide-new-information" class="internalDFN" id="ref-for-dfn-ancillary-apis-that-provide-new-information-6">Ancillary APIs that provide new information</a> should not reveal any <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-58">personal data</a> that isn't already available through other APIs, without an indication
 that doing so aligns with the user's wishes and interests.
-</span></li><li><a class="marker self-link" href="#principle-disabling-ancillary-apis-with-new-information"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
+</span><span class="audience-label"><span class="audience-api-designers">API designers</span></span></li><li><a class="marker self-link" href="#principle-disabling-ancillary-apis-with-new-information"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
 User agents should provide a way to enable or disable <a data-link-type="dfn|abstract-op" href="#dfn-ancillary-apis-that-provide-new-information" class="internalDFN" id="ref-for-dfn-ancillary-apis-that-provide-new-information-7">ancillary APIs that provide new information</a> and should set the default according to their users'
 needs.
-</span></li><li><a class="marker self-link" href="#bp-new-web-apis-should-guard-users-information-at-least-as-well-as-existing-apis-that-are-expected-to-stay-in-the-web-platform"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">New web APIs should guard users' information at least
-  as well as existing APIs that are expected to stay in the web platform.</span></li><li><a class="marker self-link" href="#principle-sensitive"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
+</span><span class="audience-label"><span class="audience-user-agents">user agents</span></span></li><li><a class="marker self-link" href="#bp-new-web-apis-should-guard-users-information-at-least-as-well-as-existing-apis-that-are-expected-to-stay-in-the-web-platform"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">New web APIs should guard users' information at least
+  as well as existing APIs that are expected to stay in the web platform.</span><span class="audience-label"><span class="audience-api-designers">API designers</span><span class="audience-user-agents">user agents</span></span></li><li><a class="marker self-link" href="#principle-sensitive"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
     System designers
     should not assume that particular information is or is not sensitive.
     Whether information is considered sensitive can vary depending on a
     <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-139">person</a>'s circumstances and the <a data-link-type="dfn|abstract-op" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-38">context</a> of an interaction, and it can
     change over time.
-  </span></li><li><a class="marker self-link" href="#respect-data-rights"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
+  </span><span class="audience-label"><span class="audience-websites">websites</span><span class="audience-user-agents">user agents</span><span class="audience-api-designers">API designers</span></span></li><li><a class="marker self-link" href="#respect-data-rights"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
     <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-140">People</a> have certain rights over <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-59">data</a> that is about themselves, and these rights should
     be facilitated by their <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> and the <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-69">actors</a> that are <a data-link-type="dfn|abstract-op" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-37">processing</a> their
     <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-60">data</a>.
-  </span></li><li><a class="marker self-link" href="#de-identify-data"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
+  </span><span class="audience-label"><span class="audience-websites">websites</span><span class="audience-user-agents">user agents</span><span class="audience-api-designers">API designers</span></span></li><li><a class="marker self-link" href="#de-identify-data"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
     Whenever possible, processors should work with <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-61">data</a> that has been <a data-link-type="dfn|abstract-op" href="#dfn-de-identify" class="internalDFN" id="ref-for-dfn-de-identify-5">de-identified</a>.
-  </span></li><li><a class="marker self-link" href="#principle-collective-privacy"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
+  </span><span class="audience-label"><span class="audience-websites">websites</span></span></li><li><a class="marker self-link" href="#principle-collective-privacy"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
     Groups and institutions should support autonomy by making
     decisions collectively to either prevent or enable data
     sharing, and to set defaults for data processing rules.
-  </span></li><li><a class="marker self-link" href="#principle-owned-devices-disclose-surveillance"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
+  </span><span class="audience-label"><span class="audience-websites">websites</span><span class="audience-user-agents">user agents</span></span></li><li><a class="marker self-link" href="#principle-owned-devices-disclose-surveillance"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
 <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">User agents</a> should not tell an <a data-link-type="dfn|abstract-op" href="#dfn-administrator" class="internalDFN" id="ref-for-dfn-administrator-10">administrator</a> about user behavior except
 when that disclosure is necessary to enforce reasonable constraints on use of
 the device or software.
 Even when a disclosure is reasonable, <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agents</a> must ensure their users
 know about this surveillance.
-</span></li><li><a class="marker self-link" href="#abuse-reporting"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
+</span><span class="audience-label"><span class="audience-user-agents">user agents</span></span></li><li><a class="marker self-link" href="#abuse-reporting"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
       Systems that allow for communicating on the web must provide an
       effective capability to report <a data-link-type="dfn|abstract-op" href="#dfn-abuse" class="internalDFN" id="ref-for-dfn-abuse-8">abuse</a>.
-    </span></li><li><a class="marker self-link" href="#abuse-protection"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
+    </span><span class="audience-label"><span class="audience-websites">websites</span><span class="audience-api-designers">API designers</span></span></li><li><a class="marker self-link" href="#abuse-protection"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
       <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">User agents</a> and <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">sites</a> must
       take steps to protect their users from abusive behaviour, and <a data-link-type="dfn|abstract-op" href="#dfn-abuse" class="internalDFN" id="ref-for-dfn-abuse-9">abuse</a>
       mitigation must be considered when designing web platform features.
-    </span></li><li><a class="marker self-link" href="#purpose-specification"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
+    </span><span class="audience-label"><span class="audience-websites">websites</span><span class="audience-user-agents">user agents</span><span class="audience-api-designers">API designers</span></span></li><li><a class="marker self-link" href="#purpose-specification"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
     When accessing personal data or requesting permission, <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">sites</a> and other <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-70">actors</a> should specify the <a data-link-type="dfn|abstract-op" href="#dfn-purpose" class="internalDFN" id="ref-for-dfn-purpose-16">purpose</a>
     for which the data will be used.
-  </span></li><li><a class="marker self-link" href="#no-secondary-use"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
+  </span><span class="audience-label"><span class="audience-websites">websites</span><span class="audience-user-agents">user agents</span></span></li><li><a class="marker self-link" href="#no-secondary-use"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
     <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-71">Actors</a> should not use personal data for purposes other than those specified. (Other uses are often called
     <a data-link-type="dfn|abstract-op" href="#dfn-secondary-use" class="internalDFN" id="ref-for-dfn-secondary-use-2">secondary uses</a>.)
-  </span></li><li><a class="marker self-link" href="#transparency-when-requested"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
+  </span><span class="audience-label"><span class="audience-websites">websites</span><span class="audience-user-agents">user agents</span></span></li><li><a class="marker self-link" href="#transparency-when-requested"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
     When accessing data or requesting permission, <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">sites</a> (and other <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-72">actors</a>) should provide
     <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-141">people</a> with relevant explanatory information about the use of data, and <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agents</a>
     should help present and consume that information.
-  </span></li><li><a class="marker self-link" href="#transparency-plain-language-machine-readable"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
+  </span><span class="audience-label"><span class="audience-websites">websites</span><span class="audience-user-agents">user agents</span></span></li><li><a class="marker self-link" href="#transparency-plain-language-machine-readable"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
     Information about privacy-relevant practices should be provided in both easily accessible plain
     language form and in machine-readable form.
-  </span></li><li><a class="marker self-link" href="#transparency-distinguishable"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
+  </span><span class="audience-label"><span class="audience-websites">websites</span><span class="audience-api-designers">API designers</span></span></li><li><a class="marker self-link" href="#transparency-distinguishable"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
     Mechanisms that can be used for <a data-link-type="dfn|abstract-op" data-lt="recognize" href="#dfn-recognize" class="internalDFN" id="ref-for-dfn-recognize-22">recognizing</a> <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-142">people</a> should be designed so that
     their operation is visible and distinguishable, to <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agents</a>, researchers, and regulators.
-  </span></li><li><a class="marker self-link" href="#principle-consent-user-preference"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
+  </span><span class="audience-label"><span class="audience-websites">websites</span><span class="audience-api-designers">API designers</span></span></li><li><a class="marker self-link" href="#principle-consent-user-preference"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
     When any <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-73">actor</a> obtains <a data-link-type="dfn|abstract-op" href="#dfn-opt-in" class="internalDFN" id="ref-for-dfn-opt-in-14">consent</a> for processing from a <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-143">person</a>, the
     actor should design the consent request so as to learn the person's true
     intent to consent or not, and not to maximize the processing consented to.
-  </span></li><li><a class="marker self-link" href="#principle-minimize-consent-requests"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
+  </span><span class="audience-label"><span class="audience-websites">websites</span></span></li><li><a class="marker self-link" href="#principle-minimize-consent-requests"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
     An <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-74">actor</a> should avoid interrupting a <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-144">person</a>'s use of a site for
       consent requests when an alternative is available.
-  </span></li><li><a class="marker self-link" href="#principle-consent-withdraw"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
+  </span><span class="audience-label"><span class="audience-websites">websites</span></span></li><li><a class="marker self-link" href="#principle-consent-withdraw"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
     It should be as easy for a <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-145">person</a> to check what consent they have given, to withdraw consent,
     or to opt out or object, as to give consent.
-  </span></li><li><a class="marker self-link" href="#principle-consent-otherpeople"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
+  </span><span class="audience-label"><span class="audience-websites">websites</span></span></li><li><a class="marker self-link" href="#principle-consent-otherpeople"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
       <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-75">Actors</a> should provide functionality to access, correct, and remove data about
       <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-146">people</a> to those <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-147">people</a> when that data has been provided by someone else.
-    </span></li><li><a class="marker self-link" href="#principle-notifications-control"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">A <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> should help
-    users control notifications and other interruptive UI that can be used to manipulate behavior.</span></li><li><a class="marker self-link" href="#principle-notifications-context"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">Web <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">sites</a> should use notifications
+    </span><span class="audience-label"><span class="audience-websites">websites</span></span></li><li><a class="marker self-link" href="#principle-notifications-control"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">A <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> should help
+    users control notifications and other interruptive UI that can be used to manipulate behavior.</span><span class="audience-label"><span class="audience-user-agents">user agents</span></span></li><li><a class="marker self-link" href="#principle-notifications-context"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">Web <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">sites</a> should use notifications
     only for information that their users have specifically requested.
-  </span></li><li><a class="marker self-link" href="#principle-do-not-retaliate"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
+  </span><span class="audience-label"><span class="audience-websites">websites</span></span></li><li><a class="marker self-link" href="#principle-do-not-retaliate"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
     <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-76">Actors</a> must not retaliate against <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-148">people</a> who protect their <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-62">data</a> against
     non-essential <a data-link-type="dfn|abstract-op" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-38">processing</a> or exercise rights over their <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-63">data</a>.
-  </span></li><li><a class="marker self-link" href="#principle-support-choosing-info"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
+  </span><span class="audience-label"><span class="audience-websites">websites</span></span></li><li><a class="marker self-link" href="#principle-support-choosing-info"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
     <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">User agents</a> should support <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-149">people</a> in choosing which information they provide to <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-77">actors</a> that
     request it, up to and including allowing users to provide arbitrary information.
-  </span></li><li><a class="marker self-link" href="#principle-no-facts-or-promises"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
+  </span><span class="audience-label"><span class="audience-user-agents">user agents</span></span></li><li><a class="marker self-link" href="#principle-no-facts-or-promises"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
     APIs should be designed such that data returned through an API does not assert a fact or make a
     promise on the user's behalf about the user or their environment.
-  </span></li></ul></section>
+  </span><span class="audience-label"><span class="audience-api-designers">API designers</span></span></li></ul></section>
 
 <section class="appendix" id="conformance"><div class="header-wrapper"><h2 id="d-conformance"><bdi class="secno">D. </bdi>Conformance</h2><a class="self-link" href="#conformance" aria-label="Permalink for Appendix D."></a></div>
 
