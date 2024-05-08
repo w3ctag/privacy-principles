@@ -1486,11 +1486,11 @@ Specifications describing these APIs should also:
 <div class="practice" data-audiences="websites user-agents api-designers">
 <p>
   <span class="practicelab" id="principle-sensitive">
-    System designers
-    should not assume that particular information is or is not sensitive.
-    Whether information is considered sensitive can vary depending on a
-    [=person=]'s circumstances and the [=context=] of an interaction, and it can
-    change over time.
+    There is broad consensus that some categories of information such as credit card numbers
+    or precise geolocation are sensitive, but system designers should not assume that other 
+    categories of information are therefore <em>not</em> sensitive. Whether information is 
+    considered sensitive can vary depending on a [=person=]'s circumstances and the [=context=] 
+    of an interaction, and it can change over time.
   </span>
 </p>
 </div>
@@ -1523,18 +1523,6 @@ particularly if location information is repeatedly requested over time or if the
 [=actor=] has other relevant information about the [=person=] [<a
 data-cite="RFC6772#section-13.5">RFC6772</a>].
 </aside>
-
-When considering whether a class of information is likely to be sensitive to
-a person, consider at least these factors:
-
-* whether it serves as a persistent [=identifier=] (see
-  [severity](https://www.w3.org/TR/fingerprinting-guidance/#identifying-fingerprinting-surface-and-evaluating-severity) in
-  [[[fingerprinting-guidance]]]);
-* whether it discloses substantial (including intimate details or inferences)
-  information about the person using the system or other people;
-* whether it can be used to infer particular characteristics that put the person at risk of greater harm;
-* whether it enables other threats, like intrusion.
-
 
 ## Data Rights {#data-rights}
 
