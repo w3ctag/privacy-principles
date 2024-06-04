@@ -653,6 +653,14 @@ override any given law (although they can affect how easy it is to create and en
 is not merely an implementation of a particular legal privacy regime; it has distinct features and
 guarantees driven by shared values that often exceed legal requirements for privacy.
 * Pervasive monitoring, a form of large-scale, indiscriminate surveillance, is a known attack on the privacy of users of the internet and the web [[RFC7258]].
+* Given the large volume of potential [=data=]-related decisions in today's data economy,
+it is impossible for people to have detailed control over how their data is processed.
+This fact does not imply that privacy is dead. Studies show that
+[=people=] remain concerned over how their [=data=] is [=processed=], that they feel powerless,
+and sense that they have lost agency ([[?Privacy-Concerned]]). If we design our technological infrastructure
+carefully, we can give people greater [=autonomy=] with respect to their own [=data=]. This is
+done by setting [=appropriate=], privacy-protective defaults and designing user-friendly choice
+architectures.
 
 ## Assumptions
 
@@ -1518,6 +1526,38 @@ A [=person=] may share data about other [=people=] (e.g. a picture with both tha
   further discussion of privacy of people other than the user.
 </div>
 
+<!-- TODO: integrate (or delete) the below -->
+
+[=People=] should be able to [=consent=] to data sharing that would
+otherwise be restricted, such as granting access to their pictures or geolocation.
+[=Actors=] need to take care that their users are [*informed*](#consent-principles) when
+granting this [=consent=] and *aware* enough about what's going on that they can know to
+revoke their consent when they want to.
+[=Consent=] to data processing and granting permissions to access web platform APIs are
+similar problems. Both consent and permissions should be requested in a way that lets
+people delay or avoid answering if they're trying to do something else. If the user
+grants some form of persistent access to data, there should be an indicator that lets
+people notice this ongoing access and that lets them turn it off whenever they wish to.
+In general, providing [=consent=] should be rare, intentional, and temporary.
+
+When an [=opt-out=] mechanism exists, it should preferably work with a [=global opt-out=] mechanism.
+
+Under this model, a [=global opt-out=] signal should not be understood as a decision that a
+[=person=] made a while ago when they flipped a setting or chose to use a specific
+[=user agent=] but rather as a preference that they have chosen to automatically reaffirm with
+every interaction with the site.
+
+One implementation strategy for [=opt-outs=] or other <a href="#data-rights">data rights</a> is
+to assign [=people=] stable [=identifiers=] and to maintain a central registry to map these
+[=identifiers=] to [=people=]'s preferences. [=Actors=] that wish to process a given person's
+data are then expected to fetch that person's preferences from the central registry and to
+configure their processing accordingly. This approach has notably been deployed to capture
+[=opt-outs=] of marketing uses of people's phone numbers or residential addresses. This
+approach is not recommended, for multiple reasons: it offers no technical protection against
+bad actors, it creates one central point of failure, it is hard to meaningfully audit (particularly
+for the scale of processing implied by web systems), and experience with existing systems
+shows that they make it hard for [=people=] to exercise their rights.
+
 ## Notifications and Interruptions {#interruptions}
 
 Notifications and other interruptive UI can be a powerful way to capture attention.
@@ -2004,79 +2044,42 @@ user logged into the site via an API like [[[credential-management-1]]]).
 ## Individual Autonomy {#autonomy}
 
 A [=person=]'s <dfn data-lt="autonomous">autonomy</dfn> is their ability to make decisions of their own personal will,
-without undue influence from other [=actors=]. People have limited intellectual resources and
+without undue influence from other [=actors=].
+
+People have limited intellectual resources and
 time with which to weigh decisions, and they have to rely on shortcuts when making decisions. This makes it possible
 to manipulate their preferences, including their privacy preferences ([[?Privacy-Behavior]], [[?Digital-Market-Manipulation]]).
+
 A [=person=]'s [=autonomy=] is improved by a system when that system offers a shortcut that is closer to what
 that [=person=] would have decided given unlimited time and intellectual ability. [=Autonomy=] is decreased
 when a similar shortcut goes against decisions made under these ideal conditions.
 
 Affordances and interactions that decrease [=autonomy=] are known as <dfn data-lt="dark pattern|dark patterns">deceptive patterns</dfn> (or dark patterns).
 A [=deceptive pattern=] does not have to be intentional ([[?Dark-Patterns]], [[?Dark-Pattern-Dark]]).
-When building something that may impact people's [=autonomy=], it is important that reviewers
-from multiple independent perspectives check that it does not introduce [=deceptive patterns=].
+It is important that reviewers
+from multiple independent perspectives check that a feature does not introduce [=deceptive patterns=].
 
-Given the large volume of potential [=data=]-related decisions in today's data economy,
-it is impossible for people to have detailed control over how their data is processed.
-This fact does not imply that privacy is dead. Studies show that
-[=people=] remain concerned over how their [=data=] is [=processed=], that they feel powerless,
-and sense that they have lost agency ([[?Privacy-Concerned]]). If we design our technological infrastructure
-carefully, we can give people greater [=autonomy=] with respect to their own [=data=]. This is
-done by setting [=appropriate=], privacy-protective defaults and designing user-friendly choice
-architectures.
 
-### Opt-in, Consent, Opt-out, Global Controls {#opt-in-out}
 
-Several kinds of mechanisms exist to enable [=people=] to control how they interact
-with data-processing systems. Mechanisms that increase the number of [=purposes=] for which
-their [=data=] is being [=processed=] or the amount of their [=data=] that is [=processed=]
-are referred to as [=opt-in=] or <dfn data-lt="opt in|opt-in">consent</dfn>. Mechanisms
-that decrease this number of [=purposes=] or the amount of [=data=] being [=processed=] are known as
-<dfn data-lt="opt out">opt-out</dfn>.
+## Consent and controls {#consent-and-controls}
 
-When deployed thoughtfully, these mechanisms can improve [=people=]'s [=autonomy=]. Often,
-however, they are used as a way to avoid putting in the difficult work of deciding which
-types of [=processing=] are [=appropriate=] and which are not, offloading [=privacy labour=]
-to the people using a system.
+Several kinds of mechanisms exist to enable [=people=] to control how they interact with data-processing systems. 
 
-[=People=] should be able to [=consent=] to data sharing that would
-otherwise be restricted, such as granting access to their pictures or geolocation.
-[=Actors=] need to take care that their users are [*informed*](#consent-principles) when
-granting this [=consent=] and *aware* enough about what's going on that they can know to
-revoke their consent when they want to.
-[=Consent=] to data processing and granting permissions to access web platform APIs are
-similar problems. Both consent and permissions should be requested in a way that lets
-people delay or avoid answering if they're trying to do something else. If the user
-grants some form of persistent access to data, there should be an indicator that lets
-people notice this ongoing access and that lets them turn it off whenever they wish to.
-In general, providing [=consent=] should be rare, intentional, and temporary.
+<dfn data-lt="opt in|opt-in|consent">Opt-in</dfn> or [=consent=]
+mechanisms increase the number of [=purposes=] for which
+a [=person=]'s [=data=] is being [=processed=] or the amount of their [=data=] that is [=processed=].
 
-When an [=opt-out=] mechanism exists, it should preferably work with a
-<dfn>global opt-out</dfn> mechanism. Conceptually, a [=global opt-out=] mechanism is an
-automaton operating as part of the [=user agent=]. It is equivalent to a robot that would carry
-out a [=person=]'s instructions by pressing an [=opt-out=] button (or a similar expression of
-the [=person=]'s rights) with every interaction that the [=person=] has with a site. (For
-instance, the [=person=] may be objecting to [=processing=] based on legitimate interest,
-withdrawing [=consent=] to specific [=purposes=], or requesting that their data not be sold or
-shared.) The [=user=] is effectively delegating the expression of their [=opt-out=] to their
+<dfn data-lt="opt out">Opt-out</dfn> mechanisms
+decrease the number of [=purposes=] or the amount of [=data=] being [=processed=].
+
+When deployed thoughtfully, these mechanisms can improve [=people=]'s [=autonomy=]. On the other hand, they can actually increase the
+[=privacy labour=] needed by the people using a system.
+
+A <dfn>global opt-out</dfn> mechanism is a part of the [=user agent=] which automaticaly opts-out of [=data processing=]
+with a site in accordance with the [=person=]'s preferences.
+The [=user=] is effectively delegating the expression of their [=opt-out=] to their
 [=user agent=], which helps rectify [=automation asymmetry=]. The <em>Global Privacy
 Control</em> [[?GPC]] is a good example of a [=global opt-out=] mechanism.
-
-Under this model, a [=global opt-out=] signal should not be understood as a decision that a
-[=person=] made a while ago when they flipped a setting or chose to use a specific
-[=user agent=] but rather as a preference that they have chosen to automatically reaffirm with
-every interaction with the site.
-
-One implementation strategy for [=opt-outs=] or other <a href="#data-rights">data rights</a> is
-to assign [=people=] stable [=identifiers=] and to maintain a central registry to map these
-[=identifiers=] to [=people=]'s preferences. [=Actors=] that wish to process a given person's
-data are then expected to fetch that person's preferences from the central registry and to
-configure their processing accordingly. This approach has notably been deployed to capture
-[=opt-outs=] of marketing uses of people's phone numbers or residential addresses. This
-approach is not recommended, for multiple reasons: it offers no technical protection against
-bad actors, it creates one central point of failure, it is hard to meaningfully audit (particularly
-for the scale of processing implied by web systems), and experience with existing systems
-shows that they make it hard for [=people=] to exercise their rights.
 
 ## Vulnerability {#vulnerability}
 
