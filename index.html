@@ -653,6 +653,28 @@ override any given law (although they can affect how easy it is to create and en
 is not merely an implementation of a particular legal privacy regime; it has distinct features and
 guarantees driven by shared values that often exceed legal requirements for privacy.
 
+## Assumptions
+
+* for everyone
+* limited time/headspace for decisions
+* vulnerable
+* vary from context to context
+* User agents should balance a benevolent guardian's need to protect their ward from dangers, against a ward's need to protect themself if they have a malicious guardian.
+* Governance will often struggle to achieve its goals if it works primarily by increasing individual control instead of by collective action.
+* user agents serve the user
+* privacy is contested because of economic incentives to exploit and take advantage people, and power hierarchies that desire to maintain the status quo
+* power asymmetries exist and we must work to mitigate the threats that arise from this
+
+One notable issue with procedural approaches to privacy is that they tend to have the same
+requirements in situations where people find themselves in a significant asymmetry of
+power with another [=actor=] — for instance a [=person=] using an essential service provided by a
+monopolistic platform — and those where a person and the other [=actor=] are very much on equal
+footing, or even where the [=person=] may have greater power, as is the case with small
+businesses operating in a competitive environment. They also do not consider cases in
+which one [=actor=] may coerce other [=actors=] into facilitating its [=inappropriate=]
+practices, as is often the case with dominant players in advertising or in content aggregation
+([[?Consent-Lackeys]], [[?CAT]]).
+
 # Principles for Privacy on the Web
 
 This section describes a set of principles designed to apply to the web
@@ -1727,35 +1749,19 @@ shows that they make it hard for [=people=] to exercise their rights.
 
 ### Privacy Labour {#privacy-labour}
 
-<dfn data-lt="privacy labor|labour|labor">Privacy labour</dfn> is the practice of having a [=person=] do
-the work of ensuring [=data processing=] of which they are the subject or recipient is
-[=appropriate=], instead of putting the responsibility on the [=actors=] who are doing the processing.
+<dfn data-lt="privacy labor|labour|labor">Privacy labour</dfn> when a [=person=] is required to do
+the work to make sure [=data processing=] of which they are the subject or recipient is
+[=appropriate=], instead of the [=actors=] who are doing the processing.
 Data systems that are based on asking [=people=] for their [=consent=] tend to increase
 [=privacy labour=].
 
-More generally, implementations of [=privacy=] often offload [=labour=] to [=people=]. This is
-notably true of the regimes descended from the <dfn data-lt="FIPs">Fair Information Practices</dfn>
-([=FIPs=]), a loose set of principles initially elaborated in the 1970s in support of individual
-[=autonomy=] in the face of growing concerns with databases. The [=FIPs=] generally assume that
-there is sufficiently little [=data processing=] taking place that any [=person=] will be able to
-carry out sufficient diligence to be [=autonomous=] in their decision-making. Since they offload
-the [=privacy labour=] to people and assume perfect, unlimited [=autonomy=], the [=FIPs=] do not
-forbid specific types of [=data processing=] but only place them under different procedural
-requirements. This approach is no longer [=appropriate=].
-
-One notable issue with procedural approaches to privacy is that they tend to have the same
-requirements in situations where people find themselves in a significant asymmetry of
-power with another [=actor=] — for instance a [=person=] using an essential service provided by a
-monopolistic platform — and those where a person and the other [=actor=] are very much on equal
-footing, or even where the [=person=] may have greater power, as is the case with small
-businesses operating in a competitive environment. They also do not consider cases in
-which one [=actor=] may coerce other [=actors=] into facilitating its [=inappropriate=]
-practices, as is often the case with dominant players in advertising or in content aggregation
-([[?Consent-Lackeys]], [[?CAT]]).
-
-Reference to the [=FIPs=] survives to this day. They are often referenced as "<i>transparency
-and choice</i>", which, in today's digital environment, is often an indication that
-[=inappropriate=] [=processing=] is being described.
+Compliance requirements based on the <dfn data-lt="FIPs">Fair Information Practices</dfn> ([=FIPs=])
+often increase [=privacy labour=] as they
+do not forbid specific types of [=data processing=]
+and assume perfect, unlimited [=autonomy=].
+The volume of [=data processing=] taking place is now
+much higher than when the [=FIPS=] were written,
+so this approach is no longer [=appropriate=]
 
 ## Vulnerability {#vulnerability}
 
