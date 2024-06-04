@@ -652,6 +652,7 @@ platform exposes (or does not expose), and laws in the various jurisdictions whe
 override any given law (although they can affect how easy it is to create and enforce law). The web
 is not merely an implementation of a particular legal privacy regime; it has distinct features and
 guarantees driven by shared values that often exceed legal requirements for privacy.
+* Pervasive monitoring, a form of large-scale, indiscriminate surveillance, is a known attack on the privacy of users of the internet and the web [[RFC7258]].
 
 ## Assumptions
 
@@ -1634,28 +1635,30 @@ information flows.
 
 <dfn>Information flows</dfn> are information exchanged or processed by
 [=actors=]. A person's privacy can be harmed both by their information flowing from them to
-other actors and by information flowing toward them. Examples of the latter include:
+other actors and by information flowing toward them. 
+
+<!-- Examples of the latter include:
 unexpected shocking images,
 loud noises while they intend to sleep, manipulative information, interruptive
 messages when their focus is on something else, or harassment when they seek social interactions.
-(In some of these cases, the information may not be [=personal data=].)
+(In some of these cases, the information may not be [=personal data=].) -->
 
 On the web, [=information flows=] may involve a wide variety of [=actors=] that are not always
-recognizable or obvious to a user within a particular interaction. Visiting a website may involve
-the actors that contribute to operating that site, but also actors with network access,
-which may include: Internet service providers; other network operators; local institutions providing
-a network connection including schools, libraries, or universities; government intelligence services;
-malicious hackers who have gained access to the network or the systems of any of the other actors.
-High-level threats including surveillance may be pursued by these actors ([[RFC6973]]). Pervasive monitoring,
-a form of large-scale, indiscriminate surveillance, is a known attack on the privacy of users of the
-internet and the web [[RFC7258]].
+recognizable or obvious to a user within a particular interaction. Visiting a website may involve sharing data with:
 
-Information flows may also involve other people &mdash; for example, other users of a site &mdash;
-which could include friends, family members, teachers, strangers, or government officials. Some
-threats to privacy, including both disclosure and harassment, may be particular to the other
-people involved in the information flow ([[RFC6973]]).
+* the actors that contribute to operating that site;
+* internet service providers;
+* other network operators;
+* local institutions providing a network connection including schools, libraries, or universities;
+* government intelligence services;
+* malicious parties who have gained access to the network or the systems of any of the other actors;
+* other users of a site &mdash;
+which could include friends, family members, coworkers, teachers, strangers, or government officials.
 
-## Automation assymmetry
+Some threats to privacy depend on which other
+people are involved in the information flow ([[RFC6973]]).
+
+## Automation asymmetry
 
 <dfn>Automation asymmetry</dfn> is when an [=actor=] can collect [=data=] about a [=person=] and process it automatically, and the
 [=person=] must take manual action to protect their [=data=] or control its processing. This 
