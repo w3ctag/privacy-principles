@@ -1811,6 +1811,80 @@ which [=actors=] can collect [=data=], what data they can collect, how they can 
 ([[?GKC-Privacy]], [[?IAD]]). This document provides building blocks for [=data governance=]
 that puts [=people=] first.
 
+## Personal data {#personal-data}
+
+<dfn data-lt="data">Personal data</dfn> is any information that is directly or
+indirectly related to an identified or identifiable [=person=], such as by reference to an
+[=identifier=] ([[GDPR]], [[OECD-Guidelines]], [[Convention-108]]).
+
+On the web, an <dfn>identifier</dfn> of some type is typically assigned for an
+[=identity=] as seen by a website, which makes it easier for an automated
+system to store data about that [=person=].
+
+<aside class="example" id="example-identifiers" title="Identifiers">
+
+Examples of [=identifiers=] for a [=person=] can be:
+
+* their name,
+* an identification number including those mapping to a device that this
+[=person=] may be using,
+* their phone number,
+* their location data,
+* an online identifier such as email or IP addresses,
+* browser fingerprints (based on a combination of
+  configuration characteristics), or
+* factors specific to their physical, physiological, genetic, mental, economic,
+  cultural, social, or behavioral [=identity=],
+* strings derived from other [=identifiers=], for instance through hashing.
+
+</aside>
+
+If a [=person=] could reasonably be identified or re-identified through the combination of [=data=] with other
+[=data=], then both sets of [=data=] are [=personal data=].
+
+## Data processing {#data-processing}
+
+An [=actor=] <dfn data-lt="process|processing|processed|data processing">processes</dfn> data if it
+carries out operations on [=personal data=], whether or not by automated means, such as
+collection, recording, organisation, structuring, storage, adaptation or alteration,
+retrieval, consultation, use, disclosure by transmission, [=sharing=], dissemination or
+otherwise making available, [=selling=], alignment or combination, restriction, erasure or
+destruction.
+
+An [=actor=] <dfn data-lt="share|sharing">shares</dfn> data if it provides it to any other
+[=data controller=]. Note that, under this definition, an [=actor=] that provides data to its own
+[=service providers=] is not [=sharing=] it.
+
+An [=actor=] <dfn data-lt="sell|selling">sells</dfn> data when it [=shares=] the data in exchange
+for something of value, even if that value isn't monetary.
+
+The <dfn>purpose</dfn> of a given [=processing=] of data is an anticipated, intended, or
+planned outcome of this [=processing=] which is achieved or aimed for within a given
+[=context=]. A [=purpose=], when described, should be specific enough that
+someone familiar with the relevant [=context=] could pick some
+[=means=] that would achieve the [=purpose=].
+
+The <dfn>means</dfn> is the general way that data is [=processed=] to achieve a particular
+[=purpose=], in a given [=context=]. [=Means=] are relatively abstract
+and don't specify all the way down to implementation details. For example, for
+the [=purpose=] of restoring a person's preferences, the [=means=] could be to
+look up their identifier in a preferences store.
+
+A <dfn>data controller</dfn> is an [=actor=] that determines the [=means=] and [=purposes=]
+of data processing. Any [=actor=] that is not a [=service provider=] is a [=data controller=].
+
+A <dfn data-lt="data processor">service provider</dfn> or [=data processor=]:
+
+* [=processes=] data on behalf of another [=actor=];
+* ensures that the data is only retained, accessed, and used as directed by that
+  [=actor=] and solely for the list of explicitly-specified [=purposes=]
+  detailed by the directing [=actor=];
+* may determine implementation details of the data processing in question but
+  does not determine the [=purpose=] for which the data is being [=processed=]
+  nor the overarching [=means=] through which the [=purpose=] is carried out;
+* has no independent right to use the data other than in a [=de-identified=] form (e.g., for
+  monitoring service integrity, load balancing, capacity planning, or billing); and,
+* has a contract in place with the [=actor=] which is consistent with the above limitations.
 
 ## Individual Autonomy {#autonomy}
 
@@ -2075,80 +2149,7 @@ decisions.
 
 
 
-## Personal data {#personal-data}
 
-<dfn data-lt="data">Personal data</dfn> is any information that is directly or
-indirectly related to an identified or identifiable [=person=], such as by reference to an
-[=identifier=] ([[GDPR]], [[OECD-Guidelines]], [[Convention-108]]).
-
-On the web, an <dfn>identifier</dfn> of some type is typically assigned for an
-[=identity=] as seen by a website, which makes it easier for an automated
-system to store data about that [=person=].
-
-<aside class="example" id="example-identifiers" title="Identifiers">
-
-Examples of [=identifiers=] for a [=person=] can be:
-
-* their name,
-* an identification number including those mapping to a device that this
-[=person=] may be using,
-* their phone number,
-* their location data,
-* an online identifier such as email or IP addresses,
-* browser fingerprints (based on a combination of
-  configuration characteristics), or
-* factors specific to their physical, physiological, genetic, mental, economic,
-  cultural, social, or behavioral [=identity=],
-* strings derived from other [=identifiers=], for instance through hashing.
-
-</aside>
-
-If a [=person=] could reasonably be identified or re-identified through the combination of [=data=] with other
-[=data=], then both sets of [=data=] are [=personal data=].
-
-## Data processing {#data-processing}
-
-An [=actor=] <dfn data-lt="process|processing|processed|data processing">processes</dfn> data if it
-carries out operations on [=personal data=], whether or not by automated means, such as
-collection, recording, organisation, structuring, storage, adaptation or alteration,
-retrieval, consultation, use, disclosure by transmission, [=sharing=], dissemination or
-otherwise making available, [=selling=], alignment or combination, restriction, erasure or
-destruction.
-
-An [=actor=] <dfn data-lt="share|sharing">shares</dfn> data if it provides it to any other
-[=data controller=]. Note that, under this definition, an [=actor=] that provides data to its own
-[=service providers=] is not [=sharing=] it.
-
-An [=actor=] <dfn data-lt="sell|selling">sells</dfn> data when it [=shares=] the data in exchange
-for something of value, even if that value isn't monetary.
-
-The <dfn>purpose</dfn> of a given [=processing=] of data is an anticipated, intended, or
-planned outcome of this [=processing=] which is achieved or aimed for within a given
-[=context=]. A [=purpose=], when described, should be specific enough that
-someone familiar with the relevant [=context=] could pick some
-[=means=] that would achieve the [=purpose=].
-
-The <dfn>means</dfn> is the general way that data is [=processed=] to achieve a particular
-[=purpose=], in a given [=context=]. [=Means=] are relatively abstract
-and don't specify all the way down to implementation details. For example, for
-the [=purpose=] of restoring a person's preferences, the [=means=] could be to
-look up their identifier in a preferences store.
-
-A <dfn>data controller</dfn> is an [=actor=] that determines the [=means=] and [=purposes=]
-of data processing. Any [=actor=] that is not a [=service provider=] is a [=data controller=].
-
-A <dfn data-lt="data processor">service provider</dfn> or [=data processor=]:
-
-* [=processes=] data on behalf of another [=actor=];
-* ensures that the data is only retained, accessed, and used as directed by that
-  [=actor=] and solely for the list of explicitly-specified [=purposes=]
-  detailed by the directing [=actor=];
-* may determine implementation details of the data processing in question but
-  does not determine the [=purpose=] for which the data is being [=processed=]
-  nor the overarching [=means=] through which the [=purpose=] is carried out;
-* has no independent right to use the data other than in a [=de-identified=] form (e.g., for
-  monitoring service integrity, load balancing, capacity planning, or billing); and,
-* has a contract in place with the [=actor=] which is consistent with the above limitations.
 
 ## Recognition {#recognition}
 
