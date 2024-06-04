@@ -2241,32 +2241,33 @@ decisions.
   
 # Incorporating Different Privacy Principles {#balancing}
 
-While privacy principles are designed to work together and support each other,
-occasionally a proposal to improve how a system follows one privacy principle may reduce
-how well it follows another principle.
+The privacy principles are designed to work together and support each other.
+Occasionally a proposal to improve how a system follows one privacy principle 
+may appear to reduce how well it follows another principle.
 
 <div class="practice" data-audiences="websites user-agents api-designers">
 
 <p><span class="practicelab" id="principle-pareto-frontier">When confronted with an
 apparent tradeoff, first look for ways to improve all principles at once.</span></p>
 
-Given any initial design that doesn't perfectly satisfy all principles, there are usually
-some other designs that improve the situation for some principles without sacrificing
-anything about the other principles. Work to find those designs.
-
-Another way to say this is to look for [Pareto
-improvements](https://en.wikipedia.org/wiki/Pareto_efficiency) before starting to trade
-off between principles.
-
 </div>
 
-Once one is choosing between different designs at the Pareto frontier, the choice of which
-privacy principles to prefer is complex and depends heavily on the details of each
-particular situation. Note that people's privacy can also be in tension
+Given any initial design that doesn't perfectly satisfy all principles, there are usually
+some other designs that improve the situation for some principles without sacrificing
+anything for the other principles, or even which improve the overall situation as a whole.
+Work to find those designs before starting to trade
+off between principles.
+(This is also known as looking for is to look for
+[Pareto improvements](https://en.wikipedia.org/wiki/Pareto_efficiency).
+
+Privacy can also be in tension
 with non-privacy concerns. As discussed in the [[[Ethical-Web]]], "it is important to
 consider the context in which a particular technology is being applied, the expected
 audience(s) for the technology, who the technology benefits and who it may disadvantage,
-and any power dynamics involved" ([[Ethical-Web]]). Despite this complexity, there is a basic ground
+and any power dynamics involved" ([[Ethical-Web]]).
+The choice of which
+principles to prefer is complex and depends heavily on the details of each
+particular situation. Despite this complexity, there is a basic ground
 rule to follow:
 
 <div class="practice" data-audiences="websites user-agents">
@@ -2276,15 +2277,11 @@ needs to collect extra data from its users in order to protect those or other us
 must take extra technical and legal measures to ensure that this data can't be then used
 for other purposes, like to grow the service.</span></p>
 
-This is a special case of the <a href="#no-secondary-use">more general principle that data should not be used for more
-purposes than those specified when the data was collected</a>.
-
-Services sometimes use people's data in order to protect those or other people.
-A service that does this should explain what data it's
-using for this purpose. It should also say how it might use or share a person's
-data if it believes that person has violated the service's rules.
-
 </div>
+
+This is a special case of the
+[more general principle that data should not be used for more
+purposes than those specified when the data was collected](#no-secondary-use).
 
 <aside class="example" id="example-technical-legal-measures" title="Technical and Legal Measures">
 
@@ -2301,16 +2298,15 @@ A site might segregate the data it collects for safety reasons from its business
 
 </aside>
 
-It is attractive to say that if someone violates the rules of a service they're using,
-then they sacrifice a proportionate amount of their privacy protections, but
+Services sometimes use people's data in order to protect those or other people.
+A service that does this should explain what data it's
+using for this purpose. It should also say how it might use or share a person's
+data if it believes that person has violated the service's rules.
 
-1. Often the service can only prevent the rule violation by also collecting data from
-   innocent users. This extra collection is not always [=appropriate=], especially if it
-   allows pervasive monitoring ([[RFC7258]], [[RFC7687]]).
-1. If a service operator wants to collect some extra data, it can be tempting for them to
-   define rules and proportionality that allow them to do so.
+A service should not define rules of use that are only enforceable by excessive or [=inappropriate=] additional data collection, or in order to justify additional data collection, especially if it
+allows pervasive monitoring ([[RFC7258]], [[RFC7687]]).
 
-The following examples illustrate some of the tensions:
+The following examples illustrate some of the tensions between data collection and fair use of services.
 
 <aside class="example" id="example-sockpuppets" title="Sockpuppets">
 
