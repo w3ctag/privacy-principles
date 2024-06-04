@@ -624,8 +624,30 @@ and help you to see the the underlying interdisciplinary framework for the Priva
 
 # Why is privacy on the web important?
 
-* increasing automation 
-* always privacy principles at work
+* Information can be used to predict and to influence people, as well as to design online
+spaces that control people's behaviour. The collection and [=processing=] of information in greater
+volume, with greater precision and reliability, with increasing interoperability across a growing
+variety of data types, and at intensifying speed is leading to a concentration of power that threatens
+private and public liberties. What's more, automation and the increasing computerisation of all aspects
+of our lives both increase the power of information and decrease the cost of a number of intrusive
+behaviours that would be more easily kept in check if the perpetrator had to be in the same room as
+the victim.
+* When an [=actor=] can collect [=data=] about a [=person=] and process it automatically, and that
+[=person=] has to take manual action to protect their [=data=] or control its processing, this <dfn>automation asymmetry</dfn>
+creates an imbalance of power that favors that [=actor=] and decreases the [=person=]'s agency.
+This document focuses on the impact that [=data=] [=processing=] can have on people, but it can also
+impact other [=actors=], such as companies or governments.
+* It is important to keep in mind that not all people are equal in how they can resist
+an imbalance of power: some [=people=] are more [=vulnerable=] and therefore in greater
+need of protection.
+* There are <em>always</em> privacy principles at work. Some sets of principles may be more
+permissive, but that does not make them neutral. All privacy principles have an impact on
+[=people=] and we must therefore determine which principles best align with ethical web values in
+web [=contexts=] ([[?ETHICAL-WEB]], [[?Why-Privacy]]).
+* The web is for everyone ([[?For-Everyone]]). It should be "<i>a platform that helps people and provides a
+net positive social benefit</i>" ([[?ETHICAL-WEB]]). One of the ways in which the
+web serves people is by seeking to protect them from surveillance and the types of manipulation that data can
+enable.
 * Privacy on the web is primarily regulated by two forces: the architectural capabilities that the web
 platform exposes (or does not expose), and laws in the various jurisdictions where the web is used
 ([[New-Chicago-School]], [[Standard-Bodies-Regulators]]). These regulatory mechanisms are separate; a law in one country does not
@@ -640,6 +662,15 @@ This section describes a set of principles designed to apply to the web
 [=context=] in general. Specific [=contexts=] on the web may need more
 constraints or other considerations. In time, we expect to see more specialized
 privacy principles published, for more specific [=contexts=] on the web.
+
+Principles vary from [=context=] to [=context=] ([[?Understanding-Privacy]], [[?Contextual-Integrity]]).
+For instance, people have different expectations of [=privacy=] at work, at a café, or at home. Understanding and
+evaluating a privacy situation is best done by clearly identifying:
+
+* Its [=actors=], which include the subject of the information as well as the sender and the recipient
+  of the [=information flow=]. (Note that recipients might not always want to be recipients.)
+* The type of data involved in the [=information flow=].
+* The principles that are in use in this context.
 
 These principles should be enforced by [=user agents=]. When this is not possible,
 additional enforcement mechanisms are needed.
@@ -1576,58 +1607,11 @@ This section provides a summary background of the digital privacy landscape
 to set the context in which these Privacy Principles were written.
 For more detail, we refer you to our references section for further background reading.
 
-## An Introduction to Privacy on the Web {#intro}
-
-This is a document containing technical guidelines. However, in order to put those guidelines in context we
-must first define some terms and explain what we mean by privacy.
-
 The web is a social and technical system made up of [=information flows=]. Because this document
 is specifically about [=privacy=] as it applies to the web, it focuses on privacy with respect to
 information flows.
 
-The web is for everyone ([[?For-Everyone]]). It should be "<i>a platform that helps people and provides a
-net positive social benefit</i>" ([[?ETHICAL-WEB]]). One of the ways in which the
-web serves people is by seeking to protect them from surveillance and the types of manipulation that data can
-enable.
-
-Information can be used to predict and to influence people, as well as to design online
-spaces that control people's behaviour. The collection and [=processing=] of information in greater
-volume, with greater precision and reliability, with increasing interoperability across a growing
-variety of data types, and at intensifying speed is leading to a concentration of power that threatens
-private and public liberties. What's more, automation and the increasing computerisation of all aspects
-of our lives both increase the power of information and decrease the cost of a number of intrusive
-behaviours that would be more easily kept in check if the perpetrator had to be in the same room as
-the victim.
-
-When an [=actor=] can collect [=data=] about a [=person=] and process it automatically, and that
-[=person=] has to take manual action to protect their [=data=] or control its processing, this <dfn>automation asymmetry</dfn>
-creates an imbalance of power that favors that [=actor=] and decreases the [=person=]'s agency.
-This document focuses on the impact that [=data=] [=processing=] can have on people, but it can also
-impact other [=actors=], such as companies or governments.
-
-It is important to keep in mind that not all people are equal in how they can resist
-an imbalance of power: some [=people=] are more [=vulnerable=] and therefore in greater
-need of protection.
-
-<dfn data-lt="governance">Data governance</dfn> is the system of principles that regulate [=information flows=].
-[=Data governance=] determines
-which [=actors=] can collect [=data=], what data they can collect, how they can collect it, and how they can [=process=] it
-([[?GKC-Privacy]], [[?IAD]]). This document provides building blocks for [=data governance=]
-that puts [=people=] first.
-
-Principles vary from [=context=] to [=context=] ([[?Understanding-Privacy]], [[?Contextual-Integrity]]).
-For instance, people have different expectations of [=privacy=] at work, at a café, or at home. Understanding and
-evaluating a privacy situation is best done by clearly identifying:
-
-* Its [=actors=], which include the subject of the information as well as the sender and the recipient
-  of the [=information flow=]. (Note that recipients might not always want to be recipients.)
-* The type of data involved in the [=information flow=].
-* The principles that are in use in this context.
-
-There are <em>always</em> privacy principles at work. Some sets of principles may be more
-permissive, but that does not make them neutral. All privacy principles have an impact on
-[=people=] and we must therefore determine which principles best align with ethical web values in
-web [=contexts=] ([[?ETHICAL-WEB]], [[?Why-Privacy]]).
+## Information flows
 
 <dfn>Information flows</dfn> are information exchanged or processed by
 [=actors=]. A person's privacy can be harmed both by their information flowing from them to
@@ -1651,6 +1635,15 @@ Information flows may also involve other people &mdash; for example, other users
 which could include friends, family members, teachers, strangers, or government officials. Some
 threats to privacy, including both disclosure and harassment, may be particular to the other
 people involved in the information flow ([[RFC6973]]).
+
+## Data governance
+
+<dfn data-lt="governance">Data governance</dfn> is the system of principles that regulate [=information flows=].
+[=Data governance=] determines
+which [=actors=] can collect [=data=], what data they can collect, how they can collect it, and how they can [=process=] it
+([[?GKC-Privacy]], [[?IAD]]). This document provides building blocks for [=data governance=]
+that puts [=people=] first.
+
 
 ## Individual Autonomy {#autonomy}
 
