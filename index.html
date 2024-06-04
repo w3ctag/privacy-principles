@@ -1994,139 +1994,6 @@ legal meaning for "fiduciary." ([[?Fiduciary-Law]])
 Many of the principles described in the rest of this document extend the [=user agent=]'s duties and
 make them more precise.
 
-## Incorporating Different Privacy Principles {#balancing}
-
-While privacy principles are designed to work together and support each other,
-occasionally a proposal to improve how a system follows one privacy principle may reduce
-how well it follows another principle.
-
-<div class="practice" data-audiences="websites user-agents api-designers">
-
-<p><span class="practicelab" id="principle-pareto-frontier">When confronted with an
-apparent tradeoff, first look for ways to improve all principles at once.</span></p>
-
-Given any initial design that doesn't perfectly satisfy all principles, there are usually
-some other designs that improve the situation for some principles without sacrificing
-anything about the other principles. Work to find those designs.
-
-Another way to say this is to look for [Pareto
-improvements](https://en.wikipedia.org/wiki/Pareto_efficiency) before starting to trade
-off between principles.
-
-</div>
-
-Once one is choosing between different designs at the Pareto frontier, the choice of which
-privacy principles to prefer is complex and depends heavily on the details of each
-particular situation. Note that people's privacy can also be in tension
-with non-privacy concerns. As discussed in the [[[Ethical-Web]]], "it is important to
-consider the context in which a particular technology is being applied, the expected
-audience(s) for the technology, who the technology benefits and who it may disadvantage,
-and any power dynamics involved" ([[Ethical-Web]]). Despite this complexity, there is a basic ground
-rule to follow:
-
-<div class="practice" data-audiences="websites user-agents">
-
-<p><span class="practicelab" id="principle-limited-collection-for-safety">If a service
-needs to collect extra data from its users in order to protect those or other users, it
-must take extra technical and legal measures to ensure that this data can't be then used
-for other purposes, like to grow the service.</span></p>
-
-This is a special case of the <a href="#no-secondary-use">more general principle that data should not be used for more
-purposes than those specified when the data was collected</a>.
-
-Services sometimes use people's data in order to protect those or other people.
-A service that does this should explain what data it's
-using for this purpose. It should also say how it might use or share a person's
-data if it believes that person has violated the service's rules.
-
-</div>
-
-<aside class="example" id="example-technical-legal-measures" title="Technical and Legal Measures">
-
-A site might segregate the data it collects for safety reasons from its business data by:
-
-1. Specifying in its privacy statement that these types of data are kept separate and
-   implementing policies and procedures to ensure the data is stored separately. (Legal
-   and procedural/compliance measures.)
-1. Using multi-party computation to ensure that its business side can't learn the
-   sensitive safety data unless both its safety side and a trusted independent third party
-   collude. (A technical measure.)
-1. Hiring a trusted auditor to publicly check that the data is effectively segregated. (A
-   compliance measure.)
-
-</aside>
-
-It is attractive to say that if someone violates the rules of a service they're using,
-then they sacrifice a proportionate amount of their privacy protections, but
-
-1. Often the service can only prevent the rule violation by also collecting data from
-   innocent users. This extra collection is not always [=appropriate=], especially if it
-   allows pervasive monitoring ([[RFC7258]], [[RFC7687]]).
-1. If a service operator wants to collect some extra data, it can be tempting for them to
-   define rules and proportionality that allow them to do so.
-
-The following examples illustrate some of the tensions:
-
-<aside class="example" id="example-sockpuppets" title="Sockpuppets">
-
-A person might want to sign up many accounts ("sockpuppets") or disguise the affiliation
-of individual-owned accounts
-("[astroturfing](https://en.wikipedia.org/wiki/Astroturfing)") on a service in order to
-trick other people into thinking a belief has more support than it really has. This
-violates the other people's rights to be free from manipulation.
-
-On the other hand, identifying everyone with enough detail to detect these cases tends to
-violate their rights to be free from surveillance and correlation. ([[RFC6973]])
-
-</aside>
-
-<aside class="example" id="example-children" title="Children's Services">
-
-Children using a service (or their guardians) may want to ensure their interaction with
-that service is only visible to other children. To accomplish this, the service would need
-to check all of its users' ages.
-
-While a service can ask its users to self-assert that they are under the specified age
-(without verifying those assertions), or it might rely on trusted institutions (like
-schools) to verify people's ages, to verify people's ages directly can be
-privacy-invasive. It can require automated facial recognition, collection of live images,
-or strongly identifying the children (e.g. via [[NIST-800-63A]]).
-
-</aside>
-
-<aside class="example" id="example-account-security" title="Account Security">
-
-Accounts with a service need to be protected more strongly than just with a username and
-password. Since a compromised account reveals all the private information stored in the
-account, this is a privacy issue and not just a security issue. Services often store the
-historical locations and machine characteristics that have accessed an account, in order
-to make it harder to log in from an unusual place or type of machine. They might also
-store other personal data, like a phone number or address, in order to check that a
-suspicious login actually comes from the real account owner.
-
-</aside>
-
-<aside class="example" id="example-preventing-profiling" title="Preventing Profiling">
-
-Some actors on the web place a high value on building a detailed profile of each user's
-behavior, across websites. User agents are trying to enforce the principles in
-[[[#identity]]] by blocking this profiling, but because the profiles are valuable, there's
-a large incentive to work around user agent measures, sometimes by using techniques that
-are very expensive or impossible to block. If user agent behavior causes websites to adopt
-these alternate tracking methods, the web as a whole won't respect the [[[#identity]]]
-principles.
-
-User agents can reduce the incentive to develop these alternate tracking methods by
-building APIs to facilitate the most common and least harmful uses of user profiles.
-However, those APIs usually still reveal some information about a user's behavior. For
-example, even the most privacy-respecting conversion attribution API will reveal a limited
-amount of information about each user in order to replace the use of profiles to measure
-the success of advertising campaigns. Even this small amount of information is still
-[=personal data=].
-
-</aside>
-
-
 ## People {#people}
 
 A <dfn data-lt="individual|people|user|data subject">person</dfn> (also [=user=] or
@@ -2355,6 +2222,143 @@ If a [=user agent=] can tell that its user is using a particular identity on a
 website, it should make that active identity clear to the user (e.g. if the
 user logged into the site via an API like [[[credential-management-1]]]).
 
+</section>
+
+<section class="appendix">
+  
+# Incorporating Different Privacy Principles {#balancing}
+
+While privacy principles are designed to work together and support each other,
+occasionally a proposal to improve how a system follows one privacy principle may reduce
+how well it follows another principle.
+
+<div class="practice" data-audiences="websites user-agents api-designers">
+
+<p><span class="practicelab" id="principle-pareto-frontier">When confronted with an
+apparent tradeoff, first look for ways to improve all principles at once.</span></p>
+
+Given any initial design that doesn't perfectly satisfy all principles, there are usually
+some other designs that improve the situation for some principles without sacrificing
+anything about the other principles. Work to find those designs.
+
+Another way to say this is to look for [Pareto
+improvements](https://en.wikipedia.org/wiki/Pareto_efficiency) before starting to trade
+off between principles.
+
+</div>
+
+Once one is choosing between different designs at the Pareto frontier, the choice of which
+privacy principles to prefer is complex and depends heavily on the details of each
+particular situation. Note that people's privacy can also be in tension
+with non-privacy concerns. As discussed in the [[[Ethical-Web]]], "it is important to
+consider the context in which a particular technology is being applied, the expected
+audience(s) for the technology, who the technology benefits and who it may disadvantage,
+and any power dynamics involved" ([[Ethical-Web]]). Despite this complexity, there is a basic ground
+rule to follow:
+
+<div class="practice" data-audiences="websites user-agents">
+
+<p><span class="practicelab" id="principle-limited-collection-for-safety">If a service
+needs to collect extra data from its users in order to protect those or other users, it
+must take extra technical and legal measures to ensure that this data can't be then used
+for other purposes, like to grow the service.</span></p>
+
+This is a special case of the <a href="#no-secondary-use">more general principle that data should not be used for more
+purposes than those specified when the data was collected</a>.
+
+Services sometimes use people's data in order to protect those or other people.
+A service that does this should explain what data it's
+using for this purpose. It should also say how it might use or share a person's
+data if it believes that person has violated the service's rules.
+
+</div>
+
+<aside class="example" id="example-technical-legal-measures" title="Technical and Legal Measures">
+
+A site might segregate the data it collects for safety reasons from its business data by:
+
+1. Specifying in its privacy statement that these types of data are kept separate and
+   implementing policies and procedures to ensure the data is stored separately. (Legal
+   and procedural/compliance measures.)
+1. Using multi-party computation to ensure that its business side can't learn the
+   sensitive safety data unless both its safety side and a trusted independent third party
+   collude. (A technical measure.)
+1. Hiring a trusted auditor to publicly check that the data is effectively segregated. (A
+   compliance measure.)
+
+</aside>
+
+It is attractive to say that if someone violates the rules of a service they're using,
+then they sacrifice a proportionate amount of their privacy protections, but
+
+1. Often the service can only prevent the rule violation by also collecting data from
+   innocent users. This extra collection is not always [=appropriate=], especially if it
+   allows pervasive monitoring ([[RFC7258]], [[RFC7687]]).
+1. If a service operator wants to collect some extra data, it can be tempting for them to
+   define rules and proportionality that allow them to do so.
+
+The following examples illustrate some of the tensions:
+
+<aside class="example" id="example-sockpuppets" title="Sockpuppets">
+
+A person might want to sign up many accounts ("sockpuppets") or disguise the affiliation
+of individual-owned accounts
+("[astroturfing](https://en.wikipedia.org/wiki/Astroturfing)") on a service in order to
+trick other people into thinking a belief has more support than it really has. This
+violates the other people's rights to be free from manipulation.
+
+On the other hand, identifying everyone with enough detail to detect these cases tends to
+violate their rights to be free from surveillance and correlation. ([[RFC6973]])
+
+</aside>
+
+<aside class="example" id="example-children" title="Children's Services">
+
+Children using a service (or their guardians) may want to ensure their interaction with
+that service is only visible to other children. To accomplish this, the service would need
+to check all of its users' ages.
+
+While a service can ask its users to self-assert that they are under the specified age
+(without verifying those assertions), or it might rely on trusted institutions (like
+schools) to verify people's ages, to verify people's ages directly can be
+privacy-invasive. It can require automated facial recognition, collection of live images,
+or strongly identifying the children (e.g. via [[NIST-800-63A]]).
+
+</aside>
+
+<aside class="example" id="example-account-security" title="Account Security">
+
+Accounts with a service need to be protected more strongly than just with a username and
+password. Since a compromised account reveals all the private information stored in the
+account, this is a privacy issue and not just a security issue. Services often store the
+historical locations and machine characteristics that have accessed an account, in order
+to make it harder to log in from an unusual place or type of machine. They might also
+store other personal data, like a phone number or address, in order to check that a
+suspicious login actually comes from the real account owner.
+
+</aside>
+
+<aside class="example" id="example-preventing-profiling" title="Preventing Profiling">
+
+Some actors on the web place a high value on building a detailed profile of each user's
+behavior, across websites. User agents are trying to enforce the principles in
+[[[#identity]]] by blocking this profiling, but because the profiles are valuable, there's
+a large incentive to work around user agent measures, sometimes by using techniques that
+are very expensive or impossible to block. If user agent behavior causes websites to adopt
+these alternate tracking methods, the web as a whole won't respect the [[[#identity]]]
+principles.
+
+User agents can reduce the incentive to develop these alternate tracking methods by
+building APIs to facilitate the most common and least harmful uses of user profiles.
+However, those APIs usually still reveal some information about a user's behavior. For
+example, even the most privacy-respecting conversion attribution API will reveal a limited
+amount of information about each user in order to replace the use of profiles to measure
+the success of advertising campaigns. Even this small amount of information is still
+[=personal data=].
+
+</aside>
+
+  
 </section>
 
 <section class="appendix" id="bp-summary"></section>
