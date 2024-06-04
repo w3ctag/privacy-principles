@@ -676,6 +676,10 @@ which one [=actor=] may coerce other [=actors=] into facilitating its [=inapprop
 practices, as is often the case with dominant players in advertising or in content aggregation
 ([[?Consent-Lackeys]], [[?CAT]]).
 
+Privacy principles are defined through social processes and, because of that, the applicable definition
+of [=privacy=] in a given context can be
+contested ([[?Privacy-Contested]]).
+
 [=People=] have <dfn>privacy</dfn> in a given [=context=] when [=actors=] in
 that [=context=] follow that [=context=]'s principles when presenting
 information and using [=personal data=].
@@ -2054,25 +2058,59 @@ agent=] needs to warn the child about how it's configured so that the child can 
 
 </aside>
 
-## Collective Governance {#collective}
+## Group Privacy {#group-privacy}
 
-Privacy principles are defined through social processes and, because of that, the applicable definition
-of [=privacy=] in a given context can be
-contested ([[?Privacy-Contested]]). This makes privacy a problem of collective action ([[?GKC-Privacy]]).
-Group-level [=data processing=] may impact populations or individuals, including in
-ways that [=people=] could not control even under the optimistic assumptions of [=consent=]. For instance,
-it's possible that the only thing that a person is willing to reveal to a particular actor is that they
-are part of a given group. However, other members of the same group may be interacting with the same
-actor and revealing a lot more information, which can enable effective statistical inferences about
-people who refrain from providing information about themselves.
+A [=person=] may join a group deliberately, or they may be
+classified into it by an external actor ([[?Beyond-Individual]]).
 
-What we consider is therefore not just the relation between the [=people=] who share data
-and the [=actors=] that invite that sharing ([[?Relational-Turn]]), but also between the [=people=]
-who may find themselves categorised indirectly as part of a group even without sharing data. One key
-understanding here is that such relations may persist even when data is [=de-identified=]. What's
-more, such categorisation of people, voluntary or not, changes the way in which the world operates.
+[=People=] may not be aware that they are being
+grouped together, and may not understand or be aware of the definition of the group.
+
+Protecting the privacy of groups can take place at two different levels:
+
+* <dfn>group privacy</dfn>: protecting the existence of a group or its activities, even if the members are guaranted to be anonymous, and
+* <dfn>membership privacy</dfn>: protecting the knowledge who are members of the group, even if the existence of the group and its actions
+are known.
+
+Privacy may be affected when information about a small group of people is
+processed, even if no individualized data is exposed.
+
+We must consider:
+
+* the relation between the [=people=] who share data,
+* and the [=actors=] that invite that sharing ([[?Relational-Turn]]), and also 
+* the relations between the [=people=] are categorised indirectly as part of a group even without sharing data.
+
+Such relations may persist even when data is [=de-identified=].
+
+<aside class="example">
+Examples of privacy violations in group settings include:
+
+* Exposing browsing activity of the students
+in a classroom. This may be sensitive even if their teacher doesn't learn exactly which student accessed a
+particular resource about a health issue. 
+* Targeting presentation of information to a small group, such as targeting messages to people who visited a particular clinic or
+are empaneled on a particular jury may be invasive even without uniquely individual data.
+* When the actions of one member of a group reveal information that other members don't want to share, such as publishing a picture of people at an event; or revealing social network information through uploading contacts to a website.
+* Publishing aggregate data about group activities, such as when fitness app Strava revealed secret US bases around which military personnel took frequent runs by publishing heat
+maps of popular running routes ([[?Strava-Debacle]], [[?Strava-Reveal-Military]]).
+</aside>
+
+When [=people=] do not know that they are members of a group, when they cannot easily find other
+members of the group so as to advocate for their rights together, or when they cannot easily
+understand why they are being categorised into a given group, their ability to protect themselves
+through self-governing approaches to privacy is limited. Categorisation of people, voluntary or not, changes the way in which the world operates.
 This can produce self-reinforcing loops that can damage both individuals and
 groups ([[?Seeing-Like-A-State]]).
+
+## Collective Governance {#collective}
+
+Group-level [=data processing=] may impact populations or individuals in
+ways that [=people=] could not control even if they understand and [=consent=] to how their data is to be used. It's possible that the only thing that a person is willing to reveal to a particular actor is that they
+are part of a given group. However, other members of the same group may be interacting with the same
+actor and revealing a lot more information, which can enable effective statistical inferences about the
+people who don't provide information about themselves.
+This makes privacy a problem of collective action ([[?GKC-Privacy]]).
 
 In general, collective issues in [=data=] require collective solutions.
 Web standards help with [=data governance=] by
@@ -2086,49 +2124,7 @@ Collecting data at large scales can have significant pro-social outcomes. Proble
 emerge when [=actors=] [=process=] [=data=]
 for collective benefit and for [=disloyal=] [=purposes=] at the same time.
 The [=disloyal=] [=purposes=] are often justified as bankrolling the pro-social outcomes
-but this requires collective oversight to be [=appropriate=].
-
-### Group Privacy {#group-privacy}
-
-There are different ways for [=people=] to become members of a group. Either they can join it
-deliberately, making it a self-constituted group such as when joining a club, or they can be
-classified into it by an external actor, typically a bureaucracy or its computerised equivalent
-([[?Beyond-Individual]]). In the latter case, [=people=] may not be aware that they are being
-grouped together, and the definition of the group may not be intelligible (for instance if it is
-created from opaque machine learning techniques).
-
-Protecting group privacy can take place at two different levels. The existence of a group or at
-least its activities may need to be protected even in cases in which its members are guaranteed to
-remain anonymous. We refer to this as "group privacy." Conversely, [=people=] may wish to protect
-knowledge that they are members of the group even though the existence of the group and its actions
-may be well known (e.g. membership in a dissidents movement under authoritarian rule), which we call
-"membership privacy". An example [=privacy violation=] for the former case
-is the fitness app Strava that did not reveal individual behaviour or legal identity but published heat
-maps of popular running routes. In doing so, it revealed secret US bases around which military
-personnel took frequent runs ([[?Strava-Debacle]], [[?Strava-Reveal-Military]]).
-
-People's privacy interests may also be affected when information about a small group of people is
-processed, even if no individualized data is exposed. For example, browsing activity of the students
-in a classroom may be sensitive even if their teacher doesn't learn exactly which student accessed a
-particular resource about a health issue. Targeting presentation of information to a small group may
-also be inappropriate: for example, targeting messages to people who visited a particular clinic or
-are empaneled on a particular jury may be invasive even without uniquely individual data.
-
-When [=people=] do not know that they are members of a group, when they cannot easily find other
-members of the group so as to advocate for their rights together, or when they cannot easily
-understand why they are being categorised into a given group, their ability to protect themselves
-through self-governing approaches to privacy is largely eliminated.
-
-One common problem in group privacy is when the actions of one member of a group reveal information
-that other members would prefer were not shared in this way (or at all). For instance, one person
-may publish a picture of an event in which they are featured alongside others while the other people
-captured in the same picture would prefer their participation not to be disclosed. Another example
-of such issues are sites that enable people to upload their contacts: the person performing the
-upload might be more open to disclosing their social networks than the people they are connected to
-are. Such issues do not necessarily admit simple, straightforward solutions, but they need to be
-carefully considered by people building websites.
-
-### Transparency and Research {#transparency-for-research}
+but this requires suitable collective oversight.
 
 While transparency rarely helps enough to inform the individual choices that [=people=] may
 make, it plays a critical role in letting researchers and reporters inform our
