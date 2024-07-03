@@ -125,7 +125,7 @@
         }
       ],
       localBiblio: {
-        'ADDING-PERMISSIONS': {
+        'Adding-Permissions': {
           title: 'Adding another permission? A guide',
           authors: ['Nick Doty'],
           date: '2018',
@@ -173,7 +173,7 @@
           href: 'https://tess.oconnor.cx/2020/10/parties',
           authors: ["Tess O'Connor"],
         },
-        'CAT': {
+        'Content-Aggregation-Technology': {
           title: 'Content Aggregation Technology (CAT)',
           authors: ['Robin Berjon', 'Justin Heideman'],
           href: 'https://nytimes.github.io/std-cat/',
@@ -434,6 +434,17 @@
           href: 'https://github.com/sleevi/psl-problems',
           title: 'Public Suffix List Problems'
         },
+        'Records-Computers-Rights': {
+          title: 'Records, Computers and the Rights of Citizens',
+          publisher: 'U.S. Department of Health, Education & Welfare',
+          href: 'https://archive.epic.org/privacy/hew1973report/'
+        },
+        'Relational-Governance': {
+          title: 'A Relational Theory of Data Governance',
+          authors: ['Salomé Viljoen'],
+          href: 'https://www.yalelawjournal.org/feature/a-relational-theory-of-data-governance',
+          publisher: 'Yale Law Journal',
+        },
         'Relational-Turn': {
           title: 'A Relational Turn for Data Protection?',
           href: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3745973&s=09',
@@ -443,12 +454,6 @@
           title: 'Seeing Like a State: How Certain Schemes to Improve the Human Condition Have Failed',
           href: 'https://bookshop.org/books/seeing-like-a-state-how-certain-schemes-to-improve-the-human-condition-have-failed/9780300246759',
           authors: ['James C. Scott'],
-        },
-        'SILVERPUSH': {
-          title: 'How TV ads silently ping commands to phones: Sneaky SilverPush code reverse-engineered',
-          href: 'https://www.theregister.com/2015/11/20/silverpush_soundwave_ad_tracker/',
-          publisher: 'The Register',
-          authors: ['Iain Thomson']
         },
         'Strava-Debacle': {
           title: 'The Latest Data Privacy Debacle',
@@ -494,28 +499,17 @@
           href: 'https://www.hup.harvard.edu/catalog.php?isbn=9780674035072',
           publisher: 'Harvard University Press',
         },
+        'Web-Without-3p-Cookies': {
+          title: 'Improving the web without third-party cookies',
+          authors: ['Amy Guy'],
+          href: 'https://www.w3.org/2001/tag/doc/web-without-3p-cookies/',
+          publisher: 'W3C',
+        },
         'Why-Privacy': {
           title: 'Why Privacy Matter',
           authors: ['Neil Richards'],
           href: 'https://global.oup.com/academic/product/why-privacy-matters-9780190939045?cc=us&lang=en&',
           publisher: 'Oxford University Press',
-        },
-        'Records-Computers-Rights': {
-          title: 'Records, Computers and the Rights of Citizens',
-          publisher: 'U.S. Department of Health, Education & Welfare',
-          href: 'https://archive.epic.org/privacy/hew1973report/'
-        },
-        'Relational-Governance': {
-          title: 'A Relational Theory of Data Governance',
-          authors: ['Salomé Viljoen'],
-          href: 'https://www.yalelawjournal.org/feature/a-relational-theory-of-data-governance',
-          publisher: 'Yale Law Journal',
-        },
-        'web-without-3p-cookies': {
-          title: 'Improving the web without third-party cookies',
-          authors: ['Amy Guy'],
-          href: 'https://www.w3.org/2001/tag/doc/web-without-3p-cookies/',
-          publisher: 'W3C',
         },
       },
     };
@@ -843,7 +837,7 @@ footing, or even where the [=person=] may have greater power, as is the case wit
 businesses operating in a competitive environment. They also do not consider cases in
 which one [=actor=] may coerce other [=actors=] into facilitating its [=inappropriate=]
 practices, as is often the case with dominant players in advertising or in content aggregation
-([[?Consent-Lackeys]], [[?CAT]]).
+([[?Consent-Lackeys]], [[?Content-Aggregation-Technology]]).
 
 Reference to the [=FIPs=] survives to this day. They are often referenced as "<i>transparency
 and choice</i>", which, in today's digital environment, is often an indication that
@@ -1519,11 +1513,11 @@ Specifications describing these APIs should also:
 
 <aside class="example">
   Usually, these APIs will be designed to expose data that enables some
-  [=appropriate=] information discovery, as recommended by [[[web-without-3p-cookies]]]:
+  [=appropriate=] information discovery, as recommended by [[[Web-Without-3p-Cookies]]]:
 
   > It is better to approach [these use cases] with replacement technologies
   that are designed-for-purpose and built to respect user privacy.
-  [[?web-without-3p-cookies]]
+  [[?Web-Without-3p-Cookies]]
 
   For example, they might reveal a performance metric for a website directly
   instead of requiring it to be computed from the timing of
@@ -1930,7 +1924,7 @@ people, explanatory information must be provided in the relevant [=context=].
 
 <div class="note">
   In designing new web features that may involve permissions, consider whether a permission is
-  needed and how to make that permission meaningful [[?ADDING-PERMISSIONS]].
+  needed and how to make that permission meaningful [[?Adding-Permissions]].
 
   Past workshops have explored the needs for better permissions on the web:
   <ul>
