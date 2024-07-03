@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en" dir="ltr"><head>
 <meta charset="utf-8">
-<meta name="generator" content="ReSpec 35.0.2">
+<meta name="generator" content="ReSpec 35.1.1">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 span.example-title{text-transform:none}
@@ -769,15 +769,15 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "id": "web-without-3p-cookies"
     }
   },
-  "publishISODate": "2024-05-10T00:00:00.000Z",
-  "generatedSubtitle": "W3C Editor's Draft 10 May 2024"
+  "publishISODate": "2024-07-03T00:00:00.000Z",
+  "generatedSubtitle": "W3C Editor's Draft 03 July 2024"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED"></head>
 <body data-cite="html indexedDB service-workers fingerprinting-guidance url infra" class="h-entry informative"><div class="head">
     <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a></p>
     <h1 id="title" class="title">Privacy Principles</h1> 
-    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2024-05-10">10 May 2024</time></p>
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2024-07-03">03 July 2024</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
@@ -866,7 +866,7 @@ to this document, as section numbers and headings may change.</p>
     
         This document was produced by a group
         operating under the
-        <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent
+        <a href="https://www.w3.org/policies/patent-policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent
           Policy</a>.
       
     
@@ -876,13 +876,13 @@ to this document, as section numbers and headings may change.</p>
           the group; that page also includes
           instructions for disclosing a patent. An individual who has actual
           knowledge of a patent which the individual believes contains
-          <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
+          <a href="https://www.w3.org/policies/patent-policy/#def-essential">Essential Claim(s)</a>
           must disclose the information in accordance with
-          <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+          <a href="https://www.w3.org/policies/patent-policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
         
   </p><p>
                       This document is governed by the
-                      <a id="w3c_process_revision" href="https://www.w3.org/2023/Process-20231103/">03 November 2023 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                      <a id="w3c_process_revision" href="https://www.w3.org/policies/process/20231103/">03 November 2023 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
                     </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#how-this-document-fits-in">How This Document Fits In</a></li><li class="tocline"><a class="tocxref" href="#audience">Audiences for this Document</a></li><li class="tocline"><a class="tocxref" href="#intro"><bdi class="secno">1. </bdi>An Introduction to Privacy on the Web</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#autonomy"><bdi class="secno">1.1 </bdi>Individual Autonomy</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#opt-in-out"><bdi class="secno">1.1.1 </bdi>Opt-in, Consent, Opt-out, Global Controls</a></li><li class="tocline"><a class="tocxref" href="#privacy-labour"><bdi class="secno">1.1.2 </bdi>Privacy Labour</a></li></ol></li><li class="tocline"><a class="tocxref" href="#vulnerability"><bdi class="secno">1.2 </bdi>Vulnerability</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#guardians"><bdi class="secno">1.2.1 </bdi>Guardians</a></li></ol></li><li class="tocline"><a class="tocxref" href="#collective"><bdi class="secno">1.3 </bdi>Collective Governance</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#group-privacy"><bdi class="secno">1.3.1 </bdi>Group Privacy</a></li><li class="tocline"><a class="tocxref" href="#transparency-for-research"><bdi class="secno">1.3.2 </bdi>Transparency and Research</a></li></ol></li><li class="tocline"><a class="tocxref" href="#user-agents"><bdi class="secno">1.4 </bdi>User Agents</a></li><li class="tocline"><a class="tocxref" href="#balancing"><bdi class="secno">1.5 </bdi>Incorporating Different Privacy Principles</a></li></ol></li><li class="tocline"><a class="tocxref" href="#principles-for-privacy-on-the-web"><bdi class="secno">2. </bdi>Principles for Privacy on the Web</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#identity"><bdi class="secno">2.1 </bdi>Identity on the Web</a></li><li class="tocline"><a class="tocxref" href="#data-minimization"><bdi class="secno">2.2 </bdi>Data Minimization</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ancillary-uses"><bdi class="secno">2.2.1 </bdi>Ancillary uses</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#designing-ancillary-apis-with-new-information"><bdi class="secno">2.2.1.1 </bdi>Designing ancillary APIs that provide new information</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#information"><bdi class="secno">2.3 </bdi>Information access</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#unavoidable-information-exposure"><bdi class="secno">2.3.1 </bdi>Unavoidable information exposure</a></li></ol></li><li class="tocline"><a class="tocxref" href="#hl-sensitive-information"><bdi class="secno">2.4 </bdi>Sensitive Information</a></li><li class="tocline"><a class="tocxref" href="#data-rights"><bdi class="secno">2.5 </bdi>Data Rights</a></li><li class="tocline"><a class="tocxref" href="#deidentified-data"><bdi class="secno">2.6 </bdi>De-identified Data</a></li><li class="tocline"><a class="tocxref" href="#collective-privacy"><bdi class="secno">2.7 </bdi>Collective Privacy</a></li><li class="tocline"><a class="tocxref" href="#device-administrators"><bdi class="secno">2.8 </bdi>Device Owners and Administrators</a></li><li class="tocline"><a class="tocxref" href="#protecting-web-users-from-abusive-behaviour"><bdi class="secno">2.9 </bdi>Protecting web users from abusive behaviour</a></li><li class="tocline"><a class="tocxref" href="#purpose-limitation"><bdi class="secno">2.10 </bdi>Purpose limitation</a></li><li class="tocline"><a class="tocxref" href="#transparency"><bdi class="secno">2.11 </bdi>Transparency</a></li><li class="tocline"><a class="tocxref" href="#consent-principles"><bdi class="secno">2.12 </bdi>Consent, Withdrawal of Consent, Opt-Outs, and Objections</a></li><li class="tocline"><a class="tocxref" href="#interruptions"><bdi class="secno">2.13 </bdi>Notifications and Interruptions</a></li><li class="tocline"><a class="tocxref" href="#non-retaliation"><bdi class="secno">2.14 </bdi>Non-Retaliation</a></li><li class="tocline"><a class="tocxref" href="#support-choosing-info"><bdi class="secno">2.15 </bdi>Support Choosing Which Information to Present</a></li></ol></li><li class="tocline"><a class="tocxref" href="#boring-terminology"><bdi class="secno">A. </bdi>Common Concepts</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#people"><bdi class="secno">A.1 </bdi>People</a></li><li class="tocline"><a class="tocxref" href="#context"><bdi class="secno">A.2 </bdi>Contexts</a></li><li class="tocline"><a class="tocxref" href="#parties"><bdi class="secno">A.3 </bdi>Server-Side Actors</a></li><li class="tocline"><a class="tocxref" href="#acting-on-data"><bdi class="secno">A.4 </bdi>Acting on Data</a></li><li class="tocline"><a class="tocxref" href="#recognition"><bdi class="secno">A.5 </bdi>Recognition</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#recognition-types"><bdi class="secno">A.5.1 </bdi>Recognition Types</a></li><li class="tocline"><a class="tocxref" href="#user-agent-recognition"><bdi class="secno">A.5.2 </bdi>User agent awareness of recognition</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#bp-summary"><bdi class="secno">B. </bdi>Principles Summary</a></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">C. </bdi>Conformance</a></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">D. </bdi>Acknowledgements</a></li><li class="tocline"><a class="tocxref" href="#issue-summary"><bdi class="secno">E. </bdi>Issue summary</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">F. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">F.1 </bdi>Informative references</a></li></ol></li></ol></nav>
 
 <section class="introductory" id="how-this-document-fits-in"><div class="header-wrapper"><h2 id="how-this-document-fits-in-0">How This Document Fits In</h2><a class="self-link" href="#how-this-document-fits-in" aria-label="Permalink for this Section"></a></div>
@@ -907,7 +907,7 @@ regulatory regimes.</p>
 background to support the web community in making informed decisions about privacy and in weaving
 privacy into the architecture of the web.</p>
 <p>Few architectural principles are absolute, and privacy is no exception: privacy can come into tension
-with other desirable properties of an ethical architecture, including accessibility or internationalization, 
+with other desirable properties of an ethical architecture, including accessibility or internationalization,
 and when that happens the web community will have to work together to strike the right balance.</p>
 </section>
 
@@ -1693,9 +1693,9 @@ information without breaking additional sites or user experiences.</li>
 
 </section></section><section id="sensitive-information"><div class="header-wrapper"><h3 id="hl-sensitive-information"><bdi class="secno">2.4 </bdi>Sensitive Information</h3><a class="self-link" href="#hl-sensitive-information" aria-label="Permalink for Section 2.4"></a></div><div class="practice principle" data-audiences="websites user-agents api-designers"><a class="marker self-link" href="#principle-sensitive"><bdi lang="en">Principle</bdi></a>: <span class="practicelab" id="principle-sensitive">
     There is broad consensus that some categories of information such as credit card numbers
-    or precise geolocation are sensitive, but system designers should not assume that other 
-    categories of information are therefore <em>not</em> sensitive. Whether information is 
-    considered sensitive can vary depending on a <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-65">person</a>'s circumstances and the <a data-link-type="dfn|abstract-op" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-11">context</a> 
+    or precise geolocation are sensitive, but system designers should not assume that other
+    categories of information are therefore <em>not</em> sensitive. Whether information is
+    considered sensitive can vary depending on a <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-65">person</a>'s circumstances and the <a data-link-type="dfn|abstract-op" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-11">context</a>
     of an interaction, and it can change over time.
   </span>
 
@@ -2449,9 +2449,9 @@ needs.
 </span><span class="audience-label"><span class="audience-user-agents">user agents</span></span></li><li><a class="marker self-link" href="#bp-new-web-apis-should-guard-users-information-at-least-as-well-as-existing-apis-that-are-expected-to-stay-in-the-web-platform"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">New web APIs should guard users' information at least
   as well as existing APIs that are expected to stay in the web platform.</span><span class="audience-label"><span class="audience-api-designers">API designers</span><span class="audience-user-agents">user agents</span></span></li><li><a class="marker self-link" href="#principle-sensitive"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
     There is broad consensus that some categories of information such as credit card numbers
-    or precise geolocation are sensitive, but system designers should not assume that other 
-    categories of information are therefore <em>not</em> sensitive. Whether information is 
-    considered sensitive can vary depending on a <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-139">person</a>'s circumstances and the <a data-link-type="dfn|abstract-op" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-37">context</a> 
+    or precise geolocation are sensitive, but system designers should not assume that other
+    categories of information are therefore <em>not</em> sensitive. Whether information is
+    considered sensitive can vary depending on a <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-139">person</a>'s circumstances and the <a data-link-type="dfn|abstract-op" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-37">context</a>
     of an interaction, and it can change over time.
   </span><span class="audience-label"><span class="audience-websites">websites</span><span class="audience-user-agents">user agents</span><span class="audience-api-designers">API designers</span></span></li><li><a class="marker self-link" href="#respect-data-rights"><bdi lang="en">Principle</bdi></a>: <span class="practicelab">
     <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-140">People</a> have certain rights over <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-59">data</a> that is about themselves, and these rights should
@@ -2575,7 +2575,7 @@ Wendy Seltzer.</p>
     </dd><dt id="bib-convention-108">[Convention-108]</dt><dd>
       <a href="https://rm.coe.int/1680078b37"><cite>Convention for the Protection of Individuals with regard to Automatic Processing of Personal Data</cite></a>.  Council of Europe. URL: <a href="https://rm.coe.int/1680078b37">https://rm.coe.int/1680078b37</a>
     </dd><dt id="bib-credential-management-1">[credential-management-1]</dt><dd>
-      <a href="https://www.w3.org/TR/credential-management-1/"><cite>Credential Management Level 1</cite></a>. Nina Satragno.  W3C. 28 February 2024. W3C Working Draft. URL: <a href="https://www.w3.org/TR/credential-management-1/">https://www.w3.org/TR/credential-management-1/</a>
+      <a href="https://www.w3.org/TR/credential-management-1/"><cite>Credential Management Level 1</cite></a>. Nina Satragno; Marcos Caceres.  W3C. 13 June 2024. W3C Working Draft. URL: <a href="https://www.w3.org/TR/credential-management-1/">https://www.w3.org/TR/credential-management-1/</a>
     </dd><dt id="bib-cssom-view-1">[cssom-view-1]</dt><dd>
       <a href="https://www.w3.org/TR/cssom-view-1/"><cite>CSSOM View Module</cite></a>. Simon Pieters.  W3C. 17 March 2016. W3C Working Draft. URL: <a href="https://www.w3.org/TR/cssom-view-1/">https://www.w3.org/TR/cssom-view-1/</a>
     </dd><dt id="bib-dark-pattern-dark">[Dark-Pattern-Dark]</dt><dd>
