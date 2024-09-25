@@ -1349,8 +1349,8 @@ involved from being identifiable.
 
 Some [=ancillary uses=] don't require their data to be related to a person, but
 the useful aggregations across many people are difficult to design into a web
-API, or they might require new technologies to be invented. API designers have a
-few choices in this situation:
+API, or they might require new technologies to be invented. Some ways API
+designers can handle this situation include:
 
 * Sometimes an API can [=de-identify=] the data instead, but this is difficult
   if a web page has any input into the data that's collected.
@@ -1361,9 +1361,9 @@ few choices in this situation:
   <a href="#unavoidable-information-exposure">unavoidably</a> revealed
   by <a data-cite="dom#interface-event">DOM event</a> timing.
 * [=User agents=] can ask their users' permission to enable this class of API.
-  To reduce [=privacy labor=], a [=user agent=] could use a first-run dialog to
-  ask the user whether they generally support sharing this data, rather than
-  asking for each use of the APIs.
+  This risks increasing [=privacy labor=], but as an example, a [=user agent=]
+  could use a first-run dialog to ask the user whether they generally support
+  sharing this data, rather than asking for each use of the APIs.
 
 If an API had to make one of these choices, and then something else about the
 API needs to change, designers should consider replacing the whole API with one
