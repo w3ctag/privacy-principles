@@ -1221,6 +1221,14 @@ Similarly, a [=user agent=] can help its [=user=] by preventing or supporting
 and adjust their [=partitions=] to prevent or support [=recognition=] across those intra-site [=contexts=]
 according to their [=users=]' wishes.
 
+<aside class="example" id="example-identity-paywall-conflict">
+Some websites want to offer users a few free visits before asking them to pay for use of the site.
+If the site tries to implement this by [=recognizing=] the user across visits, and a [=user agent=]
+helps its [=user=] by preventing this [=recognition=], the site's business model can break.
+However, a mechanism that only proves how many times the user has visited the site can be compatible
+with this principle if it doesn't reveal that the same [=identity=] is visiting.
+</aside>
+
 ## Data Minimization {#data-minimization}
 
 <div class="practice" data-audiences="websites user-agents"><span class="practicelab">[=Sites=], [=user agents=], and other [=actors=]
@@ -2243,7 +2251,7 @@ A <dfn data-lt="data processor">service provider</dfn> or [=data processor=]:
 
 ## Recognition {#recognition}
 
-<dfn data-lt="recognize|recognized">Recognition</dfn> is the act of realising that a given [=identity=]
+<dfn data-lt="recognize|recognized|recognizing">Recognition</dfn> is the act of realising that a given [=identity=]
 corresponds to the same [=person=] as another [=identity=] which may have been
 observed either in another [=context=], or in the same [=context=] but at a
 different time. [=Recognition=] can be probabilistic, if someone realises there's
