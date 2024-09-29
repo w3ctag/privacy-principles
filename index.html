@@ -30,24 +30,37 @@
         'required-sections': false,
       },
       preProcess: [
-        function checkAudiences() {
+      function checkAudiences(_conf, _doc, utils) {
           // Ensure every principle has a data-audiences attribute with a
           // space-separated list of the target audiences of that principle.
-          let errors = Array.from(document.querySelectorAll('div.practice')
-            ).flatMap(practice => {
-              const audiences = practice.dataset.audiences?.split(/\s+/) ?? [];
-              if (audiences.length === 0) {
-                return `Missing data-audiences attribute in principle "${practice.textContent}".`;
-              }
-              const unknownAudiences = audiences.filter(
-                audience => !['websites', 'user-agents', 'api-designers'].includes(audience));
-              if (unknownAudiences.length > 0) {
-                return `Unknown audience "${unknownAudiences.join(', ')}" in principle "${practice.textContent}".`;
-              }
-              return [];
-            });
-          if (errors.length !== 0) {
-            throw new Error(errors.join('\n'));
+          for (const practice of document.querySelectorAll("div.practice")) {
+            const audiences = practice.dataset.audiences?.split(/\s+/) ?? [];
+            if (audiences.length === 0) {
+              utils.showError(
+                `Missing data-audiences attribute in principle.`,
+                {
+                  title: "Missing data-audiences attribute.",
+                  elements: [practice],
+                  hint: 'Set it to a space-separated list of "websites", "user-agents", or "api-designers".',
+                }
+              );
+              continue;
+            }
+            const unknownAudiences = audiences.filter(
+              (audience) =>
+                !["websites", "user-agents", "api-designers"].includes(audience)
+            );
+            if (unknownAudiences.length > 0) {
+              const list = new Intl.ListFormat().format(unknownAudiences);
+              utils.showError(
+                `Unknown audience "${list}" in principle.`,
+                {
+                  title: "Unknown audience in data-audience attribute.",
+                  elements: [practice],
+                  hint: `Remove ${list}.`,
+                }
+              );
+            }
           }
         }
       ],
