@@ -69,14 +69,31 @@
           // Remove the nested Best Practices Summary header.
           document.querySelector('#best-practices-summary > div.header-wrapper').remove();
           document.querySelector('ol:not(:has(ol)):has(a[href="#best-practices-summary"])').remove();
-          // relabel each principle, and lose the numbering, delabel principle summary
-          for (let label of document.querySelectorAll('div.practice > a.marker > bdi, #best-practices-summary > ul > li > a.marker > bdi')) {
-            label.textContent = 'Principle';
+          // Renumber principles by their sections.
+          const principleSections = new Set();
+          for (let label of document.querySelectorAll('div.practice > a.marker > bdi')) {
+            principleSections.add(label.closest('section:has(bdi.secno)'));
           }
-          // I hate markdown
+          for (const section of principleSections) {
+            const principleLabels = section.querySelectorAll('div.practice > a.marker > bdi');
+            let index = 1;
+            for (const label of principleLabels) {
+              let labelText = `Principle ${section.querySelector('bdi.secno').textContent.trim()}`
+              if (principleLabels.length > 1) {
+                labelText += `.${index}`;
+                index++;
+              }
+              label.textContent = labelText;
+              const linkTarget = label.closest('div').querySelector('span.practicelab').id;
+              document.querySelector(`#best-practices-summary > ul > li > a.marker[href='#${linkTarget}'] > bdi`)
+                .textContent = labelText;
+            }
+          }
+          // Remove empty <p>s.
           for (let p of document.querySelectorAll('div.practice > p')) {
             if (/^\s*$/.test(p.textContent)) p.remove();
           }
+          // Add audience chips.
           const audienceNames = {
             websites: 'websites',
             'user-agents': 'user agents',
