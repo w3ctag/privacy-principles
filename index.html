@@ -66,8 +66,11 @@
       ],
       postProcess: [
         () => {
+          // Remove the nested Best Practices Summary header.
+          document.querySelector('#best-practices-summary > div.header-wrapper').remove();
+          document.querySelector('ol:not(:has(ol)):has(a[href="#best-practices-summary"])').remove();
           // relabel each principle, and lose the numbering, delabel principle summary
-          for (let label of document.querySelectorAll('div.practice > a.marker > bdi, #bp-summary > ul > li > a.marker > bdi')) {
+          for (let label of document.querySelectorAll('div.practice > a.marker > bdi, #best-practices-summary > ul > li > a.marker > bdi')) {
             label.textContent = 'Principle';
           }
           // I hate markdown
@@ -99,9 +102,6 @@
               if (summary) summary.parentNode.append(audSum);
             });
             prac.append(audDiv);
-          }
-          for (let el of document.querySelectorAll('#bp-summary h2, #toc a[href="#bp-summary"]')) {
-            el.innerHTML = el.innerHTML.replace('Best Practices Summary', 'Principles Summary');
           }
         }
       ],
@@ -538,6 +538,14 @@
     .audience-websites { background-color: gold; }
     .audience-user-agents { background-color: mediumspringgreen; }
     .audience-api-designers { background-color: mistyrose; }
+
+    ul:has(#include-websites) li { list-style:none }
+
+    /* Show summary principles if their audience is selected. */
+    #bp-summary li:has(.practicelab) { display: none }
+    #bp-summary ul:has(#include-websites:checked) + #best-practices-summary li:has(.audience-websites) { display: list-item; }
+    #bp-summary ul:has(#include-user-agents:checked) + #best-practices-summary li:has(.audience-user-agents) { display: list-item; }
+    #bp-summary ul:has(#include-api-designers:checked) + #best-practices-summary li:has(.audience-api-designers) { display: list-item; }
   </style>
 </head>
 <body data-cite="html indexedDB service-workers fingerprinting-guidance url infra">
@@ -624,6 +632,21 @@ to build systems that turn out to be unacceptable to users.
 Because this document guides privacy reviews of new standards, authors of web
 specifications should consult it early in the design to make sure their feature
 passes the review smoothly.
+
+</section>
+
+<section class="introductory" id="bp-summary">
+
+## List of Principles {#principle-list}
+
+This section is a list of all the privacy principles,
+with links to their longer explanations in the rest of the document.
+
+Which audiences should be included?
+
+* <label><input type="checkbox" checked id="include-websites"> Websites</label>
+* <label><input type="checkbox" checked id="include-user-agents"> User Agents</label>
+* <label><input type="checkbox" checked id="include-api-designers"> API Designers</label>
 
 </section>
 
@@ -2350,8 +2373,6 @@ website, it should make that active identity clear to the user (e.g. if the
 user logged into the site via an API like [[[credential-management-1]]]).
 
 </section>
-
-<section class="appendix" id="bp-summary"></section>
 
 <section class="appendix">
 
