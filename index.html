@@ -68,6 +68,8 @@
         () => {
           // Remove the nested Best Practices Summary header.
           document.querySelector('#best-practices-summary > div.header-wrapper').remove();
+          const bpSummarySection = document.querySelector('#best-practices-summary');
+          bpSummarySection.replaceWith(...bpSummarySection.children);
           document.querySelector('ol:not(:has(ol)):has(a[href="#best-practices-summary"])').remove();
           // Renumber principles by their sections.
           const principleSections = new Set();
@@ -85,7 +87,7 @@
               }
               label.textContent = labelText;
               const linkTarget = label.closest('div').querySelector('span.practicelab').id;
-              document.querySelector(`#best-practices-summary > ul > li > a.marker[href='#${linkTarget}'] > bdi`)
+              document.querySelector(`#bp-summary > ul > li > a.marker[href='#${linkTarget}'] > bdi`)
                 .textContent = labelText;
             }
           }
@@ -560,9 +562,9 @@
 
     /* Show summary principles if their audience is selected. */
     #bp-summary li:has(.practicelab) { display: none }
-    #bp-summary ul:has(#include-websites:checked) + #best-practices-summary li:has(.audience-websites) { display: list-item; }
-    #bp-summary ul:has(#include-user-agents:checked) + #best-practices-summary li:has(.audience-user-agents) { display: list-item; }
-    #bp-summary ul:has(#include-api-designers:checked) + #best-practices-summary li:has(.audience-api-designers) { display: list-item; }
+    #bp-summary ul:has(#include-websites:checked) + ul li:has(.audience-websites) { display: list-item; }
+    #bp-summary ul:has(#include-user-agents:checked) + ul li:has(.audience-user-agents) { display: list-item; }
+    #bp-summary ul:has(#include-api-designers:checked) + ul li:has(.audience-api-designers) { display: list-item; }
   </style>
 </head>
 <body data-cite="html indexedDB service-workers fingerprinting-guidance url infra">
