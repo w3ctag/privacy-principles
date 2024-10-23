@@ -1681,8 +1681,8 @@ involved from being identifiable.</p>
 
 <p>Some <a data-link-type="dfn|abstract-op" href="#dfn-ancillary-use" class="internalDFN" id="ref-for-dfn-ancillary-use-3">ancillary uses</a> don't require their data to be related to a person, but
 the useful aggregations across many people are difficult to design into a web
-API, or they might require new technologies to be invented. API designers have a
-few choices in this situation:</p>
+API, or they might require new technologies to be invented. Some ways API
+designers can handle this situation include:</p>
 <ul>
 <li>Sometimes an API can <a data-link-type="dfn|abstract-op" href="#dfn-de-identify" class="internalDFN" id="ref-for-dfn-de-identify-3">de-identify</a> the data instead, but this is difficult
 if a web page has any input into the data that's collected.</li>
@@ -1692,9 +1692,9 @@ use a certain proxy, but the fact that they click slowly is already
 <a href="#unavoidable-information-exposure">unavoidably</a> revealed
 by <a href="https://dom.spec.whatwg.org/#interface-event">DOM event</a> timing.</li>
 <li><a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">User agents</a> can ask their users' permission to enable this class of API.
-To reduce <a data-link-type="dfn|abstract-op" href="#dfn-privacy-labor" class="internalDFN" id="ref-for-dfn-privacy-labor-5">privacy labor</a>, a <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> could use a first-run dialog to
-ask the user whether they generally support sharing this data, rather than
-asking for each use of the APIs.</li>
+This risks increasing <a data-link-type="dfn|abstract-op" href="#dfn-privacy-labor" class="internalDFN" id="ref-for-dfn-privacy-labor-5">privacy labor</a>, but as an example, a <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a>
+could use a first-run dialog to ask the user whether they generally support
+sharing this data, rather than asking for each use of the APIs.</li>
 </ul>
 <p>If an API had to make one of these choices, and then something else about the
 API needs to change, designers should consider replacing the whole API with one
