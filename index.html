@@ -289,12 +289,6 @@
           href: 'https://www.cambridge.org/core/books/governing-privacy-in-knowledge-commons/FA569455669E2CECA25DF0244C62C1A1',
           publisher: 'Cambridge University Press',
         },
-        'GPC': {
-          title: 'Global Privacy Control (GPC)',
-          authors: ['Robin Berjon', 'Sebastian Zimmeck', 'Ashkan Soltani', 'David Harbage', 'Peter Snyder'],
-          href: 'https://globalprivacycontrol.github.io/gpc-spec/',
-          publisher: 'W3C',
-        },
         'IAD': {
           title: 'Understanding Institutional Diversity',
           authors: ['Elinor Ostrom'],
@@ -366,8 +360,9 @@
         },
         'OECD-Guidelines': {
           title: 'OECD Guidelines on the Protection of Privacy and Transborder Flows of Personal Data',
-          href: 'https://www.oecd.org/sti/ieconomy/oecdguidelinesontheprotectionofprivacyandtransborderflowsofpersonaldata.htm',
-          publisher: 'OECD',
+          href: 'https://doi.org/10.1787/9789264196391-en',
+          date: '2002',
+          publisher: 'OECD Publishing',
         },
         'PEN-Harassment': {
           href: 'https://onlineharassmentfieldmanual.pen.org/defining-online-harassment-a-glossary-of-terms/',
@@ -599,8 +594,8 @@ This document is considered stable by the TAG and is ready for wide review.
 
 ## How This Document Fits In
 
-This document elaborates on the [privacy principle](https://www.w3.org/2001/tag/doc/ethical-web-principles/#privacy)
-from the [[[Ethical-Web]]]: "Security and privacy are essential." While it focuses on privacy, this should
+This document elaborates on the <a data-cite="ethical-web-principles#privacy">privacy principle</a>
+from the [[[ethical-web-principles]]]: "Security and privacy are essential." While it focuses on privacy, this should
 not be taken as an indication that privacy is always more important than other ethical web principles, and
 this document doesn't address how to balance the different ethical web principles if they come into conflict.
 
@@ -679,7 +674,7 @@ is specifically about [=privacy=] as it applies to the web, it focuses on privac
 information flows.
 
 The web is for everyone ([[?For-Everyone]]). It should be "<i>a platform that helps people and provides a
-net positive social benefit</i>" ([[?ETHICAL-WEB]]). One of the ways in which the
+net positive social benefit</i>" ([[?ethical-web-principles]]). One of the ways in which the
 web serves people is by seeking to protect them from surveillance and the types of manipulation that data can
 enable.
 
@@ -720,7 +715,7 @@ evaluating a privacy situation is best done by clearly identifying:
 There are <em>always</em> privacy principles at work. Some sets of principles may be more
 permissive, but that does not make them neutral. All privacy principles have an impact on
 [=people=] and we must therefore determine which principles best align with ethical web values in
-web [=contexts=] ([[?ETHICAL-WEB]], [[?Why-Privacy]]).
+web [=contexts=] ([[?ethical-web-principles]], [[?Why-Privacy]]).
 
 <dfn>Information flows</dfn> are information exchanged or processed by
 [=actors=]. A person's privacy can be harmed both by their information flowing from them to
@@ -803,8 +798,8 @@ the [=person=]'s rights) with every interaction that the [=person=] has with a s
 instance, the [=person=] may be objecting to [=processing=] based on legitimate interest,
 withdrawing [=consent=] to specific [=purposes=], or requesting that their data not be sold or
 shared.) The [=user=] is effectively delegating the expression of their [=opt-out=] to their
-[=user agent=], which helps rectify [=automation asymmetry=]. The <em>Global Privacy
-Control</em> [[?GPC]] is a good example of a [=global opt-out=] mechanism.
+[=user agent=], which helps rectify [=automation asymmetry=]. The [[[?gpc-spec]]] is a good
+example of a [=global opt-out=] mechanism.
 
 Under this model, a [=global opt-out=] signal should not be understood as a decision that a
 [=person=] made a while ago when they flipped a setting or chose to use a specific
@@ -1119,10 +1114,10 @@ off between principles.
 Once one is choosing between different designs at the Pareto frontier, the choice of which
 privacy principles to prefer is complex and depends heavily on the details of each
 particular situation. Note that people's privacy can also be in tension
-with non-privacy concerns. As discussed in the [[[Ethical-Web]]], "it is important to
+with non-privacy concerns. As discussed in the [[[ethical-web-principles]]], "it is important to
 consider the context in which a particular technology is being applied, the expected
 audience(s) for the technology, who the technology benefits and who it may disadvantage,
-and any power dynamics involved" ([[Ethical-Web]]). Despite this complexity, there is a basic ground
+and any power dynamics involved" ([[ethical-web-principles]]). Despite this complexity, there is a basic ground
 rule to follow:
 
 <div class="practice" data-audiences="websites user-agents">
