@@ -427,19 +427,6 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "publisher": "Cambridge University Press",
       "id": "gkc-privacy"
     },
-    "GPC": {
-      "title": "Global Privacy Control (GPC)",
-      "authors": [
-        "Robin Berjon",
-        "Sebastian Zimmeck",
-        "Ashkan Soltani",
-        "David Harbage",
-        "Peter Snyder"
-      ],
-      "href": "https://globalprivacycontrol.github.io/gpc-spec/",
-      "publisher": "W3C",
-      "id": "gpc"
-    },
     "IAD": {
       "title": "Understanding Institutional Diversity",
       "authors": [
@@ -551,8 +538,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     },
     "OECD-Guidelines": {
       "title": "OECD Guidelines on the Protection of Privacy and Transborder Flows of Personal Data",
-      "href": "https://www.oecd.org/sti/ieconomy/oecdguidelinesontheprotectionofprivacyandtransborderflowsofpersonaldata.htm",
-      "publisher": "OECD",
+      "href": "https://doi.org/10.1787/9789264196391-en",
+      "date": "2002",
+      "publisher": "OECD Publishing",
       "id": "oecd-guidelines"
     },
     "PEN-Harassment": {
@@ -786,15 +774,15 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "id": "web-without-3p-cookies"
     }
   },
-  "publishISODate": "2024-11-13T00:00:00.000Z",
-  "generatedSubtitle": "W3C Editor's Draft 13 November 2024"
+  "publishISODate": "2024-11-14T00:00:00.000Z",
+  "generatedSubtitle": "W3C Editor's Draft 14 November 2024"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED"></head>
 <body data-cite="html indexedDB service-workers fingerprinting-guidance url infra" class="h-entry informative"><div class="head">
     <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a></p>
     <h1 id="title" class="title">Privacy Principles</h1> 
-    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2024-11-13">13 November 2024</time></p>
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2024-11-14">14 November 2024</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
@@ -900,13 +888,13 @@ to this document, as section numbers and headings may change.</p>
   </p><p>
                       This document is governed by the
                       <a id="w3c_process_revision" href="https://www.w3.org/policies/process/20231103/">03 November 2023 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
-                    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#how-this-document-fits-in">How This Document Fits In</a></li><li class="tocline"><a class="tocxref" href="#audience">Audiences for this Document</a></li><li class="tocline"><a class="tocxref" href="#principle-list">List of Principles</a></li><li class="tocline"><a class="tocxref" href="#intro"><bdi class="secno">1. </bdi>An Introduction to Privacy on the Web</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#autonomy"><bdi class="secno">1.1 </bdi>Individual Autonomy</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#opt-in-out"><bdi class="secno">1.1.1 </bdi>Opt-in, Consent, Opt-out, Global Controls</a></li><li class="tocline"><a class="tocxref" href="#privacy-labour"><bdi class="secno">1.1.2 </bdi>Privacy Labour</a></li></ol></li><li class="tocline"><a class="tocxref" href="#vulnerability"><bdi class="secno">1.2 </bdi>Vulnerability</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#guardians"><bdi class="secno">1.2.1 </bdi>Guardians</a></li></ol></li><li class="tocline"><a class="tocxref" href="#collective"><bdi class="secno">1.3 </bdi>Collective Governance</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#group-privacy"><bdi class="secno">1.3.1 </bdi>Group Privacy</a></li><li class="tocline"><a class="tocxref" href="#transparency-for-research"><bdi class="secno">1.3.2 </bdi>Transparency and Research</a></li></ol></li><li class="tocline"><a class="tocxref" href="#user-agents"><bdi class="secno">1.4 </bdi>User Agents</a></li><li class="tocline"><a class="tocxref" href="#balancing"><bdi class="secno">1.5 </bdi>Incorporating Different Privacy Principles</a></li></ol></li><li class="tocline"><a class="tocxref" href="#principles-for-privacy-on-the-web"><bdi class="secno">2. </bdi>Principles for Privacy on the Web</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#identity"><bdi class="secno">2.1 </bdi>Identity on the Web</a></li><li class="tocline"><a class="tocxref" href="#data-minimization"><bdi class="secno">2.2 </bdi>Data Minimization</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ancillary-uses"><bdi class="secno">2.2.1 </bdi>Ancillary uses</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#designing-ancillary-apis-with-new-information"><bdi class="secno">2.2.1.1 </bdi>Designing ancillary APIs that provide new information</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#information"><bdi class="secno">2.3 </bdi>Information access</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#unavoidable-information-exposure"><bdi class="secno">2.3.1 </bdi>Unavoidable information exposure</a></li></ol></li><li class="tocline"><a class="tocxref" href="#hl-sensitive-information"><bdi class="secno">2.4 </bdi>Sensitive Information</a></li><li class="tocline"><a class="tocxref" href="#data-rights"><bdi class="secno">2.5 </bdi>Data Rights</a></li><li class="tocline"><a class="tocxref" href="#deidentified-data"><bdi class="secno">2.6 </bdi>De-identified Data</a></li><li class="tocline"><a class="tocxref" href="#collective-privacy"><bdi class="secno">2.7 </bdi>Collective Privacy</a></li><li class="tocline"><a class="tocxref" href="#device-administrators"><bdi class="secno">2.8 </bdi>Device Owners and Administrators</a></li><li class="tocline"><a class="tocxref" href="#protecting-web-users-from-abusive-behaviour"><bdi class="secno">2.9 </bdi>Protecting web users from abusive behaviour</a></li><li class="tocline"><a class="tocxref" href="#purpose-limitation"><bdi class="secno">2.10 </bdi>Purpose limitation</a></li><li class="tocline"><a class="tocxref" href="#transparency"><bdi class="secno">2.11 </bdi>Transparency</a></li><li class="tocline"><a class="tocxref" href="#consent-principles"><bdi class="secno">2.12 </bdi>Consent, Withdrawal of Consent, Opt-Outs, and Objections</a></li><li class="tocline"><a class="tocxref" href="#interruptions"><bdi class="secno">2.13 </bdi>Notifications and Interruptions</a></li><li class="tocline"><a class="tocxref" href="#non-retaliation"><bdi class="secno">2.14 </bdi>Non-Retaliation</a></li><li class="tocline"><a class="tocxref" href="#support-choosing-info"><bdi class="secno">2.15 </bdi>Support Choosing Which Information to Present</a></li></ol></li><li class="tocline"><a class="tocxref" href="#boring-terminology"><bdi class="secno">A. </bdi>Common Concepts</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#people"><bdi class="secno">A.1 </bdi>People</a></li><li class="tocline"><a class="tocxref" href="#context"><bdi class="secno">A.2 </bdi>Contexts</a></li><li class="tocline"><a class="tocxref" href="#parties"><bdi class="secno">A.3 </bdi>Server-Side Actors</a></li><li class="tocline"><a class="tocxref" href="#acting-on-data"><bdi class="secno">A.4 </bdi>Acting on Data</a></li><li class="tocline"><a class="tocxref" href="#recognition"><bdi class="secno">A.5 </bdi>Recognition</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#recognition-types"><bdi class="secno">A.5.1 </bdi>Recognition Types</a></li><li class="tocline"><a class="tocxref" href="#user-agent-recognition"><bdi class="secno">A.5.2 </bdi>User agent awareness of recognition</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">B. </bdi>Conformance</a></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">C. </bdi>Acknowledgements</a></li><li class="tocline"><a class="tocxref" href="#issue-summary"><bdi class="secno">D. </bdi>Issue summary</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">E. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">E.1 </bdi>Informative references</a></li></ol></li></ol></nav>
+                    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#how-this-document-fits-in">How This Document Fits In</a></li><li class="tocline"><a class="tocxref" href="#audience">Audiences for this Document</a></li><li class="tocline"><a class="tocxref" href="#principle-list">List of Principles</a></li><li class="tocline"><a class="tocxref" href="#intro"><bdi class="secno">1. </bdi>An Introduction to Privacy on the Web</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#autonomy"><bdi class="secno">1.1 </bdi>Individual Autonomy</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#opt-in-out"><bdi class="secno">1.1.1 </bdi>Opt-in, Consent, Opt-out, Global Controls</a></li><li class="tocline"><a class="tocxref" href="#privacy-labor"><bdi class="secno">1.1.2 </bdi>Privacy Labor</a></li></ol></li><li class="tocline"><a class="tocxref" href="#vulnerability"><bdi class="secno">1.2 </bdi>Vulnerability</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#guardians"><bdi class="secno">1.2.1 </bdi>Guardians</a></li></ol></li><li class="tocline"><a class="tocxref" href="#collective"><bdi class="secno">1.3 </bdi>Collective Governance</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#group-privacy"><bdi class="secno">1.3.1 </bdi>Group Privacy</a></li><li class="tocline"><a class="tocxref" href="#transparency-for-research"><bdi class="secno">1.3.2 </bdi>Transparency and Research</a></li></ol></li><li class="tocline"><a class="tocxref" href="#user-agents"><bdi class="secno">1.4 </bdi>User Agents</a></li><li class="tocline"><a class="tocxref" href="#balancing"><bdi class="secno">1.5 </bdi>Incorporating Different Privacy Principles</a></li></ol></li><li class="tocline"><a class="tocxref" href="#principles-for-privacy-on-the-web"><bdi class="secno">2. </bdi>Principles for Privacy on the Web</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#identity"><bdi class="secno">2.1 </bdi>Identity on the Web</a></li><li class="tocline"><a class="tocxref" href="#data-minimization"><bdi class="secno">2.2 </bdi>Data Minimization</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ancillary-uses"><bdi class="secno">2.2.1 </bdi>Ancillary uses</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#designing-ancillary-apis-with-new-information"><bdi class="secno">2.2.1.1 </bdi>Designing ancillary APIs that provide new information</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#information"><bdi class="secno">2.3 </bdi>Information access</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#unavoidable-information-exposure"><bdi class="secno">2.3.1 </bdi>Unavoidable information exposure</a></li></ol></li><li class="tocline"><a class="tocxref" href="#hl-sensitive-information"><bdi class="secno">2.4 </bdi>Sensitive Information</a></li><li class="tocline"><a class="tocxref" href="#data-rights"><bdi class="secno">2.5 </bdi>Data Rights</a></li><li class="tocline"><a class="tocxref" href="#deidentified-data"><bdi class="secno">2.6 </bdi>De-identified Data</a></li><li class="tocline"><a class="tocxref" href="#collective-privacy"><bdi class="secno">2.7 </bdi>Collective Privacy</a></li><li class="tocline"><a class="tocxref" href="#device-administrators"><bdi class="secno">2.8 </bdi>Device Owners and Administrators</a></li><li class="tocline"><a class="tocxref" href="#protecting-web-users-from-abusive-behaviour"><bdi class="secno">2.9 </bdi>Protecting web users from abusive behaviour</a></li><li class="tocline"><a class="tocxref" href="#purpose-limitation"><bdi class="secno">2.10 </bdi>Purpose limitation</a></li><li class="tocline"><a class="tocxref" href="#transparency"><bdi class="secno">2.11 </bdi>Transparency</a></li><li class="tocline"><a class="tocxref" href="#consent-principles"><bdi class="secno">2.12 </bdi>Consent, Withdrawal of Consent, Opt-Outs, and Objections</a></li><li class="tocline"><a class="tocxref" href="#interruptions"><bdi class="secno">2.13 </bdi>Notifications and Interruptions</a></li><li class="tocline"><a class="tocxref" href="#non-retaliation"><bdi class="secno">2.14 </bdi>Non-Retaliation</a></li><li class="tocline"><a class="tocxref" href="#support-choosing-info"><bdi class="secno">2.15 </bdi>Support Choosing Which Information to Present</a></li></ol></li><li class="tocline"><a class="tocxref" href="#boring-terminology"><bdi class="secno">A. </bdi>Common Concepts</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#people"><bdi class="secno">A.1 </bdi>People</a></li><li class="tocline"><a class="tocxref" href="#context"><bdi class="secno">A.2 </bdi>Contexts</a></li><li class="tocline"><a class="tocxref" href="#parties"><bdi class="secno">A.3 </bdi>Server-Side Actors</a></li><li class="tocline"><a class="tocxref" href="#acting-on-data"><bdi class="secno">A.4 </bdi>Acting on Data</a></li><li class="tocline"><a class="tocxref" href="#recognition"><bdi class="secno">A.5 </bdi>Recognition</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#recognition-types"><bdi class="secno">A.5.1 </bdi>Recognition Types</a></li><li class="tocline"><a class="tocxref" href="#user-agent-recognition"><bdi class="secno">A.5.2 </bdi>User agent awareness of recognition</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">B. </bdi>Conformance</a></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">C. </bdi>Acknowledgements</a></li><li class="tocline"><a class="tocxref" href="#issue-summary"><bdi class="secno">D. </bdi>Issue summary</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">E. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">E.1 </bdi>Informative references</a></li></ol></li></ol></nav>
 
 <section class="introductory" id="how-this-document-fits-in"><div class="header-wrapper"><h2 id="how-this-document-fits-in-0">How This Document Fits In</h2><a class="self-link" href="#how-this-document-fits-in" aria-label="Permalink for this Section"></a></div>
 
 
-<p>This document elaborates on the <a href="https://www.w3.org/2001/tag/doc/ethical-web-principles/#privacy">privacy principle</a>
-from the <cite><a data-matched-text="[[[Ethical-Web]]]" href="https://www.w3.org/2001/tag/doc/ethical-web-principles/">W3C TAG Ethical Web Principles</a></cite>: "Security and privacy are essential." While it focuses on privacy, this should
+<p>This document elaborates on the <a href="https://www.w3.org/TR/ethical-web-principles/#privacy">privacy principle</a>
+from the <cite><a data-matched-text="[[[ethical-web-principles]]]" href="https://www.w3.org/TR/ethical-web-principles/">Ethical Web Principles</a></cite>: "Security and privacy are essential." While it focuses on privacy, this should
 not be taken as an indication that privacy is always more important than other ethical web principles, and
 this document doesn't address how to balance the different ethical web principles if they come into conflict.</p>
 <p>Privacy on the web is primarily regulated by two forces: the architectural capabilities that the web
@@ -1059,7 +1047,7 @@ must first define some terms and explain what we mean by privacy.</p>
 is specifically about <a data-link-type="dfn|abstract-op" href="#dfn-privacy" class="internalDFN" id="ref-for-dfn-privacy-1">privacy</a> as it applies to the web, it focuses on privacy with respect to
 information flows.</p>
 <p>The web is for everyone ([<cite><a class="bibref" data-link-type="biblio" href="#bib-for-everyone" title="This Is For Everyone">For-Everyone</a></cite>]). It should be "<i>a platform that helps people and provides a
-net positive social benefit</i>" ([<cite><a class="bibref" data-link-type="biblio" href="#bib-ethical-web" title="W3C TAG Ethical Web Principles">ETHICAL-WEB</a></cite>]). One of the ways in which the
+net positive social benefit</i>" ([<cite><a class="bibref" data-link-type="biblio" href="#bib-ethical-web-principles" title="Ethical Web Principles">ethical-web-principles</a></cite>]). One of the ways in which the
 web serves people is by seeking to protect them from surveillance and the types of manipulation that data can
 enable.</p>
 <p>Information can be used to predict and to influence people, as well as to design online
@@ -1095,7 +1083,7 @@ of the <a data-link-type="dfn|abstract-op" href="#dfn-information-flows" class="
 <p>There are <em>always</em> privacy principles at work. Some sets of principles may be more
 permissive, but that does not make them neutral. All privacy principles have an impact on
 <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-17">people</a> and we must therefore determine which principles best align with ethical web values in
-web <a data-link-type="dfn|abstract-op" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-5">contexts</a> ([<cite><a class="bibref" data-link-type="biblio" href="#bib-ethical-web" title="W3C TAG Ethical Web Principles">ETHICAL-WEB</a></cite>], [<cite><a class="bibref" data-link-type="biblio" href="#bib-why-privacy" title="Why Privacy Matter">Why-Privacy</a></cite>]).</p>
+web <a data-link-type="dfn|abstract-op" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-5">contexts</a> ([<cite><a class="bibref" data-link-type="biblio" href="#bib-ethical-web-principles" title="Ethical Web Principles">ethical-web-principles</a></cite>], [<cite><a class="bibref" data-link-type="biblio" href="#bib-why-privacy" title="Why Privacy Matter">Why-Privacy</a></cite>]).</p>
 <p><dfn data-plurals="information flow" id="dfn-information-flows" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Information flows</dfn> are information exchanged or processed by
 <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-16">actors</a>. A person's privacy can be harmed both by their information flowing from them to
 other actors and by information flowing toward them. Examples of the latter include:
@@ -1143,7 +1131,7 @@ that decrease this number of <a data-link-type="dfn|abstract-op" href="#dfn-purp
 <dfn data-lt="opt out|opt-out" data-plurals="opt-outs" id="dfn-opt-out" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">opt-out</dfn>.</p>
 <p>When deployed thoughtfully, these mechanisms can improve <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-23">people</a>'s <a data-link-type="dfn|abstract-op" href="#dfn-autonomous" class="internalDFN" id="ref-for-dfn-autonomous-6">autonomy</a>. Often,
 however, they are used as a way to avoid putting in the difficult work of deciding which
-types of <a data-link-type="dfn|abstract-op" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-10">processing</a> are <a data-link-type="dfn|abstract-op" href="#dfn-appropriately" class="internalDFN" id="ref-for-dfn-appropriately-2">appropriate</a> and which are not, offloading <a data-link-type="dfn|abstract-op" href="#dfn-privacy-labor" class="internalDFN" id="ref-for-dfn-privacy-labor-1">privacy labour</a>
+types of <a data-link-type="dfn|abstract-op" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-10">processing</a> are <a data-link-type="dfn|abstract-op" href="#dfn-appropriately" class="internalDFN" id="ref-for-dfn-appropriately-2">appropriate</a> and which are not, offloading <a data-link-type="dfn|abstract-op" href="#dfn-labor" class="internalDFN" id="ref-for-dfn-labor-1">privacy labor</a>
 to the people using a system.</p>
 <p><a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-24">People</a> should be able to <a data-link-type="dfn|abstract-op" href="#dfn-opt-in" class="internalDFN" id="ref-for-dfn-opt-in-3">consent</a> to data sharing that would
 otherwise be restricted, such as granting access to their pictures or geolocation.
@@ -1164,8 +1152,8 @@ the <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDF
 instance, the <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-28">person</a> may be objecting to <a data-link-type="dfn|abstract-op" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-11">processing</a> based on legitimate interest,
 withdrawing <a data-link-type="dfn|abstract-op" href="#dfn-opt-in" class="internalDFN" id="ref-for-dfn-opt-in-7">consent</a> to specific <a data-link-type="dfn|abstract-op" href="#dfn-purpose" class="internalDFN" id="ref-for-dfn-purpose-4">purposes</a>, or requesting that their data not be sold or
 shared.) The <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-29">user</a> is effectively delegating the expression of their <a data-link-type="dfn|abstract-op" href="#dfn-opt-out" class="internalDFN" id="ref-for-dfn-opt-out-3">opt-out</a> to their
-<a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a>, which helps rectify <a data-link-type="dfn|abstract-op" href="#dfn-automation-asymmetry" class="internalDFN" id="ref-for-dfn-automation-asymmetry-1">automation asymmetry</a>. The <em>Global Privacy
-Control</em> [<cite><a class="bibref" data-link-type="biblio" href="#bib-gpc" title="Global Privacy Control (GPC)">GPC</a></cite>] is a good example of a <a data-link-type="dfn|abstract-op" href="#dfn-global-opt-out" class="internalDFN" id="ref-for-dfn-global-opt-out-2">global opt-out</a> mechanism.</p>
+<a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a>, which helps rectify <a data-link-type="dfn|abstract-op" href="#dfn-automation-asymmetry" class="internalDFN" id="ref-for-dfn-automation-asymmetry-1">automation asymmetry</a>. The <cite><a data-matched-text="[[[?gpc-spec]]]" href="https://privacycg.github.io/gpc-spec/">Global Privacy Control (GPC)</a></cite> is a good
+example of a <a data-link-type="dfn|abstract-op" href="#dfn-global-opt-out" class="internalDFN" id="ref-for-dfn-global-opt-out-2">global opt-out</a> mechanism.</p>
 <p>Under this model, a <a data-link-type="dfn|abstract-op" href="#dfn-global-opt-out" class="internalDFN" id="ref-for-dfn-global-opt-out-3">global opt-out</a> signal should not be understood as a decision that a
 <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-30">person</a> made a while ago when they flipped a setting or chose to use a specific
 <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a> but rather as a preference that they have chosen to automatically reaffirm with
@@ -1180,18 +1168,18 @@ approach is not recommended, for multiple reasons: it offers no technical protec
 bad actors, it creates one central point of failure, it is hard to meaningfully audit (particularly
 for the scale of processing implied by web systems), and experience with existing systems
 shows that they make it hard for <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-33">people</a> to exercise their rights.</p>
-</section><section id="privacy-labour-0"><div class="header-wrapper"><h4 id="privacy-labour"><bdi class="secno">1.1.2 </bdi>Privacy Labour</h4><a class="self-link" href="#privacy-labour" aria-label="Permalink for Section 1.1.2"></a></div><p><dfn data-lt="privacy labor|labour|labor|Privacy labour" id="dfn-privacy-labor" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Privacy labour</dfn> is the practice of having a <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-34">person</a> do
+</section><section id="privacy-labor-0"><div class="header-wrapper"><h4 id="privacy-labor"><bdi class="secno">1.1.2 </bdi>Privacy Labor</h4><a class="self-link" href="#privacy-labor" aria-label="Permalink for Section 1.1.2"></a></div><p><dfn data-lt="labor|Privacy labor" id="dfn-labor" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Privacy labor</dfn> is the practice of having a <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-34">person</a> do
 the work of ensuring <a data-link-type="dfn|abstract-op" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-12">data processing</a> of which they are the subject or recipient is
 <a data-link-type="dfn|abstract-op" href="#dfn-appropriately" class="internalDFN" id="ref-for-dfn-appropriately-3">appropriate</a>, instead of putting the responsibility on the <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-21">actors</a> who are doing the processing.
 Data systems that are based on asking <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-35">people</a> for their <a data-link-type="dfn|abstract-op" href="#dfn-opt-in" class="internalDFN" id="ref-for-dfn-opt-in-8">consent</a> tend to increase
-<a data-link-type="dfn|abstract-op" href="#dfn-privacy-labor" class="internalDFN" id="ref-for-dfn-privacy-labor-2">privacy labour</a>.</p>
-<p>More generally, implementations of <a data-link-type="dfn|abstract-op" href="#dfn-privacy" class="internalDFN" id="ref-for-dfn-privacy-3">privacy</a> often offload <a data-link-type="dfn|abstract-op" href="#dfn-privacy-labor" class="internalDFN" id="ref-for-dfn-privacy-labor-3">labour</a> to <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-36">people</a>. This is
+<a data-link-type="dfn|abstract-op" href="#dfn-labor" class="internalDFN" id="ref-for-dfn-labor-2">privacy labor</a>.</p>
+<p>More generally, implementations of <a data-link-type="dfn|abstract-op" href="#dfn-privacy" class="internalDFN" id="ref-for-dfn-privacy-3">privacy</a> often offload <a data-link-type="dfn|abstract-op" href="#dfn-labor" class="internalDFN" id="ref-for-dfn-labor-3">labor</a> to <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-36">people</a>. This is
 notably true of the regimes descended from the <dfn data-lt="FIPs|Fair Information Practices" id="dfn-fips" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Fair Information Practices</dfn>
 (<a data-link-type="dfn|abstract-op" href="#dfn-fips" class="internalDFN" id="ref-for-dfn-fips-1">FIPs</a>), a loose set of principles initially elaborated in the 1970s in support of individual
 <a data-link-type="dfn|abstract-op" href="#dfn-autonomous" class="internalDFN" id="ref-for-dfn-autonomous-7">autonomy</a> in the face of growing concerns with databases. The <a data-link-type="dfn|abstract-op" href="#dfn-fips" class="internalDFN" id="ref-for-dfn-fips-2">FIPs</a> generally assume that
 there is sufficiently little <a data-link-type="dfn|abstract-op" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-13">data processing</a> taking place that any <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-37">person</a> will be able to
 carry out sufficient diligence to be <a data-link-type="dfn|abstract-op" href="#dfn-autonomous" class="internalDFN" id="ref-for-dfn-autonomous-8">autonomous</a> in their decision-making. Since they offload
-the <a data-link-type="dfn|abstract-op" href="#dfn-privacy-labor" class="internalDFN" id="ref-for-dfn-privacy-labor-4">privacy labour</a> to people and assume perfect, unlimited <a data-link-type="dfn|abstract-op" href="#dfn-autonomous" class="internalDFN" id="ref-for-dfn-autonomous-9">autonomy</a>, the <a data-link-type="dfn|abstract-op" href="#dfn-fips" class="internalDFN" id="ref-for-dfn-fips-3">FIPs</a> do not
+the <a data-link-type="dfn|abstract-op" href="#dfn-labor" class="internalDFN" id="ref-for-dfn-labor-4">privacy labor</a> to people and assume perfect, unlimited <a data-link-type="dfn|abstract-op" href="#dfn-autonomous" class="internalDFN" id="ref-for-dfn-autonomous-9">autonomy</a>, the <a data-link-type="dfn|abstract-op" href="#dfn-fips" class="internalDFN" id="ref-for-dfn-fips-3">FIPs</a> do not
 forbid specific types of <a data-link-type="dfn|abstract-op" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-14">data processing</a> but only place them under different procedural
 requirements. This approach is no longer <a data-link-type="dfn|abstract-op" href="#dfn-appropriately" class="internalDFN" id="ref-for-dfn-appropriately-4">appropriate</a>.</p>
 <p>One notable issue with procedural approaches to privacy is that they tend to have the same
@@ -1432,10 +1420,10 @@ off between principles.</p>
 <p>Once one is choosing between different designs at the Pareto frontier, the choice of which
 privacy principles to prefer is complex and depends heavily on the details of each
 particular situation. Note that people's privacy can also be in tension
-with non-privacy concerns. As discussed in the <cite><a data-matched-text="[[[Ethical-Web]]]" href="https://www.w3.org/2001/tag/doc/ethical-web-principles/">W3C TAG Ethical Web Principles</a></cite>, "it is important to
+with non-privacy concerns. As discussed in the <cite><a data-matched-text="[[[ethical-web-principles]]]" href="https://www.w3.org/TR/ethical-web-principles/">Ethical Web Principles</a></cite>, "it is important to
 consider the context in which a particular technology is being applied, the expected
 audience(s) for the technology, who the technology benefits and who it may disadvantage,
-and any power dynamics involved" ([<cite><a class="bibref" data-link-type="biblio" href="#bib-ethical-web" title="W3C TAG Ethical Web Principles">Ethical-Web</a></cite>]). Despite this complexity, there is a basic ground
+and any power dynamics involved" ([<cite><a class="bibref" data-link-type="biblio" href="#bib-ethical-web-principles" title="Ethical Web Principles">ethical-web-principles</a></cite>]). Despite this complexity, there is a basic ground
 rule to follow:</p>
 <div class="practice principle" data-audiences="websites user-agents"><a class="marker self-link" href="#principle-limited-collection-for-safety"><bdi lang="en">Principle 1.5.2</bdi></a>: <span class="practicelab" id="principle-limited-collection-for-safety">If a service
 needs to collect extra data from its users in order to protect those or other users, it
@@ -1692,7 +1680,7 @@ use a certain proxy, but the fact that they click slowly is already
 <a href="#unavoidable-information-exposure">unavoidably</a> revealed
 by <a href="https://dom.spec.whatwg.org/#interface-event">DOM event</a> timing.</li>
 <li><a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">User agents</a> can ask their users' permission to enable this class of API.
-This risks increasing <a data-link-type="dfn|abstract-op" href="#dfn-privacy-labor" class="internalDFN" id="ref-for-dfn-privacy-labor-5">privacy labor</a>, but as an example, a <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a>
+This risks increasing <a data-link-type="dfn|abstract-op" href="#dfn-labor" class="internalDFN" id="ref-for-dfn-labor-5">privacy labor</a>, but as an example, a <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a>
 could use a first-run dialog to ask the user whether they generally support
 sharing this data, rather than asking for each use of the APIs.</li>
 </ul>
@@ -2005,7 +1993,7 @@ Collective decision-making should be considered:</p>
 These forms might be governmental bodies at various administrative levels, standards
 organisations, worker bargaining units, or civil society fora.
 Even though collective decision-making can be better than offloading
-<a data-link-type="dfn|abstract-op" href="#dfn-privacy-labor" class="internalDFN" id="ref-for-dfn-privacy-labor-6">privacy labour</a> to <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-87">individuals</a>, it is not a panacea.
+<a data-link-type="dfn|abstract-op" href="#dfn-labor" class="internalDFN" id="ref-for-dfn-labor-6">privacy labor</a> to <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-87">individuals</a>, it is not a panacea.
 Decision-making bodies need to be designed carefully,
 for example using the <a href="https://press.princeton.edu/books/paperback/9780691122380/understanding-institutional-diversity#">Institutional Analysis and Development framework</a>.</p>
 </section><section id="device-owners-and-administrators"><div class="header-wrapper"><h3 id="device-administrators"><bdi class="secno">2.8 </bdi>Device Owners and Administrators</h3><a class="self-link" href="#device-administrators" aria-label="Permalink for Section 2.8"></a></div><div class="practice principle" data-audiences="user-agents"><a class="marker self-link" href="#principle-owned-devices-disclose-surveillance"><bdi lang="en">Principle 2.8</bdi></a>: <span class="practicelab" id="principle-owned-devices-disclose-surveillance">
@@ -2214,7 +2202,7 @@ important mitigation for <a data-type="dfn" href="https://www.w3.org/TR/fingerpr
 <div class="audience-label"><span class="audience-websites">websites</span></div></div>
 
 <p>Attempts to obtain consent to <a data-link-type="dfn|abstract-op" href="#dfn-process" class="internalDFN" id="ref-for-dfn-process-29">processing</a> that is not in accordance with the person's
-true preferences result in imposing unwanted <a data-link-type="dfn|abstract-op" href="#dfn-privacy-labor" class="internalDFN" id="ref-for-dfn-privacy-labor-7">privacy labour</a> on the person, and may
+true preferences result in imposing unwanted <a data-link-type="dfn|abstract-op" href="#dfn-labor" class="internalDFN" id="ref-for-dfn-labor-7">privacy labor</a> on the person, and may
 result in people erroneously giving consent that they regret later.</p>
 <p>An <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-49">actor</a> should not prompt a <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-101">person</a> for consent if the
 person is unlikely to have sufficient information to make an informed decision to consent or not.
@@ -2628,8 +2616,8 @@ Wendy Seltzer.</p>
       <a href="https://dom.spec.whatwg.org/"><cite>DOM Standard</cite></a>. Anne van Kesteren.  WHATWG. Living Standard. URL: <a href="https://dom.spec.whatwg.org/">https://dom.spec.whatwg.org/</a>
     </dd><dt id="bib-element-timing">[element-timing]</dt><dd>
       <a href="https://wicg.github.io/element-timing/"><cite>Element Timing API</cite></a>.  WICG. cg-draft. URL: <a href="https://wicg.github.io/element-timing/">https://wicg.github.io/element-timing/</a>
-    </dd><dt id="bib-ethical-web">[ETHICAL-WEB]</dt><dd>
-      <a href="https://www.w3.org/2001/tag/doc/ethical-web-principles/"><cite>W3C TAG Ethical Web Principles</cite></a>. Daniel Appelquist; Hadley Beeman.  W3C. 27 October 2020. TAG Finding. URL: <a href="https://www.w3.org/2001/tag/doc/ethical-web-principles/">https://www.w3.org/2001/tag/doc/ethical-web-principles/</a>
+    </dd><dt id="bib-ethical-web-principles">[ethical-web-principles]</dt><dd>
+      <a href="https://www.w3.org/TR/ethical-web-principles/"><cite>Ethical Web Principles</cite></a>. Daniel Appelquist; Hadley Beeman; Amy Guy.  W3C. 13 August 2024. W3C Working Group Note. URL: <a href="https://www.w3.org/TR/ethical-web-principles/">https://www.w3.org/TR/ethical-web-principles/</a>
     </dd><dt id="bib-event-timing">[event-timing]</dt><dd>
       <a href="https://www.w3.org/TR/event-timing/"><cite>Event Timing API</cite></a>. Nicolas Pena Moreno; Tim Dresser.  W3C. 19 August 2024. W3C Working Draft. URL: <a href="https://www.w3.org/TR/event-timing/">https://www.w3.org/TR/event-timing/</a>
     </dd><dt id="bib-fiduciary-law">[Fiduciary-Law]</dt><dd>
@@ -2646,8 +2634,8 @@ Wendy Seltzer.</p>
       <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679&amp;from=EN"><cite>General Data Protection Regulations (GDPR) / Regulation (EU) 2016/679</cite></a>. European Parliament and Council of European Union. URL: <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679&amp;from=EN">https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679&amp;from=EN</a>
     </dd><dt id="bib-gkc-privacy">[GKC-Privacy]</dt><dd>
       <a href="https://www.cambridge.org/core/books/governing-privacy-in-knowledge-commons/FA569455669E2CECA25DF0244C62C1A1"><cite>Governing Privacy in Knowledge Commons</cite></a>. Madelyn Rose Sanfilippo; Brett M. Frischmann; Katherine J. Strandburg.  Cambridge University Press. URL: <a href="https://www.cambridge.org/core/books/governing-privacy-in-knowledge-commons/FA569455669E2CECA25DF0244C62C1A1">https://www.cambridge.org/core/books/governing-privacy-in-knowledge-commons/FA569455669E2CECA25DF0244C62C1A1</a>
-    </dd><dt id="bib-gpc">[GPC]</dt><dd>
-      <a href="https://globalprivacycontrol.github.io/gpc-spec/"><cite>Global Privacy Control (GPC)</cite></a>. Robin Berjon; Sebastian Zimmeck; Ashkan Soltani; David Harbage; Peter Snyder.  W3C. URL: <a href="https://globalprivacycontrol.github.io/gpc-spec/">https://globalprivacycontrol.github.io/gpc-spec/</a>
+    </dd><dt id="bib-gpc-spec">[gpc-spec]</dt><dd>
+      <a href="https://privacycg.github.io/gpc-spec/"><cite>Global Privacy Control (GPC)</cite></a>.  W3C. Unofficial Proposal Draft. URL: <a href="https://privacycg.github.io/gpc-spec/">https://privacycg.github.io/gpc-spec/</a>
     </dd><dt id="bib-html">[html]</dt><dd>
       <a href="https://html.spec.whatwg.org/multipage/"><cite>HTML Standard</cite></a>. Anne van Kesteren; Domenic Denicola; Dominic Farolino; Ian Hickson; Philip Jägenstedt; Simon Pieters.  WHATWG. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a>
     </dd><dt id="bib-iad">[IAD]</dt><dd>
@@ -2671,7 +2659,7 @@ Wendy Seltzer.</p>
     </dd><dt id="bib-obscurity-by-design">[Obscurity-By-Design]</dt><dd>
       <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2284583"><cite>Obscurity by Design</cite></a>. Woodrow Hartzog; Frederic Stutzman. URL: <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2284583">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2284583</a>
     </dd><dt id="bib-oecd-guidelines">[OECD-Guidelines]</dt><dd>
-      <a href="https://www.oecd.org/sti/ieconomy/oecdguidelinesontheprotectionofprivacyandtransborderflowsofpersonaldata.htm"><cite>OECD Guidelines on the Protection of Privacy and Transborder Flows of Personal Data</cite></a>.  OECD. URL: <a href="https://www.oecd.org/sti/ieconomy/oecdguidelinesontheprotectionofprivacyandtransborderflowsofpersonaldata.htm">https://www.oecd.org/sti/ieconomy/oecdguidelinesontheprotectionofprivacyandtransborderflowsofpersonaldata.htm</a>
+      <a href="https://doi.org/10.1787/9789264196391-en"><cite>OECD Guidelines on the Protection of Privacy and Transborder Flows of Personal Data</cite></a>.  OECD Publishing. 2002. URL: <a href="https://doi.org/10.1787/9789264196391-en">https://doi.org/10.1787/9789264196391-en</a>
     </dd><dt id="bib-pen-harassment">[PEN-Harassment]</dt><dd>
       <a href="https://onlineharassmentfieldmanual.pen.org/defining-online-harassment-a-glossary-of-terms/"><cite>Online Harassment Field Manual</cite></a>.  PEN America. URL: <a href="https://onlineharassmentfieldmanual.pen.org/defining-online-harassment-a-glossary-of-terms/">https://onlineharassmentfieldmanual.pen.org/defining-online-harassment-a-glossary-of-terms/</a>
     </dd><dt id="bib-performance-measure-memory">[performance-measure-memory]</dt><dd>
@@ -2786,7 +2774,7 @@ Wendy Seltzer.</p>
     </li><li>
       <a href="#ref-for-dfn-autonomous-6" title="§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls">§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls</a> 
     </li><li>
-      <a href="#ref-for-dfn-autonomous-7" title="§ 1.1.2 Privacy Labour">§ 1.1.2 Privacy Labour</a> <a href="#ref-for-dfn-autonomous-8" title="Reference 2">(2)</a> <a href="#ref-for-dfn-autonomous-9" title="Reference 3">(3)</a> 
+      <a href="#ref-for-dfn-autonomous-7" title="§ 1.1.2 Privacy Labor">§ 1.1.2 Privacy Labor</a> <a href="#ref-for-dfn-autonomous-8" title="Reference 2">(2)</a> <a href="#ref-for-dfn-autonomous-9" title="Reference 3">(3)</a> 
     </li><li>
       <a href="#ref-for-dfn-autonomous-10" title="§ 2.5 Data Rights">§ 2.5 Data Rights</a> 
     </li><li>
@@ -2824,7 +2812,7 @@ Wendy Seltzer.</p>
     </li><li>
       <a href="#ref-for-dfn-opt-in-2" title="§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls">§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls</a> <a href="#ref-for-dfn-opt-in-3" title="Reference 2">(2)</a> <a href="#ref-for-dfn-opt-in-4" title="Reference 3">(3)</a> <a href="#ref-for-dfn-opt-in-5" title="Reference 4">(4)</a> <a href="#ref-for-dfn-opt-in-6" title="Reference 5">(5)</a> <a href="#ref-for-dfn-opt-in-7" title="Reference 6">(6)</a> 
     </li><li>
-      <a href="#ref-for-dfn-opt-in-8" title="§ 1.1.2 Privacy Labour">§ 1.1.2 Privacy Labour</a> 
+      <a href="#ref-for-dfn-opt-in-8" title="§ 1.1.2 Privacy Labor">§ 1.1.2 Privacy Labor</a> 
     </li><li>
       <a href="#ref-for-dfn-opt-in-9" title="§ 1.3 Collective Governance">§ 1.3 Collective Governance</a> 
     </li><li>
@@ -2865,24 +2853,24 @@ Wendy Seltzer.</p>
       <a href="#ref-for-dfn-global-opt-out-4" title="§ 2.12 Consent, Withdrawal of Consent, Opt-Outs, and Objections">§ 2.12 Consent, Withdrawal of Consent, Opt-Outs, and Objections</a> 
     </li>
   </ul>
-    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-privacy-labor" aria-label="Links in this document to definition: Privacy labour">
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-labor" aria-label="Links in this document to definition: Privacy labor">
       <span class="caret"></span>
       <div>
-        <a class="self-link" href="#dfn-privacy-labor" aria-label="Permalink for definition: Privacy labour. Activate to close this dialog.">Permalink</a>
+        <a class="self-link" href="#dfn-labor" aria-label="Permalink for definition: Privacy labor. Activate to close this dialog.">Permalink</a>
          
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-privacy-labor-1" title="§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls">§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls</a> 
+      <a href="#ref-for-dfn-labor-1" title="§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls">§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls</a> 
     </li><li>
-      <a href="#ref-for-dfn-privacy-labor-2" title="§ 1.1.2 Privacy Labour">§ 1.1.2 Privacy Labour</a> <a href="#ref-for-dfn-privacy-labor-3" title="Reference 2">(2)</a> <a href="#ref-for-dfn-privacy-labor-4" title="Reference 3">(3)</a> 
+      <a href="#ref-for-dfn-labor-2" title="§ 1.1.2 Privacy Labor">§ 1.1.2 Privacy Labor</a> <a href="#ref-for-dfn-labor-3" title="Reference 2">(2)</a> <a href="#ref-for-dfn-labor-4" title="Reference 3">(3)</a> 
     </li><li>
-      <a href="#ref-for-dfn-privacy-labor-5" title="§ 2.2.1.1 Designing ancillary APIs that provide new information">§ 2.2.1.1 Designing ancillary APIs that provide new information</a> 
+      <a href="#ref-for-dfn-labor-5" title="§ 2.2.1.1 Designing ancillary APIs that provide new information">§ 2.2.1.1 Designing ancillary APIs that provide new information</a> 
     </li><li>
-      <a href="#ref-for-dfn-privacy-labor-6" title="§ 2.7 Collective Privacy">§ 2.7 Collective Privacy</a> 
+      <a href="#ref-for-dfn-labor-6" title="§ 2.7 Collective Privacy">§ 2.7 Collective Privacy</a> 
     </li><li>
-      <a href="#ref-for-dfn-privacy-labor-7" title="§ 2.12 Consent, Withdrawal of Consent, Opt-Outs, and Objections">§ 2.12 Consent, Withdrawal of Consent, Opt-Outs, and Objections</a> 
+      <a href="#ref-for-dfn-labor-7" title="§ 2.12 Consent, Withdrawal of Consent, Opt-Outs, and Objections">§ 2.12 Consent, Withdrawal of Consent, Opt-Outs, and Objections</a> 
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-fips" aria-label="Links in this document to definition: Fair Information Practices">
@@ -2894,7 +2882,7 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-fips-1" title="§ 1.1.2 Privacy Labour">§ 1.1.2 Privacy Labour</a> <a href="#ref-for-dfn-fips-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-fips-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-fips-4" title="Reference 4">(4)</a> 
+      <a href="#ref-for-dfn-fips-1" title="§ 1.1.2 Privacy Labor">§ 1.1.2 Privacy Labor</a> <a href="#ref-for-dfn-fips-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-fips-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-fips-4" title="Reference 4">(4)</a> 
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-guardian" aria-label="Links in this document to definition: guardian">
@@ -3268,7 +3256,7 @@ Wendy Seltzer.</p>
     </li><li>
       <a href="#ref-for-dfn-individual-22" title="§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls">§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls</a> <a href="#ref-for-dfn-individual-23" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-24" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-25" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-26" title="Reference 5">(5)</a> <a href="#ref-for-dfn-individual-27" title="Reference 6">(6)</a> <a href="#ref-for-dfn-individual-28" title="Reference 7">(7)</a> <a href="#ref-for-dfn-individual-29" title="Reference 8">(8)</a> <a href="#ref-for-dfn-individual-30" title="Reference 9">(9)</a> <a href="#ref-for-dfn-individual-31" title="Reference 10">(10)</a> <a href="#ref-for-dfn-individual-32" title="Reference 11">(11)</a> <a href="#ref-for-dfn-individual-33" title="Reference 12">(12)</a> 
     </li><li>
-      <a href="#ref-for-dfn-individual-34" title="§ 1.1.2 Privacy Labour">§ 1.1.2 Privacy Labour</a> <a href="#ref-for-dfn-individual-35" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-36" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-37" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-38" title="Reference 5">(5)</a> <a href="#ref-for-dfn-individual-39" title="Reference 6">(6)</a> 
+      <a href="#ref-for-dfn-individual-34" title="§ 1.1.2 Privacy Labor">§ 1.1.2 Privacy Labor</a> <a href="#ref-for-dfn-individual-35" title="Reference 2">(2)</a> <a href="#ref-for-dfn-individual-36" title="Reference 3">(3)</a> <a href="#ref-for-dfn-individual-37" title="Reference 4">(4)</a> <a href="#ref-for-dfn-individual-38" title="Reference 5">(5)</a> <a href="#ref-for-dfn-individual-39" title="Reference 6">(6)</a> 
     </li><li>
       <a href="#ref-for-dfn-individual-40" title="§ 1.2 Vulnerability">§ 1.2 Vulnerability</a> <a href="#ref-for-dfn-individual-41" title="Reference 2">(2)</a> 
     </li><li>
@@ -3384,7 +3372,7 @@ Wendy Seltzer.</p>
     </li><li>
       <a href="#ref-for-dfn-actor-19" title="§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls">§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls</a> <a href="#ref-for-dfn-actor-20" title="Reference 2">(2)</a> 
     </li><li>
-      <a href="#ref-for-dfn-actor-21" title="§ 1.1.2 Privacy Labour">§ 1.1.2 Privacy Labour</a> <a href="#ref-for-dfn-actor-22" title="Reference 2">(2)</a> <a href="#ref-for-dfn-actor-23" title="Reference 3">(3)</a> <a href="#ref-for-dfn-actor-24" title="Reference 4">(4)</a> <a href="#ref-for-dfn-actor-25" title="Reference 5">(5)</a> 
+      <a href="#ref-for-dfn-actor-21" title="§ 1.1.2 Privacy Labor">§ 1.1.2 Privacy Labor</a> <a href="#ref-for-dfn-actor-22" title="Reference 2">(2)</a> <a href="#ref-for-dfn-actor-23" title="Reference 3">(3)</a> <a href="#ref-for-dfn-actor-24" title="Reference 4">(4)</a> <a href="#ref-for-dfn-actor-25" title="Reference 5">(5)</a> 
     </li><li>
       <a href="#ref-for-dfn-actor-26" title="§ 1.2 Vulnerability">§ 1.2 Vulnerability</a> 
     </li><li>
@@ -3532,7 +3520,7 @@ Wendy Seltzer.</p>
     <li>
       <a href="#ref-for-dfn-privacy-1" title="§ 1. An Introduction to Privacy on the Web">§ 1. An Introduction to Privacy on the Web</a> <a href="#ref-for-dfn-privacy-2" title="Reference 2">(2)</a> 
     </li><li>
-      <a href="#ref-for-dfn-privacy-3" title="§ 1.1.2 Privacy Labour">§ 1.1.2 Privacy Labour</a> 
+      <a href="#ref-for-dfn-privacy-3" title="§ 1.1.2 Privacy Labor">§ 1.1.2 Privacy Labor</a> 
     </li><li>
       <a href="#ref-for-dfn-privacy-4" title="§ 1.3 Collective Governance">§ 1.3 Collective Governance</a> <a href="#ref-for-dfn-privacy-5" title="Reference 2">(2)</a> 
     </li><li>
@@ -3566,7 +3554,7 @@ Wendy Seltzer.</p>
     </li><li>
       <a href="#ref-for-dfn-appropriately-2" title="§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls">§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls</a> 
     </li><li>
-      <a href="#ref-for-dfn-appropriately-3" title="§ 1.1.2 Privacy Labour">§ 1.1.2 Privacy Labour</a> <a href="#ref-for-dfn-appropriately-4" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-appropriately-3" title="§ 1.1.2 Privacy Labor">§ 1.1.2 Privacy Labor</a> <a href="#ref-for-dfn-appropriately-4" title="Reference 2">(2)</a> 
     </li><li>
       <a href="#ref-for-dfn-appropriately-5" title="§ 1.3 Collective Governance">§ 1.3 Collective Governance</a> 
     </li><li>
@@ -3592,7 +3580,7 @@ Wendy Seltzer.</p>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-inappropriately-1" title="§ 1.1.2 Privacy Labour">§ 1.1.2 Privacy Labour</a> <a href="#ref-for-dfn-inappropriately-2" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-inappropriately-1" title="§ 1.1.2 Privacy Labor">§ 1.1.2 Privacy Labor</a> <a href="#ref-for-dfn-inappropriately-2" title="Reference 2">(2)</a> 
     </li><li>
       <a href="#ref-for-dfn-inappropriately-3" title="§ 1.4 User Agents">§ 1.4 User Agents</a> 
     </li><li>
@@ -3616,7 +3604,7 @@ Wendy Seltzer.</p>
     </li><li>
       <a href="#ref-for-dfn-process-7" title="§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls">§ 1.1.1 Opt-in, Consent, Opt-out, Global Controls</a> <a href="#ref-for-dfn-process-8" title="Reference 2">(2)</a> <a href="#ref-for-dfn-process-9" title="Reference 3">(3)</a> <a href="#ref-for-dfn-process-10" title="Reference 4">(4)</a> <a href="#ref-for-dfn-process-11" title="Reference 5">(5)</a> 
     </li><li>
-      <a href="#ref-for-dfn-process-12" title="§ 1.1.2 Privacy Labour">§ 1.1.2 Privacy Labour</a> <a href="#ref-for-dfn-process-13" title="Reference 2">(2)</a> <a href="#ref-for-dfn-process-14" title="Reference 3">(3)</a> <a href="#ref-for-dfn-process-15" title="Reference 4">(4)</a> 
+      <a href="#ref-for-dfn-process-12" title="§ 1.1.2 Privacy Labor">§ 1.1.2 Privacy Labor</a> <a href="#ref-for-dfn-process-13" title="Reference 2">(2)</a> <a href="#ref-for-dfn-process-14" title="Reference 3">(3)</a> <a href="#ref-for-dfn-process-15" title="Reference 4">(4)</a> 
     </li><li>
       <a href="#ref-for-dfn-process-16" title="§ 1.3 Collective Governance">§ 1.3 Collective Governance</a> <a href="#ref-for-dfn-process-17" title="Reference 2">(2)</a> 
     </li><li>
