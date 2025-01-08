@@ -556,7 +556,7 @@
     #bp-summary ul:has(#include-api-designers:checked) + ul li:has(.audience-api-designers) { display: list-item; }
   </style>
 </head>
-<body data-cite="html indexedDB service-workers fingerprinting-guidance url infra">
+<body data-cite="HTML IndexedDB Service-Workers Fingerprinting-Guidance URL Infra">
 
 <section id="abstract">
 
@@ -588,8 +588,8 @@ This document is considered stable by the TAG and is ready for wide review.
 
 ## How This Document Fits In
 
-This document elaborates on the <a data-cite="ethical-web-principles#privacy">privacy principle</a>
-from the [[[ethical-web-principles]]]: "Security and privacy are essential." While it focuses on privacy, this should
+This document elaborates on the <a data-cite="Ethical-Web-Principles#privacy">privacy principle</a>
+from the [[[Ethical-Web-Principles]]]: "Security and privacy are essential." While it focuses on privacy, this should
 not be taken as an indication that privacy is always more important than other ethical web principles, and
 this document doesn't address how to balance the different ethical web principles if they come into conflict.
 
@@ -668,7 +668,7 @@ is specifically about [=privacy=] as it applies to the web, it focuses on privac
 information flows.
 
 The web is for everyone ([[?For-Everyone]]). It should be "<i>a platform that helps people and provides a
-net positive social benefit</i>" ([[?ethical-web-principles]]). One of the ways in which the
+net positive social benefit</i>" ([[?Ethical-Web-Principles]]). One of the ways in which the
 web serves people is by seeking to protect them from surveillance and the types of manipulation that data can
 enable.
 
@@ -709,7 +709,7 @@ evaluating a privacy situation is best done by clearly identifying:
 There are <em>always</em> privacy principles at work. Some sets of principles may be more
 permissive, but that does not make them neutral. All privacy principles have an impact on
 [=people=] and we must therefore determine which principles best align with ethical web values in
-web [=contexts=] ([[?ethical-web-principles]], [[?Why-Privacy]]).
+web [=contexts=] ([[?Ethical-Web-Principles]], [[?Why-Privacy]]).
 
 <dfn>Information flows</dfn> are information exchanged or processed by
 [=actors=]. A person's privacy can be harmed both by their information flowing from them to
@@ -792,7 +792,7 @@ the [=person=]'s rights) with every interaction that the [=person=] has with a s
 instance, the [=person=] may be objecting to [=processing=] based on legitimate interest,
 withdrawing [=consent=] to specific [=purposes=], or requesting that their data not be sold or
 shared.) The [=user=] is effectively delegating the expression of their [=opt-out=] to their
-[=user agent=], which helps rectify [=automation asymmetry=]. The [[[?gpc-spec]]] is a good
+[=user agent=], which helps rectify [=automation asymmetry=]. The [[[?GPC-Spec]]] is a good
 example of a [=global opt-out=] mechanism.
 
 Under this model, a [=global opt-out=] signal should not be understood as a decision that a
@@ -1108,10 +1108,10 @@ off between principles.
 Once one is choosing between different designs at the Pareto frontier, the choice of which
 privacy principles to prefer is complex and depends heavily on the details of each
 particular situation. Note that people's privacy can also be in tension
-with non-privacy concerns. As discussed in the [[[ethical-web-principles]]], "it is important to
+with non-privacy concerns. As discussed in the [[[Ethical-Web-Principles]]], "it is important to
 consider the context in which a particular technology is being applied, the expected
 audience(s) for the technology, who the technology benefits and who it may disadvantage,
-and any power dynamics involved" ([[ethical-web-principles]]). Despite this complexity, there is a basic ground
+and any power dynamics involved" ([[Ethical-Web-Principles]]). Despite this complexity, there is a basic ground
 rule to follow:
 
 <div class="practice" data-audiences="websites user-agents">
@@ -1309,16 +1309,16 @@ use">ancillary uses</dfn>.
   <dt><dfn>Non-ancillary APIs</dfn></dt>
   <dd>
     Web APIs that were designed to support users' immediate goals, like <a
-    data-cite="dom#interface-event">DOM events</a> and <a
-    data-cite="cssom-view-1#extension-to-the-element-interface">element position
+    data-cite="DOM#interface-event">DOM events</a> and <a
+    data-cite="CSSOM-View-1#extension-to-the-element-interface">element position
     observers</a>.
   </dd>
 
   <dt><dfn>Ancillary APIs computed from existing information</dfn></dt>
   <dd>
     APIs that filter, summarize, or time-shift information available from
-    [=non-ancillary APIs=], like the [[[event-timing]]] and <a
-    data-cite="intersection-observer#introduction">IntersectionObserver</a>. See
+    [=non-ancillary APIs=], like the [[[Event-Timing]]] and <a
+    data-cite="Intersection-Observer#introduction">IntersectionObserver</a>. See
     [[[#information]]] for restrictions on how existing non-ancillary APIs can
     be used to justify new ancillary APIs.
   </dd>
@@ -1326,10 +1326,10 @@ use">ancillary uses</dfn>.
   <dt><dfn>Ancillary APIs that provide new information</dfn></dt>
   <dd>
     APIs that provide new information that's primarily useful to support the
-    ancillary uses, like <a data-cite="element-timing#sec-intro">element paint
-    timing</a>, <a data-cite="performance-measure-memory#intro">memory usage
+    ancillary uses, like <a data-cite="Element-Timing#sec-intro">element paint
+    timing</a>, <a data-cite="Performance-Measure-Memory#intro">memory usage
     measurements</a>, and <a
-    data-cite="deprecation-reporting#deprecation-report">deprecation
+    data-cite="Deprecation-Reporting#deprecation-report">deprecation
     reports</a>.
   </dd>
 </dl>
@@ -1791,7 +1791,7 @@ using it. This principle enforces this right to privacy in two ways:
 1. [=User agent=] developers need to consider whether requests from [=device owners=] and
    [=administrators=] are reasonable, and refuse to implement unreasonable requests, even if that
    means fewer sales. Owner/administrator needs do not supersede user needs in the <a
-   data-cite="design-principles#priority-of-constituencies">priority of constituencies</a>.
+   data-cite="Design-Principles#priority-of-constituencies">priority of constituencies</a>.
 1. Even when information disclosure is reasonable, the [=person=] whose data is being disclosed
    needs to know about it so that they can avoid doing things that would lead to unwanted
    consequences.
@@ -1901,7 +1901,7 @@ Examples of mitigations include:
 Features that are designed-for-purpose facilitate these principles by providing functionality that is only or primarily
 useful for a particular purpose. Designed-for-purpose features make it easier to explain the purpose to people, and may
 also limit the feasible secondary uses of data. When building a designed-for-purpose feature,
-<a data-cite="design-principles#high-level-low-level">consider tradeoffs between high and low-level
+<a data-cite="Design-Principles#high-level-low-level">consider tradeoffs between high and low-level
 APIs</a>.
 
 [=Controlled de-identified data=] may be used for additional purposes in ways that are compatible with the specified
@@ -1964,7 +1964,7 @@ to [=people=] in accessible forms.
 </div>
 
 Non-transparent methods of [=recognition=] are harmful in part because they are not visible to the
-user, which undermines user control [[?UNSANCTIONED-TRACKING]]. Designing features that minimize
+user, which undermines user control [[?Unsanctioned-Tracking]]. Designing features that minimize
 data and make requests for data explicit can enable detectability, a kind of transparency that is an
 important mitigation for <a>browser fingerprinting</a>.
 
@@ -2380,7 +2380,7 @@ the tradeoffs involved ([[Privacy-Threat]]).
 
 If a [=user agent=] can tell that its user is using a particular identity on a
 website, it should make that active identity clear to the user (e.g. if the
-user logged into the site via an API like [[[credential-management-1]]]).
+user logged into the site via an API like [[[Credential-Management-1]]]).
 
 </section>
 
@@ -2403,7 +2403,7 @@ be justified.
 # Acknowledgements {#acknowledgements}
 
 Some of the definitions in this document build on top of the work in
-[[[tracking-dnt]]].
+[[[Tracking-DNT]]].
 
 The following people, in alphabetical order of their first name, were instrumental
 in producing this document and made invaluable contributions:
