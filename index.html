@@ -62,6 +62,16 @@
               );
             }
           }
+        },
+        function checkPracticeIds(_conf, _doc, utils) {
+          // Ensure every principle has a non-generated ID.
+          for (const practice of document.querySelectorAll(".practicelab")) {
+            if (!practice.id) {
+              utils.showWarning(
+                `Principle should be assigned an id.`, { elements: [practice] }
+              );
+            }
+          }
         }
       ],
       postProcess: [
@@ -1262,11 +1272,15 @@ according to their [=users=]' wishes.
 
 ## Data Minimization {#data-minimization}
 
-<div class="practice" data-audiences="websites user-agents"><span class="practicelab">[=Sites=], [=user agents=], and other [=actors=]
+<div class="practice" data-audiences="websites user-agents">
+<span class="practicelab" id="restrict-data-to-necessary-or-aligned">
+[=Sites=], [=user agents=], and other [=actors=]
 should restrict the [=data=] they transfer to what's either necessary to achieve their users'
 goals or aligns with their users' wishes and interests.</span></div>
 
-<div class="practice" data-audiences="api-designers"><span class="practicelab">Web APIs should be designed to minimize the amount of data that sites need
+<div class="practice" data-audiences="api-designers">
+<span class="practicelab" id="granular-api-data-requests">
+Web APIs should be designed to minimize the amount of data that sites need
 to request to carry out their users' goals.
 Web APIs should also provide granularity and user controls over <a>personal
 data</a> that is communicated to [=sites=].</span></div>
@@ -1432,7 +1446,8 @@ despite the additional risk of [=browser fingerprinting=].
 ## Information access {#information}
 
 <div class="practice" data-audiences="api-designers user-agents">
-  <span class="practicelab">New web APIs should guard users' information at least
+  <span class="practicelab" id="deprecated-apis-dont-justify-information-leaks">
+  New web APIs should guard users' information at least
   as well as existing APIs that are expected to stay in the web platform.</span>
 </div>
 
