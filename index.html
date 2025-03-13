@@ -65,12 +65,10 @@
         },
         function checkPracticeIds(_conf, _doc, utils) {
           // Ensure every principle has a non-generated ID.
-          for (const practice of document.querySelectorAll(".practicelab")) {
-            if (!practice.id) {
-              utils.showWarning(
-                `Principle should be assigned an id.`, { elements: [practice] }
-              );
-            }
+          for (const practice of document.querySelectorAll(".practicelab:not([id])")) {
+            utils.showWarning(
+              `Principle should be assigned an id.`, { elements: [practice] }
+            );
           }
         }
       ],
