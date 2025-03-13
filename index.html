@@ -176,6 +176,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     "required-sections": false
   },
   "preProcess": [
+    null,
     null
   ],
   "postProcess": [
@@ -766,15 +767,15 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "id": "why-privacy"
     }
   },
-  "publishISODate": "2025-02-12T00:00:00.000Z",
-  "generatedSubtitle": "W3C Editor's Draft 12 February 2025"
+  "publishISODate": "2025-03-13T00:00:00.000Z",
+  "generatedSubtitle": "W3C Editor's Draft 13 March 2025"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED"></head>
 <body data-cite="HTML IndexedDB Service-Workers Fingerprinting-Guidance URL Infra" class="h-entry informative"><div class="head">
     <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a></p>
     <h1 id="title" class="title">Privacy Principles</h1> 
-    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2025-02-12">12 February 2025</time></p>
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2025-03-13">13 March 2025</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
@@ -943,9 +944,11 @@ must take extra technical and legal measures to ensure that this data can't be t
 for other purposes, like to grow the service.</span><span class="audience-label"><span class="audience-websites">websites</span><span class="audience-user-agents">user agents</span></span></li><li><a class="marker self-link" href="#principle-identity-per-context"><bdi lang="en">Principle 2.1</bdi></a>: <span class="practicelab">A <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agent</a>
 should help its user present the <a data-link-type="dfn|abstract-op" href="#dfn-identity" class="internalDFN" id="ref-for-dfn-identity-1">identity</a> they want in each <a data-link-type="dfn|abstract-op" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-1">context</a>
 they are in, and should prevent or support <a data-link-type="dfn|abstract-op" href="#dfn-recognize" class="internalDFN" id="ref-for-dfn-recognize-1">recognition</a> as appropriate.
-</span><span class="audience-label"><span class="audience-user-agents">user agents</span></span></li><li><a class="marker self-link" href="#bp-sites-user-agents-and-other-actors-should-restrict-the-data-they-transfer-to-what-s-either-necessary-to-achieve-their-users-goals-or-aligns-with-their-users-wishes-and-interests"><bdi lang="en">Principle 2.2.1</bdi></a>: <span class="practicelab"><a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">Sites</a>, <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agents</a>, and other <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-1">actors</a>
+</span><span class="audience-label"><span class="audience-user-agents">user agents</span></span></li><li><a class="marker self-link" href="#restrict-data-to-necessary-or-aligned"><bdi lang="en">Principle 2.2.1</bdi></a>: <span class="practicelab">
+<a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">Sites</a>, <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agents</a>, and other <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-1">actors</a>
 should restrict the <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-1">data</a> they transfer to what's either necessary to achieve their users'
-goals or aligns with their users' wishes and interests.</span><span class="audience-label"><span class="audience-websites">websites</span><span class="audience-user-agents">user agents</span></span></li><li><a class="marker self-link" href="#bp-web-apis-should-be-designed-to-minimize-the-amount-of-data-that-sites-need-to-request-to-carry-out-their-users-goals-web-apis-should-also-provide-granularity-and-user-controls-over-personal-data-that-is-communicated-to-sites"><bdi lang="en">Principle 2.2.2</bdi></a>: <span class="practicelab">Web APIs should be designed to minimize the amount of data that sites need
+goals or aligns with their users' wishes and interests.</span><span class="audience-label"><span class="audience-websites">websites</span><span class="audience-user-agents">user agents</span></span></li><li><a class="marker self-link" href="#granular-api-data-requests"><bdi lang="en">Principle 2.2.2</bdi></a>: <span class="practicelab">
+Web APIs should be designed to minimize the amount of data that sites need
 to request to carry out their users' goals.
 Web APIs should also provide granularity and user controls over <a href="#dfn-data" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-data-2">personal
 data</a> that is communicated to <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">sites</a>.</span><span class="audience-label"><span class="audience-api-designers">API designers</span></span></li><li><a class="marker self-link" href="#principle-identify-ancillary-apis"><bdi lang="en">Principle 2.2.1.1</bdi></a>: <span class="practicelab">Specifications
@@ -955,7 +958,8 @@ that doing so aligns with the user's wishes and interests.
 </span><span class="audience-label"><span class="audience-api-designers">API designers</span></span></li><li><a class="marker self-link" href="#principle-disabling-ancillary-apis-with-new-information"><bdi lang="en">Principle 2.2.1.1.2</bdi></a>: <span class="practicelab">
 User agents should provide a way to enable or disable <a data-link-type="dfn|abstract-op" href="#dfn-ancillary-apis-that-provide-new-information" class="internalDFN" id="ref-for-dfn-ancillary-apis-that-provide-new-information-3">ancillary APIs that provide new information</a> and should set the default according to their users'
 needs.
-</span><span class="audience-label"><span class="audience-user-agents">user agents</span></span></li><li><a class="marker self-link" href="#bp-new-web-apis-should-guard-users-information-at-least-as-well-as-existing-apis-that-are-expected-to-stay-in-the-web-platform"><bdi lang="en">Principle 2.3</bdi></a>: <span class="practicelab">New web APIs should guard users' information at least
+</span><span class="audience-label"><span class="audience-user-agents">user agents</span></span></li><li><a class="marker self-link" href="#deprecated-apis-dont-justify-information-leaks"><bdi lang="en">Principle 2.3</bdi></a>: <span class="practicelab">
+  New web APIs should guard users' information at least
   as well as existing APIs that are expected to stay in the web platform.</span><span class="audience-label"><span class="audience-api-designers">API designers</span><span class="audience-user-agents">user agents</span></span></li><li><a class="marker self-link" href="#principle-sensitive"><bdi lang="en">Principle 2.4</bdi></a>: <span class="practicelab">
     There is broad consensus that some categories of information such as credit card numbers
     or precise geolocation are sensitive, but system designers should not assume that other
@@ -1550,14 +1554,18 @@ to one <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/brow
 <p><a data-link-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">User agents</a> should do their best to distinguish <a data-link-type="dfn|abstract-op" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-11">contexts</a> within a site
 and adjust their <a data-link-type="dfn|abstract-op" href="#dfn-partition" class="internalDFN" id="ref-for-dfn-partition-1">partitions</a> to prevent or support <a data-link-type="dfn|abstract-op" href="#dfn-recognize" class="internalDFN" id="ref-for-dfn-recognize-7">recognition</a> across those intra-site <a data-link-type="dfn|abstract-op" href="#dfn-context" class="internalDFN" id="ref-for-dfn-context-12">contexts</a>
 according to their <a data-link-type="dfn|abstract-op" href="#dfn-individual" class="internalDFN" id="ref-for-dfn-individual-75">users</a>' wishes.</p>
-</section><section id="data-minimization-0"><div class="header-wrapper"><h3 id="data-minimization"><bdi class="secno">2.2 </bdi>Data Minimization</h3><a class="self-link" href="#data-minimization" aria-label="Permalink for Section 2.2"></a></div><div class="practice principle" data-audiences="websites user-agents"><a class="marker self-link" href="#bp-sites-user-agents-and-other-actors-should-restrict-the-data-they-transfer-to-what-s-either-necessary-to-achieve-their-users-goals-or-aligns-with-their-users-wishes-and-interests"><bdi lang="en">Principle 2.2.1</bdi></a>: <span class="practicelab" id="bp-sites-user-agents-and-other-actors-should-restrict-the-data-they-transfer-to-what-s-either-necessary-to-achieve-their-users-goals-or-aligns-with-their-users-wishes-and-interests"><a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">Sites</a>, <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agents</a>, and other <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-31">actors</a>
+</section><section id="data-minimization-0"><div class="header-wrapper"><h3 id="data-minimization"><bdi class="secno">2.2 </bdi>Data Minimization</h3><a class="self-link" href="#data-minimization" aria-label="Permalink for Section 2.2"></a></div><div class="practice principle" data-audiences="websites user-agents"><a class="marker self-link" href="#restrict-data-to-necessary-or-aligned"><bdi lang="en">Principle 2.2.1</bdi></a>: <span class="practicelab" id="restrict-data-to-necessary-or-aligned">
+<a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">Sites</a>, <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agents</a>, and other <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-31">actors</a>
 should restrict the <a data-link-type="dfn|abstract-op" href="#dfn-data" class="internalDFN" id="ref-for-dfn-data-26">data</a> they transfer to what's either necessary to achieve their users'
-goals or aligns with their users' wishes and interests.</span><div class="audience-label"><span class="audience-websites">websites</span><span class="audience-user-agents">user agents</span></div></div>
+goals or aligns with their users' wishes and interests.</span>
+<div class="audience-label"><span class="audience-websites">websites</span><span class="audience-user-agents">user agents</span></div></div>
 
-<div class="practice principle" data-audiences="api-designers"><a class="marker self-link" href="#bp-web-apis-should-be-designed-to-minimize-the-amount-of-data-that-sites-need-to-request-to-carry-out-their-users-goals-web-apis-should-also-provide-granularity-and-user-controls-over-personal-data-that-is-communicated-to-sites"><bdi lang="en">Principle 2.2.2</bdi></a>: <span class="practicelab" id="bp-web-apis-should-be-designed-to-minimize-the-amount-of-data-that-sites-need-to-request-to-carry-out-their-users-goals-web-apis-should-also-provide-granularity-and-user-controls-over-personal-data-that-is-communicated-to-sites">Web APIs should be designed to minimize the amount of data that sites need
+<div class="practice principle" data-audiences="api-designers"><a class="marker self-link" href="#granular-api-data-requests"><bdi lang="en">Principle 2.2.2</bdi></a>: <span class="practicelab" id="granular-api-data-requests">
+Web APIs should be designed to minimize the amount of data that sites need
 to request to carry out their users' goals.
 Web APIs should also provide granularity and user controls over <a href="#dfn-data" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-data-27">personal
-data</a> that is communicated to <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">sites</a>.</span><div class="audience-label"><span class="audience-api-designers">API designers</span></div></div>
+data</a> that is communicated to <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#site">sites</a>.</span>
+<div class="audience-label"><span class="audience-api-designers">API designers</span></div></div>
 
 <p>Data minimization limits the risks of data being disclosed or misused. It also
 helps <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agents</a> and other <a data-link-type="dfn|abstract-op" href="#dfn-actor" class="internalDFN" id="ref-for-dfn-actor-32">actors</a> more meaningfully explain the decisions their users need
@@ -1691,7 +1699,8 @@ specific situation that makes the API designers' general decisions inappropriate
 for them. Because the information provided by <a data-link-type="dfn|abstract-op" href="#dfn-ancillary-apis-that-provide-new-information" class="internalDFN" id="ref-for-dfn-ancillary-apis-that-provide-new-information-7">ancillary APIs that provide new information</a> isn't
 available in any other way, <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">user agents</a> should let people turn them off,
 despite the additional risk of <a data-link-type="dfn" href="https://www.w3.org/TR/fingerprinting-guidance/#dfn-browser-fingerprinting">browser fingerprinting</a>.</p>
-</section></section></section><section id="information-access"><div class="header-wrapper"><h3 id="information"><bdi class="secno">2.3 </bdi>Information access</h3><a class="self-link" href="#information" aria-label="Permalink for Section 2.3"></a></div><div class="practice principle" data-audiences="api-designers user-agents"><a class="marker self-link" href="#bp-new-web-apis-should-guard-users-information-at-least-as-well-as-existing-apis-that-are-expected-to-stay-in-the-web-platform"><bdi lang="en">Principle 2.3</bdi></a>: <span class="practicelab" id="bp-new-web-apis-should-guard-users-information-at-least-as-well-as-existing-apis-that-are-expected-to-stay-in-the-web-platform">New web APIs should guard users' information at least
+</section></section></section><section id="information-access"><div class="header-wrapper"><h3 id="information"><bdi class="secno">2.3 </bdi>Information access</h3><a class="self-link" href="#information" aria-label="Permalink for Section 2.3"></a></div><div class="practice principle" data-audiences="api-designers user-agents"><a class="marker self-link" href="#deprecated-apis-dont-justify-information-leaks"><bdi lang="en">Principle 2.3</bdi></a>: <span class="practicelab" id="deprecated-apis-dont-justify-information-leaks">
+  New web APIs should guard users' information at least
   as well as existing APIs that are expected to stay in the web platform.</span>
   
 <div class="audience-label"><span class="audience-api-designers">API designers</span><span class="audience-user-agents">user agents</span></div></div>
@@ -2593,7 +2602,7 @@ Wendy Seltzer.</p>
     </dd><dt id="bib-deprecation-reporting">[Deprecation-Reporting]</dt><dd>
       <a href="https://wicg.github.io/deprecation-reporting/"><cite>Deprecation Reporting</cite></a>.  W3C. Draft Community Group Report. URL: <a href="https://wicg.github.io/deprecation-reporting/">https://wicg.github.io/deprecation-reporting/</a>
     </dd><dt id="bib-design-principles">[Design-Principles]</dt><dd>
-      <a href="https://www.w3.org/TR/design-principles/"><cite>Web Platform Design Principles</cite></a>. Lea Verou; Martin Thomson; Jeffrey Yasskin.  W3C. 6 January 2025. W3C Working Group Note. URL: <a href="https://www.w3.org/TR/design-principles/">https://www.w3.org/TR/design-principles/</a>
+      <a href="https://www.w3.org/TR/design-principles/"><cite>Web Platform Design Principles</cite></a>. Martin Thomson; Jeffrey Yasskin.  W3C. 6 March 2025. W3C Working Group Note. URL: <a href="https://www.w3.org/TR/design-principles/">https://www.w3.org/TR/design-principles/</a>
     </dd><dt id="bib-digital-market-manipulation">[Digital-Market-Manipulation]</dt><dd>
       <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2309703"><cite>Digital Market Manipulation</cite></a>. Ryan Calo.  George Washington Law Review. URL: <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2309703">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2309703</a>
     </dd><dt id="bib-dom">[DOM]</dt><dd>
@@ -2603,7 +2612,7 @@ Wendy Seltzer.</p>
     </dd><dt id="bib-ethical-web-principles">[Ethical-Web-Principles]</dt><dd>
       <a href="https://www.w3.org/TR/ethical-web-principles/"><cite>Ethical Web Principles</cite></a>. Daniel Appelquist; Hadley Beeman; Amy Guy.  W3C. 12 December 2024. STMT. URL: <a href="https://www.w3.org/TR/ethical-web-principles/">https://www.w3.org/TR/ethical-web-principles/</a>
     </dd><dt id="bib-event-timing">[Event-Timing]</dt><dd>
-      <a href="https://www.w3.org/TR/event-timing/"><cite>Event Timing API</cite></a>. Nicolas Pena Moreno; Tim Dresser.  W3C. 19 August 2024. W3C Working Draft. URL: <a href="https://www.w3.org/TR/event-timing/">https://www.w3.org/TR/event-timing/</a>
+      <a href="https://www.w3.org/TR/event-timing/"><cite>Event Timing API</cite></a>. Nicolas Pena Moreno; Tim Dresser.  W3C. 5 March 2025. W3C Working Draft. URL: <a href="https://www.w3.org/TR/event-timing/">https://www.w3.org/TR/event-timing/</a>
     </dd><dt id="bib-fiduciary-law">[Fiduciary-Law]</dt><dd>
       <a href="http://www.bu.edu/lawlibrary/facultypublications/PDFs/Frankel/Fiduciary%20Law.pdf"><cite>Fiduciary Law</cite></a>. Tamar Frankel.  California Law Review. May 1983. URL: <a href="http://www.bu.edu/lawlibrary/facultypublications/PDFs/Frankel/Fiduciary%20Law.pdf">http://www.bu.edu/lawlibrary/facultypublications/PDFs/Frankel/Fiduciary%20Law.pdf</a>
     </dd><dt id="bib-fiduciary-model">[Fiduciary-Model]</dt><dd>
