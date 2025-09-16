@@ -684,7 +684,7 @@ behaviours that would be more easily kept in check if the perpetrator had to be 
 the victim.
 
 When an [=actor=] can collect [=data=] about a [=person=] and process it automatically, and that
-[=person=] has to take manual action to protect their [=data=] or control its processing, this <dfn>automation asymmetry</dfn>
+[=person=] has to take manual action to protect their [=data=] or control its processing, this <dfn class="export">automation asymmetry</dfn>
 creates an imbalance of power that favors that [=actor=] and decreases the [=person=]'s agency.
 This document focuses on the impact that [=data=] [=processing=] can have on people, but it can also
 impact other [=actors=], such as companies or governments.
@@ -693,7 +693,7 @@ It is important to keep in mind that not all people are equal in how they can re
 an imbalance of power: some [=people=] are more [=vulnerable=] and therefore in greater
 need of protection.
 
-<dfn data-lt="governance">Data governance</dfn> is the system of principles that regulate [=information flows=].
+<dfn class="export" data-lt="governance">Data governance</dfn> is the system of principles that regulate [=information flows=].
 [=Data governance=] determines
 which [=actors=] can collect [=data=], what data they can collect, how they can collect it, and how they can [=process=] it
 ([[?GKC-Privacy]], [[?IAD]]). This document provides building blocks for [=data governance=]
@@ -713,7 +713,7 @@ permissive, but that does not make them neutral. All privacy principles have an 
 [=people=] and we must therefore determine which principles best align with ethical web values in
 web [=contexts=] ([[?Ethical-Web-Principles]], [[?Why-Privacy]]).
 
-<dfn>Information flows</dfn> are information exchanged or processed by
+<dfn class="export">Information flows</dfn> are information exchanged or processed by
 [=actors=]. A person's privacy can be harmed both by their information flowing from them to
 other actors and by information flowing toward them. Examples of the latter include:
 unexpected shocking images,
@@ -738,7 +738,7 @@ people involved in the information flow ([[RFC6973]]).
 
 ## Individual Autonomy {#autonomy}
 
-A [=person=]'s <dfn data-lt="autonomous">autonomy</dfn> is their ability to make decisions of their own personal will,
+A [=person=]'s <dfn class="export" data-lt="autonomous">autonomy</dfn> is their ability to make decisions of their own personal will,
 without undue influence from other [=actors=]. People have limited intellectual resources and
 time with which to weigh decisions, and they have to rely on shortcuts when making decisions. This makes it possible
 to manipulate their preferences, including their privacy preferences ([[?Privacy-Behavior]], [[?Digital-Market-Manipulation]]).
@@ -746,7 +746,7 @@ A [=person=]'s [=autonomy=] is improved by a system when that system offers a sh
 that [=person=] would have decided given unlimited time and intellectual ability. [=Autonomy=] is decreased
 when a similar shortcut goes against decisions made under these ideal conditions.
 
-Affordances and interactions that decrease [=autonomy=] are known as <dfn data-lt="dark pattern|dark patterns">deceptive patterns</dfn> (or dark patterns).
+Affordances and interactions that decrease [=autonomy=] are known as <dfn class="export" data-lt="dark pattern|dark patterns">deceptive patterns</dfn> (or dark patterns).
 A [=deceptive pattern=] does not have to be intentional ([[?Dark-Patterns]], [[?Dark-Pattern-Dark]]).
 When building something that may impact people's [=autonomy=], it is important that reviewers
 from multiple independent perspectives check that it does not introduce [=deceptive patterns=].
@@ -765,9 +765,9 @@ architectures.
 Several kinds of mechanisms exist to enable [=people=] to control how they interact
 with data-processing systems. Mechanisms that increase the number of [=purposes=] for which
 their [=data=] is being [=processed=] or the amount of their [=data=] that is [=processed=]
-are referred to as [=opt-in=] or <dfn data-lt="opt in|opt-in">consent</dfn>. Mechanisms
+are referred to as [=opt-in=] or <dfn class="export" data-lt="opt in|opt-in">consent</dfn>. Mechanisms
 that decrease this number of [=purposes=] or the amount of [=data=] being [=processed=] are known as
-<dfn data-lt="opt out">opt-out</dfn>.
+<dfn class="export" data-lt="opt out">opt-out</dfn>.
 
 When deployed thoughtfully, these mechanisms can improve [=people=]'s [=autonomy=]. Often,
 however, they are used as a way to avoid putting in the difficult work of deciding which
@@ -787,7 +787,7 @@ people notice this ongoing access and that lets them turn it off whenever they w
 In general, providing [=consent=] should be rare, intentional, and temporary.
 
 When an [=opt-out=] mechanism exists, it should preferably work with a
-<dfn>global opt-out</dfn> mechanism. Conceptually, a [=global opt-out=] mechanism is an
+<dfn class="export">global opt-out</dfn> mechanism. Conceptually, a [=global opt-out=] mechanism is an
 automaton operating as part of the [=user agent=]. It is equivalent to a robot that would carry
 out a [=person=]'s instructions by pressing an [=opt-out=] button (or a similar expression of
 the [=person=]'s rights) with every interaction that the [=person=] has with a site. (For
@@ -815,14 +815,14 @@ shows that they make it hard for [=people=] to exercise their rights.
 
 ### Privacy Labor {#privacy-labor}
 
-<dfn data-lt="labor">Privacy labor</dfn> is the practice of having a [=person=] do
+<dfn class="export" data-lt="labor">Privacy labor</dfn> is the practice of having a [=person=] do
 the work of ensuring [=data processing=] of which they are the subject or recipient is
 [=appropriate=], instead of putting the responsibility on the [=actors=] who are doing the processing.
 Data systems that are based on asking [=people=] for their [=consent=] tend to increase
 [=privacy labor=].
 
 More generally, implementations of [=privacy=] often offload [=labor=] to [=people=]. This is
-notably true of the regimes descended from the <dfn data-lt="FIPs">Fair Information Practices</dfn>
+notably true of the regimes descended from the <dfn class="export" data-lt="FIPs">Fair Information Practices</dfn>
 ([=FIPs=]), a loose set of principles initially elaborated in the 1970s in support of individual
 [=autonomy=] in the face of growing concerns with databases. The [=FIPs=] generally assume that
 there is sufficiently little [=data processing=] taking place that any [=person=] will be able to
@@ -880,10 +880,10 @@ has their own right to privacy.
 
 ### Guardians {#guardians}
 
-Some [vulnerable people](#vulnerability) need a <dfn>guardian</dfn> to help them make good
+Some [vulnerable people](#vulnerability) need a <dfn class="export">guardian</dfn> to help them make good
 decisions about their own web use (e.g. children, with their parents often
 acting as their [=guardians=]). A person with a [=guardian=] is known as
-a <dfn>ward</dfn>.
+a <dfn class="export">ward</dfn>.
 
 The [=ward=] has a right to make informed decisions and exercise their
 autonomy regarding their right to privacy. Their [=guardian=] has an
@@ -1019,7 +1019,7 @@ intrusive messages.
 
 The [=user agent=] is expected to align fully with the [=person=] using it and to operate exclusively
 in that [=person=]'s interest. It is <em>not</em> the [=first party=]. The [=user agent=] serves the
-[=person=] as a <dfn>trustworthy agent</dfn>:
+[=person=] as a <dfn class="export">trustworthy agent</dfn>:
 it always puts that [=person=]'s interest first. In some occasions, this can mean protecting
 that [=person=] from themselves by preventing them from carrying out a dangerous decision,
 or by slowing down the person in their decision. For example, the
@@ -1067,7 +1067,7 @@ monitoring of their behaviour. Its <dfn class="export">user agent duties</dfn> i
     Because the [=user agent=] is a [=trustworthy agent=], it is held to be loyal to the
     [=person=] using it in all situations, including in preference to the [=user agent=]'s implementer.
     When a [=user agent=] carries out [=processing=] that is detrimental to its [=user=]'s
-    interests and instead benefits another [=actor=], this is <dfn data-lt="disloyalty">disloyal</dfn>. Often this would benefit the
+    interests and instead benefits another [=actor=], this is <dfn class="export" data-lt="disloyalty">disloyal</dfn>. Often this would benefit the
     [=user agent=] itself, in which case it is known as "self-dealing". Behaviour can be [=disloyal=] even
     if it is done at the same time as [=processing=] that is in the [=person=]'s interest, what matters is
     that it potentially conflicts with that [=person=]'s interest. Additionally, it is important to keep in
@@ -1239,7 +1239,7 @@ they are in, and should prevent or support [=recognition=] as appropriate.
 
 </div>
 
-A [=person=]'s <dfn>identity</dfn> is the set of characteristics that define
+A [=person=]'s <dfn class="export">identity</dfn> is the set of characteristics that define
 them. Their identity *in a [=context=]* is the set of characteristics they
 present under particular circumstances.
 
@@ -1309,7 +1309,7 @@ goals. For example, they might bill advertisers, measure site performance, or
 tell developers about bugs.
 These are examples of [=ancillary use=] of [=data=].
 
-An <dfn>ancillary use</dfn> is any case where [=data processing=]
+An <dfn class="export">ancillary use</dfn> is any case where [=data processing=]
 provides direct benefit primarily to [=actors=]
 other than the [=person=] who is the subject of that [=data=].
 Ancillary uses of [=personal data=] might provide benefit to that [=person=],
@@ -1321,7 +1321,7 @@ but this benefit is primarily realized by the site's owners.
 [=Sites=] can get the data they want for [=ancillary uses=] from a variety of places:
 
 <dl>
-  <dt><dfn>Non-ancillary APIs</dfn></dt>
+  <dt><dfn class="export">Non-ancillary APIs</dfn></dt>
   <dd>
     Web APIs that were designed to support users' immediate goals, like <a
     data-cite="DOM#interface-event">DOM events</a> and <a
@@ -1329,7 +1329,7 @@ but this benefit is primarily realized by the site's owners.
     observers</a>.
   </dd>
 
-  <dt><dfn>Ancillary APIs computed from existing information</dfn></dt>
+  <dt><dfn class="export">Ancillary APIs computed from existing information</dfn></dt>
   <dd>
     APIs that filter, summarize, or time-shift information available from
     [=non-ancillary APIs=], like the [[[Event-Timing]]] and <a
@@ -1338,7 +1338,7 @@ but this benefit is primarily realized by the site's owners.
     be used to justify new ancillary APIs.
   </dd>
 
-  <dt><dfn>Ancillary APIs that provide new information</dfn></dt>
+  <dt><dfn class="export">Ancillary APIs that provide new information</dfn></dt>
   <dd>
     APIs that provide new information that's primarily useful to support the
     ancillary uses, like <a data-cite="Element-Timing#sec-intro">element paint
@@ -1461,7 +1461,7 @@ despite the additional risk of [=browser fingerprinting=].
 The many APIs available to websites expose lots of data that can be combined
 into information about people, web servers, and other things.
 
-User-controlled settings or permissions can <dfn data-lt="access guard">guard
+User-controlled settings or permissions can <dfn class="export" data-lt="access guard">guard
 access</dfn> to data on the web. When designing a web API, use [=access guards=]
 to ensure the API exposes information in [=appropriate=] ways.
 
@@ -1601,20 +1601,20 @@ data-cite="RFC6772#section-13.5">RFC6772</a>].
 While data rights alone are not sufficient to satisfy all [=privacy=] principles for the web, they
 do support self-determination and help improve accountability. Such rights include:
 
-* The <dfn data-export="">right to access</dfn> [=data=] about oneself.
+* The <dfn class="export" data-export="">right to access</dfn> [=data=] about oneself.
 
 This right includes both being able to review what information has been collected or inferred about
 oneself and being able to discover what [=actors=] have collected information about oneself. As a
 result, databases containing information about [=people=] cannot be kept secret, and data collected about people needs to be meaningfully
 discoverable by those people.
 
-* The <dfn data-export="" data-lt="right to erase">right to erase</dfn> [=data=] about oneself.
+* The <dfn class="export" data-export="" data-lt="right to erase">right to erase</dfn> [=data=] about oneself.
 
 A [=person=] has a right to erase information about themselves whether or not they are terminating use of a service altogether, though what
 [=data=] can be erased may differ between those two cases. On the web, a [=person=] may wish to erase
 data on their device, on a server, or both, and the data's location may not always be clear to the person.
 
-* The <dfn data-export="" data-lt="right to portability" data-local-lt="portability">right to
+* The <dfn class="export" data-export="" data-lt="right to portability" data-local-lt="portability">right to
 port</dfn> [=data=], including data one has stored with another [=actor=], so it can easily be reused or
 transferred elsewhere.
 
@@ -1622,10 +1622,10 @@ Portability is needed to support a [=person=]'s ability to make choices about se
 different data practices. Standards for interoperability are essential for effective re-use.
 Porting user data involves security and privacy risks described in [[Portability-Threat-Model]].
 
-* The <dfn data-export="">right to correct</dfn> [=data=] about oneself, to ensure that one's
+* The <dfn class="export" data-export="">right to correct</dfn> [=data=] about oneself, to ensure that one's
 [=identity=] is properly reflected in a system.
 
-* The <dfn data-export="">right to be free from automated decision-making</dfn> based on [=data=]
+* The <dfn class="export" data-export="">right to be free from automated decision-making</dfn> based on [=data=]
 about oneself.
 
 For some kinds of decision-making with substantial consequences, there is a privacy interest in
@@ -1638,7 +1638,7 @@ presence based on facial recognition algorithms run on camera data. Because faci
 algorithms and training sets are fallible and may exhibit certain biases, people may not wish to
 submit to decisions based on that kind of automated recognition.
 
-* The <dfn data-export=""
+* The <dfn class="export" data-export=""
   data-lt="right to object|right to withdraw consent|right to restrict use">right to object,
 withdraw consent, and restrict use</dfn> of data about oneself.
 
@@ -1661,7 +1661,7 @@ rights by people over data about themselves are inherent to [=autonomy=].
 
 </div>
 
-Data is <dfn data-lt="de-identify|de-identification">de-identified</dfn> when there exists a high level of confidence
+Data is <dfn class="export" data-lt="de-identify|de-identification">de-identified</dfn> when there exists a high level of confidence
 that no [=person=] described by the data can be identified, directly or indirectly
 (e.g. via association with an [=identifier=], user agent, or device), by that data alone or in
 combination with other available information. Many local regulations define additional requirements
@@ -1670,7 +1670,7 @@ degree of privacy protection. Note
 that further considerations relating to groups are covered in the
 <a href="#collective">Collective Issues in Privacy</a> section.
 
-We talk of <dfn>controlled de-identified data</dfn> when:
+We talk of <dfn class="export">controlled de-identified data</dfn> when:
 1. The _state_ of the data is such that the information that could be used to re-identify an
    individual has been removed or altered, and
 2. there is a _process_ in place to prevent attempts to re-identify [=people=] and the inadvertent
@@ -1782,9 +1782,9 @@ know about this surveillance.
 See [[[#guardians]]] for more detail on how this principle applies to vulnerable people with [=guardians=].
 </div>
 
-Computing devices have <dfn data-lt="administrator">administrators</dfn>, who
+Computing devices have <dfn class="export" data-lt="administrator">administrators</dfn>, who
 have privileged access to the devices in order to install and configure the
-programs that run on them. The <dfn data-lt="device owner">owner</dfn> of a
+programs that run on them. The <dfn class="export" data-lt="device owner">owner</dfn> of a
 device can authorize an [=administrator=] to administer the whole device.
 Some [=user agent=] [=implementations=] can also assign an [=administrator=] to
 manage a particular [=user agent=] based on the account that's logged into it.
@@ -1838,7 +1838,7 @@ helps different users to react appropriately.
   </p>
 </div>
 
-Digital <dfn>abuse</dfn> is the mistreatment of a person through digital means. Online <dfn>harassment</dfn>
+Digital <dfn class="export">abuse</dfn> is the mistreatment of a person through digital means. Online <dfn class="export">harassment</dfn>
 is the "pervasive or severe targeting of an individual or group online through harmful behavior" [[PEN-Harassment]]
 and constitutes a form of [=abuse=]. Harassment is a prevalent problem on the web,
 particularly via social media. While harassment may affect any person using the web, it may be more
@@ -1872,7 +1872,7 @@ Effective reporting is likely to require:
   [[?Addressing-Cyber-Harassment]] and [[?Internet-of-Garbage]].
 </aside>
 
-<dfn>Unwanted information</dfn> covers a broad range of unsolicited communication, from messages
+<dfn class="export">Unwanted information</dfn> covers a broad range of unsolicited communication, from messages
 that are typically harmless individually but that become a nuisance in aggregate (spam) to the
 sending of explicit, graphic, or violent images.
 
@@ -2185,12 +2185,12 @@ mitigating forms of data collection, including <a>browser fingerprinting</a>.
 
 ## People {#people}
 
-A <dfn data-lt="individual|people|user|data subject">person</dfn> (also [=user=] or
+A <dfn class="export" data-lt="individual|people|user|data subject">person</dfn> (also [=user=] or
 [=data subject=]) is any natural person. Throughout this document, we primarily use [=person=] or
 [=people=] to refer to human beings, as a reminder of their humanity. When we use the term [=user=],
 it is to talk about the specific [=person=] who happens to be using a given system at that time.
 
-A <dfn data-lt="vulnerable">vulnerable person</dfn> in a particular [=context=]
+A <dfn class="export" data-lt="vulnerable">vulnerable person</dfn> in a particular [=context=]
 is a [=person=] whose ability to make their own choices can be taken away more
 easily than usual. Among other things, they should
 be treated with greater default privacy protections and may be considered unable to
@@ -2203,7 +2203,7 @@ where that actor is also present.  See [[[#vulnerability]]].
 
 ## Contexts {#context}
 
-A <dfn>context</dfn> is a physical or digital environment in which [=people=] interact with other
+A <dfn class="export">context</dfn> is a physical or digital environment in which [=people=] interact with other
 [=actors=], and which the [=people=] understand as distinct from other [=contexts=].
 
 A [=context=] is not defined in terms of who owns or controls it. Sharing
@@ -2212,15 +2212,15 @@ a [=privacy violation=], just as if the same data were shared between unrelated 
 
 ## Server-Side Actors {#parties}
 
-An <dfn>actor</dfn> is an entity that a [=person=] can reasonably understand as a single "thing"
+An <dfn class="export">actor</dfn> is an entity that a [=person=] can reasonably understand as a single "thing"
 they're interacting with. [=Actors=] can be [=people=] or collective entities like companies,
 associations, or governmental bodies.
 
 [=User agents=] tend to explain to [=people=] which [=origin=] or [=site=] provided the
 web page they're looking at. The [=actor=] that makes or delegates decisions
 about the content and [=data processing=] on this [=origin=] or [=site=] is
-known as the web page's <dfn data-dfn-for="page">first party</dfn>. When a [=person=]
-interacts with a part of a web page, the <dfn>first party</dfn> of that interaction
+known as the web page's <dfn class="export" data-dfn-for="page">first party</dfn>. When a [=person=]
+interacts with a part of a web page, the <dfn class="export">first party</dfn> of that interaction
 is usually the web page's [=page/first party=].
 However, if a different [=actor=] makes the decisions about how that part of the
 page works, and a reasonable person with a realistic amount of time and energy would realize
@@ -2231,17 +2231,17 @@ If someone captures data about an interaction with a web page,
 the [=first party=] of that interaction is accountable for the way that data is [=processed=],
 even if another [=actor=] does the processing.
 
-A <dfn data-lt="third parties">third party</dfn> is any [=actor=] other than the
+A <dfn class="export" data-lt="third parties">third party</dfn> is any [=actor=] other than the
 [=person=] visiting the website or the [=first parties=] they expect to be interacting
 with.
 
 ## Acting on Data {#acting-on-data}
 
-We define <dfn data-lt="data">personal data</dfn> as any information that is directly or
+We define <dfn class="export" data-lt="data">personal data</dfn> as any information that is directly or
 indirectly related to an identified or identifiable [=person=], such as by reference to an
 [=identifier=] ([[GDPR]], [[OECD-Guidelines]], [[Convention-108]]).
 
-On the web, an <dfn>identifier</dfn> of some type is typically assigned for an
+On the web, an <dfn class="export">identifier</dfn> of some type is typically assigned for an
 [=identity=] as seen by a website, which makes it easier for an automated
 system to store data about that [=person=].
 
@@ -2266,44 +2266,44 @@ Examples of [=identifiers=] for a [=person=] can be:
 If a [=person=] could reasonably be identified or re-identified through the combination of [=data=] with other
 [=data=], then both sets of [=data=] are [=personal data=].
 
-[=People=] have <dfn>privacy</dfn> in a given [=context=] when [=actors=] in
+[=People=] have <dfn class="export">privacy</dfn> in a given [=context=] when [=actors=] in
 that [=context=] follow that [=context=]'s principles when presenting
 information and using [=personal data=].
 When the principles for that [=context=] are not followed, there is a
-<dfn>privacy violation</dfn>. We say that a particular interaction is
-<dfn data-lt="appropriately">appropriate</dfn> when the principles are followed
-or <dfn data-lt="inappropriately">inappropriate</dfn> otherwise.
+<dfn class="export">privacy violation</dfn>. We say that a particular interaction is
+<dfn class="export" data-lt="appropriately">appropriate</dfn> when the principles are followed
+or <dfn class="export" data-lt="inappropriately">inappropriate</dfn> otherwise.
 
-An [=actor=] <dfn data-lt="process|processing|processed|data processing">processes</dfn> data if it
+An [=actor=] <dfn class="export" data-lt="process|processing|processed|data processing">processes</dfn> data if it
 carries out operations on [=personal data=], whether or not by automated means, such as
 collection, recording, organisation, structuring, storage, adaptation or alteration,
 retrieval, consultation, use, disclosure by transmission, [=sharing=], dissemination or
 otherwise making available, [=selling=], alignment or combination, restriction, erasure or
 destruction.
 
-An [=actor=] <dfn data-lt="share|sharing">shares</dfn> data if it provides it to any other
+An [=actor=] <dfn class="export" data-lt="share|sharing">shares</dfn> data if it provides it to any other
 [=data controller=]. Note that, under this definition, an [=actor=] that provides data to its own
 [=service providers=] is not [=sharing=] it.
 
-An [=actor=] <dfn data-lt="sell|selling">sells</dfn> data when it [=shares=] the data in exchange
+An [=actor=] <dfn class="export" data-lt="sell|selling">sells</dfn> data when it [=shares=] the data in exchange
 for something of value, even if that value isn't monetary.
 
-The <dfn>purpose</dfn> of a given [=processing=] of data is an anticipated, intended, or
+The <dfn class="export">purpose</dfn> of a given [=processing=] of data is an anticipated, intended, or
 planned outcome of this [=processing=] which is achieved or aimed for within a given
 [=context=]. A [=purpose=], when described, should be specific enough that
 someone familiar with the relevant [=context=] could pick some
 [=means=] that would achieve the [=purpose=].
 
-The <dfn>means</dfn> is the general way that data is [=processed=] to achieve a particular
+The <dfn class="export">means</dfn> is the general way that data is [=processed=] to achieve a particular
 [=purpose=], in a given [=context=]. [=Means=] are relatively abstract
 and don't specify all the way down to implementation details. For example, for
 the [=purpose=] of restoring a person's preferences, the [=means=] could be to
 look up their identifier in a preferences store.
 
-A <dfn>data controller</dfn> is an [=actor=] that determines the [=means=] and [=purposes=]
+A <dfn class="export">data controller</dfn> is an [=actor=] that determines the [=means=] and [=purposes=]
 of data processing. Any [=actor=] that is not a [=service provider=] is a [=data controller=].
 
-A <dfn data-lt="data processor">service provider</dfn> or [=data processor=]:
+A <dfn class="export" data-lt="data processor">service provider</dfn> or [=data processor=]:
 
 * [=processes=] data on behalf of another [=actor=];
 * ensures that the data is only retained, accessed, and used as directed by that
@@ -2318,7 +2318,7 @@ A <dfn data-lt="data processor">service provider</dfn> or [=data processor=]:
 
 ## Recognition {#recognition}
 
-<dfn data-lt="recognize|recognized">Recognition</dfn> is the act of realising that a given [=identity=]
+<dfn class="export" data-lt="recognize|recognized">Recognition</dfn> is the act of realising that a given [=identity=]
 corresponds to the same [=person=] as another [=identity=] which may have been
 observed either in another [=context=], or in the same [=context=] but at a
 different time. [=Recognition=] can be probabilistic, if someone realises there's
@@ -2332,7 +2332,7 @@ characteristics of their legal identity are included in the recognition.
 
 There are several types of [=recognition=] that may take place.
 
-<dfn>Cross-context recognition</dfn> is [=recognition=] between different
+<dfn class="export">Cross-context recognition</dfn> is [=recognition=] between different
 [=contexts=].
 
 [=Cross-context recognition=] is only [=appropriate=] when the person being [=recognized=]
@@ -2355,12 +2355,12 @@ that reveal their vulnerability. For example, if you meet your therapist at a
 party, you expect them to have different discussion topics with you than they
 usually would, and possibly even to pretend they don't know you.
 
-<dfn>Cross-site recognition</dfn> is [=recognition=] when the identities
+<dfn class="export">Cross-site recognition</dfn> is [=recognition=] when the identities
 are observed on different [=sites=]. In the usual case that the sites are
 different [=contexts=],
 [=cross-site recognition=] is [=inappropriate=] in the same cases as [=cross-context recognition=].
 
-<dfn>Same-site recognition</dfn> is when a single [=site=] [=recognizes=] a
+<dfn class="export">Same-site recognition</dfn> is when a single [=site=] [=recognizes=] a
 [=person=] across two or more visits.
 
 A privacy harm occurs if a [=person=] reasonably expects that they'll be using
@@ -2374,7 +2374,7 @@ involve multiple [=partitions=]).
 
 ### User agent awareness of recognition {#user-agent-recognition}
 
-A <dfn>partition</dfn> is the [=user agent=]'s attempt to match how its user
+A <dfn class="export">partition</dfn> is the [=user agent=]'s attempt to match how its user
 would understand a [=context=]. [=User agents=] don't have a perfect
 understanding of how their users experience the sites they visit, so they
 often need to approximate the boundaries between [=contexts=] when building
