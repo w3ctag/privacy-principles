@@ -255,6 +255,13 @@
           authors: ['European Commission'],
           href: 'https://ec.europa.eu/COMMFrontOffice/publicopinion/index.cfm/Survey/getSurveyDetail/instruments/FLASH/surveyKy/2124',
         },
+        'FemTech-Gap': {
+          title: 'Mind the FemTech gap: regulation failings and exploitative systems',
+          authors: ['Maryam Mehrnezhad', 'Thyla van der Merwe', 'Michael Catt'],
+          date: '2024',
+          publisher: 'Frontiers in the Internet of Things',
+          href: 'https://www.frontiersin.org/journals/the-internet-of-things/articles/10.3389/friot.2024.1296599/full'
+        },
         'Fiduciary-Law': {
           title: 'Fiduciary Law',
           href: 'http://www.bu.edu/lawlibrary/facultypublications/PDFs/Frankel/Fiduciary%20Law.pdf',
@@ -321,6 +328,13 @@
           publisher: 'The Verge',
           date: '2018',
           href: 'https://www.theverge.com/2018/8/28/17777330/internet-of-garbage-book-sarah-jeong-online-harassment'
+        },
+        'Intimate-Data-Fertility': {
+          title: 'Caring for Intimate Data in Fertility Technologies',
+          authors: ['Maryam Mehrnezhad', 'Teresa Almeida'],
+          date: '2021',
+          publisher: 'CHI 21: Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems',
+          href: 'https://dl.acm.org/doi/10.1145/3411764.3445132'
         },
         'Lost-In-Crowd': {
           title: 'Why You Can No Longer Get Lost in the Crowd',
@@ -920,6 +934,26 @@ agent=] needs to warn the child about how it's configured so that the child can 
 [=guardian=] for access to the help they need.
 
 </aside>
+
+### Vulnerability Impact {#differential-vulnerability}
+
+  A [privacy violation](#dfn-privacy-violation) does not affect everyone equally. The same [information
+  flow](#dfn-information-flows) can be harmless for one [person](#dfn-individual) and seriously harmful for another:
+  both how likely a harm is and how severe it is can differ across [people](#dfn-individual) and across groups,
+  depending on their attributes, their circumstances, and the [context](#dfn-context) they are in. For example, the
+  exposure of the same [personal data](#dfn-data) (such as a private image, a home location, or a religious, political,
+  or health status) might be a minor embarrassment for one [person](#dfn-individual) while exposing another to
+  discrimination, harassment, violence, or loss of liberty. This uneven distribution of harm across people and groups is
+  sometimes described as *differential harm* ([[FemTech-Gap]], [[Intimate-Data-Fertility]]).
+
+  Because harms are distributed unevenly, and because it is rarely possible to anticipate every harm in advance,
+  [authors of web specifications](#audience) and reviewers should consider the groups of [people](#dfn-individual) who
+  are unusually [vulnerable](#dfn-vulnerable) to the feature they are designing, and identify the harms the feature
+  could create or worsen for them. It is not necessary to determine which group is the *most* vulnerable; identifying a
+  small number of unusually-vulnerable groups is usually more useful, because different groups tend to highlight
+  different patterns of misuse and harm. (See [2.9 Protecting web users from abusive
+  behaviour](#protecting-web-users-from-abusive-behaviour) for an example where the same behaviour has more severe
+  consequences for particular groups.)  
 
 ## Collective Governance {#collective}
 
